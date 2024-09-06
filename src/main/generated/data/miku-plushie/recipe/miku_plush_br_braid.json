@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "b": {
+      "item": "minecraft:black_wool"
+    },
+    "c": {
+      "item": "minecraft:cyan_wool"
+    },
+    "g": {
+      "item": "minecraft:green_wool"
+    },
+    "y": {
+      "item": "minecraft:yellow_wool"
+    }
+  },
+  "pattern": [
+    "cyc",
+    "cgc",
+    "b  "
+  ],
+  "result": {
+    "count": 1,
+    "id": "miku-plushie:miku_plush_br_braid"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "b": {
+      "item": "minecraft:blue_wool"
+    },
+    "c": {
+      "item": "minecraft:cyan_wool"
+    },
+    "r": {
+      "item": "minecraft:red_wool"
+    },
+    "w": {
+      "item": "minecraft:white_wool"
+    }
+  },
+  "pattern": [
+    "crc",
+    "cwc",
+    "b  "
+  ],
+  "result": {
+    "count": 1,
+    "id": "miku-plushie:miku_plush_br_ba"
+  }
+}
