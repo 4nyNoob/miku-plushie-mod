@@ -3,7 +3,8 @@ plugins {
 	id 'maven-publish'
 }
 
-version = project.mod_version
+//version = project.mod_version
+version = "1.0-1.21.1"
 group = project.maven_group
 
 base {

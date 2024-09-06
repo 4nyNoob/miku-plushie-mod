@@ -64,7 +64,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 				.criterion(FabricRecipeProvider.hasItem(Blocks.WHITE_WOOL), FabricRecipeProvider.conditionsFromItem(Blocks.WHITE_WOOL))
 				.offerTo(exporter);
 
-		ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ModBlocks.MIKU_PLUSH_BR_BEACH)
+		ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ModBlocks.MIKU_PLUSH_BR_BEACH_BLOCK)
 				.pattern("cyc")
 				.pattern("cgc")
 				.pattern("s  ")
@@ -95,17 +95,17 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 		ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ModBlocks.MIKU_PLUSH_BR_BA_DRUM_BLOCK)
 				.pattern("crc")
 				.pattern("cwc")
-				.pattern("bj ")
+				.pattern("bn ")
 				.input('c', Blocks.CYAN_WOOL)
 				.input('r', Blocks.RED_WOOL)
 				.input('w', Blocks.WHITE_WOOL)
 				.input('b', Blocks.BLUE_WOOL)
-				.input('j', Blocks.BLUE_WOOL)
+				.input('n', Blocks.NOTE_BLOCK)
 				.criterion(FabricRecipeProvider.hasItem(Blocks.CYAN_WOOL), FabricRecipeProvider.conditionsFromItem(Blocks.CYAN_WOOL))
 				.criterion(FabricRecipeProvider.hasItem(Blocks.RED_WOOL), FabricRecipeProvider.conditionsFromItem(Blocks.RED_WOOL))
 				.criterion(FabricRecipeProvider.hasItem(Blocks.WHITE_WOOL), FabricRecipeProvider.conditionsFromItem(Blocks.WHITE_WOOL))
 				.criterion(FabricRecipeProvider.hasItem(Blocks.BLUE_WOOL), FabricRecipeProvider.conditionsFromItem(Blocks.BLUE_WOOL))
-				.criterion(FabricRecipeProvider.hasItem(Blocks.JUKEBOX), FabricRecipeProvider.conditionsFromItem(Blocks.JUKEBOX))
+				.criterion(FabricRecipeProvider.hasItem(Blocks.NOTE_BLOCK), FabricRecipeProvider.conditionsFromItem(Blocks.NOTE_BLOCK))
 				.offerTo(exporter);
 
 	}

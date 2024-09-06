@@ -37,7 +37,7 @@ public class ModBlocks {
 			"miku_plush_bik",
 			false
 	);
-	public static final Block MIKU_PLUSH_BR_BEACH = register(
+	public static final Block MIKU_PLUSH_BR_BEACH_BLOCK = register(
 			new MikuPlushieBlock(AbstractBlock.Settings.copy(Blocks.FLOWER_POT)
 			.sounds(BlockSoundGroup.WOOL)
 			.nonOpaque()

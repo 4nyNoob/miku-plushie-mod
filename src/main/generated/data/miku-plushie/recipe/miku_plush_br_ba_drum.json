@@ -8,8 +8,8 @@
     "c": {
       "item": "minecraft:cyan_wool"
     },
-    "j": {
-      "item": "minecraft:blue_wool"
+    "n": {
+      "item": "minecraft:note_block"
     },
     "r": {
       "item": "minecraft:red_wool"
@@ -21,7 +21,7 @@
   "pattern": [
     "crc",
     "cwc",
-    "bj "
+    "bn "
   ],
   "result": {
     "count": 1,

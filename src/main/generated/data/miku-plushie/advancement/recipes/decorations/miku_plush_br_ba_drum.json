@@ -21,11 +21,11 @@
       },
       "trigger": "minecraft:inventory_changed"
     },
-    "has_jukebox": {
+    "has_note_block": {
       "conditions": {
         "items": [
           {
-            "items": "minecraft:jukebox"
+            "items": "minecraft:note_block"
           }
         ]
       },
@@ -65,7 +65,7 @@
       "has_red_wool",
       "has_white_wool",
       "has_blue_wool",
-      "has_jukebox"
+      "has_note_block"
     ]
   ],
   "rewards": {
