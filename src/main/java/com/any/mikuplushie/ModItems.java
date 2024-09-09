@@ -25,6 +25,10 @@ public class ModItems {
 			new Item.Settings().equipmentSlot((entity, stack) -> EquipmentSlot.HEAD)), "miku_plush_br_braid");
 	public static final Item MIKU_PLUSH_BR_BA_DRUM = register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_BR_BA_DRUM_BLOCK,
 			new Item.Settings().equipmentSlot((entity, stack) -> EquipmentSlot.HEAD)), "miku_plush_br_ba_drum");
+	public static final Item MIKU_PLUSH_BR_PR = register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_BR_PR_BLOCK,
+			new Item.Settings().equipmentSlot((entity, stack) -> EquipmentSlot.HEAD)), "miku_plush_br_pr");
+	public static final Item MIKU_PLUSH_BR_SP = register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_BR_SP_BLOCK,
+			new Item.Settings().equipmentSlot((entity, stack) -> EquipmentSlot.HEAD)), "miku_plush_br_sp");
 
 
 
@@ -47,6 +51,8 @@ public class ModItems {
 		ItemGroupEvents.modifyEntriesEvent(ItemGroups.FUNCTIONAL).register((itemGroup) -> itemGroup.add(ModItems.MIKU_PLUSH_BR_BEACH));
 		ItemGroupEvents.modifyEntriesEvent(ItemGroups.FUNCTIONAL).register((itemGroup) -> itemGroup.add(ModItems.MIKU_PLUSH_BR_BRAID));
 		ItemGroupEvents.modifyEntriesEvent(ItemGroups.FUNCTIONAL).register((itemGroup) -> itemGroup.add(ModItems.MIKU_PLUSH_BR_BA_DRUM));
+		ItemGroupEvents.modifyEntriesEvent(ItemGroups.FUNCTIONAL).register((itemGroup) -> itemGroup.add(ModItems.MIKU_PLUSH_BR_PR));
+		ItemGroupEvents.modifyEntriesEvent(ItemGroups.FUNCTIONAL).register((itemGroup) -> itemGroup.add(ModItems.MIKU_PLUSH_BR_SP));
 
 
 

@@ -61,6 +61,22 @@ public class ModBlocks {
 			"miku_plush_br_ba_drum",
 			false
 	);
+	public static final Block MIKU_PLUSH_BR_PR_BLOCK = register(
+			new MikuPlushieBlock(AbstractBlock.Settings.copy(Blocks.FLOWER_POT)
+			.sounds(BlockSoundGroup.WOOL)
+			.nonOpaque()
+			),
+			"miku_plush_br_pr",
+			false
+	);
+	public static final Block MIKU_PLUSH_BR_SP_BLOCK = register(
+			new MikuPlushieBlock(AbstractBlock.Settings.copy(Blocks.FLOWER_POT)
+			.sounds(BlockSoundGroup.WOOL)
+			.nonOpaque()
+			),
+			"miku_plush_br_sp",
+			false
+	);
 
 
 

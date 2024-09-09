@@ -108,5 +108,33 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 				.criterion(FabricRecipeProvider.hasItem(Blocks.NOTE_BLOCK), FabricRecipeProvider.conditionsFromItem(Blocks.NOTE_BLOCK))
 				.offerTo(exporter);
 
+		ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ModBlocks.MIKU_PLUSH_BR_PR_BLOCK)
+				.pattern("cwc")
+				.pattern("cwc")
+				.pattern("i  ")
+				.input('c', Blocks.CYAN_WOOL)
+				.input('w', Blocks.WHITE_WOOL)
+				.input('i', Blocks.BLUE_ICE)
+				.criterion(FabricRecipeProvider.hasItem(Blocks.CYAN_WOOL), FabricRecipeProvider.conditionsFromItem(Blocks.CYAN_WOOL))
+				.criterion(FabricRecipeProvider.hasItem(Blocks.WHITE_WOOL), FabricRecipeProvider.conditionsFromItem(Blocks.WHITE_WOOL))
+				.criterion(FabricRecipeProvider.hasItem(Blocks.BLUE_ICE), FabricRecipeProvider.conditionsFromItem(Blocks.BLUE_ICE))
+				.offerTo(exporter);
+
+		ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ModBlocks.MIKU_PLUSH_BR_SP_BLOCK)
+				.pattern("cwc")
+				.pattern("crc")
+				.pattern("bi ")
+				.input('c', Blocks.CYAN_WOOL)
+				.input('w', Blocks.WHITE_WOOL)
+				.input('r', Blocks.RED_WOOL)
+				.input('b', Blocks.BLACK_WOOL)
+				.input('i', Blocks.GRAY_CONCRETE)
+				.criterion(FabricRecipeProvider.hasItem(Blocks.CYAN_WOOL), FabricRecipeProvider.conditionsFromItem(Blocks.CYAN_WOOL))
+				.criterion(FabricRecipeProvider.hasItem(Blocks.WHITE_WOOL), FabricRecipeProvider.conditionsFromItem(Blocks.WHITE_WOOL))
+				.criterion(FabricRecipeProvider.hasItem(Blocks.RED_WOOL), FabricRecipeProvider.conditionsFromItem(Blocks.BLACK_WOOL))
+				.criterion(FabricRecipeProvider.hasItem(Blocks.BLACK_WOOL), FabricRecipeProvider.conditionsFromItem(Blocks.BLACK_WOOL))
+				.criterion(FabricRecipeProvider.hasItem(Blocks.GRAY_CONCRETE), FabricRecipeProvider.conditionsFromItem(Blocks.GRAY_CONCRETE))
+				.offerTo(exporter);
+
 	}
 }
