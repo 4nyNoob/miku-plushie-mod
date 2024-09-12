@@ -15,8 +15,13 @@
   "item.miku-plushie.miku_plush_br_pr.tooltip": "§b§n@dokiny.bsky.social",
   "block.miku-plushie.miku_plush_br_sp": "São Paulo Miku Plush",
   "item.miku-plushie.miku_plush_br_sp.tooltip": "§b§n@olhosdtinta.bsky.social",
+  "block.miku-plushie.miku_plush_br_mg": "Minas Gerais Miku Plush",
+  "item.miku-plushie.miku_plush_br_mg.tooltip": "§b§n@themushxd.bsky.social",
 
   "item.miku-plushie.canudinho": "Canudinho",
 
-  "sound.miku-plushie.canudinho": "Miku Plush Says: Canudinho"
+  "sound.miku-plushie.canudinho": "Miku: Canudinho",
+  "sound.miku-plushie.oie": "Miku: Hi",
+  "sound.miku-plushie.dor": "Miku: Pain",
+  "sound.miku-plushie.bye": "Miku: Bye"
 }

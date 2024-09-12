@@ -17,6 +17,6 @@ public class MikuPlushie implements ModInitializer {
 		LOGGER.info("Hello Fabric world!");
 		ModItems.initialize();
 		ModBlocks.initialize();
-		CustomSounds.initialize();
+		ModSoundEvents.initialize();
 	}
 }

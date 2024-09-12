@@ -23,5 +23,6 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
 		addDrop(ModBlocks.MIKU_PLUSH_BR_BA_DRUM_BLOCK, ModItems.MIKU_PLUSH_BR_BA_DRUM);
 		addDrop(ModBlocks.MIKU_PLUSH_BR_PR_BLOCK, ModItems.MIKU_PLUSH_BR_PR);
 		addDrop(ModBlocks.MIKU_PLUSH_BR_SP_BLOCK, ModItems.MIKU_PLUSH_BR_SP);
+		addDrop(ModBlocks.MIKU_PLUSH_BR_MG_BLOCK, ModItems.MIKU_PLUSH_BR_MG);
 	}
 }

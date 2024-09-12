@@ -23,6 +23,7 @@ public class ModModelProvider extends FabricModelProvider {
 		blockStateModelGenerator.registerNorthDefaultHorizontalRotation(ModBlocks.MIKU_PLUSH_BR_BA_DRUM_BLOCK);
 		blockStateModelGenerator.registerNorthDefaultHorizontalRotation(ModBlocks.MIKU_PLUSH_BR_PR_BLOCK);
 		blockStateModelGenerator.registerNorthDefaultHorizontalRotation(ModBlocks.MIKU_PLUSH_BR_SP_BLOCK);
+		blockStateModelGenerator.registerNorthDefaultHorizontalRotation(ModBlocks.MIKU_PLUSH_BR_MG_BLOCK);
 	}
 
 	@Override

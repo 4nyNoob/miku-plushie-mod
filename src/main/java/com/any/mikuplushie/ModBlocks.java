@@ -77,6 +77,14 @@ public class ModBlocks {
 			"miku_plush_br_sp",
 			false
 	);
+	public static final Block MIKU_PLUSH_BR_MG_BLOCK = register(
+			new MikuPlushieBlock(AbstractBlock.Settings.copy(Blocks.FLOWER_POT)
+			.sounds(BlockSoundGroup.WOOL)
+			.nonOpaque()
+			),
+			"miku_plush_br_mg",
+			false
+	);
 
 
 

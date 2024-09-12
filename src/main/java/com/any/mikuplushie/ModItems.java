@@ -12,23 +12,35 @@ import net.minecraft.util.Rarity;
 
 public class ModItems {
 
-	public static final Item CANUDINHO = register(new Item(new Item.Settings().rarity(Rarity.RARE)), "canudinho");
-	public static final Item MIKU_PLUSH_BR = register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_BR_BLOCK,
+	public static final Item CANUDINHO =
+			register(new Item(new Item.Settings().rarity(Rarity.RARE)), "canudinho");
+	public static final Item MIKU_PLUSH_BR =
+			register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_BR_BLOCK,
 			new Item.Settings().equipmentSlot((entity, stack) -> EquipmentSlot.HEAD)), "miku_plush_br");
-	public static final Item MIKU_PLUSH_BR_BA = register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_BR_BA_BLOCK,
+	public static final Item MIKU_PLUSH_BR_BA =
+			register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_BR_BA_BLOCK,
 			new Item.Settings().equipmentSlot((entity, stack) -> EquipmentSlot.HEAD)), "miku_plush_br_ba");
-	public static final Item MIKU_PLUSH_BIK = register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_BIK_BLOCK,
+	public static final Item MIKU_PLUSH_BIK =
+			register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_BIK_BLOCK,
 			new Item.Settings().equipmentSlot((entity, stack) -> EquipmentSlot.HEAD)), "miku_plush_bik");
-	public static final Item MIKU_PLUSH_BR_BEACH = register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_BR_BEACH_BLOCK,
+	public static final Item MIKU_PLUSH_BR_BEACH =
+			register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_BR_BEACH_BLOCK,
 			new Item.Settings().equipmentSlot((entity, stack) -> EquipmentSlot.HEAD)), "miku_plush_br_beach");
-	public static final Item MIKU_PLUSH_BR_BRAID = register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_BR_BRAID_BLOCK,
+	public static final Item MIKU_PLUSH_BR_BRAID =
+			register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_BR_BRAID_BLOCK,
 			new Item.Settings().equipmentSlot((entity, stack) -> EquipmentSlot.HEAD)), "miku_plush_br_braid");
-	public static final Item MIKU_PLUSH_BR_BA_DRUM = register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_BR_BA_DRUM_BLOCK,
+	public static final Item MIKU_PLUSH_BR_BA_DRUM =
+			register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_BR_BA_DRUM_BLOCK,
 			new Item.Settings().equipmentSlot((entity, stack) -> EquipmentSlot.HEAD)), "miku_plush_br_ba_drum");
-	public static final Item MIKU_PLUSH_BR_PR = register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_BR_PR_BLOCK,
+	public static final Item MIKU_PLUSH_BR_PR =
+			register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_BR_PR_BLOCK,
 			new Item.Settings().equipmentSlot((entity, stack) -> EquipmentSlot.HEAD)), "miku_plush_br_pr");
-	public static final Item MIKU_PLUSH_BR_SP = register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_BR_SP_BLOCK,
+	public static final Item MIKU_PLUSH_BR_SP =
+			register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_BR_SP_BLOCK,
 			new Item.Settings().equipmentSlot((entity, stack) -> EquipmentSlot.HEAD)), "miku_plush_br_sp");
+	public static final Item MIKU_PLUSH_BR_MG =
+			register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_BR_MG_BLOCK,
+			new Item.Settings().equipmentSlot((entity, stack) -> EquipmentSlot.HEAD)), "miku_plush_br_mg");
 
 
 
@@ -53,6 +65,7 @@ public class ModItems {
 		ItemGroupEvents.modifyEntriesEvent(ItemGroups.FUNCTIONAL).register((itemGroup) -> itemGroup.add(ModItems.MIKU_PLUSH_BR_BA_DRUM));
 		ItemGroupEvents.modifyEntriesEvent(ItemGroups.FUNCTIONAL).register((itemGroup) -> itemGroup.add(ModItems.MIKU_PLUSH_BR_PR));
 		ItemGroupEvents.modifyEntriesEvent(ItemGroups.FUNCTIONAL).register((itemGroup) -> itemGroup.add(ModItems.MIKU_PLUSH_BR_SP));
+		ItemGroupEvents.modifyEntriesEvent(ItemGroups.FUNCTIONAL).register((itemGroup) -> itemGroup.add(ModItems.MIKU_PLUSH_BR_MG));
 
 
 

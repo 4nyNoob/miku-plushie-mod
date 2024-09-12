@@ -1,4 +1,4 @@
-// 1.21.1	2024-09-09T18:29:06.625052529	miku plushies/Model Definitions
+// 1.21.1	2024-09-12T08:02:05.575076343	miku plushies/Model Definitions
 1905af229dc90ca65cc28a19f8fac97971bbdeba assets/miku-plushie/blockstates/miku_plush_br_braid.json
 855aaf81743805ef4fef7a92a26388889837d6fd assets/miku-plushie/models/item/miku_plush_bik.json
 8aed59e7b0017d0955fbc428ab189d03d05fc7a0 assets/miku-plushie/blockstates/miku_plush_bik.json
@@ -8,11 +8,13 @@ efed94b7d3ff3cf8de92373d57c11ec1093498d1 assets/miku-plushie/blockstates/miku_pl
 80bedacdd144e7dcb54fbf3595c1dee190e68955 assets/miku-plushie/models/item/canudinho.json
 da4fbaf2090187c60954351f5bc34c08a6fad948 assets/miku-plushie/blockstates/miku_plush_br_pr.json
 00b210091bc487319f0282ed3ee4041201934274 assets/miku-plushie/models/item/miku_plush_br_ba.json
+64f31dfd43dd3315394bcdc17479771dbb63aa58 assets/miku-plushie/blockstates/miku_plush_br_mg.json
 5c8157605303153f221d17c5e7abce3060efff93 assets/miku-plushie/models/item/miku_plush_br_sp.json
 0ed54a716f81c9d9ec4cebc3d46a6ae384352912 assets/miku-plushie/models/item/miku_plush_br_ba_drum.json
-e3f98527acd3ee6c2d20a48ac9b40abc7d33afe9 assets/miku-plushie/models/item/miku_plush_br_braid.json
 00d7c7b377dde8c53a8483f02bbe04b31590c7d5 assets/miku-plushie/blockstates/miku_plush_br.json
+e3f98527acd3ee6c2d20a48ac9b40abc7d33afe9 assets/miku-plushie/models/item/miku_plush_br_braid.json
 59ed7e276b623f9479d901a8f80ef87d59605220 assets/miku-plushie/blockstates/miku_plush_br_ba.json
 22d23429d206f744388913ed8e153422bb5f4f53 assets/miku-plushie/models/item/miku_plush_br.json
 86754dc89572eeb80b45143e365c37f71fb1e927 assets/miku-plushie/models/item/miku_plush_br_beach.json
+7e5ee284e24e277fafdcfed6a6ef47f39c689985 assets/miku-plushie/models/item/miku_plush_br_mg.json
 a05c033289688a08e6b9ff25fb1d43abd0cbf5b1 assets/miku-plushie/blockstates/miku_plush_br_ba_drum.json

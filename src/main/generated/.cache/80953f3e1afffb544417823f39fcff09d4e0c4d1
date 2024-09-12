@@ -1,4 +1,4 @@
-// 1.21.1	2024-09-09T18:29:06.626009809	miku plushies/Recipes
+// 1.21.1	2024-09-12T08:02:05.576139586	miku plushies/Recipes
 1057061e0384eafa9725dc7cbd5f5270663818ed data/miku-plushie/advancement/recipes/food/canudinho.json
 cc7b61f9bb194b227e5cdbcc2ab0d10a6fe79980 data/miku-plushie/advancement/recipes/decorations/miku_plush_br_ba.json
 3c8858487cf0ffd118bde839c0177be08cd022ef data/miku-plushie/recipe/miku_plush_bik.json
@@ -14,6 +14,8 @@ e48018575816da6cf4a118d2859902e08bd5fd8f data/miku-plushie/recipe/canudinho.json
 a83e7f7c38dc8e8e2fe2006ede36a1c7e1163bff data/miku-plushie/advancement/recipes/decorations/miku_plush_br.json
 41f4858b0c9d15b8851f4caa734bc9dddf4cce69 data/miku-plushie/recipe/miku_plush_br_sp.json
 376748833eb221c59ce029361eb45d48bcfd95f2 data/miku-plushie/recipe/miku_plush_br_ba_drum.json
+e56e91e3d8996e75dffe76883e9252d3e8a459aa data/miku-plushie/recipe/miku_plush_br_mg.json
+e42f9ba8d544110c04e139c75c875de794a2a44a data/miku-plushie/advancement/recipes/decorations/miku_plush_br_mg.json
 b7e0312f933e68c25e534c009a2e1825d6db39a6 data/miku-plushie/advancement/recipes/decorations/miku_plush_bik.json
 58ae47e485bd7b1afb5ef561aab45b9d196bf7c4 data/miku-plushie/recipe/miku_plush_br.json
 66718b82c5b391c763153187d5675df39176702f data/miku-plushie/advancement/recipes/decorations/miku_plush_br_sp.json

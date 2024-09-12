@@ -5,11 +5,14 @@ import net.minecraft.registry.Registry;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.util.Identifier;
 
-public class CustomSounds {
-	private CustomSounds() {
+public class ModSoundEvents {
+	private ModSoundEvents() {
 	}
 
 	public static final SoundEvent CANUDINHO = registerSound("canudinho");
+	public static final SoundEvent OIE = registerSound("oie");
+	public static final SoundEvent DOR = registerSound("dor");
+	public static final SoundEvent BYE = registerSound("bye");
 
 	private static SoundEvent registerSound(String id) {
 		Identifier identifier = Identifier.of(MikuPlushie.MOD_ID, id);

@@ -7,16 +7,21 @@
   "item.miku-plushie.miku_plush_bik.tooltip": "§b§n@hfk8.bsky.social",
   "block.miku-plushie.miku_plush_br_beach": "Pelúcia da Miku Brasileira de Praia",
   "item.miku-plushie.miku_plush_br_beach.tooltip": "§b§n@teodortarik.bsky.social",
-  "block.miku-plushie.miku_plush_br_braid": "Pelúcia da Miku Brasileira de Tranças",
+  "block.miku-plushie.miku_plush_br_braid": "Pelúcia da Miku Brasileira Preta",
   "item.miku-plushie.miku_plush_br_braid.tooltip": "§b§n@eduilust.bsky.social",
   "block.miku-plushie.miku_plush_br_ba_drum": "Pelúcia da Miku do Olodum",
   "item.miku-plushie.miku_plush_br_ba_drum.tooltip": "§b§n@visualecholalia.bsky.social",
-  "block.miku-plushie.miku_plush_br_pr": "Pelúcia da Miku do Paraná",
+  "block.miku-plushie.miku_plush_br_pr": "Pelúcia da Miku Paranaense",
   "item.miku-plushie.miku_plush_br_pr.tooltip": "§b§n@dokiny.bsky.social",
-  "block.miku-plushie.miku_plush_br_sp": "Pelúcia da Miku de São Paulo",
+  "block.miku-plushie.miku_plush_br_sp": "Pelúcia da Miku Paulista",
   "item.miku-plushie.miku_plush_br_sp.tooltip": "§b§n@olhosdtinta.bsky.social",
+  "block.miku-plushie.miku_plush_br_mg": "Pelúcia da Miku Mineira",
+  "item.miku-plushie.miku_plush_br_mg.tooltip": "§b§n@themushxd.bsky.social",
 
   "item.miku-plushie.canudinho": "Canudinho",
 
-  "sound.miku-plushie.canudinho": "Miku Pelúcia Diz: Canudinho"
+  "sound.miku-plushie.canudinho": "Miku: Canudinho",
+  "sound.miku-plushie.oie": "Miku: Oie",
+  "sound.miku-plushie.dor": "Miku: Dor",
+  "sound.miku-plushie.bye": "Miku: Tchau"
 }

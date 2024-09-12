@@ -1,9 +1,10 @@
-// 1.21.1	2024-09-09T18:29:06.625816942	miku plushies/Block Loot Tables
+// 1.21.1	2024-09-12T08:02:05.575943513	miku plushies/Block Loot Tables
 fcfdbb3e46168e253ab1a9a4371466a7b4e5e03d data/miku-plushie/loot_table/blocks/miku_plush_br_ba_drum.json
 0c154444201255fa994c3038e5b13ef363dc6f70 data/miku-plushie/loot_table/blocks/miku_plush_br_ba.json
 1605dca8474dc1cb7ac58d618cbdcc6b4c0ca9fb data/miku-plushie/loot_table/blocks/miku_plush_br_sp.json
 be99bc4b6a298a863ccc60941db526ad7fda33d7 data/miku-plushie/loot_table/blocks/miku_plush_br.json
 944a7198197f531f0207e087b626fa11f44e8f68 data/miku-plushie/loot_table/blocks/miku_plush_br_pr.json
+0971782ec23621996b3756abfdb2688ca14e9736 data/miku-plushie/loot_table/blocks/miku_plush_br_mg.json
 78ff9d9caee6c63d84a7f224e73ec78f05c43582 data/miku-plushie/loot_table/blocks/miku_plush_br_beach.json
 25ade9f37f7ee10d41250eabfc34597264c996ce data/miku-plushie/loot_table/blocks/miku_plush_br_braid.json
 f2026b8353e631bbb66a373414c7b4c0061902f9 data/miku-plushie/loot_table/blocks/miku_plush_bik.json

@@ -136,5 +136,21 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 				.criterion(FabricRecipeProvider.hasItem(Blocks.GRAY_CONCRETE), FabricRecipeProvider.conditionsFromItem(Blocks.GRAY_CONCRETE))
 				.offerTo(exporter);
 
+		ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ModBlocks.MIKU_PLUSH_BR_MG_BLOCK)
+				.pattern("cwc")
+				.pattern("cbc")
+				.pattern("rg ")
+				.input('c', Blocks.CYAN_WOOL)
+				.input('w', Blocks.WHITE_WOOL)
+				.input('b', Blocks.BLACK_WOOL)
+				.input('r', Blocks.RED_WOOL)
+				.input('g', Items.GOLD_NUGGET)
+				.criterion(FabricRecipeProvider.hasItem(Blocks.CYAN_WOOL), FabricRecipeProvider.conditionsFromItem(Blocks.CYAN_WOOL))
+				.criterion(FabricRecipeProvider.hasItem(Blocks.WHITE_WOOL), FabricRecipeProvider.conditionsFromItem(Blocks.WHITE_WOOL))
+				.criterion(FabricRecipeProvider.hasItem(Blocks.BLACK_WOOL), FabricRecipeProvider.conditionsFromItem(Blocks.BLACK_WOOL))
+				.criterion(FabricRecipeProvider.hasItem(Blocks.RED_WOOL), FabricRecipeProvider.conditionsFromItem(Blocks.BLACK_WOOL))
+				.criterion(FabricRecipeProvider.hasItem(Items.GOLD_NUGGET), FabricRecipeProvider.conditionsFromItem(Items.GOLD_NUGGET))
+				.offerTo(exporter);
+
 	}
 }

@@ -1,11 +1,12 @@
 package com.any.mikuplushie.block;
 
-import com.any.mikuplushie.CustomSounds;
 import com.any.mikuplushie.ModItems;
+import com.any.mikuplushie.ModSoundEvents;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.HorizontalFacingBlock;
 import net.minecraft.block.ShapeContext;
+import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.item.ItemStack;
@@ -35,11 +36,23 @@ public class MikuPlushieBlock extends Block {
 	protected ItemActionResult onUseWithItem(ItemStack stack, BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
 		if (!world.isClient){
 			if (stack.isOf(ModItems.CANUDINHO)){
-				world.playSound(null, pos, CustomSounds.CANUDINHO, SoundCategory.BLOCKS, 1F, 1F);
+				world.playSound(null, pos, ModSoundEvents.CANUDINHO, SoundCategory.BLOCKS, 1F, 1F);
 				return ItemActionResult.SUCCESS;
 			}
 		}
 		return super.onUseWithItem(stack, state, world, pos, player, hand, hit);
+	}
+
+	@Override
+	public void onPlaced(World world, BlockPos pos, BlockState state, @Nullable LivingEntity placer, ItemStack itemStack) {
+		world.playSound(null, pos, ModSoundEvents.OIE, SoundCategory.BLOCKS, 0.5F, 1);
+		super.onPlaced(world, pos, state, placer, itemStack);
+	}
+
+	@Override
+	public BlockState onBreak(World world, BlockPos pos, BlockState state, PlayerEntity player) {
+		world.playSound(null, pos, ModSoundEvents.BYE, SoundCategory.BLOCKS, 0.5F, 1);
+		return super.onBreak(world, pos, state, player);
 	}
 
 	@Override
