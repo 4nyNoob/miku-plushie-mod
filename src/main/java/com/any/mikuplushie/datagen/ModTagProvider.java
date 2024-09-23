@@ -1,5 +1,6 @@
 package com.any.mikuplushie.datagen;
 
+import com.any.mikuplushie.MikuPlushie;
 import com.any.mikuplushie.ModItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
@@ -18,7 +19,7 @@ public class ModTagProvider extends FabricTagProvider.ItemTagProvider {
         super(output, completableFuture);
     }
 
-    public static final TagKey<Item> BR_MIKU_ITEMS = TagKey.of(RegistryKeys.ITEM, Identifier.of("miku-plushie", "br_miku_plush"));
+    public static final TagKey<Item> BR_MIKU_ITEMS = TagKey.of(RegistryKeys.ITEM, Identifier.of(MikuPlushie.MOD_ID, "br_miku_plush"));
 
     @Override
     protected void configure(RegistryWrapper.WrapperLookup wrapperLookup) {
@@ -29,8 +30,21 @@ public class ModTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModItems.MIKU_PLUSH_BR_BEACH)
                 .add(ModItems.MIKU_PLUSH_BR_BRAID)
                 .add(ModItems.MIKU_PLUSH_BR_BA_DRUM)
-                .add(ModItems.MIKU_PLUSH_BR_PR)
+                .add(ModItems.MIKU_PLUSH_BR_PA)
                 .add(ModItems.MIKU_PLUSH_BR_SP)
-                .add(ModItems.MIKU_PLUSH_BR_MG);
+                .add(ModItems.MIKU_PLUSH_BR_MG)
+                .add(ModItems.MIKU_PLUSH_BR_BROWN_BRO)
+                .add(ModItems.MIKU_PLUSH_BR_ELECTRICIAN)
+                .add(ModItems.MIKU_PLUSH_BR_BIK_ORANGE)
+                .add(ModItems.MIKU_PLUSH_BR_AM)
+                .add(ModItems.MIKU_PLUSH_BR_FUT_FLA)
+                .add(ModItems.MIKU_PLUSH_BR_FUT_CAM)
+                .add(ModItems.MIKU_PLUSH_BR_GO)
+                .add(ModItems.MIKU_PLUSH_BR_SCHOOL_PE)
+                .add(ModItems.MIKU_PLUSH_BR_FUT_CRVG)
+                .add(ModItems.MIKU_PLUSH_BR_RS)
+                .add(ModItems.MIKU_PLUSH_FROG)
+                .add(ModItems.MIKU_PLUSH_MUSHROOM)
+        ;
     }
 }

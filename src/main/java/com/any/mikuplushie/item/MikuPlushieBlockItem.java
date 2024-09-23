@@ -3,11 +3,7 @@ package com.any.mikuplushie.item;
 import com.any.mikuplushie.ModSoundEvents;
 import com.any.mikuplushie.datagen.ModTagProvider;
 import net.minecraft.block.Block;
-import net.minecraft.component.type.AttributeModifierSlot;
-import net.minecraft.component.type.AttributeModifiersComponent;
 import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.attribute.EntityAttributeModifier;
-import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.tooltip.TooltipType;
@@ -19,16 +15,6 @@ public class MikuPlushieBlockItem extends BlockItem {
 
 	public MikuPlushieBlockItem(Block block, Settings settings) {
 		super(block, settings);
-	}
-
-	public static AttributeModifiersComponent createAttributeModifiers(float attackSpeed) {
-		return AttributeModifiersComponent.builder()
-				.add(
-						EntityAttributes.GENERIC_ATTACK_SPEED,
-						new EntityAttributeModifier(BASE_ATTACK_SPEED_MODIFIER_ID, (double)attackSpeed, EntityAttributeModifier.Operation.ADD_VALUE),
-						AttributeModifierSlot.MAINHAND
-				)
-				.build();
 	}
 
 	@Override

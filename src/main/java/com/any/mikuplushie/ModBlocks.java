@@ -13,7 +13,7 @@ import net.minecraft.util.Identifier;
 
 public class ModBlocks {
 
-	public static final Block MIKU_PLUSH_BR_BLOCK = register(
+	public static final Block MIKU_PLUSH_BR = register(
 			new MikuPlushieBlock(AbstractBlock.Settings.copy(Blocks.FLOWER_POT)
 			.sounds(BlockSoundGroup.WOOL)
 			.nonOpaque()
@@ -21,7 +21,7 @@ public class ModBlocks {
 			"miku_plush_br",
 			false
 	);
-	public static final Block MIKU_PLUSH_BR_BA_BLOCK = register(
+	public static final Block MIKU_PLUSH_BR_BA = register(
 			new MikuPlushieBlock(AbstractBlock.Settings.copy(Blocks.FLOWER_POT)
 			.sounds(BlockSoundGroup.WOOL)
 			.nonOpaque()
@@ -29,7 +29,7 @@ public class ModBlocks {
 			"miku_plush_br_ba",
 			false
 	);
-	public static final Block MIKU_PLUSH_BIK_BLOCK = register(
+	public static final Block MIKU_PLUSH_BIK = register(
 			new MikuPlushieBlock(AbstractBlock.Settings.copy(Blocks.FLOWER_POT)
 			.sounds(BlockSoundGroup.WOOL)
 			.nonOpaque()
@@ -37,7 +37,7 @@ public class ModBlocks {
 			"miku_plush_bik",
 			false
 	);
-	public static final Block MIKU_PLUSH_BR_BEACH_BLOCK = register(
+	public static final Block MIKU_PLUSH_BR_BEACH = register(
 			new MikuPlushieBlock(AbstractBlock.Settings.copy(Blocks.FLOWER_POT)
 			.sounds(BlockSoundGroup.WOOL)
 			.nonOpaque()
@@ -45,7 +45,7 @@ public class ModBlocks {
 			"miku_plush_br_beach",
 			false
 	);
-	public static final Block MIKU_PLUSH_BR_BRAID_BLOCK = register(
+	public static final Block MIKU_PLUSH_BR_BRAID = register(
 			new MikuPlushieBlock(AbstractBlock.Settings.copy(Blocks.FLOWER_POT)
 			.sounds(BlockSoundGroup.WOOL)
 			.nonOpaque()
@@ -53,7 +53,7 @@ public class ModBlocks {
 			"miku_plush_br_braid",
 			false
 	);
-	public static final Block MIKU_PLUSH_BR_BA_DRUM_BLOCK = register(
+	public static final Block MIKU_PLUSH_BR_BA_DRUM = register(
 			new MikuPlushieBlock(AbstractBlock.Settings.copy(Blocks.FLOWER_POT)
 			.sounds(BlockSoundGroup.WOOL)
 			.nonOpaque()
@@ -61,15 +61,15 @@ public class ModBlocks {
 			"miku_plush_br_ba_drum",
 			false
 	);
-	public static final Block MIKU_PLUSH_BR_PR_BLOCK = register(
+	public static final Block MIKU_PLUSH_BR_PA = register(
 			new MikuPlushieBlock(AbstractBlock.Settings.copy(Blocks.FLOWER_POT)
 			.sounds(BlockSoundGroup.WOOL)
 			.nonOpaque()
 			),
-			"miku_plush_br_pr",
+			"miku_plush_br_pa",
 			false
 	);
-	public static final Block MIKU_PLUSH_BR_SP_BLOCK = register(
+	public static final Block MIKU_PLUSH_BR_SP = register(
 			new MikuPlushieBlock(AbstractBlock.Settings.copy(Blocks.FLOWER_POT)
 			.sounds(BlockSoundGroup.WOOL)
 			.nonOpaque()
@@ -77,12 +77,108 @@ public class ModBlocks {
 			"miku_plush_br_sp",
 			false
 	);
-	public static final Block MIKU_PLUSH_BR_MG_BLOCK = register(
+	public static final Block MIKU_PLUSH_BR_MG = register(
 			new MikuPlushieBlock(AbstractBlock.Settings.copy(Blocks.FLOWER_POT)
 			.sounds(BlockSoundGroup.WOOL)
 			.nonOpaque()
 			),
 			"miku_plush_br_mg",
+			false
+	);
+	public static final Block MIKU_PLUSH_BR_BROWN_BRO = register(
+			new MikuPlushieBlock(AbstractBlock.Settings.copy(Blocks.FLOWER_POT)
+			.sounds(BlockSoundGroup.WOOL)
+			.nonOpaque()
+			),
+			"miku_plush_br_brown_bro",
+			false
+	);
+	public static final Block MIKU_PLUSH_BR_ELECTRICIAN = register(
+			new MikuPlushieBlock(AbstractBlock.Settings.copy(Blocks.FLOWER_POT)
+			.sounds(BlockSoundGroup.WOOL)
+			.nonOpaque()
+			),
+			"miku_plush_br_electrician",
+			false
+	);
+	public static final Block MIKU_PLUSH_BR_BIK_ORANGE = register(
+			new MikuPlushieBlock(AbstractBlock.Settings.copy(Blocks.FLOWER_POT)
+			.sounds(BlockSoundGroup.WOOL)
+			.nonOpaque()
+			),
+			"miku_plush_br_bik_orange",
+			false
+	);
+	public static final Block MIKU_PLUSH_BR_AM = register(
+			new MikuPlushieBlock(AbstractBlock.Settings.copy(Blocks.FLOWER_POT)
+			.sounds(BlockSoundGroup.WOOL)
+			.nonOpaque()
+			),
+			"miku_plush_br_am",
+			false
+	);
+	public static final Block MIKU_PLUSH_BR_FUT_FLA = register(
+			new MikuPlushieBlock(AbstractBlock.Settings.copy(Blocks.FLOWER_POT)
+			.sounds(BlockSoundGroup.WOOL)
+			.nonOpaque()
+			),
+			"miku_plush_br_fut_fla",
+			false
+	);
+	public static final Block MIKU_PLUSH_BR_FUT_CAM = register(
+			new MikuPlushieBlock(AbstractBlock.Settings.copy(Blocks.FLOWER_POT)
+			.sounds(BlockSoundGroup.WOOL)
+			.nonOpaque()
+			),
+			"miku_plush_br_fut_cam",
+			false
+	);
+	public static final Block MIKU_PLUSH_BR_GO = register(
+			new MikuPlushieBlock(AbstractBlock.Settings.copy(Blocks.FLOWER_POT)
+			.sounds(BlockSoundGroup.WOOL)
+			.nonOpaque()
+			),
+			"miku_plush_br_go",
+			false
+	);
+	public static final Block MIKU_PLUSH_BR_SCHOOL_PE = register(
+			new MikuPlushieBlock(AbstractBlock.Settings.copy(Blocks.FLOWER_POT)
+			.sounds(BlockSoundGroup.WOOL)
+			.nonOpaque()
+			),
+			"miku_plush_br_school_pe",
+			false
+	);
+	public static final Block MIKU_PLUSH_BR_FUT_CRVG = register(
+			new MikuPlushieBlock(AbstractBlock.Settings.copy(Blocks.FLOWER_POT)
+			.sounds(BlockSoundGroup.WOOL)
+			.nonOpaque()
+			),
+			"miku_plush_br_fut_crvg",
+			false
+	);
+	public static final Block MIKU_PLUSH_BR_RS = register(
+			new MikuPlushieBlock(AbstractBlock.Settings.copy(Blocks.FLOWER_POT)
+			.sounds(BlockSoundGroup.WOOL)
+			.nonOpaque()
+			),
+			"miku_plush_br_rs",
+			false
+	);
+	public static final Block MIKU_PLUSH_FROG = register(
+			new MikuPlushieBlock(AbstractBlock.Settings.copy(Blocks.FLOWER_POT)
+			.sounds(BlockSoundGroup.WOOL)
+			.nonOpaque()
+			),
+			"miku_plush_frog",
+			false
+	);
+	public static final Block MIKU_PLUSH_MUSHROOM = register(
+			new MikuPlushieBlock(AbstractBlock.Settings.copy(Blocks.FLOWER_POT)
+			.sounds(BlockSoundGroup.WOOL)
+			.nonOpaque()
+			),
+			"miku_plush_mushroom",
 			false
 	);
 
