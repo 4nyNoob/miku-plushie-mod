@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "miku-plushie:block/miku_plush_br_school_pe",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "miku-plushie:block/miku_plush_br_school_pe"
+    },
+    "facing=south": {
+      "model": "miku-plushie:block/miku_plush_br_school_pe",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "miku-plushie:block/miku_plush_br_school_pe",
+      "y": 270
+    }
+  }
+}

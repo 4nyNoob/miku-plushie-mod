@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "a": {
+      "item": "minecraft:moss_block"
+    },
+    "b": {
+      "item": "minecraft:red_wool"
+    },
+    "c": {
+      "item": "minecraft:cyan_wool"
+    },
+    "l": {
+      "item": "minecraft:gray_wool"
+    }
+  },
+  "pattern": [
+    "clc",
+    "cbc",
+    "a  "
+  ],
+  "result": {
+    "count": 1,
+    "id": "miku-plushie:miku_plush_br_rs"
+  }
+}

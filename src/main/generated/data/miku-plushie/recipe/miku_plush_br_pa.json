@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "c": {
+      "item": "minecraft:cyan_wool"
+    },
+    "i": {
+      "item": "minecraft:cornflower"
+    },
+    "w": {
+      "item": "minecraft:white_wool"
+    }
+  },
+  "pattern": [
+    "cwc",
+    "cwc",
+    "i  "
+  ],
+  "result": {
+    "count": 1,
+    "id": "miku-plushie:miku_plush_br_pa"
+  }
+}

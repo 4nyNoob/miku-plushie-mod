@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "a": {
+      "item": "minecraft:tadpole_bucket"
+    },
+    "b": {
+      "item": "minecraft:light_blue_wool"
+    },
+    "c": {
+      "item": "minecraft:cyan_wool"
+    },
+    "l": {
+      "item": "minecraft:gray_wool"
+    }
+  },
+  "pattern": [
+    "clc",
+    "cbc",
+    "a  "
+  ],
+  "result": {
+    "count": 1,
+    "id": "miku-plushie:miku_plush_frog"
+  }
+}

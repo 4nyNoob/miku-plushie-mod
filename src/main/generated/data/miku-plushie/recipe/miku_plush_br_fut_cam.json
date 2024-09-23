@@ -2,23 +2,22 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
+    "b": {
+      "item": "minecraft:black_wool"
+    },
     "c": {
       "item": "minecraft:cyan_wool"
     },
-    "i": {
-      "item": "minecraft:blue_ice"
-    },
-    "w": {
-      "item": "minecraft:white_wool"
+    "l": {
+      "item": "minecraft:light_gray_wool"
     }
   },
   "pattern": [
-    "cwc",
-    "cwc",
-    "i  "
+    "clc",
+    "cbc"
   ],
   "result": {
     "count": 1,
-    "id": "miku-plushie:miku_plush_br_pr"
+    "id": "miku-plushie:miku_plush_br_fut_cam"
   }
 }
