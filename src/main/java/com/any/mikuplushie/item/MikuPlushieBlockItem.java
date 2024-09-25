@@ -23,6 +23,8 @@ public class MikuPlushieBlockItem extends BlockItem implements Equipment {
 		super(block, settings);
 	}
 
+
+
 	@Override
 	public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
 		tooltip.add(Text.translatable("item." + MikuPlushie.MOD_ID + "." + stack.getItem().toString() + ".tooltip"));
