@@ -1,0 +1,61 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_cyan_wool": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:cyan_wool"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_green_wool": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:green_wool"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "miku-plushie:miku_plush_br"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_yellow_wool": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:yellow_wool"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_cyan_wool",
+      "has_yellow_wool",
+      "has_green_wool",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "miku-plushie:miku_plush_br"
+    ]
+  },
+  "sends_telemetry_event": false
+}

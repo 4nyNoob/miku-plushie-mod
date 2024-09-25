@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "a": {
+      "item": "minecraft:lead"
+    },
+    "b": {
+      "item": "minecraft:green_wool"
+    },
+    "c": {
+      "item": "minecraft:cyan_wool"
+    },
+    "l": {
+      "item": "minecraft:yellow_wool"
+    }
+  },
+  "pattern": [
+    "clc",
+    "cbc",
+    "a  "
+  ],
+  "result": {
+    "item": "miku-plushie:miku_plush_br_go"
+  },
+  "show_notification": true
+}

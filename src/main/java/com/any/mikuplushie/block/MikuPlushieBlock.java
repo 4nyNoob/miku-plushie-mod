@@ -13,9 +13,9 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.DirectionProperty;
+import net.minecraft.util.ActionResult;
 import net.minecraft.util.BlockRotation;
 import net.minecraft.util.Hand;
-import net.minecraft.util.ItemActionResult;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
@@ -33,14 +33,14 @@ public class MikuPlushieBlock extends Block {
 	}
 
 	@Override
-	protected ItemActionResult onUseWithItem(ItemStack stack, BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
+	public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
 		if (!world.isClient){
-			if (stack.isOf(ModItems.CANUDINHO)){
+			if (player.getStackInHand(hand).isOf(ModItems.CANUDINHO)){
 				world.playSound(null, pos, ModSoundEvents.CANUDINHO, SoundCategory.BLOCKS, 1F, 1F);
-				return ItemActionResult.SUCCESS;
+				return ActionResult.SUCCESS;
 			}
 		}
-		return super.onUseWithItem(stack, state, world, pos, player, hand, hit);
+		return super.onUse(state, world, pos, player, hand, hit);
 	}
 
 	@Override
@@ -50,13 +50,13 @@ public class MikuPlushieBlock extends Block {
 	}
 
 	@Override
-	public BlockState onBreak(World world, BlockPos pos, BlockState state, PlayerEntity player) {
+	public void onBreak(World world, BlockPos pos, BlockState state, PlayerEntity player) {
 		world.playSound(null, pos, ModSoundEvents.BYE, SoundCategory.BLOCKS, 0.5F, 1);
-		return super.onBreak(world, pos, state, player);
-	}
+        super.onBreak(world, pos, state, player);
+    }
 
 	@Override
-	protected VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
+	public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
 		return SHAPE;
 	}
 
@@ -65,7 +65,7 @@ public class MikuPlushieBlock extends Block {
 		return this.getDefaultState().with(FACING, ctx.getHorizontalPlayerFacing().getOpposite());
 	}
 
-	protected BlockState rotate(BlockState state, BlockRotation rotation) {
+	public BlockState rotate(BlockState state, BlockRotation rotation) {
 		return state.with(FACING, rotation.rotate(state.get(FACING)));
 	}
 
