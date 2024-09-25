@@ -46,5 +46,14 @@
       "miku-plushie:miku-bye6",
       "miku-plushie:miku-bye7"
     ]
+  },
+  "equip" : {
+    "subtitle": "sound.miku-plushie.equip",
+    "sounds": [
+      "miku-plushie:miku-equip1",
+      "miku-plushie:miku-equip2",
+      "miku-plushie:miku-equip3",
+      "miku-plushie:miku-equip4"
+    ]
   }
 }

@@ -42,6 +42,6 @@ public class MikuPlushieBlockItem extends BlockItem implements Equipment {
 
 	@Override
 	public SoundEvent getEquipSound() {
-		return ModSoundEvents.OIE;
+		return ModSoundEvents.EQUIP;
 	}
 }
