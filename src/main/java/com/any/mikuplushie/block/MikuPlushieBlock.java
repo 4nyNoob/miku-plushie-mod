@@ -32,18 +32,6 @@ public class MikuPlushieBlock extends Block {
 		this.setDefaultState(this.stateManager.getDefaultState().with(FACING, Direction.NORTH));
 	}
 
-//	@Override
-//	protected ItemActionResult onUseWithItem(ItemStack stack, BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
-//		if (!world.isClient){
-//			if (stack.isOf(ModItems.CANUDINHO)){
-//				world.playSound(null, pos, ModSoundEvents.CANUDINHO, SoundCategory.BLOCKS, 1F, 1F);
-//				return ItemActionResult.SUCCESS;
-//			}
-//		}
-//		return super.onUseWithItem(stack, state, world, pos, player, hand, hit);
-//	}
-
-
 	@Override
 	public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
 		if (!world.isClient){

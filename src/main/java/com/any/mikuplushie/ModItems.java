@@ -14,68 +14,47 @@ public class ModItems {
 	public static final Item CANUDINHO =
 			register(new Item(new Item.Settings().rarity(Rarity.RARE)), "canudinho");
 	public static final Item MIKU_PLUSH_BR =
-			register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_BR,
-			new Item.Settings()/*.equipmentSlot((entity, stack) -> EquipmentSlot.HEAD)*/), "miku_plush_br");
+			register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_BR, new Item.Settings()), "miku_plush_br");
 	public static final Item MIKU_PLUSH_BR_BA =
-			register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_BR_BA,
-			new Item.Settings()/*.equipmentSlot((entity, stack) -> EquipmentSlot.HEAD)*/), "miku_plush_br_ba");
+			register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_BR_BA, new Item.Settings()), "miku_plush_br_ba");
 	public static final Item MIKU_PLUSH_BIK =
-			register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_BIK,
-			new Item.Settings()/*.equipmentSlot((entity, stack) -> EquipmentSlot.HEAD)*/), "miku_plush_bik");
+			register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_BIK, new Item.Settings()), "miku_plush_bik");
 	public static final Item MIKU_PLUSH_BR_BEACH =
-			register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_BR_BEACH,
-			new Item.Settings()/*.equipmentSlot((entity, stack) -> EquipmentSlot.HEAD)*/), "miku_plush_br_beach");
+			register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_BR_BEACH, new Item.Settings()), "miku_plush_br_beach");
 	public static final Item MIKU_PLUSH_BR_BRAID =
-			register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_BR_BRAID,
-			new Item.Settings()/*.equipmentSlot((entity, stack) -> EquipmentSlot.HEAD)*/), "miku_plush_br_braid");
+			register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_BR_BRAID, new Item.Settings()), "miku_plush_br_braid");
 	public static final Item MIKU_PLUSH_BR_BA_DRUM =
-			register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_BR_BA_DRUM,
-			new Item.Settings()/*.equipmentSlot((entity, stack) -> EquipmentSlot.HEAD)*/), "miku_plush_br_ba_drum");
+			register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_BR_BA_DRUM, new Item.Settings()), "miku_plush_br_ba_drum");
 	public static final Item MIKU_PLUSH_BR_PA =
-			register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_BR_PA,
-			new Item.Settings()/*.equipmentSlot((entity, stack) -> EquipmentSlot.HEAD)*/), "miku_plush_br_pa");
+			register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_BR_PA, new Item.Settings()), "miku_plush_br_pa");
 	public static final Item MIKU_PLUSH_BR_SP =
-			register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_BR_SP,
-			new Item.Settings()/*.equipmentSlot((entity, stack) -> EquipmentSlot.HEAD)*/), "miku_plush_br_sp");
+			register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_BR_SP, new Item.Settings()), "miku_plush_br_sp");
 	public static final Item MIKU_PLUSH_BR_MG =
-			register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_BR_MG,
-			new Item.Settings()/*.equipmentSlot((entity, stack) -> EquipmentSlot.HEAD)*/), "miku_plush_br_mg");
+			register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_BR_MG, new Item.Settings()), "miku_plush_br_mg");
 	public static final Item MIKU_PLUSH_BR_BROWN_BRO =
-			register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_BR_BROWN_BRO,
-			new Item.Settings()/*.equipmentSlot((entity, stack) -> EquipmentSlot.HEAD)*/), "miku_plush_br_brown_bro");
+			register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_BR_BROWN_BRO, new Item.Settings()), "miku_plush_br_brown_bro");
 	public static final Item MIKU_PLUSH_BR_ELECTRICIAN =
-			register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_BR_ELECTRICIAN,
-			new Item.Settings()/*.equipmentSlot((entity, stack) -> EquipmentSlot.HEAD)*/), "miku_plush_br_electrician");
+			register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_BR_ELECTRICIAN, new Item.Settings()), "miku_plush_br_electrician");
 	public static final Item MIKU_PLUSH_BR_BIK_ORANGE =
-			register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_BR_BIK_ORANGE,
-			new Item.Settings()/*.equipmentSlot((entity, stack) -> EquipmentSlot.HEAD)*/), "miku_plush_br_bik_orange");
+			register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_BR_BIK_ORANGE, new Item.Settings()), "miku_plush_br_bik_orange");
 	public static final Item MIKU_PLUSH_BR_AM =
-			register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_BR_AM,
-			new Item.Settings()/*.equipmentSlot((entity, stack) -> EquipmentSlot.HEAD)*/), "miku_plush_br_am");
+			register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_BR_AM, new Item.Settings()), "miku_plush_br_am");
 	public static final Item MIKU_PLUSH_BR_FUT_FLA =
-			register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_BR_FUT_FLA,
-			new Item.Settings()/*.equipmentSlot((entity, stack) -> EquipmentSlot.HEAD)*/), "miku_plush_br_fut_fla");
+			register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_BR_FUT_FLA, new Item.Settings()), "miku_plush_br_fut_fla");
 	public static final Item MIKU_PLUSH_BR_FUT_CAM =
-			register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_BR_FUT_CAM,
-			new Item.Settings()/*.equipmentSlot((entity, stack) -> EquipmentSlot.HEAD)*/), "miku_plush_br_fut_cam");
+			register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_BR_FUT_CAM, new Item.Settings()), "miku_plush_br_fut_cam");
 	public static final Item MIKU_PLUSH_BR_GO =
-			register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_BR_GO,
-			new Item.Settings()/*.equipmentSlot((entity, stack) -> EquipmentSlot.HEAD)*/), "miku_plush_br_go");
+			register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_BR_GO, new Item.Settings()), "miku_plush_br_go");
 	public static final Item MIKU_PLUSH_BR_SCHOOL_PE =
-			register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_BR_SCHOOL_PE,
-			new Item.Settings()/*.equipmentSlot((entity, stack) -> EquipmentSlot.HEAD)*/), "miku_plush_br_school_pe");
+			register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_BR_SCHOOL_PE, new Item.Settings()), "miku_plush_br_school_pe");
 	public static final Item MIKU_PLUSH_BR_FUT_CRVG =
-			register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_BR_FUT_CRVG,
-			new Item.Settings()/*.equipmentSlot((entity, stack) -> EquipmentSlot.HEAD)*/), "miku_plush_br_fut_crvg");
+			register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_BR_FUT_CRVG, new Item.Settings()), "miku_plush_br_fut_crvg");
 	public static final Item MIKU_PLUSH_BR_RS =
-			register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_BR_RS,
-			new Item.Settings()/*.equipmentSlot((entity, stack) -> EquipmentSlot.HEAD)*/), "miku_plush_br_rs");
+			register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_BR_RS, new Item.Settings()), "miku_plush_br_rs");
 	public static final Item MIKU_PLUSH_FROG =
-			register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_FROG,
-			new Item.Settings()/*.equipmentSlot((entity, stack) -> EquipmentSlot.HEAD)*/), "miku_plush_frog");
+			register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_FROG, new Item.Settings()), "miku_plush_frog");
 	public static final Item MIKU_PLUSH_MUSHROOM =
-			register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_MUSHROOM,
-			new Item.Settings()/*.equipmentSlot((entity, stack) -> EquipmentSlot.HEAD)*/), "miku_plush_mushroom");
+			register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_MUSHROOM, new Item.Settings()), "miku_plush_mushroom");
 
 
 
