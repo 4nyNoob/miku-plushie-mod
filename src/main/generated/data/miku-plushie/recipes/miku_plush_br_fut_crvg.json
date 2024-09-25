@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "a": {
+      "item": "minecraft:cartography_table"
+    },
+    "b": {
+      "item": "minecraft:black_wool"
+    },
+    "c": {
+      "item": "minecraft:cyan_wool"
+    },
+    "l": {
+      "item": "minecraft:white_wool"
+    }
+  },
+  "pattern": [
+    "clc",
+    "cbc",
+    "a  "
+  ],
+  "result": {
+    "item": "miku-plushie:miku_plush_br_fut_crvg"
+  },
+  "show_notification": true
+}

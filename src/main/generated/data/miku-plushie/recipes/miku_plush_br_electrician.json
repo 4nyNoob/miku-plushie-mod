@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "minecraft:blue_wool"
+    },
+    "b": {
+      "item": "minecraft:brown_wool"
+    },
+    "c": {
+      "item": "minecraft:cyan_wool"
+    },
+    "r": {
+      "item": "minecraft:redstone"
+    }
+  },
+  "pattern": [
+    "cbc",
+    "cBc",
+    "r  "
+  ],
+  "result": {
+    "item": "miku-plushie:miku_plush_br_electrician"
+  },
+  "show_notification": true
+}

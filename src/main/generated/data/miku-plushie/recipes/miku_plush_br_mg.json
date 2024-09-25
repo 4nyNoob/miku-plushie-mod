@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "b": {
+      "item": "minecraft:black_wool"
+    },
+    "c": {
+      "item": "minecraft:cyan_wool"
+    },
+    "g": {
+      "item": "minecraft:gold_nugget"
+    },
+    "r": {
+      "item": "minecraft:red_wool"
+    },
+    "w": {
+      "item": "minecraft:white_wool"
+    }
+  },
+  "pattern": [
+    "cwc",
+    "cbc",
+    "rg "
+  ],
+  "result": {
+    "item": "miku-plushie:miku_plush_br_mg"
+  },
+  "show_notification": true
+}
