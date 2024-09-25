@@ -13,6 +13,7 @@ public class ModSoundEvents {
 	public static final SoundEvent OIE = registerSound("oie");
 	public static final SoundEvent DOR = registerSound("dor");
 	public static final SoundEvent BYE = registerSound("bye");
+	public static final SoundEvent EQUIP = registerSound("equip");
 
 	private static SoundEvent registerSound(String id) {
 		Identifier identifier = Identifier.of(MikuPlushie.MOD_ID, id);

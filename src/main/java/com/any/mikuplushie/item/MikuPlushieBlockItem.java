@@ -40,6 +40,6 @@ public class MikuPlushieBlockItem extends BlockItem implements Equipment {
 
 	@Override
 	public RegistryEntry<SoundEvent> getEquipSound() {
-		return RegistryEntry.of(ModSoundEvents.OIE);
+		return RegistryEntry.of(ModSoundEvents.EQUIP);
 	}
 }
