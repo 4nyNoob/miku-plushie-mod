@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "b": {
+      "item": "minecraft:iron_block"
+    },
+    "c": {
+      "item": "minecraft:cyan_wool"
+    },
+    "d": {
+      "item": "minecraft:lime_wool"
+    },
+    "e": {
+      "item": "minecraft:purple_wool"
+    },
+    "l": {
+      "item": "minecraft:white_wool"
+    }
+  },
+  "pattern": [
+    "clc",
+    "cbc",
+    "de "
+  ],
+  "result": {
+    "item": "miku-plushie:miku_plush_helloplanet"
+  },
+  "show_notification": true
+}
