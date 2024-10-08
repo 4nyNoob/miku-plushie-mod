@@ -45,6 +45,13 @@ public class ModTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModItems.MIKU_PLUSH_BR_RS)
                 .add(ModItems.MIKU_PLUSH_FROG)
                 .add(ModItems.MIKU_PLUSH_MUSHROOM)
+                .add(ModItems.MIKU_PLUSH_SENBONZAKURA)
+                .add(ModItems.MIKU_PLUSH_URAOTOMELOVERS)
+                .add(ModItems.MIKU_PLUSH_PERSONADANCING)
+                .add(ModItems.MIKU_PLUSH_HELLOPLANET)
+                .add(ModItems.MIKU_PLUSH_HACHUNE)
+                .add(ModItems.MIKU_PLUSH_ZATSUNE)
+                .add(ModItems.MIKU_PLUSH_INFINITY)
         ;
     }
 }

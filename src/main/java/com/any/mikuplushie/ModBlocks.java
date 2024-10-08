@@ -181,6 +181,62 @@ public class ModBlocks {
 			"miku_plush_mushroom",
 			false
 	);
+	public static final Block MIKU_PLUSH_SENBONZAKURA = register(
+			new MikuPlushieBlock(AbstractBlock.Settings.copy(Blocks.FLOWER_POT)
+			.sounds(BlockSoundGroup.WOOL)
+			.nonOpaque()
+			),
+			"miku_plush_senbonzakura",
+			false
+	);
+	public static final Block MIKU_PLUSH_URAOTOMELOVERS = register(
+			new MikuPlushieBlock(AbstractBlock.Settings.copy(Blocks.FLOWER_POT)
+			.sounds(BlockSoundGroup.WOOL)
+			.nonOpaque()
+			),
+			"miku_plush_uraotomelovers",
+			false
+	);
+	public static final Block MIKU_PLUSH_PERSONADANCING = register(
+			new MikuPlushieBlock(AbstractBlock.Settings.copy(Blocks.FLOWER_POT)
+			.sounds(BlockSoundGroup.WOOL)
+			.nonOpaque()
+			),
+			"miku_plush_personadancing",
+			false
+	);
+	public static final Block MIKU_PLUSH_HELLOPLANET = register(
+			new MikuPlushieBlock(AbstractBlock.Settings.copy(Blocks.FLOWER_POT)
+			.sounds(BlockSoundGroup.WOOL)
+			.nonOpaque()
+			),
+			"miku_plush_helloplanet",
+			false
+	);
+	public static final Block MIKU_PLUSH_HACHUNE = register(
+			new MikuPlushieBlock(AbstractBlock.Settings.copy(Blocks.FLOWER_POT)
+			.sounds(BlockSoundGroup.WOOL)
+			.nonOpaque()
+			),
+			"miku_plush_hachune",
+			false
+	);
+	public static final Block MIKU_PLUSH_ZATSUNE = register(
+			new MikuPlushieBlock(AbstractBlock.Settings.copy(Blocks.FLOWER_POT)
+			.sounds(BlockSoundGroup.WOOL)
+			.nonOpaque()
+			),
+			"miku_plush_zatsune",
+			false
+	);
+	public static final Block MIKU_PLUSH_INFINITY = register(
+			new MikuPlushieBlock(AbstractBlock.Settings.copy(Blocks.FLOWER_POT)
+			.sounds(BlockSoundGroup.WOOL)
+			.nonOpaque()
+			),
+			"miku_plush_infinity",
+			false
+	);
 
 
 

@@ -55,6 +55,20 @@ public class ModItems {
 			register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_FROG, new Item.Settings()), "miku_plush_frog");
 	public static final Item MIKU_PLUSH_MUSHROOM =
 			register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_MUSHROOM, new Item.Settings()), "miku_plush_mushroom");
+	public static final Item MIKU_PLUSH_SENBONZAKURA =
+			register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_SENBONZAKURA, new Item.Settings()), "miku_plush_senbonzakura");
+	public static final Item MIKU_PLUSH_URAOTOMELOVERS =
+			register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_URAOTOMELOVERS, new Item.Settings()), "miku_plush_uraotomelovers");
+	public static final Item MIKU_PLUSH_PERSONADANCING =
+			register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_PERSONADANCING, new Item.Settings()), "miku_plush_personadancing");
+	public static final Item MIKU_PLUSH_HELLOPLANET =
+			register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_HELLOPLANET, new Item.Settings()), "miku_plush_helloplanet");
+	public static final Item MIKU_PLUSH_HACHUNE =
+			register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_HACHUNE, new Item.Settings()), "miku_plush_hachune");
+	public static final Item MIKU_PLUSH_ZATSUNE =
+			register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_ZATSUNE, new Item.Settings()), "miku_plush_zatsune");
+	public static final Item MIKU_PLUSH_INFINITY =
+			register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_INFINITY, new Item.Settings()), "miku_plush_infinity");
 
 
 
@@ -94,6 +108,13 @@ public class ModItems {
 		ItemGroupEvents.modifyEntriesEvent(ItemGroups.FUNCTIONAL).register((itemGroup) -> itemGroup.add(ModItems.MIKU_PLUSH_BR_RS));
 		ItemGroupEvents.modifyEntriesEvent(ItemGroups.FUNCTIONAL).register((itemGroup) -> itemGroup.add(ModItems.MIKU_PLUSH_FROG));
 		ItemGroupEvents.modifyEntriesEvent(ItemGroups.FUNCTIONAL).register((itemGroup) -> itemGroup.add(ModItems.MIKU_PLUSH_MUSHROOM));
+		ItemGroupEvents.modifyEntriesEvent(ItemGroups.FUNCTIONAL).register((itemGroup) -> itemGroup.add(ModItems.MIKU_PLUSH_SENBONZAKURA));
+		ItemGroupEvents.modifyEntriesEvent(ItemGroups.FUNCTIONAL).register((itemGroup) -> itemGroup.add(ModItems.MIKU_PLUSH_URAOTOMELOVERS));
+		ItemGroupEvents.modifyEntriesEvent(ItemGroups.FUNCTIONAL).register((itemGroup) -> itemGroup.add(ModItems.MIKU_PLUSH_PERSONADANCING));
+		ItemGroupEvents.modifyEntriesEvent(ItemGroups.FUNCTIONAL).register((itemGroup) -> itemGroup.add(ModItems.MIKU_PLUSH_HELLOPLANET));
+		ItemGroupEvents.modifyEntriesEvent(ItemGroups.FUNCTIONAL).register((itemGroup) -> itemGroup.add(ModItems.MIKU_PLUSH_HACHUNE));
+//		ItemGroupEvents.modifyEntriesEvent(ItemGroups.FUNCTIONAL).register((itemGroup) -> itemGroup.add(ModItems.MIKU_PLUSH_ZATSUNE));
+		ItemGroupEvents.modifyEntriesEvent(ItemGroups.FUNCTIONAL).register((itemGroup) -> itemGroup.add(ModItems.MIKU_PLUSH_INFINITY));
 
 
 

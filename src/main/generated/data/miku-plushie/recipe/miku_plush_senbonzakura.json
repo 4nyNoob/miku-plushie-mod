@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "b": {
+      "item": "minecraft:cherry_log"
+    },
+    "c": {
+      "item": "minecraft:green_wool"
+    },
+    "l": {
+      "item": "minecraft:white_wool"
+    }
+  },
+  "pattern": [
+    "clc",
+    "cbc"
+  ],
+  "result": {
+    "count": 1,
+    "id": "miku-plushie:miku_plush_senbonzakura"
+  }
+}

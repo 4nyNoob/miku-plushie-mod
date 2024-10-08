@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "b": {
+      "item": "minecraft:gray_wool"
+    },
+    "c": {
+      "item": "minecraft:light_blue_wool"
+    },
+    "d": {
+      "item": "minecraft:ender_eye"
+    },
+    "l": {
+      "item": "minecraft:white_wool"
+    }
+  },
+  "pattern": [
+    "clc",
+    "cbc",
+    "d  "
+  ],
+  "result": {
+    "count": 1,
+    "id": "miku-plushie:miku_plush_infinity"
+  }
+}
