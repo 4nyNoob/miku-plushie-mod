@@ -41,10 +41,28 @@
   "item.miku-plushie.miku_plush_frog.tooltip": "§b§n@ollieoliverino.bsky.social",
   "block.miku-plushie.miku_plush_mushroom": "初音蘑菇 Miku 毛绒玩具",
   "item.miku-plushie.miku_plush_mushroom.tooltip": "§b§n@walayssa.bsky.social",
+  "block.miku-plushie.miku_plush_senbonzakura": "千本樱 Miku 毛绒玩具",
+  "item.miku-plushie.miku_plush_senbonzakura.tooltip": "§b§nittomaru",
+  "block.miku-plushie.miku_plush_uraotomelovers": "里表情人 Miku 毛绒玩具",
+  "item.miku-plushie.miku_plush_uraotomelovers.tooltip": "§b§nwowaka",
+  "block.miku-plushie.miku_plush_personadancing": "女神异闻录 狂舞 Miku 毛绒玩具",
+  "item.miku-plushie.miku_plush_personadancing.tooltip": "§b§nShigenori Soejima",
+  "block.miku-plushie.miku_plush_helloplanet": "Hello Planet Miku 毛绒玩具",
+  "item.miku-plushie.miku_plush_helloplanet.tooltip": "§b§nsasakure.UK",
+  "block.miku-plushie.miku_plush_hachune": "粗音 Miku 毛绒玩具",
+  "item.miku-plushie.miku_plush_hachune.tooltip": "§b§nYukino Tamago",
+  "block.miku-plushie.miku_plush_infinity": "无限 Miku 毛绒玩具",
+  "item.miku-plushie.miku_plush_infinity.tooltip": "§b§ncosMo",
+  "block.miku-plushie.miku_plush_zatsune": "杂音 Miku 毛绒玩具",
+  "item.miku-plushie.miku_plush_zatsune.tooltip": "§b§naloha",
 
-  "item.miku-plushie.canudinho": "稻草",
 
-  "sound.miku-plushie.canudinho": "Miku: 稻草",
+
+  "item.miku-plushie.canudinho": "Canudinho",
+
+
+
+  "sound.miku-plushie.canudinho": "Miku: Canudinho",
   "sound.miku-plushie.oie": "Miku: 嗨",
   "sound.miku-plushie.dor": "Miku: 痛苦",
   "sound.miku-plushie.bye": "Miku: 再见",
