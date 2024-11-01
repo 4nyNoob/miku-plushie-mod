@@ -237,6 +237,110 @@ public class ModBlocks {
 			"miku_plush_infinity",
 			false
 	);
+	public static final Block MIKU_PLUSH_VAMPIRE = register(
+			new MikuPlushieBlock(AbstractBlock.Settings.copy(Blocks.FLOWER_POT)
+			.sounds(BlockSoundGroup.WOOL)
+			.nonOpaque()
+			),
+			"miku_plush_vampire",
+			false
+	);
+	public static final Block MIKU_PLUSH_WEREWOMAN = register(
+			new MikuPlushieBlock(AbstractBlock.Settings.copy(Blocks.FLOWER_POT)
+			.sounds(BlockSoundGroup.WOOL)
+			.nonOpaque()
+			),
+			"miku_plush_werewoman",
+			false
+	);
+	public static final Block MIKU_PLUSH_JASON = register(
+			new MikuPlushieBlock(AbstractBlock.Settings.copy(Blocks.FLOWER_POT)
+			.sounds(BlockSoundGroup.WOOL)
+			.nonOpaque()
+			),
+			"miku_plush_jason",
+			false
+	);
+	public static final Block MIKU_PLUSH_MICHAEL_MYERS = register(
+			new MikuPlushieBlock(AbstractBlock.Settings.copy(Blocks.FLOWER_POT)
+					.sounds(BlockSoundGroup.WOOL)
+					.nonOpaque()
+			),
+			"miku_plush_michael_myers",
+			false
+	);
+	public static final Block MIKU_PLUSH_PUMPKIN = register(
+			new MikuPlushieBlock(AbstractBlock.Settings.copy(Blocks.FLOWER_POT)
+					.sounds(BlockSoundGroup.WOOL)
+					.nonOpaque()
+			),
+			"miku_plush_pumpkin",
+			false
+	);
+	public static final Block MIKU_PLUSH_GHOSTFACE = register(
+			new MikuPlushieBlock(AbstractBlock.Settings.copy(Blocks.FLOWER_POT)
+					.sounds(BlockSoundGroup.WOOL)
+					.nonOpaque()
+			),
+			"miku_plush_ghostface",
+			false
+	);
+	public static final Block MIKU_PLUSH_FRANKENSTEIN = register(
+			new MikuPlushieBlock(AbstractBlock.Settings.copy(Blocks.FLOWER_POT)
+					.sounds(BlockSoundGroup.WOOL)
+					.nonOpaque()
+			),
+			"miku_plush_frankenstein",
+			false
+	);
+	public static final Block MIKU_PLUSH_MUMMY = register(
+			new MikuPlushieBlock(AbstractBlock.Settings.copy(Blocks.FLOWER_POT)
+					.sounds(BlockSoundGroup.BONE)
+					.nonOpaque()
+			),
+			"miku_plush_mummy",
+			false
+	);
+	public static final Block MIKU_PLUSH_GHOST = register(
+			new MikuPlushieBlock(AbstractBlock.Settings.copy(Blocks.FLOWER_POT)
+			.sounds(BlockSoundGroup.GLASS)
+			.nonOpaque()
+			),
+			"miku_plush_ghost",
+			false
+	);
+	public static final Block MIKU_PLUSH_PATATI = register(
+			new MikuPlushieBlock(AbstractBlock.Settings.copy(Blocks.FLOWER_POT)
+					.sounds(BlockSoundGroup.WOOL)
+					.nonOpaque()
+			),
+			"miku_plush_patati",
+			false
+	);
+	public static final Block MIKU_PLUSH_PATATA = register(
+			new MikuPlushieBlock(AbstractBlock.Settings.copy(Blocks.FLOWER_POT)
+					.sounds(BlockSoundGroup.WOOL)
+					.nonOpaque()
+			),
+			"miku_plush_patata",
+			false
+	);
+	public static final Block MIKU_PLUSH_DEVIL = register(
+			new MikuPlushieBlock(AbstractBlock.Settings.copy(Blocks.FLOWER_POT)
+					.sounds(BlockSoundGroup.NETHERRACK)
+					.nonOpaque()
+			),
+			"miku_plush_devil",
+			false
+	);
+	public static final Block MIKU_PLUSH_WITCH = register(
+			new MikuPlushieBlock(AbstractBlock.Settings.copy(Blocks.FLOWER_POT)
+			.sounds(BlockSoundGroup.WOOL)
+			.nonOpaque()
+			),
+			"miku_plush_witch",
+			false
+	);
 
 
 

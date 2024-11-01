@@ -43,6 +43,19 @@ public class ModModelProvider extends FabricModelProvider {
 		blockStateModelGenerator.registerNorthDefaultHorizontalRotation(ModBlocks.MIKU_PLUSH_HACHUNE);
 		blockStateModelGenerator.registerNorthDefaultHorizontalRotation(ModBlocks.MIKU_PLUSH_ZATSUNE);
 		blockStateModelGenerator.registerNorthDefaultHorizontalRotation(ModBlocks.MIKU_PLUSH_INFINITY);
+		blockStateModelGenerator.registerNorthDefaultHorizontalRotation(ModBlocks.MIKU_PLUSH_VAMPIRE);
+		blockStateModelGenerator.registerNorthDefaultHorizontalRotation(ModBlocks.MIKU_PLUSH_WEREWOMAN);
+		blockStateModelGenerator.registerNorthDefaultHorizontalRotation(ModBlocks.MIKU_PLUSH_JASON);
+		blockStateModelGenerator.registerNorthDefaultHorizontalRotation(ModBlocks.MIKU_PLUSH_MICHAEL_MYERS);
+		blockStateModelGenerator.registerNorthDefaultHorizontalRotation(ModBlocks.MIKU_PLUSH_PUMPKIN);
+		blockStateModelGenerator.registerNorthDefaultHorizontalRotation(ModBlocks.MIKU_PLUSH_GHOSTFACE);
+		blockStateModelGenerator.registerNorthDefaultHorizontalRotation(ModBlocks.MIKU_PLUSH_FRANKENSTEIN);
+		blockStateModelGenerator.registerNorthDefaultHorizontalRotation(ModBlocks.MIKU_PLUSH_MUMMY);
+		blockStateModelGenerator.registerNorthDefaultHorizontalRotation(ModBlocks.MIKU_PLUSH_GHOST);
+		blockStateModelGenerator.registerNorthDefaultHorizontalRotation(ModBlocks.MIKU_PLUSH_PATATI);
+		blockStateModelGenerator.registerNorthDefaultHorizontalRotation(ModBlocks.MIKU_PLUSH_PATATA);
+		blockStateModelGenerator.registerNorthDefaultHorizontalRotation(ModBlocks.MIKU_PLUSH_DEVIL);
+		blockStateModelGenerator.registerNorthDefaultHorizontalRotation(ModBlocks.MIKU_PLUSH_WITCH);
 	}
 
 	@Override

@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "b": {
+      "item": "minecraft:black_wool"
+    },
+    "c": {
+      "item": "minecraft:brown_wool"
+    },
+    "d": {
+      "item": "minecraft:lightning_rod"
+    },
+    "l": {
+      "item": "minecraft:green_wool"
+    }
+  },
+  "pattern": [
+    "clc",
+    "cbc",
+    "d  "
+  ],
+  "result": {
+    "count": 1,
+    "id": "miku-plushie:miku_plush_frankenstein"
+  }
+}

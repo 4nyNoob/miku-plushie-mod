@@ -52,6 +52,19 @@ public class ModTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModItems.MIKU_PLUSH_HACHUNE)
                 .add(ModItems.MIKU_PLUSH_ZATSUNE)
                 .add(ModItems.MIKU_PLUSH_INFINITY)
+                .add(ModItems.MIKU_PLUSH_VAMPIRE)
+                .add(ModItems.MIKU_PLUSH_WEREWOMAN)
+                .add(ModItems.MIKU_PLUSH_JASON)
+                .add(ModItems.MIKU_PLUSH_MICHAEL_MYERS)
+                .add(ModItems.MIKU_PLUSH_PUMPKIN)
+                .add(ModItems.MIKU_PLUSH_GHOSTFACE)
+                .add(ModItems.MIKU_PLUSH_FRANKENSTEIN)
+                .add(ModItems.MIKU_PLUSH_MUMMY)
+                .add(ModItems.MIKU_PLUSH_GHOST)
+                .add(ModItems.MIKU_PLUSH_PATATI)
+                .add(ModItems.MIKU_PLUSH_PATATA)
+                .add(ModItems.MIKU_PLUSH_DEVIL)
+                .add(ModItems.MIKU_PLUSH_WITCH)
         ;
     }
 }

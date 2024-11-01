@@ -1,0 +1,54 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_cyan_stained_glass": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:cyan_stained_glass"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_light_gray_stained_glass": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:light_gray_stained_glass"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "miku-plushie:miku_plush_ghost"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_white_stained_glass": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:white_stained_glass"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_cyan_stained_glass",
+      "has_white_stained_glass",
+      "has_light_gray_stained_glass"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "miku-plushie:miku_plush_ghost"
+    ]
+  }
+}
