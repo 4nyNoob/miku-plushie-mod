@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "b": {
+      "item": "minecraft:paper"
+    },
+    "c": {
+      "item": "minecraft:black_wool"
+    },
+    "l": {
+      "item": "minecraft:bone_block"
+    }
+  },
+  "pattern": [
+    "clc",
+    "cbc"
+  ],
+  "result": {
+    "item": "miku-plushie:miku_plush_mummy"
+  },
+  "show_notification": true
+}

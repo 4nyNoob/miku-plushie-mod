@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "b": {
+      "item": "minecraft:light_gray_wool"
+    },
+    "c": {
+      "item": "minecraft:magma_block"
+    },
+    "l": {
+      "item": "minecraft:netherrack"
+    }
+  },
+  "pattern": [
+    "clc",
+    "cbc"
+  ],
+  "result": {
+    "item": "miku-plushie:miku_plush_devil"
+  },
+  "show_notification": true
+}

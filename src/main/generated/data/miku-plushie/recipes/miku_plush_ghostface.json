@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "b": {
+      "item": "minecraft:black_wool"
+    },
+    "c": {
+      "item": "minecraft:cyan_wool"
+    },
+    "d": {
+      "item": "minecraft:iron_sword"
+    },
+    "l": {
+      "item": "minecraft:birch_planks"
+    }
+  },
+  "pattern": [
+    "clc",
+    "cbc",
+    "d  "
+  ],
+  "result": {
+    "item": "miku-plushie:miku_plush_ghostface"
+  },
+  "show_notification": true
+}

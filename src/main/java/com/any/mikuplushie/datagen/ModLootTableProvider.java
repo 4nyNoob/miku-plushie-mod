@@ -43,5 +43,18 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
 		addDrop(ModBlocks.MIKU_PLUSH_HACHUNE, ModItems.MIKU_PLUSH_HACHUNE);
 		addDrop(ModBlocks.MIKU_PLUSH_ZATSUNE, ModItems.MIKU_PLUSH_ZATSUNE);
 		addDrop(ModBlocks.MIKU_PLUSH_INFINITY, ModItems.MIKU_PLUSH_INFINITY);
+		addDrop(ModBlocks.MIKU_PLUSH_VAMPIRE, ModItems.MIKU_PLUSH_VAMPIRE);
+		addDrop(ModBlocks.MIKU_PLUSH_WEREWOMAN, ModItems.MIKU_PLUSH_WEREWOMAN);
+		addDrop(ModBlocks.MIKU_PLUSH_JASON, ModItems.MIKU_PLUSH_JASON);
+		addDrop(ModBlocks.MIKU_PLUSH_MICHAEL_MYERS, ModItems.MIKU_PLUSH_MICHAEL_MYERS);
+		addDrop(ModBlocks.MIKU_PLUSH_PUMPKIN, ModItems.MIKU_PLUSH_PUMPKIN);
+		addDrop(ModBlocks.MIKU_PLUSH_GHOSTFACE, ModItems.MIKU_PLUSH_GHOSTFACE);
+		addDrop(ModBlocks.MIKU_PLUSH_FRANKENSTEIN, ModItems.MIKU_PLUSH_FRANKENSTEIN);
+		addDrop(ModBlocks.MIKU_PLUSH_MUMMY, ModItems.MIKU_PLUSH_MUMMY);
+		addDrop(ModBlocks.MIKU_PLUSH_GHOST, ModItems.MIKU_PLUSH_GHOST);
+		addDrop(ModBlocks.MIKU_PLUSH_PATATI, ModItems.MIKU_PLUSH_PATATI);
+		addDrop(ModBlocks.MIKU_PLUSH_PATATA, ModItems.MIKU_PLUSH_PATATA);
+		addDrop(ModBlocks.MIKU_PLUSH_DEVIL, ModItems.MIKU_PLUSH_DEVIL);
+		addDrop(ModBlocks.MIKU_PLUSH_WITCH, ModItems.MIKU_PLUSH_WITCH);
 	}
 }

@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "b": {
+      "item": "minecraft:green_wool"
+    },
+    "c": {
+      "item": "minecraft:purple_wool"
+    },
+    "d": {
+      "item": "minecraft:stick"
+    },
+    "e": {
+      "item": "minecraft:wheat"
+    },
+    "l": {
+      "item": "minecraft:spyglass"
+    }
+  },
+  "pattern": [
+    "clc",
+    "cbc",
+    "de "
+  ],
+  "result": {
+    "item": "miku-plushie:miku_plush_witch"
+  },
+  "show_notification": true
+}

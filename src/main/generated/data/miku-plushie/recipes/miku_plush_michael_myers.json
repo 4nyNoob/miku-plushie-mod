@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "b": {
+      "item": "minecraft:blue_wool"
+    },
+    "c": {
+      "item": "minecraft:brown_wool"
+    },
+    "d": {
+      "item": "minecraft:iron_sword"
+    },
+    "l": {
+      "item": "minecraft:gray_wool"
+    }
+  },
+  "pattern": [
+    "clc",
+    "cbc",
+    "d  "
+  ],
+  "result": {
+    "item": "miku-plushie:miku_plush_michael_myers"
+  },
+  "show_notification": true
+}

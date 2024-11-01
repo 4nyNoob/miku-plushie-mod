@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "b": {
+      "item": "minecraft:light_gray_stained_glass"
+    },
+    "c": {
+      "item": "minecraft:cyan_stained_glass"
+    },
+    "l": {
+      "item": "minecraft:white_stained_glass"
+    }
+  },
+  "pattern": [
+    "clc",
+    "cbc"
+  ],
+  "result": {
+    "item": "miku-plushie:miku_plush_ghost"
+  },
+  "show_notification": true
+}

@@ -69,6 +69,32 @@ public class ModItems {
 			register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_ZATSUNE, new Item.Settings()), "miku_plush_zatsune");
 	public static final Item MIKU_PLUSH_INFINITY =
 			register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_INFINITY, new Item.Settings()), "miku_plush_infinity");
+	public static final Item MIKU_PLUSH_VAMPIRE =
+			register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_VAMPIRE, new Item.Settings()), "miku_plush_vampire");
+	public static final Item MIKU_PLUSH_WEREWOMAN =
+			register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_WEREWOMAN, new Item.Settings()), "miku_plush_werewoman");
+	public static final Item MIKU_PLUSH_JASON =
+			register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_JASON, new Item.Settings()), "miku_plush_jason");
+	public static final Item MIKU_PLUSH_MICHAEL_MYERS =
+			register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_MICHAEL_MYERS, new Item.Settings()), "miku_plush_michael_myers");
+	public static final Item MIKU_PLUSH_PUMPKIN =
+			register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_PUMPKIN, new Item.Settings()), "miku_plush_pumpkin");
+	public static final Item MIKU_PLUSH_GHOSTFACE =
+			register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_GHOSTFACE, new Item.Settings()), "miku_plush_ghostface");
+	public static final Item MIKU_PLUSH_FRANKENSTEIN =
+			register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_FRANKENSTEIN, new Item.Settings()), "miku_plush_frankenstein");
+	public static final Item MIKU_PLUSH_MUMMY =
+			register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_MUMMY, new Item.Settings()), "miku_plush_mummy");
+	public static final Item MIKU_PLUSH_GHOST =
+			register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_GHOST, new Item.Settings()), "miku_plush_ghost");
+	public static final Item MIKU_PLUSH_PATATI =
+			register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_PATATI, new Item.Settings()), "miku_plush_patati");
+	public static final Item MIKU_PLUSH_PATATA =
+			register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_PATATA, new Item.Settings()), "miku_plush_patata");
+	public static final Item MIKU_PLUSH_DEVIL =
+			register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_DEVIL, new Item.Settings()), "miku_plush_devil");
+	public static final Item MIKU_PLUSH_WITCH =
+			register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_WITCH, new Item.Settings()), "miku_plush_witch");
 
 
 
@@ -113,8 +139,21 @@ public class ModItems {
 		ItemGroupEvents.modifyEntriesEvent(ItemGroups.FUNCTIONAL).register((itemGroup) -> itemGroup.add(ModItems.MIKU_PLUSH_PERSONADANCING));
 		ItemGroupEvents.modifyEntriesEvent(ItemGroups.FUNCTIONAL).register((itemGroup) -> itemGroup.add(ModItems.MIKU_PLUSH_HELLOPLANET));
 		ItemGroupEvents.modifyEntriesEvent(ItemGroups.FUNCTIONAL).register((itemGroup) -> itemGroup.add(ModItems.MIKU_PLUSH_HACHUNE));
-//		ItemGroupEvents.modifyEntriesEvent(ItemGroups.FUNCTIONAL).register((itemGroup) -> itemGroup.add(ModItems.MIKU_PLUSH_ZATSUNE));
+		ItemGroupEvents.modifyEntriesEvent(ItemGroups.FUNCTIONAL).register((itemGroup) -> itemGroup.add(ModItems.MIKU_PLUSH_ZATSUNE));
 		ItemGroupEvents.modifyEntriesEvent(ItemGroups.FUNCTIONAL).register((itemGroup) -> itemGroup.add(ModItems.MIKU_PLUSH_INFINITY));
+		ItemGroupEvents.modifyEntriesEvent(ItemGroups.FUNCTIONAL).register((itemGroup) -> itemGroup.add(ModItems.MIKU_PLUSH_VAMPIRE));
+		ItemGroupEvents.modifyEntriesEvent(ItemGroups.FUNCTIONAL).register((itemGroup) -> itemGroup.add(ModItems.MIKU_PLUSH_WEREWOMAN));
+		ItemGroupEvents.modifyEntriesEvent(ItemGroups.FUNCTIONAL).register((itemGroup) -> itemGroup.add(ModItems.MIKU_PLUSH_JASON));
+		ItemGroupEvents.modifyEntriesEvent(ItemGroups.FUNCTIONAL).register((itemGroup) -> itemGroup.add(ModItems.MIKU_PLUSH_MICHAEL_MYERS));
+		ItemGroupEvents.modifyEntriesEvent(ItemGroups.FUNCTIONAL).register((itemGroup) -> itemGroup.add(ModItems.MIKU_PLUSH_PUMPKIN));
+		ItemGroupEvents.modifyEntriesEvent(ItemGroups.FUNCTIONAL).register((itemGroup) -> itemGroup.add(ModItems.MIKU_PLUSH_GHOSTFACE));
+		ItemGroupEvents.modifyEntriesEvent(ItemGroups.FUNCTIONAL).register((itemGroup) -> itemGroup.add(ModItems.MIKU_PLUSH_FRANKENSTEIN));
+		ItemGroupEvents.modifyEntriesEvent(ItemGroups.FUNCTIONAL).register((itemGroup) -> itemGroup.add(ModItems.MIKU_PLUSH_MUMMY));
+		ItemGroupEvents.modifyEntriesEvent(ItemGroups.FUNCTIONAL).register((itemGroup) -> itemGroup.add(ModItems.MIKU_PLUSH_GHOST));
+		ItemGroupEvents.modifyEntriesEvent(ItemGroups.FUNCTIONAL).register((itemGroup) -> itemGroup.add(ModItems.MIKU_PLUSH_PATATI));
+		ItemGroupEvents.modifyEntriesEvent(ItemGroups.FUNCTIONAL).register((itemGroup) -> itemGroup.add(ModItems.MIKU_PLUSH_PATATA));
+		ItemGroupEvents.modifyEntriesEvent(ItemGroups.FUNCTIONAL).register((itemGroup) -> itemGroup.add(ModItems.MIKU_PLUSH_DEVIL));
+		ItemGroupEvents.modifyEntriesEvent(ItemGroups.FUNCTIONAL).register((itemGroup) -> itemGroup.add(ModItems.MIKU_PLUSH_WITCH));
 
 
 

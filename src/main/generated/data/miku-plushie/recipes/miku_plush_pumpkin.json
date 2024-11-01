@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "b": {
+      "item": "minecraft:light_gray_wool"
+    },
+    "c": {
+      "item": "minecraft:cyan_wool"
+    },
+    "d": {
+      "item": "minecraft:pumpkin"
+    },
+    "l": {
+      "item": "minecraft:white_wool"
+    }
+  },
+  "pattern": [
+    "clc",
+    "cbc",
+    "d  "
+  ],
+  "result": {
+    "item": "miku-plushie:miku_plush_pumpkin"
+  },
+  "show_notification": true
+}
