@@ -9,6 +9,7 @@ it's already avaliable to the nearest fabric 1.21.1 ***near YOU*** and with it y
 ![give canudinho to brazilian hatsune miku for a suprise](https://cdn.modrinth.com/data/cached_images/3332f6d4b11212e06b7500f455558372d8abbc09.png)
 
 
+
 <details>
 <summary>Look at all of the mikus and also the recipes :D</summary>
 
@@ -75,5 +76,28 @@ Made By: [ollieoliverino.bsky.social](https://ollieoliverino.bsky.social/)
 ![Hatsune Mushmiku Plush](https://cdn.modrinth.com/data/cached_images/bd28ca6e5c28602a7983ee54c1e81e56f59df752.gif) ![Recipe](https://cdn.modrinth.com/data/cached_images/9b669c59cde41f4f63346ef96a0e3c6a2fa4c794.png)\
 Made By: [walayssa.bsky.social](https://walayssa.bsky.social/)
 ---
+![Senbonzakura Miku](https://cdn.modrinth.com/data/cached_images/c7a0ecff1313926ac4b6dd63b91a650449fdd683.gif) ![Recipe](https://cdn.modrinth.com/data/cached_images/c7f7e872e0571eb3eabd6d26b2e4d097dce3d620.png)\
+Made By: [ittomaru](https://x.com/ittomaru)
+---
+![Ura-Otome Lovers Miku Plush](https://cdn.modrinth.com/data/cached_images/a60fcfac3a3e2a6ced3c84dd39084791ced166a4.gif) ![Recipe](https://cdn.modrinth.com/data/cached_images/f0aafc47dabdff2d85b66a0108da02e7c3333df7.png)\
+Made By: [wowaka](https://x.com/wowaka)
+---
+![Persona Dancing Miku Plush](https://cdn.modrinth.com/data/cached_images/1ff7868af8c049fd23bbef3d04f350439927ee23.gif) ![Recipe](https://cdn.modrinth.com/data/cached_images/64cd9a8b4c997dea86639997099443181cde7899.png)\
+Made By: [Shigenori Soejima](https://en.wikipedia.org/wiki/Shigenori_Soejima)
+---
+![Hello Planet Miku Plush](https://cdn.modrinth.com/data/cached_images/6ea24cd0f8bab54e0543e25dbcda8040f3faeb35.gif) ![Recipe](https://cdn.modrinth.com/data/cached_images/c8eef3e42db5f6ce722bd74938526dbf0e0bd77d.png)\
+Made By: [sasakure__UK](https://x.com/sasakure__UK)
+---
+![Hachune Miku Plush](https://cdn.modrinth.com/data/cached_images/ef52cd328fdf18f1d1d90dd0f9e5254eb6846660.gif) ![Recipe](https://cdn.modrinth.com/data/cached_images/fb66d7ac333c6ba1651fba58039edddb60fa10d2.png)\
+Made By: [Tamago](https://x.com/pocopoco_cc)
+---
+![Zatsune Miku Plush](https://cdn.modrinth.com/data/cached_images/83be8ec48a7014a33486d820f6e14adb1c11a3f1.gif) ![Recipe](https://cdn.modrinth.com/data/cached_images/f7f3966451e1573e2f601e02dac8a39248053823_0.webp)\
+Original Design by: [aloha](https://www.nicovideo.jp/user/2238521/mylist/2729765)
+---
+![Infinity Miku Plush](https://cdn.modrinth.com/data/cached_images/c11554afb5463b40e09ea109574ba5f4cf56a541.gif) ![Replace this with a description](https://cdn.modrinth.com/data/cached_images/0503807b77c5c15577beec94f77469e34421d860.png)\
+Made by: [cosMo](https://x.com/cosmobsp)
+---
 
-</details>
+</details> 
+
+
