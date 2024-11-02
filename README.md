@@ -79,7 +79,7 @@ Made By: [walayssa.bsky.social](https://walayssa.bsky.social/)
 ![Senbonzakura Miku](https://cdn.modrinth.com/data/cached_images/c7a0ecff1313926ac4b6dd63b91a650449fdd683.gif) ![Recipe](https://cdn.modrinth.com/data/cached_images/c7f7e872e0571eb3eabd6d26b2e4d097dce3d620.png)\
 Made By: [ittomaru](https://x.com/ittomaru)
 ---
-![Ura-Otome Lovers Miku Plush](https://cdn.modrinth.com/data/cached_images/a60fcfac3a3e2a6ced3c84dd39084791ced166a4.gif) ![Recipe](https://cdn.modrinth.com/data/cached_images/f0aafc47dabdff2d85b66a0108da02e7c3333df7.png)\
+![Ora Otome Lovers Miku](https://cdn.modrinth.com/data/cached_images/b613b3e5b8bcdf494af4d565fadfe5ec207daa00.gif) ![Recipe](https://cdn.modrinth.com/data/cached_images/f0aafc47dabdff2d85b66a0108da02e7c3333df7.png)\
 Made By: [wowaka](https://x.com/wowaka)
 ---
 ![Persona Dancing Miku Plush](https://cdn.modrinth.com/data/cached_images/1ff7868af8c049fd23bbef3d04f350439927ee23.gif) ![Recipe](https://cdn.modrinth.com/data/cached_images/64cd9a8b4c997dea86639997099443181cde7899.png)\
@@ -96,6 +96,45 @@ Original Design by: [aloha](https://www.nicovideo.jp/user/2238521/mylist/2729765
 ---
 ![Infinity Miku Plush](https://cdn.modrinth.com/data/cached_images/c11554afb5463b40e09ea109574ba5f4cf56a541.gif) ![Replace this with a description](https://cdn.modrinth.com/data/cached_images/0503807b77c5c15577beec94f77469e34421d860.png)\
 Made by: [cosMo](https://x.com/cosmobsp)
+---
+![Vampire Miku](https://cdn.modrinth.com/data/cached_images/0e00c9527411ff83a2ec6f2b94aacf40106a108f.gif) ![](https://cdn.modrinth.com/data/cached_images/157112b99585ac863effe35af6e8bd279198d284.png)\
+Made By: [4ny.bsky.social](https://4ny.bsky.social/)
+---
+![Werewoman Miku](https://cdn.modrinth.com/data/cached_images/6d59db37d72e3508e8930041d8b9776d5a81b90e.gif) ![](https://cdn.modrinth.com/data/cached_images/8f119aae0c2e1998d22ef0a380bb058c1af3a700.png)\
+Made By: [4ny.bsky.social](https://4ny.bsky.social/)
+---
+![Jason Miku](https://cdn.modrinth.com/data/cached_images/785d0b2e04e4a7fc0b3ed98df4a3bfc065e843d5.gif) ![](https://cdn.modrinth.com/data/cached_images/547d3a9eae0f64201b051d4162a13f10f2ab6933.png)\
+Made By: [4ny.bsky.social](https://4ny.bsky.social/)
+---
+![Michael Myers Miku](https://cdn.modrinth.com/data/cached_images/c724c296957528ded3b68205c5eafd039a6e9413.gif) ![](https://cdn.modrinth.com/data/cached_images/9e9c011becf6757b71a5c71e13b96c95f14ba00c.png)\
+Made By: [4ny.bsky.social](https://4ny.bsky.social/)
+---
+![Pumpkin Miku](https://cdn.modrinth.com/data/cached_images/33f7beabfc5b83edbed7415044017a9069917c7a.gif) ![](https://cdn.modrinth.com/data/cached_images/2b054d6b122848d11ff4d9f817504158f2375462.png)\
+Made By: [4ny.bsky.social](https://4ny.bsky.social/)
+---
+![Ghostface Miku](https://cdn.modrinth.com/data/cached_images/08c80941bd779d8964dea49945f4fb3a380ee51f.gif) ![](https://cdn.modrinth.com/data/cached_images/5e6a752cd4326e0b36c149d69974a1a640a8b5cc.png)\
+Made By: [4ny.bsky.social](https://4ny.bsky.social/)
+---
+![Frankenstein Miku](https://cdn.modrinth.com/data/cached_images/ade1e75fd7d94ff34307cf95adb2f774b9d8bd6f.gif) ![](https://cdn.modrinth.com/data/cached_images/6c2f167908d8f8088154a3b54411b85439dd3183.png)\
+Made By: [4ny.bsky.social](https://4ny.bsky.social/)
+---
+![Mummy Miku](https://cdn.modrinth.com/data/cached_images/a8784769bdeb6ad6bee09b7ebc1332b80d4c85eb.gif) ![](https://cdn.modrinth.com/data/cached_images/89bacf734baa0988130c3c41b52be352da913756_0.webp)\
+Made By: [4ny.bsky.social](https://4ny.bsky.social/)
+---
+![Ghost Miku](https://cdn.modrinth.com/data/cached_images/a852059e835dd224ca5e12c24ecdab0079e10947.gif) ![](https://cdn.modrinth.com/data/cached_images/a45efcfda626181b5e0e65967eac827a83952d2e.png)\
+Made By: [4ny.bsky.social](https://4ny.bsky.social/)
+---
+![Patati Miku](https://cdn.modrinth.com/data/cached_images/bb2b68e98e9a4af507737dacc8c32fdea84e5826.gif) ![](https://cdn.modrinth.com/data/cached_images/60bdba1881fde48d703ecb8db4b8650f57b0b20e.png)\
+Made By: [4ny.bsky.social](https://4ny.bsky.social/)
+---
+![Patatá Miku](https://cdn.modrinth.com/data/cached_images/0315fde538da7cceadbcfcfee89c4578b2ead429.gif) ![](https://cdn.modrinth.com/data/cached_images/77413b956180aaf6939398bb325f415a17e77f89.png)\
+Made By: [4ny.bsky.social](https://4ny.bsky.social/)
+---
+![Devil Miku](https://cdn.modrinth.com/data/cached_images/1d94e15da37b95362c6c568336ba68a8246658c6.gif) ![](https://cdn.modrinth.com/data/cached_images/40f8a28e29e80264e19f9098f86836a5190b12ed.png)\
+Made By: [4ny.bsky.social](https://4ny.bsky.social/)
+---
+![Witch Miku](https://cdn.modrinth.com/data/cached_images/7663a83cea704d8ffeeec98a55031fc59d2e8bdc.gif) ![](https://cdn.modrinth.com/data/cached_images/6410757c0fa0a79211cf32934725be43ba087826.png)\
+Made By: [4ny.bsky.social](https://4ny.bsky.social/)
 ---
 
 </details> 
