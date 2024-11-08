@@ -10,6 +10,9 @@
   <a href="https://github.com/4nyNoob/miku-plushie-mod/releases">
     <img src="http://img.shields.io/badge/Download-GitHub-0969da"/>
   </a>
+  <a href="https://modrinth.com/mod/miku-plushies">
+    <img src="http://img.shields.io/badge/Download-Modrinth-5aad5f"/>
+  </a>
   <a href="https://www.curseforge.com/minecraft/mc-mods/miku-plushies">
     <img src="http://img.shields.io/badge/Download-CurseForge-f16436"/>
   </a>
