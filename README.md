@@ -1,11 +1,26 @@
-# BRAZILIAN MIKU JUST ARRIVED IN MINECRAFT
+<h1 align="center">BRAZILIAN MIKU JUST ARRIVED IN MINECRAFT</h1>
+
+<p align="center">
+  <img src="http://img.shields.io/badge/License-GPL_3.0-FF6699"/>
+  <img src="http://img.shields.io/badge/Fabric-1.20.1-00B4AB"/>
+  <img src="http://img.shields.io/badge/Fabric-1.21.1-9999CC"/>
+</p>
+
+<p align="center">
+  <a href="https://github.com/4nyNoob/miku-plushie-mod/releases">
+    <img src="http://img.shields.io/badge/Download-GitHub-0969da"/>
+  </a>
+  <a href="https://www.curseforge.com/minecraft/mc-mods/miku-plushies">
+    <img src="http://img.shields.io/badge/Download-CurseForge-f16436"/>
+  </a>
+</p>
 
 it's already avaliable to the nearest fabric 1.21.1 ***near YOU*** and with it you can:
 
-### put brazilian miku on your head:
+## ✨  put brazilian miku on your head:
 ![brazilian miku on a player's head](https://cdn.modrinth.com/data/cached_images/afd57ef917587895e0964f6b99272f10643ae881_0.webp)
 
-### give canudinho to brazilian miku:
+## ✨  give canudinho to brazilian miku:
 ![give canudinho to brazilian hatsune miku for a suprise](https://cdn.modrinth.com/data/cached_images/3332f6d4b11212e06b7500f455558372d8abbc09.png)
 
 
