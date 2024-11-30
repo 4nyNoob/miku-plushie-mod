@@ -18,8 +18,6 @@
   </a>
 </p>
 
-it's already avaliable to the nearest fabric 1.21.1 ***near YOU*** and with it you can:
-
 ## ✨  put brazilian miku on your head:
 ![brazilian miku on a player's head](https://cdn.modrinth.com/data/cached_images/afd57ef917587895e0964f6b99272f10643ae881_0.webp)
 
