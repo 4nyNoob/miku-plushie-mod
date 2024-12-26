@@ -568,5 +568,48 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 				.criterion(FabricRecipeProvider.hasItem(Items.WHEAT), FabricRecipeProvider.conditionsFromItem(Items.WHEAT))
 				.offerTo(exporter);
 
+		ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ModBlocks.MIKU_PLUSH_SANTA)
+				.pattern("clc")
+				.pattern("cbc")
+				.input('c', Items.CYAN_WOOL)
+				.input('l', Items.RED_WOOL)
+				.input('b', Items.WHITE_WOOL)
+				.criterion(FabricRecipeProvider.hasItem(Items.CYAN_WOOL), FabricRecipeProvider.conditionsFromItem(Items.CYAN_WOOL))
+				.criterion(FabricRecipeProvider.hasItem(Items.RED_WOOL), FabricRecipeProvider.conditionsFromItem(Items.RED_WOOL))
+				.criterion(FabricRecipeProvider.hasItem(Items.WHITE_WOOL), FabricRecipeProvider.conditionsFromItem(Items.WHITE_WOOL))
+				.offerTo(exporter);
+
+		ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ModBlocks.MIKU_PLUSH_REINDEER)
+				.pattern("clc")
+				.pattern("cbc")
+				.input('c', Items.CYAN_WOOL)
+				.input('l', Items.BROWN_WOOL)
+				.input('b', Items.RED_WOOL)
+				.criterion(FabricRecipeProvider.hasItem(Items.CYAN_WOOL), FabricRecipeProvider.conditionsFromItem(Items.CYAN_WOOL))
+				.criterion(FabricRecipeProvider.hasItem(Items.BROWN_WOOL), FabricRecipeProvider.conditionsFromItem(Items.BROWN_WOOL))
+				.criterion(FabricRecipeProvider.hasItem(Items.RED_WOOL), FabricRecipeProvider.conditionsFromItem(Items.RED_WOOL))
+				.offerTo(exporter);
+
+		ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ModBlocks.MIKU_PLUSH_SANTA_ELF)
+				.pattern("clc")
+				.pattern("cbc")
+				.input('c', Items.CYAN_WOOL)
+				.input('l', Items.LIME_WOOL)
+				.input('b', Items.RED_WOOL)
+				.criterion(FabricRecipeProvider.hasItem(Items.CYAN_WOOL), FabricRecipeProvider.conditionsFromItem(Items.CYAN_WOOL))
+				.criterion(FabricRecipeProvider.hasItem(Items.LIME_WOOL), FabricRecipeProvider.conditionsFromItem(Items.LIME_WOOL))
+				.criterion(FabricRecipeProvider.hasItem(Items.RED_WOOL), FabricRecipeProvider.conditionsFromItem(Items.RED_WOOL))
+				.offerTo(exporter);
+
+		ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ModBlocks.MIKU_PLUSH_XMAS_TREE)
+				.pattern("clc")
+				.pattern("cbc")
+				.input('c', Items.CYAN_WOOL)
+				.input('l', Items.SPRUCE_LEAVES)
+				.input('b', Items.RED_WOOL)
+				.criterion(FabricRecipeProvider.hasItem(Items.CYAN_WOOL), FabricRecipeProvider.conditionsFromItem(Items.CYAN_WOOL))
+				.criterion(FabricRecipeProvider.hasItem(Items.SPRUCE_LEAVES), FabricRecipeProvider.conditionsFromItem(Items.SPRUCE_LEAVES))
+				.criterion(FabricRecipeProvider.hasItem(Items.RED_WOOL), FabricRecipeProvider.conditionsFromItem(Items.RED_WOOL))
+				.offerTo(exporter);
 	}
 }

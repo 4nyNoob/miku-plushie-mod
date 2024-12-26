@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "miku-plushie:block/miku_plush_xmas_tree",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "miku-plushie:block/miku_plush_xmas_tree"
+    },
+    "facing=south": {
+      "model": "miku-plushie:block/miku_plush_xmas_tree",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "miku-plushie:block/miku_plush_xmas_tree",
+      "y": 270
+    }
+  }
+}

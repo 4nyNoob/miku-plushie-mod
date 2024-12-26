@@ -95,6 +95,14 @@ public class ModItems {
 			register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_DEVIL, new Item.Settings()), "miku_plush_devil");
 	public static final Item MIKU_PLUSH_WITCH =
 			register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_WITCH, new Item.Settings()), "miku_plush_witch");
+	public static final Item MIKU_PLUSH_SANTA =
+			register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_SANTA, new Item.Settings()), "miku_plush_santa");
+	public static final Item MIKU_PLUSH_REINDEER =
+			register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_REINDEER, new Item.Settings()), "miku_plush_reindeer");
+	public static final Item MIKU_PLUSH_SANTA_ELF =
+			register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_SANTA_ELF, new Item.Settings()), "miku_plush_santa_elf");
+	public static final Item MIKU_PLUSH_XMAS_TREE =
+			register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_XMAS_TREE, new Item.Settings()), "miku_plush_xmas_tree");
 
 
 
@@ -154,6 +162,10 @@ public class ModItems {
 		ItemGroupEvents.modifyEntriesEvent(ItemGroups.FUNCTIONAL).register((itemGroup) -> itemGroup.add(ModItems.MIKU_PLUSH_PATATA));
 		ItemGroupEvents.modifyEntriesEvent(ItemGroups.FUNCTIONAL).register((itemGroup) -> itemGroup.add(ModItems.MIKU_PLUSH_DEVIL));
 		ItemGroupEvents.modifyEntriesEvent(ItemGroups.FUNCTIONAL).register((itemGroup) -> itemGroup.add(ModItems.MIKU_PLUSH_WITCH));
+		ItemGroupEvents.modifyEntriesEvent(ItemGroups.FUNCTIONAL).register((itemGroup) -> itemGroup.add(ModItems.MIKU_PLUSH_SANTA));
+		ItemGroupEvents.modifyEntriesEvent(ItemGroups.FUNCTIONAL).register((itemGroup) -> itemGroup.add(ModItems.MIKU_PLUSH_REINDEER));
+		ItemGroupEvents.modifyEntriesEvent(ItemGroups.FUNCTIONAL).register((itemGroup) -> itemGroup.add(ModItems.MIKU_PLUSH_SANTA_ELF));
+		ItemGroupEvents.modifyEntriesEvent(ItemGroups.FUNCTIONAL).register((itemGroup) -> itemGroup.add(ModItems.MIKU_PLUSH_XMAS_TREE));
 
 
 

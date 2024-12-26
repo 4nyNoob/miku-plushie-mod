@@ -14,7 +14,7 @@ public class MikuPlushie implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
-		LOGGER.info("Hello Fabric world!");
+		LOGGER.info("Miku is now joining Fabric!!!");
 		ModItems.initialize();
 		ModBlocks.initialize();
 		ModSoundEvents.initialize();

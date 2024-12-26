@@ -65,6 +65,10 @@ public class ModTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModItems.MIKU_PLUSH_PATATA)
                 .add(ModItems.MIKU_PLUSH_DEVIL)
                 .add(ModItems.MIKU_PLUSH_WITCH)
+                .add(ModItems.MIKU_PLUSH_SANTA)
+                .add(ModItems.MIKU_PLUSH_REINDEER)
+                .add(ModItems.MIKU_PLUSH_SANTA_ELF)
+                .add(ModItems.MIKU_PLUSH_XMAS_TREE)
         ;
     }
 }
