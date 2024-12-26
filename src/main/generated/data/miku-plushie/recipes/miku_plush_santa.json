@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "b": {
+      "item": "minecraft:white_wool"
+    },
+    "c": {
+      "item": "minecraft:cyan_wool"
+    },
+    "l": {
+      "item": "minecraft:red_wool"
+    }
+  },
+  "pattern": [
+    "clc",
+    "cbc"
+  ],
+  "result": {
+    "item": "miku-plushie:miku_plush_santa"
+  },
+  "show_notification": true
+}

@@ -341,6 +341,38 @@ public class ModBlocks {
 			"miku_plush_witch",
 			false
 	);
+	public static final Block MIKU_PLUSH_SANTA = register(
+			new MikuPlushieBlock(AbstractBlock.Settings.copy(Blocks.FLOWER_POT)
+			.sounds(BlockSoundGroup.WOOL)
+			.nonOpaque()
+			),
+			"miku_plush_santa",
+			false
+	);
+	public static final Block MIKU_PLUSH_REINDEER = register(
+			new MikuPlushieBlock(AbstractBlock.Settings.copy(Blocks.FLOWER_POT)
+			.sounds(BlockSoundGroup.WOOL)
+			.nonOpaque()
+			),
+			"miku_plush_reindeer",
+			false
+	);
+	public static final Block MIKU_PLUSH_SANTA_ELF = register(
+			new MikuPlushieBlock(AbstractBlock.Settings.copy(Blocks.FLOWER_POT)
+			.sounds(BlockSoundGroup.WOOL)
+			.nonOpaque()
+			),
+			"miku_plush_santa_elf",
+			false
+	);
+	public static final Block MIKU_PLUSH_XMAS_TREE = register(
+			new MikuPlushieBlock(AbstractBlock.Settings.copy(Blocks.FLOWER_POT)
+			.sounds(BlockSoundGroup.WOOL)
+			.nonOpaque()
+			),
+			"miku_plush_xmas_tree",
+			false
+	);
 
 
 

@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "b": {
+      "item": "minecraft:red_wool"
+    },
+    "c": {
+      "item": "minecraft:cyan_wool"
+    },
+    "l": {
+      "item": "minecraft:spruce_leaves"
+    }
+  },
+  "pattern": [
+    "clc",
+    "cbc"
+  ],
+  "result": {
+    "item": "miku-plushie:miku_plush_xmas_tree"
+  },
+  "show_notification": true
+}
