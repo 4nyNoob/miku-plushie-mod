@@ -1,26 +1,21 @@
 package com.any.mikuplushie;
 
-import net.minecraft.registry.Registries;
-import net.minecraft.registry.Registry;
-import net.minecraft.sound.SoundEvent;
-import net.minecraft.util.Identifier;
+import net.minecraft.core.Holder;
+import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.sounds.SoundEvent;
+
+import net.neoforged.neoforge.registries.DeferredRegister;
 
 public class ModSoundEvents {
 	private ModSoundEvents() {
 	}
 
-	public static final SoundEvent CANUDINHO = registerSound("canudinho");
-	public static final SoundEvent OIE = registerSound("oie");
-	public static final SoundEvent DOR = registerSound("dor");
-	public static final SoundEvent BYE = registerSound("bye");
-	public static final SoundEvent EQUIP = registerSound("equip");
+	public static final DeferredRegister<SoundEvent> SOUND_EVENTS =
+			DeferredRegister.create(BuiltInRegistries.SOUND_EVENT, MikuPlushie.MOD_ID);
 
-	private static SoundEvent registerSound(String id) {
-		Identifier identifier = Identifier.of(MikuPlushie.MOD_ID, id);
-		return Registry.register(Registries.SOUND_EVENT, identifier, SoundEvent.of(identifier));
-	}
-
-	public static void initialize() {
-		MikuPlushie.LOGGER.info("Registering " + MikuPlushie.MOD_ID + " Sounds");
-	}
+	public static final Holder<SoundEvent> CANUDINHO = SOUND_EVENTS.register("canudinho", SoundEvent::createVariableRangeEvent);
+	public static final Holder<SoundEvent> OIE = SOUND_EVENTS.register("oie", SoundEvent::createVariableRangeEvent);
+	public static final Holder<SoundEvent> DOR = SOUND_EVENTS.register("dor", SoundEvent::createVariableRangeEvent);
+	public static final Holder<SoundEvent> BYE = SOUND_EVENTS.register("bye", SoundEvent::createVariableRangeEvent);
+	public static final Holder<SoundEvent> EQUIP = SOUND_EVENTS.register("equip", SoundEvent::createVariableRangeEvent);
 }

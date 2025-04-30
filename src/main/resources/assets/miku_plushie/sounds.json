@@ -1,0 +1,59 @@
+{
+  "canudinho": {
+    "subtitle": "sound.miku_plushie.canudinho",
+    "sounds": [
+      "miku_plushie:canudinho1",
+      "miku_plushie:canudinho2",
+      "miku_plushie:canudinho3",
+      "miku_plushie:canudinho4",
+      "miku_plushie:canudinho5"
+    ]
+  },
+  "oie" : {
+    "subtitle": "sound.miku_plushie.oie",
+    "sounds": [
+      "miku_plushie:miku-oie1",
+      "miku_plushie:miku-oie2",
+      "miku_plushie:miku-oie3",
+      "miku_plushie:miku-oie4",
+      "miku_plushie:miku-oie5",
+      "miku_plushie:miku-oie6",
+      "miku_plushie:miku-oie7"
+    ]
+  },
+  "dor" : {
+    "subtitle": "sound.miku_plushie.dor",
+    "sounds": [
+      "miku_plushie:miku-dor1",
+      "miku_plushie:miku-dor2",
+      "miku_plushie:miku-dor3",
+      "miku_plushie:miku-dor4",
+      "miku_plushie:miku-dor5",
+      "miku_plushie:miku-dor6",
+      "miku_plushie:miku-dor7",
+      "miku_plushie:miku-dor8",
+      "miku_plushie:miku-dor9"
+    ]
+  },
+  "bye" : {
+    "subtitle": "sound.miku_plushie.bye",
+    "sounds": [
+      "miku_plushie:miku-bye1",
+      "miku_plushie:miku-bye2",
+      "miku_plushie:miku-bye3",
+      "miku_plushie:miku-bye4",
+      "miku_plushie:miku-bye5",
+      "miku_plushie:miku-bye6",
+      "miku_plushie:miku-bye7"
+    ]
+  },
+  "equip" : {
+    "subtitle": "sound.miku_plushie.equip",
+    "sounds": [
+      "miku_plushie:miku-equip1",
+      "miku_plushie:miku-equip2",
+      "miku_plushie:miku-equip3",
+      "miku_plushie:miku-equip4"
+    ]
+  }
+}
