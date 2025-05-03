@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "miku_plushie:miku_plush_devil"
+        }
+      ],
+      "rolls": 1.0
+    }
+  ],
+  "random_sequence": "miku_plushie:blocks/miku_plush_devil"
+}

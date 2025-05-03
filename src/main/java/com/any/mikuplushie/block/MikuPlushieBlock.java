@@ -1,75 +1,77 @@
 package com.any.mikuplushie.block;
 
+import net.minecraft.core.BlockPos;
+import net.minecraft.sounds.SoundEvents;
+import net.minecraft.sounds.SoundSource;
+import net.minecraft.world.InteractionHand;
+import net.minecraft.world.ItemInteractionResult;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.item.context.BlockPlaceContext;
+import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Rotation;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.state.StateDefinition;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
+import net.minecraft.world.level.block.state.properties.DirectionProperty;
+import net.minecraft.world.phys.BlockHitResult;
+import net.minecraft.world.phys.shapes.CollisionContext;
+import net.minecraft.world.phys.shapes.Shapes;
+import net.minecraft.world.phys.shapes.VoxelShape;
+
 import com.any.mikuplushie.ModItems;
 import com.any.mikuplushie.ModSoundEvents;
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockState;
-import net.minecraft.block.HorizontalFacingBlock;
-import net.minecraft.block.ShapeContext;
-import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.item.ItemPlacementContext;
-import net.minecraft.item.ItemStack;
-import net.minecraft.sound.SoundCategory;
-import net.minecraft.state.StateManager;
-import net.minecraft.state.property.DirectionProperty;
-import net.minecraft.util.BlockRotation;
-import net.minecraft.util.Hand;
-import net.minecraft.util.ItemActionResult;
-import net.minecraft.util.hit.BlockHitResult;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.Direction;
-import net.minecraft.util.shape.VoxelShape;
-import net.minecraft.world.BlockView;
-import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 
 public class MikuPlushieBlock extends Block {
-	public static final DirectionProperty FACING = HorizontalFacingBlock.FACING;
-	protected static final VoxelShape SHAPE = Block.createCuboidShape(5.0, 0.0, 5.0, 11.0, 13.0, 11.0);
-	public MikuPlushieBlock(Settings settings) {
+	public static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;
+	protected static final VoxelShape SHAPE = Shapes.box(5.0/16D, 0.0, 5.0/16D, 11.0/16D, 13.0/16D, 11.0/16D);
+	public MikuPlushieBlock(Properties settings) {
 		super(settings);
-		this.setDefaultState(this.stateManager.getDefaultState().with(FACING, Direction.NORTH));
 	}
 
 	@Override
-	protected ItemActionResult onUseWithItem(ItemStack stack, BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
-		if (!world.isClient){
-			if (stack.isOf(ModItems.CANUDINHO)){
-				world.playSound(null, pos, ModSoundEvents.CANUDINHO, SoundCategory.BLOCKS, 1F, 1F);
-				return ItemActionResult.SUCCESS;
-			}
+	protected ItemInteractionResult useItemOn(ItemStack stack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hitResult) {
+		if(stack.getItem()== ModItems.CANUDINHO.get()){
+			level.playSound(player,pos, ModSoundEvents.CANUDINHO.value(), SoundSource.BLOCKS, 0.5F,1F);
+			return ItemInteractionResult.SUCCESS;
 		}
-		return super.onUseWithItem(stack, state, world, pos, player, hand, hit);
+		return ItemInteractionResult.PASS_TO_DEFAULT_BLOCK_INTERACTION;
 	}
 
 	@Override
-	public void onPlaced(World world, BlockPos pos, BlockState state, @Nullable LivingEntity placer, ItemStack itemStack) {
-		world.playSound(null, pos, ModSoundEvents.OIE, SoundCategory.BLOCKS, 0.5F, 1);
-		super.onPlaced(world, pos, state, placer, itemStack);
+	protected void onPlace(BlockState state, Level level, BlockPos pos, BlockState oldState, boolean movedByPiston) {
+		level.playSound(null,pos,ModSoundEvents.OIE.value(), SoundSource.BLOCKS, 0.5F,1F);
+		super.onPlace(state, level, pos, oldState, movedByPiston);
 	}
 
 	@Override
-	public BlockState onBreak(World world, BlockPos pos, BlockState state, PlayerEntity player) {
-		world.playSound(null, pos, ModSoundEvents.BYE, SoundCategory.BLOCKS, 0.5F, 1);
-		return super.onBreak(world, pos, state, player);
+	protected void onRemove(BlockState state, Level level, BlockPos pos, BlockState newState, boolean movedByPiston) {
+		level.playSound(null,pos,ModSoundEvents.BYE.value(),SoundSource.BLOCKS,0.5F,1F);
+		super.onRemove(state, level, pos, newState, movedByPiston);
 	}
 
 	@Override
-	protected VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
+	protected VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
 		return SHAPE;
 	}
 
-	@Nullable
-	public BlockState getPlacementState(ItemPlacementContext ctx) {
-		return this.getDefaultState().with(FACING, ctx.getHorizontalPlayerFacing().getOpposite());
+	@Override
+	public @Nullable BlockState getStateForPlacement(BlockPlaceContext context) {
+		return this.defaultBlockState().setValue(FACING, context.getHorizontalDirection().getOpposite());
 	}
 
-	protected BlockState rotate(BlockState state, BlockRotation rotation) {
-		return state.with(FACING, rotation.rotate(state.get(FACING)));
+	@Override
+	public BlockState rotate(BlockState state, LevelAccessor level, BlockPos pos, Rotation direction) {
+		return state.setValue(FACING,direction.rotate(state.getValue(FACING)));
 	}
 
-	protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
+	@Override
+	protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
 		builder.add(FACING);
 	}
 }

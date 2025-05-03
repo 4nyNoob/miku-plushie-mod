@@ -1,61 +1,63 @@
 package com.any.mikuplushie;
 
-import net.fabricmc.api.ClientModInitializer;
-import net.fabricmc.api.EnvType;
-import net.fabricmc.api.Environment;
-import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
-import net.minecraft.client.render.RenderLayer;
+import net.minecraft.client.renderer.ItemBlockRenderTypes;
+import net.minecraft.client.renderer.RenderType;
 
-@Environment(EnvType.CLIENT)
-public class MikuPlushieClient implements ClientModInitializer {
-	@Override
-	public void onInitializeClient() {
-		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MIKU_PLUSH_BR, RenderLayer.getCutout());
-		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MIKU_PLUSH_BR_BA, RenderLayer.getCutout());
-		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MIKU_PLUSH_BIK, RenderLayer.getCutout());
-		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MIKU_PLUSH_BR_BEACH, RenderLayer.getCutout());
-		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MIKU_PLUSH_BR_BRAID, RenderLayer.getCutout());
-		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MIKU_PLUSH_BR_BA_DRUM, RenderLayer.getCutout());
-		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MIKU_PLUSH_BR_PA, RenderLayer.getCutout());
-		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MIKU_PLUSH_BR_SP, RenderLayer.getCutout());
-		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MIKU_PLUSH_BR_MG, RenderLayer.getCutout());
-		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MIKU_PLUSH_BR_BROWN_BRO, RenderLayer.getCutout());
-		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MIKU_PLUSH_BR_ELECTRICIAN, RenderLayer.getCutout());
-		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MIKU_PLUSH_BR_BIK_ORANGE, RenderLayer.getCutout());
-		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MIKU_PLUSH_BR_AM, RenderLayer.getCutout());
-		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MIKU_PLUSH_BR_FUT_FLA, RenderLayer.getCutout());
-		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MIKU_PLUSH_BR_FUT_CAM, RenderLayer.getCutout());
-		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MIKU_PLUSH_BR_GO, RenderLayer.getCutout());
-		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MIKU_PLUSH_BR_SCHOOL_PE, RenderLayer.getCutout());
-		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MIKU_PLUSH_BR_FUT_CRVG, RenderLayer.getCutout());
-		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MIKU_PLUSH_BR_RS, RenderLayer.getCutout());
-		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MIKU_PLUSH_FROG, RenderLayer.getCutout());
-		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MIKU_PLUSH_MUSHROOM, RenderLayer.getCutout());
-		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MIKU_PLUSH_SENBONZAKURA, RenderLayer.getCutout());
-		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MIKU_PLUSH_URAOTOMELOVERS, RenderLayer.getCutout());
-		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MIKU_PLUSH_PERSONADANCING, RenderLayer.getCutout());
-		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MIKU_PLUSH_HELLOPLANET, RenderLayer.getCutout());
-		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MIKU_PLUSH_HACHUNE, RenderLayer.getCutout());
-		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MIKU_PLUSH_ZATSUNE, RenderLayer.getCutout());
-		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MIKU_PLUSH_INFINITY, RenderLayer.getCutout());
-		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MIKU_PLUSH_VAMPIRE, RenderLayer.getCutout());
-		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MIKU_PLUSH_WEREWOMAN, RenderLayer.getCutout());
-		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MIKU_PLUSH_JASON, RenderLayer.getCutout());
-		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MIKU_PLUSH_MICHAEL_MYERS, RenderLayer.getCutout());
-		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MIKU_PLUSH_PUMPKIN, RenderLayer.getCutout());
-		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MIKU_PLUSH_GHOSTFACE, RenderLayer.getCutout());
-		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MIKU_PLUSH_FRANKENSTEIN, RenderLayer.getCutout());
-		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MIKU_PLUSH_MUMMY, RenderLayer.getCutout());
-		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MIKU_PLUSH_PATATI, RenderLayer.getCutout());
-		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MIKU_PLUSH_PATATA, RenderLayer.getCutout());
-		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MIKU_PLUSH_DEVIL, RenderLayer.getCutout());
-		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MIKU_PLUSH_WITCH, RenderLayer.getCutout());
-		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MIKU_PLUSH_SANTA, RenderLayer.getCutout());
-		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MIKU_PLUSH_REINDEER, RenderLayer.getCutout());
-		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MIKU_PLUSH_SANTA_ELF, RenderLayer.getCutout());
-		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MIKU_PLUSH_XMAS_TREE, RenderLayer.getCutout());
+import net.neoforged.api.distmarker.Dist;
+import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
+
+@EventBusSubscriber(value = Dist.CLIENT,modid = MikuPlushie.MOD_ID,bus = EventBusSubscriber.Bus.MOD)
+public class MikuPlushieClient{
+	@SubscribeEvent
+	public static void onInitializeClient(FMLClientSetupEvent event) {
+		ItemBlockRenderTypes.setRenderLayer(ModBlocks.MIKU_PLUSH_BR.get(), RenderType.CUTOUT);
+		ItemBlockRenderTypes.setRenderLayer(ModBlocks.MIKU_PLUSH_BR_BA.get(), RenderType.CUTOUT);
+		ItemBlockRenderTypes.setRenderLayer(ModBlocks.MIKU_PLUSH_BIK.get(), RenderType.CUTOUT);
+		ItemBlockRenderTypes.setRenderLayer(ModBlocks.MIKU_PLUSH_BR_BEACH.get(), RenderType.CUTOUT);
+		ItemBlockRenderTypes.setRenderLayer(ModBlocks.MIKU_PLUSH_BR_BRAID.get(), RenderType.CUTOUT);
+		ItemBlockRenderTypes.setRenderLayer(ModBlocks.MIKU_PLUSH_BR_BA_DRUM.get(), RenderType.CUTOUT);
+		ItemBlockRenderTypes.setRenderLayer(ModBlocks.MIKU_PLUSH_BR_PA.get(), RenderType.CUTOUT);
+		ItemBlockRenderTypes.setRenderLayer(ModBlocks.MIKU_PLUSH_BR_SP.get(), RenderType.CUTOUT);
+		ItemBlockRenderTypes.setRenderLayer(ModBlocks.MIKU_PLUSH_BR_MG.get(), RenderType.CUTOUT);
+		ItemBlockRenderTypes.setRenderLayer(ModBlocks.MIKU_PLUSH_BR_BROWN_BRO.get(), RenderType.CUTOUT);
+		ItemBlockRenderTypes.setRenderLayer(ModBlocks.MIKU_PLUSH_BR_ELECTRICIAN.get(), RenderType.CUTOUT);
+		ItemBlockRenderTypes.setRenderLayer(ModBlocks.MIKU_PLUSH_BR_BIK_ORANGE.get(), RenderType.CUTOUT);
+		ItemBlockRenderTypes.setRenderLayer(ModBlocks.MIKU_PLUSH_BR_AM.get(), RenderType.CUTOUT);
+		ItemBlockRenderTypes.setRenderLayer(ModBlocks.MIKU_PLUSH_BR_FUT_FLA.get(), RenderType.CUTOUT);
+		ItemBlockRenderTypes.setRenderLayer(ModBlocks.MIKU_PLUSH_BR_FUT_CAM.get(), RenderType.CUTOUT);
+		ItemBlockRenderTypes.setRenderLayer(ModBlocks.MIKU_PLUSH_BR_GO.get(), RenderType.CUTOUT);
+		ItemBlockRenderTypes.setRenderLayer(ModBlocks.MIKU_PLUSH_BR_SCHOOL_PE.get(), RenderType.CUTOUT);
+		ItemBlockRenderTypes.setRenderLayer(ModBlocks.MIKU_PLUSH_BR_FUT_CRVG.get(), RenderType.CUTOUT);
+		ItemBlockRenderTypes.setRenderLayer(ModBlocks.MIKU_PLUSH_BR_RS.get(), RenderType.CUTOUT);
+		ItemBlockRenderTypes.setRenderLayer(ModBlocks.MIKU_PLUSH_FROG.get(), RenderType.CUTOUT);
+		ItemBlockRenderTypes.setRenderLayer(ModBlocks.MIKU_PLUSH_MUSHROOM.get(), RenderType.CUTOUT);
+		ItemBlockRenderTypes.setRenderLayer(ModBlocks.MIKU_PLUSH_SENBONZAKURA.get(), RenderType.CUTOUT);
+		ItemBlockRenderTypes.setRenderLayer(ModBlocks.MIKU_PLUSH_URAOTOMELOVERS.get(), RenderType.CUTOUT);
+		ItemBlockRenderTypes.setRenderLayer(ModBlocks.MIKU_PLUSH_PERSONADANCING.get(), RenderType.CUTOUT);
+		ItemBlockRenderTypes.setRenderLayer(ModBlocks.MIKU_PLUSH_HELLOPLANET.get(), RenderType.CUTOUT);
+		ItemBlockRenderTypes.setRenderLayer(ModBlocks.MIKU_PLUSH_HACHUNE.get(), RenderType.CUTOUT);
+		ItemBlockRenderTypes.setRenderLayer(ModBlocks.MIKU_PLUSH_ZATSUNE.get(), RenderType.CUTOUT);
+		ItemBlockRenderTypes.setRenderLayer(ModBlocks.MIKU_PLUSH_INFINITY.get(), RenderType.CUTOUT);
+		ItemBlockRenderTypes.setRenderLayer(ModBlocks.MIKU_PLUSH_VAMPIRE.get(), RenderType.CUTOUT);
+		ItemBlockRenderTypes.setRenderLayer(ModBlocks.MIKU_PLUSH_WEREWOMAN.get(), RenderType.CUTOUT);
+		ItemBlockRenderTypes.setRenderLayer(ModBlocks.MIKU_PLUSH_JASON.get(), RenderType.CUTOUT);
+		ItemBlockRenderTypes.setRenderLayer(ModBlocks.MIKU_PLUSH_MICHAEL_MYERS.get(), RenderType.CUTOUT);
+		ItemBlockRenderTypes.setRenderLayer(ModBlocks.MIKU_PLUSH_PUMPKIN.get(), RenderType.CUTOUT);
+		ItemBlockRenderTypes.setRenderLayer(ModBlocks.MIKU_PLUSH_GHOSTFACE.get(), RenderType.CUTOUT);
+		ItemBlockRenderTypes.setRenderLayer(ModBlocks.MIKU_PLUSH_FRANKENSTEIN.get(), RenderType.CUTOUT);
+		ItemBlockRenderTypes.setRenderLayer(ModBlocks.MIKU_PLUSH_MUMMY.get(), RenderType.CUTOUT);
+		ItemBlockRenderTypes.setRenderLayer(ModBlocks.MIKU_PLUSH_PATATI.get(), RenderType.CUTOUT);
+		ItemBlockRenderTypes.setRenderLayer(ModBlocks.MIKU_PLUSH_PATATA.get(), RenderType.CUTOUT);
+		ItemBlockRenderTypes.setRenderLayer(ModBlocks.MIKU_PLUSH_DEVIL.get(), RenderType.CUTOUT);
+		ItemBlockRenderTypes.setRenderLayer(ModBlocks.MIKU_PLUSH_WITCH.get(), RenderType.CUTOUT);
+		ItemBlockRenderTypes.setRenderLayer(ModBlocks.MIKU_PLUSH_SANTA.get(), RenderType.CUTOUT);
+		ItemBlockRenderTypes.setRenderLayer(ModBlocks.MIKU_PLUSH_REINDEER.get(), RenderType.CUTOUT);
+		ItemBlockRenderTypes.setRenderLayer(ModBlocks.MIKU_PLUSH_SANTA_ELF.get(), RenderType.CUTOUT);
+		ItemBlockRenderTypes.setRenderLayer(ModBlocks.MIKU_PLUSH_XMAS_TREE.get(), RenderType.CUTOUT);
 
 
-		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MIKU_PLUSH_GHOST, RenderLayer.getTranslucent());
+		ItemBlockRenderTypes.setRenderLayer(ModBlocks.MIKU_PLUSH_GHOST.get(), RenderType.TRANSLUCENT);
 	}
 }
