@@ -1,5 +1,6 @@
 {
 	"credit": "Made with Blockbench",
+	"ambientocclusion": false,
 	"texture_size": [64, 64],
 	"textures": {
 		"particle": "miku_plushie:block/miku-plush-bik"
@@ -287,11 +288,13 @@
 			"name": "miku",
 			"origin": [8, 8, 8],
 			"color": 0,
+			"boneType": "",
 			"children": [
 				{
 					"name": "body",
 					"origin": [8, 8, 8],
 					"color": 0,
+					"boneType": "",
 					"children": [
 						0,
 						1,
@@ -299,18 +302,21 @@
 							"name": "l-arm",
 							"origin": [8, 0, 8],
 							"color": 0,
+							"boneType": "",
 							"children": [2, 3]
 						},
 						{
 							"name": "r-arm",
 							"origin": [8, 0, 8],
 							"color": 0,
+							"boneType": "",
 							"children": [4, 5]
 						},
 						{
 							"name": "head",
 							"origin": [8, 8, 8],
 							"color": 0,
+							"boneType": "",
 							"children": [
 								6,
 								7,
@@ -320,12 +326,14 @@
 									"name": "hair",
 									"origin": [4.5, 12.5, 11],
 									"color": 0,
+									"boneType": "",
 									"children": [
 										10,
 										{
 											"name": "hair2",
 											"origin": [5, 7, 11],
 											"color": 0,
+											"boneType": "",
 											"children": [11]
 										}
 									]
@@ -334,12 +342,14 @@
 									"name": "hair",
 									"origin": [4.5, 12.5, 11],
 									"color": 0,
+									"boneType": "",
 									"children": [
 										12,
 										{
 											"name": "hair2",
 											"origin": [5, 7, 11],
 											"color": 0,
+											"boneType": "",
 											"children": [13]
 										}
 									]
@@ -352,12 +362,14 @@
 					"name": "l-leg",
 					"origin": [8, 0, 8],
 					"color": 0,
+					"boneType": "",
 					"children": [14, 15]
 				},
 				{
 					"name": "r-leg",
 					"origin": [8, 0, 8],
 					"color": 0,
+					"boneType": "",
 					"children": [16, 17]
 				}
 			]

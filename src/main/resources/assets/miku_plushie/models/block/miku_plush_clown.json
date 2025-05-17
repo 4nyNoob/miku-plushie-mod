@@ -1,5 +1,5 @@
 {
-	"credit": "Made with Blockbench",
+	"credit": "Made by Any",  "ambientocclusion": false,
 	"texture_size": [64, 64],
 	"textures": {
 		"particle": "miku_plushie:block/miku-plush"
