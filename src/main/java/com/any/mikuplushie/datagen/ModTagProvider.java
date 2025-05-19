@@ -14,12 +14,12 @@ import java.util.concurrent.CompletableFuture;
 
 public class ModTagProvider extends FabricTagProvider.ItemTagProvider {
 
-    public ModTagProvider(FabricDataOutput output,
-                          CompletableFuture<RegistryWrapper.WrapperLookup> completableFuture) {
+    public ModTagProvider(FabricDataOutput output, CompletableFuture<RegistryWrapper.WrapperLookup> completableFuture) {
         super(output, completableFuture);
     }
 
     public static final TagKey<Item> BR_MIKU_ITEMS = TagKey.of(RegistryKeys.ITEM, Identifier.of(MikuPlushie.MOD_ID, "br_miku_plush"));
+    public static final TagKey<Item> AIKO_PLUSH = TagKey.of(RegistryKeys.ITEM, Identifier.of(MikuPlushie.MOD_ID, "aiko_plush"));
 
     @Override
     protected void configure(RegistryWrapper.WrapperLookup wrapperLookup) {
@@ -69,6 +69,9 @@ public class ModTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModItems.MIKU_PLUSH_REINDEER)
                 .add(ModItems.MIKU_PLUSH_SANTA_ELF)
                 .add(ModItems.MIKU_PLUSH_XMAS_TREE)
+        ;
+        getOrCreateTagBuilder(AIKO_PLUSH)
+                .add(ModItems.AIKO_PLUSH)
         ;
     }
 }

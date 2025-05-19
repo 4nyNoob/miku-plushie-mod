@@ -9,11 +9,16 @@ public class ModSoundEvents {
 	private ModSoundEvents() {
 	}
 
-	public static final SoundEvent CANUDINHO = registerSound("canudinho");
-	public static final SoundEvent OIE = registerSound("oie");
-	public static final SoundEvent DOR = registerSound("dor");
-	public static final SoundEvent BYE = registerSound("bye");
-	public static final SoundEvent EQUIP = registerSound("equip");
+	public static final SoundEvent MIKU_CANUDINHO = registerSound("canudinho");
+	public static final SoundEvent MIKU_OIE = registerSound("oie");
+	public static final SoundEvent MIKU_DOR = registerSound("dor");
+	public static final SoundEvent MIKU_BYE = registerSound("bye");
+	public static final SoundEvent MIKU_EQUIP = registerSound("equip");
+
+	public static final SoundEvent AIKO_OIE = registerSound("aiko_oie");
+	public static final SoundEvent AIKO_DOR = registerSound("aiko_dor");
+	public static final SoundEvent AIKO_BYE = registerSound("aiko_bye");
+	public static final SoundEvent AIKO_EQUIP = registerSound("aiko_equip");
 
 	private static SoundEvent registerSound(String id) {
 		Identifier identifier = Identifier.of(MikuPlushie.MOD_ID, id);

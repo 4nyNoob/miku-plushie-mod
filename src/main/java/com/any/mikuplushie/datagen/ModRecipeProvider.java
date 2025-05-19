@@ -611,5 +611,16 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 				.criterion(FabricRecipeProvider.hasItem(Items.SPRUCE_LEAVES), FabricRecipeProvider.conditionsFromItem(Items.SPRUCE_LEAVES))
 				.criterion(FabricRecipeProvider.hasItem(Items.RED_WOOL), FabricRecipeProvider.conditionsFromItem(Items.RED_WOOL))
 				.offerTo(exporter);
+
+		ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ModBlocks.AIKO_PLUSH)
+				.pattern("121")
+				.pattern("131")
+				.input('1', Items.BLUE_WOOL)
+				.input('2', Items.WHITE_WOOL)
+				.input('3', Items.GREEN_WOOL)
+				.criterion(FabricRecipeProvider.hasItem(Items.BLUE_WOOL), FabricRecipeProvider.conditionsFromItem(Items.BLUE_WOOL))
+				.criterion(FabricRecipeProvider.hasItem(Items.WHITE_WOOL), FabricRecipeProvider.conditionsFromItem(Items.WHITE_WOOL))
+				.criterion(FabricRecipeProvider.hasItem(Items.GREEN_WOOL), FabricRecipeProvider.conditionsFromItem(Items.GREEN_WOOL))
+				.offerTo(exporter);
 	}
 }

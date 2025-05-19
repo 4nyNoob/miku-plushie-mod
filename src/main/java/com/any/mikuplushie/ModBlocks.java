@@ -373,6 +373,14 @@ public class ModBlocks {
 			"miku_plush_xmas_tree",
 			false
 	);
+	public static final Block AIKO_PLUSH = register(
+			new MikuPlushieBlock(AbstractBlock.Settings.copy(Blocks.FLOWER_POT)
+			.sounds(BlockSoundGroup.WOOL)
+			.nonOpaque()
+			),
+			"aiko_plush",
+			false
+	);
 
 
 

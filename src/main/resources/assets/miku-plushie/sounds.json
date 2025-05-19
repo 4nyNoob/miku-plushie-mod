@@ -55,5 +55,55 @@
       "miku-plushie:miku-equip3",
       "miku-plushie:miku-equip4"
     ]
+  },
+
+
+
+  "aiko_oie" : {
+    "subtitle": "sound.aiko-plushie.oie",
+    "sounds": [
+      "miku-plushie:aiko/aiko-placing1",
+      "miku-plushie:aiko/aiko-placing2",
+      "miku-plushie:aiko/aiko-placing3",
+      "miku-plushie:aiko/aiko-placing4",
+      "miku-plushie:aiko/aiko-placing5",
+      "miku-plushie:aiko/aiko-placing6",
+      "miku-plushie:aiko/aiko-placing7"
+    ]
+  },
+  "aiko_dor" : {
+    "subtitle": "sound.aiko-plushie.dor",
+    "sounds": [
+      "miku-plushie:aiko/aiko-hurt1",
+      "miku-plushie:aiko/aiko-hurt2",
+      "miku-plushie:aiko/aiko-hurt3",
+      "miku-plushie:aiko/aiko-hurt4",
+      "miku-plushie:aiko/aiko-hurt5",
+      "miku-plushie:aiko/aiko-hurt6",
+      "miku-plushie:aiko/aiko-hurt7",
+      "miku-plushie:aiko/aiko-hurt8",
+      "miku-plushie:aiko/aiko-hurt9"
+    ]
+  },
+  "aiko_bye" : {
+    "subtitle": "sound.aiko-plushie.bye",
+    "sounds": [
+      "miku-plushie:aiko/aiko-break1",
+      "miku-plushie:aiko/aiko-break2",
+      "miku-plushie:aiko/aiko-break3",
+      "miku-plushie:aiko/aiko-break4",
+      "miku-plushie:aiko/aiko-break5",
+      "miku-plushie:aiko/aiko-break6",
+      "miku-plushie:aiko/aiko-break7"
+    ]
+  },
+  "aiko_equip" : {
+    "subtitle": "sound.aiko-plushie.equip",
+    "sounds": [
+      "miku-plushie:aiko/aiko-equip1",
+      "miku-plushie:aiko/aiko-equip2",
+      "miku-plushie:aiko/aiko-equip3",
+      "miku-plushie:aiko/aiko-equip4"
+    ]
   }
 }
