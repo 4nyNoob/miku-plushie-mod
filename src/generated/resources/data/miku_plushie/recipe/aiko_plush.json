@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "1": {
+      "item": "minecraft:blue_wool"
+    },
+    "2": {
+      "item": "minecraft:white_wool"
+    },
+    "3": {
+      "item": "minecraft:green_wool"
+    }
+  },
+  "pattern": [
+    "121",
+    "131"
+  ],
+  "result": {
+    "count": 1,
+    "id": "miku_plushie:aiko_plush"
+  }
+}

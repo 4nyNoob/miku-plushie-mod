@@ -2,7 +2,6 @@ package com.any.mikuplushie.datagen;
 
 import com.any.mikuplushie.ModBlocks;
 import com.any.mikuplushie.ModItems;
-
 import net.minecraft.core.Holder;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.loot.BlockLootSubProvider;
@@ -63,6 +62,7 @@ public class ModLootTableProvider extends BlockLootSubProvider {
 		dropOther(ModBlocks.MIKU_PLUSH_REINDEER.get(), ModItems.MIKU_PLUSH_REINDEER.get());
 		dropOther(ModBlocks.MIKU_PLUSH_SANTA_ELF.get(), ModItems.MIKU_PLUSH_SANTA_ELF.get());
 		dropOther(ModBlocks.MIKU_PLUSH_XMAS_TREE.get(), ModItems.MIKU_PLUSH_XMAS_TREE.get());
+		dropOther(ModBlocks.AIKO_PLUSH.get(), ModItems.AIKO_PLUSH.get());
 		//use dropSelf() for further entries
 	}
 

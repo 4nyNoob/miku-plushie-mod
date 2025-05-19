@@ -1,14 +1,12 @@
 package com.any.mikuplushie;
 
+import com.any.mikuplushie.item.MikuPlushieBlockItem;
 import net.minecraft.core.Holder;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.item.Items;
 import net.minecraft.world.item.Rarity;
-
-import com.any.mikuplushie.item.MikuPlushieBlockItem;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
@@ -111,6 +109,8 @@ public class ModItems {
 			()->new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_SANTA_ELF.get()));
 	public static final DeferredItem<MikuPlushieBlockItem> MIKU_PLUSH_XMAS_TREE=ITEMS.register("miku_plush_xmas_tree",
 			()->new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_XMAS_TREE.get()));
+	public static final DeferredItem<MikuPlushieBlockItem> AIKO_PLUSH=ITEMS.register("aiko_plush",
+			()->new MikuPlushieBlockItem(ModBlocks.AIKO_PLUSH.get()));
 
 	public static final DeferredHolder<CreativeModeTab,CreativeModeTab> MAIN_TAB=CREATIVE_TABS.register("main_tab",
 			()-> CreativeModeTab.builder()

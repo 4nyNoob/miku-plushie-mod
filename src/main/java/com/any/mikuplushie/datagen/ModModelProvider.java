@@ -2,18 +2,13 @@ package com.any.mikuplushie.datagen;
 
 import com.any.mikuplushie.MikuPlushie;
 import com.any.mikuplushie.ModBlocks;
-import com.any.mikuplushie.ModItems;
-import com.any.mikuplushie.block.MikuPlushieBlock;
-import net.neoforged.fml.common.Mod;
-import net.neoforged.neoforge.client.model.generators.BlockStateProvider;
-import net.neoforged.neoforge.client.model.generators.ItemModelBuilder;
-import net.neoforged.neoforge.client.model.generators.ModelFile;
-import net.neoforged.neoforge.common.data.ExistingFileHelper;
-import net.neoforged.neoforge.registries.DeferredBlock;
-
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
+import net.neoforged.neoforge.client.model.generators.BlockStateProvider;
+import net.neoforged.neoforge.client.model.generators.ModelFile;
+import net.neoforged.neoforge.common.data.ExistingFileHelper;
+import net.neoforged.neoforge.registries.DeferredBlock;
 
 public class ModModelProvider extends BlockStateProvider {
 	public final ExistingFileHelper files;
@@ -69,6 +64,7 @@ public class ModModelProvider extends BlockStateProvider {
 		horizontalBlockState(ModBlocks.MIKU_PLUSH_REINDEER);
 		horizontalBlockState(ModBlocks.MIKU_PLUSH_SANTA_ELF);
 		horizontalBlockState(ModBlocks.MIKU_PLUSH_XMAS_TREE);
+		horizontalBlockState(ModBlocks.AIKO_PLUSH);
 	}
 
 	public void horizontalBlockState(DeferredBlock<? extends Block> block){

@@ -1,10 +1,9 @@
 package com.any.mikuplushie;
 
+import com.any.mikuplushie.block.MikuPlushieBlock;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
-
-import com.any.mikuplushie.block.MikuPlushieBlock;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
@@ -101,6 +100,8 @@ public class ModBlocks {
 	public static final DeferredBlock<MikuPlushieBlock> MIKU_PLUSH_SANTA_ELF=BLOCKS.register("miku_plush_santa_elf",
 			()->new MikuPlushieBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.FLOWER_POT).noOcclusion().sound(SoundType.WOOL)));
 	public static final DeferredBlock<MikuPlushieBlock> MIKU_PLUSH_XMAS_TREE=BLOCKS.register("miku_plush_xmas_tree",
+			()->new MikuPlushieBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.FLOWER_POT).noOcclusion().sound(SoundType.WOOL)));
+	public static final DeferredBlock<MikuPlushieBlock> AIKO_PLUSH=BLOCKS.register("aiko_plush",
 			()->new MikuPlushieBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.FLOWER_POT).noOcclusion().sound(SoundType.WOOL)));
 
 }

@@ -2,7 +2,6 @@ package com.any.mikuplushie;
 
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
-
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
@@ -56,6 +55,8 @@ public class MikuPlushieClient{
 		ItemBlockRenderTypes.setRenderLayer(ModBlocks.MIKU_PLUSH_REINDEER.get(), RenderType.CUTOUT);
 		ItemBlockRenderTypes.setRenderLayer(ModBlocks.MIKU_PLUSH_SANTA_ELF.get(), RenderType.CUTOUT);
 		ItemBlockRenderTypes.setRenderLayer(ModBlocks.MIKU_PLUSH_XMAS_TREE.get(), RenderType.CUTOUT);
+
+		ItemBlockRenderTypes.setRenderLayer(ModBlocks.AIKO_PLUSH.get(), RenderType.CUTOUT);
 
 
 		ItemBlockRenderTypes.setRenderLayer(ModBlocks.MIKU_PLUSH_GHOST.get(), RenderType.TRANSLUCENT);
