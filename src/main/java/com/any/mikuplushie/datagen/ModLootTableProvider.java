@@ -60,5 +60,6 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
 		addDrop(ModBlocks.MIKU_PLUSH_REINDEER, ModItems.MIKU_PLUSH_REINDEER);
 		addDrop(ModBlocks.MIKU_PLUSH_SANTA_ELF, ModItems.MIKU_PLUSH_SANTA_ELF);
 		addDrop(ModBlocks.MIKU_PLUSH_XMAS_TREE, ModItems.MIKU_PLUSH_XMAS_TREE);
+		addDrop(ModBlocks.AIKO_PLUSH, ModItems.AIKO_PLUSH);
 	}
 }

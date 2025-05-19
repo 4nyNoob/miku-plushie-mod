@@ -2,6 +2,7 @@ package com.any.mikuplushie.block;
 
 import com.any.mikuplushie.ModItems;
 import com.any.mikuplushie.ModSoundEvents;
+import com.any.mikuplushie.datagen.ModTagProvider;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.HorizontalFacingBlock;
@@ -35,8 +36,8 @@ public class MikuPlushieBlock extends Block {
 	@Override
 	public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
 		if (!world.isClient){
-			if (player.getStackInHand(hand).isOf(ModItems.CANUDINHO)){
-				world.playSound(null, pos, ModSoundEvents.CANUDINHO, SoundCategory.BLOCKS, 1F, 1F);
+			if (player.getStackInHand(hand).isOf(ModItems.CANUDINHO) && this.asItem().getDefaultStack().isIn(ModTagProvider.BR_MIKU_ITEMS)){
+				world.playSound(null, pos, ModSoundEvents.MIKU_CANUDINHO, SoundCategory.BLOCKS, 1F, 1F);
 				return ActionResult.SUCCESS;
 			}
 		}
@@ -45,13 +46,13 @@ public class MikuPlushieBlock extends Block {
 
 	@Override
 	public void onPlaced(World world, BlockPos pos, BlockState state, @Nullable LivingEntity placer, ItemStack itemStack) {
-		world.playSound(null, pos, ModSoundEvents.OIE, SoundCategory.BLOCKS, 0.5F, 1);
+		world.playSound(null, pos, ModSoundEvents.MIKU_OIE, SoundCategory.BLOCKS, 0.5F, 1);
 		super.onPlaced(world, pos, state, placer, itemStack);
 	}
 
 	@Override
 	public void onBreak(World world, BlockPos pos, BlockState state, PlayerEntity player) {
-		world.playSound(null, pos, ModSoundEvents.BYE, SoundCategory.BLOCKS, 0.5F, 1);
+		world.playSound(null, pos, ModSoundEvents.MIKU_BYE, SoundCategory.BLOCKS, 0.5F, 1);
         super.onBreak(world, pos, state, player);
     }
 

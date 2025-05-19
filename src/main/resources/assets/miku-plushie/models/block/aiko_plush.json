@@ -4,8 +4,7 @@
 	"texture_size": [64, 64],
 	"textures": {
 		"particle": "miku-plushie:block/aiko-plush",
-		"base": "miku-plushie:block/aiko-plush",
-		"emissive": "miku-plushie:block/aiko-plush_emissive"
+		"base": "miku-plushie:block/aiko-plush"
 	},
 	"elements": [
 		{
@@ -104,9 +103,9 @@
 			}
 		},
 		{
-			"from": [4.25, 8.5, 6.5],
-			"to": [5.25, 11.5, 9.5],
-			"rotation": {"angle": 0, "axis": "y", "origin": [7.25, 7.5, 8.5]},
+			"from": [4.25, 8.5, 7],
+			"to": [5.25, 11.5, 10],
+			"rotation": {"angle": 0, "axis": "y", "origin": [7.25, 7.5, 9]},
 			"faces": {
 				"north": {"uv": [5.25, 0.75, 5.5, 1.5], "texture": "#base"},
 				"east": {"uv": [4.5, 0.75, 5.25, 1.5], "texture": "#base"},
@@ -117,9 +116,9 @@
 			}
 		},
 		{
-			"from": [10.75, 8.5, 6.5],
-			"to": [11.75, 11.5, 9.5],
-			"rotation": {"angle": 0, "axis": "y", "origin": [8.75, 7.5, 8.5]},
+			"from": [10.75, 8.5, 7],
+			"to": [11.75, 11.5, 10],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8.75, 7.5, 9]},
 			"faces": {
 				"north": {"uv": [5.5, 0.75, 5.25, 1.5], "texture": "#base"},
 				"east": {"uv": [6.25, 0.75, 5.5, 1.5], "texture": "#base"},
@@ -127,34 +126,6 @@
 				"west": {"uv": [5.25, 0.75, 4.5, 1.5], "texture": "#base"},
 				"up": {"uv": [5.25, 0.75, 5.5, 0], "texture": "#base"},
 				"down": {"uv": [5.5, 0, 5.75, 0.75], "texture": "#base"}
-			}
-		},
-		{
-			"name": "cube_emissive",
-			"from": [10.75, 8.5, 6.5],
-			"to": [11.75, 11.5, 9.5],
-			"rotation": {"angle": 0, "axis": "y", "origin": [8.75, 7.5, 8.5]},
-			"faces": {
-				"north": {"uv": [5.5, 0.75, 5.25, 1.5], "texture": "#emissive"},
-				"east": {"uv": [6.25, 0.75, 5.5, 1.5], "texture": "#base"},
-				"south": {"uv": [6.5, 0.75, 6.25, 1.5], "texture": "#emissive"},
-				"west": {"uv": [5.25, 0.75, 4.5, 1.5], "texture": "#base"},
-				"up": {"uv": [5.25, 0.75, 5.5, 0], "texture": "#emissive"},
-				"down": {"uv": [5.5, 0, 5.75, 0.75], "texture": "#emissive"}
-			}
-		},
-		{
-			"name": "cube_emissive",
-			"from": [4.25, 8.5, 6.5],
-			"to": [5.25, 11.5, 9.5],
-			"rotation": {"angle": 0, "axis": "y", "origin": [7.25, 7.5, 8.5]},
-			"faces": {
-				"north": {"uv": [5.25, 0.75, 5.5, 1.5], "texture": "#emissive"},
-				"east": {"uv": [4.5, 0.75, 5.25, 1.5], "texture": "#base"},
-				"south": {"uv": [6.25, 0.75, 6.5, 1.5], "texture": "#emissive"},
-				"west": {"uv": [5.5, 0.75, 6.25, 1.5], "texture": "#base"},
-				"up": {"uv": [5.5, 0.75, 5.25, 0], "texture": "#emissive"},
-				"down": {"uv": [5.75, 0, 5.5, 0.75], "texture": "#emissive"}
 			}
 		},
 		{
@@ -320,11 +291,13 @@
 			"name": "miku",
 			"origin": [8, 8, 8],
 			"color": 0,
+			"boneType": "",
 			"children": [
 				{
 					"name": "body",
 					"origin": [8, 8, 8],
 					"color": 0,
+					"boneType": "",
 					"children": [
 						0,
 						1,
@@ -332,19 +305,22 @@
 							"name": "arm",
 							"origin": [8, 0, 8],
 							"color": 0,
+							"boneType": "",
 							"children": [2, 3]
 						},
 						{
 							"name": "arm",
 							"origin": [8, 0, 8],
 							"color": 0,
+							"boneType": "",
 							"children": [4, 5]
 						},
 						{
 							"name": "head",
 							"origin": [8, 8, 8],
 							"color": 0,
-							"children": [6, 7, 8, 9, 10, 11, 12, 13]
+							"boneType": "",
+							"children": [6, 7, 8, 9, 10, 11]
 						}
 					]
 				},
@@ -352,13 +328,15 @@
 					"name": "leg",
 					"origin": [8, 0, 8],
 					"color": 0,
-					"children": [14, 15, 16]
+					"boneType": "",
+					"children": [12, 13, 14]
 				},
 				{
 					"name": "leg",
 					"origin": [8, 0, 8],
 					"color": 0,
-					"children": [17, 18, 19]
+					"boneType": "",
+					"children": [15, 16, 17]
 				}
 			]
 		}

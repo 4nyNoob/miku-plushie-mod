@@ -31,7 +31,10 @@ public class MikuPlushieBlockItem extends BlockItem implements Equipment {
 
 	public static void PlayMikuSound(LivingEntity entity){
 		if (entity.getStackInHand(entity.getActiveHand()).isIn(ModTagProvider.BR_MIKU_ITEMS)){
-			entity.playSound(ModSoundEvents.DOR, 1f, 1);
+			entity.playSound(ModSoundEvents.MIKU_DOR, 1f, 1);
+		}
+		if (entity.getStackInHand(entity.getActiveHand()).isIn(ModTagProvider.AIKO_PLUSH)){
+			entity.playSound(ModSoundEvents.MIKU_DOR, 1f, 1);
 		}
 	}
 
@@ -42,6 +45,6 @@ public class MikuPlushieBlockItem extends BlockItem implements Equipment {
 
 	@Override
 	public SoundEvent getEquipSound() {
-		return ModSoundEvents.EQUIP;
+		return ModSoundEvents.MIKU_EQUIP;
 	}
 }

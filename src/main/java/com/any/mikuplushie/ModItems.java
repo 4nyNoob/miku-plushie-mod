@@ -103,6 +103,8 @@ public class ModItems {
 			register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_SANTA_ELF, new Item.Settings()), "miku_plush_santa_elf");
 	public static final Item MIKU_PLUSH_XMAS_TREE =
 			register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_XMAS_TREE, new Item.Settings()), "miku_plush_xmas_tree");
+	public static final Item AIKO_PLUSH =
+			register(new MikuPlushieBlockItem(ModBlocks.AIKO_PLUSH, new Item.Settings()), "aiko_plush");
 
 
 
@@ -165,7 +167,7 @@ public class ModItems {
 		ItemGroupEvents.modifyEntriesEvent(ItemGroups.FUNCTIONAL).register((itemGroup) -> itemGroup.add(ModItems.MIKU_PLUSH_SANTA));
 		ItemGroupEvents.modifyEntriesEvent(ItemGroups.FUNCTIONAL).register((itemGroup) -> itemGroup.add(ModItems.MIKU_PLUSH_REINDEER));
 		ItemGroupEvents.modifyEntriesEvent(ItemGroups.FUNCTIONAL).register((itemGroup) -> itemGroup.add(ModItems.MIKU_PLUSH_SANTA_ELF));
-		ItemGroupEvents.modifyEntriesEvent(ItemGroups.FUNCTIONAL).register((itemGroup) -> itemGroup.add(ModItems.MIKU_PLUSH_XMAS_TREE));
+		ItemGroupEvents.modifyEntriesEvent(ItemGroups.FUNCTIONAL).register((itemGroup) -> itemGroup.add(ModItems.AIKO_PLUSH));
 
 
 
