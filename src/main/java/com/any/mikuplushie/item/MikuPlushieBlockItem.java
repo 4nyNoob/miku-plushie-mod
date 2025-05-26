@@ -1,24 +1,19 @@
 package com.any.mikuplushie.item;
 
-import java.util.List;
-
+import com.any.mikuplushie.ModSoundEvents;
 import net.minecraft.core.Holder;
 import net.minecraft.network.chat.Component;
 import net.minecraft.sounds.SoundEvent;
-import net.minecraft.sounds.SoundSource;
-import net.minecraft.world.InteractionHand;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EquipmentSlot;
-import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Equipable;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Items;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.block.Block;
 
-import com.any.mikuplushie.ModSoundEvents;
+import java.util.List;
 
 public class MikuPlushieBlockItem extends BlockItem implements Equipable {
 
@@ -43,12 +38,13 @@ public class MikuPlushieBlockItem extends BlockItem implements Equipable {
 
 	@Override
 	public Holder<SoundEvent> getEquipSound() {
-		return ModSoundEvents.EQUIP;
+		return ModSoundEvents.MIKU_EQUIP;
 	}
 
 	@Override
 	public boolean onLeftClickEntity(ItemStack stack, Player player, Entity entity) {
-		player.playSound(ModSoundEvents.DOR.value(), 0.5F, 1F);
+		player.playSound(ModSoundEvents.MIKU_DOR.value(), 0.5F, 1F);
 		return super.onLeftClickEntity(stack, player, entity);
 	}
+
 }

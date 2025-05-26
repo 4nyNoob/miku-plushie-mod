@@ -96,11 +96,16 @@
 
   "item.miku_plushie.canudinho": "Canudinho",
 
-
+  "itemGroup.miku_plushie":"Miku Plushie",
 
   "sound.miku_plushie.canudinho": "Miku: Canudinho",
   "sound.miku_plushie.oie": "Miku: Oie",
   "sound.miku_plushie.dor": "Miku: Dor",
   "sound.miku_plushie.bye": "Miku: Tchau",
-  "sound.miku_plushie.equip": "Miku: Equipada"
+  "sound.miku_plushie.equip": "Miku: Equipada",
+
+  "sound.aiko_plushie.oie": "Aiko: Oie",
+  "sound.aiko_plushie.dor": "Aiko: Dor",
+  "sound.aiko_plushie.bye": "Aiko: Tchau",
+  "sound.aiko_plushie.equip": "Aiko: Equipada"
 }
