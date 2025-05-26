@@ -102,5 +102,10 @@
   "sound.miku-plushie.oie": "Miku: Oie",
   "sound.miku-plushie.dor": "Miku: Dor",
   "sound.miku-plushie.bye": "Miku: Tchau",
-  "sound.miku-plushie.equip": "Miku: Equipada"
+  "sound.miku-plushie.equip": "Miku: Equipada",
+
+  "sound.aiko-plushie.oie": "Aiko: Oie",
+  "sound.aiko-plushie.dor": "Aiko: Dor",
+  "sound.aiko-plushie.bye": "Aiko: Tchau",
+  "sound.aiko-plushie.equip": "Aiko: Equipada"
 }

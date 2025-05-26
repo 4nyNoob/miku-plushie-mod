@@ -1,4 +1,4 @@
-// 1.21.1	2024-12-26T10:10:59.518916012	miku plushies/Block Loot Tables
+// 1.21.1	2025-05-26T11:52:50.150337742	miku plushies/Block Loot Tables
 c3c9081777252a88fb69c21c0a80a70369ccda3d data/miku-plushie/loot_table/blocks/miku_plush_santa_elf.json
 7784b6d2c75ca8e007c8d1487ce7078727b29bd7 data/miku-plushie/loot_table/blocks/miku_plush_infinity.json
 3a0f1bd85d1467bf9ca9381f28d337d4a2914bf6 data/miku-plushie/loot_table/blocks/miku_plush_br_electrician.json
@@ -34,6 +34,7 @@ f1fbdfe3754d8395a66add8a7737a4f354c6f7d1 data/miku-plushie/loot_table/blocks/mik
 16f14b1214abe2ea48c3be8256fb7c9b2241ca47 data/miku-plushie/loot_table/blocks/miku_plush_devil.json
 3fe3c565ffe7e4f77f0252bfd2379452f1187223 data/miku-plushie/loot_table/blocks/miku_plush_hachune.json
 c2e9e9c6f6aa207aed47d94e7aa0f081c3032ede data/miku-plushie/loot_table/blocks/miku_plush_br_brown_bro.json
+e2fa679e9c054a53cf2dec86db07ffea16be9944 data/miku-plushie/loot_table/blocks/aiko_plush.json
 f2026b8353e631bbb66a373414c7b4c0061902f9 data/miku-plushie/loot_table/blocks/miku_plush_bik.json
 65c217979b7a708148f5730f39ca8ed5cc377541 data/miku-plushie/loot_table/blocks/miku_plush_xmas_tree.json
 fcfdbb3e46168e253ab1a9a4371466a7b4e5e03d data/miku-plushie/loot_table/blocks/miku_plush_br_ba_drum.json

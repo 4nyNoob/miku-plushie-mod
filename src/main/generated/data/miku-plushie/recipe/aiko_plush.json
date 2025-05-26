@@ -17,7 +17,7 @@
     "131"
   ],
   "result": {
-    "item": "miku-plushie:aiko_plush"
-  },
-  "show_notification": true
+    "count": 1,
+    "id": "miku-plushie:aiko_plush"
+  }
 }

@@ -1,4 +1,4 @@
-// 1.21.1	2024-12-26T10:10:59.519694274	miku plushies/Recipes
+// 1.21.1	2025-05-26T11:52:50.150887668	miku plushies/Recipes
 1057061e0384eafa9725dc7cbd5f5270663818ed data/miku-plushie/advancement/recipes/food/canudinho.json
 8bac47e2e203e9d568763a239f1f5792d1072225 data/miku-plushie/recipe/miku_plush_ghostface.json
 f1a00d65d632d9fc5d7d7e2aeb292f26bf2255ea data/miku-plushie/recipe/miku_plush_senbonzakura.json
@@ -36,6 +36,7 @@ e9d37660fafe3da0a76884fa54960bc0ce050ff1 data/miku-plushie/recipe/miku_plush_br_
 568e673df373ef5d5e65a8680a8c6f7c0c9a59a6 data/miku-plushie/recipe/miku_plush_personadancing.json
 2ce3cc477f08353128421242171af659abe15a05 data/miku-plushie/recipe/miku_plush_michael_myers.json
 9c4d88bfaab4de250bceedfe91d60a769e1cd7f0 data/miku-plushie/advancement/recipes/decorations/miku_plush_patata.json
+f142824e0d9c1ab9f0be32406d4ff0e3212a4e6e data/miku-plushie/advancement/recipes/decorations/aiko_plush.json
 38da8a3e24e228582df7045de0801b52af16bfe3 data/miku-plushie/advancement/recipes/decorations/miku_plush_devil.json
 8af454d36734b11a5d3ff25e2a474b9f829cc633 data/miku-plushie/advancement/recipes/decorations/miku_plush_helloplanet.json
 cf00ad541a55eb8aa8cc2e3ca88a78427a91ca08 data/miku-plushie/advancement/recipes/decorations/miku_plush_pumpkin.json
@@ -56,6 +57,7 @@ da89c8ba79490a9849bf02db32cb8675d69c41b6 data/miku-plushie/recipe/miku_plush_mum
 9c3974f49b77ed05bdf69e4a272e3cb9061cbb6c data/miku-plushie/recipe/miku_plush_br_rs.json
 e0ae0f70c2d48f7a088776406f491b57d0f69a98 data/miku-plushie/recipe/miku_plush_br_go.json
 17d1f4dc24f1ce4ef88d23410cbdd6d90cfa9f9c data/miku-plushie/advancement/recipes/decorations/miku_plush_witch.json
+af3a994eb39a866f05089ec046303e07bf9ba606 data/miku-plushie/recipe/aiko_plush.json
 e48018575816da6cf4a118d2859902e08bd5fd8f data/miku-plushie/recipe/canudinho.json
 912bd679ff0d6ca9c20325ad45a632bc4fd8cf69 data/miku-plushie/advancement/recipes/decorations/miku_plush_ghostface.json
 d9594a6b0d25ee81f498058800387e07dad6e232 data/miku-plushie/advancement/recipes/decorations/miku_plush_frankenstein.json

@@ -5,9 +5,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "minecraft:blue_wool"
-            ]
+            "items": "minecraft:blue_wool"
           }
         ]
       },
@@ -17,9 +15,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "minecraft:green_wool"
-            ]
+            "items": "minecraft:green_wool"
           }
         ]
       },
@@ -35,9 +31,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "minecraft:white_wool"
-            ]
+            "items": "minecraft:white_wool"
           }
         ]
       },
@@ -46,16 +40,15 @@
   },
   "requirements": [
     [
+      "has_the_recipe",
       "has_blue_wool",
       "has_white_wool",
-      "has_green_wool",
-      "has_the_recipe"
+      "has_green_wool"
     ]
   ],
   "rewards": {
     "recipes": [
       "miku-plushie:aiko_plush"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }
