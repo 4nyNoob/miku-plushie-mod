@@ -2,6 +2,7 @@ package com.any.mikuplushie.block;
 
 import com.any.mikuplushie.ModItems;
 import com.any.mikuplushie.ModSoundEvents;
+import com.any.mikuplushie.datagen.ModTagProvider;
 import net.minecraft.core.BlockPos;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionHand;
@@ -33,8 +34,8 @@ public class MikuPlushieBlock extends Block {
 
 	@Override
 	protected ItemInteractionResult useItemOn(ItemStack stack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hitResult) {
-		if(stack.getItem()== ModItems.CANUDINHO.get()){
-			level.playSound(player,pos, ModSoundEvents.CANUDINHO.value(), SoundSource.BLOCKS, 0.5F,1F);
+		if(stack.getItem()== ModItems.CANUDINHO.get() && state.is(ModTagProvider.MIKU_PLUSH)){
+			level.playSound(player,pos, ModSoundEvents.MIKU_CANUDINHO.value(), SoundSource.BLOCKS, 0.5F,1F);
 			return ItemInteractionResult.SUCCESS;
 		}
 		return ItemInteractionResult.PASS_TO_DEFAULT_BLOCK_INTERACTION;
@@ -42,13 +43,21 @@ public class MikuPlushieBlock extends Block {
 
 	@Override
 	protected void onPlace(BlockState state, Level level, BlockPos pos, BlockState oldState, boolean movedByPiston) {
-		level.playSound(null,pos,ModSoundEvents.OIE.value(), SoundSource.BLOCKS, 0.5F,1F);
+		if (state.is(ModTagProvider.AIKO_PLUSH)){
+			level.playSound(null,pos,ModSoundEvents.AIKO_OIE.value(), SoundSource.BLOCKS, 0.5F,1F);
+		} else {
+			level.playSound(null,pos,ModSoundEvents.MIKU_OIE.value(), SoundSource.BLOCKS, 0.5F,1F);
+		}
 		super.onPlace(state, level, pos, oldState, movedByPiston);
 	}
 
 	@Override
 	protected void onRemove(BlockState state, Level level, BlockPos pos, BlockState newState, boolean movedByPiston) {
-		level.playSound(null,pos,ModSoundEvents.BYE.value(),SoundSource.BLOCKS,0.5F,1F);
+		if (state.is(ModTagProvider.AIKO_PLUSH)){
+			level.playSound(null,pos,ModSoundEvents.AIKO_BYE.value(), SoundSource.BLOCKS, 0.5F,1F);
+		} else {
+			level.playSound(null,pos,ModSoundEvents.MIKU_BYE.value(),SoundSource.BLOCKS,0.5F,1F);
+		}
 		super.onRemove(state, level, pos, newState, movedByPiston);
 	}
 
