@@ -9,12 +9,14 @@ public class ModSoundEvents {
 	private ModSoundEvents() {
 	}
 
+	//MIKU VOICE
 	public static final SoundEvent MIKU_CANUDINHO = registerSound("canudinho");
 	public static final SoundEvent MIKU_OIE = registerSound("oie");
 	public static final SoundEvent MIKU_DOR = registerSound("dor");
 	public static final SoundEvent MIKU_BYE = registerSound("bye");
 	public static final SoundEvent MIKU_EQUIP = registerSound("equip");
 
+	//AIKO VOICE
 	public static final SoundEvent AIKO_OIE = registerSound("aiko_oie");
 	public static final SoundEvent AIKO_DOR = registerSound("aiko_dor");
 	public static final SoundEvent AIKO_BYE = registerSound("aiko_bye");

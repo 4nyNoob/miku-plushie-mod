@@ -2,58 +2,108 @@
   "canudinho": {
     "subtitle": "sound.miku-plushie.canudinho",
     "sounds": [
-      "miku-plushie:canudinho1",
-      "miku-plushie:canudinho2",
-      "miku-plushie:canudinho3",
-      "miku-plushie:canudinho4",
-      "miku-plushie:canudinho5"
+      "miku-plushie:miku/canudinho1",
+      "miku-plushie:miku/canudinho2",
+      "miku-plushie:miku/canudinho3",
+      "miku-plushie:miku/canudinho4",
+      "miku-plushie:miku/canudinho5"
     ]
   },
   "oie" : {
     "subtitle": "sound.miku-plushie.oie",
     "sounds": [
-      "miku-plushie:miku-oie1",
-      "miku-plushie:miku-oie2",
-      "miku-plushie:miku-oie3",
-      "miku-plushie:miku-oie4",
-      "miku-plushie:miku-oie5",
-      "miku-plushie:miku-oie6",
-      "miku-plushie:miku-oie7"
+      "miku-plushie:miku/miku-oie1",
+      "miku-plushie:miku/miku-oie2",
+      "miku-plushie:miku/miku-oie3",
+      "miku-plushie:miku/miku-oie4",
+      "miku-plushie:miku/miku-oie5",
+      "miku-plushie:miku/miku-oie6",
+      "miku-plushie:miku/miku-oie7"
     ]
   },
   "dor" : {
     "subtitle": "sound.miku-plushie.dor",
     "sounds": [
-      "miku-plushie:miku-dor1",
-      "miku-plushie:miku-dor2",
-      "miku-plushie:miku-dor3",
-      "miku-plushie:miku-dor4",
-      "miku-plushie:miku-dor5",
-      "miku-plushie:miku-dor6",
-      "miku-plushie:miku-dor7",
-      "miku-plushie:miku-dor8",
-      "miku-plushie:miku-dor9"
+      "miku-plushie:miku/miku-dor1",
+      "miku-plushie:miku/miku-dor2",
+      "miku-plushie:miku/miku-dor3",
+      "miku-plushie:miku/miku-dor4",
+      "miku-plushie:miku/miku-dor5",
+      "miku-plushie:miku/miku-dor6",
+      "miku-plushie:miku/miku-dor7",
+      "miku-plushie:miku/miku-dor8",
+      "miku-plushie:miku/miku-dor9"
     ]
   },
   "bye" : {
     "subtitle": "sound.miku-plushie.bye",
     "sounds": [
-      "miku-plushie:miku-bye1",
-      "miku-plushie:miku-bye2",
-      "miku-plushie:miku-bye3",
-      "miku-plushie:miku-bye4",
-      "miku-plushie:miku-bye5",
-      "miku-plushie:miku-bye6",
-      "miku-plushie:miku-bye7"
+      "miku-plushie:miku/miku-bye1",
+      "miku-plushie:miku/miku-bye2",
+      "miku-plushie:miku/miku-bye3",
+      "miku-plushie:miku/miku-bye4",
+      "miku-plushie:miku/miku-bye5",
+      "miku-plushie:miku/miku-bye6",
+      "miku-plushie:miku/miku-bye7"
     ]
   },
   "equip" : {
     "subtitle": "sound.miku-plushie.equip",
     "sounds": [
-      "miku-plushie:miku-equip1",
-      "miku-plushie:miku-equip2",
-      "miku-plushie:miku-equip3",
-      "miku-plushie:miku-equip4"
+      "miku-plushie:miku/miku-equip1",
+      "miku-plushie:miku/miku-equip2",
+      "miku-plushie:miku/miku-equip3",
+      "miku-plushie:miku/miku-equip4"
+    ]
+  },
+
+
+
+  "aiko_oie" : {
+    "subtitle": "sound.aiko-plushie.oie",
+    "sounds": [
+      "miku-plushie:aiko/aiko-placing1",
+      "miku-plushie:aiko/aiko-placing2",
+      "miku-plushie:aiko/aiko-placing3",
+      "miku-plushie:aiko/aiko-placing4",
+      "miku-plushie:aiko/aiko-placing5",
+      "miku-plushie:aiko/aiko-placing6",
+      "miku-plushie:aiko/aiko-placing7"
+    ]
+  },
+  "aiko_dor" : {
+    "subtitle": "sound.aiko-plushie.dor",
+    "sounds": [
+      "miku-plushie:aiko/aiko-hurt1",
+      "miku-plushie:aiko/aiko-hurt2",
+      "miku-plushie:aiko/aiko-hurt3",
+      "miku-plushie:aiko/aiko-hurt4",
+      "miku-plushie:aiko/aiko-hurt5",
+      "miku-plushie:aiko/aiko-hurt6",
+      "miku-plushie:aiko/aiko-hurt7",
+      "miku-plushie:aiko/aiko-hurt8",
+      "miku-plushie:aiko/aiko-hurt9"
+    ]
+  },
+  "aiko_bye" : {
+    "subtitle": "sound.aiko-plushie.bye",
+    "sounds": [
+      "miku-plushie:aiko/aiko-break1",
+      "miku-plushie:aiko/aiko-break2",
+      "miku-plushie:aiko/aiko-break3",
+      "miku-plushie:aiko/aiko-break4",
+      "miku-plushie:aiko/aiko-break5",
+      "miku-plushie:aiko/aiko-break6",
+      "miku-plushie:aiko/aiko-break7"
+    ]
+  },
+  "aiko_equip" : {
+    "subtitle": "sound.aiko-plushie.equip",
+    "sounds": [
+      "miku-plushie:aiko/aiko-equip1",
+      "miku-plushie:aiko/aiko-equip2",
+      "miku-plushie:aiko/aiko-equip3",
+      "miku-plushie:aiko/aiko-equip4"
     ]
   }
 }

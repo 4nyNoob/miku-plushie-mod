@@ -1,4 +1,4 @@
-// 1.20.1	2025-05-18T12:00:45.465565114	miku plushies/Block Loot Tables
+// 1.20.1	2025-05-26T00:00:29.955849876	miku plushies/Block Loot Tables
 1605dca8474dc1cb7ac58d618cbdcc6b4c0ca9fb data/miku-plushie/loot_tables/blocks/miku_plush_br_sp.json
 0c154444201255fa994c3038e5b13ef363dc6f70 data/miku-plushie/loot_tables/blocks/miku_plush_br_ba.json
 3fe3c565ffe7e4f77f0252bfd2379452f1187223 data/miku-plushie/loot_tables/blocks/miku_plush_hachune.json
@@ -16,8 +16,8 @@ c2e9e9c6f6aa207aed47d94e7aa0f081c3032ede data/miku-plushie/loot_tables/blocks/mi
 dcd9c2497b3df29a750fa506567f3f4b9d26aac8 data/miku-plushie/loot_tables/blocks/miku_plush_br_school_pe.json
 039f696e0d95fedc054c1db92dc395cd96f291db data/miku-plushie/loot_tables/blocks/miku_plush_patati.json
 78ff9d9caee6c63d84a7f224e73ec78f05c43582 data/miku-plushie/loot_tables/blocks/miku_plush_br_beach.json
-9e8f7e9db7e44b82f5b940c5f7acb05d149d503f data/miku-plushie/loot_tables/blocks/miku_plush_ghostface.json
 20d1a86bf656cca68257903df527c882b810876b data/miku-plushie/loot_tables/blocks/miku_plush_vampire.json
+9e8f7e9db7e44b82f5b940c5f7acb05d149d503f data/miku-plushie/loot_tables/blocks/miku_plush_ghostface.json
 65c217979b7a708148f5730f39ca8ed5cc377541 data/miku-plushie/loot_tables/blocks/miku_plush_xmas_tree.json
 54d8d9369b03274b6b02d9c0645886bf3d14d2e2 data/miku-plushie/loot_tables/blocks/miku_plush_br_am.json
 c0df91fd321c23fe33faa565391734b2c8e2f43e data/miku-plushie/loot_tables/blocks/miku_plush_mummy.json
