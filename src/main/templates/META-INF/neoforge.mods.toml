@@ -23,7 +23,7 @@ license="GNU GPL V3"
 modId="miku_plushie" #mandatory
 
 # The version number of the mod
-version="1.5-1.21.1" #mandatory
+version="1.6-1.21.1" #mandatory
 
 # A display name for the mod
 displayName="Miku Plushie" #mandatory
