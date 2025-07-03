@@ -105,6 +105,34 @@ public class ModItems {
 			register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_XMAS_TREE, new Item.Settings()), "miku_plush_xmas_tree");
 	public static final Item AIKO_PLUSH =
 			register(new MikuPlushieBlockItem(ModBlocks.AIKO_PLUSH, new Item.Settings()), "aiko_plush");
+	public static final Item TETO_PLUSH =
+			register(new MikuPlushieBlockItem(ModBlocks.TETO_PLUSH, new Item.Settings()), "teto_plush");
+	public static final Item AKITA_NERU_PLUSH =
+			register(new MikuPlushieBlockItem(ModBlocks.AKITA_NERU_PLUSH, new Item.Settings()), "akita_neru_plush");
+	public static final Item MIKU_PLUSH =
+			register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH, new Item.Settings()), "miku_plush");
+	public static final Item RIN_PLUSH =
+			register(new MikuPlushieBlockItem(ModBlocks.RIN_PLUSH, new Item.Settings()), "rin_plush");
+	public static final Item LEN_PLUSH =
+			register(new MikuPlushieBlockItem(ModBlocks.LEN_PLUSH, new Item.Settings()), "len_plush");
+	public static final Item MIKU_PLUSH_SONIC_CROSSWORLDS =
+			register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_SONIC_CROSSWORLDS, new Item.Settings()), "miku_plush_sonic_crossworlds");
+	public static final Item MIKU_PLUSH_FORTNITE_NEKO =
+			register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_FORTNITE_NEKO, new Item.Settings()), "miku_plush_fortnite_neko");
+	public static final Item MIKU_PLUSH_V4 =
+			register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_V4, new Item.Settings()), "miku_plush_v4");
+	public static final Item MIKU_PLUSH_MESMERIZER =
+			register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_MESMERIZER, new Item.Settings()), "miku_plush_mesmerizer");
+	public static final Item TETO_PLUSH_MESMERIZER =
+			register(new MikuPlushieBlockItem(ModBlocks.TETO_PLUSH_MESMERIZER, new Item.Settings()), "teto_plush_mesmerizer");
+	public static final Item MIKU_PLUSH_SONIC =
+			register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_SONIC, new Item.Settings()), "miku_plush_sonic");
+	public static final Item TETO_PLUSH_SHADOW =
+			register(new MikuPlushieBlockItem(ModBlocks.TETO_PLUSH_SHADOW, new Item.Settings()), "teto_plush_shadow");
+	public static final Item AKITA_NERU_PLUSH_TAILS =
+			register(new MikuPlushieBlockItem(ModBlocks.AKITA_NERU_PLUSH_TAILS, new Item.Settings()), "akita_neru_plush_tails");
+	public static final Item TETO_PLUSH_BIRDBRAIN =
+			register(new MikuPlushieBlockItem(ModBlocks.TETO_PLUSH_BIRDBRAIN, new Item.Settings()), "teto_plush_birdbrain");
 
 
 
@@ -169,6 +197,20 @@ public class ModItems {
 		ItemGroupEvents.modifyEntriesEvent(ItemGroups.FUNCTIONAL).register((itemGroup) -> itemGroup.add(ModItems.MIKU_PLUSH_SANTA_ELF));
 		ItemGroupEvents.modifyEntriesEvent(ItemGroups.FUNCTIONAL).register((itemGroup) -> itemGroup.add(ModItems.MIKU_PLUSH_XMAS_TREE));
 		ItemGroupEvents.modifyEntriesEvent(ItemGroups.FUNCTIONAL).register((itemGroup) -> itemGroup.add(ModItems.AIKO_PLUSH));
+		ItemGroupEvents.modifyEntriesEvent(ItemGroups.FUNCTIONAL).register((itemGroup) -> itemGroup.add(ModItems.TETO_PLUSH));
+		ItemGroupEvents.modifyEntriesEvent(ItemGroups.FUNCTIONAL).register((itemGroup) -> itemGroup.add(ModItems.AKITA_NERU_PLUSH));
+		ItemGroupEvents.modifyEntriesEvent(ItemGroups.FUNCTIONAL).register((itemGroup) -> itemGroup.add(ModItems.MIKU_PLUSH));
+		ItemGroupEvents.modifyEntriesEvent(ItemGroups.FUNCTIONAL).register((itemGroup) -> itemGroup.add(ModItems.RIN_PLUSH));
+		ItemGroupEvents.modifyEntriesEvent(ItemGroups.FUNCTIONAL).register((itemGroup) -> itemGroup.add(ModItems.LEN_PLUSH));
+		ItemGroupEvents.modifyEntriesEvent(ItemGroups.FUNCTIONAL).register((itemGroup) -> itemGroup.add(ModItems.MIKU_PLUSH_SONIC_CROSSWORLDS));
+		ItemGroupEvents.modifyEntriesEvent(ItemGroups.FUNCTIONAL).register((itemGroup) -> itemGroup.add(ModItems.MIKU_PLUSH_FORTNITE_NEKO));
+		ItemGroupEvents.modifyEntriesEvent(ItemGroups.FUNCTIONAL).register((itemGroup) -> itemGroup.add(ModItems.MIKU_PLUSH_V4));
+		ItemGroupEvents.modifyEntriesEvent(ItemGroups.FUNCTIONAL).register((itemGroup) -> itemGroup.add(ModItems.MIKU_PLUSH_MESMERIZER));
+		ItemGroupEvents.modifyEntriesEvent(ItemGroups.FUNCTIONAL).register((itemGroup) -> itemGroup.add(ModItems.TETO_PLUSH_MESMERIZER));
+		ItemGroupEvents.modifyEntriesEvent(ItemGroups.FUNCTIONAL).register((itemGroup) -> itemGroup.add(ModItems.MIKU_PLUSH_SONIC));
+		ItemGroupEvents.modifyEntriesEvent(ItemGroups.FUNCTIONAL).register((itemGroup) -> itemGroup.add(ModItems.TETO_PLUSH_SHADOW));
+		ItemGroupEvents.modifyEntriesEvent(ItemGroups.FUNCTIONAL).register((itemGroup) -> itemGroup.add(ModItems.AKITA_NERU_PLUSH_TAILS));
+		ItemGroupEvents.modifyEntriesEvent(ItemGroups.FUNCTIONAL).register((itemGroup) -> itemGroup.add(ModItems.TETO_PLUSH_BIRDBRAIN));
 
 
 

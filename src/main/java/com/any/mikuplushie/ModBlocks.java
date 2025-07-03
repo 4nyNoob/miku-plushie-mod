@@ -381,6 +381,118 @@ public class ModBlocks {
 			"aiko_plush",
 			false
 	);
+	public static final Block TETO_PLUSH = register(
+			new MikuPlushieBlock(AbstractBlock.Settings.copy(Blocks.FLOWER_POT)
+			.sounds(BlockSoundGroup.WOOL)
+			.nonOpaque()
+			),
+			"teto_plush",
+			false
+	);
+	public static final Block AKITA_NERU_PLUSH = register(
+			new MikuPlushieBlock(AbstractBlock.Settings.copy(Blocks.FLOWER_POT)
+			.sounds(BlockSoundGroup.WOOL)
+			.nonOpaque()
+			),
+			"akita_neru_plush",
+			false
+	);
+	public static final Block MIKU_PLUSH = register(
+			new MikuPlushieBlock(AbstractBlock.Settings.copy(Blocks.FLOWER_POT)
+			.sounds(BlockSoundGroup.WOOL)
+			.nonOpaque()
+			),
+			"miku_plush",
+			false
+	);
+	public static final Block RIN_PLUSH = register(
+			new MikuPlushieBlock(AbstractBlock.Settings.copy(Blocks.FLOWER_POT)
+			.sounds(BlockSoundGroup.WOOL)
+			.nonOpaque()
+			),
+			"rin_plush",
+			false
+	);
+	public static final Block LEN_PLUSH = register(
+			new MikuPlushieBlock(AbstractBlock.Settings.copy(Blocks.FLOWER_POT)
+			.sounds(BlockSoundGroup.WOOL)
+			.nonOpaque()
+			),
+			"len_plush",
+			false
+	);
+	public static final Block MIKU_PLUSH_SONIC_CROSSWORLDS = register(
+			new MikuPlushieBlock(AbstractBlock.Settings.copy(Blocks.FLOWER_POT)
+			.sounds(BlockSoundGroup.WOOL)
+			.nonOpaque()
+			),
+			"miku_plush_sonic_crossworlds",
+			false
+	);
+	public static final Block MIKU_PLUSH_FORTNITE_NEKO = register(
+			new MikuPlushieBlock(AbstractBlock.Settings.copy(Blocks.FLOWER_POT)
+			.sounds(BlockSoundGroup.WOOL)
+			.nonOpaque()
+			),
+			"miku_plush_fortnite_neko",
+			false
+	);
+	public static final Block MIKU_PLUSH_V4 = register(
+			new MikuPlushieBlock(AbstractBlock.Settings.copy(Blocks.FLOWER_POT)
+			.sounds(BlockSoundGroup.WOOL)
+			.nonOpaque()
+			),
+			"miku_plush_v4",
+			false
+	);
+	public static final Block MIKU_PLUSH_MESMERIZER = register(
+			new MikuPlushieBlock(AbstractBlock.Settings.copy(Blocks.FLOWER_POT)
+			.sounds(BlockSoundGroup.WOOL)
+			.nonOpaque()
+			),
+			"miku_plush_mesmerizer",
+			false
+	);
+	public static final Block TETO_PLUSH_MESMERIZER = register(
+			new MikuPlushieBlock(AbstractBlock.Settings.copy(Blocks.FLOWER_POT)
+			.sounds(BlockSoundGroup.WOOL)
+			.nonOpaque()
+			),
+			"teto_plush_mesmerizer",
+			false
+	);
+	public static final Block MIKU_PLUSH_SONIC = register(
+			new MikuPlushieBlock(AbstractBlock.Settings.copy(Blocks.FLOWER_POT)
+			.sounds(BlockSoundGroup.WOOL)
+			.nonOpaque()
+			),
+			"miku_plush_sonic",
+			false
+	);
+	public static final Block TETO_PLUSH_SHADOW = register(
+			new MikuPlushieBlock(AbstractBlock.Settings.copy(Blocks.FLOWER_POT)
+			.sounds(BlockSoundGroup.WOOL)
+			.nonOpaque()
+			),
+			"teto_plush_shadow",
+			false
+	);
+	public static final Block AKITA_NERU_PLUSH_TAILS = register(
+			new MikuPlushieBlock(AbstractBlock.Settings.copy(Blocks.FLOWER_POT)
+			.sounds(BlockSoundGroup.WOOL)
+			.nonOpaque()
+			),
+			"akita_neru_plush_tails",
+			false
+	);
+	public static final Block TETO_PLUSH_BIRDBRAIN = register(
+			new MikuPlushieBlock(AbstractBlock.Settings.copy(Blocks.FLOWER_POT)
+			.sounds(BlockSoundGroup.WOOL)
+			.nonOpaque()
+			),
+			"teto_plush_birdbrain",
+			false
+	);
 
 
 

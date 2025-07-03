@@ -14,9 +14,9 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.DirectionProperty;
+import net.minecraft.util.ActionResult;
 import net.minecraft.util.BlockRotation;
 import net.minecraft.util.Hand;
-import net.minecraft.util.ItemActionResult;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
@@ -34,38 +34,55 @@ public class MikuPlushieBlock extends Block {
 	}
 
 	@Override
-	protected ItemActionResult onUseWithItem(ItemStack stack, BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
+	public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
 		if (!world.isClient){
-			if (stack.isOf(ModItems.CANUDINHO)){
+			if (player.getStackInHand(hand).isOf(ModItems.CANUDINHO) && this.asItem().getDefaultStack().isIn(ModTagProvider.BR_MIKU_ITEMS)){
 				world.playSound(null, pos, ModSoundEvents.MIKU_CANUDINHO, SoundCategory.BLOCKS, 1F, 1F);
-				return ItemActionResult.SUCCESS;
+				return ActionResult.SUCCESS;
 			}
 		}
-		return super.onUseWithItem(stack, state, world, pos, player, hand, hit);
+		return super.onUse(state, world, pos, player, hand, hit);
 	}
 
 	@Override
 	public void onPlaced(World world, BlockPos pos, BlockState state, @Nullable LivingEntity placer, ItemStack itemStack) {
 		if(this.asItem().getDefaultStack().isIn(ModTagProvider.AIKO_PLUSH)){
 			world.playSound(null, pos, ModSoundEvents.AIKO_OIE, SoundCategory.BLOCKS, 0.5F, 1);
-		} else {
+		} else if(this.asItem().getDefaultStack().isIn(ModTagProvider.TETO_PLUSH)){
+			world.playSound(null, pos, ModSoundEvents.TETO_OIE, SoundCategory.BLOCKS, 0.5F, 1);
+		} else if(this.asItem().getDefaultStack().isIn(ModTagProvider.AKITA_NERU_PLUSH)){
+			world.playSound(null, pos, ModSoundEvents.AKITA_NERU_OIE, SoundCategory.BLOCKS, 0.5F, 1);
+		} else if(this.asItem().getDefaultStack().isIn(ModTagProvider.RIN_PLUSH)){
+			world.playSound(null, pos, ModSoundEvents.RIN_OIE, SoundCategory.BLOCKS, 0.5F, 1);
+		} else if(this.asItem().getDefaultStack().isIn(ModTagProvider.LEN_PLUSH)){
+			world.playSound(null, pos, ModSoundEvents.LEN_OIE, SoundCategory.BLOCKS, 0.5F, 1);
+		} else if(this.asItem().getDefaultStack().isIn(ModTagProvider.BR_MIKU_ITEMS)){
 			world.playSound(null, pos, ModSoundEvents.MIKU_OIE, SoundCategory.BLOCKS, 0.5F, 1);
 		}
 		super.onPlaced(world, pos, state, placer, itemStack);
 	}
 
 	@Override
-	public BlockState onBreak(World world, BlockPos pos, BlockState state, PlayerEntity player) {
+	public void onBreak(World world, BlockPos pos, BlockState state, PlayerEntity player) {
 		if(this.asItem().getDefaultStack().isIn(ModTagProvider.AIKO_PLUSH)){
 			world.playSound(null, pos, ModSoundEvents.AIKO_BYE, SoundCategory.BLOCKS, 0.5F, 1);
-		} else {
+		} else if(this.asItem().getDefaultStack().isIn(ModTagProvider.TETO_PLUSH)){
+			world.playSound(null, pos, ModSoundEvents.TETO_BYE, SoundCategory.BLOCKS, 0.5F, 1);
+		} else if(this.asItem().getDefaultStack().isIn(ModTagProvider.AKITA_NERU_PLUSH)){
+			world.playSound(null, pos, ModSoundEvents.AKITA_NERU_BYE, SoundCategory.BLOCKS, 0.5F, 1);
+		} else if(this.asItem().getDefaultStack().isIn(ModTagProvider.RIN_PLUSH)){
+			world.playSound(null, pos, ModSoundEvents.RIN_BYE, SoundCategory.BLOCKS, 0.5F, 1);
+		} else if(this.asItem().getDefaultStack().isIn(ModTagProvider.LEN_PLUSH)){
+			world.playSound(null, pos, ModSoundEvents.LEN_BYE, SoundCategory.BLOCKS, 0.5F, 1);
+		} else if(this.asItem().getDefaultStack().isIn(ModTagProvider.BR_MIKU_ITEMS)){
 			world.playSound(null, pos, ModSoundEvents.MIKU_BYE, SoundCategory.BLOCKS, 0.5F, 1);
 		}
-		return super.onBreak(world, pos, state, player);
-	}
+        super.onBreak(world, pos, state, player);
+    }
 
 	@Override
-	protected VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
+	public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
+		final VoxelShape SHAPE = Block.createCuboidShape(4.25, 0.0, 4.25, 11.5, 13.0, 11.5);
 		return SHAPE;
 	}
 
@@ -74,7 +91,7 @@ public class MikuPlushieBlock extends Block {
 		return this.getDefaultState().with(FACING, ctx.getHorizontalPlayerFacing().getOpposite());
 	}
 
-	protected BlockState rotate(BlockState state, BlockRotation rotation) {
+	public BlockState rotate(BlockState state, BlockRotation rotation) {
 		return state.with(FACING, rotation.rotate(state.get(FACING)));
 	}
 

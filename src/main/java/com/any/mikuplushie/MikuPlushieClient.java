@@ -54,10 +54,31 @@ public class MikuPlushieClient implements ClientModInitializer {
 		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MIKU_PLUSH_REINDEER, RenderLayer.getCutout());
 		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MIKU_PLUSH_SANTA_ELF, RenderLayer.getCutout());
 		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MIKU_PLUSH_XMAS_TREE, RenderLayer.getCutout());
+		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MIKU_PLUSH, RenderLayer.getCutout());
+		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MIKU_PLUSH_SONIC_CROSSWORLDS, RenderLayer.getCutout());
+		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MIKU_PLUSH_FORTNITE_NEKO, RenderLayer.getCutout());
+		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MIKU_PLUSH_V4, RenderLayer.getCutout());
+		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MIKU_PLUSH_MESMERIZER, RenderLayer.getCutout());
+		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MIKU_PLUSH_SONIC, RenderLayer.getCutout());
 
 		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.AIKO_PLUSH, RenderLayer.getCutout());
 
+		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.TETO_PLUSH, RenderLayer.getCutout());
+		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.TETO_PLUSH_MESMERIZER, RenderLayer.getCutout());
+		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.TETO_PLUSH_SHADOW, RenderLayer.getCutout());
+		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.TETO_PLUSH_BIRDBRAIN, RenderLayer.getCutout());
 
+		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.AKITA_NERU_PLUSH, RenderLayer.getCutout());
+		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.AKITA_NERU_PLUSH_TAILS, RenderLayer.getCutout());
+
+		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.RIN_PLUSH, RenderLayer.getCutout());
+
+		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.LEN_PLUSH, RenderLayer.getCutout());
+
+
+
+
+		//TRANSLUCENT
 		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MIKU_PLUSH_GHOST, RenderLayer.getTranslucent());
 	}
 }

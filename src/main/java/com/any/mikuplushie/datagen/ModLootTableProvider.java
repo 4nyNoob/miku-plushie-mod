@@ -61,5 +61,19 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
 		addDrop(ModBlocks.MIKU_PLUSH_SANTA_ELF, ModItems.MIKU_PLUSH_SANTA_ELF);
 		addDrop(ModBlocks.MIKU_PLUSH_XMAS_TREE, ModItems.MIKU_PLUSH_XMAS_TREE);
 		addDrop(ModBlocks.AIKO_PLUSH, ModItems.AIKO_PLUSH);
+		addDrop(ModBlocks.AIKO_PLUSH, ModItems.TETO_PLUSH);
+		addDrop(ModBlocks.AIKO_PLUSH, ModItems.AKITA_NERU_PLUSH);
+		addDrop(ModBlocks.MIKU_PLUSH, ModItems.MIKU_PLUSH);
+		addDrop(ModBlocks.RIN_PLUSH, ModItems.RIN_PLUSH);
+		addDrop(ModBlocks.LEN_PLUSH, ModItems.LEN_PLUSH);
+		addDrop(ModBlocks.MIKU_PLUSH_SONIC_CROSSWORLDS, ModItems.MIKU_PLUSH_SONIC_CROSSWORLDS);
+		addDrop(ModBlocks.MIKU_PLUSH_FORTNITE_NEKO, ModItems.MIKU_PLUSH_FORTNITE_NEKO);
+		addDrop(ModBlocks.MIKU_PLUSH_V4, ModItems.MIKU_PLUSH_V4);
+		addDrop(ModBlocks.MIKU_PLUSH_MESMERIZER, ModItems.MIKU_PLUSH_MESMERIZER);
+		addDrop(ModBlocks.TETO_PLUSH_MESMERIZER, ModItems.TETO_PLUSH_MESMERIZER);
+		addDrop(ModBlocks.MIKU_PLUSH_SONIC, ModItems.MIKU_PLUSH_SONIC);
+		addDrop(ModBlocks.TETO_PLUSH_SHADOW, ModItems.TETO_PLUSH_SHADOW);
+		addDrop(ModBlocks.AKITA_NERU_PLUSH_TAILS, ModItems.AKITA_NERU_PLUSH_TAILS);
+		addDrop(ModBlocks.TETO_PLUSH_BIRDBRAIN, ModItems.TETO_PLUSH_BIRDBRAIN);
 	}
 }
