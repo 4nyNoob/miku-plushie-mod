@@ -22,6 +22,30 @@ public class ModSoundEvents {
 	public static final SoundEvent AIKO_BYE = registerSound("aiko_bye");
 	public static final SoundEvent AIKO_EQUIP = registerSound("aiko_equip");
 
+	//TETO VOICE
+	public static final SoundEvent TETO_OIE = registerSound("teto_oie");
+	public static final SoundEvent TETO_DOR = registerSound("teto_dor");
+	public static final SoundEvent TETO_BYE = registerSound("teto_bye");
+	public static final SoundEvent TETO_EQUIP = registerSound("teto_equip");
+
+	//AKITA NERU VOICE
+	public static final SoundEvent AKITA_NERU_OIE = registerSound("neru_oie");
+	public static final SoundEvent AKITA_NERU_DOR = registerSound("neru_dor");
+	public static final SoundEvent AKITA_NERU_BYE = registerSound("neru_bye");
+	public static final SoundEvent AKITA_NERU_EQUIP = registerSound("neru_equip");
+
+	//RIN VOICE
+	public static final SoundEvent RIN_OIE = registerSound("rin_oie");
+	public static final SoundEvent RIN_DOR = registerSound("rin_dor");
+	public static final SoundEvent RIN_BYE = registerSound("rin_bye");
+	public static final SoundEvent RIN_EQUIP = registerSound("rin_equip");
+
+	//LEN VOICE
+	public static final SoundEvent LEN_OIE = registerSound("len_oie");
+	public static final SoundEvent LEN_DOR = registerSound("len_dor");
+	public static final SoundEvent LEN_BYE = registerSound("len_bye");
+	public static final SoundEvent LEN_EQUIP = registerSound("len_equip");
+
 	private static SoundEvent registerSound(String id) {
 		Identifier identifier = Identifier.of(MikuPlushie.MOD_ID, id);
 		return Registry.register(Registries.SOUND_EVENT, identifier, SoundEvent.of(identifier));

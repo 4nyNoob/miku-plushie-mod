@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "1": {
+      "item": "minecraft:cyan_wool"
+    },
+    "2": {
+      "item": "minecraft:white_wool"
+    },
+    "3": {
+      "item": "minecraft:black_wool"
+    }
+  },
+  "pattern": [
+    "121",
+    "131"
+  ],
+  "result": {
+    "item": "miku-plushie:miku_plush_sonic_crossworlds"
+  },
+  "show_notification": true
+}

@@ -27,7 +27,6 @@ import org.jetbrains.annotations.Nullable;
 
 public class MikuPlushieBlock extends Block {
 	public static final DirectionProperty FACING = HorizontalFacingBlock.FACING;
-	protected static final VoxelShape SHAPE = Block.createCuboidShape(5.0, 0.0, 5.0, 11.0, 13.0, 11.0);
 	public MikuPlushieBlock(Settings settings) {
 		super(settings);
 		this.setDefaultState(this.stateManager.getDefaultState().with(FACING, Direction.NORTH));
@@ -48,7 +47,15 @@ public class MikuPlushieBlock extends Block {
 	public void onPlaced(World world, BlockPos pos, BlockState state, @Nullable LivingEntity placer, ItemStack itemStack) {
 		if(this.asItem().getDefaultStack().isIn(ModTagProvider.AIKO_PLUSH)){
 			world.playSound(null, pos, ModSoundEvents.AIKO_OIE, SoundCategory.BLOCKS, 0.5F, 1);
-		} else {
+		} else if(this.asItem().getDefaultStack().isIn(ModTagProvider.TETO_PLUSH)){
+			world.playSound(null, pos, ModSoundEvents.TETO_OIE, SoundCategory.BLOCKS, 0.5F, 1);
+		} else if(this.asItem().getDefaultStack().isIn(ModTagProvider.AKITA_NERU_PLUSH)){
+			world.playSound(null, pos, ModSoundEvents.AKITA_NERU_OIE, SoundCategory.BLOCKS, 0.5F, 1);
+		} else if(this.asItem().getDefaultStack().isIn(ModTagProvider.RIN_PLUSH)){
+			world.playSound(null, pos, ModSoundEvents.RIN_OIE, SoundCategory.BLOCKS, 0.5F, 1);
+		} else if(this.asItem().getDefaultStack().isIn(ModTagProvider.LEN_PLUSH)){
+			world.playSound(null, pos, ModSoundEvents.LEN_OIE, SoundCategory.BLOCKS, 0.5F, 1);
+		} else if(this.asItem().getDefaultStack().isIn(ModTagProvider.BR_MIKU_ITEMS)){
 			world.playSound(null, pos, ModSoundEvents.MIKU_OIE, SoundCategory.BLOCKS, 0.5F, 1);
 		}
 		super.onPlaced(world, pos, state, placer, itemStack);
@@ -58,7 +65,15 @@ public class MikuPlushieBlock extends Block {
 	public void onBreak(World world, BlockPos pos, BlockState state, PlayerEntity player) {
 		if(this.asItem().getDefaultStack().isIn(ModTagProvider.AIKO_PLUSH)){
 			world.playSound(null, pos, ModSoundEvents.AIKO_BYE, SoundCategory.BLOCKS, 0.5F, 1);
-		} else {
+		} else if(this.asItem().getDefaultStack().isIn(ModTagProvider.TETO_PLUSH)){
+			world.playSound(null, pos, ModSoundEvents.TETO_BYE, SoundCategory.BLOCKS, 0.5F, 1);
+		} else if(this.asItem().getDefaultStack().isIn(ModTagProvider.AKITA_NERU_PLUSH)){
+			world.playSound(null, pos, ModSoundEvents.AKITA_NERU_BYE, SoundCategory.BLOCKS, 0.5F, 1);
+		} else if(this.asItem().getDefaultStack().isIn(ModTagProvider.RIN_PLUSH)){
+			world.playSound(null, pos, ModSoundEvents.RIN_BYE, SoundCategory.BLOCKS, 0.5F, 1);
+		} else if(this.asItem().getDefaultStack().isIn(ModTagProvider.LEN_PLUSH)){
+			world.playSound(null, pos, ModSoundEvents.LEN_BYE, SoundCategory.BLOCKS, 0.5F, 1);
+		} else if(this.asItem().getDefaultStack().isIn(ModTagProvider.BR_MIKU_ITEMS)){
 			world.playSound(null, pos, ModSoundEvents.MIKU_BYE, SoundCategory.BLOCKS, 0.5F, 1);
 		}
         super.onBreak(world, pos, state, player);
@@ -66,6 +81,7 @@ public class MikuPlushieBlock extends Block {
 
 	@Override
 	public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
+		final VoxelShape SHAPE = Block.createCuboidShape(4.25, 0.0, 4.25, 11.5, 13.0, 11.5);
 		return SHAPE;
 	}
 

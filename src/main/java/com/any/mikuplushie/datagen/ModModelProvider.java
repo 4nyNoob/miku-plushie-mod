@@ -61,6 +61,20 @@ public class ModModelProvider extends FabricModelProvider {
 		blockStateModelGenerator.registerNorthDefaultHorizontalRotation(ModBlocks.MIKU_PLUSH_SANTA_ELF);
 		blockStateModelGenerator.registerNorthDefaultHorizontalRotation(ModBlocks.MIKU_PLUSH_XMAS_TREE);
 		blockStateModelGenerator.registerNorthDefaultHorizontalRotation(ModBlocks.AIKO_PLUSH);
+		blockStateModelGenerator.registerNorthDefaultHorizontalRotation(ModBlocks.TETO_PLUSH);
+		blockStateModelGenerator.registerNorthDefaultHorizontalRotation(ModBlocks.AKITA_NERU_PLUSH);
+		blockStateModelGenerator.registerNorthDefaultHorizontalRotation(ModBlocks.MIKU_PLUSH);
+		blockStateModelGenerator.registerNorthDefaultHorizontalRotation(ModBlocks.RIN_PLUSH);
+		blockStateModelGenerator.registerNorthDefaultHorizontalRotation(ModBlocks.LEN_PLUSH);
+		blockStateModelGenerator.registerNorthDefaultHorizontalRotation(ModBlocks.MIKU_PLUSH_SONIC_CROSSWORLDS);
+		blockStateModelGenerator.registerNorthDefaultHorizontalRotation(ModBlocks.MIKU_PLUSH_FORTNITE_NEKO);
+		blockStateModelGenerator.registerNorthDefaultHorizontalRotation(ModBlocks.MIKU_PLUSH_V4);
+		blockStateModelGenerator.registerNorthDefaultHorizontalRotation(ModBlocks.MIKU_PLUSH_MESMERIZER);
+		blockStateModelGenerator.registerNorthDefaultHorizontalRotation(ModBlocks.TETO_PLUSH_MESMERIZER);
+		blockStateModelGenerator.registerNorthDefaultHorizontalRotation(ModBlocks.MIKU_PLUSH_SONIC);
+		blockStateModelGenerator.registerNorthDefaultHorizontalRotation(ModBlocks.TETO_PLUSH_SHADOW);
+		blockStateModelGenerator.registerNorthDefaultHorizontalRotation(ModBlocks.AKITA_NERU_PLUSH_TAILS);
+		blockStateModelGenerator.registerNorthDefaultHorizontalRotation(ModBlocks.TETO_PLUSH_BIRDBRAIN);
 	}
 
 	@Override

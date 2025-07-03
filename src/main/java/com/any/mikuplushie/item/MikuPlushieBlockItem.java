@@ -38,6 +38,18 @@ public class MikuPlushieBlockItem extends BlockItem implements Equipment {
 		if (stack.isIn(ModTagProvider.AIKO_PLUSH)) {
 			entity.playSound(ModSoundEvents.AIKO_DOR, 1f, 1);
 		}
+		if (stack.isIn(ModTagProvider.TETO_PLUSH)) {
+			entity.playSound(ModSoundEvents.TETO_DOR, 1f, 1);
+		}
+		if (stack.isIn(ModTagProvider.AKITA_NERU_PLUSH)) {
+			entity.playSound(ModSoundEvents.AKITA_NERU_DOR, 1f, 1);
+		}
+		if (stack.isIn(ModTagProvider.RIN_PLUSH)) {
+			entity.playSound(ModSoundEvents.RIN_DOR, 1f, 1);
+		}
+		if (stack.isIn(ModTagProvider.LEN_PLUSH)) {
+			entity.playSound(ModSoundEvents.LEN_DOR, 1f, 1);
+		}
 
 	}
 
@@ -52,6 +64,18 @@ public class MikuPlushieBlockItem extends BlockItem implements Equipment {
 
 		if (stack.isIn(ModTagProvider.AIKO_PLUSH)) {
 			return ModSoundEvents.AIKO_EQUIP;
+		}
+		if (stack.isIn(ModTagProvider.TETO_PLUSH)) {
+			return ModSoundEvents.TETO_EQUIP;
+		}
+		if (stack.isIn(ModTagProvider.AKITA_NERU_PLUSH)) {
+			return ModSoundEvents.AKITA_NERU_EQUIP;
+		}
+		if (stack.isIn(ModTagProvider.RIN_PLUSH)) {
+			return ModSoundEvents.RIN_EQUIP;
+		}
+		if (stack.isIn(ModTagProvider.LEN_PLUSH)) {
+			return ModSoundEvents.LEN_EQUIP;
 		}
 
 		return ModSoundEvents.MIKU_EQUIP;

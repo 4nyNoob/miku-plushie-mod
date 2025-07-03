@@ -21,6 +21,10 @@ public class ModTagProvider extends FabricTagProvider.ItemTagProvider {
 
     public static final TagKey<Item> BR_MIKU_ITEMS = TagKey.of(RegistryKeys.ITEM, Identifier.of(MikuPlushie.MOD_ID, "br_miku_plush"));
     public static final TagKey<Item> AIKO_PLUSH = TagKey.of(RegistryKeys.ITEM, Identifier.of(MikuPlushie.MOD_ID, "aiko_plush"));
+    public static final TagKey<Item> TETO_PLUSH = TagKey.of(RegistryKeys.ITEM, Identifier.of(MikuPlushie.MOD_ID, "teto_plush"));
+    public static final TagKey<Item> AKITA_NERU_PLUSH = TagKey.of(RegistryKeys.ITEM, Identifier.of(MikuPlushie.MOD_ID, "akita_neru_plush"));
+    public static final TagKey<Item> RIN_PLUSH = TagKey.of(RegistryKeys.ITEM, Identifier.of(MikuPlushie.MOD_ID, "rin_plush"));
+    public static final TagKey<Item> LEN_PLUSH = TagKey.of(RegistryKeys.ITEM, Identifier.of(MikuPlushie.MOD_ID, "len_plush"));
 
     @Override
     protected void configure(RegistryWrapper.WrapperLookup wrapperLookup) {
@@ -70,9 +74,31 @@ public class ModTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModItems.MIKU_PLUSH_REINDEER)
                 .add(ModItems.MIKU_PLUSH_SANTA_ELF)
                 .add(ModItems.MIKU_PLUSH_XMAS_TREE)
+                .add(ModItems.MIKU_PLUSH)
+                .add(ModItems.MIKU_PLUSH_SONIC_CROSSWORLDS)
+                .add(ModItems.MIKU_PLUSH_FORTNITE_NEKO)
+                .add(ModItems.MIKU_PLUSH_V4)
+                .add(ModItems.MIKU_PLUSH_MESMERIZER)
+                .add(ModItems.MIKU_PLUSH_SONIC)
         ;
         getOrCreateTagBuilder(AIKO_PLUSH)
                 .add(ModItems.AIKO_PLUSH)
+        ;
+        getOrCreateTagBuilder(TETO_PLUSH)
+                .add(ModItems.TETO_PLUSH)
+                .add(ModItems.TETO_PLUSH_MESMERIZER)
+                .add(ModItems.TETO_PLUSH_SHADOW)
+                .add(ModItems.TETO_PLUSH_BIRDBRAIN)
+        ;
+        getOrCreateTagBuilder(AKITA_NERU_PLUSH)
+                .add(ModItems.AKITA_NERU_PLUSH)
+                .add(ModItems.AKITA_NERU_PLUSH_TAILS)
+        ;
+        getOrCreateTagBuilder(RIN_PLUSH)
+                .add(ModItems.RIN_PLUSH)
+        ;
+        getOrCreateTagBuilder(LEN_PLUSH)
+                .add(ModItems.LEN_PLUSH)
         ;
     }
 }
