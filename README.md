@@ -1,0 +1,108 @@
+<h1 align="center">BRAZILIAN MIKU JUST ARRIVED IN MINECRAFT</h1>
+
+<p align="center">
+  <img src="http://img.shields.io/badge/License-GPL_3.0-FF6699"/>
+  <img src="http://img.shields.io/badge/Fabric-1.20.1-00B4AB"/>
+  <img src="http://img.shields.io/badge/Fabric-1.21.1-9999CC"/>
+</p>
+
+<p align="center">
+  <a href="https://github.com/4nyNoob/miku-plushie-mod/releases">
+    <img src="http://img.shields.io/badge/Download-GitHub-0969da"/>
+  </a>
+  <a href="https://modrinth.com/mod/miku-plushies">
+    <img src="http://img.shields.io/badge/Download-Modrinth-5aad5f"/>
+  </a>
+  <a href="https://www.curseforge.com/minecraft/mc-mods/miku-plushies">
+    <img src="http://img.shields.io/badge/Download-CurseForge-f16436"/>
+  </a>
+</p>
+
+
+<h1 align="center">
+BEHOLD!! Hatsune Miku<br/>
+<img src="/assets/blocks/miku_plush_v4.png" alt="Hatsune Miku"/>
+</h1>
+
+
+<div style="display: flex; justify-content: center;">
+<h2>
+<details>
+<summary> Block Renders And Recipes </summary>
+
+
+
+|                                                                                  Block                                                                                   |                               Recipe                                |
+|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|:-------------------------------------------------------------------:|
+|                       Brazilian Miku Plush <br/> ![](/assets/blocks/miku_plush_br.png)<br/>Design By: [@4ny.bsky.social](https://@4ny.bsky.social)                       |         ![](/assets/recipes/miku-plushie_miku_plush_br.png)         |
+|           **Bahia Miku Plush** <br/> ![](/assets/blocks/miku_plush_br_ba.png)<br/>Design By: [@taynfoxbadger.bsky.social](https://@taynfoxbadger.bsky.social)            |       ![](/assets/recipes/miku-plushie_miku_plush_br_ba.png)        |
+|                     **Bikini Miku Plush** <br/> ![](/assets/blocks/miku_plush_bik.png)<br/>Design By: [@hfk8.bsky.social](https://@hfk8.bsky.social)                     |        ![](/assets/recipes/miku-plushie_miku_plush_bik.png)         |
+|       **Beach Brazilian Miku Plush** <br/> ![](/assets/blocks/miku_plush_br_beach.png)<br/>Design By: [@teodortarik.bsky.social](https://@teodortarik.bsky.social)       |      ![](/assets/recipes/miku-plushie_miku_plush_br_beach.png)      |
+|          **Black Brazilian Miku Plush** <br/> ![](/assets/blocks/miku_plush_br_braid.png)<br/>Design By: [@eduilust.bsky.social](https://@eduilust.bsky.social)          |      ![](/assets/recipes/miku-plushie_miku_plush_br_braid.png)      |
+|      **Olodum Miku Plush** <br/> ![](/assets/blocks/miku_plush_br_ba_drum.png)<br/>Design By: [@visualecholalia.bsky.social](https://@visualecholalia.bsky.social)       |     ![](/assets/recipes/miku-plushie_miku_plush_br_ba_drum.png)     |
+|                   **Pará Miku Plush** <br/> ![](/assets/blocks/miku_plush_br_pa.png)<br/>Design By: [@dokiny.bsky.social](https://@dokiny.bsky.social)                   |       ![](/assets/recipes/miku-plushie_miku_plush_br_pa.png)        |
+|            **São Paulo Miku Plush** <br/> ![](/assets/blocks/miku_plush_br_sp.png)<br/>Design By: [@gaprielart.bsky.social](https://@gaprielart.bsky.social)             |       ![](/assets/recipes/miku-plushie_miku_plush_br_sp.png)        |
+|            **Minas Gerais Miku Plush** <br/> ![](/assets/blocks/miku_plush_br_mg.png)<br/>Design By: [@themushxd.bsky.social](https://@themushxd.bsky.social)            |       ![](/assets/recipes/miku-plushie_miku_plush_br_mg.png)        |
+|        **Mano Brown Miku Plush** <br/> ![](/assets/blocks/miku_plush_br_brown_bro.png)<br/>Design By: [@apisartbee.bsky.social](https://@apisartbee.bsky.social)         |    ![](/assets/recipes/miku-plushie_miku_plush_br_brown_bro.png)    |
+|   **Queixuda The Electrician Miku Plush** <br/> ![](/assets/blocks/miku_plush_br_electrician.png)<br/>Design By: [@raira-a.bsky.social](https://@raira-a.bsky.social)    |   ![](/assets/recipes/miku-plushie_miku_plush_br_electrician.png)   |
+|        **Orange Bikini Miku Plush** <br/> ![](/assets/blocks/miku_plush_br_bik_orange.png)<br/>Design By: [@4nnaarts.bsky.social](https://@4nnaarts.bsky.social)         |   ![](/assets/recipes/miku-plushie_miku_plush_br_bik_orange.png)    |
+|             **Amazonas Miku Plush** <br/> ![](/assets/blocks/miku_plush_br_am.png)<br/>Design By: [@8ruubyroo8.bsky.social](https://@8ruubyroo8.bsky.social)             |       ![](/assets/recipes/miku-plushie_miku_plush_br_am.png)        |
+|     **Flamengo Soccer Fan Miku Plush** <br/> ![](/assets/blocks/miku_plush_br_fut_fla.png)<br/>Design By: [@katspacykr.bsky.social](https://@katspacykr.bsky.social)     |     ![](/assets/recipes/miku-plushie_miku_plush_br_fut_fla.png)     |
+| **Atlético Mineiro Soccer Fan Miku Plush** <br/> ![](/assets/blocks/miku_plush_br_fut_cam.png)<br/>Design By: [@katspacykr.bsky.social](https://@katspacykr.bsky.social) |     ![](/assets/recipes/miku-plushie_miku_plush_br_fut_cam.png)     |
+|                   **Goiás Miku Plush** <br/> ![](/assets/blocks/miku_plush_br_go.png)<br/>Design By: [@h4azy.bsky.social](https://@h4azy.bsky.social)                    |       ![](/assets/recipes/miku-plushie_miku_plush_br_go.png)        |
+|      **Pernambuco Student Miku Plush** <br/> ![](/assets/blocks/miku_plush_br_school_pe.png)<br/>Design By: [@boypudim.bsky.social](https://@boypudim.bsky.social)       |    ![](/assets/recipes/miku-plushie_miku_plush_br_school_pe.png)    |
+|      **Vasco Soccer Fan Miku Plush** <br/> ![](/assets/blocks/miku_plush_br_fut_crvg.png)<br/>Design By: [@issamugael.bsky.social](https://@issamugael.bsky.social)      |    ![](/assets/recipes/miku-plushie_miku_plush_br_fut_crvg.png)     |
+|           **Gaúcha Miku Plush** <br/> ![](/assets/blocks/miku_plush_br_rs.png)<br/>Design By: [@greattomazini.bsky.social](https://@greattomazini.bsky.social)           |       ![](/assets/recipes/miku-plushie_miku_plush_br_rs.png)        |
+|           **Frog Miku Plush** <br/> ![](/assets/blocks/miku_plush_frog.png)<br/>Design By: [@ollieoliverino.bsky.social](https://@ollieoliverino.bsky.social)            |        ![](/assets/recipes/miku-plushie_miku_plush_frog.png)        |
+|            **Hatsune Mushmiku Plush** <br/> ![](/assets/blocks/miku_plush_mushroom.png)<br/>Design By: [@walayssa.bsky.social](https://@walayssa.bsky.social)            |      ![](/assets/recipes/miku-plushie_miku_plush_mushroom.png)      |
+|                      **Senbonzakura Miku** <br/> ![](/assets/blocks/miku_plush_senbonzakura.png)<br/>Design By: [@itomaru](https://x.com/ittomaru)                       |    ![](/assets/recipes/miku-plushie_miku_plush_senbonzakura.png)    |
+|                  **Ura-Otome Lovers Miku Plush** <br/> ![](/assets/blocks/miku_plush_uraotomelovers.png)<br/>Design By: [@wowaka](https://x.com/wowaka)                  |   ![](/assets/recipes/miku-plushie_miku_plush_uraotomelovers.png)   |
+|                         **Persona Dancing Miku Plush** <br/> ![](/assets/blocks/miku_plush_personadancing.png)<br/>Design By: Shigenori Soejima                          |   ![](/assets/recipes/miku-plushie_miku_plush_personadancing.png)   |
+|                **Hello Planet Miku Plush** <br/> ![](/assets/blocks/miku_plush_helloplanet.png)<br/>Design By: [@sasakure.UK](https://x.com/sasakure.UK)                 |    ![](/assets/recipes/miku-plushie_miku_plush_helloplanet.png)     |
+|                  **Hachune Miku Plush** <br/> ![](/assets/blocks/miku_plush_hachune.png)<br/>Design By: [@pocopoco_cc](https://twitter.com/pocopoco_cc)                  |      ![](/assets/recipes/miku-plushie_miku_plush_hachune.png)       |
+|                       **Infinity Miku Plush** <br/> ![](/assets/blocks/miku_plush_infinity.png)<br/>Design By: [cosmobsp](https://x.com/cosmobsp)                        |      ![](/assets/recipes/miku-plushie_miku_plush_infinity.png)      |
+|                  **Zatsune Miku Plush** <br/> ![](/assets/blocks/miku_plush_zatsune.png)<br/>Design By: [aloha](https://www.nicovideo.jp/user/2238521)                   |      ![](/assets/recipes/miku-plushie_miku_plush_zatsune.png)       |
+|                   **Vampire Miku Plush** <br/> ![](/assets/blocks/miku_plush_vampire.png)<br/>Design By: [@4ny.bsky.social](https://@4ny.bsky.social)                    |      ![](/assets/recipes/miku-plushie_miku_plush_vampire.png)       |
+|                 **Werewoman Miku Plush** <br/> ![](/assets/blocks/miku_plush_werewoman.png)<br/>Design By: [@4ny.bsky.social](https://@4ny.bsky.social)                  |     ![](/assets/recipes/miku-plushie_miku_plush_werewoman.png)      |
+|                     **Jason Miku Plush** <br/> ![](/assets/blocks/miku_plush_jason.png)<br/>Design By: [@4ny.bsky.social](https://@4ny.bsky.social)                      |       ![](/assets/recipes/miku-plushie_miku_plush_jason.png)        |
+|             **Michael Myers Miku Plush** <br/> ![](/assets/blocks/miku_plush_michael_myers.png)<br/>Design By: [@4ny.bsky.social](https://@4ny.bsky.social)              |   ![](/assets/recipes/miku-plushie_miku_plush_michael_myers.png)    |
+|                 **Pumpkin Head Miku Plush** <br/> ![](/assets/blocks/miku_plush_pumpkin.png)<br/>Design By: [@4ny.bsky.social](https://@4ny.bsky.social)                 |      ![](/assets/recipes/miku-plushie_miku_plush_pumpkin.png)       |
+|                 **Ghostface Miku Plush** <br/> ![](/assets/blocks/miku_plush_ghostface.png)<br/>Design By: [@4ny.bsky.social](https://@4ny.bsky.social)                  |     ![](/assets/recipes/miku-plushie_miku_plush_ghostface.png)      |
+|              **Frankenstein Miku Plush** <br/> ![](/assets/blocks/miku_plush_frankenstein.png)<br/>Design By: [@4ny.bsky.social](https://@4ny.bsky.social)               |    ![](/assets/recipes/miku-plushie_miku_plush_frankenstein.png)    |
+|                     **Mummy Miku Plush** <br/> ![](/assets/blocks/miku_plush_mummy.png)<br/>Design By: [@4ny.bsky.social](https://@4ny.bsky.social)                      |       ![](/assets/recipes/miku-plushie_miku_plush_mummy.png)        |
+|                     **Ghost Miku Plush** <br/> ![](/assets/blocks/miku_plush_ghost.png)<br/>Design By: [@4ny.bsky.social](https://@4ny.bsky.social)                      |       ![](/assets/recipes/miku-plushie_miku_plush_ghost.png)        |
+|                    **Patati Miku Plush** <br/> ![](/assets/blocks/miku_plush_patati.png)<br/>Design By: [@4ny.bsky.social](https://@4ny.bsky.social)                     |       ![](/assets/recipes/miku-plushie_miku_plush_patati.png)       |
+|                    **Patatá Miku Plush** <br/> ![](/assets/blocks/miku_plush_patata.png)<br/>Design By: [@4ny.bsky.social](https://@4ny.bsky.social)                     |       ![](/assets/recipes/miku-plushie_miku_plush_patata.png)       |
+|                     **Devil Miku Plush** <br/> ![](/assets/blocks/miku_plush_devil.png)<br/>Design By: [@4ny.bsky.social](https://@4ny.bsky.social)                      |       ![](/assets/recipes/miku-plushie_miku_plush_devil.png)        |
+|                     **Witch Miku Plush** <br/> ![](/assets/blocks/miku_plush_witch.png)<br/>Design By: [@4ny.bsky.social](https://@4ny.bsky.social)                      |       ![](/assets/recipes/miku-plushie_miku_plush_witch.png)        |
+|                     **Santa Miku Plush** <br/> ![](/assets/blocks/miku_plush_santa.png)<br/>Design By: [@4ny.bsky.social](https://@4ny.bsky.social)                      |       ![](/assets/recipes/miku-plushie_miku_plush_santa.png)        |
+|                  **Reindeer Miku Plush** <br/> ![](/assets/blocks/miku_plush_reindeer.png)<br/>Design By: [@4ny.bsky.social](https://@4ny.bsky.social)                   |      ![](/assets/recipes/miku-plushie_miku_plush_reindeer.png)      |
+|                 **Santa Elf Miku Plush** <br/> ![](/assets/blocks/miku_plush_santa_elf.png)<br/>Design By: [@4ny.bsky.social](https://@4ny.bsky.social)                  |     ![](/assets/recipes/miku-plushie_miku_plush_santa_elf.png)      |
+|                 **Xmas Tree Miku Plush** <br/> ![](/assets/blocks/miku_plush_xmas_tree.png)<br/>Design By: [@4ny.bsky.social](https://@4ny.bsky.social)                  |     ![](/assets/recipes/miku-plushie_miku_plush_xmas_tree.png)      |
+|                        **Kikyuune Aiko Plush** <br/> ![](/assets/blocks/aiko_plush.png)<br/>Design By: [@mystsaphyr.art](https://@mystsaphyr.art)                        |          ![](/assets/recipes/miku-plushie_aiko_plush.png)           |
+|                            **Kasane Teto Plush** <br/> ![](/assets/blocks/teto_plush.png)<br/>Design By: [@sen_teto](https://x.com/sen_teto)                             |          ![](/assets/recipes/miku-plushie_teto_plush.png)           |
+|                             **Akita Neru Plush** <br/> ![](/assets/blocks/akita_neru_plush.png)<br/>Design By: [@hioka](https://x.com/hioka)                             |       ![](/assets/recipes/miku-plushie_akita_neru_plush.png)        |
+|                                **Miku Plush** <br/> ![](/assets/blocks/miku_plush.png)<br/>Design By: [@keigarou](https://x.com/keigarou)                                |          ![](/assets/recipes/miku-plushie_miku_plush.png)           |
+|                                **Rin Plush** <br/> ![](/assets/blocks/rin_plush.png)<br/>Design By: [@iximaxima](https://x.com/iximaxima)                                |           ![](/assets/recipes/miku-plushie_rin_plush.png)           |
+|                                **Len Plush** <br/> ![](/assets/blocks/len_plush.png)<br/>Design By: [@iximaxima](https://x.com/iximaxima)                                |           ![](/assets/recipes/miku-plushie_len_plush.png)           |
+|                             **Sonic Crossworlds Miku Plush** <br/> ![](/assets/blocks/miku_plush_sonic_crossworlds.png)<br/>Design By: SEGA                              | ![](/assets/recipes/miku-plushie_miku_plush_sonic_crossworlds.png)  |
+|                              **Fortnite Neko Miku Plush** <br/> ![](/assets/blocks/miku_plush_fortnite_neko.png)<br/>Design By: Epic Games                               |   ![](/assets/recipes/miku-plushie_miku_plush_fortnite_neko.png)    |
+|                            **Miku Plush V4** <br/> ![](/assets/blocks/miku_plush_v4.png)<br/>Design By: [@iximaxima](https://x.com/iximaxima)                            |         ![](/assets/recipes/miku-plushie_miku_plush_v4.png)         |
+|       **Mesmerizer Miku Plush** <br/> ![](/assets/blocks/miku_plush_mesmerizer.png)<br/>Design By: [@channelcaststation](https://youtube.com/@channelcaststation)        |     ![](/assets/recipes/miku-plushie_miku_plush_mesmerizer.png)     |
+|       **Mesmerizer Teto Plush** <br/> ![](/assets/blocks/teto_plush_mesmerizer.png)<br/>Design By: [@channelcaststation](https://youtube.com/@channelcaststation)        |     ![](/assets/recipes/miku-plushie_teto_plush_mesmerizer.png)     |
+|                     **Sonic Miku Plush** <br/> ![](/assets/blocks/miku_plush_sonic.png)<br/>Design By: [@4ny.bsky.social](https://@4ny.bsky.social)                      |       ![](/assets/recipes/miku-plushie_miku_plush_sonic.png)        |
+|                    **Shadow Teto Plush** <br/> ![](/assets/blocks/teto_plush_shadow.png)<br/>Design By: [@4ny.bsky.social](https://@4ny.bsky.social)                     |       ![](/assets/recipes/miku-plushie_teto_plush_shadow.png)       |
+|                  **Tails Neru Plush** <br/> ![](/assets/blocks/akita_neru_plush_tails.png)<br/>Design By: [@4ny.bsky.social](https://@4ny.bsky.social)                   |    ![](/assets/recipes/miku-plushie_akita_neru_plush_tails.png)     |
+|             **Teto Birdbrain Plush** <br/> ![](/assets/blocks/teto_plush_birdbrain.png)<br/>Design By: [@sidoopa.bsky.social](https://@sidoopa.bsky.social)              |     ![](/assets/recipes/miku-plushie_teto_plush_birdbrain.png)      |
+|           **Digital Stars 2025 Miku Plush** <br/> ![](/assets/blocks/miku_plush_digital_stars_2025.png)<br/>Design By: [@lalalalack](https://x.com/lalalalack)           | ![](/assets/recipes/miku-plushie_miku_plush_digital_stars_2025.png) |
+|                    **Rotten Girl Miku Plush** <br/> ![](/assets/blocks/miku_plush_rotten_girl.png)<br/>Design By: [@SAWTOWNE](https://x.com/SAWTOWNE)                    |    ![](/assets/recipes/miku-plushie_miku_plush_rotten_girl.png)     |
+|                     **Regret Rock Teto Plush** <br/> ![](/assets/blocks/teto_plush_regret_rock.png)<br/>Design By: [@neo_399](https://x.com/neo_399)                     |    ![](/assets/recipes/miku-plushie_teto_plush_regret_rock.png)     |
+|                       **Psycho Mode Miku Plush** <br/> ![](/assets/blocks/miku_plush_psycho_mode.png)<br/>Design By: [@c4ppu](https://x.com/c4ppu)                       |    ![](/assets/recipes/miku-plushie_miku_plush_psycho_mode.png)     |
+|           **Don't Believe In T Miku Plush** <br/> ![](/assets/blocks/miku_plush_dont_believe_in_t.png)<br/>Design By: [@pinocchiop](https://x.com/@pinocchiop)           | ![](/assets/recipes/miku-plushie_miku_plush_dont_believe_in_t.png)  |
+|           **Don't Believe In T Teto Plush** <br/> ![](/assets/blocks/teto_plush_dont_believe_in_t.png)<br/>Design By: [@pinocchiop](https://x.com/@pinocchiop)           | ![](/assets/recipes/miku-plushie_teto_plush_dont_believe_in_t.png)  |
+
+
+
+</details>
+</h2>
+</div>
