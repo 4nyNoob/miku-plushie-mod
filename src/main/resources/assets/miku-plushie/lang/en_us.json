@@ -113,45 +113,34 @@
   "item.miku-plushie.teto_plush_mesmerizer.tooltip": "§b§n@channelcaststation",
   "block.miku-plushie.miku_plush_sonic": "Sonic Miku Plush",
   "item.miku-plushie.miku_plush_sonic.tooltip": "§b§n@4ny.bsky.social",
-  "block.miku-plushie.teto_plush_shadow": "Teto Shadow Plush",
+  "block.miku-plushie.teto_plush_shadow": "Shadow Teto Plush",
   "item.miku-plushie.teto_plush_shadow.tooltip": "§b§n@4ny.bsky.social",
   "block.miku-plushie.akita_neru_plush_tails": "Tails Neru Plush",
   "item.miku-plushie.akita_neru_plush_tails.tooltip": "§b§n@4ny.bsky.social",
-  "block.miku-plushie.teto_plush_birdbrain": "Teto Birdbrain Plush",
+  "block.miku-plushie.teto_plush_birdbrain": "Birdbrain Teto Plush",
   "item.miku-plushie.teto_plush_birdbrain.tooltip": "§b§n@4ny.bsky.social",
-
-
-
   "item.miku-plushie.canudinho": "Canudinho",
-
-
-
   "sound.miku-plushie.canudinho": "Miku: Canudinho",
   "sound.miku-plushie.oie": "Miku: Hi",
   "sound.miku-plushie.dor": "Miku: Pain",
   "sound.miku-plushie.bye": "Miku: Bye",
   "sound.miku-plushie.equip": "Miku: Equip",
-
   "sound.aiko-plushie.oie": "Aiko: Hi",
   "sound.aiko-plushie.dor": "Aiko: Pain",
   "sound.aiko-plushie.bye": "Aiko: Bye",
   "sound.aiko-plushie.equip": "Aiko: Equip",
-
   "sound.teto-plushie.oie": "Teto: Hi",
   "sound.teto-plushie.dor": "Teto: Pain",
   "sound.teto-plushie.bye": "Teto: Bye",
-  "sound.teto-plushie.equip": "Aiko: Equip",
-
+  "sound.teto-plushie.equip": "Teto: Equip",
   "sound.neru-plushie.oie": "Akita Neru: Hi",
   "sound.neru-plushie.dor": "Akita Neru: Pain",
   "sound.neru-plushie.bye": "Akita Neru: Bye",
   "sound.neru-plushie.equip": "Akita Neru: Equip",
-
   "sound.rin-plushie.oie": "Rin: Hi",
   "sound.rin-plushie.dor": "Rin: Pain",
   "sound.rin-plushie.bye": "Rin: Bye",
   "sound.rin-plushie.equip": "Rin: Equip",
-
   "sound.len-plushie.oie": "Len: Hi",
   "sound.len-plushie.dor": "Len: Pain",
   "sound.len-plushie.bye": "Len: Bye",
