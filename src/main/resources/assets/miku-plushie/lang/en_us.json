@@ -118,7 +118,23 @@
   "block.miku-plushie.akita_neru_plush_tails": "Tails Neru Plush",
   "item.miku-plushie.akita_neru_plush_tails.tooltip": "§b§n@4ny.bsky.social",
   "block.miku-plushie.teto_plush_birdbrain": "Teto Birdbrain Plush",
-  "item.miku-plushie.teto_plush_birdbrain.tooltip": "§b§n@4ny.bsky.social",
+  "item.miku-plushie.teto_plush_birdbrain.tooltip": "§b§n@sidoopa.bsky.social",
+  "block.miku-plushie.miku_plush_digital_stars_2025": "Digital Stars 2025 Miku Plush",
+  "item.miku-plushie.miku_plush_digital_stars_2025.tooltip": "§b§n@lalalalack",
+  "block.miku-plushie.miku_plush_rotten_girl": "Rotten Girl Miku Plush",
+  "item.miku-plushie.miku_plush_rotten_girl.tooltip": "§b§n@SAWTOWNE",
+  "block.miku-plushie.teto_plush_regret_rock": "Regret Rock Teto Plush",
+  "item.miku-plushie.teto_plush_regret_rock.tooltip": "§b§n@neo_399",
+  "block.miku-plushie.miku_plush_psycho_mode": "Psycho Mode Miku Plush",
+  "item.miku-plushie.miku_plush_psycho_mode.tooltip": "§b§n@c4ppu",
+  "block.miku-plushie.miku_plush_dont_believe_in_t": "Don't Believe In T Miku Plush",
+  "item.miku-plushie.miku_plush_dont_believe_in_t.tooltip": "§b§n@pinocchiop",
+  "block.miku-plushie.teto_plush_dont_believe_in_t": "Don't Believe In T Teto Plush",
+  "item.miku-plushie.teto_plush_dont_believe_in_t.tooltip": "§b§n@pinocchiop",
+
+
+
+  "item.group.miku_plushies": "Mikus!!",
 
 
 
