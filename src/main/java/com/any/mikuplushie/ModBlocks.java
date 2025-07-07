@@ -493,6 +493,54 @@ public class ModBlocks {
 			"teto_plush_birdbrain",
 			false
 	);
+	public static final Block MIKU_PLUSH_DIGITAL_STARS_2025 = register(
+		new MikuPlushieBlock(AbstractBlock.Settings.copy(Blocks.FLOWER_POT)
+			.sounds(BlockSoundGroup.WOOL)
+			.nonOpaque()
+		),
+		"miku_plush_digital_stars_2025",
+		false
+	);
+	public static final Block MIKU_PLUSH_ROTTEN_GIRL = register(
+		new MikuPlushieBlock(AbstractBlock.Settings.copy(Blocks.FLOWER_POT)
+			.sounds(BlockSoundGroup.WOOL)
+			.nonOpaque()
+		),
+		"miku_plush_rotten_girl",
+		false
+	);
+	public static final Block TETO_PLUSH_REGRET_ROCK = register(
+		new MikuPlushieBlock(AbstractBlock.Settings.copy(Blocks.FLOWER_POT)
+			.sounds(BlockSoundGroup.WOOL)
+			.nonOpaque()
+		),
+		"teto_plush_regret_rock",
+		false
+	);
+	public static final Block MIKU_PLUSH_PSYCHO_MODE = register(
+		new MikuPlushieBlock(AbstractBlock.Settings.copy(Blocks.FLOWER_POT)
+			.sounds(BlockSoundGroup.WOOL)
+			.nonOpaque()
+		),
+		"miku_plush_psycho_mode",
+		false
+	);
+	public static final Block MIKU_PLUSH_DONT_BELIEVE_IN_T = register(
+		new MikuPlushieBlock(AbstractBlock.Settings.copy(Blocks.FLOWER_POT)
+			.sounds(BlockSoundGroup.WOOL)
+			.nonOpaque()
+		),
+		"miku_plush_dont_believe_in_t",
+		false
+	);
+	public static final Block TETO_PLUSH_DONT_BELIEVE_IN_T = register(
+		new MikuPlushieBlock(AbstractBlock.Settings.copy(Blocks.FLOWER_POT)
+			.sounds(BlockSoundGroup.WOOL)
+			.nonOpaque()
+		),
+		"teto_plush_dont_believe_in_t",
+		false
+	);
 
 
 

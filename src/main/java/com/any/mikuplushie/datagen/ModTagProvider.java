@@ -80,6 +80,10 @@ public class ModTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModItems.MIKU_PLUSH_V4)
                 .add(ModItems.MIKU_PLUSH_MESMERIZER)
                 .add(ModItems.MIKU_PLUSH_SONIC)
+                .add(ModItems.MIKU_PLUSH_DIGITAL_STARS_2025)
+                .add(ModItems.MIKU_PLUSH_ROTTEN_GIRL)
+                .add(ModItems.MIKU_PLUSH_PSYCHO_MODE)
+                .add(ModItems.MIKU_PLUSH_DONT_BELIEVE_IN_T)
         ;
         getOrCreateTagBuilder(AIKO_PLUSH)
                 .add(ModItems.AIKO_PLUSH)
@@ -89,6 +93,8 @@ public class ModTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModItems.TETO_PLUSH_MESMERIZER)
                 .add(ModItems.TETO_PLUSH_SHADOW)
                 .add(ModItems.TETO_PLUSH_BIRDBRAIN)
+                .add(ModItems.TETO_PLUSH_REGRET_ROCK)
+                .add(ModItems.TETO_PLUSH_DONT_BELIEVE_IN_T)
         ;
         getOrCreateTagBuilder(AKITA_NERU_PLUSH)
                 .add(ModItems.AKITA_NERU_PLUSH)
