@@ -81,7 +81,8 @@ public class MikuPlushieBlock extends Block {
 
 	@Override
 	public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
-        return Block.createCuboidShape(4.25, 0.0, 4.25, 11.5, 13.0, 11.5);
+		final VoxelShape SHAPE = Block.createCuboidShape(4.5, 0.0, 4.5, 11.5, 13.5, 11.5);
+		return SHAPE;
 	}
 
 	@Nullable

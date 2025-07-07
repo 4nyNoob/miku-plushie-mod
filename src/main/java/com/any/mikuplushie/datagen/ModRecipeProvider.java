@@ -759,5 +759,53 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 			.criterion(FabricRecipeProvider.hasItem(Items.WHEAT_SEEDS), FabricRecipeProvider.conditionsFromItem(Items.WHEAT_SEEDS))
 			.criterion(FabricRecipeProvider.hasItem(Items.EGG), FabricRecipeProvider.conditionsFromItem(Items.EGG))
 			.offerTo(exporter);
+
+		ShapelessRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ModBlocks.MIKU_PLUSH_DIGITAL_STARS_2025)
+			.input(ModBlocks.MIKU_PLUSH)
+			.input(Items.NOTE_BLOCK)
+			.input(Items.GOLD_NUGGET, 4)
+			.criterion(FabricRecipeProvider.hasItem(ModBlocks.MIKU_PLUSH), FabricRecipeProvider.conditionsFromItem(ModBlocks.MIKU_PLUSH))
+			.criterion(FabricRecipeProvider.hasItem(Items.NOTE_BLOCK), FabricRecipeProvider.conditionsFromItem(Items.NOTE_BLOCK))
+			.criterion(FabricRecipeProvider.hasItem(Items.GOLD_NUGGET), FabricRecipeProvider.conditionsFromItem(Items.GOLD_NUGGET))
+			.offerTo(exporter);
+
+		ShapelessRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ModBlocks.MIKU_PLUSH_ROTTEN_GIRL)
+			.input(ModBlocks.MIKU_PLUSH)
+			.input(Items.ROTTEN_FLESH)
+			.criterion(FabricRecipeProvider.hasItem(ModBlocks.MIKU_PLUSH), FabricRecipeProvider.conditionsFromItem(ModBlocks.MIKU_PLUSH))
+			.criterion(FabricRecipeProvider.hasItem(Items.ROTTEN_FLESH), FabricRecipeProvider.conditionsFromItem(Items.ROTTEN_FLESH))
+			.offerTo(exporter);
+
+		ShapelessRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ModBlocks.TETO_PLUSH_REGRET_ROCK)
+			.input(ModBlocks.TETO_PLUSH)
+			.input(Items.PURPLE_DYE)
+			.criterion(FabricRecipeProvider.hasItem(ModBlocks.TETO_PLUSH), FabricRecipeProvider.conditionsFromItem(ModBlocks.TETO_PLUSH))
+			.criterion(FabricRecipeProvider.hasItem(Items.PURPLE_DYE), FabricRecipeProvider.conditionsFromItem(Items.PURPLE_DYE))
+			.offerTo(exporter);
+
+		ShapelessRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ModBlocks.MIKU_PLUSH_PSYCHO_MODE)
+			.input(ModBlocks.MIKU_PLUSH)
+			.input(Items.AMETHYST_SHARD)
+			.criterion(FabricRecipeProvider.hasItem(ModBlocks.MIKU_PLUSH), FabricRecipeProvider.conditionsFromItem(ModBlocks.MIKU_PLUSH))
+			.criterion(FabricRecipeProvider.hasItem(Items.AMETHYST_SHARD), FabricRecipeProvider.conditionsFromItem(Items.AMETHYST_SHARD))
+			.offerTo(exporter);
+
+		ShapelessRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ModBlocks.MIKU_PLUSH_DONT_BELIEVE_IN_T)
+			.input(ModBlocks.MIKU_PLUSH)
+			.input(Items.WHITE_WOOL)
+			.input(Items.LIGHT_BLUE_WOOL)
+			.criterion(FabricRecipeProvider.hasItem(ModBlocks.MIKU_PLUSH), FabricRecipeProvider.conditionsFromItem(ModBlocks.MIKU_PLUSH))
+			.criterion(FabricRecipeProvider.hasItem(Items.WHITE_WOOL), FabricRecipeProvider.conditionsFromItem(Items.WHITE_WOOL))
+			.criterion(FabricRecipeProvider.hasItem(Items.LIGHT_BLUE_WOOL), FabricRecipeProvider.conditionsFromItem(Items.LIGHT_BLUE_WOOL))
+			.offerTo(exporter);
+
+		ShapelessRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ModBlocks.TETO_PLUSH_DONT_BELIEVE_IN_T)
+			.input(ModBlocks.TETO_PLUSH)
+			.input(Items.WHITE_WOOL)
+			.input(Items.RED_WOOL)
+			.criterion(FabricRecipeProvider.hasItem(ModBlocks.TETO_PLUSH), FabricRecipeProvider.conditionsFromItem(ModBlocks.TETO_PLUSH))
+			.criterion(FabricRecipeProvider.hasItem(Items.WHITE_WOOL), FabricRecipeProvider.conditionsFromItem(Items.WHITE_WOOL))
+			.criterion(FabricRecipeProvider.hasItem(Items.RED_WOOL), FabricRecipeProvider.conditionsFromItem(Items.RED_WOOL))
+			.offerTo(exporter);
 	}
 }

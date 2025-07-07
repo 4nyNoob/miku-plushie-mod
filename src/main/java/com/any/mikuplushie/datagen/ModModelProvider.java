@@ -75,6 +75,12 @@ public class ModModelProvider extends FabricModelProvider {
 		blockStateModelGenerator.registerNorthDefaultHorizontalRotation(ModBlocks.TETO_PLUSH_SHADOW);
 		blockStateModelGenerator.registerNorthDefaultHorizontalRotation(ModBlocks.AKITA_NERU_PLUSH_TAILS);
 		blockStateModelGenerator.registerNorthDefaultHorizontalRotation(ModBlocks.TETO_PLUSH_BIRDBRAIN);
+		blockStateModelGenerator.registerNorthDefaultHorizontalRotation(ModBlocks.MIKU_PLUSH_DIGITAL_STARS_2025);
+		blockStateModelGenerator.registerNorthDefaultHorizontalRotation(ModBlocks.MIKU_PLUSH_ROTTEN_GIRL);
+		blockStateModelGenerator.registerNorthDefaultHorizontalRotation(ModBlocks.TETO_PLUSH_REGRET_ROCK);
+		blockStateModelGenerator.registerNorthDefaultHorizontalRotation(ModBlocks.MIKU_PLUSH_PSYCHO_MODE);
+		blockStateModelGenerator.registerNorthDefaultHorizontalRotation(ModBlocks.MIKU_PLUSH_DONT_BELIEVE_IN_T);
+		blockStateModelGenerator.registerNorthDefaultHorizontalRotation(ModBlocks.TETO_PLUSH_DONT_BELIEVE_IN_T);
 	}
 
 	@Override
