@@ -1,9 +1,9 @@
 {
   "required": true,
   "package": "com.any.mikuplushie.mixin",
-  "compatibilityLevel": "JAVA_21",
+  "compatibilityLevel": "JAVA_17",
   "mixins": [
-    "ExampleMixin",
+    "LivingEntityMixin",
     "PlayerMixin"
   ],
   "injectors": {

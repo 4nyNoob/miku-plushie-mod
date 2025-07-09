@@ -1,11 +1,13 @@
 package com.any.mikuplushie;
 
 import com.any.mikuplushie.item.MikuPlushieBlockItem;
+import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.PickaxeItem;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKey;
@@ -121,6 +123,8 @@ public class ModItems {
 			register(new MikuPlushieBlockItem(ModBlocks.AIKO_PLUSH, new Item.Settings()), "aiko_plush");
 	public static final Item TETO_PLUSH =
 			register(new MikuPlushieBlockItem(ModBlocks.TETO_PLUSH, new Item.Settings()), "teto_plush");
+	public static final Item TETO_PICKAXE =
+			register(new PickaxeItem(PlushToolMaterial.INSTANCE, 1, -2.8f, new FabricItemSettings()), "teto_pickaxe");
 	public static final Item AKITA_NERU_PLUSH =
 			register(new MikuPlushieBlockItem(ModBlocks.AKITA_NERU_PLUSH, new Item.Settings()), "akita_neru_plush");
 	public static final Item MIKU_PLUSH =
@@ -139,6 +143,8 @@ public class ModItems {
 			register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_MESMERIZER, new Item.Settings()), "miku_plush_mesmerizer");
 	public static final Item TETO_PLUSH_MESMERIZER =
 			register(new MikuPlushieBlockItem(ModBlocks.TETO_PLUSH_MESMERIZER, new Item.Settings()), "teto_plush_mesmerizer");
+	public static final Item TETO_PICKAXE_MESMERIZER =
+		register(new PickaxeItem(PlushToolMaterial.INSTANCE, 1, -2.8f, new FabricItemSettings()), "teto_pickaxe_mesmerizer");
 	public static final Item MIKU_PLUSH_SONIC =
 			register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_SONIC, new Item.Settings()), "miku_plush_sonic");
 	public static final Item TETO_PLUSH_SHADOW =
@@ -147,18 +153,25 @@ public class ModItems {
 			register(new MikuPlushieBlockItem(ModBlocks.AKITA_NERU_PLUSH_TAILS, new Item.Settings()), "akita_neru_plush_tails");
 	public static final Item TETO_PLUSH_BIRDBRAIN =
 			register(new MikuPlushieBlockItem(ModBlocks.TETO_PLUSH_BIRDBRAIN, new Item.Settings()), "teto_plush_birdbrain");
+	public static final Item TETO_PICKAXE_BIRDBRAIN =
+		register(new PickaxeItem(PlushToolMaterial.INSTANCE, 1, -2.8f, new FabricItemSettings()), "teto_pickaxe_birdbrain");
 	public static final Item MIKU_PLUSH_DIGITAL_STARS_2025 =
 		register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_DIGITAL_STARS_2025, new Item.Settings()), "miku_plush_digital_stars_2025");
 	public static final Item MIKU_PLUSH_ROTTEN_GIRL =
 		register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_ROTTEN_GIRL, new Item.Settings()), "miku_plush_rotten_girl");
 	public static final Item TETO_PLUSH_REGRET_ROCK =
 		register(new MikuPlushieBlockItem(ModBlocks.TETO_PLUSH_REGRET_ROCK, new Item.Settings()), "teto_plush_regret_rock");
+	public static final Item TETO_PICKAXE_REGRET_ROCK =
+		register(new PickaxeItem(PlushToolMaterial.INSTANCE, 1, -2.8f, new FabricItemSettings()), "teto_pickaxe_regret_rock");
 	public static final Item MIKU_PLUSH_PSYCHO_MODE =
 		register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_PSYCHO_MODE, new Item.Settings()), "miku_plush_psycho_mode");
 	public static final Item MIKU_PLUSH_DONT_BELIEVE_IN_T =
 		register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_DONT_BELIEVE_IN_T, new Item.Settings()), "miku_plush_dont_believe_in_t");
 	public static final Item TETO_PLUSH_DONT_BELIEVE_IN_T =
 		register(new MikuPlushieBlockItem(ModBlocks.TETO_PLUSH_DONT_BELIEVE_IN_T, new Item.Settings()), "teto_plush_dont_believe_in_t");
+	public static final Item TETO_PICKAXE_DONT_BELIEVE_IN_T =
+		register(new PickaxeItem(PlushToolMaterial.INSTANCE, 1, -2.8f, new FabricItemSettings()), "teto_pickaxe_dont_believe_in_t");
+
 
 
 
@@ -229,6 +242,7 @@ public class ModItems {
 			itemGroup.add(ModItems.MIKU_PLUSH_XMAS_TREE);
 			itemGroup.add(ModItems.AIKO_PLUSH);
 			itemGroup.add(ModItems.TETO_PLUSH);
+			itemGroup.add(ModItems.TETO_PICKAXE);
 			itemGroup.add(ModItems.AKITA_NERU_PLUSH);
 			itemGroup.add(ModItems.MIKU_PLUSH);
 			itemGroup.add(ModItems.RIN_PLUSH);
@@ -238,16 +252,20 @@ public class ModItems {
 			itemGroup.add(ModItems.MIKU_PLUSH_V4);
 			itemGroup.add(ModItems.MIKU_PLUSH_MESMERIZER);
 			itemGroup.add(ModItems.TETO_PLUSH_MESMERIZER);
+			itemGroup.add(ModItems.TETO_PICKAXE_MESMERIZER);
 			itemGroup.add(ModItems.MIKU_PLUSH_SONIC);
 			itemGroup.add(ModItems.TETO_PLUSH_SHADOW);
 			itemGroup.add(ModItems.AKITA_NERU_PLUSH_TAILS);
 			itemGroup.add(ModItems.TETO_PLUSH_BIRDBRAIN);
+			itemGroup.add(ModItems.TETO_PICKAXE_BIRDBRAIN);
 			itemGroup.add(ModItems.MIKU_PLUSH_DIGITAL_STARS_2025);
 			itemGroup.add(ModItems.MIKU_PLUSH_ROTTEN_GIRL);
 			itemGroup.add(ModItems.TETO_PLUSH_REGRET_ROCK);
+			itemGroup.add(ModItems.TETO_PICKAXE_REGRET_ROCK);
 			itemGroup.add(ModItems.MIKU_PLUSH_PSYCHO_MODE);
 			itemGroup.add(ModItems.MIKU_PLUSH_DONT_BELIEVE_IN_T);
 			itemGroup.add(ModItems.TETO_PLUSH_DONT_BELIEVE_IN_T);
+			itemGroup.add(ModItems.TETO_PICKAXE_DONT_BELIEVE_IN_T);
 		});
 	}
 }
