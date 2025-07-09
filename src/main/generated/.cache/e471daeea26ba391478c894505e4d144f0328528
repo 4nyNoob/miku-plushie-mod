@@ -1,9 +1,10 @@
-// 1.20.1	2025-07-06T21:20:41.900111299	miku plushies/Block Loot Tables
+// 1.20.1	2025-07-08T23:25:58.890829084	miku plushies/Block Loot Tables
 1605dca8474dc1cb7ac58d618cbdcc6b4c0ca9fb data/miku-plushie/loot_tables/blocks/miku_plush_br_sp.json
 4fab21a53ca84094f118efd3d57687ff24147a1f data/miku-plushie/loot_tables/blocks/teto_plush_mesmerizer.json
 30a25558dfef652b56f08188e2b4da888a2dbe74 data/miku-plushie/loot_tables/blocks/miku_plush_br_fut_fla.json
 61e137792b5fcb8b91b8ed2c4ac29faeb9d87078 data/miku-plushie/loot_tables/blocks/miku_plush_br_fut_crvg.json
 93b11cd16ce81b4c9455e9703970fa1c1ca6a2bd data/miku-plushie/loot_tables/blocks/miku_plush_michael_myers.json
+c09a62ff417cf8377a465c93bd7357abd72fe661 data/miku-plushie/loot_tables/blocks/teto_plush.json
 9e8f7e9db7e44b82f5b940c5f7acb05d149d503f data/miku-plushie/loot_tables/blocks/miku_plush_ghostface.json
 20d1a86bf656cca68257903df527c882b810876b data/miku-plushie/loot_tables/blocks/miku_plush_vampire.json
 6480153477a50f5f5e48233b644e34d455e9617c data/miku-plushie/loot_tables/blocks/miku_plush_sonic_crossworlds.json

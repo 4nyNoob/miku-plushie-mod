@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "1": {
+      "item": "minecraft:diamond"
+    },
+    "2": {
+      "item": "miku-plushie:teto_plush_regret_rock"
+    }
+  },
+  "pattern": [
+    "121"
+  ],
+  "result": {
+    "item": "miku-plushie:teto_pickaxe_regret_rock"
+  },
+  "show_notification": true
+}
