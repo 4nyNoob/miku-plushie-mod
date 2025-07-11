@@ -541,6 +541,46 @@ public class ModBlocks {
 		"teto_plush_dont_believe_in_t",
 		false
 	);
+	public static final Block TETO_PLUSH_LIAR_DANCER = register(
+		new MikuPlushieBlock(AbstractBlock.Settings.copy(Blocks.FLOWER_POT)
+			.sounds(BlockSoundGroup.WOOL)
+			.nonOpaque()
+		),
+		"teto_plush_liar_dancer",
+		false
+	);
+	public static final Block MIKU_PLUSH_STATIC = register(
+		new MikuPlushieBlock(AbstractBlock.Settings.copy(Blocks.FLOWER_POT)
+			.sounds(BlockSoundGroup.WOOL)
+			.nonOpaque()
+		),
+		"miku_plush_static",
+		false
+	);
+	public static final Block MIKU_PLUSH_MOCHIMOCHI = register(
+		new MikuPlushieBlock(AbstractBlock.Settings.copy(Blocks.FLOWER_POT)
+			.sounds(BlockSoundGroup.WOOL)
+			.nonOpaque()
+		),
+		"miku_plush_mochimochi",
+		false
+	);
+	public static final Block TETO_PLUSH_WHATCHACALLITSNAME = register(
+		new MikuPlushieBlock(AbstractBlock.Settings.copy(Blocks.FLOWER_POT)
+			.sounds(BlockSoundGroup.WOOL)
+			.nonOpaque()
+		),
+		"teto_plush_whatchacallitsname",
+		false
+	);
+	public static final Block MIKU_PLUSH_MONITORING = register(
+		new MikuPlushieBlock(AbstractBlock.Settings.copy(Blocks.FLOWER_POT)
+			.sounds(BlockSoundGroup.WOOL)
+			.nonOpaque()
+		),
+		"miku_plush_monitoring",
+		false
+	);
 
 
 

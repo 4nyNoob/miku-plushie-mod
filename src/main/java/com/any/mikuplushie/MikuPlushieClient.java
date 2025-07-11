@@ -64,6 +64,9 @@ public class MikuPlushieClient implements ClientModInitializer {
 		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MIKU_PLUSH_ROTTEN_GIRL, RenderLayer.getCutout());
 		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MIKU_PLUSH_PSYCHO_MODE, RenderLayer.getCutout());
 		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MIKU_PLUSH_DONT_BELIEVE_IN_T, RenderLayer.getCutout());
+		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MIKU_PLUSH_STATIC, RenderLayer.getCutout());
+		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MIKU_PLUSH_MOCHIMOCHI, RenderLayer.getCutout());
+		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MIKU_PLUSH_MONITORING, RenderLayer.getCutout());
 
 		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.AIKO_PLUSH, RenderLayer.getCutout());
 
@@ -73,6 +76,8 @@ public class MikuPlushieClient implements ClientModInitializer {
 		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.TETO_PLUSH_BIRDBRAIN, RenderLayer.getCutout());
 		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.TETO_PLUSH_REGRET_ROCK, RenderLayer.getCutout());
 		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.TETO_PLUSH_DONT_BELIEVE_IN_T, RenderLayer.getCutout());
+		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.TETO_PLUSH_LIAR_DANCER, RenderLayer.getCutout());
+		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.TETO_PLUSH_WHATCHACALLITSNAME, RenderLayer.getCutout());
 
 		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.AKITA_NERU_PLUSH, RenderLayer.getCutout());
 		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.AKITA_NERU_PLUSH_TAILS, RenderLayer.getCutout());
@@ -83,8 +88,9 @@ public class MikuPlushieClient implements ClientModInitializer {
 
 
 
-
 		//TRANSLUCENT
 		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MIKU_PLUSH_GHOST, RenderLayer.getTranslucent());
+//		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.TETO_PLUSH_WHATCHACALLITSNAME, RenderLayer.getTranslucent());
+
 	}
 }

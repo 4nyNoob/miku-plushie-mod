@@ -85,6 +85,9 @@ public class ModTagProvider extends FabricTagProvider.ItemTagProvider {
             .add(ModItems.MIKU_PLUSH_ROTTEN_GIRL)
             .add(ModItems.MIKU_PLUSH_PSYCHO_MODE)
             .add(ModItems.MIKU_PLUSH_DONT_BELIEVE_IN_T)
+            .add(ModItems.MIKU_PLUSH_STATIC)
+            .add(ModItems.MIKU_PLUSH_MOCHIMOCHI)
+            .add(ModItems.MIKU_PLUSH_MONITORING)
         ;
         getOrCreateTagBuilder(AIKO_PLUSH)
             .add(ModItems.AIKO_PLUSH)
@@ -96,6 +99,8 @@ public class ModTagProvider extends FabricTagProvider.ItemTagProvider {
             .add(ModItems.TETO_PLUSH_BIRDBRAIN)
             .add(ModItems.TETO_PLUSH_REGRET_ROCK)
             .add(ModItems.TETO_PLUSH_DONT_BELIEVE_IN_T)
+            .add(ModItems.TETO_PLUSH_LIAR_DANCER)
+            .add(ModItems.TETO_PLUSH_WHATCHACALLITSNAME)
         ;
         getOrCreateTagBuilder(TETO_PICKAXE)
             .add(ModItems.TETO_PICKAXE)
@@ -103,6 +108,8 @@ public class ModTagProvider extends FabricTagProvider.ItemTagProvider {
             .add(ModItems.TETO_PICKAXE_BIRDBRAIN)
             .add(ModItems.TETO_PICKAXE_REGRET_ROCK)
             .add(ModItems.TETO_PICKAXE_DONT_BELIEVE_IN_T)
+            .add(ModItems.TETO_PICKAXE_LIAR_DANCER)
+            .add(ModItems.TETO_PICKAXE_WHATCHACALLITSNAME)
         ;
         getOrCreateTagBuilder(AKITA_NERU_PLUSH)
             .add(ModItems.AKITA_NERU_PLUSH)

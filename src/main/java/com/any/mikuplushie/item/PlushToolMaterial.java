@@ -1,4 +1,4 @@
-package com.any.mikuplushie;
+package com.any.mikuplushie.item;
 
 import net.fabricmc.yarn.constants.MiningLevels;
 import net.minecraft.item.Items;

@@ -1,6 +1,8 @@
 package com.any.mikuplushie;
 
 import com.any.mikuplushie.item.MikuPlushieBlockItem;
+import com.any.mikuplushie.item.ModFoodComponents;
+import com.any.mikuplushie.item.PlushToolMaterial;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
@@ -29,6 +31,8 @@ public class ModItems {
 
 	public static final Item CANUDINHO =
 			register(new Item(new Item.Settings().rarity(Rarity.RARE)), "canudinho");
+	public static final Item BAGUETTE =
+			register(new Item(new Item.Settings().food(ModFoodComponents.BAGUETTE)), "baguette");
 	public static final Item MIKU_PLUSH_BR =
 			register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_BR, new Item.Settings()), "miku_plush_br");
 	public static final Item MIKU_PLUSH_BR_BA =
@@ -171,6 +175,20 @@ public class ModItems {
 		register(new MikuPlushieBlockItem(ModBlocks.TETO_PLUSH_DONT_BELIEVE_IN_T, new Item.Settings()), "teto_plush_dont_believe_in_t");
 	public static final Item TETO_PICKAXE_DONT_BELIEVE_IN_T =
 		register(new PickaxeItem(PlushToolMaterial.INSTANCE, 1, -2.8f, new FabricItemSettings()), "teto_pickaxe_dont_believe_in_t");
+	public static final Item TETO_PLUSH_LIAR_DANCER =
+		register(new MikuPlushieBlockItem(ModBlocks.TETO_PLUSH_LIAR_DANCER, new Item.Settings()), "teto_plush_liar_dancer");
+	public static final Item TETO_PICKAXE_LIAR_DANCER =
+		register(new PickaxeItem(PlushToolMaterial.INSTANCE, 1, -2.8f, new FabricItemSettings()), "teto_pickaxe_liar_dancer");
+	public static final Item MIKU_PLUSH_STATIC =
+		register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_STATIC, new Item.Settings()), "miku_plush_static");
+	public static final Item MIKU_PLUSH_MOCHIMOCHI =
+		register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_MOCHIMOCHI, new Item.Settings()), "miku_plush_mochimochi");
+	public static final Item TETO_PLUSH_WHATCHACALLITSNAME =
+		register(new MikuPlushieBlockItem(ModBlocks.TETO_PLUSH_WHATCHACALLITSNAME, new Item.Settings()), "teto_plush_whatchacallitsname");
+	public static final Item TETO_PICKAXE_WHATCHACALLITSNAME =
+		register(new PickaxeItem(PlushToolMaterial.INSTANCE, 1, -2.8f, new FabricItemSettings()), "teto_pickaxe_whatchacallitsname");
+	public static final Item MIKU_PLUSH_MONITORING =
+		register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_MONITORING, new Item.Settings()), "miku_plush_monitoring");
 
 
 
@@ -194,6 +212,7 @@ public class ModItems {
 
 		ItemGroupEvents.modifyEntriesEvent(MIKU_GROUP_KEY).register(itemGroup -> {
 			itemGroup.add(ModItems.CANUDINHO);
+			itemGroup.add(ModItems.BAGUETTE);
 
 			itemGroup.add(ModItems.MIKU_PLUSH_BR);
 			itemGroup.add(ModItems.MIKU_PLUSH_BR_BA);
@@ -266,6 +285,13 @@ public class ModItems {
 			itemGroup.add(ModItems.MIKU_PLUSH_DONT_BELIEVE_IN_T);
 			itemGroup.add(ModItems.TETO_PLUSH_DONT_BELIEVE_IN_T);
 			itemGroup.add(ModItems.TETO_PICKAXE_DONT_BELIEVE_IN_T);
+			itemGroup.add(ModItems.TETO_PLUSH_LIAR_DANCER);
+			itemGroup.add(ModItems.TETO_PICKAXE_LIAR_DANCER);
+			itemGroup.add(ModItems.MIKU_PLUSH_STATIC);
+			itemGroup.add(ModItems.MIKU_PLUSH_MOCHIMOCHI);
+			itemGroup.add(ModItems.TETO_PLUSH_WHATCHACALLITSNAME);
+			itemGroup.add(ModItems.TETO_PICKAXE_WHATCHACALLITSNAME);
+			itemGroup.add(ModItems.MIKU_PLUSH_MONITORING);
 		});
 	}
 }
