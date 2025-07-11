@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "miku_plushie:block/miku_plush_digital_stars_2025",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "miku_plushie:block/miku_plush_digital_stars_2025"
+    },
+    "facing=south": {
+      "model": "miku_plushie:block/miku_plush_digital_stars_2025",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "miku_plushie:block/miku_plush_digital_stars_2025",
+      "y": 270
+    }
+  }
+}

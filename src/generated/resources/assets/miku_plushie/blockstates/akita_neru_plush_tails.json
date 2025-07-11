@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "miku_plushie:block/akita_neru_plush_tails",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "miku_plushie:block/akita_neru_plush_tails"
+    },
+    "facing=south": {
+      "model": "miku_plushie:block/akita_neru_plush_tails",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "miku_plushie:block/akita_neru_plush_tails",
+      "y": 270
+    }
+  }
+}
