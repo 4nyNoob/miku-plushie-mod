@@ -20,7 +20,7 @@ public enum PlushToolMaterial implements ToolMaterial {
     private final int enchantability;
     private final Supplier<Ingredient> repairIngredient;
 
-    private PlushToolMaterial(
+    PlushToolMaterial(
         final TagKey<Block> inverseTag,
         final int itemDurability,
         final float miningSpeed,
@@ -63,6 +63,6 @@ public enum PlushToolMaterial implements ToolMaterial {
 
     @Override
     public Ingredient getRepairIngredient() {
-        return (Ingredient)this.repairIngredient.get();
+        return this.repairIngredient.get();
     }
 }
