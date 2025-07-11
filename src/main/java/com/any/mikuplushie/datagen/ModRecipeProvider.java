@@ -27,6 +27,12 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 				.input('p', Items.PAPER)
 				.criterion(FabricRecipeProvider.hasItem(Items.PAPER), FabricRecipeProvider.conditionsFromItem(Items.PAPER))
 				.offerTo(exporter);
+		ShapedRecipeJsonBuilder.create(RecipeCategory.FOOD, ModItems.BAGUETTE)
+				.pattern("www")
+				.pattern("www")
+				.input('w', Items.WHEAT)
+				.criterion(FabricRecipeProvider.hasItem(Items.WHEAT), FabricRecipeProvider.conditionsFromItem(Items.WHEAT))
+				.offerTo(exporter);
 
 
 		ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ModBlocks.MIKU_PLUSH_BR)
@@ -638,8 +644,8 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 		ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.TETO_PICKAXE)
 			.pattern("121")
 			.input('1', Items.DIAMOND)
-			.input('2', ModItems.TETO_PLUSH)
-			.criterion(FabricRecipeProvider.hasItem(ModItems.TETO_PLUSH), FabricRecipeProvider.conditionsFromItem(ModItems.TETO_PLUSH))
+			.input('2', ModBlocks.TETO_PLUSH)
+			.criterion(FabricRecipeProvider.hasItem(ModBlocks.TETO_PLUSH), FabricRecipeProvider.conditionsFromItem(ModBlocks.TETO_PLUSH))
 			.criterion(FabricRecipeProvider.hasItem(Items.DIAMOND), FabricRecipeProvider.conditionsFromItem(Items.DIAMOND))
 			.offerTo(exporter);
 
@@ -735,8 +741,8 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 		ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.TETO_PICKAXE_MESMERIZER)
 			.pattern("121")
 			.input('1', Items.DIAMOND)
-			.input('2', ModItems.TETO_PLUSH_MESMERIZER)
-			.criterion(FabricRecipeProvider.hasItem(ModItems.TETO_PLUSH_MESMERIZER), FabricRecipeProvider.conditionsFromItem(ModItems.TETO_PLUSH_MESMERIZER))
+			.input('2', ModBlocks.TETO_PLUSH_MESMERIZER)
+			.criterion(FabricRecipeProvider.hasItem(ModBlocks.TETO_PLUSH_MESMERIZER), FabricRecipeProvider.conditionsFromItem(ModBlocks.TETO_PLUSH_MESMERIZER))
 			.criterion(FabricRecipeProvider.hasItem(Items.DIAMOND), FabricRecipeProvider.conditionsFromItem(Items.DIAMOND))
 			.offerTo(exporter);
 
@@ -779,8 +785,8 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 		ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.TETO_PICKAXE_BIRDBRAIN)
 			.pattern("121")
 			.input('1', Items.DIAMOND)
-			.input('2', ModItems.TETO_PLUSH_BIRDBRAIN)
-			.criterion(FabricRecipeProvider.hasItem(ModItems.TETO_PLUSH_BIRDBRAIN), FabricRecipeProvider.conditionsFromItem(ModItems.TETO_PLUSH_BIRDBRAIN))
+			.input('2', ModBlocks.TETO_PLUSH_BIRDBRAIN)
+			.criterion(FabricRecipeProvider.hasItem(ModBlocks.TETO_PLUSH_BIRDBRAIN), FabricRecipeProvider.conditionsFromItem(ModBlocks.TETO_PLUSH_BIRDBRAIN))
 			.criterion(FabricRecipeProvider.hasItem(Items.DIAMOND), FabricRecipeProvider.conditionsFromItem(Items.DIAMOND))
 			.offerTo(exporter);
 
@@ -810,8 +816,8 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 		ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.TETO_PICKAXE_REGRET_ROCK)
 			.pattern("121")
 			.input('1', Items.DIAMOND)
-			.input('2', ModItems.TETO_PLUSH_REGRET_ROCK)
-			.criterion(FabricRecipeProvider.hasItem(ModItems.TETO_PLUSH_REGRET_ROCK), FabricRecipeProvider.conditionsFromItem(ModItems.TETO_PLUSH_REGRET_ROCK))
+			.input('2', ModBlocks.TETO_PLUSH_REGRET_ROCK)
+			.criterion(FabricRecipeProvider.hasItem(ModBlocks.TETO_PLUSH_REGRET_ROCK), FabricRecipeProvider.conditionsFromItem(ModBlocks.TETO_PLUSH_REGRET_ROCK))
 			.criterion(FabricRecipeProvider.hasItem(Items.DIAMOND), FabricRecipeProvider.conditionsFromItem(Items.DIAMOND))
 			.offerTo(exporter);
 
@@ -843,9 +849,79 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 		ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.TETO_PICKAXE_DONT_BELIEVE_IN_T)
 			.pattern("121")
 			.input('1', Items.DIAMOND)
-			.input('2', ModItems.TETO_PLUSH_DONT_BELIEVE_IN_T)
-			.criterion(FabricRecipeProvider.hasItem(ModItems.TETO_PLUSH_DONT_BELIEVE_IN_T), FabricRecipeProvider.conditionsFromItem(ModItems.TETO_PLUSH_DONT_BELIEVE_IN_T))
+			.input('2', ModBlocks.TETO_PLUSH_DONT_BELIEVE_IN_T)
+			.criterion(FabricRecipeProvider.hasItem(ModBlocks.TETO_PLUSH_DONT_BELIEVE_IN_T), FabricRecipeProvider.conditionsFromItem(ModBlocks.TETO_PLUSH_DONT_BELIEVE_IN_T))
 			.criterion(FabricRecipeProvider.hasItem(Items.DIAMOND), FabricRecipeProvider.conditionsFromItem(Items.DIAMOND))
 			.offerTo(exporter);
+
+		ShapelessRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ModBlocks.TETO_PLUSH_LIAR_DANCER)
+			.input(ModBlocks.TETO_PLUSH)
+			.input(Items.BLACK_STAINED_GLASS, 2)
+			.input(Items.WHITE_WOOL)
+			.criterion(FabricRecipeProvider.hasItem(ModBlocks.TETO_PLUSH), FabricRecipeProvider.conditionsFromItem(ModBlocks.TETO_PLUSH))
+			.criterion(FabricRecipeProvider.hasItem(Items.BLACK_STAINED_GLASS), FabricRecipeProvider.conditionsFromItem(Items.BLACK_STAINED_GLASS))
+			.criterion(FabricRecipeProvider.hasItem(Items.WHITE_WOOL), FabricRecipeProvider.conditionsFromItem(Items.WHITE_WOOL))
+			.offerTo(exporter);
+
+		ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.TETO_PICKAXE_LIAR_DANCER)
+			.pattern("121")
+			.input('1', Items.DIAMOND)
+			.input('2', ModBlocks.TETO_PLUSH_LIAR_DANCER)
+			.criterion(FabricRecipeProvider.hasItem(ModBlocks.TETO_PLUSH_LIAR_DANCER), FabricRecipeProvider.conditionsFromItem(ModBlocks.TETO_PLUSH_LIAR_DANCER))
+			.criterion(FabricRecipeProvider.hasItem(Items.DIAMOND), FabricRecipeProvider.conditionsFromItem(Items.DIAMOND))
+			.offerTo(exporter);
+
+		ShapelessRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ModBlocks.MIKU_PLUSH_STATIC)
+			.input(ModBlocks.MIKU_PLUSH)
+			.input(Items.YELLOW_DYE)
+			.input(Items.MAGENTA_DYE)
+			.input(Items.CYAN_DYE)
+			.input(Items.BLUE_WOOL)
+			.criterion(FabricRecipeProvider.hasItem(ModBlocks.MIKU_PLUSH), FabricRecipeProvider.conditionsFromItem(ModBlocks.MIKU_PLUSH))
+			.criterion(FabricRecipeProvider.hasItem(Items.YELLOW_DYE), FabricRecipeProvider.conditionsFromItem(Items.YELLOW_DYE))
+			.criterion(FabricRecipeProvider.hasItem(Items.MAGENTA_DYE), FabricRecipeProvider.conditionsFromItem(Items.MAGENTA_DYE))
+			.criterion(FabricRecipeProvider.hasItem(Items.CYAN_DYE), FabricRecipeProvider.conditionsFromItem(Items.CYAN_DYE))
+			.criterion(FabricRecipeProvider.hasItem(Items.BLUE_WOOL), FabricRecipeProvider.conditionsFromItem(Items.BLUE_WOOL))
+			.offerTo(exporter);
+
+		ShapelessRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ModBlocks.MIKU_PLUSH_MOCHIMOCHI)
+			.input(ModBlocks.MIKU_PLUSH)
+			.input(Items.LIGHT_BLUE_WOOL)
+			.input(Items.PINK_WOOL)
+			.input(Items.PINK_PETALS)
+			.criterion(FabricRecipeProvider.hasItem(ModBlocks.MIKU_PLUSH), FabricRecipeProvider.conditionsFromItem(ModBlocks.MIKU_PLUSH))
+			.criterion(FabricRecipeProvider.hasItem(Items.LIGHT_BLUE_WOOL), FabricRecipeProvider.conditionsFromItem(Items.LIGHT_BLUE_WOOL))
+			.criterion(FabricRecipeProvider.hasItem(Items.PINK_WOOL), FabricRecipeProvider.conditionsFromItem(Items.PINK_WOOL))
+			.criterion(FabricRecipeProvider.hasItem(Items.PINK_PETALS), FabricRecipeProvider.conditionsFromItem(Items.PINK_PETALS))
+			.offerTo(exporter);
+
+		ShapelessRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ModBlocks.TETO_PLUSH_WHATCHACALLITSNAME)
+			.input(ModBlocks.TETO_PLUSH)
+			.input(Items.GLASS, 2)
+			.input(Items.RED_WOOL)
+			.input(Items.ORANGE_WOOL)
+			.criterion(FabricRecipeProvider.hasItem(ModBlocks.TETO_PLUSH), FabricRecipeProvider.conditionsFromItem(ModBlocks.TETO_PLUSH))
+			.criterion(FabricRecipeProvider.hasItem(Items.GLASS), FabricRecipeProvider.conditionsFromItem(Items.GLASS))
+			.criterion(FabricRecipeProvider.hasItem(Items.RED_WOOL), FabricRecipeProvider.conditionsFromItem(Items.RED_WOOL))
+			.criterion(FabricRecipeProvider.hasItem(Items.ORANGE_WOOL), FabricRecipeProvider.conditionsFromItem(Items.ORANGE_WOOL))
+			.offerTo(exporter);
+
+		ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.TETO_PICKAXE_WHATCHACALLITSNAME)
+			.pattern("121")
+			.input('1', Items.DIAMOND)
+			.input('2', ModBlocks.TETO_PLUSH_WHATCHACALLITSNAME)
+			.criterion(FabricRecipeProvider.hasItem(ModBlocks.TETO_PLUSH_WHATCHACALLITSNAME), FabricRecipeProvider.conditionsFromItem(ModBlocks.TETO_PLUSH_WHATCHACALLITSNAME))
+			.criterion(FabricRecipeProvider.hasItem(Items.DIAMOND), FabricRecipeProvider.conditionsFromItem(Items.DIAMOND))
+			.offerTo(exporter);
+
+		ShapelessRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ModBlocks.MIKU_PLUSH_MONITORING)
+			.input(ModBlocks.MIKU_PLUSH)
+			.input(Items.BROWN_WOOL)
+			.input(Items.SPYGLASS)
+			.criterion(FabricRecipeProvider.hasItem(ModBlocks.MIKU_PLUSH), FabricRecipeProvider.conditionsFromItem(ModBlocks.MIKU_PLUSH))
+			.criterion(FabricRecipeProvider.hasItem(Items.BROWN_WOOL), FabricRecipeProvider.conditionsFromItem(Items.BROWN_WOOL))
+			.criterion(FabricRecipeProvider.hasItem(Items.SPYGLASS), FabricRecipeProvider.conditionsFromItem(Items.SPYGLASS))
+			.offerTo(exporter);
+
 	}
 }

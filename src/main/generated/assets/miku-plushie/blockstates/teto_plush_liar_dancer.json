@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "miku-plushie:block/teto_plush_liar_dancer",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "miku-plushie:block/teto_plush_liar_dancer"
+    },
+    "facing=south": {
+      "model": "miku-plushie:block/teto_plush_liar_dancer",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "miku-plushie:block/teto_plush_liar_dancer",
+      "y": 270
+    }
+  }
+}
