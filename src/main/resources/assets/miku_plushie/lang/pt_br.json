@@ -171,28 +171,28 @@
   "sound.miku_plushie.bye": "Miku: Tchau",
   "sound.miku_plushie.equip": "Miku: Equipada",
 
-  "sound.aiko-plushie.oie": "Aiko: Oie",
-  "sound.aiko-plushie.dor": "Aiko: Dor",
-  "sound.aiko-plushie.bye": "Aiko: Tchau",
-  "sound.aiko-plushie.equip": "Aiko: Equipada",
+  "sound.aiko_plushie.oie": "Aiko: Oie",
+  "sound.aiko_plushie.dor": "Aiko: Dor",
+  "sound.aiko_plushie.bye": "Aiko: Tchau",
+  "sound.aiko_plushie.equip": "Aiko: Equipada",
 
-  "sound.teto-plushie.oie": "Teto: Oie",
-  "sound.teto-plushie.dor": "Teto: Dor",
-  "sound.teto-plushie.bye": "Teto: Tchau",
-  "sound.teto-plushie.equip": "Teto: Equipada",
+  "sound.teto_plushie.oie": "Teto: Oie",
+  "sound.teto_plushie.dor": "Teto: Dor",
+  "sound.teto_plushie.bye": "Teto: Tchau",
+  "sound.teto_plushie.equip": "Teto: Equipada",
 
-  "sound.neru-plushie.oie": "Akita Neru: Oie",
-  "sound.neru-plushie.dor": "Akita Neru: Dor",
-  "sound.neru-plushie.bye": "Akita Neru: Tchau",
-  "sound.neru-plushie.equip": "Akita Neru: Equipada",
+  "sound.neru_plushie.oie": "Akita Neru: Oie",
+  "sound.neru_plushie.dor": "Akita Neru: Dor",
+  "sound.neru_plushie.bye": "Akita Neru: Tchau",
+  "sound.neru_plushie.equip": "Akita Neru: Equipada",
 
-  "sound.rin-plushie.oie": "Rin: Oie",
-  "sound.rin-plushie.dor": "Rin: Dor",
-  "sound.rin-plushie.bye": "Rin: Tchau",
-  "sound.rin-plushie.equip": "Rin: Equipada",
+  "sound.rin_plushie.oie": "Rin: Oie",
+  "sound.rin_plushie.dor": "Rin: Dor",
+  "sound.rin_plushie.bye": "Rin: Tchau",
+  "sound.rin_plushie.equip": "Rin: Equipada",
 
-  "sound.len-plushie.oie": "Len: Oie",
-  "sound.len-plushie.dor": "Len: Dor",
-  "sound.len-plushie.bye": "Len: Tchau",
-  "sound.len-plushie.equip": "Len: Equipado"
+  "sound.len_plushie.oie": "Len: Oie",
+  "sound.len_plushie.dor": "Len: Dor",
+  "sound.len_plushie.bye": "Len: Tchau",
+  "sound.len_plushie.equip": "Len: Equipado"
 }

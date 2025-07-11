@@ -172,28 +172,28 @@
   "sound.miku_plushie.bye": "Miku: Bye",
   "sound.miku_plushie.equip": "Miku: Equip",
 
-  "sound.aiko-plushie.oie": "Aiko: Hi",
-  "sound.aiko-plushie.dor": "Aiko: Pain",
-  "sound.aiko-plushie.bye": "Aiko: Bye",
-  "sound.aiko-plushie.equip": "Aiko: Equip",
+  "sound.aiko_plushie.oie": "Aiko: Hi",
+  "sound.aiko_plushie.dor": "Aiko: Pain",
+  "sound.aiko_plushie.bye": "Aiko: Bye",
+  "sound.aiko_plushie.equip": "Aiko: Equip",
 
-  "sound.teto-plushie.oie": "Teto: Hi",
-  "sound.teto-plushie.dor": "Teto: Pain",
-  "sound.teto-plushie.bye": "Teto: Bye",
-  "sound.teto-plushie.equip": "Teto: Equip",
+  "sound.teto_plushie.oie": "Teto: Hi",
+  "sound.teto_plushie.dor": "Teto: Pain",
+  "sound.teto_plushie.bye": "Teto: Bye",
+  "sound.teto_plushie.equip": "Teto: Equip",
 
-  "sound.neru-plushie.oie": "Akita Neru: Hi",
-  "sound.neru-plushie.dor": "Akita Neru: Pain",
-  "sound.neru-plushie.bye": "Akita Neru: Bye",
-  "sound.neru-plushie.equip": "Akita Neru: Equip",
+  "sound.neru_plushie.oie": "Akita Neru: Hi",
+  "sound.neru_plushie.dor": "Akita Neru: Pain",
+  "sound.neru_plushie.bye": "Akita Neru: Bye",
+  "sound.neru_plushie.equip": "Akita Neru: Equip",
 
-  "sound.rin-plushie.oie": "Rin: Hi",
-  "sound.rin-plushie.dor": "Rin: Pain",
-  "sound.rin-plushie.bye": "Rin: Bye",
-  "sound.rin-plushie.equip": "Rin: Equip",
+  "sound.rin_plushie.oie": "Rin: Hi",
+  "sound.rin_plushie.dor": "Rin: Pain",
+  "sound.rin_plushie.bye": "Rin: Bye",
+  "sound.rin_plushie.equip": "Rin: Equip",
 
-  "sound.len-plushie.oie": "Len: Hi",
-  "sound.len-plushie.dor": "Len: Pain",
-  "sound.len-plushie.bye": "Len: Bye",
-  "sound.len-plushie.equip": "Len: Equip"
+  "sound.len_plushie.oie": "Len: Hi",
+  "sound.len_plushie.dor": "Len: Pain",
+  "sound.len_plushie.bye": "Len: Bye",
+  "sound.len_plushie.equip": "Len: Equip"
 }

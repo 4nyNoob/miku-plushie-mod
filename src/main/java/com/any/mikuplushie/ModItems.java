@@ -1,7 +1,6 @@
 package com.any.mikuplushie;
 
-import com.any.mikuplushie.item.MikuPlushieBlockItem;
-import com.any.mikuplushie.item.TetoPickaxeItem;
+import com.any.mikuplushie.item.*;
 import net.minecraft.core.Holder;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
@@ -119,21 +118,21 @@ public class ModItems {
 			()->new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_SANTA_ELF.get()));
 	public static final DeferredItem<MikuPlushieBlockItem> MIKU_PLUSH_XMAS_TREE = ITEMS.register("miku_plush_xmas_tree",
 			()->new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_XMAS_TREE.get()));
-	public static final DeferredItem<MikuPlushieBlockItem> AIKO_PLUSH = ITEMS.register("aiko_plush",
-			()->new MikuPlushieBlockItem(ModBlocks.AIKO_PLUSH.get()));
-	public static final DeferredItem<MikuPlushieBlockItem> TETO_PLUSH = ITEMS.register("teto_plush",
-			()->new MikuPlushieBlockItem(ModBlocks.TETO_PLUSH.get()));
+	public static final DeferredItem<AikoPlushieBlockItem> AIKO_PLUSH = ITEMS.register("aiko_plush",
+			()->new AikoPlushieBlockItem(ModBlocks.AIKO_PLUSH.get()));
+	public static final DeferredItem<TetoPlushieBlockItem> TETO_PLUSH = ITEMS.register("teto_plush",
+			()->new TetoPlushieBlockItem(ModBlocks.TETO_PLUSH.get()));
 	public static final DeferredItem<TetoPickaxeItem> TETO_PICKAXE = ITEMS.register("teto_pickaxe", () ->
 		new TetoPickaxeItem(PLUSH_TIER, new Item.Properties().attributes(TetoPickaxeItem.createAttributes(PLUSH_TIER, 0, -2.8f))));
 
-	public static final DeferredItem<MikuPlushieBlockItem> AKITA_NERU_PLUSH = ITEMS.register("akita_neru_plush",
-			()->new MikuPlushieBlockItem(ModBlocks.AKITA_NERU_PLUSH.get()));
+	public static final DeferredItem<NeruPlushieBlockItem> AKITA_NERU_PLUSH = ITEMS.register("akita_neru_plush",
+			()->new NeruPlushieBlockItem(ModBlocks.AKITA_NERU_PLUSH.get()));
 	public static final DeferredItem<MikuPlushieBlockItem> MIKU_PLUSH = ITEMS.register("miku_plush",
 			()->new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH.get()));
-	public static final DeferredItem<MikuPlushieBlockItem> RIN_PLUSH = ITEMS.register("rin_plush",
-			()->new MikuPlushieBlockItem(ModBlocks.RIN_PLUSH.get()));
-	public static final DeferredItem<MikuPlushieBlockItem> LEN_PLUSH = ITEMS.register("len_plush",
-			()->new MikuPlushieBlockItem(ModBlocks.LEN_PLUSH.get()));
+	public static final DeferredItem<RinPlushieBlockItem> RIN_PLUSH = ITEMS.register("rin_plush",
+			()->new RinPlushieBlockItem(ModBlocks.RIN_PLUSH.get()));
+	public static final DeferredItem<LenPlushieBlockItem> LEN_PLUSH = ITEMS.register("len_plush",
+			()->new LenPlushieBlockItem(ModBlocks.LEN_PLUSH.get()));
 	public static final DeferredItem<MikuPlushieBlockItem> MIKU_PLUSH_SONIC_CROSSWORLDS = ITEMS.register("miku_plush_sonic_crossworlds",
 			()->new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_SONIC_CROSSWORLDS.get()));
 	public static final DeferredItem<MikuPlushieBlockItem> MIKU_PLUSH_FORTNITE_NEKO = ITEMS.register("miku_plush_fortnite_neko",
@@ -142,19 +141,19 @@ public class ModItems {
 			()->new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_V4.get()));
 	public static final DeferredItem<MikuPlushieBlockItem> MIKU_PLUSH_MESMERIZER = ITEMS.register("miku_plush_mesmerizer",
 			()->new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_MESMERIZER.get()));
-	public static final DeferredItem<MikuPlushieBlockItem> TETO_PLUSH_MESMERIZER = ITEMS.register("teto_plush_mesmerizer",
-			()->new MikuPlushieBlockItem(ModBlocks.TETO_PLUSH_MESMERIZER.get()));
+	public static final DeferredItem<TetoPlushieBlockItem> TETO_PLUSH_MESMERIZER = ITEMS.register("teto_plush_mesmerizer",
+			()->new TetoPlushieBlockItem(ModBlocks.TETO_PLUSH_MESMERIZER.get()));
 	public static final DeferredItem<TetoPickaxeItem> TETO_PICKAXE_MESMERIZER = ITEMS.register("teto_pickaxe_mesmerizer", () ->
 		new TetoPickaxeItem(PLUSH_TIER, new Item.Properties().attributes(TetoPickaxeItem.createAttributes(PLUSH_TIER, 0, -2.8f))));
 
 	public static final DeferredItem<MikuPlushieBlockItem> MIKU_PLUSH_SONIC = ITEMS.register("miku_plush_sonic",
 			()->new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_SONIC.get()));
-	public static final DeferredItem<MikuPlushieBlockItem> TETO_PLUSH_SHADOW = ITEMS.register("teto_plush_shadow",
-			()->new MikuPlushieBlockItem(ModBlocks.TETO_PLUSH_SHADOW.get()));
-	public static final DeferredItem<MikuPlushieBlockItem> AKITA_NERU_PLUSH_TAILS = ITEMS.register("akita_neru_plush_tails",
-			()->new MikuPlushieBlockItem(ModBlocks.AKITA_NERU_PLUSH_TAILS.get()));
-	public static final DeferredItem<MikuPlushieBlockItem> TETO_PLUSH_BIRDBRAIN = ITEMS.register("teto_plush_birdbrain",
-			()->new MikuPlushieBlockItem(ModBlocks.TETO_PLUSH_BIRDBRAIN.get()));
+	public static final DeferredItem<TetoPlushieBlockItem> TETO_PLUSH_SHADOW = ITEMS.register("teto_plush_shadow",
+			()->new TetoPlushieBlockItem(ModBlocks.TETO_PLUSH_SHADOW.get()));
+	public static final DeferredItem<NeruPlushieBlockItem> AKITA_NERU_PLUSH_TAILS = ITEMS.register("akita_neru_plush_tails",
+			()->new NeruPlushieBlockItem(ModBlocks.AKITA_NERU_PLUSH_TAILS.get()));
+	public static final DeferredItem<TetoPlushieBlockItem> TETO_PLUSH_BIRDBRAIN = ITEMS.register("teto_plush_birdbrain",
+			()->new TetoPlushieBlockItem(ModBlocks.TETO_PLUSH_BIRDBRAIN.get()));
 	public static final DeferredItem<TetoPickaxeItem> TETO_PICKAXE_BIRDBRAIN = ITEMS.register("teto_pickaxe_birdbrain", () ->
 		new TetoPickaxeItem(PLUSH_TIER, new Item.Properties().attributes(TetoPickaxeItem.createAttributes(PLUSH_TIER, 0, -2.8f))));
 
@@ -162,8 +161,8 @@ public class ModItems {
 			()->new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_DIGITAL_STARS_2025.get()));
 	public static final DeferredItem<MikuPlushieBlockItem> MIKU_PLUSH_ROTTEN_GIRL = ITEMS.register("miku_plush_rotten_girl",
 			()->new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_ROTTEN_GIRL.get()));
-	public static final DeferredItem<MikuPlushieBlockItem> TETO_PLUSH_REGRET_ROCK = ITEMS.register("teto_plush_regret_rock",
-			()->new MikuPlushieBlockItem(ModBlocks.TETO_PLUSH_REGRET_ROCK.get()));
+	public static final DeferredItem<TetoPlushieBlockItem> TETO_PLUSH_REGRET_ROCK = ITEMS.register("teto_plush_regret_rock",
+			()->new TetoPlushieBlockItem(ModBlocks.TETO_PLUSH_REGRET_ROCK.get()));
 	public static final DeferredItem<TetoPickaxeItem> TETO_PICKAXE_REGRET_ROCK = ITEMS.register("teto_pickaxe_regret_rock", () ->
 		new TetoPickaxeItem(PLUSH_TIER, new Item.Properties().attributes(TetoPickaxeItem.createAttributes(PLUSH_TIER, 0, -2.8f))));
 
@@ -171,13 +170,13 @@ public class ModItems {
 			()->new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_PSYCHO_MODE.get()));
 	public static final DeferredItem<MikuPlushieBlockItem> MIKU_PLUSH_DONT_BELIEVE_IN_T = ITEMS.register("miku_plush_dont_believe_in_t",
 			()->new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_DONT_BELIEVE_IN_T.get()));
-	public static final DeferredItem<MikuPlushieBlockItem> TETO_PLUSH_DONT_BELIEVE_IN_T = ITEMS.register("teto_plush_dont_believe_in_t",
-			()->new MikuPlushieBlockItem(ModBlocks.TETO_PLUSH_DONT_BELIEVE_IN_T.get()));
+	public static final DeferredItem<TetoPlushieBlockItem> TETO_PLUSH_DONT_BELIEVE_IN_T = ITEMS.register("teto_plush_dont_believe_in_t",
+			()->new TetoPlushieBlockItem(ModBlocks.TETO_PLUSH_DONT_BELIEVE_IN_T.get()));
 	public static final DeferredItem<TetoPickaxeItem> TETO_PICKAXE_DONT_BELIEVE_IN_T = ITEMS.register("teto_pickaxe_dont_believe_in_t", () ->
 		new TetoPickaxeItem(PLUSH_TIER, new Item.Properties().attributes(TetoPickaxeItem.createAttributes(PLUSH_TIER, 0, -2.8f))));
 
-	public static final DeferredItem<MikuPlushieBlockItem> TETO_PLUSH_LIAR_DANCER = ITEMS.register("teto_plush_liar_dancer",
-			()->new MikuPlushieBlockItem(ModBlocks.TETO_PLUSH_LIAR_DANCER.get()));
+	public static final DeferredItem<TetoPlushieBlockItem> TETO_PLUSH_LIAR_DANCER = ITEMS.register("teto_plush_liar_dancer",
+			()->new TetoPlushieBlockItem(ModBlocks.TETO_PLUSH_LIAR_DANCER.get()));
 	public static final DeferredItem<TetoPickaxeItem> TETO_PICKAXE_LIAR_DANCER = ITEMS.register("teto_pickaxe_liar_dancer", () ->
 		new TetoPickaxeItem(PLUSH_TIER, new Item.Properties().attributes(TetoPickaxeItem.createAttributes(PLUSH_TIER, 0, -2.8f))));
 
@@ -185,8 +184,8 @@ public class ModItems {
 			()->new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_STATIC.get()));
 	public static final DeferredItem<MikuPlushieBlockItem> MIKU_PLUSH_MOCHIMOCHI = ITEMS.register("miku_plush_mochimochi",
 			()->new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_MOCHIMOCHI.get()));
-	public static final DeferredItem<MikuPlushieBlockItem> TETO_PLUSH_WHATCHACALLITSNAME = ITEMS.register("teto_plush_whatchacallitsname",
-			()->new MikuPlushieBlockItem(ModBlocks.TETO_PLUSH_WHATCHACALLITSNAME.get()));
+	public static final DeferredItem<TetoPlushieBlockItem> TETO_PLUSH_WHATCHACALLITSNAME = ITEMS.register("teto_plush_whatchacallitsname",
+			()->new TetoPlushieBlockItem(ModBlocks.TETO_PLUSH_WHATCHACALLITSNAME.get()));
 	public static final DeferredItem<TetoPickaxeItem> TETO_PICKAXE_WHATCHACALLITSNAME = ITEMS.register("teto_pickaxe_whatchacallitsname", () ->
 		new TetoPickaxeItem(PLUSH_TIER, new Item.Properties().attributes(TetoPickaxeItem.createAttributes(PLUSH_TIER, 0, -2.8f))));
 
@@ -197,7 +196,7 @@ public class ModItems {
 
 	public static final DeferredHolder<CreativeModeTab,CreativeModeTab> MAIN_TAB = CREATIVE_TABS.register("main_tab",
 			()-> CreativeModeTab.builder()
-					.title(Component.translatable("itemGroup.miku_plushie"))
+					.title(Component.translatable("item.group.miku_plushies"))
 					.icon(MIKU_PLUSH_SENBONZAKURA.get()::getDefaultInstance)
 					.displayItems((params,output)->{
 						ITEMS.getEntries().stream().map(Holder::value).map(Item::getDefaultInstance).forEach(output::accept);
