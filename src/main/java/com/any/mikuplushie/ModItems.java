@@ -3,7 +3,6 @@ package com.any.mikuplushie;
 import com.any.mikuplushie.item.MikuPlushieBlockItem;
 import com.any.mikuplushie.item.ModFoodComponents;
 import com.any.mikuplushie.item.PlushToolMaterial;
-import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.item.Item;
@@ -20,8 +19,7 @@ import net.minecraft.util.Rarity;
 public class ModItems {
 
 	public static final RegistryKey<ItemGroup> MIKU_GROUP_KEY = RegistryKey.of(Registries.ITEM_GROUP.getKey(),
-		new Identifier(MikuPlushie.MOD_ID, "item_group")
-	);
+		Identifier.of(MikuPlushie.MOD_ID, "item_group"));
 	public static final ItemGroup MIKU_GROUP = FabricItemGroup.builder()
 		.icon(() -> new ItemStack(ModItems.MIKU_PLUSH))
 		.displayName(Text.translatable("item.group.miku_plushies"))
@@ -128,7 +126,7 @@ public class ModItems {
 	public static final Item TETO_PLUSH =
 			register(new MikuPlushieBlockItem(ModBlocks.TETO_PLUSH, new Item.Settings()), "teto_plush");
 	public static final Item TETO_PICKAXE =
-			register(new PickaxeItem(PlushToolMaterial.INSTANCE, 1, -2.8f, new FabricItemSettings()), "teto_pickaxe");
+			register(new PickaxeItem(PlushToolMaterial.PLUSH_TOOL_MATERIAL, new Item.Settings()), "teto_pickaxe");
 	public static final Item AKITA_NERU_PLUSH =
 			register(new MikuPlushieBlockItem(ModBlocks.AKITA_NERU_PLUSH, new Item.Settings()), "akita_neru_plush");
 	public static final Item MIKU_PLUSH =
@@ -148,7 +146,7 @@ public class ModItems {
 	public static final Item TETO_PLUSH_MESMERIZER =
 			register(new MikuPlushieBlockItem(ModBlocks.TETO_PLUSH_MESMERIZER, new Item.Settings()), "teto_plush_mesmerizer");
 	public static final Item TETO_PICKAXE_MESMERIZER =
-		register(new PickaxeItem(PlushToolMaterial.INSTANCE, 1, -2.8f, new FabricItemSettings()), "teto_pickaxe_mesmerizer");
+		register(new PickaxeItem(PlushToolMaterial.PLUSH_TOOL_MATERIAL, new Item.Settings()), "teto_pickaxe_mesmerizer");
 	public static final Item MIKU_PLUSH_SONIC =
 			register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_SONIC, new Item.Settings()), "miku_plush_sonic");
 	public static final Item TETO_PLUSH_SHADOW =
@@ -158,7 +156,7 @@ public class ModItems {
 	public static final Item TETO_PLUSH_BIRDBRAIN =
 			register(new MikuPlushieBlockItem(ModBlocks.TETO_PLUSH_BIRDBRAIN, new Item.Settings()), "teto_plush_birdbrain");
 	public static final Item TETO_PICKAXE_BIRDBRAIN =
-		register(new PickaxeItem(PlushToolMaterial.INSTANCE, 1, -2.8f, new FabricItemSettings()), "teto_pickaxe_birdbrain");
+		register(new PickaxeItem(PlushToolMaterial.PLUSH_TOOL_MATERIAL, new Item.Settings()), "teto_pickaxe_birdbrain");
 	public static final Item MIKU_PLUSH_DIGITAL_STARS_2025 =
 		register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_DIGITAL_STARS_2025, new Item.Settings()), "miku_plush_digital_stars_2025");
 	public static final Item MIKU_PLUSH_ROTTEN_GIRL =
@@ -166,7 +164,7 @@ public class ModItems {
 	public static final Item TETO_PLUSH_REGRET_ROCK =
 		register(new MikuPlushieBlockItem(ModBlocks.TETO_PLUSH_REGRET_ROCK, new Item.Settings()), "teto_plush_regret_rock");
 	public static final Item TETO_PICKAXE_REGRET_ROCK =
-		register(new PickaxeItem(PlushToolMaterial.INSTANCE, 1, -2.8f, new FabricItemSettings()), "teto_pickaxe_regret_rock");
+		register(new PickaxeItem(PlushToolMaterial.PLUSH_TOOL_MATERIAL, new Item.Settings()), "teto_pickaxe_regret_rock");
 	public static final Item MIKU_PLUSH_PSYCHO_MODE =
 		register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_PSYCHO_MODE, new Item.Settings()), "miku_plush_psycho_mode");
 	public static final Item MIKU_PLUSH_DONT_BELIEVE_IN_T =
@@ -174,11 +172,11 @@ public class ModItems {
 	public static final Item TETO_PLUSH_DONT_BELIEVE_IN_T =
 		register(new MikuPlushieBlockItem(ModBlocks.TETO_PLUSH_DONT_BELIEVE_IN_T, new Item.Settings()), "teto_plush_dont_believe_in_t");
 	public static final Item TETO_PICKAXE_DONT_BELIEVE_IN_T =
-		register(new PickaxeItem(PlushToolMaterial.INSTANCE, 1, -2.8f, new FabricItemSettings()), "teto_pickaxe_dont_believe_in_t");
+		register(new PickaxeItem(PlushToolMaterial.PLUSH_TOOL_MATERIAL, new Item.Settings()), "teto_pickaxe_dont_believe_in_t");
 	public static final Item TETO_PLUSH_LIAR_DANCER =
 		register(new MikuPlushieBlockItem(ModBlocks.TETO_PLUSH_LIAR_DANCER, new Item.Settings()), "teto_plush_liar_dancer");
 	public static final Item TETO_PICKAXE_LIAR_DANCER =
-		register(new PickaxeItem(PlushToolMaterial.INSTANCE, 1, -2.8f, new FabricItemSettings()), "teto_pickaxe_liar_dancer");
+		register(new PickaxeItem(PlushToolMaterial.PLUSH_TOOL_MATERIAL, new Item.Settings()), "teto_pickaxe_liar_dancer");
 	public static final Item MIKU_PLUSH_STATIC =
 		register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_STATIC, new Item.Settings()), "miku_plush_static");
 	public static final Item MIKU_PLUSH_MOCHIMOCHI =
@@ -186,7 +184,7 @@ public class ModItems {
 	public static final Item TETO_PLUSH_WHATCHACALLITSNAME =
 		register(new MikuPlushieBlockItem(ModBlocks.TETO_PLUSH_WHATCHACALLITSNAME, new Item.Settings()), "teto_plush_whatchacallitsname");
 	public static final Item TETO_PICKAXE_WHATCHACALLITSNAME =
-		register(new PickaxeItem(PlushToolMaterial.INSTANCE, 1, -2.8f, new FabricItemSettings()), "teto_pickaxe_whatchacallitsname");
+		register(new PickaxeItem(PlushToolMaterial.PLUSH_TOOL_MATERIAL, new Item.Settings()), "teto_pickaxe_whatchacallitsname");
 	public static final Item MIKU_PLUSH_MONITORING =
 		register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_MONITORING, new Item.Settings()), "miku_plush_monitoring");
 

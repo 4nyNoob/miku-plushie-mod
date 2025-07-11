@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "1": {
+      "item": "minecraft:light_blue_wool"
+    },
+    "2": {
+      "item": "minecraft:white_wool"
+    }
+  },
+  "pattern": [
+    "121",
+    "111"
+  ],
+  "result": {
+    "count": 1,
+    "id": "miku-plushie:miku_plush_mesmerizer"
+  }
+}

@@ -64,16 +64,16 @@ public class MikuPlushieBlockItem extends BlockItem implements Equipment {
 			return RegistryEntry.of( ModSoundEvents.AIKO_EQUIP);
 		}
 		if (stack.isIn(ModTagProvider.TETO_PLUSH)) {
-			return ModSoundEvents.TETO_EQUIP;
+			return RegistryEntry.of( ModSoundEvents.TETO_EQUIP);
 		}
 		if (stack.isIn(ModTagProvider.AKITA_NERU_PLUSH)) {
-			return ModSoundEvents.AKITA_NERU_EQUIP;
+			return RegistryEntry.of( ModSoundEvents.AKITA_NERU_EQUIP);
 		}
 		if (stack.isIn(ModTagProvider.RIN_PLUSH)) {
-			return ModSoundEvents.RIN_EQUIP;
+			return RegistryEntry.of( ModSoundEvents.RIN_EQUIP);
 		}
 		if (stack.isIn(ModTagProvider.LEN_PLUSH)) {
-			return ModSoundEvents.LEN_EQUIP;
+			return RegistryEntry.of( ModSoundEvents.LEN_EQUIP);
 		}
 
 		return RegistryEntry.of(ModSoundEvents.MIKU_EQUIP);

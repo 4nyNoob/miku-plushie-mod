@@ -759,7 +759,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 			.input(ModBlocks.TETO_PLUSH)
 			.input(Items.BLACK_WOOL)
 			.input(Items.REDSTONE)
-			.criterion(FabricRecipeProvider.hasItem(ModBlocks.MIKU_PLUSH), FabricRecipeProvider.conditionsFromItem(ModBlocks.MIKU_PLUSH))
+			.criterion(FabricRecipeProvider.hasItem(ModBlocks.TETO_PLUSH), FabricRecipeProvider.conditionsFromItem(ModBlocks.TETO_PLUSH))
 			.criterion(FabricRecipeProvider.hasItem(Items.BLACK_WOOL), FabricRecipeProvider.conditionsFromItem(Items.BLACK_WOOL))
 			.criterion(FabricRecipeProvider.hasItem(Items.REDSTONE), FabricRecipeProvider.conditionsFromItem(Items.REDSTONE))
 			.offerTo(exporter);
@@ -768,7 +768,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 			.input(ModBlocks.AKITA_NERU_PLUSH)
 			.input(Items.YELLOW_WOOL)
 			.input(Items.REDSTONE)
-			.criterion(FabricRecipeProvider.hasItem(ModBlocks.MIKU_PLUSH), FabricRecipeProvider.conditionsFromItem(ModBlocks.MIKU_PLUSH))
+			.criterion(FabricRecipeProvider.hasItem(ModBlocks.AKITA_NERU_PLUSH), FabricRecipeProvider.conditionsFromItem(ModBlocks.AKITA_NERU_PLUSH))
 			.criterion(FabricRecipeProvider.hasItem(Items.YELLOW_WOOL), FabricRecipeProvider.conditionsFromItem(Items.YELLOW_WOOL))
 			.criterion(FabricRecipeProvider.hasItem(Items.REDSTONE), FabricRecipeProvider.conditionsFromItem(Items.REDSTONE))
 			.offerTo(exporter);
