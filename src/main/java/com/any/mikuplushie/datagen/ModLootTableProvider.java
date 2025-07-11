@@ -63,6 +63,31 @@ public class ModLootTableProvider extends BlockLootSubProvider {
 		dropOther(ModBlocks.MIKU_PLUSH_SANTA_ELF.get(), ModItems.MIKU_PLUSH_SANTA_ELF.get());
 		dropOther(ModBlocks.MIKU_PLUSH_XMAS_TREE.get(), ModItems.MIKU_PLUSH_XMAS_TREE.get());
 		dropOther(ModBlocks.AIKO_PLUSH.get(), ModItems.AIKO_PLUSH.get());
+		dropOther(ModBlocks.TETO_PLUSH.get(), ModItems.TETO_PLUSH.get());
+		dropOther(ModBlocks.AKITA_NERU_PLUSH.get(), ModItems.AKITA_NERU_PLUSH.get());
+		dropOther(ModBlocks.MIKU_PLUSH.get(), ModItems.MIKU_PLUSH.get());
+		dropOther(ModBlocks.RIN_PLUSH.get(), ModItems.RIN_PLUSH.get());
+		dropOther(ModBlocks.LEN_PLUSH.get(), ModItems.LEN_PLUSH.get());
+		dropOther(ModBlocks.MIKU_PLUSH_SONIC_CROSSWORLDS.get(), ModItems.MIKU_PLUSH_SONIC_CROSSWORLDS.get());
+		dropOther(ModBlocks.MIKU_PLUSH_FORTNITE_NEKO.get(), ModItems.MIKU_PLUSH_FORTNITE_NEKO.get());
+		dropOther(ModBlocks.MIKU_PLUSH_V4.get(), ModItems.MIKU_PLUSH_V4.get());
+		dropOther(ModBlocks.MIKU_PLUSH_MESMERIZER.get(), ModItems.MIKU_PLUSH_MESMERIZER.get());
+		dropOther(ModBlocks.TETO_PLUSH_MESMERIZER.get(), ModItems.TETO_PLUSH_MESMERIZER.get());
+		dropOther(ModBlocks.MIKU_PLUSH_SONIC.get(), ModItems.MIKU_PLUSH_SONIC.get());
+		dropOther(ModBlocks.TETO_PLUSH_SHADOW.get(), ModItems.TETO_PLUSH_SHADOW.get());
+		dropOther(ModBlocks.AKITA_NERU_PLUSH_TAILS.get(), ModItems.AKITA_NERU_PLUSH_TAILS.get());
+		dropOther(ModBlocks.TETO_PLUSH_BIRDBRAIN.get(), ModItems.TETO_PLUSH_BIRDBRAIN.get());
+		dropOther(ModBlocks.MIKU_PLUSH_DIGITAL_STARS_2025.get(), ModItems.MIKU_PLUSH_DIGITAL_STARS_2025.get());
+		dropOther(ModBlocks.MIKU_PLUSH_ROTTEN_GIRL.get(), ModItems.MIKU_PLUSH_ROTTEN_GIRL.get());
+		dropOther(ModBlocks.TETO_PLUSH_REGRET_ROCK.get(), ModItems.TETO_PLUSH_REGRET_ROCK.get());
+		dropOther(ModBlocks.MIKU_PLUSH_PSYCHO_MODE.get(), ModItems.MIKU_PLUSH_PSYCHO_MODE.get());
+		dropOther(ModBlocks.MIKU_PLUSH_DONT_BELIEVE_IN_T.get(), ModItems.MIKU_PLUSH_DONT_BELIEVE_IN_T.get());
+		dropOther(ModBlocks.TETO_PLUSH_DONT_BELIEVE_IN_T.get(), ModItems.TETO_PLUSH_DONT_BELIEVE_IN_T.get());
+		dropOther(ModBlocks.TETO_PLUSH_LIAR_DANCER.get(), ModItems.TETO_PLUSH_LIAR_DANCER.get());
+		dropOther(ModBlocks.MIKU_PLUSH_STATIC.get(), ModItems.MIKU_PLUSH_STATIC.get());
+		dropOther(ModBlocks.MIKU_PLUSH_MOCHIMOCHI.get(), ModItems.MIKU_PLUSH_MOCHIMOCHI.get());
+		dropOther(ModBlocks.TETO_PLUSH_WHATCHACALLITSNAME.get(), ModItems.TETO_PLUSH_WHATCHACALLITSNAME.get());
+		dropOther(ModBlocks.MIKU_PLUSH_MONITORING.get(), ModItems.MIKU_PLUSH_MONITORING.get());
 		//use dropSelf() for further entries
 	}
 

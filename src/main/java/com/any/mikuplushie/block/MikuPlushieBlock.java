@@ -27,14 +27,15 @@ import org.jetbrains.annotations.Nullable;
 
 public class MikuPlushieBlock extends Block {
 	public static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;
-	protected static final VoxelShape SHAPE = Shapes.box(5.0/16D, 0.0, 5.0/16D, 11.0/16D, 13.0/16D, 11.0/16D);
 	public MikuPlushieBlock(Properties settings) {
 		super(settings);
 	}
 
 	@Override
 	protected ItemInteractionResult useItemOn(ItemStack stack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hitResult) {
-		if(stack.getItem()== ModItems.CANUDINHO.get() && state.is(ModTagProvider.MIKU_PLUSH)){
+		ItemStack itemStack = state.getBlock().asItem().getDefaultInstance();
+
+		if(stack.getItem()== ModItems.CANUDINHO.get() && itemStack.is(ModTagProvider.MIKU_PLUSH)){
 			level.playSound(player,pos, ModSoundEvents.MIKU_CANUDINHO.value(), SoundSource.BLOCKS, 0.5F,1F);
 			return ItemInteractionResult.SUCCESS;
 		}
@@ -43,9 +44,24 @@ public class MikuPlushieBlock extends Block {
 
 	@Override
 	protected void onPlace(BlockState state, Level level, BlockPos pos, BlockState oldState, boolean movedByPiston) {
-		if (state.is(ModTagProvider.AIKO_PLUSH)){
+		ItemStack itemStack = state.getBlock().asItem().getDefaultInstance();
+
+		if (itemStack.is(ModTagProvider.AIKO_PLUSH)){
 			level.playSound(null,pos,ModSoundEvents.AIKO_OIE.value(), SoundSource.BLOCKS, 0.5F,1F);
-		} else {
+		}
+		if (itemStack.is(ModTagProvider.TETO_PLUSH)){
+			level.playSound(null,pos,ModSoundEvents.TETO_OIE.value(), SoundSource.BLOCKS, 0.5F,1F);
+		}
+		if (itemStack.is(ModTagProvider.AKITA_NERU_PLUSH)){
+			level.playSound(null,pos,ModSoundEvents.NERU_OIE.value(), SoundSource.BLOCKS, 0.5F,1F);
+		}
+		if (itemStack.is(ModTagProvider.RIN_PLUSH)){
+			level.playSound(null,pos,ModSoundEvents.RIN_OIE.value(), SoundSource.BLOCKS, 0.5F,1F);
+		}
+		if (itemStack.is(ModTagProvider.LEN_PLUSH)){
+			level.playSound(null,pos,ModSoundEvents.LEN_OIE.value(), SoundSource.BLOCKS, 0.5F,1F);
+		}
+		if (itemStack.is(ModTagProvider.MIKU_PLUSH)){
 			level.playSound(null,pos,ModSoundEvents.MIKU_OIE.value(), SoundSource.BLOCKS, 0.5F,1F);
 		}
 		super.onPlace(state, level, pos, oldState, movedByPiston);
@@ -53,17 +69,32 @@ public class MikuPlushieBlock extends Block {
 
 	@Override
 	protected void onRemove(BlockState state, Level level, BlockPos pos, BlockState newState, boolean movedByPiston) {
-		if (state.is(ModTagProvider.AIKO_PLUSH)){
-			level.playSound(null,pos,ModSoundEvents.AIKO_BYE.value(), SoundSource.BLOCKS, 0.5F,1F);
-		} else {
-			level.playSound(null,pos,ModSoundEvents.MIKU_BYE.value(),SoundSource.BLOCKS,0.5F,1F);
+		ItemStack itemStack = state.getBlock().asItem().getDefaultInstance();
+
+		if (itemStack.is(ModTagProvider.AIKO_PLUSH)){
+			level.playSound(null,pos,ModSoundEvents.AIKO_OIE.value(), SoundSource.BLOCKS, 0.5F,1F);
+		}
+		if (itemStack.is(ModTagProvider.TETO_PLUSH)){
+			level.playSound(null,pos,ModSoundEvents.TETO_BYE.value(), SoundSource.BLOCKS, 0.5F,1F);
+		}
+		if (itemStack.is(ModTagProvider.AKITA_NERU_PLUSH)){
+			level.playSound(null,pos,ModSoundEvents.NERU_BYE.value(), SoundSource.BLOCKS, 0.5F,1F);
+		}
+		if (itemStack.is(ModTagProvider.RIN_PLUSH)){
+			level.playSound(null,pos,ModSoundEvents.RIN_BYE.value(), SoundSource.BLOCKS, 0.5F,1F);
+		}
+		if (itemStack.is(ModTagProvider.LEN_PLUSH)){
+			level.playSound(null,pos,ModSoundEvents.LEN_BYE.value(), SoundSource.BLOCKS, 0.5F,1F);
+		}
+		if (itemStack.is(ModTagProvider.MIKU_PLUSH)){
+			level.playSound(null,pos,ModSoundEvents.MIKU_BYE.value(), SoundSource.BLOCKS, 0.5F,1F);
 		}
 		super.onRemove(state, level, pos, newState, movedByPiston);
 	}
 
 	@Override
 	protected VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
-		return SHAPE;
+        return Shapes.box(4.5, 0.0, 4.5, 11.5, 13.5, 11.5);
 	}
 
 	@Override

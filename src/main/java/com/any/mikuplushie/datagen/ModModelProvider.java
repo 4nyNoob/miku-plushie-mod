@@ -65,6 +65,31 @@ public class ModModelProvider extends BlockStateProvider {
 		horizontalBlockState(ModBlocks.MIKU_PLUSH_SANTA_ELF);
 		horizontalBlockState(ModBlocks.MIKU_PLUSH_XMAS_TREE);
 		horizontalBlockState(ModBlocks.AIKO_PLUSH);
+		horizontalBlockState(ModBlocks.TETO_PLUSH);
+		horizontalBlockState(ModBlocks.AKITA_NERU_PLUSH);
+		horizontalBlockState(ModBlocks.MIKU_PLUSH);
+		horizontalBlockState(ModBlocks.RIN_PLUSH);
+		horizontalBlockState(ModBlocks.LEN_PLUSH);
+		horizontalBlockState(ModBlocks.MIKU_PLUSH_SONIC_CROSSWORLDS);
+		horizontalBlockState(ModBlocks.MIKU_PLUSH_FORTNITE_NEKO);
+		horizontalBlockState(ModBlocks.MIKU_PLUSH_V4);
+		horizontalBlockState(ModBlocks.MIKU_PLUSH_MESMERIZER);
+		horizontalBlockState(ModBlocks.TETO_PLUSH_MESMERIZER);
+		horizontalBlockState(ModBlocks.MIKU_PLUSH_SONIC);
+		horizontalBlockState(ModBlocks.TETO_PLUSH_SHADOW);
+		horizontalBlockState(ModBlocks.AKITA_NERU_PLUSH_TAILS);
+		horizontalBlockState(ModBlocks.TETO_PLUSH_BIRDBRAIN);
+		horizontalBlockState(ModBlocks.MIKU_PLUSH_DIGITAL_STARS_2025);
+		horizontalBlockState(ModBlocks.MIKU_PLUSH_ROTTEN_GIRL);
+		horizontalBlockState(ModBlocks.TETO_PLUSH_REGRET_ROCK);
+		horizontalBlockState(ModBlocks.MIKU_PLUSH_PSYCHO_MODE);
+		horizontalBlockState(ModBlocks.MIKU_PLUSH_DONT_BELIEVE_IN_T);
+		horizontalBlockState(ModBlocks.TETO_PLUSH_DONT_BELIEVE_IN_T);
+		horizontalBlockState(ModBlocks.TETO_PLUSH_LIAR_DANCER);
+		horizontalBlockState(ModBlocks.MIKU_PLUSH_STATIC);
+		horizontalBlockState(ModBlocks.MIKU_PLUSH_MOCHIMOCHI);
+		horizontalBlockState(ModBlocks.TETO_PLUSH_WHATCHACALLITSNAME);
+		horizontalBlockState(ModBlocks.MIKU_PLUSH_MONITORING);
 	}
 
 	public void horizontalBlockState(DeferredBlock<? extends Block> block){

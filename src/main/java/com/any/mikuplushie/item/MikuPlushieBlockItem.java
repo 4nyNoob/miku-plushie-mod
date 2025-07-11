@@ -1,6 +1,7 @@
 package com.any.mikuplushie.item;
 
 import com.any.mikuplushie.ModSoundEvents;
+import com.any.mikuplushie.datagen.ModTagProvider;
 import net.minecraft.core.Holder;
 import net.minecraft.network.chat.Component;
 import net.minecraft.sounds.SoundEvent;
@@ -38,6 +39,9 @@ public class MikuPlushieBlockItem extends BlockItem implements Equipable {
 
 	@Override
 	public Holder<SoundEvent> getEquipSound() {
+		if (this.getDefaultInstance().is(ModTagProvider.AIKO_PLUSH)) {
+            return ModSoundEvents.AIKO_EQUIP;
+        }
 		return ModSoundEvents.MIKU_EQUIP;
 	}
 

@@ -32,6 +32,7 @@ public class MikuPlushieDataGenerator {
 
 		generator.addProvider(event.includeServer(),new LootTableProvider(packOutput, Collections.emptySet(), List.of(new LootTableProvider.SubProviderEntry(ModLootTableProvider::new, LootContextParamSets.BLOCK)),lookupProvider));
 
-		generator.addProvider(event.includeClient(), new ModTagProvider(packOutput, lookupProvider, MikuPlushie.MOD_ID, existingFileHelper));
+		generator.addProvider(event.includeClient(), new ModTagProvider(packOutput, lookupProvider, new CompletableFuture<>()));
+
 	}
 }

@@ -7,10 +7,11 @@ import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 
-@EventBusSubscriber(value = Dist.CLIENT,modid = MikuPlushie.MOD_ID,bus = EventBusSubscriber.Bus.MOD)
+@EventBusSubscriber(value = Dist.CLIENT, modid = MikuPlushie.MOD_ID, bus = EventBusSubscriber.Bus.MOD)
 public class MikuPlushieClient{
 	@SubscribeEvent
 	public static void onInitializeClient(FMLClientSetupEvent event) {
+
 		ItemBlockRenderTypes.setRenderLayer(ModBlocks.MIKU_PLUSH_BR.get(), RenderType.CUTOUT);
 		ItemBlockRenderTypes.setRenderLayer(ModBlocks.MIKU_PLUSH_BR_BA.get(), RenderType.CUTOUT);
 		ItemBlockRenderTypes.setRenderLayer(ModBlocks.MIKU_PLUSH_BIK.get(), RenderType.CUTOUT);
@@ -55,10 +56,39 @@ public class MikuPlushieClient{
 		ItemBlockRenderTypes.setRenderLayer(ModBlocks.MIKU_PLUSH_REINDEER.get(), RenderType.CUTOUT);
 		ItemBlockRenderTypes.setRenderLayer(ModBlocks.MIKU_PLUSH_SANTA_ELF.get(), RenderType.CUTOUT);
 		ItemBlockRenderTypes.setRenderLayer(ModBlocks.MIKU_PLUSH_XMAS_TREE.get(), RenderType.CUTOUT);
+		ItemBlockRenderTypes.setRenderLayer(ModBlocks.MIKU_PLUSH.get(), RenderType.CUTOUT);
+		ItemBlockRenderTypes.setRenderLayer(ModBlocks.MIKU_PLUSH_SONIC_CROSSWORLDS.get(), RenderType.CUTOUT);
+		ItemBlockRenderTypes.setRenderLayer(ModBlocks.MIKU_PLUSH_FORTNITE_NEKO.get(), RenderType.CUTOUT);
+		ItemBlockRenderTypes.setRenderLayer(ModBlocks.MIKU_PLUSH_V4.get(), RenderType.CUTOUT);
+		ItemBlockRenderTypes.setRenderLayer(ModBlocks.MIKU_PLUSH_MESMERIZER.get(), RenderType.CUTOUT);
+		ItemBlockRenderTypes.setRenderLayer(ModBlocks.MIKU_PLUSH_SONIC.get(), RenderType.CUTOUT);
+		ItemBlockRenderTypes.setRenderLayer(ModBlocks.MIKU_PLUSH_DIGITAL_STARS_2025.get(), RenderType.CUTOUT);
+		ItemBlockRenderTypes.setRenderLayer(ModBlocks.MIKU_PLUSH_ROTTEN_GIRL.get(), RenderType.CUTOUT);
+		ItemBlockRenderTypes.setRenderLayer(ModBlocks.MIKU_PLUSH_PSYCHO_MODE.get(), RenderType.CUTOUT);
+		ItemBlockRenderTypes.setRenderLayer(ModBlocks.MIKU_PLUSH_DONT_BELIEVE_IN_T.get(), RenderType.CUTOUT);
+		ItemBlockRenderTypes.setRenderLayer(ModBlocks.MIKU_PLUSH_STATIC.get(), RenderType.CUTOUT);
+		ItemBlockRenderTypes.setRenderLayer(ModBlocks.MIKU_PLUSH_MOCHIMOCHI.get(), RenderType.CUTOUT);
+		ItemBlockRenderTypes.setRenderLayer(ModBlocks.MIKU_PLUSH_MONITORING.get(), RenderType.CUTOUT);
 
 		ItemBlockRenderTypes.setRenderLayer(ModBlocks.AIKO_PLUSH.get(), RenderType.CUTOUT);
 
+		ItemBlockRenderTypes.setRenderLayer(ModBlocks.TETO_PLUSH.get(), RenderType.CUTOUT);
+		ItemBlockRenderTypes.setRenderLayer(ModBlocks.TETO_PLUSH_MESMERIZER.get(), RenderType.CUTOUT);
+		ItemBlockRenderTypes.setRenderLayer(ModBlocks.TETO_PLUSH_SHADOW.get(), RenderType.CUTOUT);
+		ItemBlockRenderTypes.setRenderLayer(ModBlocks.TETO_PLUSH_BIRDBRAIN.get(), RenderType.CUTOUT);
+		ItemBlockRenderTypes.setRenderLayer(ModBlocks.TETO_PLUSH_REGRET_ROCK.get(), RenderType.CUTOUT);
+		ItemBlockRenderTypes.setRenderLayer(ModBlocks.TETO_PLUSH_DONT_BELIEVE_IN_T.get(), RenderType.CUTOUT);
+		ItemBlockRenderTypes.setRenderLayer(ModBlocks.TETO_PLUSH_LIAR_DANCER.get(), RenderType.CUTOUT);
+		ItemBlockRenderTypes.setRenderLayer(ModBlocks.TETO_PLUSH_WHATCHACALLITSNAME.get(), RenderType.CUTOUT);
 
+		ItemBlockRenderTypes.setRenderLayer(ModBlocks.AKITA_NERU_PLUSH.get(), RenderType.CUTOUT);
+		ItemBlockRenderTypes.setRenderLayer(ModBlocks.AKITA_NERU_PLUSH_TAILS.get(), RenderType.CUTOUT);
+
+		ItemBlockRenderTypes.setRenderLayer(ModBlocks.RIN_PLUSH.get(), RenderType.CUTOUT);
+
+		ItemBlockRenderTypes.setRenderLayer(ModBlocks.LEN_PLUSH.get(), RenderType.CUTOUT);
+
+		//TRANSLUCENT
 		ItemBlockRenderTypes.setRenderLayer(ModBlocks.MIKU_PLUSH_GHOST.get(), RenderType.TRANSLUCENT);
 	}
 }
