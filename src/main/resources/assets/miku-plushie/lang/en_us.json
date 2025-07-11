@@ -122,7 +122,7 @@
   "block.miku-plushie.akita_neru_plush_tails": "Tails Neru Plush",
   "item.miku-plushie.akita_neru_plush_tails.tooltip": "§b§n@4ny.bsky.social",
   "block.miku-plushie.teto_plush_birdbrain": "Teto Birdbrain Plush",
-  "item.miku-plushie.teto_plush_birdbrain.tooltip": "§b§n@sidoopa.bsky.social",
+  "item.miku-plushie.teto_plush_birdbrain.tooltip": "§b§n@ricedeity",
   "item.miku-plushie.teto_pickaxe_birdbrain": "Teto Birdbrain Pickaxe",
 
   "block.miku-plushie.miku_plush_digital_stars_2025": "Digital Stars 2025 Miku Plush",
@@ -134,12 +134,25 @@
   "item.miku-plushie.teto_pickaxe_regret_rock": "Regret Rock Teto Pickaxe",
 
   "block.miku-plushie.miku_plush_psycho_mode": "Psycho Mode Miku Plush",
-  "item.miku-plushie.miku_plush_psycho_mode.tooltip": "§b§n@c4ppu",
+  "item.miku-plushie.miku_plush_psycho_mode.tooltip": "§b§n@dolman4878",
   "block.miku-plushie.miku_plush_dont_believe_in_t": "Don't Believe In T Miku Plush",
   "item.miku-plushie.miku_plush_dont_believe_in_t.tooltip": "§b§n@pinocchiop",
   "block.miku-plushie.teto_plush_dont_believe_in_t": "Don't Believe In T Teto Plush",
   "item.miku-plushie.teto_plush_dont_believe_in_t.tooltip": "§b§n@pinocchiop",
   "item.miku-plushie.teto_pickaxe_dont_believe_in_t": "Don't Believe In T Teto Pickaxe",
+  "block.miku-plushie.teto_plush_liar_dancer": "Liar Dancer Teto Plush",
+  "item.miku-plushie.teto_plush_liar_dancer.tooltip": "§b§n@sisterofoira",
+  "item.miku-plushie.teto_pickaxe_liar_dancer": "Liar Dancer Teto Pickaxe",
+  "block.miku-plushie.miku_plush_static": "Static Miku Plush",
+  "item.miku-plushie.miku_plush_static.tooltip": "§b§n@ricedeity",
+  "block.miku-plushie.miku_plush_mochimochi": "Mochimochi Miku Plush",
+  "item.miku-plushie.miku_plush_mochimochi.tooltip": "§b§n@dolman4878",
+  "block.miku-plushie.teto_plush_whatchacallitsname": "Whatchacallitsname Teto Plush",
+  "item.miku-plushie.teto_plush_whatchacallitsname.tooltip": "§b§n@decoyman1200",
+  "item.miku-plushie.teto_pickaxe_whatchacallitsname": "Whatchacallitsname Teto Pickaxe",
+
+  "block.miku-plushie.miku_plush_monitoring": "Monitoring Miku Plush",
+  "item.miku-plushie.miku_plush_monitoring.tooltip": "§b§n@kee00210",
 
 
 
