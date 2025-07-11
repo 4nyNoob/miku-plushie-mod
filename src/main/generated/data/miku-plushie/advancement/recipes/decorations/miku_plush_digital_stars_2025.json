@@ -1,0 +1,54 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_gold_nugget": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:gold_nugget"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_miku_plush": {
+      "conditions": {
+        "items": [
+          {
+            "items": "miku-plushie:miku_plush"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_note_block": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:note_block"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "miku-plushie:miku_plush_digital_stars_2025"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_miku_plush",
+      "has_note_block",
+      "has_gold_nugget"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "miku-plushie:miku_plush_digital_stars_2025"
+    ]
+  }
+}
