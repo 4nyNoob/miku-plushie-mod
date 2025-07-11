@@ -21,7 +21,6 @@ import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.DirectionProperty;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.CollisionContext;
-import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import org.jetbrains.annotations.Nullable;
 
@@ -64,6 +63,7 @@ public class MikuPlushieBlock extends Block {
 		if (itemStack.is(ModTagProvider.MIKU_PLUSH)){
 			level.playSound(null,pos,ModSoundEvents.MIKU_OIE.value(), SoundSource.BLOCKS, 0.5F,1F);
 		}
+		level.playSound(null,pos,ModSoundEvents.MIKU_OIE.value(), SoundSource.BLOCKS, 0.5F,1F);
 		super.onPlace(state, level, pos, oldState, movedByPiston);
 	}
 
@@ -94,7 +94,7 @@ public class MikuPlushieBlock extends Block {
 
 	@Override
 	protected VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
-        return Shapes.box(4.5, 0.0, 4.5, 11.5, 13.5, 11.5);
+        return Block.box(4.5D, 0.0D, 4.5D, 11.5D, 13.5D, 11.5D);
 	}
 
 	@Override

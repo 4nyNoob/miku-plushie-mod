@@ -2,7 +2,7 @@
 	"credit": "Made with Blockbench",
 	"texture_size": [64, 64],
 	"textures": {
-		"particle": "miku-plushie:block/miku-plush-jason"
+		"particle": "miku_plushie:block/miku-plush-jason"
 	},
 	"elements": [
 		{

@@ -3,7 +3,7 @@
 	"credit": "Made with Blockbench",
 	"parent": "minecraft:item/generated",
 	"textures": {
-		"layer0": "miku-plushie:item/baguette"
+		"layer0": "miku_plushie:item/baguette"
 	},
 	"display": {
 		"thirdperson_righthand": {

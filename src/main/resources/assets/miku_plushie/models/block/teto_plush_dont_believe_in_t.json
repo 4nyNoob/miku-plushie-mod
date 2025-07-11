@@ -4,7 +4,7 @@
 	"ambientocclusion": false,
 	"texture_size": [64, 64],
 	"textures": {
-		"particle": "miku-plushie:block/teto-plush-dont-believe-in-t"
+		"particle": "miku_plushie:block/teto-plush-dont-believe-in-t"
 	},
 	"elements": [
 		{

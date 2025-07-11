@@ -3,8 +3,8 @@
 	"ambientocclusion": false,
 	"texture_size": [64, 64],
 	"textures": {
-		"particle": "miku-plushie:block/aiko-plush",
-		"base": "miku-plushie:block/aiko-plush"
+		"particle": "miku_plushie:block/aiko-plush",
+		"base": "miku_plushie:block/aiko-plush"
 	},
 	"elements": [
 		{
