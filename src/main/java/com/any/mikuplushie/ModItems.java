@@ -196,9 +196,10 @@ public class ModItems {
 		Identifier itemID = Identifier.of(MikuPlushie.MOD_ID, id);
 
 		// Register the item.
-		Item registeredItem = Registry.register(Registries.ITEM, itemID, item);
+		Item registeredItem;
+        registeredItem = Registry.register(Registries.ITEM, itemID, item);
 
-		// Return the registered item!
+        // Return the registered item!
 		return registeredItem;
 	}
 
