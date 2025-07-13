@@ -21,9 +21,22 @@
 
 <h1 align="center">
 BEHOLD!! Hatsune Miku<br/>
-<img src="/assets/blocks/miku_plush_v4.png" alt="Hatsune Miku"/>
+<img src="/assets/blocks/miku_plush_v4.png" alt="Hatsune Miku"/><br/>
+And Friends :D<br/>
+<img src="/assets/blocks/akita_neru_plush.png" alt="Akita Neru"/>
+<img src="/assets/blocks/teto_plush.png" alt="Kasane Teto"/>
+<img src="/assets/blocks/rin_plush.png" alt="Rin"/>
+<img src="/assets/blocks/len_plush.png" alt="Len"/>
+<img src="/assets/blocks/aiko_plush.png" alt="Aiko"/>
 </h1>
 
+## Features:
+ - ### All plushies are dubbed in Portuguese(Brazil)
+ - ### You can put the plushies in your head (even tough they don't like the heights)
+ - ### All Tetos *(almost)* can be crafted as a pickaxe
+ - ### All plushies complain when you use them as a weapon
+
+If you enjoy what I do, consider supporting me on Ko-fi! https://ko-fi.com/4nynoob
 
 <div style="display: flex; justify-content: center;">
 <h2>
@@ -103,7 +116,7 @@ BEHOLD!! Hatsune Miku<br/>
 |                **Liar Dancer Teto Plush** <br/> ![](/assets/blocks/teto_plush_liar_dancer.png)<br/>Design By: [@sisterofoira](https://x.com/sisterofoira)                |    ![](/assets/recipes/miku-plushie_teto_plush_liar_dancer.png)     |
 |                       **Static Miku Plush** <br/> ![](/assets/blocks/miku_plush_static.png)<br/>Design By: [@ricedeity](https://x.com/@ricedeity)                        |       ![](/assets/recipes/miku-plushie_miku_plush_static.png)       |
 |                  **Mochimochi Miku Plush** <br/> ![](/assets/blocks/miku_plush_mochimochi.png)<br/>Design By: [@dolman4878](https://x.com/@dolman4878)                   |     ![](/assets/recipes/miku-plushie_miku_plush_mochimochi.png)     |
-|     **Don't Believe In T Teto Plush** <br/> ![](/assets/blocks/teto_plush_whatchacallitsname.png)<br/>Design By: [@decoyman1200](https://instagram.com/decoyman1200)     | ![](/assets/recipes/miku-plushie_teto_plush_whatchacallitsname.png) |
+|     **Whatchacallitsname Teto Plush** <br/> ![](/assets/blocks/teto_plush_whatchacallitsname.png)<br/>Design By: [@decoyman1200](https://instagram.com/decoyman1200)     | ![](/assets/recipes/miku-plushie_teto_plush_whatchacallitsname.png) |
 
 
 
