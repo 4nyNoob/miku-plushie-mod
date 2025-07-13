@@ -100,6 +100,10 @@ BEHOLD!! Hatsune Miku<br/>
 |                       **Psycho Mode Miku Plush** <br/> ![](/assets/blocks/miku_plush_psycho_mode.png)<br/>Design By: [@c4ppu](https://x.com/c4ppu)                       |    ![](/assets/recipes/miku-plushie_miku_plush_psycho_mode.png)     |
 |           **Don't Believe In T Miku Plush** <br/> ![](/assets/blocks/miku_plush_dont_believe_in_t.png)<br/>Design By: [@pinocchiop](https://x.com/@pinocchiop)           | ![](/assets/recipes/miku-plushie_miku_plush_dont_believe_in_t.png)  |
 |           **Don't Believe In T Teto Plush** <br/> ![](/assets/blocks/teto_plush_dont_believe_in_t.png)<br/>Design By: [@pinocchiop](https://x.com/@pinocchiop)           | ![](/assets/recipes/miku-plushie_teto_plush_dont_believe_in_t.png)  |
+|                **Liar Dancer Teto Plush** <br/> ![](/assets/blocks/teto_plush_liar_dancer.png)<br/>Design By: [@sisterofoira](https://x.com/sisterofoira)                |    ![](/assets/recipes/miku-plushie_teto_plush_liar_dancer.png)     |
+|                       **Static Miku Plush** <br/> ![](/assets/blocks/miku_plush_static.png)<br/>Design By: [@ricedeity](https://x.com/@ricedeity)                        |       ![](/assets/recipes/miku-plushie_miku_plush_static.png)       |
+|                  **Mochimochi Miku Plush** <br/> ![](/assets/blocks/miku_plush_mochimochi.png)<br/>Design By: [@dolman4878](https://x.com/@dolman4878)                   |     ![](/assets/recipes/miku-plushie_miku_plush_mochimochi.png)     |
+|     **Don't Believe In T Teto Plush** <br/> ![](/assets/blocks/teto_plush_whatchacallitsname.png)<br/>Design By: [@decoyman1200](https://instagram.com/decoyman1200)     | ![](/assets/recipes/miku-plushie_teto_plush_whatchacallitsname.png) |
 
 
 
