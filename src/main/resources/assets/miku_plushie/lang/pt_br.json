@@ -112,8 +112,8 @@
   "block.miku_plushie.miku_plush_mesmerizer": "Pelúcia Da Miku Mesmerizer",
   "item.miku_plushie.miku_plush_mesmerizer.tooltip": "§b§n@channelcaststation",
   "block.miku_plushie.teto_plush_mesmerizer": "Pelúcia Da Teto Mesmerizer",
-  "item.miku_plushie.teto_pickaxe_mesmerizer.tooltip": "§b§n@channelcaststation",
-  "item.miku_plushie.teto_pickaxe_mesmerizer": "Picareta da Teto Mesmerizer",
+  "item.miku_plushie.teto_plush_mesmerizer.tooltip": "§b§n@channelcaststation",
+  "item.miku_plushie.teto_pickaxe_mesmerizer": "Picareta Da Teto Mesmerizer",
 
   "block.miku_plushie.miku_plush_sonic": "Pelúcia Da Sonic Miku",
   "item.miku_plushie.miku_plush_sonic.tooltip": "§b§n@4ny.bsky.social",
@@ -179,7 +179,7 @@
   "sound.teto_plushie.oie": "Teto: Oie",
   "sound.teto_plushie.dor": "Teto: Dor",
   "sound.teto_plushie.bye": "Teto: Tchau",
-  "sound.teto_plushie.equip": "Teto: Equipada",
+  "sound.teto_plushie.equip": "Aiko: Equipada",
 
   "sound.neru_plushie.oie": "Akita Neru: Oie",
   "sound.neru_plushie.dor": "Akita Neru: Dor",

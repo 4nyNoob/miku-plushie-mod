@@ -23,7 +23,7 @@ license="GNU GPL V3"
 modId="miku_plushie" #mandatory
 
 # The version number of the mod
-version="1.6-1.21.1" #mandatory
+version="1.7.1-1.21.1" #mandatory
 
 # A display name for the mod
 displayName="Miku Plushie" #mandatory
@@ -32,7 +32,7 @@ displayName="Miku Plushie" #mandatory
 #updateJSONURL="https://change.me.example.invalid/updates.json" #optional
 
 # A URL for the "homepage" for this mod, displayed in the mod UI
-#displayURL="https://change.me.to.your.mods.homepage.example.invalid/" #optional
+displayURL="https://github.com/4nyNoob/miku-plushie-mod" #optional
 
 # A file name (in the root of the mod JAR) containing a logo for display
 logoFile="icon.png" #optional

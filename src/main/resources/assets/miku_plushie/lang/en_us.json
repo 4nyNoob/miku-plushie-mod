@@ -112,7 +112,7 @@
   "block.miku_plushie.miku_plush_mesmerizer": "Mesmerizer Miku Plush",
   "item.miku_plushie.miku_plush_mesmerizer.tooltip": "§b§n@channelcaststation",
   "block.miku_plushie.teto_plush_mesmerizer": "Mesmerizer Teto Plush",
-  "item.miku_plushie.teto_pickaxe_mesmerizer.tooltip": "§b§n@channelcaststation",
+  "item.miku_plushie.teto_plush_mesmerizer.tooltip": "§b§n@channelcaststation",
   "item.miku_plushie.teto_pickaxe_mesmerizer": "Mesmerizer Teto Pickaxe",
 
   "block.miku_plushie.miku_plush_sonic": "Sonic Miku Plush",
@@ -179,7 +179,7 @@
   "sound.teto_plushie.oie": "Teto: Hi",
   "sound.teto_plushie.dor": "Teto: Pain",
   "sound.teto_plushie.bye": "Teto: Bye",
-  "sound.teto_plushie.equip": "Teto: Equip",
+  "sound.teto_plushie.equip": "Aiko: Equip",
 
   "sound.neru_plushie.oie": "Akita Neru: Hi",
   "sound.neru_plushie.dor": "Akita Neru: Pain",
