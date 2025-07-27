@@ -695,10 +695,10 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 				.pattern("121")
 				.pattern("131")
 				.input('1', Items.CYAN_WOOL)
-				.input('2', Items.WHITE_WOOL)
+				.input('2', Items.MAGENTA_WOOL)
 				.input('3', Items.BLACK_WOOL)
 				.criterion(FabricRecipeProvider.hasItem(Items.CYAN_WOOL), FabricRecipeProvider.conditionsFromItem(Items.CYAN_WOOL))
-				.criterion(FabricRecipeProvider.hasItem(Items.WHITE_WOOL), FabricRecipeProvider.conditionsFromItem(Items.WHITE_WOOL))
+				.criterion(FabricRecipeProvider.hasItem(Items.MAGENTA_WOOL), FabricRecipeProvider.conditionsFromItem(Items.MAGENTA_WOOL))
 				.criterion(FabricRecipeProvider.hasItem(Items.BLACK_WOOL), FabricRecipeProvider.conditionsFromItem(Items.BLACK_WOOL))
 				.offerTo(exporter);
 
