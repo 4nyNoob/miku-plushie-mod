@@ -1,4 +1,4 @@
-// 1.20.1	2025-07-11T11:19:44.037610002	miku plushies/Block Loot Tables
+// 1.20.1	2025-07-27T10:09:10.626089487	miku plushies/Block Loot Tables
 9780fd8b35e0d523ecbda361f6492d421c8b8ba4 data/miku-plushie/loot_tables/blocks/teto_plush_whatchacallitsname.json
 1605dca8474dc1cb7ac58d618cbdcc6b4c0ca9fb data/miku-plushie/loot_tables/blocks/miku_plush_br_sp.json
 4fab21a53ca84094f118efd3d57687ff24147a1f data/miku-plushie/loot_tables/blocks/teto_plush_mesmerizer.json
@@ -24,8 +24,8 @@ df886a04fb3b3364f05fbbc063e2653b4ef9c5ba data/miku-plushie/loot_tables/blocks/mi
 c8a0509df1543d36ec3c19a7d905b00a8e88fc20 data/miku-plushie/loot_tables/blocks/miku_plush_br_go.json
 f1fbdfe3754d8395a66add8a7737a4f354c6f7d1 data/miku-plushie/loot_tables/blocks/miku_plush_senbonzakura.json
 b4f73d60abb9faa63d1134aa3fb2f325bfcdcb92 data/miku-plushie/loot_tables/blocks/miku_plush_personadancing.json
-0055e68cf80c8c3c5bd875bba36ddc7859577922 data/miku-plushie/loot_tables/blocks/miku_plush_mesmerizer.json
 d36adccb87a5ac543b64c2b85553704fab2d7d07 data/miku-plushie/loot_tables/blocks/teto_plush_birdbrain.json
+0055e68cf80c8c3c5bd875bba36ddc7859577922 data/miku-plushie/loot_tables/blocks/miku_plush_mesmerizer.json
 c3c9081777252a88fb69c21c0a80a70369ccda3d data/miku-plushie/loot_tables/blocks/miku_plush_santa_elf.json
 98d66e332924e1e96c41d77802cb173a5621e04c data/miku-plushie/loot_tables/blocks/miku_plush_rotten_girl.json
 018d7bae8afcbdde15e6e380d7d1c24066537ef3 data/miku-plushie/loot_tables/blocks/miku_plush_jason.json
