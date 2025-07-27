@@ -8,10 +8,10 @@ name: build
 n:
     push:
         branches:
-            - fabric-1.21.1
+            - 'fabric-1.21.1'
     pull_request:
         branches:
-            - fabric-1.21.1
+            - 'fabric-1.21.1'
 
 jobs:
   build:
