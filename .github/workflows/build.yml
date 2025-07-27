@@ -5,13 +5,13 @@
 
 name: build
 #on: [pull_request, push]
-n:
+on:
     push:
         branches:
-            - fabric-1.21.1
+            - 'fabric-1.21.1'
     pull_request:
         branches:
-            - fabric-1.21.1
+            - 'fabric-1.21.1'
 
 jobs:
   build:
