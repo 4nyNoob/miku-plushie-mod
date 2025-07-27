@@ -4,7 +4,14 @@
 # against bad commits.
 
 name: build
-on: [pull_request, push]
+#on: [pull_request, push]
+n:
+    push:
+        branches:
+            - fabric-1.21.1
+    pull_request:
+        branches:
+            - fabric-1.21.1
 
 jobs:
   build:
