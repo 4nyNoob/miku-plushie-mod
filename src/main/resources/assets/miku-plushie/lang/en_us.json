@@ -194,5 +194,10 @@
   "sound.len-plushie.oie": "Len: Hi",
   "sound.len-plushie.dor": "Len: Pain",
   "sound.len-plushie.bye": "Len: Bye",
-  "sound.len-plushie.equip": "Len: Equip"
+  "sound.len-plushie.equip": "Len: Equip",
+
+  "sound.luka-plushie.oie": "Luka: Hi",
+  "sound.luka-plushie.dor": "Luka: Pain",
+  "sound.luka-plushie.bye": "Luka: Bye",
+  "sound.luka-plushie.equip": "Len: Equip"
 }

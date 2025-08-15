@@ -153,6 +153,10 @@
 
   "block.miku-plushie.miku_plush_monitoring": "Pelúcia Da Miku Monitora",
   "item.miku-plushie.miku_plush_monitoring.tooltip": "§b§n@kee00210",
+  "block.miku-plushie.luka_plush": "Pelúcia Da Megurine Luka",
+  "item.miku-plushie.luka_plush.tooltip": "§b§n@keigarou",
+  "block.miku-plushie.konoha_plush": "Pelúcia Do Konoha",
+  "item.miku-plushie.konoha_plush.tooltip": "§b§n@Dsd_kgn",
 
 
 
@@ -194,5 +198,10 @@
   "sound.len-plushie.oie": "Len: Oie",
   "sound.len-plushie.dor": "Len: Dor",
   "sound.len-plushie.bye": "Len: Tchau",
-  "sound.len-plushie.equip": "Len: Equipado"
+  "sound.len-plushie.equip": "Len: Equipado",
+
+  "sound.luka-plushie.oie": "Luka: Oie",
+  "sound.luka-plushie.dor": "Luka: Dor",
+  "sound.luka-plushie.bye": "Luka: Tchau",
+  "sound.luka-plushie.equip": "Luka: Equipada"
 }
