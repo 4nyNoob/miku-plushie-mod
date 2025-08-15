@@ -187,6 +187,10 @@ public class ModItems {
 		register(new PickaxeItem(PlushToolMaterial.PLUSH_TOOL_MATERIAL, new Item.Settings()), "teto_pickaxe_whatchacallitsname");
 	public static final Item MIKU_PLUSH_MONITORING =
 		register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_MONITORING, new Item.Settings()), "miku_plush_monitoring");
+    public static final Item KONOHA_PLUSH =
+        register(new MikuPlushieBlockItem(ModBlocks.KONOHA_PLUSH, new Item.Settings()), "konoha_plush");
+    public static final Item LUKA_PLUSH =
+        register(new MikuPlushieBlockItem(ModBlocks.LUKA_PLUSH, new Item.Settings()), "luka_plush");
 
 
 
@@ -291,6 +295,8 @@ public class ModItems {
 			itemGroup.add(ModItems.TETO_PLUSH_WHATCHACALLITSNAME);
 			itemGroup.add(ModItems.TETO_PICKAXE_WHATCHACALLITSNAME);
 			itemGroup.add(ModItems.MIKU_PLUSH_MONITORING);
+			itemGroup.add(ModItems.KONOHA_PLUSH);
+			itemGroup.add(ModItems.LUKA_PLUSH);
 		});
 	}
 }

@@ -25,6 +25,7 @@ public class ModTagProvider extends FabricTagProvider.ItemTagProvider {
     public static final TagKey<Item> AKITA_NERU_PLUSH = TagKey.of(RegistryKeys.ITEM, Identifier.of(MikuPlushie.MOD_ID, "akita_neru_plush"));
     public static final TagKey<Item> RIN_PLUSH = TagKey.of(RegistryKeys.ITEM, Identifier.of(MikuPlushie.MOD_ID, "rin_plush"));
     public static final TagKey<Item> LEN_PLUSH = TagKey.of(RegistryKeys.ITEM, Identifier.of(MikuPlushie.MOD_ID, "len_plush"));
+    public static final TagKey<Item> LUKA_PLUSH = TagKey.of(RegistryKeys.ITEM, Identifier.of(MikuPlushie.MOD_ID, "luka_plush"));
 
     @Override
     protected void configure(RegistryWrapper.WrapperLookup wrapperLookup) {
@@ -119,6 +120,9 @@ public class ModTagProvider extends FabricTagProvider.ItemTagProvider {
         ;
         getOrCreateTagBuilder(LEN_PLUSH)
             .add(ModItems.LEN_PLUSH)
+        ;
+        getOrCreateTagBuilder(LUKA_PLUSH)
+            .add(ModItems.LUKA_PLUSH)
         ;
     }
 }
