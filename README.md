@@ -118,6 +118,8 @@ If you enjoy what I do, consider supporting me on Ko-fi! https://ko-fi.com/4nyno
 |                  **Mochimochi Miku Plush** <br/> ![](/assets/blocks/miku_plush_mochimochi.png)<br/>Design By: [@dolman4878](https://x.com/@dolman4878)                   |     ![](/assets/recipes/miku-plushie_miku_plush_mochimochi.png)     |
 |     **Whatchacallitsname Teto Plush** <br/> ![](/assets/blocks/teto_plush_whatchacallitsname.png)<br/>Design By: [@decoyman1200](https://instagram.com/decoyman1200)     | ![](/assets/recipes/miku-plushie_teto_plush_whatchacallitsname.png) |
 |                 **Whatchacallitsname Teto Plush** <br/> ![](/assets/blocks/miku_plush_monitoring.png)<br/>Design By: [@kee00210](https://x.com/kee00210)                 |     ![](/assets/recipes/miku-plushie_miku_plush_monitoring.png)     |
+|                           **Megurine Luka Plush** <br/> ![](/assets/blocks/luka_plush.png)<br/>Design By: [@keigarou](https://x.com/keigarou)                            |          ![](/assets/recipes/miku-plushie_luka_plush.png)           |
+|                              **Konoha Plush** <br/> ![](/assets/blocks/konoha_plush.png)<br/>Design By: [@Dsd_kgn](https://x.com/Dsd_kgn)                              |         ![](/assets/recipes/miku-plushie_konoha_plush.png)          |
 
 
 
