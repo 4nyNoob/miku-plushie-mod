@@ -1,4 +1,4 @@
-// 1.21.1	2025-07-27T10:51:08.960843289	miku plushies/Block Loot Tables
+// 1.21.1	2025-08-15T11:38:21.020847793	miku plushies/Block Loot Tables
 c3c9081777252a88fb69c21c0a80a70369ccda3d data/miku-plushie/loot_table/blocks/miku_plush_santa_elf.json
 f97a600e3b555cef570cb1a63851780a0f892816 data/miku-plushie/loot_table/blocks/miku_plush_pumpkin.json
 0eba200658eba0716c9fe397867e35dcfd069969 data/miku-plushie/loot_table/blocks/miku_plush_ghost.json
@@ -17,6 +17,7 @@ dcd9c2497b3df29a750fa506567f3f4b9d26aac8 data/miku-plushie/loot_table/blocks/mik
 b4f73d60abb9faa63d1134aa3fb2f325bfcdcb92 data/miku-plushie/loot_table/blocks/miku_plush_personadancing.json
 b791359373220df6e9415296efe6015189e30f53 data/miku-plushie/loot_table/blocks/miku_plush_br_rs.json
 bb3a4eb9eec16987d8a09f5e74306c34e201efc9 data/miku-plushie/loot_table/blocks/miku_plush_zatsune.json
+4912f9c5397eaf884020bf41f24c5d1b52dc21dd data/miku-plushie/loot_table/blocks/konoha_plush.json
 da2dcc7caf5078f3b17da6942ecea62035e6b676 data/miku-plushie/loot_table/blocks/miku_plush_uraotomelovers.json
 97705567dfc6f80b78d4ae956e652a3136a7865a data/miku-plushie/loot_table/blocks/miku_plush_helloplanet.json
 93b11cd16ce81b4c9455e9703970fa1c1ca6a2bd data/miku-plushie/loot_table/blocks/miku_plush_michael_myers.json
@@ -34,6 +35,7 @@ f2026b8353e631bbb66a373414c7b4c0061902f9 data/miku-plushie/loot_table/blocks/mik
 7918b376397ee07ea23ef92cad55fea80838ff5a data/miku-plushie/loot_table/blocks/miku_plush_reindeer.json
 1605dca8474dc1cb7ac58d618cbdcc6b4c0ca9fb data/miku-plushie/loot_table/blocks/miku_plush_br_sp.json
 0c154444201255fa994c3038e5b13ef363dc6f70 data/miku-plushie/loot_table/blocks/miku_plush_br_ba.json
+cc234190234f43cee0d3434e4f984586443fe66e data/miku-plushie/loot_table/blocks/luka_plush.json
 585fa49ba7f5d053094f1f0f23dde478473dc180 data/miku-plushie/loot_table/blocks/miku_plush_monitoring.json
 7784b6d2c75ca8e007c8d1487ce7078727b29bd7 data/miku-plushie/loot_table/blocks/miku_plush_infinity.json
 3a0f1bd85d1467bf9ca9381f28d337d4a2914bf6 data/miku-plushie/loot_table/blocks/miku_plush_br_electrician.json

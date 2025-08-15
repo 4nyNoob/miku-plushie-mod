@@ -11,6 +11,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.tooltip.TooltipType;
 import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.sound.SoundEvent;
+import net.minecraft.sound.SoundEvents;
 import net.minecraft.text.Text;
 
 import java.util.List;
@@ -81,7 +82,9 @@ public class MikuPlushieBlockItem extends BlockItem implements Equipment {
 		if (stack.isIn(ModTagProvider.LUKA_PLUSH)) {
 			return RegistryEntry.of(ModSoundEvents.LUKA_EQUIP);
 		}
-
-		return RegistryEntry.of(ModSoundEvents.MIKU_EQUIP);
+		if (stack.isIn(ModTagProvider.BR_MIKU_ITEMS)) {
+            return RegistryEntry.of(ModSoundEvents.MIKU_EQUIP);
+		}
+        return RegistryEntry.of(SoundEvents.BLOCK_WOOL_PLACE);
 	}
 }
