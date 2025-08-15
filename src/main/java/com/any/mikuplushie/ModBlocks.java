@@ -581,6 +581,22 @@ public class ModBlocks {
 		"miku_plush_monitoring",
 		false
 	);
+	public static final Block KONOHA_PLUSH = register(
+		new MikuPlushieBlock(AbstractBlock.Settings.copy(Blocks.FLOWER_POT)
+			.sounds(BlockSoundGroup.WOOL)
+			.nonOpaque()
+		),
+		"konoha_plush",
+		false
+	);
+	public static final Block LUKA_PLUSH = register(
+		new MikuPlushieBlock(AbstractBlock.Settings.copy(Blocks.FLOWER_POT)
+			.sounds(BlockSoundGroup.WOOL)
+			.nonOpaque()
+		),
+		"luka_plush",
+		false
+	);
 
 
 

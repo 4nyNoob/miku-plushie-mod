@@ -86,5 +86,7 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
 		addDrop(ModBlocks.MIKU_PLUSH_MOCHIMOCHI, ModItems.MIKU_PLUSH_MOCHIMOCHI);
 		addDrop(ModBlocks.TETO_PLUSH_WHATCHACALLITSNAME, ModItems.TETO_PLUSH_WHATCHACALLITSNAME);
 		addDrop(ModBlocks.MIKU_PLUSH_MONITORING, ModItems.MIKU_PLUSH_MONITORING);
+		addDrop(ModBlocks.KONOHA_PLUSH, ModItems.KONOHA_PLUSH);
+		addDrop(ModBlocks.LUKA_PLUSH, ModItems.LUKA_PLUSH);
 	}
 }

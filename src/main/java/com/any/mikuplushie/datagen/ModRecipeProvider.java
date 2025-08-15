@@ -924,5 +924,27 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 			.criterion(FabricRecipeProvider.hasItem(Items.SPYGLASS), FabricRecipeProvider.conditionsFromItem(Items.SPYGLASS))
 			.offerTo(exporter);
 
+        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ModBlocks.KONOHA_PLUSH)
+            .pattern("121")
+            .pattern("323")
+            .input('1', Items.WHITE_WOOL)
+            .input('2', Items.LIGHT_GRAY_WOOL)
+            .input('3', Items.LIME_WOOL)
+            .criterion(FabricRecipeProvider.hasItem(Items.WHITE_WOOL), FabricRecipeProvider.conditionsFromItem(Items.WHITE_WOOL))
+            .criterion(FabricRecipeProvider.hasItem(Items.LIGHT_GRAY_WOOL), FabricRecipeProvider.conditionsFromItem(Items.LIGHT_GRAY_WOOL))
+            .criterion(FabricRecipeProvider.hasItem(Items.LIME_WOOL), FabricRecipeProvider.conditionsFromItem(Items.LIME_WOOL))
+            .offerTo(exporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ModBlocks.LUKA_PLUSH)
+            .pattern("121")
+            .pattern("131")
+            .input('1', Items.PINK_WOOL)
+            .input('2', Items.YELLOW_WOOL)
+            .input('3', Items.BROWN_WOOL)
+            .criterion(FabricRecipeProvider.hasItem(Items.PINK_WOOL), FabricRecipeProvider.conditionsFromItem(Items.PINK_WOOL))
+            .criterion(FabricRecipeProvider.hasItem(Items.YELLOW_WOOL), FabricRecipeProvider.conditionsFromItem(Items.YELLOW_WOOL))
+            .criterion(FabricRecipeProvider.hasItem(Items.BROWN_WOOL), FabricRecipeProvider.conditionsFromItem(Items.BROWN_WOOL))
+            .offerTo(exporter);
+
 	}
 }

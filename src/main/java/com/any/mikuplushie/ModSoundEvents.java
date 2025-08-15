@@ -46,6 +46,12 @@ public class ModSoundEvents {
 	public static final SoundEvent LEN_BYE = registerSound("len_bye");
 	public static final SoundEvent LEN_EQUIP = registerSound("len_equip");
 
+	//LUKA VOICE
+	public static final SoundEvent LUKA_OIE = registerSound("luka_oie");
+	public static final SoundEvent LUKA_DOR = registerSound("luka_dor");
+	public static final SoundEvent LUKA_BYE = registerSound("luka_bye");
+	public static final SoundEvent LUKA_EQUIP = registerSound("luka_equip");
+
 	private static SoundEvent registerSound(String id) {
 		Identifier identifier = Identifier.of(MikuPlushie.MOD_ID, id);
 		return Registry.register(Registries.SOUND_EVENT, identifier, SoundEvent.of(identifier));

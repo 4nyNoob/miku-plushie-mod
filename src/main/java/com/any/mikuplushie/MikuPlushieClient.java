@@ -86,6 +86,10 @@ public class MikuPlushieClient implements ClientModInitializer {
 
 		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.LEN_PLUSH, RenderLayer.getCutout());
 
+		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.LUKA_PLUSH, RenderLayer.getCutout());
+
+		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.KONOHA_PLUSH, RenderLayer.getCutout());
+
 
 
 		//TRANSLUCENT

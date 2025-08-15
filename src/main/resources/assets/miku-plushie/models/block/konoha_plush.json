@@ -3,7 +3,8 @@
 	"credit": "Made with Blockbench",
 	"texture_size": [64, 64],
 	"textures": {
-		"1": "miku-plushie:block/konoha-plush"
+		"1": "miku-plushie:block/konoha-plush",
+		"particle": "miku-plushie:block/konoha-plush"
 	},
 	"elements": [
 		{

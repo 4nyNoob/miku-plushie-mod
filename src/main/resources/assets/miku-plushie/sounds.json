@@ -296,5 +296,54 @@
       "miku-plushie:len/len-equip3",
       "miku-plushie:len/len-equip4"
     ]
+  },
+
+
+
+  "luka_oie" : {
+    "subtitle": "sound.luka-plushie.oie",
+    "sounds": [
+      "miku-plushie:luka/luka-oie1",
+      "miku-plushie:luka/luka-oie2",
+      "miku-plushie:luka/luka-oie3",
+      "miku-plushie:luka/luka-oie4",
+      "miku-plushie:luka/luka-oie5",
+      "miku-plushie:luka/luka-oie6"
+    ]
+  },
+  "luka_dor" : {
+    "subtitle": "sound.luka-plushie.dor",
+    "sounds": [
+      "miku-plushie:luka/luka-dor1",
+      "miku-plushie:luka/luka-dor2",
+      "miku-plushie:luka/luka-dor3",
+      "miku-plushie:luka/luka-dor4",
+      "miku-plushie:luka/luka-dor5",
+      "miku-plushie:luka/luka-dor6",
+      "miku-plushie:luka/luka-dor7",
+      "miku-plushie:luka/luka-dor8",
+      "miku-plushie:luka/luka-dor9"
+    ]
+  },
+  "luka_bye" : {
+    "subtitle": "sound.luka-plushie.bye",
+    "sounds": [
+      "miku-plushie:luka/luka-bye1",
+      "miku-plushie:luka/luka-bye2",
+      "miku-plushie:luka/luka-bye3",
+      "miku-plushie:luka/luka-bye4",
+      "miku-plushie:luka/luka-bye5",
+      "miku-plushie:luka/luka-bye6",
+      "miku-plushie:luka/luka-bye7"
+    ]
+  },
+  "luka_equip" : {
+    "subtitle": "sound.luka-plushie.equip",
+    "sounds": [
+      "miku-plushie:luka/luka-equip1",
+      "miku-plushie:luka/luka-equip2",
+      "miku-plushie:luka/luka-equip3",
+      "miku-plushie:luka/luka-equip4"
+    ]
   }
 }
