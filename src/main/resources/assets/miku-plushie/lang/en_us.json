@@ -183,7 +183,7 @@
   "sound.teto-plushie.oie": "Teto: Hi",
   "sound.teto-plushie.dor": "Teto: Pain",
   "sound.teto-plushie.bye": "Teto: Bye",
-  "sound.teto-plushie.equip": "Aiko: Equip",
+  "sound.teto-plushie.equip": "Teto: Equip",
 
   "sound.neru-plushie.oie": "Akita Neru: Hi",
   "sound.neru-plushie.dor": "Akita Neru: Pain",
@@ -198,5 +198,10 @@
   "sound.len-plushie.oie": "Len: Hi",
   "sound.len-plushie.dor": "Len: Pain",
   "sound.len-plushie.bye": "Len: Bye",
-  "sound.len-plushie.equip": "Len: Equip"
+  "sound.len-plushie.equip": "Len: Equip",
+
+  "sound.luka-plushie.oie": "Luka: Hi",
+  "sound.luka-plushie.dor": "Luka: Pain",
+  "sound.luka-plushie.bye": "Luka: Bye",
+  "sound.luka-plushie.equip": "Len: Equip"
 }
