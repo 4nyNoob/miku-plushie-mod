@@ -79,7 +79,7 @@ public class MikuPlushieBlockItem extends BlockItem implements Equipment {
 			return RegistryEntry.of(ModSoundEvents.LEN_EQUIP);
 		}
 		if (stack.isIn(ModTagProvider.LUKA_PLUSH)) {
-			return ModSoundEvents.LUKA_EQUIP;
+			return RegistryEntry.of(ModSoundEvents.LUKA_EQUIP);
 		}
 
 		return RegistryEntry.of(ModSoundEvents.MIKU_EQUIP);
