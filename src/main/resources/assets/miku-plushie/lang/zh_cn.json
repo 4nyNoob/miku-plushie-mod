@@ -112,7 +112,7 @@
   "block.miku-plushie.miku_plush_mesmerizer": "催眠者 初音毛绒玩具",
   "item.miku-plushie.miku_plush_mesmerizer.tooltip": "§b§n@channelcaststation",
   "block.miku-plushie.teto_plush_mesmerizer": "催眠者 重音毛绒玩具",
-  "item.miku-plushie.teto_pickaxe_mesmerizer.tooltip": "§b§n@channelcaststation",
+  "item.miku-plushie.teto_plush_mesmerizer.tooltip": "§b§n@channelcaststation",
   "item.miku-plushie.teto_pickaxe_mesmerizer": "催眠者 重音镐",
 
   "block.miku-plushie.miku_plush_sonic": "索尼克 初音毛绒玩具",
@@ -124,6 +124,7 @@
   "block.miku-plushie.teto_plush_birdbrain": "头脑简单如鸟 重音毛绒玩具",
   "item.miku-plushie.teto_plush_birdbrain.tooltip": "§b§n@4ny.bsky.social",
   "item.miku-plushie.teto_pickaxe_birdbrain": "头脑简单如鸟 重音镐",
+
   "block.miku-plushie.miku_plush_digital_stars_2025": "Digital Stars 2025 初音毛绒玩具",
   "item.miku-plushie.miku_plush_digital_stars_2025.tooltip": "§b§n@lalalalack",
   "block.miku-plushie.miku_plush_rotten_girl": "腐女 初音毛绒玩具",
@@ -131,6 +132,7 @@
   "block.miku-plushie.teto_plush_regret_rock": "Regret Rock 重音毛绒玩具",
   "item.miku-plushie.teto_plush_regret_rock.tooltip": "§b§n@neo_399",
   "item.miku-plushie.teto_pickaxe_regret_rock": "Regret Rock 重音镐",
+
   "block.miku-plushie.miku_plush_psycho_mode": "孤独疯批 初音毛绒玩具",
   "item.miku-plushie.miku_plush_psycho_mode.tooltip": "§b§n@dolman4878",
   "block.miku-plushie.miku_plush_dont_believe_in_t": "Don't Believe In T 初音毛绒玩具",
@@ -148,34 +150,58 @@
   "block.miku-plushie.teto_plush_whatchacallitsname": "Whatchacallitsname 重音毛绒玩具",
   "item.miku-plushie.teto_plush_whatchacallitsname.tooltip": "§b§n@decoyman1200",
   "item.miku-plushie.teto_pickaxe_whatchacallitsname": "Whatchacallitsname 重音镐",
+
   "block.miku-plushie.miku_plush_monitoring": "视奸 初音毛绒玩具",
   "item.miku-plushie.miku_plush_monitoring.tooltip": "§b§n@kee00210",
+  "block.miku-plushie.luka_plush": "Megurine 巡音毛绒玩具",
+  "item.miku-plushie.luka_plush.tooltip": "§b§n@keigarou",
+  "block.miku-plushie.konoha_plush": "Konoha 毛绒玩具",
+  "item.miku-plushie.konoha_plush.tooltip": "§b§n@Dsd_kgn",
+
+
+
   "item.group.miku_plushies": "Mikus!!",
+
+
+
   "item.miku-plushie.canudinho": "Canudinho",
   "item.miku-plushie.baguette": "法棍面包",
+
+
+
   "sound.miku-plushie.canudinho": "初音: Canudinho",
   "sound.miku-plushie.oie": "初音: 嗨",
   "sound.miku-plushie.dor": "初音: 痛苦",
   "sound.miku-plushie.bye": "初音: 再见",
   "sound.miku-plushie.equip": "初音: 装备",
+
   "sound.aiko-plushie.oie": "爱子: 嗨",
   "sound.aiko-plushie.dor": "爱子: 痛苦",
   "sound.aiko-plushie.bye": "爱子: 再见",
   "sound.aiko-plushie.equip": "爱子: 装备",
+
   "sound.teto-plushie.oie": "重音: 嗨",
   "sound.teto-plushie.dor": "重音: 痛苦",
   "sound.teto-plushie.bye": "重音: 再见",
   "sound.teto-plushie.equip": "重音: 装备",
+
   "sound.neru-plushie.oie": "亚北: 嗨",
   "sound.neru-plushie.dor": "亚北: 痛苦",
   "sound.neru-plushie.bye": "亚北: 再见",
   "sound.neru-plushie.equip": "亚北: 装备",
+
   "sound.rin-plushie.oie": "镜音铃: 嗨",
   "sound.rin-plushie.dor": "镜音铃: 痛苦",
   "sound.rin-plushie.bye": "镜音铃: 再见",
   "sound.rin-plushie.equip": "镜音铃: 装备",
+
   "sound.len-plushie.oie": "镜音连: 嗨",
   "sound.len-plushie.dor": "镜音连: 痛苦",
   "sound.len-plushie.bye": "镜音连: 再见",
-  "sound.len-plushie.equip": "镜音连: 装备"
+  "sound.len-plushie.equip": "镜音连: 装备",
+
+  "sound.luka-plushie.oie": "巡音: 嗨",
+  "sound.luka-plushie.dor": "巡音: 痛苦",
+  "sound.luka-plushie.bye": "巡音: 再见",
+  "sound.luka-plushie.equip": "巡音: 装备"
 }
