@@ -42,4 +42,9 @@ public class ModSoundEvents {
 	public static final Holder<SoundEvent> LEN_DOR = SOUND_EVENTS.register("len_dor", SoundEvent::createVariableRangeEvent);
 	public static final Holder<SoundEvent> LEN_BYE = SOUND_EVENTS.register("len_bye", SoundEvent::createVariableRangeEvent);
 	public static final Holder<SoundEvent> LEN_EQUIP = SOUND_EVENTS.register("len_equip", SoundEvent::createVariableRangeEvent);
+
+    public static final Holder<SoundEvent> LUKA_OIE = SOUND_EVENTS.register("luka_oie", SoundEvent::createVariableRangeEvent);
+    public static final Holder<SoundEvent> LUKA_DOR = SOUND_EVENTS.register("luka_dor", SoundEvent::createVariableRangeEvent);
+    public static final Holder<SoundEvent> LUKA_BYE = SOUND_EVENTS.register("luka_bye", SoundEvent::createVariableRangeEvent);
+    public static final Holder<SoundEvent> LUKA_EQUIP = SOUND_EVENTS.register("luka_equip", SoundEvent::createVariableRangeEvent);
 }

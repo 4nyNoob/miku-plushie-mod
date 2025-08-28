@@ -90,6 +90,8 @@ public class ModModelProvider extends BlockStateProvider {
 		horizontalBlockState(ModBlocks.MIKU_PLUSH_MOCHIMOCHI);
 		horizontalBlockState(ModBlocks.TETO_PLUSH_WHATCHACALLITSNAME);
 		horizontalBlockState(ModBlocks.MIKU_PLUSH_MONITORING);
+        horizontalBlockState(ModBlocks.KONOHA_PLUSH);
+        horizontalBlockState(ModBlocks.LUKA_PLUSH);
 	}
 
 	public void horizontalBlockState(DeferredBlock<? extends Block> block){

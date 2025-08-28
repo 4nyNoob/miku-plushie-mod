@@ -1,8 +1,10 @@
-// 1.21.1	2025-07-11T18:28:33.532998124	Loot Tables
+// 1.21.1	2025-08-26T23:40:49.165725836	Loot Tables
 8c2a8b39a8d7de29f5fb3ee62aafb39485c00e04 data/miku_plushie/loot_table/blocks/aiko_plush.json
 01d0aa7e0fec271834f66b4a750ca7affcf3cc7e data/miku_plushie/loot_table/blocks/akita_neru_plush.json
 718269898661f3c962f45906f92a6da9a5e96fdc data/miku_plushie/loot_table/blocks/akita_neru_plush_tails.json
+306ce06fb61c9aa306d03be8b05d03bf2fd11576 data/miku_plushie/loot_table/blocks/konoha_plush.json
 9aac7c62aab30f4a08ac8b49b692414e4a529a75 data/miku_plushie/loot_table/blocks/len_plush.json
+de756b8f2f4f2f46e005e8a4530d794a1a8ec771 data/miku_plushie/loot_table/blocks/luka_plush.json
 54ed15bf44085d094555980a9def079566e51f88 data/miku_plushie/loot_table/blocks/miku_plush.json
 1bc722fce4f26571c56aea5fbed5cc1a6cff6e81 data/miku_plushie/loot_table/blocks/miku_plush_bik.json
 5eb3b06cf95de9e8c021c0d44217d104e1d26b92 data/miku_plushie/loot_table/blocks/miku_plush_br.json

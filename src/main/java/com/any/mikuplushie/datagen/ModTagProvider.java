@@ -21,6 +21,8 @@ public class ModTagProvider extends ItemTagsProvider {
     public static final TagKey<Item> AKITA_NERU_PLUSH = TagKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(MikuPlushie.MOD_ID, "akita_neru_plushie"));
     public static final TagKey<Item> RIN_PLUSH = TagKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(MikuPlushie.MOD_ID, "rin_plushie"));
     public static final TagKey<Item> LEN_PLUSH = TagKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(MikuPlushie.MOD_ID, "len_plushie"));
+    public static final TagKey<Item> KONOHA_PLUSH = TagKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(MikuPlushie.MOD_ID, "konoha_plushie"));
+    public static final TagKey<Item> LUKA_PLUSH = TagKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(MikuPlushie.MOD_ID, "luka_plushie"));
     public static final TagKey<Item> TETO_PICKAXE = TagKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(MikuPlushie.MOD_ID, "teto_pickaxe"));
 
     public ModTagProvider(

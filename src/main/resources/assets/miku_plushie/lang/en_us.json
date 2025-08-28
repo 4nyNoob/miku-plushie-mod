@@ -105,7 +105,7 @@
   "item.miku_plushie.len_plush.tooltip": "§b§n@iximaxima",
   "block.miku_plushie.miku_plush_sonic_crossworlds": "Sonic Crossworlds Miku Plush",
   "item.miku_plushie.miku_plush_sonic_crossworlds.tooltip": "§b§nSEGA",
-  "block.miku_plushie.miku_plush_fortnite_neko": "Fortnite Neko Miku Plush",
+  "block.miku_plushie.miku_plush_fortnite_neko": "Forknife Neko Miku Plush",
   "item.miku_plushie.miku_plush_fortnite_neko.tooltip": "§b§nEpic Games",
   "block.miku_plushie.miku_plush_v4": "Miku Plush V4",
   "item.miku_plushie.miku_plush_v4.tooltip": "§b§n@iximaxima",
@@ -153,6 +153,10 @@
 
   "block.miku_plushie.miku_plush_monitoring": "Monitoring Miku Plush",
   "item.miku_plushie.miku_plush_monitoring.tooltip": "§b§n@kee00210",
+  "block.miku_plushie.luka_plush": "Megurine Luka Plush",
+  "item.miku_plushie.luka_plush.tooltip": "§b§n@keigarou",
+  "block.miku_plushie.konoha_plush": "Konoha Plush",
+  "item.miku_plushie.konoha_plush.tooltip": "§b§n@Dsd_kgn",
 
 
 
@@ -194,5 +198,10 @@
   "sound.len_plushie.oie": "Len: Hi",
   "sound.len_plushie.dor": "Len: Pain",
   "sound.len_plushie.bye": "Len: Bye",
-  "sound.len_plushie.equip": "Len: Equip"
+  "sound.len_plushie.equip": "Len: Equip",
+
+  "sound.luka_plushie.oie": "Luka: Hi",
+  "sound.luka_plushie.dor": "Luka: Pain",
+  "sound.luka_plushie.bye": "Luka: Bye",
+  "sound.luka_plushie.equip": "Luka: Equip"
 }

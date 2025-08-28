@@ -5,6 +5,8 @@ import net.minecraft.core.Holder;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.tags.BlockTags;
+import net.minecraft.world.food.FoodProperties;
+import net.minecraft.world.food.Foods;
 import net.minecraft.world.item.*;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.neoforged.neoforge.common.SimpleTier;
@@ -28,6 +30,7 @@ public class ModItems {
 	public static final DeferredRegister<CreativeModeTab> CREATIVE_TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB,MikuPlushie.MOD_ID);
 
 	public static final DeferredItem<Item> CANUDINHO = ITEMS.registerSimpleItem("canudinho",new Item.Properties().rarity(Rarity.RARE));
+    public static final DeferredItem<Item> BAGUETTE = ITEMS.registerSimpleItem("baguette", new Item.Properties().food(new FoodProperties.Builder().nutrition(10).saturationModifier(0.6F).build()));
 	public static final DeferredItem<MikuPlushieBlockItem> MIKU_PLUSH_BR = ITEMS.register("miku_plush_br",
 			()->new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_BR.get()));
 	public static final DeferredItem<MikuPlushieBlockItem> MIKU_PLUSH_BR_BA = ITEMS.register("miku_plush_br_ba",
@@ -191,6 +194,10 @@ public class ModItems {
 
 	public static final DeferredItem<MikuPlushieBlockItem> MIKU_PLUSH_MONITORING = ITEMS.register("miku_plush_monitoring",
 			()->new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_MONITORING.get()));
+    public static final DeferredItem<MikuPlushieBlockItem> KONOHA_PLUSH = ITEMS.register("konoha_plush",
+            ()->new MikuPlushieBlockItem(ModBlocks.KONOHA_PLUSH.get()));
+    public static final DeferredItem<LukaPlushieBlockItem> LUKA_PLUSH = ITEMS.register("luka_plush",
+            ()->new LukaPlushieBlockItem(ModBlocks.LUKA_PLUSH.get()));
 
 
 

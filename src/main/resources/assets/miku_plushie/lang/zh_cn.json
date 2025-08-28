@@ -150,6 +150,10 @@
   "item.miku_plushie.teto_pickaxe_whatchacallitsname": "Whatchacallitsname 重音镐",
   "block.miku_plushie.miku_plush_monitoring": "视奸 初音毛绒玩具",
   "item.miku_plushie.miku_plush_monitoring.tooltip": "§b§n@kee00210",
+  "block.miku_plushie.luka_plush": "Megurine 巡音毛绒玩具",
+  "item.miku_plushie.luka_plush.tooltip": "§b§n@keigarou",
+  "block.miku_plushie.konoha_plush": "Konoha 毛绒玩具",
+  "item.miku_plushie.konoha_plush.tooltip": "§b§n@Dsd_kgn",
   "item.group.miku_plushies": "Mikus!!",
   "item.miku_plushie.canudinho": "Canudinho",
   "item.miku_plushie.baguette": "法棍面包",
@@ -177,5 +181,9 @@
   "sound.len_plushie.oie": "镜音连: 嗨",
   "sound.len_plushie.dor": "镜音连: 痛苦",
   "sound.len_plushie.bye": "镜音连: 再见",
-  "sound.len_plushie.equip": "镜音连: 装备"
+  "sound.len_plushie.equip": "镜音连: 装备",
+  "sound.luka_plushie.oie": "巡音: 嗨",
+  "sound.luka_plushie.dor": "巡音: 痛苦",
+  "sound.luka_plushie.bye": "巡音: 再见",
+  "sound.luka_plushie.equip": "巡音: 装备"
 }

@@ -1,8 +1,10 @@
-// 1.21.1	2025-07-11T18:28:33.534798559	Block States: miku_plushie
+// 1.21.1	2025-08-26T23:40:49.168273568	Block States: miku_plushie
 abb81d0e433c6498df9aa1aaa14b1229710777b2 assets/miku_plushie/blockstates/aiko_plush.json
 03853e42ee49c44d824dfec43138b4a6052c806c assets/miku_plushie/blockstates/akita_neru_plush.json
 2a6b16d55d306cfce0c685e64f32a33e9c03daf5 assets/miku_plushie/blockstates/akita_neru_plush_tails.json
+c5c5f6149073ec91283abac7e55a6dd5ebd02aa5 assets/miku_plushie/blockstates/konoha_plush.json
 ecc318f229f7b8722184a195707a3d88c2b6141b assets/miku_plushie/blockstates/len_plush.json
+1c230350efd3eaa6086a4d2811fe0fa05f53df90 assets/miku_plushie/blockstates/luka_plush.json
 fe963f8a6b4cfcc2e1d980cbb224b0889a0fd7b3 assets/miku_plushie/blockstates/miku_plush.json
 6ff50009df321be670ceec60a72975d976a4e677 assets/miku_plushie/blockstates/miku_plush_bik.json
 603f1b636f6222c15dc7c5d44e3e901e59a38e77 assets/miku_plushie/blockstates/miku_plush_br.json
@@ -73,7 +75,9 @@ ba3be874b2ee36f23cd77e1b732c74f01b376c9d assets/miku_plushie/blockstates/rin_plu
 953c1ecf5d0193b49fc74064b9d98adbadeca22b assets/miku_plushie/models/item/aiko_plush.json
 75a2bdcd91bef71530dbe0dca2a700eb915ccc96 assets/miku_plushie/models/item/akita_neru_plush.json
 11a55dc21bcb822426f17f525fbfebd40c36bd8d assets/miku_plushie/models/item/akita_neru_plush_tails.json
+62d17a22ecbceb55f96b14a5790744d3b27ae6b2 assets/miku_plushie/models/item/konoha_plush.json
 216a3d9fedd3fe72f800e64e97476d95a769ecb3 assets/miku_plushie/models/item/len_plush.json
+ef5977c7c5aa5965b8f97242bd30faa683aef396 assets/miku_plushie/models/item/luka_plush.json
 23df4d4ce666d6f046a5171db8efa721ae753343 assets/miku_plushie/models/item/miku_plush.json
 62ffeac9370d47e2eb95139feb4f367e7709483a assets/miku_plushie/models/item/miku_plush_bik.json
 f78191f252d0e57279f497a4e0c2180f20d16402 assets/miku_plushie/models/item/miku_plush_br.json

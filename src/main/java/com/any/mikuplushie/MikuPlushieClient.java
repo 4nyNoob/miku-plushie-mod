@@ -79,7 +79,7 @@ public class MikuPlushieClient{
 		ItemBlockRenderTypes.setRenderLayer(ModBlocks.TETO_PLUSH_REGRET_ROCK.get(), RenderType.CUTOUT);
 		ItemBlockRenderTypes.setRenderLayer(ModBlocks.TETO_PLUSH_DONT_BELIEVE_IN_T.get(), RenderType.CUTOUT);
 		ItemBlockRenderTypes.setRenderLayer(ModBlocks.TETO_PLUSH_LIAR_DANCER.get(), RenderType.CUTOUT);
-		ItemBlockRenderTypes.setRenderLayer(ModBlocks.TETO_PLUSH_WHATCHACALLITSNAME.get(), RenderType.CUTOUT);
+		ItemBlockRenderTypes.setRenderLayer(ModBlocks.TETO_PLUSH_WHATCHACALLITSNAME.get(), RenderType.TRANSLUCENT);
 
 		ItemBlockRenderTypes.setRenderLayer(ModBlocks.AKITA_NERU_PLUSH.get(), RenderType.CUTOUT);
 		ItemBlockRenderTypes.setRenderLayer(ModBlocks.AKITA_NERU_PLUSH_TAILS.get(), RenderType.CUTOUT);
@@ -87,6 +87,10 @@ public class MikuPlushieClient{
 		ItemBlockRenderTypes.setRenderLayer(ModBlocks.RIN_PLUSH.get(), RenderType.CUTOUT);
 
 		ItemBlockRenderTypes.setRenderLayer(ModBlocks.LEN_PLUSH.get(), RenderType.CUTOUT);
+
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.KONOHA_PLUSH.get(), RenderType.CUTOUT);
+
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.LUKA_PLUSH.get(), RenderType.CUTOUT);
 
 		//TRANSLUCENT
 		ItemBlockRenderTypes.setRenderLayer(ModBlocks.MIKU_PLUSH_GHOST.get(), RenderType.TRANSLUCENT);

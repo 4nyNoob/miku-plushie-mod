@@ -153,6 +153,10 @@ public class ModBlocks {
 			()->new TetoPlushieBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.FLOWER_POT).noOcclusion().sound(SoundType.WOOL)));
 	public static final DeferredBlock<MikuPlushieBlock> MIKU_PLUSH_MONITORING = BLOCKS.register("miku_plush_monitoring",
 			()->new MikuPlushieBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.FLOWER_POT).noOcclusion().sound(SoundType.WOOL)));
+    public static final DeferredBlock<MikuPlushieBlock> KONOHA_PLUSH = BLOCKS.register("konoha_plush",
+            ()->new MikuPlushieBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.FLOWER_POT).noOcclusion().sound(SoundType.WOOL)));
+    public static final DeferredBlock<LukaPlushieBlock> LUKA_PLUSH = BLOCKS.register("luka_plush",
+            ()->new LukaPlushieBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.FLOWER_POT).noOcclusion().sound(SoundType.WOOL)));
 
 
 }

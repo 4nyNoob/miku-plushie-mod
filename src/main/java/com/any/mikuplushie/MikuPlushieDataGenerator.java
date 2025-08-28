@@ -3,6 +3,7 @@ package com.any.mikuplushie;
 import com.any.mikuplushie.datagen.ModItemModelProvider;
 import com.any.mikuplushie.datagen.ModLootTableProvider;
 import com.any.mikuplushie.datagen.ModModelProvider;
+import com.any.mikuplushie.datagen.ModRecipeProvider;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.PackOutput;
@@ -30,7 +31,7 @@ public class MikuPlushieDataGenerator {
 		generator.addProvider(event.includeClient(),new ModItemModelProvider(packOutput,existingFileHelper));
 		generator.addProvider(event.includeClient(),new ModModelProvider(packOutput,existingFileHelper));
 
-//		generator.addProvider(event.includeServer(),new ModRecipeProvider(packOutput,lookupProvider));
+        generator.addProvider(event.includeServer(),new ModRecipeProvider(packOutput,lookupProvider));
 
 		generator.addProvider(event.includeServer(),new LootTableProvider(packOutput, Collections.emptySet(), List.of(new LootTableProvider.SubProviderEntry(ModLootTableProvider::new, LootContextParamSets.BLOCK)),lookupProvider));
 
