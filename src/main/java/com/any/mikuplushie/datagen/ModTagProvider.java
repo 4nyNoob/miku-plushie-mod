@@ -102,6 +102,7 @@ public class ModTagProvider extends FabricTagProvider.ItemTagProvider {
             .add(ModItems.TETO_PLUSH_DONT_BELIEVE_IN_T)
             .add(ModItems.TETO_PLUSH_LIAR_DANCER)
             .add(ModItems.TETO_PLUSH_WHATCHACALLITSNAME)
+            .add(ModItems.TETO_PLUSH_SOME_MORE_OF_THAT_SONG)
         ;
         getOrCreateTagBuilder(TETO_PICKAXE)
             .add(ModItems.TETO_PICKAXE)
@@ -111,6 +112,7 @@ public class ModTagProvider extends FabricTagProvider.ItemTagProvider {
             .add(ModItems.TETO_PICKAXE_DONT_BELIEVE_IN_T)
             .add(ModItems.TETO_PICKAXE_LIAR_DANCER)
             .add(ModItems.TETO_PICKAXE_WHATCHACALLITSNAME)
+            .add(ModItems.TETO_PICKAXE_SOME_MORE_OF_THAT_SONG)
         ;
         getOrCreateTagBuilder(AKITA_NERU_PLUSH)
             .add(ModItems.AKITA_NERU_PLUSH)

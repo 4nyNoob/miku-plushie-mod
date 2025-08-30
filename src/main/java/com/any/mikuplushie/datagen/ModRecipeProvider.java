@@ -906,7 +906,6 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 			.criterion(FabricRecipeProvider.hasItem(Items.RED_WOOL), FabricRecipeProvider.conditionsFromItem(Items.RED_WOOL))
 			.criterion(FabricRecipeProvider.hasItem(Items.ORANGE_WOOL), FabricRecipeProvider.conditionsFromItem(Items.ORANGE_WOOL))
 			.offerTo(exporter);
-
 		ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.TETO_PICKAXE_WHATCHACALLITSNAME)
 			.pattern("121")
 			.input('1', Items.DIAMOND)
@@ -946,5 +945,20 @@ public class ModRecipeProvider extends FabricRecipeProvider {
             .criterion(FabricRecipeProvider.hasItem(Items.BROWN_WOOL), FabricRecipeProvider.conditionsFromItem(Items.BROWN_WOOL))
             .offerTo(exporter);
 
-	}
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ModBlocks.TETO_PLUSH_SOME_MORE_OF_THAT_SONG)
+            .input(ModBlocks.TETO_PLUSH)
+            .input(Items.LIGHT_BLUE_WOOL, 1)
+            .criterion(FabricRecipeProvider.hasItem(ModBlocks.TETO_PLUSH), FabricRecipeProvider.conditionsFromItem(ModBlocks.TETO_PLUSH))
+            .criterion(FabricRecipeProvider.hasItem(Items.LIGHT_BLUE_WOOL), FabricRecipeProvider.conditionsFromItem(Items.LIGHT_BLUE_WOOL))
+            .offerTo(exporter);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.TETO_PICKAXE_SOME_MORE_OF_THAT_SONG)
+            .pattern("121")
+            .input('1', Items.DIAMOND)
+            .input('2', ModBlocks.TETO_PLUSH_SOME_MORE_OF_THAT_SONG)
+            .criterion(FabricRecipeProvider.hasItem(ModBlocks.TETO_PLUSH_SOME_MORE_OF_THAT_SONG), FabricRecipeProvider.conditionsFromItem(ModBlocks.TETO_PLUSH_SOME_MORE_OF_THAT_SONG))
+            .criterion(FabricRecipeProvider.hasItem(Items.DIAMOND), FabricRecipeProvider.conditionsFromItem(Items.DIAMOND))
+            .offerTo(exporter);
+
+
+    }
 }

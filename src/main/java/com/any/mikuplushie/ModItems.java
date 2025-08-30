@@ -193,6 +193,10 @@ public class ModItems {
         register(new MikuPlushieBlockItem(ModBlocks.KONOHA_PLUSH, new Item.Settings()), "konoha_plush");
     public static final Item LUKA_PLUSH =
         register(new MikuPlushieBlockItem(ModBlocks.LUKA_PLUSH, new Item.Settings()), "luka_plush");
+    public static final Item TETO_PLUSH_SOME_MORE_OF_THAT_SONG =
+        register(new MikuPlushieBlockItem(ModBlocks.TETO_PLUSH_SOME_MORE_OF_THAT_SONG, new Item.Settings()), "teto_plush_some_more_of_that_song");
+    public static final Item TETO_PICKAXE_SOME_MORE_OF_THAT_SONG =
+        register(new PickaxeItem(PlushToolMaterial.INSTANCE, 1, -2.8f, new FabricItemSettings()), "teto_pickaxe_some_more_of_that_song");
 
 
 
@@ -298,6 +302,8 @@ public class ModItems {
 			itemGroup.add(ModItems.MIKU_PLUSH_MONITORING);
 			itemGroup.add(ModItems.KONOHA_PLUSH);
 			itemGroup.add(ModItems.LUKA_PLUSH);
+            itemGroup.add(ModItems.TETO_PLUSH_SOME_MORE_OF_THAT_SONG);
+            itemGroup.add(ModItems.TETO_PICKAXE_SOME_MORE_OF_THAT_SONG);
 		});
 	}
 }
