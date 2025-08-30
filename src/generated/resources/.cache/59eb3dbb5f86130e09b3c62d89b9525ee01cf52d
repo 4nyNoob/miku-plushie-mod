@@ -1,4 +1,4 @@
-// 1.21.1	2025-08-26T23:40:49.165725836	Loot Tables
+// 1.21.1	2025-08-31T00:20:22.04963497	Loot Tables
 8c2a8b39a8d7de29f5fb3ee62aafb39485c00e04 data/miku_plushie/loot_table/blocks/aiko_plush.json
 01d0aa7e0fec271834f66b4a750ca7affcf3cc7e data/miku_plushie/loot_table/blocks/akita_neru_plush.json
 718269898661f3c962f45906f92a6da9a5e96fdc data/miku_plushie/loot_table/blocks/akita_neru_plush_tails.json
@@ -71,4 +71,5 @@ ceeeaa530316f03216af3494fef22c228efebf4b data/miku_plushie/loot_table/blocks/tet
 02d1f45a6109b556315b571d8491eb54880517e9 data/miku_plushie/loot_table/blocks/teto_plush_mesmerizer.json
 9527689afe4560c8b0d06180c578cc220d3f96b4 data/miku_plushie/loot_table/blocks/teto_plush_regret_rock.json
 4fa57f52bdbc13c8383a3df7413fd950939c0378 data/miku_plushie/loot_table/blocks/teto_plush_shadow.json
+0c6a4a708738fc4f2fe860c71138874cdde6206e data/miku_plushie/loot_table/blocks/teto_plush_some_more_of_that_song.json
 d7c172feaf997955e582d2672bc2c63553d42710 data/miku_plushie/loot_table/blocks/teto_plush_whatchacallitsname.json

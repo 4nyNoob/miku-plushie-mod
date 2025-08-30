@@ -157,6 +157,8 @@ public class ModBlocks {
             ()->new MikuPlushieBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.FLOWER_POT).noOcclusion().sound(SoundType.WOOL)));
     public static final DeferredBlock<LukaPlushieBlock> LUKA_PLUSH = BLOCKS.register("luka_plush",
             ()->new LukaPlushieBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.FLOWER_POT).noOcclusion().sound(SoundType.WOOL)));
+    public static final DeferredBlock<TetoPlushieBlock> TETO_PLUSH_SOME_MORE_OF_THAT_SONG = BLOCKS.register("teto_plush_some_more_of_that_song",
+            ()->new TetoPlushieBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.FLOWER_POT).noOcclusion().sound(SoundType.WOOL)));
 
 
 }

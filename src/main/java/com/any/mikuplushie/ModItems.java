@@ -198,7 +198,10 @@ public class ModItems {
             ()->new MikuPlushieBlockItem(ModBlocks.KONOHA_PLUSH.get()));
     public static final DeferredItem<LukaPlushieBlockItem> LUKA_PLUSH = ITEMS.register("luka_plush",
             ()->new LukaPlushieBlockItem(ModBlocks.LUKA_PLUSH.get()));
-
+    public static final DeferredItem<TetoPlushieBlockItem> TETO_PLUSH_SOME_MORE_OF_THAT_SONG = ITEMS.register("teto_plush_some_more_of_that_song",
+            ()->new TetoPlushieBlockItem(ModBlocks.TETO_PLUSH_SOME_MORE_OF_THAT_SONG.get()));
+    public static final DeferredItem<TetoPickaxeItem> TETO_PICKAXE_SOME_MORE_OF_THAT_SONG = ITEMS.register("teto_pickaxe_some_more_of_that_song", () ->
+            new TetoPickaxeItem(PLUSH_TIER, new Item.Properties().attributes(TetoPickaxeItem.createAttributes(PLUSH_TIER, 0, -2.8f))));
 
 
 	public static final DeferredHolder<CreativeModeTab,CreativeModeTab> MAIN_TAB = CREATIVE_TABS.register("main_tab",

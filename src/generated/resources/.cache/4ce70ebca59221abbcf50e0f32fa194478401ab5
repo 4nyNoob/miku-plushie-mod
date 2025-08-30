@@ -1,4 +1,4 @@
-// 1.21.1	2025-08-26T23:40:49.168273568	Block States: miku_plushie
+// 1.21.1	2025-08-31T00:20:22.051691194	Block States: miku_plushie
 abb81d0e433c6498df9aa1aaa14b1229710777b2 assets/miku_plushie/blockstates/aiko_plush.json
 03853e42ee49c44d824dfec43138b4a6052c806c assets/miku_plushie/blockstates/akita_neru_plush.json
 2a6b16d55d306cfce0c685e64f32a33e9c03daf5 assets/miku_plushie/blockstates/akita_neru_plush_tails.json
@@ -71,6 +71,7 @@ ba3be874b2ee36f23cd77e1b732c74f01b376c9d assets/miku_plushie/blockstates/rin_plu
 986981ac273f808e78a6156da837467c0e10789a assets/miku_plushie/blockstates/teto_plush_mesmerizer.json
 03b9fb06590c9487e8bb64025a2f989bcb8f9e05 assets/miku_plushie/blockstates/teto_plush_regret_rock.json
 442fa82226f92c44caf84c03316d208e596d65cb assets/miku_plushie/blockstates/teto_plush_shadow.json
+64396b24b85ffc85f6d22db5ba4a5d3157d1feb9 assets/miku_plushie/blockstates/teto_plush_some_more_of_that_song.json
 0b2e1c580e0fd1415e2441dc8f17d22e8a8e0fa5 assets/miku_plushie/blockstates/teto_plush_whatchacallitsname.json
 953c1ecf5d0193b49fc74064b9d98adbadeca22b assets/miku_plushie/models/item/aiko_plush.json
 75a2bdcd91bef71530dbe0dca2a700eb915ccc96 assets/miku_plushie/models/item/akita_neru_plush.json
@@ -144,4 +145,5 @@ e1fe0523ca1301dba777850e32e6acd275d305db assets/miku_plushie/models/item/teto_pl
 56e0c897850b5d38d8404263f9c4014fd4a05a69 assets/miku_plushie/models/item/teto_plush_mesmerizer.json
 d7b7152244c39354470521d65d022d2137058e32 assets/miku_plushie/models/item/teto_plush_regret_rock.json
 cbb50d0244f54d0f70122e8cf8e3ece0bad71ce4 assets/miku_plushie/models/item/teto_plush_shadow.json
+2218b6857e2dd2eeaedcc3e43672538a88f89630 assets/miku_plushie/models/item/teto_plush_some_more_of_that_song.json
 0d5de75ab7487facecc20aa9a05de4495eb7df49 assets/miku_plushie/models/item/teto_plush_whatchacallitsname.json

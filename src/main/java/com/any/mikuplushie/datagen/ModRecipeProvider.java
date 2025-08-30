@@ -442,6 +442,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ModBlocks.TETO_PLUSH_MESMERIZER)
                 .requires(ModBlocks.TETO_PLUSH)
                 .requires(Items.RED_WOOL)
+                .requires(Items.RED_WOOL)
                 .unlockedBy(getHasName(ModBlocks.TETO_PLUSH), has(ModBlocks.TETO_PLUSH))
                 .save(recipeOutput);
         ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ModBlocks.TETO_PLUSH_SHADOW)
@@ -477,6 +478,12 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .requires(Items.GLASS)
                 .requires(Items.RED_WOOL)
                 .requires(Items.ORANGE_WOOL)
+                .unlockedBy(getHasName(ModBlocks.TETO_PLUSH), has(ModBlocks.TETO_PLUSH))
+                .save(recipeOutput);
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ModBlocks.TETO_PLUSH_SOME_MORE_OF_THAT_SONG)
+                .requires(ModBlocks.TETO_PLUSH)
+                .requires(Items.LIGHT_BLUE_WOOL)
+                .requires(Items.LIGHT_BLUE_WOOL)
                 .unlockedBy(getHasName(ModBlocks.TETO_PLUSH), has(ModBlocks.TETO_PLUSH))
                 .save(recipeOutput);
         //TETO PICKAXE
@@ -528,6 +535,13 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('2', ModBlocks.TETO_PLUSH_WHATCHACALLITSNAME)
                 .group("")
                 .unlockedBy("has_wool", has(ModBlocks.TETO_PLUSH_WHATCHACALLITSNAME))
+                .save(recipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModItems.TETO_PICKAXE_SOME_MORE_OF_THAT_SONG)
+                .pattern("121")
+                .define('1', Items.DIAMOND)
+                .define('2', ModBlocks.TETO_PLUSH_SOME_MORE_OF_THAT_SONG)
+                .group("")
+                .unlockedBy("has_wool", has(ModBlocks.TETO_PLUSH_SOME_MORE_OF_THAT_SONG))
                 .save(recipeOutput);
         //NERU
         ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.AKITA_NERU_PLUSH)

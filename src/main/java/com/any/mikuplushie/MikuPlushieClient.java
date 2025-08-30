@@ -80,6 +80,7 @@ public class MikuPlushieClient{
 		ItemBlockRenderTypes.setRenderLayer(ModBlocks.TETO_PLUSH_DONT_BELIEVE_IN_T.get(), RenderType.CUTOUT);
 		ItemBlockRenderTypes.setRenderLayer(ModBlocks.TETO_PLUSH_LIAR_DANCER.get(), RenderType.CUTOUT);
 		ItemBlockRenderTypes.setRenderLayer(ModBlocks.TETO_PLUSH_WHATCHACALLITSNAME.get(), RenderType.TRANSLUCENT);
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.TETO_PLUSH_SOME_MORE_OF_THAT_SONG.get(), RenderType.CUTOUT);
 
 		ItemBlockRenderTypes.setRenderLayer(ModBlocks.AKITA_NERU_PLUSH.get(), RenderType.CUTOUT);
 		ItemBlockRenderTypes.setRenderLayer(ModBlocks.AKITA_NERU_PLUSH_TAILS.get(), RenderType.CUTOUT);
