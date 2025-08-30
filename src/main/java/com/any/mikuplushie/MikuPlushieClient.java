@@ -78,6 +78,7 @@ public class MikuPlushieClient implements ClientModInitializer {
 		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.TETO_PLUSH_DONT_BELIEVE_IN_T, RenderLayer.getCutout());
 		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.TETO_PLUSH_LIAR_DANCER, RenderLayer.getCutout());
 		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.TETO_PLUSH_WHATCHACALLITSNAME, RenderLayer.getCutout());
+		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.TETO_PLUSH_SOME_MORE_OF_THAT_SONG, RenderLayer.getCutout());
 
 		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.AKITA_NERU_PLUSH, RenderLayer.getCutout());
 		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.AKITA_NERU_PLUSH_TAILS, RenderLayer.getCutout());

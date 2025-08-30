@@ -597,6 +597,14 @@ public class ModBlocks {
 		"luka_plush",
 		false
 	);
+    public static final Block TETO_PLUSH_SOME_MORE_OF_THAT_SONG = register(
+        new MikuPlushieBlock(AbstractBlock.Settings.copy(Blocks.FLOWER_POT)
+            .sounds(BlockSoundGroup.WOOL)
+            .nonOpaque()
+        ),
+        "teto_plush_some_more_of_that_song",
+        false
+    );
 
 
 
