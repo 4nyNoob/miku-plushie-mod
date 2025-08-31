@@ -1,4 +1,4 @@
-// 1.21.1	2025-08-15T11:38:21.020847793	miku plushies/Block Loot Tables
+// 1.21.1	2025-08-31T16:29:22.615134122	miku plushies/Block Loot Tables
 c3c9081777252a88fb69c21c0a80a70369ccda3d data/miku-plushie/loot_table/blocks/miku_plush_santa_elf.json
 f97a600e3b555cef570cb1a63851780a0f892816 data/miku-plushie/loot_table/blocks/miku_plush_pumpkin.json
 0eba200658eba0716c9fe397867e35dcfd069969 data/miku-plushie/loot_table/blocks/miku_plush_ghost.json
@@ -22,6 +22,7 @@ da2dcc7caf5078f3b17da6942ecea62035e6b676 data/miku-plushie/loot_table/blocks/mik
 97705567dfc6f80b78d4ae956e652a3136a7865a data/miku-plushie/loot_table/blocks/miku_plush_helloplanet.json
 93b11cd16ce81b4c9455e9703970fa1c1ca6a2bd data/miku-plushie/loot_table/blocks/miku_plush_michael_myers.json
 af68195ac8c10224169e0ac3c60fab2ecb875557 data/miku-plushie/loot_table/blocks/miku_plush_frankenstein.json
+d2bd0289b5a3e722268b08a384209d65c154594a data/miku-plushie/loot_table/blocks/teto_plush_some_more_of_that_song.json
 018d7bae8afcbdde15e6e380d7d1c24066537ef3 data/miku-plushie/loot_table/blocks/miku_plush_jason.json
 f1fbdfe3754d8395a66add8a7737a4f354c6f7d1 data/miku-plushie/loot_table/blocks/miku_plush_senbonzakura.json
 0fea5493d292ce6f29c90c0439dae3e44ebc2a0b data/miku-plushie/loot_table/blocks/miku_plush_patata.json

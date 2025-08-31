@@ -5,9 +5,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "miku-plushie:teto_plush_some_more_of_that_song"
-            ]
+            "items": "miku-plushie:teto_plush_some_more_of_that_song"
           }
         ]
       },
@@ -22,14 +20,13 @@
   },
   "requirements": [
     [
-      "has_teto_plush_some_more_of_that_song",
-      "has_the_recipe"
+      "has_the_recipe",
+      "has_teto_plush_some_more_of_that_song"
     ]
   ],
   "rewards": {
     "recipes": [
       "miku-plushie:teto_pickaxe_some_more_of_that_song"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

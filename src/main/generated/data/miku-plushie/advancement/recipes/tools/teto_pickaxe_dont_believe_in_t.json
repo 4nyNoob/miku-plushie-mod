@@ -5,9 +5,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "miku-plushie:teto_plush_dont_believe_in_t"
-            ]
+            "items": "miku-plushie:teto_plush_dont_believe_in_t"
           }
         ]
       },
@@ -22,14 +20,13 @@
   },
   "requirements": [
     [
-      "has_teto_plush_dont_believe_in_t",
-      "has_the_recipe"
+      "has_the_recipe",
+      "has_teto_plush_dont_believe_in_t"
     ]
   ],
   "rewards": {
     "recipes": [
       "miku-plushie:teto_pickaxe_dont_believe_in_t"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

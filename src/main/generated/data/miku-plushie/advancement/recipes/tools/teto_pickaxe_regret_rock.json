@@ -5,9 +5,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "miku-plushie:teto_plush_regret_rock"
-            ]
+            "items": "miku-plushie:teto_plush_regret_rock"
           }
         ]
       },
@@ -22,14 +20,13 @@
   },
   "requirements": [
     [
-      "has_teto_plush_regret_rock",
-      "has_the_recipe"
+      "has_the_recipe",
+      "has_teto_plush_regret_rock"
     ]
   ],
   "rewards": {
     "recipes": [
       "miku-plushie:teto_pickaxe_regret_rock"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

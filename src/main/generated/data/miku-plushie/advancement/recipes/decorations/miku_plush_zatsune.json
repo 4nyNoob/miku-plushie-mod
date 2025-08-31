@@ -5,9 +5,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "miku-plushie:miku_plush"
-            ]
+            "items": "miku-plushie:miku_plush"
           }
         ]
       },
@@ -22,14 +20,13 @@
   },
   "requirements": [
     [
-      "has_miku_plush",
-      "has_the_recipe"
+      "has_the_recipe",
+      "has_miku_plush"
     ]
   ],
   "rewards": {
     "recipes": [
       "miku-plushie:miku_plush_zatsune"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

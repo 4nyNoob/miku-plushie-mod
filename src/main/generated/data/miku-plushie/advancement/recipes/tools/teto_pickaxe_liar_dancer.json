@@ -5,9 +5,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "miku-plushie:teto_plush_liar_dancer"
-            ]
+            "items": "miku-plushie:teto_plush_liar_dancer"
           }
         ]
       },
@@ -22,14 +20,13 @@
   },
   "requirements": [
     [
-      "has_teto_plush_liar_dancer",
-      "has_the_recipe"
+      "has_the_recipe",
+      "has_teto_plush_liar_dancer"
     ]
   ],
   "rewards": {
     "recipes": [
       "miku-plushie:teto_pickaxe_liar_dancer"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }
