@@ -88,6 +88,9 @@ public class ModLootTableProvider extends BlockLootSubProvider {
 		dropOther(ModBlocks.MIKU_PLUSH_MOCHIMOCHI.get(), ModItems.MIKU_PLUSH_MOCHIMOCHI.get());
 		dropOther(ModBlocks.TETO_PLUSH_WHATCHACALLITSNAME.get(), ModItems.TETO_PLUSH_WHATCHACALLITSNAME.get());
 		dropOther(ModBlocks.MIKU_PLUSH_MONITORING.get(), ModItems.MIKU_PLUSH_MONITORING.get());
+        dropOther(ModBlocks.KONOHA_PLUSH.get(), ModItems.KONOHA_PLUSH.get());
+        dropOther(ModBlocks.LUKA_PLUSH.get(), ModItems.LUKA_PLUSH.get());
+        dropOther(ModBlocks.TETO_PLUSH_SOME_MORE_OF_THAT_SONG.get(), ModItems.TETO_PICKAXE_SOME_MORE_OF_THAT_SONG.get());
 		//use dropSelf() for further entries
 	}
 

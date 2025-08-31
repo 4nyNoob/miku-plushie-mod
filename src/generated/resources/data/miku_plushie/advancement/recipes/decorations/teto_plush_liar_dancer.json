@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_teto_plush": {
+      "conditions": {
+        "items": [
+          {
+            "items": "miku_plushie:teto_plush"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "miku_plushie:teto_plush_liar_dancer"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_teto_plush"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "miku_plushie:teto_plush_liar_dancer"
+    ]
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "miku_plushie:teto_pickaxe_some_more_of_that_song"
+        }
+      ],
+      "rolls": 1.0
+    }
+  ],
+  "random_sequence": "miku_plushie:blocks/teto_plush_some_more_of_that_song"
+}
