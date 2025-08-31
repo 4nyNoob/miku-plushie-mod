@@ -1,23 +1,18 @@
 {
-  "type": "minecraft:crafting_shaped",
+  "type": "minecraft:crafting_shapeless",
   "category": "misc",
-  "key": {
-    "b": {
-      "item": "minecraft:cherry_log"
+  "ingredients": [
+    {
+      "item": "miku-plushie:miku_plush"
     },
-    "c": {
+    {
       "item": "minecraft:green_wool"
     },
-    "l": {
-      "item": "minecraft:white_wool"
+    {
+      "item": "minecraft:cherry_log"
     }
-  },
-  "pattern": [
-    "clc",
-    "cbc"
   ],
   "result": {
     "item": "miku-plushie:miku_plush_senbonzakura"
-  },
-  "show_notification": true
+  }
 }

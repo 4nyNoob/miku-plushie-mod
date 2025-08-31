@@ -1,27 +1,21 @@
 {
-  "type": "minecraft:crafting_shaped",
+  "type": "minecraft:crafting_shapeless",
   "category": "misc",
-  "key": {
-    "b": {
+  "ingredients": [
+    {
+      "item": "miku-plushie:miku_plush"
+    },
+    {
+      "item": "minecraft:birch_planks"
+    },
+    {
       "item": "minecraft:brown_wool"
     },
-    "c": {
-      "item": "minecraft:cyan_wool"
-    },
-    "d": {
+    {
       "item": "minecraft:iron_sword"
-    },
-    "l": {
-      "item": "minecraft:birch_planks"
     }
-  },
-  "pattern": [
-    "clc",
-    "cbc",
-    "d  "
   ],
   "result": {
     "item": "miku-plushie:miku_plush_jason"
-  },
-  "show_notification": true
+  }
 }

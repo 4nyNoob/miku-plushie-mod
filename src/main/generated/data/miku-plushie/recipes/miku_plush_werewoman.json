@@ -1,23 +1,18 @@
 {
-  "type": "minecraft:crafting_shaped",
+  "type": "minecraft:crafting_shapeless",
   "category": "misc",
-  "key": {
-    "b": {
+  "ingredients": [
+    {
+      "item": "miku-plushie:miku_plush"
+    },
+    {
       "item": "minecraft:bone"
     },
-    "c": {
-      "item": "minecraft:cyan_wool"
-    },
-    "l": {
-      "item": "minecraft:light_gray_wool"
+    {
+      "item": "minecraft:mutton"
     }
-  },
-  "pattern": [
-    "clc",
-    "cbc"
   ],
   "result": {
     "item": "miku-plushie:miku_plush_werewoman"
-  },
-  "show_notification": true
+  }
 }

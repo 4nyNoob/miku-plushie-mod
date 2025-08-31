@@ -1,27 +1,18 @@
 {
-  "type": "minecraft:crafting_shaped",
+  "type": "minecraft:crafting_shapeless",
   "category": "misc",
-  "key": {
-    "a": {
-      "item": "minecraft:tadpole_bucket"
+  "ingredients": [
+    {
+      "item": "miku-plushie:miku_plush"
     },
-    "b": {
+    {
       "item": "minecraft:light_blue_wool"
     },
-    "c": {
-      "item": "minecraft:cyan_wool"
-    },
-    "l": {
-      "item": "minecraft:gray_wool"
+    {
+      "item": "minecraft:tadpole_bucket"
     }
-  },
-  "pattern": [
-    "clc",
-    "cbc",
-    "a  "
   ],
   "result": {
     "item": "miku-plushie:miku_plush_frog"
-  },
-  "show_notification": true
+  }
 }

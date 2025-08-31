@@ -1,24 +1,18 @@
 {
-  "type": "minecraft:crafting_shaped",
+  "type": "minecraft:crafting_shapeless",
   "category": "misc",
-  "key": {
-    "c": {
-      "item": "minecraft:cyan_wool"
+  "ingredients": [
+    {
+      "item": "miku-plushie:miku_plush"
     },
-    "i": {
-      "item": "minecraft:cornflower"
-    },
-    "w": {
+    {
       "item": "minecraft:white_wool"
+    },
+    {
+      "item": "minecraft:cornflower"
     }
-  },
-  "pattern": [
-    "cwc",
-    "cwc",
-    "i  "
   ],
   "result": {
     "item": "miku-plushie:miku_plush_br_pa"
-  },
-  "show_notification": true
+  }
 }

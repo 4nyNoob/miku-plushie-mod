@@ -1,23 +1,21 @@
 {
-  "type": "minecraft:crafting_shaped",
+  "type": "minecraft:crafting_shapeless",
   "category": "misc",
-  "key": {
-    "b": {
-      "item": "minecraft:white_wool"
+  "ingredients": [
+    {
+      "item": "miku-plushie:miku_plush"
     },
-    "c": {
+    {
       "item": "minecraft:yellow_wool"
     },
-    "l": {
+    {
       "item": "minecraft:light_blue_wool"
+    },
+    {
+      "item": "minecraft:white_wool"
     }
-  },
-  "pattern": [
-    "clc",
-    "cbc"
   ],
   "result": {
     "item": "miku-plushie:miku_plush_patati"
-  },
-  "show_notification": true
+  }
 }

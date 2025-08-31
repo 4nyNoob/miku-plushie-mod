@@ -30,165 +30,172 @@ public class ModItems {
 
 
 	public static final Item CANUDINHO =
-			register(new Item(new Item.Settings().rarity(Rarity.RARE)), "canudinho");
+        register(new Item(new Item.Settings().rarity(Rarity.RARE)), "canudinho");
 	public static final Item BAGUETTE =
-			register(new Item(new Item.Settings().food(ModFoodComponents.BAGUETTE)), "baguette");
+        register(new Item(new Item.Settings().food(ModFoodComponents.BAGUETTE)), "baguette");
 	public static final Item MIKU_PLUSH_BR =
-			register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_BR, new Item.Settings()), "miku_plush_br");
+        register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_BR, new Item.Settings()), "miku_plush_br");
 	public static final Item MIKU_PLUSH_BR_BA =
-			register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_BR_BA, new Item.Settings()), "miku_plush_br_ba");
+        register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_BR_BA, new Item.Settings()), "miku_plush_br_ba");
 	public static final Item MIKU_PLUSH_BIK =
-			register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_BIK, new Item.Settings()), "miku_plush_bik");
+        register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_BIK, new Item.Settings()), "miku_plush_bik");
 	public static final Item MIKU_PLUSH_BR_BEACH =
-			register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_BR_BEACH, new Item.Settings()), "miku_plush_br_beach");
+        register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_BR_BEACH, new Item.Settings()), "miku_plush_br_beach");
 	public static final Item MIKU_PLUSH_BR_BRAID =
-			register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_BR_BRAID, new Item.Settings()), "miku_plush_br_braid");
+        register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_BR_BRAID, new Item.Settings()), "miku_plush_br_braid");
 	public static final Item MIKU_PLUSH_BR_BA_DRUM =
-			register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_BR_BA_DRUM, new Item.Settings()), "miku_plush_br_ba_drum");
+        register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_BR_BA_DRUM, new Item.Settings()), "miku_plush_br_ba_drum");
 	public static final Item MIKU_PLUSH_BR_PA =
-			register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_BR_PA, new Item.Settings()), "miku_plush_br_pa");
+        register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_BR_PA, new Item.Settings()), "miku_plush_br_pa");
 	public static final Item MIKU_PLUSH_BR_SP =
-			register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_BR_SP, new Item.Settings()), "miku_plush_br_sp");
+        register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_BR_SP, new Item.Settings()), "miku_plush_br_sp");
 	public static final Item MIKU_PLUSH_BR_MG =
-			register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_BR_MG, new Item.Settings()), "miku_plush_br_mg");
+        register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_BR_MG, new Item.Settings()), "miku_plush_br_mg");
 	public static final Item MIKU_PLUSH_BR_BROWN_BRO =
-			register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_BR_BROWN_BRO, new Item.Settings()), "miku_plush_br_brown_bro");
+        register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_BR_BROWN_BRO, new Item.Settings()), "miku_plush_br_brown_bro");
 	public static final Item MIKU_PLUSH_BR_ELECTRICIAN =
-			register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_BR_ELECTRICIAN, new Item.Settings()), "miku_plush_br_electrician");
+        register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_BR_ELECTRICIAN, new Item.Settings()), "miku_plush_br_electrician");
 	public static final Item MIKU_PLUSH_BR_BIK_ORANGE =
-			register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_BR_BIK_ORANGE, new Item.Settings()), "miku_plush_br_bik_orange");
+        register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_BR_BIK_ORANGE, new Item.Settings()), "miku_plush_br_bik_orange");
 	public static final Item MIKU_PLUSH_BR_AM =
-			register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_BR_AM, new Item.Settings()), "miku_plush_br_am");
+        register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_BR_AM, new Item.Settings()), "miku_plush_br_am");
 	public static final Item MIKU_PLUSH_BR_FUT_FLA =
-			register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_BR_FUT_FLA, new Item.Settings()), "miku_plush_br_fut_fla");
+        register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_BR_FUT_FLA, new Item.Settings()), "miku_plush_br_fut_fla");
 	public static final Item MIKU_PLUSH_BR_FUT_CAM =
-			register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_BR_FUT_CAM, new Item.Settings()), "miku_plush_br_fut_cam");
+        register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_BR_FUT_CAM, new Item.Settings()), "miku_plush_br_fut_cam");
 	public static final Item MIKU_PLUSH_BR_GO =
-			register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_BR_GO, new Item.Settings()), "miku_plush_br_go");
+        register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_BR_GO, new Item.Settings()), "miku_plush_br_go");
 	public static final Item MIKU_PLUSH_BR_SCHOOL_PE =
-			register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_BR_SCHOOL_PE, new Item.Settings()), "miku_plush_br_school_pe");
+        register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_BR_SCHOOL_PE, new Item.Settings()), "miku_plush_br_school_pe");
 	public static final Item MIKU_PLUSH_BR_FUT_CRVG =
-			register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_BR_FUT_CRVG, new Item.Settings()), "miku_plush_br_fut_crvg");
+        register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_BR_FUT_CRVG, new Item.Settings()), "miku_plush_br_fut_crvg");
 	public static final Item MIKU_PLUSH_BR_RS =
-			register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_BR_RS, new Item.Settings()), "miku_plush_br_rs");
+        register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_BR_RS, new Item.Settings()), "miku_plush_br_rs");
 	public static final Item MIKU_PLUSH_FROG =
-			register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_FROG, new Item.Settings()), "miku_plush_frog");
+        register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_FROG, new Item.Settings()), "miku_plush_frog");
 	public static final Item MIKU_PLUSH_MUSHROOM =
-			register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_MUSHROOM, new Item.Settings()), "miku_plush_mushroom");
+        register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_MUSHROOM, new Item.Settings()), "miku_plush_mushroom");
 	public static final Item MIKU_PLUSH_SENBONZAKURA =
-			register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_SENBONZAKURA, new Item.Settings()), "miku_plush_senbonzakura");
+        register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_SENBONZAKURA, new Item.Settings()), "miku_plush_senbonzakura");
 	public static final Item MIKU_PLUSH_URAOTOMELOVERS =
-			register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_URAOTOMELOVERS, new Item.Settings()), "miku_plush_uraotomelovers");
+        register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_URAOTOMELOVERS, new Item.Settings()), "miku_plush_uraotomelovers");
 	public static final Item MIKU_PLUSH_PERSONADANCING =
-			register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_PERSONADANCING, new Item.Settings()), "miku_plush_personadancing");
+        register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_PERSONADANCING, new Item.Settings()), "miku_plush_personadancing");
 	public static final Item MIKU_PLUSH_HELLOPLANET =
-			register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_HELLOPLANET, new Item.Settings()), "miku_plush_helloplanet");
+        register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_HELLOPLANET, new Item.Settings()), "miku_plush_helloplanet");
 	public static final Item MIKU_PLUSH_HACHUNE =
-			register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_HACHUNE, new Item.Settings()), "miku_plush_hachune");
+        register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_HACHUNE, new Item.Settings()), "miku_plush_hachune");
 	public static final Item MIKU_PLUSH_ZATSUNE =
-			register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_ZATSUNE, new Item.Settings()), "miku_plush_zatsune");
+        register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_ZATSUNE, new Item.Settings()), "miku_plush_zatsune");
 	public static final Item MIKU_PLUSH_INFINITY =
-			register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_INFINITY, new Item.Settings()), "miku_plush_infinity");
+        register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_INFINITY, new Item.Settings()), "miku_plush_infinity");
 	public static final Item MIKU_PLUSH_VAMPIRE =
-			register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_VAMPIRE, new Item.Settings()), "miku_plush_vampire");
+        register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_VAMPIRE, new Item.Settings()), "miku_plush_vampire");
 	public static final Item MIKU_PLUSH_WEREWOMAN =
-			register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_WEREWOMAN, new Item.Settings()), "miku_plush_werewoman");
+        register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_WEREWOMAN, new Item.Settings()), "miku_plush_werewoman");
 	public static final Item MIKU_PLUSH_JASON =
-			register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_JASON, new Item.Settings()), "miku_plush_jason");
+        register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_JASON, new Item.Settings()), "miku_plush_jason");
 	public static final Item MIKU_PLUSH_MICHAEL_MYERS =
-			register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_MICHAEL_MYERS, new Item.Settings()), "miku_plush_michael_myers");
+        register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_MICHAEL_MYERS, new Item.Settings()), "miku_plush_michael_myers");
 	public static final Item MIKU_PLUSH_PUMPKIN =
-			register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_PUMPKIN, new Item.Settings()), "miku_plush_pumpkin");
+        register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_PUMPKIN, new Item.Settings()), "miku_plush_pumpkin");
 	public static final Item MIKU_PLUSH_GHOSTFACE =
-			register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_GHOSTFACE, new Item.Settings()), "miku_plush_ghostface");
+        register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_GHOSTFACE, new Item.Settings()), "miku_plush_ghostface");
 	public static final Item MIKU_PLUSH_FRANKENSTEIN =
-			register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_FRANKENSTEIN, new Item.Settings()), "miku_plush_frankenstein");
+        register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_FRANKENSTEIN, new Item.Settings()), "miku_plush_frankenstein");
 	public static final Item MIKU_PLUSH_MUMMY =
-			register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_MUMMY, new Item.Settings()), "miku_plush_mummy");
+        register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_MUMMY, new Item.Settings()), "miku_plush_mummy");
 	public static final Item MIKU_PLUSH_GHOST =
-			register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_GHOST, new Item.Settings()), "miku_plush_ghost");
+        register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_GHOST, new Item.Settings()), "miku_plush_ghost");
 	public static final Item MIKU_PLUSH_PATATI =
-			register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_PATATI, new Item.Settings()), "miku_plush_patati");
+        register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_PATATI, new Item.Settings()), "miku_plush_patati");
 	public static final Item MIKU_PLUSH_PATATA =
-			register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_PATATA, new Item.Settings()), "miku_plush_patata");
+        register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_PATATA, new Item.Settings()), "miku_plush_patata");
 	public static final Item MIKU_PLUSH_DEVIL =
-			register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_DEVIL, new Item.Settings()), "miku_plush_devil");
+        register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_DEVIL, new Item.Settings()), "miku_plush_devil");
 	public static final Item MIKU_PLUSH_WITCH =
-			register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_WITCH, new Item.Settings()), "miku_plush_witch");
+        register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_WITCH, new Item.Settings()), "miku_plush_witch");
 	public static final Item MIKU_PLUSH_SANTA =
-			register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_SANTA, new Item.Settings()), "miku_plush_santa");
+        register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_SANTA, new Item.Settings()), "miku_plush_santa");
 	public static final Item MIKU_PLUSH_REINDEER =
-			register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_REINDEER, new Item.Settings()), "miku_plush_reindeer");
+        register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_REINDEER, new Item.Settings()), "miku_plush_reindeer");
 	public static final Item MIKU_PLUSH_SANTA_ELF =
-			register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_SANTA_ELF, new Item.Settings()), "miku_plush_santa_elf");
+        register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_SANTA_ELF, new Item.Settings()), "miku_plush_santa_elf");
 	public static final Item MIKU_PLUSH_XMAS_TREE =
-			register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_XMAS_TREE, new Item.Settings()), "miku_plush_xmas_tree");
+        register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_XMAS_TREE, new Item.Settings()), "miku_plush_xmas_tree");
 	public static final Item AIKO_PLUSH =
-			register(new MikuPlushieBlockItem(ModBlocks.AIKO_PLUSH, new Item.Settings()), "aiko_plush");
+        register(new MikuPlushieBlockItem(ModBlocks.AIKO_PLUSH, new Item.Settings()), "aiko_plush");
 	public static final Item TETO_PLUSH =
-			register(new MikuPlushieBlockItem(ModBlocks.TETO_PLUSH, new Item.Settings()), "teto_plush");
+        register(new MikuPlushieBlockItem(ModBlocks.TETO_PLUSH, new Item.Settings()), "teto_plush");
 	public static final Item TETO_PICKAXE =
-			register(new PickaxeItem(PlushToolMaterial.INSTANCE, 1, -2.8f, new FabricItemSettings()), "teto_pickaxe");
+        register(new PickaxeItem(PlushToolMaterial.INSTANCE, 1, -2.8f, new FabricItemSettings()), "teto_pickaxe");
+
 	public static final Item AKITA_NERU_PLUSH =
-			register(new MikuPlushieBlockItem(ModBlocks.AKITA_NERU_PLUSH, new Item.Settings()), "akita_neru_plush");
+        register(new MikuPlushieBlockItem(ModBlocks.AKITA_NERU_PLUSH, new Item.Settings()), "akita_neru_plush");
 	public static final Item MIKU_PLUSH =
-			register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH, new Item.Settings()), "miku_plush");
+        register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH, new Item.Settings()), "miku_plush");
 	public static final Item RIN_PLUSH =
-			register(new MikuPlushieBlockItem(ModBlocks.RIN_PLUSH, new Item.Settings()), "rin_plush");
+        register(new MikuPlushieBlockItem(ModBlocks.RIN_PLUSH, new Item.Settings()), "rin_plush");
 	public static final Item LEN_PLUSH =
-			register(new MikuPlushieBlockItem(ModBlocks.LEN_PLUSH, new Item.Settings()), "len_plush");
+        register(new MikuPlushieBlockItem(ModBlocks.LEN_PLUSH, new Item.Settings()), "len_plush");
 	public static final Item MIKU_PLUSH_SONIC_CROSSWORLDS =
-			register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_SONIC_CROSSWORLDS, new Item.Settings()), "miku_plush_sonic_crossworlds");
+        register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_SONIC_CROSSWORLDS, new Item.Settings()), "miku_plush_sonic_crossworlds");
 	public static final Item MIKU_PLUSH_FORTNITE_NEKO =
-			register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_FORTNITE_NEKO, new Item.Settings()), "miku_plush_fortnite_neko");
+        register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_FORTNITE_NEKO, new Item.Settings()), "miku_plush_fortnite_neko");
 	public static final Item MIKU_PLUSH_V4 =
-			register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_V4, new Item.Settings()), "miku_plush_v4");
+        register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_V4, new Item.Settings()), "miku_plush_v4");
 	public static final Item MIKU_PLUSH_MESMERIZER =
-			register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_MESMERIZER, new Item.Settings()), "miku_plush_mesmerizer");
+        register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_MESMERIZER, new Item.Settings()), "miku_plush_mesmerizer");
 	public static final Item TETO_PLUSH_MESMERIZER =
-			register(new MikuPlushieBlockItem(ModBlocks.TETO_PLUSH_MESMERIZER, new Item.Settings()), "teto_plush_mesmerizer");
+        register(new MikuPlushieBlockItem(ModBlocks.TETO_PLUSH_MESMERIZER, new Item.Settings()), "teto_plush_mesmerizer");
 	public static final Item TETO_PICKAXE_MESMERIZER =
-		register(new PickaxeItem(PlushToolMaterial.INSTANCE, 1, -2.8f, new FabricItemSettings()), "teto_pickaxe_mesmerizer");
+        register(new PickaxeItem(PlushToolMaterial.INSTANCE, 1, -2.8f, new FabricItemSettings()), "teto_pickaxe_mesmerizer");
+
 	public static final Item MIKU_PLUSH_SONIC =
-			register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_SONIC, new Item.Settings()), "miku_plush_sonic");
+        register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_SONIC, new Item.Settings()), "miku_plush_sonic");
 	public static final Item TETO_PLUSH_SHADOW =
-			register(new MikuPlushieBlockItem(ModBlocks.TETO_PLUSH_SHADOW, new Item.Settings()), "teto_plush_shadow");
+        register(new MikuPlushieBlockItem(ModBlocks.TETO_PLUSH_SHADOW, new Item.Settings()), "teto_plush_shadow");
 	public static final Item AKITA_NERU_PLUSH_TAILS =
-			register(new MikuPlushieBlockItem(ModBlocks.AKITA_NERU_PLUSH_TAILS, new Item.Settings()), "akita_neru_plush_tails");
+        register(new MikuPlushieBlockItem(ModBlocks.AKITA_NERU_PLUSH_TAILS, new Item.Settings()), "akita_neru_plush_tails");
 	public static final Item TETO_PLUSH_BIRDBRAIN =
-			register(new MikuPlushieBlockItem(ModBlocks.TETO_PLUSH_BIRDBRAIN, new Item.Settings()), "teto_plush_birdbrain");
+        register(new MikuPlushieBlockItem(ModBlocks.TETO_PLUSH_BIRDBRAIN, new Item.Settings()), "teto_plush_birdbrain");
 	public static final Item TETO_PICKAXE_BIRDBRAIN =
-		register(new PickaxeItem(PlushToolMaterial.INSTANCE, 1, -2.8f, new FabricItemSettings()), "teto_pickaxe_birdbrain");
+        register(new PickaxeItem(PlushToolMaterial.INSTANCE, 1, -2.8f, new FabricItemSettings()), "teto_pickaxe_birdbrain");
+
 	public static final Item MIKU_PLUSH_DIGITAL_STARS_2025 =
-		register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_DIGITAL_STARS_2025, new Item.Settings()), "miku_plush_digital_stars_2025");
+        register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_DIGITAL_STARS_2025, new Item.Settings()), "miku_plush_digital_stars_2025");
 	public static final Item MIKU_PLUSH_ROTTEN_GIRL =
-		register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_ROTTEN_GIRL, new Item.Settings()), "miku_plush_rotten_girl");
+        register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_ROTTEN_GIRL, new Item.Settings()), "miku_plush_rotten_girl");
 	public static final Item TETO_PLUSH_REGRET_ROCK =
-		register(new MikuPlushieBlockItem(ModBlocks.TETO_PLUSH_REGRET_ROCK, new Item.Settings()), "teto_plush_regret_rock");
+        register(new MikuPlushieBlockItem(ModBlocks.TETO_PLUSH_REGRET_ROCK, new Item.Settings()), "teto_plush_regret_rock");
 	public static final Item TETO_PICKAXE_REGRET_ROCK =
-		register(new PickaxeItem(PlushToolMaterial.INSTANCE, 1, -2.8f, new FabricItemSettings()), "teto_pickaxe_regret_rock");
+        register(new PickaxeItem(PlushToolMaterial.INSTANCE, 1, -2.8f, new FabricItemSettings()), "teto_pickaxe_regret_rock");
+
 	public static final Item MIKU_PLUSH_PSYCHO_MODE =
-		register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_PSYCHO_MODE, new Item.Settings()), "miku_plush_psycho_mode");
+        register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_PSYCHO_MODE, new Item.Settings()), "miku_plush_psycho_mode");
 	public static final Item MIKU_PLUSH_DONT_BELIEVE_IN_T =
-		register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_DONT_BELIEVE_IN_T, new Item.Settings()), "miku_plush_dont_believe_in_t");
+        register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_DONT_BELIEVE_IN_T, new Item.Settings()), "miku_plush_dont_believe_in_t");
 	public static final Item TETO_PLUSH_DONT_BELIEVE_IN_T =
-		register(new MikuPlushieBlockItem(ModBlocks.TETO_PLUSH_DONT_BELIEVE_IN_T, new Item.Settings()), "teto_plush_dont_believe_in_t");
+        register(new MikuPlushieBlockItem(ModBlocks.TETO_PLUSH_DONT_BELIEVE_IN_T, new Item.Settings()), "teto_plush_dont_believe_in_t");
 	public static final Item TETO_PICKAXE_DONT_BELIEVE_IN_T =
-		register(new PickaxeItem(PlushToolMaterial.INSTANCE, 1, -2.8f, new FabricItemSettings()), "teto_pickaxe_dont_believe_in_t");
+        register(new PickaxeItem(PlushToolMaterial.INSTANCE, 1, -2.8f, new FabricItemSettings()), "teto_pickaxe_dont_believe_in_t");
+
 	public static final Item TETO_PLUSH_LIAR_DANCER =
-		register(new MikuPlushieBlockItem(ModBlocks.TETO_PLUSH_LIAR_DANCER, new Item.Settings()), "teto_plush_liar_dancer");
+        register(new MikuPlushieBlockItem(ModBlocks.TETO_PLUSH_LIAR_DANCER, new Item.Settings()), "teto_plush_liar_dancer");
 	public static final Item TETO_PICKAXE_LIAR_DANCER =
-		register(new PickaxeItem(PlushToolMaterial.INSTANCE, 1, -2.8f, new FabricItemSettings()), "teto_pickaxe_liar_dancer");
+        register(new PickaxeItem(PlushToolMaterial.INSTANCE, 1, -2.8f, new FabricItemSettings()), "teto_pickaxe_liar_dancer");
+
 	public static final Item MIKU_PLUSH_STATIC =
-		register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_STATIC, new Item.Settings()), "miku_plush_static");
+        register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_STATIC, new Item.Settings()), "miku_plush_static");
 	public static final Item MIKU_PLUSH_MOCHIMOCHI =
-		register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_MOCHIMOCHI, new Item.Settings()), "miku_plush_mochimochi");
+        register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_MOCHIMOCHI, new Item.Settings()), "miku_plush_mochimochi");
 	public static final Item TETO_PLUSH_WHATCHACALLITSNAME =
-		register(new MikuPlushieBlockItem(ModBlocks.TETO_PLUSH_WHATCHACALLITSNAME, new Item.Settings()), "teto_plush_whatchacallitsname");
+        register(new MikuPlushieBlockItem(ModBlocks.TETO_PLUSH_WHATCHACALLITSNAME, new Item.Settings()), "teto_plush_whatchacallitsname");
 	public static final Item TETO_PICKAXE_WHATCHACALLITSNAME =
-		register(new PickaxeItem(PlushToolMaterial.INSTANCE, 1, -2.8f, new FabricItemSettings()), "teto_pickaxe_whatchacallitsname");
+        register(new PickaxeItem(PlushToolMaterial.INSTANCE, 1, -2.8f, new FabricItemSettings()), "teto_pickaxe_whatchacallitsname");
+
 	public static final Item MIKU_PLUSH_MONITORING =
-		register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_MONITORING, new Item.Settings()), "miku_plush_monitoring");
+        register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_MONITORING, new Item.Settings()), "miku_plush_monitoring");
     public static final Item KONOHA_PLUSH =
         register(new MikuPlushieBlockItem(ModBlocks.KONOHA_PLUSH, new Item.Settings()), "konoha_plush");
     public static final Item LUKA_PLUSH =

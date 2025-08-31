@@ -1,36 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_brown_wool": {
-      "conditions": {
-        "items": [
-          {
-            "items": [
-              "minecraft:brown_wool"
-            ]
-          }
-        ]
-      },
-      "trigger": "minecraft:inventory_changed"
-    },
     "has_miku_plush": {
       "conditions": {
         "items": [
           {
             "items": [
               "miku-plushie:miku_plush"
-            ]
-          }
-        ]
-      },
-      "trigger": "minecraft:inventory_changed"
-    },
-    "has_spyglass": {
-      "conditions": {
-        "items": [
-          {
-            "items": [
-              "minecraft:spyglass"
             ]
           }
         ]
@@ -47,8 +23,6 @@
   "requirements": [
     [
       "has_miku_plush",
-      "has_brown_wool",
-      "has_spyglass",
       "has_the_recipe"
     ]
   ],

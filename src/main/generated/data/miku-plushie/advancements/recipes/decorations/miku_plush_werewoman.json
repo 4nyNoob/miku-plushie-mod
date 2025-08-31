@@ -1,36 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_bone": {
+    "has_miku_plush": {
       "conditions": {
         "items": [
           {
             "items": [
-              "minecraft:bone"
-            ]
-          }
-        ]
-      },
-      "trigger": "minecraft:inventory_changed"
-    },
-    "has_cyan_wool": {
-      "conditions": {
-        "items": [
-          {
-            "items": [
-              "minecraft:cyan_wool"
-            ]
-          }
-        ]
-      },
-      "trigger": "minecraft:inventory_changed"
-    },
-    "has_light_gray_wool": {
-      "conditions": {
-        "items": [
-          {
-            "items": [
-              "minecraft:light_gray_wool"
+              "miku-plushie:miku_plush"
             ]
           }
         ]
@@ -46,9 +22,7 @@
   },
   "requirements": [
     [
-      "has_cyan_wool",
-      "has_light_gray_wool",
-      "has_bone",
+      "has_miku_plush",
       "has_the_recipe"
     ]
   ],

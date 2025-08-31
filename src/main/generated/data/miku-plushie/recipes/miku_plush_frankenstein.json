@@ -1,27 +1,21 @@
 {
-  "type": "minecraft:crafting_shaped",
+  "type": "minecraft:crafting_shapeless",
   "category": "misc",
-  "key": {
-    "b": {
-      "item": "minecraft:black_wool"
+  "ingredients": [
+    {
+      "item": "miku-plushie:miku_plush"
     },
-    "c": {
+    {
       "item": "minecraft:brown_wool"
     },
-    "d": {
-      "item": "minecraft:lightning_rod"
-    },
-    "l": {
+    {
       "item": "minecraft:green_wool"
+    },
+    {
+      "item": "minecraft:lightning_rod"
     }
-  },
-  "pattern": [
-    "clc",
-    "cbc",
-    "d  "
   ],
   "result": {
     "item": "miku-plushie:miku_plush_frankenstein"
-  },
-  "show_notification": true
+  }
 }

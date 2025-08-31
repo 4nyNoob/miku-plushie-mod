@@ -1,27 +1,21 @@
 {
-  "type": "minecraft:crafting_shaped",
+  "type": "minecraft:crafting_shapeless",
   "category": "misc",
-  "key": {
-    "b": {
-      "item": "minecraft:blue_wool"
+  "ingredients": [
+    {
+      "item": "miku-plushie:miku_plush"
     },
-    "c": {
+    {
       "item": "minecraft:brown_wool"
     },
-    "d": {
-      "item": "minecraft:iron_sword"
+    {
+      "item": "minecraft:blue_wool"
     },
-    "l": {
-      "item": "minecraft:gray_wool"
+    {
+      "item": "minecraft:iron_sword"
     }
-  },
-  "pattern": [
-    "clc",
-    "cbc",
-    "d  "
   ],
   "result": {
     "item": "miku-plushie:miku_plush_michael_myers"
-  },
-  "show_notification": true
+  }
 }
