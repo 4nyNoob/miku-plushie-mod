@@ -1,23 +1,15 @@
 {
-  "type": "minecraft:crafting_shaped",
+  "type": "minecraft:crafting_shapeless",
   "category": "misc",
-  "key": {
-    "b": {
-      "item": "minecraft:black_wool"
+  "ingredients": [
+    {
+      "item": "miku-plushie:miku_plush"
     },
-    "c": {
-      "item": "minecraft:red_wool"
-    },
-    "l": {
-      "item": "minecraft:white_wool"
+    {
+      "item": "minecraft:fermented_spider_eye"
     }
-  },
-  "pattern": [
-    "clc",
-    "cbc"
   ],
   "result": {
-    "count": 1,
-    "id": "miku-plushie:miku_plush_vampire"
+    "item": "miku-plushie:miku_plush_vampire"
   }
 }

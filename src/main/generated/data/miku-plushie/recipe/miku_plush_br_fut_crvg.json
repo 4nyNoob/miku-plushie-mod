@@ -1,27 +1,21 @@
 {
-  "type": "minecraft:crafting_shaped",
+  "type": "minecraft:crafting_shapeless",
   "category": "misc",
-  "key": {
-    "a": {
-      "item": "minecraft:cartography_table"
+  "ingredients": [
+    {
+      "item": "miku-plushie:miku_plush"
     },
-    "b": {
+    {
+      "item": "minecraft:white_wool"
+    },
+    {
       "item": "minecraft:black_wool"
     },
-    "c": {
-      "item": "minecraft:cyan_wool"
-    },
-    "l": {
-      "item": "minecraft:white_wool"
+    {
+      "item": "minecraft:cartography_table"
     }
-  },
-  "pattern": [
-    "clc",
-    "cbc",
-    "a  "
   ],
   "result": {
-    "count": 1,
-    "id": "miku-plushie:miku_plush_br_fut_crvg"
+    "item": "miku-plushie:miku_plush_br_fut_crvg"
   }
 }

@@ -1,27 +1,21 @@
 {
-  "type": "minecraft:crafting_shaped",
+  "type": "minecraft:crafting_shapeless",
   "category": "misc",
-  "key": {
-    "B": {
-      "item": "minecraft:black_wool"
+  "ingredients": [
+    {
+      "item": "miku-plushie:miku_plush"
     },
-    "b": {
+    {
       "item": "minecraft:brown_wool"
     },
-    "c": {
-      "item": "minecraft:cyan_wool"
+    {
+      "item": "minecraft:black_wool"
     },
-    "i": {
+    {
       "item": "minecraft:iron_nugget"
     }
-  },
-  "pattern": [
-    "cbc",
-    "cBc",
-    "i  "
   ],
   "result": {
-    "count": 1,
-    "id": "miku-plushie:miku_plush_br_brown_bro"
+    "item": "miku-plushie:miku_plush_br_brown_bro"
   }
 }

@@ -1,31 +1,13 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_black_wool": {
+    "has_miku_plush": {
       "conditions": {
         "items": [
           {
-            "items": "minecraft:black_wool"
-          }
-        ]
-      },
-      "trigger": "minecraft:inventory_changed"
-    },
-    "has_cyan_wool": {
-      "conditions": {
-        "items": [
-          {
-            "items": "minecraft:cyan_wool"
-          }
-        ]
-      },
-      "trigger": "minecraft:inventory_changed"
-    },
-    "has_light_gray_wool": {
-      "conditions": {
-        "items": [
-          {
-            "items": "minecraft:light_gray_wool"
+            "items": [
+              "miku-plushie:miku_plush"
+            ]
           }
         ]
       },
@@ -40,15 +22,14 @@
   },
   "requirements": [
     [
-      "has_the_recipe",
-      "has_cyan_wool",
-      "has_light_gray_wool",
-      "has_black_wool"
+      "has_miku_plush",
+      "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
       "miku-plushie:miku_plush_br_fut_cam"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

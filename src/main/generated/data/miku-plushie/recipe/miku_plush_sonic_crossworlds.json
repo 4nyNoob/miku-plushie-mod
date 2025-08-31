@@ -1,23 +1,18 @@
 {
-  "type": "minecraft:crafting_shaped",
+  "type": "minecraft:crafting_shapeless",
   "category": "misc",
-  "key": {
-    "1": {
-      "item": "minecraft:cyan_wool"
+  "ingredients": [
+    {
+      "item": "miku-plushie:miku_plush"
     },
-    "2": {
+    {
       "item": "minecraft:magenta_wool"
     },
-    "3": {
+    {
       "item": "minecraft:black_wool"
     }
-  },
-  "pattern": [
-    "121",
-    "131"
   ],
   "result": {
-    "count": 1,
-    "id": "miku-plushie:miku_plush_sonic_crossworlds"
+    "item": "miku-plushie:miku_plush_sonic_crossworlds"
   }
 }

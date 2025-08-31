@@ -1,41 +1,13 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_cyan_wool": {
+    "has_miku_plush": {
       "conditions": {
         "items": [
           {
-            "items": "minecraft:cyan_wool"
-          }
-        ]
-      },
-      "trigger": "minecraft:inventory_changed"
-    },
-    "has_iron_block": {
-      "conditions": {
-        "items": [
-          {
-            "items": "minecraft:iron_block"
-          }
-        ]
-      },
-      "trigger": "minecraft:inventory_changed"
-    },
-    "has_lime_wool": {
-      "conditions": {
-        "items": [
-          {
-            "items": "minecraft:lime_wool"
-          }
-        ]
-      },
-      "trigger": "minecraft:inventory_changed"
-    },
-    "has_purple_wool": {
-      "conditions": {
-        "items": [
-          {
-            "items": "minecraft:purple_wool"
+            "items": [
+              "miku-plushie:miku_plush"
+            ]
           }
         ]
       },
@@ -46,31 +18,18 @@
         "recipe": "miku-plushie:miku_plush_helloplanet"
       },
       "trigger": "minecraft:recipe_unlocked"
-    },
-    "has_white_wool": {
-      "conditions": {
-        "items": [
-          {
-            "items": "minecraft:white_wool"
-          }
-        ]
-      },
-      "trigger": "minecraft:inventory_changed"
     }
   },
   "requirements": [
     [
-      "has_the_recipe",
-      "has_cyan_wool",
-      "has_white_wool",
-      "has_iron_block",
-      "has_lime_wool",
-      "has_purple_wool"
+      "has_miku_plush",
+      "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
       "miku-plushie:miku_plush_helloplanet"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

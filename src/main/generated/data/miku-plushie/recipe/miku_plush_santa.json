@@ -1,23 +1,21 @@
 {
-  "type": "minecraft:crafting_shaped",
+  "type": "minecraft:crafting_shapeless",
   "category": "misc",
-  "key": {
-    "b": {
+  "ingredients": [
+    {
+      "item": "miku-plushie:miku_plush"
+    },
+    {
+      "item": "minecraft:red_wool"
+    },
+    {
       "item": "minecraft:white_wool"
     },
-    "c": {
-      "item": "minecraft:cyan_wool"
-    },
-    "l": {
-      "item": "minecraft:red_wool"
+    {
+      "item": "minecraft:snow_block"
     }
-  },
-  "pattern": [
-    "clc",
-    "cbc"
   ],
   "result": {
-    "count": 1,
-    "id": "miku-plushie:miku_plush_santa"
+    "item": "miku-plushie:miku_plush_santa"
   }
 }

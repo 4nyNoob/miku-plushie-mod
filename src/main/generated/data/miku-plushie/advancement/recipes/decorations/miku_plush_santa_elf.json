@@ -1,31 +1,13 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_cyan_wool": {
+    "has_miku_plush": {
       "conditions": {
         "items": [
           {
-            "items": "minecraft:cyan_wool"
-          }
-        ]
-      },
-      "trigger": "minecraft:inventory_changed"
-    },
-    "has_lime_wool": {
-      "conditions": {
-        "items": [
-          {
-            "items": "minecraft:lime_wool"
-          }
-        ]
-      },
-      "trigger": "minecraft:inventory_changed"
-    },
-    "has_red_wool": {
-      "conditions": {
-        "items": [
-          {
-            "items": "minecraft:red_wool"
+            "items": [
+              "miku-plushie:miku_plush"
+            ]
           }
         ]
       },
@@ -40,15 +22,14 @@
   },
   "requirements": [
     [
-      "has_the_recipe",
-      "has_cyan_wool",
-      "has_lime_wool",
-      "has_red_wool"
+      "has_miku_plush",
+      "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
       "miku-plushie:miku_plush_santa_elf"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

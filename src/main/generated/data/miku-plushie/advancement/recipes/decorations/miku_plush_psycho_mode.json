@@ -1,21 +1,13 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_amethyst_shard": {
-      "conditions": {
-        "items": [
-          {
-            "items": "minecraft:amethyst_shard"
-          }
-        ]
-      },
-      "trigger": "minecraft:inventory_changed"
-    },
     "has_miku_plush": {
       "conditions": {
         "items": [
           {
-            "items": "miku-plushie:miku_plush"
+            "items": [
+              "miku-plushie:miku_plush"
+            ]
           }
         ]
       },
@@ -30,14 +22,14 @@
   },
   "requirements": [
     [
-      "has_the_recipe",
       "has_miku_plush",
-      "has_amethyst_shard"
+      "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
       "miku-plushie:miku_plush_psycho_mode"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

@@ -1,23 +1,21 @@
 {
-  "type": "minecraft:crafting_shaped",
+  "type": "minecraft:crafting_shapeless",
   "category": "misc",
-  "key": {
-    "b": {
-      "item": "minecraft:paper"
+  "ingredients": [
+    {
+      "item": "miku-plushie:miku_plush"
     },
-    "c": {
+    {
       "item": "minecraft:black_wool"
     },
-    "l": {
-      "item": "minecraft:bone_block"
+    {
+      "item": "minecraft:paper"
+    },
+    {
+      "item": "minecraft:paper"
     }
-  },
-  "pattern": [
-    "clc",
-    "cbc"
   ],
   "result": {
-    "count": 1,
-    "id": "miku-plushie:miku_plush_mummy"
+    "item": "miku-plushie:miku_plush_mummy"
   }
 }

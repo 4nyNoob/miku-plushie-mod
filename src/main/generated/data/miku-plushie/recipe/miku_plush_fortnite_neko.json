@@ -1,23 +1,18 @@
 {
-  "type": "minecraft:crafting_shaped",
+  "type": "minecraft:crafting_shapeless",
   "category": "misc",
-  "key": {
-    "1": {
+  "ingredients": [
+    {
+      "item": "miku-plushie:miku_plush"
+    },
+    {
       "item": "minecraft:pink_wool"
     },
-    "2": {
-      "item": "minecraft:white_wool"
-    },
-    "3": {
+    {
       "item": "minecraft:light_blue_wool"
     }
-  },
-  "pattern": [
-    "121",
-    "313"
   ],
   "result": {
-    "count": 1,
-    "id": "miku-plushie:miku_plush_fortnite_neko"
+    "item": "miku-plushie:miku_plush_fortnite_neko"
   }
 }

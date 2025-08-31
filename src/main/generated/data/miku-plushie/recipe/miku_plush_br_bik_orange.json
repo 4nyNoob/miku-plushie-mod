@@ -1,23 +1,18 @@
 {
-  "type": "minecraft:crafting_shaped",
+  "type": "minecraft:crafting_shapeless",
   "category": "misc",
-  "key": {
-    "c": {
-      "item": "minecraft:cyan_wool"
+  "ingredients": [
+    {
+      "item": "miku-plushie:miku_plush"
     },
-    "o": {
+    {
       "item": "minecraft:orange_wool"
     },
-    "w": {
-      "item": "minecraft:white_wool"
+    {
+      "item": "minecraft:water_bucket"
     }
-  },
-  "pattern": [
-    "cwc",
-    "coc"
   ],
   "result": {
-    "count": 1,
-    "id": "miku-plushie:miku_plush_br_bik_orange"
+    "item": "miku-plushie:miku_plush_br_bik_orange"
   }
 }

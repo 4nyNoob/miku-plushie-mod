@@ -1,23 +1,18 @@
 {
-  "type": "minecraft:crafting_shaped",
+  "type": "minecraft:crafting_shapeless",
   "category": "misc",
-  "key": {
-    "b": {
-      "item": "minecraft:red_wool"
+  "ingredients": [
+    {
+      "item": "miku-plushie:miku_plush"
     },
-    "c": {
-      "item": "minecraft:cyan_wool"
-    },
-    "l": {
+    {
       "item": "minecraft:brown_wool"
+    },
+    {
+      "item": "minecraft:redstone_torch"
     }
-  },
-  "pattern": [
-    "clc",
-    "cbc"
   ],
   "result": {
-    "count": 1,
-    "id": "miku-plushie:miku_plush_reindeer"
+    "item": "miku-plushie:miku_plush_reindeer"
   }
 }

@@ -1,27 +1,21 @@
 {
-  "type": "minecraft:crafting_shaped",
+  "type": "minecraft:crafting_shapeless",
   "category": "misc",
-  "key": {
-    "B": {
-      "item": "minecraft:blue_wool"
+  "ingredients": [
+    {
+      "item": "miku-plushie:miku_plush"
     },
-    "b": {
+    {
       "item": "minecraft:brown_wool"
     },
-    "c": {
-      "item": "minecraft:cyan_wool"
+    {
+      "item": "minecraft:blue_wool"
     },
-    "r": {
+    {
       "item": "minecraft:redstone"
     }
-  },
-  "pattern": [
-    "cbc",
-    "cBc",
-    "r  "
   ],
   "result": {
-    "count": 1,
-    "id": "miku-plushie:miku_plush_br_electrician"
+    "item": "miku-plushie:miku_plush_br_electrician"
   }
 }

@@ -1,11 +1,13 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_light_blue_wool": {
+    "has_miku_plush": {
       "conditions": {
         "items": [
           {
-            "items": "minecraft:light_blue_wool"
+            "items": [
+              "miku-plushie:miku_plush"
+            ]
           }
         ]
       },
@@ -16,28 +18,18 @@
         "recipe": "miku-plushie:miku_plush_mesmerizer"
       },
       "trigger": "minecraft:recipe_unlocked"
-    },
-    "has_white_wool": {
-      "conditions": {
-        "items": [
-          {
-            "items": "minecraft:white_wool"
-          }
-        ]
-      },
-      "trigger": "minecraft:inventory_changed"
     }
   },
   "requirements": [
     [
-      "has_the_recipe",
-      "has_light_blue_wool",
-      "has_white_wool"
+      "has_miku_plush",
+      "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
       "miku-plushie:miku_plush_mesmerizer"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }
