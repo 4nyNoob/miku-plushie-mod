@@ -14,8 +14,9 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.DirectionProperty;
-import net.minecraft.util.ActionResult;
 import net.minecraft.util.BlockRotation;
+import net.minecraft.util.Hand;
+import net.minecraft.util.ItemActionResult;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
@@ -31,18 +32,16 @@ public class MikuPlushieBlock extends Block {
 		this.setDefaultState(this.stateManager.getDefaultState().with(FACING, Direction.NORTH));
 	}
 
-	@Override
-	public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, BlockHitResult hit) {
-		if (!world.isClient){
-			if (player.getActiveItem().isOf(ModItems.CANUDINHO) && this.asItem().getDefaultStack().isIn(ModTagProvider.BR_MIKU_ITEMS)){
+    @Override
+    protected ItemActionResult onUseWithItem(ItemStack stack, BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
+        if (stack.isOf(ModItems.CANUDINHO) && this.asItem().getDefaultStack().isIn(ModTagProvider.BR_MIKU_ITEMS)){
 				world.playSound(null, pos, ModSoundEvents.MIKU_CANUDINHO, SoundCategory.BLOCKS, 1F, 1F);
-				return ActionResult.SUCCESS;
-			}
-		}
-		return super.onUse(state, world, pos, player, hit);
-	}
+				return ItemActionResult.SUCCESS;
+        }
+        return super.onUseWithItem(stack, state, world, pos, player, hand, hit);
+    }
 
-	@Override
+    @Override
 	public void onPlaced(World world, BlockPos pos, BlockState state, @Nullable LivingEntity placer, ItemStack itemStack) {
 		if(this.asItem().getDefaultStack().isIn(ModTagProvider.AIKO_PLUSH)){
 			world.playSound(null, pos, ModSoundEvents.AIKO_OIE, SoundCategory.BLOCKS, 0.5F, 1);
@@ -85,8 +84,7 @@ public class MikuPlushieBlock extends Block {
 
 	@Override
 	public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
-		final VoxelShape SHAPE = Block.createCuboidShape(4.5, 0.0, 4.5, 11.5, 13.5, 11.5);
-		return SHAPE;
+        return Block.createCuboidShape(4.5, 0.0, 4.5, 11.5, 13.5, 11.5);
 	}
 
 	@Nullable
