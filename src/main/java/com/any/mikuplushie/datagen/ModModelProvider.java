@@ -94,6 +94,5 @@ public class ModModelProvider extends FabricModelProvider {
 	@Override
 	public void generateItemModels(ItemModelGenerator itemModelGenerator) {
 		itemModelGenerator.register(ModItems.CANUDINHO, Models.GENERATED);
-//		itemModelGenerator.register(ModItems.BAGUETTE, Models.GENERATED);
 	}
 }
