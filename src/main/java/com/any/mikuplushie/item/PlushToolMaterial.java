@@ -7,7 +7,7 @@ import net.minecraft.recipe.Ingredient;
 
 public class PlushToolMaterial implements ToolMaterial {
 
-    public static final PlushToolMaterial INSTANCE = new PlushToolMaterial();
+    public static final PlushToolMaterial PLUSH_TOOL_MATERIAL = new PlushToolMaterial();
 
     @Override
     public int getDurability() {
