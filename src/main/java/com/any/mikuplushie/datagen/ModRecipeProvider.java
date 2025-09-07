@@ -686,12 +686,12 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .criterion(FabricRecipeProvider.hasItem(ModBlocks.TETO_PLUSH_SOME_MORE_OF_THAT_SONG), FabricRecipeProvider.conditionsFromItem(ModBlocks.TETO_PLUSH_SOME_MORE_OF_THAT_SONG))
                 .offerTo(exporter);
 
-            ShapelessRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ModBlocks.TETO_PLUSH_LOBSTER)
-                .input(ModBlocks.TETO_PLUSH)
-                .input(Items.SEAGRASS, 2)
-                .input(Items.KELP, 2)
-                .criterion(FabricRecipeProvider.hasItem(ModBlocks.TETO_PLUSH), FabricRecipeProvider.conditionsFromItem(ModBlocks.TETO_PLUSH))
-                .offerTo(exporter);
+//            ShapelessRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ModBlocks.TETO_PLUSH_LOBSTER)
+//                .input(ModBlocks.TETO_PLUSH)
+//                .input(Items.SEAGRASS, 2)
+//                .input(Items.KELP, 2)
+//                .criterion(FabricRecipeProvider.hasItem(ModBlocks.TETO_PLUSH), FabricRecipeProvider.conditionsFromItem(ModBlocks.TETO_PLUSH))
+//                .offerTo(exporter);
         }
 
     }
