@@ -1,4 +1,4 @@
-// 1.21.1	2025-09-03T17:33:55.82282904	miku plushies/Recipes
+// 1.21.1	2025-09-08T15:44:17.866878229	miku plushies/Recipes
 1057061e0384eafa9725dc7cbd5f5270663818ed data/miku-plushie/advancement/recipes/food/canudinho.json
 0a1b4d59c43feba7323dd59c1b80c7735ac0eb72 data/miku-plushie/recipe/miku_plush.json
 2a992513f30c1538cd9e73a86160f7c6a7baed7a data/miku-plushie/recipe/miku_plush_ghostface.json
@@ -107,12 +107,10 @@ f285868fedea7d42cc3a8f953bcf065ce5408e44 data/miku-plushie/advancement/recipes/d
 470c68a8196391c3aa95c1fa74cbe508036d9a59 data/miku-plushie/recipe/miku_plush_br_fut_crvg.json
 dd99cc88348fc1c1e816c292e149150a52cfd6d9 data/miku-plushie/recipe/miku_plush_vampire.json
 6906962d3ff98c261bf25d1cf073c7c9c0cbb2dd data/miku-plushie/recipe/miku_plush_static.json
-a2f324db98e026abe060e0d4d26b0d98f328b1f5 data/miku-plushie/recipe/teto_plush_lobster.json
 98d82746ee8e41151b8f687af28cfe87e82e88ab data/miku-plushie/recipe/miku_plush_br_bik_orange.json
 7235937b2b7b681353d0303e92100b7b0837183f data/miku-plushie/advancement/recipes/food/baguette.json
 4d8118a2a64ea6bd8bd4e462d404c76bacc96d39 data/miku-plushie/advancement/recipes/decorations/miku_plush_br_rs.json
 c76d84bc19eb82f0eeec2bb0fa372c961181bbd5 data/miku-plushie/advancement/recipes/decorations/teto_plush_birdbrain.json
-01a3d94bc4ecbbb71d7ea89d623069319f7270c0 data/miku-plushie/advancement/recipes/decorations/teto_plush_lobster.json
 781f93b08c0c02c0fd05cf7d3c98b700fccb6b64 data/miku-plushie/advancement/recipes/decorations/miku_plush_monitoring.json
 d3accedf6117b3e940328f3f80da65949da7ad80 data/miku-plushie/recipe/miku_plush_santa.json
 ac79e7d044e473ffc2508b04097fdc04c408e01d data/miku-plushie/recipe/miku_plush_personadancing.json

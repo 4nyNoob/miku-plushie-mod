@@ -605,14 +605,14 @@ public class ModBlocks {
         "teto_plush_some_more_of_that_song",
         false
     );
-    public static final Block TETO_PLUSH_LOBSTER = register(
-        new MikuPlushieBlock(AbstractBlock.Settings.copy(Blocks.FLOWER_POT)
-            .sounds(BlockSoundGroup.WOOL)
-            .nonOpaque()
-        ),
-        "teto_plush_lobster",
-        false
-    );
+//    public static final Block TETO_PLUSH_LOBSTER = register(
+//        new MikuPlushieBlock(AbstractBlock.Settings.copy(Blocks.FLOWER_POT)
+//            .sounds(BlockSoundGroup.WOOL)
+//            .nonOpaque()
+//        ),
+//        "teto_plush_lobster",
+//        false
+//    );
 
 
 

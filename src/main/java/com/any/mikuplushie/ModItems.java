@@ -195,8 +195,8 @@ public class ModItems {
         register(new MikuPlushieBlockItem(ModBlocks.TETO_PLUSH_SOME_MORE_OF_THAT_SONG, new Item.Settings()), "teto_plush_some_more_of_that_song");
     public static final Item TETO_PICKAXE_SOME_MORE_OF_THAT_SONG =
         register(new PickaxeItem(PlushToolMaterial.PLUSH_TOOL_MATERIAL, new Item.Settings()), "teto_pickaxe_some_more_of_that_song");
-    public static final Item TETO_PLUSH_LOBSTER =
-        register(new MikuPlushieBlockItem(ModBlocks.TETO_PLUSH_LOBSTER, new Item.Settings()), "teto_plush_lobster");
+//    public static final Item TETO_PLUSH_LOBSTER =
+//        register(new MikuPlushieBlockItem(ModBlocks.TETO_PLUSH_LOBSTER, new Item.Settings()), "teto_plush_lobster");
 
 
 
@@ -305,7 +305,7 @@ public class ModItems {
 			itemGroup.add(ModItems.LUKA_PLUSH);
             itemGroup.add(ModItems.TETO_PLUSH_SOME_MORE_OF_THAT_SONG);
             itemGroup.add(ModItems.TETO_PICKAXE_SOME_MORE_OF_THAT_SONG);
-            itemGroup.add(ModItems.TETO_PLUSH_LOBSTER);
+//            itemGroup.add(ModItems.TETO_PLUSH_LOBSTER);
 		});
 	}
 }
