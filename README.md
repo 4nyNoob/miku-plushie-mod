@@ -1,20 +1,21 @@
+<!--suppress HtmlDeprecatedAttribute -->
 <h1 align="center">BRAZILIAN MIKU JUST ARRIVED IN MINECRAFT</h1>
 
 <p align="center">
-  <img src="http://img.shields.io/badge/License-GPL_3.0-FF6699"/>
-  <img src="http://img.shields.io/badge/Fabric-1.20.1-00B4AB"/>
-  <img src="http://img.shields.io/badge/Fabric-1.20.1-9999CC"/>
+  <img src="http://img.shields.io/badge/License-GPL_3.0-FF6699" alt="GPL V3.0"/>
+  <img src="http://img.shields.io/badge/Fabric-1.20.1-00B4AB" alt="Fabric 1.20.1"/>
+  <img src="http://img.shields.io/badge/Fabric-1.21.1-9999CC" alt="Fabric 1.21.1"/>
 </p>
 
 <p align="center">
   <a href="https://github.com/4nyNoob/miku-plushie-mod/releases">
-    <img src="http://img.shields.io/badge/Download-GitHub-0969da"/>
+    <img src="http://img.shields.io/badge/Download-GitHub-0969da" alt="Download at Github"/>
   </a>
   <a href="https://modrinth.com/mod/miku-plushies">
-    <img src="http://img.shields.io/badge/Download-Modrinth-5aad5f"/>
+    <img src="http://img.shields.io/badge/Download-Modrinth-5aad5f" alt="Download at Modrinth"/>
   </a>
   <a href="https://www.curseforge.com/minecraft/mc-mods/miku-plushies">
-    <img src="http://img.shields.io/badge/Download-CurseForge-f16436"/>
+    <img src="http://img.shields.io/badge/Download-CurseForge-f16436" alt="Download at Curseforge"/>
   </a>
 </p>
 
