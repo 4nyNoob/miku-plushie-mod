@@ -1,6 +1,7 @@
-// 1.20.1	2025-09-06T17:08:11.736913236	miku plushies/Block Loot Tables
+// 1.20.1	2025-09-11T16:11:29.133590607	miku plushies/Block Loot Tables
 9780fd8b35e0d523ecbda361f6492d421c8b8ba4 data/miku-plushie/loot_tables/blocks/teto_plush_whatchacallitsname.json
 1605dca8474dc1cb7ac58d618cbdcc6b4c0ca9fb data/miku-plushie/loot_tables/blocks/miku_plush_br_sp.json
+f69a229fec9fcfe1064b2f2823d4ee19e6116a82 data/miku-plushie/loot_tables/blocks/teto_plush_synthv.json
 4fab21a53ca84094f118efd3d57687ff24147a1f data/miku-plushie/loot_tables/blocks/teto_plush_mesmerizer.json
 30a25558dfef652b56f08188e2b4da888a2dbe74 data/miku-plushie/loot_tables/blocks/miku_plush_br_fut_fla.json
 61e137792b5fcb8b91b8ed2c4ac29faeb9d87078 data/miku-plushie/loot_tables/blocks/miku_plush_br_fut_crvg.json
@@ -20,6 +21,7 @@ a2a6fcd9bd651597165096bce1c58a75e57402df data/miku-plushie/loot_tables/blocks/ai
 d2bd0289b5a3e722268b08a384209d65c154594a data/miku-plushie/loot_tables/blocks/teto_plush_some_more_of_that_song.json
 b791359373220df6e9415296efe6015189e30f53 data/miku-plushie/loot_tables/blocks/miku_plush_br_rs.json
 2116f7b5134dd379b9dd6fb3190f24abb1dc7f5d data/miku-plushie/loot_tables/blocks/miku_plush_santa.json
+ea9c115ec73fe8a8f988bf1504aad6dcdef85524 data/miku-plushie/loot_tables/blocks/miku_plush_hollow_knight.json
 3a0f1bd85d1467bf9ca9381f28d337d4a2914bf6 data/miku-plushie/loot_tables/blocks/miku_plush_br_electrician.json
 df886a04fb3b3364f05fbbc063e2653b4ef9c5ba data/miku-plushie/loot_tables/blocks/miku_plush_v4.json
 c8a0509df1543d36ec3c19a7d905b00a8e88fc20 data/miku-plushie/loot_tables/blocks/miku_plush_br_go.json
@@ -37,6 +39,7 @@ a5043fa29be2869b0742b670a266dbc1bda5e44c data/miku-plushie/loot_tables/blocks/mi
 3fe3c565ffe7e4f77f0252bfd2379452f1187223 data/miku-plushie/loot_tables/blocks/miku_plush_hachune.json
 4912f9c5397eaf884020bf41f24c5d1b52dc21dd data/miku-plushie/loot_tables/blocks/konoha_plush.json
 be99bc4b6a298a863ccc60941db526ad7fda33d7 data/miku-plushie/loot_tables/blocks/miku_plush_br.json
+df25f93b71ca591017a3c1df30997c2fc8d22cf5 data/miku-plushie/loot_tables/blocks/teto_plush_lobster.json
 390b851dcb5e2e3a4f0ebe139166bb8a0033ab84 data/miku-plushie/loot_tables/blocks/miku_plush_mushroom.json
 da2dcc7caf5078f3b17da6942ecea62035e6b676 data/miku-plushie/loot_tables/blocks/miku_plush_uraotomelovers.json
 f9d35336b46fc5a9d1744a5c4d4334371027807c data/miku-plushie/loot_tables/blocks/miku_plush_witch.json
@@ -53,6 +56,7 @@ dcd9c2497b3df29a750fa506567f3f4b9d26aac8 data/miku-plushie/loot_tables/blocks/mi
 65c217979b7a708148f5730f39ca8ed5cc377541 data/miku-plushie/loot_tables/blocks/miku_plush_xmas_tree.json
 b22691746ff3cd46ae1289b5150a15327ebb6465 data/miku-plushie/loot_tables/blocks/teto_plush_regret_rock.json
 54d8d9369b03274b6b02d9c0645886bf3d14d2e2 data/miku-plushie/loot_tables/blocks/miku_plush_br_am.json
+399623a82b1bb39801edc573862ff34bd58aeddb data/miku-plushie/loot_tables/blocks/miku_plush_hornet.json
 346e5b2987f67e815bb54559166bb16a5703717e data/miku-plushie/loot_tables/blocks/rin_plush.json
 fbc7331ae842cbe27dce77b3099bc53e2c68607a data/miku-plushie/loot_tables/blocks/miku_plush_werewoman.json
 84d7777edfe8d2fd6ce83a54880a09945bf3227c data/miku-plushie/loot_tables/blocks/miku_plush_sonic.json

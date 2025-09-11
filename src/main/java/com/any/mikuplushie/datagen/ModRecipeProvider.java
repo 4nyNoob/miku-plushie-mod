@@ -686,12 +686,33 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .criterion(FabricRecipeProvider.hasItem(ModBlocks.TETO_PLUSH_SOME_MORE_OF_THAT_SONG), FabricRecipeProvider.conditionsFromItem(ModBlocks.TETO_PLUSH_SOME_MORE_OF_THAT_SONG))
                 .offerTo(exporter);
 
-//            ShapelessRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ModBlocks.TETO_PLUSH_LOBSTER)
-//                .input(ModBlocks.TETO_PLUSH)
-//                .input(Items.SEAGRASS, 2)
-//                .input(Items.KELP, 2)
-//                .criterion(FabricRecipeProvider.hasItem(ModBlocks.TETO_PLUSH), FabricRecipeProvider.conditionsFromItem(ModBlocks.TETO_PLUSH))
-//                .offerTo(exporter);
+            ShapelessRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ModBlocks.TETO_PLUSH_LOBSTER)
+                .input(ModBlocks.TETO_PLUSH)
+                .input(Items.SEAGRASS, 2)
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.TETO_PLUSH), FabricRecipeProvider.conditionsFromItem(ModBlocks.TETO_PLUSH))
+                .offerTo(exporter);
+
+            ShapelessRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ModBlocks.MIKU_PLUSH_HOLLOW_KNIGHT)
+                .input(ModBlocks.MIKU_PLUSH)
+                .input(Items.BLACK_WOOL, 1)
+                .input(Items.IRON_SWORD, 1)
+                .input(Items.BONE_BLOCK, 1)
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.MIKU_PLUSH), FabricRecipeProvider.conditionsFromItem(ModBlocks.MIKU_PLUSH))
+                .offerTo(exporter);
+
+            ShapelessRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ModBlocks.MIKU_PLUSH_HORNET)
+                .input(ModBlocks.MIKU_PLUSH)
+                .input(Items.RED_WOOL, 1)
+                .input(Items.IRON_SWORD, 1)
+                .input(Items.BONE_BLOCK, 1)
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.MIKU_PLUSH), FabricRecipeProvider.conditionsFromItem(ModBlocks.MIKU_PLUSH))
+                .offerTo(exporter);
+
+            ShapelessRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ModBlocks.TETO_PLUSH_SYNTHV)
+                .input(ModBlocks.TETO_PLUSH)
+                .input(Items.IRON_INGOT, 1)
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.TETO_PLUSH), FabricRecipeProvider.conditionsFromItem(ModBlocks.TETO_PLUSH))
+                .offerTo(exporter);
         }
 
     }
