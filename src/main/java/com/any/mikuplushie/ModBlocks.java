@@ -613,6 +613,30 @@ public class ModBlocks {
         "teto_plush_lobster",
         false
     );
+    public static final Block MIKU_PLUSH_HOLLOW_KNIGHT = register(
+        new MikuPlushieBlock(AbstractBlock.Settings.copy(Blocks.FLOWER_POT)
+            .sounds(BlockSoundGroup.WOOL)
+            .nonOpaque()
+        ),
+        "miku_plush_hollow_knight",
+        false
+    );
+    public static final Block MIKU_PLUSH_HORNET = register(
+        new MikuPlushieBlock(AbstractBlock.Settings.copy(Blocks.FLOWER_POT)
+            .sounds(BlockSoundGroup.WOOL)
+            .nonOpaque()
+        ),
+        "miku_plush_hornet",
+        false
+    );
+    public static final Block TETO_PLUSH_SYNTHV = register(
+        new MikuPlushieBlock(AbstractBlock.Settings.copy(Blocks.FLOWER_POT)
+            .sounds(BlockSoundGroup.WOOL)
+            .nonOpaque()
+        ),
+        "teto_plush_synthv",
+        false
+    );
 
 
 

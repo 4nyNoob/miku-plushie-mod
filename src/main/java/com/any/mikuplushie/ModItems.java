@@ -204,8 +204,14 @@ public class ModItems {
         register(new MikuPlushieBlockItem(ModBlocks.TETO_PLUSH_SOME_MORE_OF_THAT_SONG, new Item.Settings()), "teto_plush_some_more_of_that_song");
     public static final Item TETO_PICKAXE_SOME_MORE_OF_THAT_SONG =
         register(new PickaxeItem(PlushToolMaterial.PLUSH_TOOL_MATERIAL, 1, -2.8f, new FabricItemSettings()), "teto_pickaxe_some_more_of_that_song");
-//    public static final Item TETO_PLUSH_LOBSTER =
-//        register(new MikuPlushieBlockItem(ModBlocks.TETO_PLUSH_LOBSTER, new Item.Settings()), "teto_plush_lobster");
+    public static final Item TETO_PLUSH_LOBSTER =
+        register(new MikuPlushieBlockItem(ModBlocks.TETO_PLUSH_LOBSTER, new Item.Settings()), "teto_plush_lobster");
+    public static final Item MIKU_PLUSH_HOLLOW_KNIGHT =
+        register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_HOLLOW_KNIGHT, new Item.Settings()), "miku_plush_hollow_knight");
+    public static final Item MIKU_PLUSH_HORNET =
+        register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_HORNET, new Item.Settings()), "miku_plush_hornet");
+    public static final Item TETO_PLUSH_SYNTHV =
+        register(new MikuPlushieBlockItem(ModBlocks.TETO_PLUSH_SYNTHV, new Item.Settings()), "teto_plush_synthv");
 
 
 
@@ -215,10 +221,9 @@ public class ModItems {
 		Identifier itemID = Identifier.of(MikuPlushie.MOD_ID, id);
 
 		// Register the item.
-		Item registeredItem = Registry.register(Registries.ITEM, itemID, item);
 
-		// Return the registered item!
-		return registeredItem;
+        // Return the registered item!
+		return Registry.register(Registries.ITEM, itemID, item);
 	}
 
 
@@ -313,7 +318,10 @@ public class ModItems {
 			itemGroup.add(ModItems.LUKA_PLUSH);
             itemGroup.add(ModItems.TETO_PLUSH_SOME_MORE_OF_THAT_SONG);
             itemGroup.add(ModItems.TETO_PICKAXE_SOME_MORE_OF_THAT_SONG);
-//            itemGroup.add(ModItems.TETO_PLUSH_LOBSTER);
+            itemGroup.add(ModItems.TETO_PLUSH_LOBSTER);
+            itemGroup.add(ModItems.MIKU_PLUSH_HOLLOW_KNIGHT);
+            itemGroup.add(ModItems.MIKU_PLUSH_HORNET);
+            itemGroup.add(ModItems.TETO_PLUSH_SYNTHV);
 		});
 	}
 }
