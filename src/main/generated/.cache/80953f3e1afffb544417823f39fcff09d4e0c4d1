@@ -1,4 +1,4 @@
-// 1.20.1	2025-09-11T18:20:21.519924305	miku plushies/Recipes
+// 1.20.1	2025-10-24T00:23:17.46220156	miku plushies/Recipes
 764cd7cdc2768b3f273129e445ec1609a3090207 data/miku-plushie/recipes/baguette.json
 3ff9f0701e0fd5a88092a811897048a4e68ed631 data/miku-plushie/recipes/miku_plush_senbonzakura.json
 f80358cb44b3fa9984f2b4e16acebd601c5fe58a data/miku-plushie/recipes/miku_plush_digital_stars_2025.json
@@ -20,6 +20,7 @@ e3a3cb7fe0bd3c5065b37929e68cd361f5b2d0b9 data/miku-plushie/advancements/recipes/
 ba0a37c61aaa1c35df56c84c30d9f96b18a9e5ef data/miku-plushie/advancements/recipes/decorations/miku_plush_santa.json
 7f27e1b00264fd8198343be7cb3085108b7c0a18 data/miku-plushie/recipes/miku_plush_fortnite_neko.json
 fa9d23b11dcdabe172e44b5a934381687333ad76 data/miku-plushie/advancements/recipes/decorations/miku_plush_fortnite_neko.json
+83e568b2e3ac549b2ff7e2d6d0442fe113ad958d data/miku-plushie/advancements/recipes/tools/teto_pickaxe_synthv.json
 6533bc87609bf1c7a6d5f9149e024ddeb3de5ba5 data/miku-plushie/advancements/recipes/decorations/aiko_plush.json
 d2345adba9d886825ab9af1a55737fd936f5fa5d data/miku-plushie/recipes/miku_plush_hollow_knight.json
 cacf1e6cd24faf9828ceeec093ad117f879a9510 data/miku-plushie/recipes/miku_plush_mushroom.json
@@ -141,6 +142,7 @@ a4ee1f6fbc752a848b5d9ea61de1e12bb572594e data/miku-plushie/advancements/recipes/
 8e5deb91595a8a181e779add5fbc4701a350620d data/miku-plushie/recipes/miku_plush_br_fut_cam.json
 c1098a331d144b5ebbf6f1f630120b396d4e910d data/miku-plushie/advancements/recipes/decorations/akita_neru_plush_tails.json
 ba757fee91fc26f557206ea7615c941f5f5685ca data/miku-plushie/recipes/konoha_plush.json
+0ef1d5255b556082a0db8f3da901eb66d7202396 data/miku-plushie/recipes/teto_pickaxe_synthv.json
 afa147e082a6140c4cee663be6c5a68fb8102a22 data/miku-plushie/recipes/miku_plush_br_bik_orange.json
 831a43c4fa98e5b115ca29fff0eca6cbb6c91b14 data/miku-plushie/advancements/recipes/decorations/teto_plush_dont_believe_in_t.json
 8e2db8aedad9ad210c0ca3a49a016623d6fabdc5 data/miku-plushie/advancements/recipes/decorations/miku_plush_br_ba.json
