@@ -19,6 +19,7 @@ public class ModTagProvider extends FabricTagProvider.ItemTagProvider {
         super(output, completableFuture);
     }
 
+    public static final TagKey<Item> PLUSHIES = TagKey.of(RegistryKeys.ITEM, Identifier.of(MikuPlushie.MOD_ID, "plushies"));
     public static final TagKey<Item> BR_MIKU_ITEMS = TagKey.of(RegistryKeys.ITEM, Identifier.of(MikuPlushie.MOD_ID, "br_miku_plush"));
     public static final TagKey<Item> AIKO_PLUSH = TagKey.of(RegistryKeys.ITEM, Identifier.of(MikuPlushie.MOD_ID, "aiko_plush"));
     public static final TagKey<Item> TETO_PLUSH = TagKey.of(RegistryKeys.ITEM, Identifier.of(MikuPlushie.MOD_ID, "teto_plush"));
@@ -27,6 +28,7 @@ public class ModTagProvider extends FabricTagProvider.ItemTagProvider {
     public static final TagKey<Item> RIN_PLUSH = TagKey.of(RegistryKeys.ITEM, Identifier.of(MikuPlushie.MOD_ID, "rin_plush"));
     public static final TagKey<Item> LEN_PLUSH = TagKey.of(RegistryKeys.ITEM, Identifier.of(MikuPlushie.MOD_ID, "len_plush"));
     public static final TagKey<Item> LUKA_PLUSH = TagKey.of(RegistryKeys.ITEM, Identifier.of(MikuPlushie.MOD_ID, "luka_plush"));
+    public static final TagKey<Item> KONOHA_PLUSH = TagKey.of(RegistryKeys.ITEM, Identifier.of(MikuPlushie.MOD_ID, "konoha_plush"));
 
     @Override
     protected void configure(RegistryWrapper.WrapperLookup wrapperLookup) {
@@ -117,7 +119,7 @@ public class ModTagProvider extends FabricTagProvider.ItemTagProvider {
             .add(ModItems.TETO_PICKAXE_LIAR_DANCER)
             .add(ModItems.TETO_PICKAXE_WHATCHACALLITSNAME)
             .add(ModItems.TETO_PICKAXE_SOME_MORE_OF_THAT_SONG)
-            .add(ModItems.TETO_PLUSH_SYNTHV)
+            .add(ModItems.TETO_PICKAXE_SYNTHV)
         ;
         getOrCreateTagBuilder(AKITA_NERU_PLUSH)
             .add(ModItems.AKITA_NERU_PLUSH)
@@ -131,6 +133,20 @@ public class ModTagProvider extends FabricTagProvider.ItemTagProvider {
         ;
         getOrCreateTagBuilder(LUKA_PLUSH)
             .add(ModItems.LUKA_PLUSH)
+        ;
+        getOrCreateTagBuilder(KONOHA_PLUSH)
+            .add(ModItems.KONOHA_PLUSH)
+        ;
+
+        getOrCreateTagBuilder(PLUSHIES)
+            .addOptionalTag(BR_MIKU_ITEMS)
+            .addOptionalTag(AIKO_PLUSH)
+            .addOptionalTag(TETO_PLUSH)
+            .addOptionalTag(AKITA_NERU_PLUSH)
+            .addOptionalTag(RIN_PLUSH)
+            .addOptionalTag(LEN_PLUSH)
+            .addOptionalTag(LUKA_PLUSH)
+            .addOptionalTag(KONOHA_PLUSH)
         ;
     }
 }
