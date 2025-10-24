@@ -713,6 +713,13 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .input(Items.IRON_INGOT, 1)
                 .criterion(FabricRecipeProvider.hasItem(ModBlocks.TETO_PLUSH), FabricRecipeProvider.conditionsFromItem(ModBlocks.TETO_PLUSH))
                 .offerTo(exporter);
+
+            ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.TETO_PICKAXE_SYNTHV)
+                .pattern("121")
+                .input('1', Items.DIAMOND)
+                .input('2', ModBlocks.TETO_PLUSH_SYNTHV)
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.TETO_PLUSH_SYNTHV), FabricRecipeProvider.conditionsFromItem(ModBlocks.TETO_PLUSH_SYNTHV))
+                .offerTo(exporter);
         }
 
     }

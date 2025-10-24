@@ -212,6 +212,8 @@ public class ModItems {
         register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_HORNET, new Item.Settings()), "miku_plush_hornet");
     public static final Item TETO_PLUSH_SYNTHV =
         register(new MikuPlushieBlockItem(ModBlocks.TETO_PLUSH_SYNTHV, new Item.Settings()), "teto_plush_synthv");
+    public static final Item TETO_PICKAXE_SYNTHV =
+        register(new PickaxeItem(PlushToolMaterial.PLUSH_TOOL_MATERIAL, 1, -2.8f, new FabricItemSettings()), "teto_pickaxe_synthv");
 
 
 
@@ -322,6 +324,7 @@ public class ModItems {
             itemGroup.add(ModItems.MIKU_PLUSH_HOLLOW_KNIGHT);
             itemGroup.add(ModItems.MIKU_PLUSH_HORNET);
             itemGroup.add(ModItems.TETO_PLUSH_SYNTHV);
+            itemGroup.add(ModItems.TETO_PICKAXE_SYNTHV);
 		});
 	}
 }
