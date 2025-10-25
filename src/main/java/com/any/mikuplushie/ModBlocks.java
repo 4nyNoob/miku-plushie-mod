@@ -650,5 +650,7 @@ public class ModBlocks {
 		return Registry.register(Registries.BLOCK, id, block);
 	}
 
-	public static void initialize() {}
+	public static void initialize() {
+        MikuPlushie.LOGGER.info("Registering " + MikuPlushie.MOD_ID + " Blocks");
+    }
 }

@@ -222,8 +222,6 @@ public class ModItems {
 		// Create the identifier for the item.
 		Identifier itemID = Identifier.of(MikuPlushie.MOD_ID, id);
 
-		// Register the item.
-
         // Return the registered item!
 		return Registry.register(Registries.ITEM, itemID, item);
 	}
@@ -231,6 +229,7 @@ public class ModItems {
 
 
 	public static void initialize() {
+        MikuPlushie.LOGGER.info("Registering " + MikuPlushie.MOD_ID + " Items");
 
 		Registry.register(Registries.ITEM_GROUP, MIKU_GROUP_KEY, MIKU_GROUP);
 

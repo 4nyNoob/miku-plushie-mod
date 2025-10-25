@@ -10,6 +10,8 @@ import net.minecraft.client.render.RenderLayer;
 public class MikuPlushieClient implements ClientModInitializer {
 	@Override
 	public void onInitializeClient() {
+        MikuPlushie.LOGGER.info("Registering " + MikuPlushie.MOD_ID + " Block Render Layer Maps");
+
 		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MIKU_PLUSH_BR, RenderLayer.getCutout());
 		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MIKU_PLUSH_BR_BA, RenderLayer.getCutout());
 		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MIKU_PLUSH_BIK, RenderLayer.getCutout());
