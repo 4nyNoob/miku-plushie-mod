@@ -1,9 +1,8 @@
 plugins {
-	id 'fabric-loom' version '1.8-SNAPSHOT'
+	id 'fabric-loom' version "${loom_version}"
 	id 'maven-publish'
 }
 
-//version = project.mod_version
 version = project.mod_version
 group = project.maven_group
 
@@ -20,7 +19,9 @@ repositories {
 }
 
 fabricApi {
-	configureDataGeneration()
+	configureDataGeneration {
+		client = true
+	}
 }
 
 dependencies {
@@ -38,7 +39,7 @@ processResources {
 	inputs.property "version", project.version
 
 	filesMatching("fabric.mod.json") {
-		expand "version": project.version
+		expand "version": inputs.properties.version
 	}
 }
 
@@ -57,8 +58,10 @@ java {
 }
 
 jar {
+	inputs.property "archivesName", project.base.archivesName
+
 	from("LICENSE") {
-		rename { "${it}_${project.base.archivesName.get()}"}
+		rename { "${it}_${inputs.properties.archivesName}"}
 	}
 }
 
