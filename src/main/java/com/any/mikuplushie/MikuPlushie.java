@@ -15,6 +15,7 @@ public class MikuPlushie implements ModInitializer {
 		ModBlocks.initialize();
 		ModSoundEvents.initialize();
         ModCommands.initialize();
+        ModEntities.initialize();
 //        ModResourcePacks.initialize();
         LOGGER.info("Miku: (^v^)/ Hi!!!");
 	}

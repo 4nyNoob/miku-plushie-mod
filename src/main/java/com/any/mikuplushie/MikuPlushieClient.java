@@ -1,10 +1,16 @@
 package com.any.mikuplushie;
 
+import com.any.mikuplushie.entity.MikuEntity;
+import com.any.mikuplushie.entity.client.MikuRender;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
+import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
 import net.minecraft.client.render.RenderLayer;
+import software.bernie.geckolib.core.molang.LazyVariable;
+import software.bernie.geckolib.core.molang.MolangParser;
+import software.bernie.geckolib.core.molang.MolangQueries;
 
 @Environment(EnvType.CLIENT)
 public class MikuPlushieClient implements ClientModInitializer {
@@ -103,5 +109,7 @@ public class MikuPlushieClient implements ClientModInitializer {
 		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MIKU_PLUSH_GHOST, RenderLayer.getTranslucent());
 //		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.TETO_PLUSH_WHATCHACALLITSNAME, RenderLayer.getTranslucent());
 
+        MolangParser.INSTANCE.register(new LazyVariable("q.miku.is_game", 1));
+        EntityRendererRegistry.register(ModEntities.MIKU, MikuRender::new);
 	}
 }
