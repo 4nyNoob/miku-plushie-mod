@@ -1,8 +1,10 @@
 package com.any.mikuplushie.block;
 
+import com.any.mikuplushie.ModEntities;
 import com.any.mikuplushie.ModItems;
 import com.any.mikuplushie.ModSoundEvents;
 import com.any.mikuplushie.datagen.ModTagProvider;
+import com.any.mikuplushie.entity.MikuEntity;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.HorizontalFacingBlock;
@@ -20,10 +22,13 @@ import net.minecraft.util.Hand;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
+import net.minecraft.util.math.Vec3d;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
+
+import java.util.Objects;
 
 public class MikuPlushieBlock extends Block {
 	public static final DirectionProperty FACING = HorizontalFacingBlock.FACING;
@@ -36,7 +41,18 @@ public class MikuPlushieBlock extends Block {
 	public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
 		if (!world.isClient){
 			if (player.getStackInHand(hand).isOf(ModItems.CANUDINHO) && this.asItem().getDefaultStack().isIn(ModTagProvider.BR_MIKU_ITEMS)){
-				world.playSound(null, pos, ModSoundEvents.MIKU_CANUDINHO, SoundCategory.BLOCKS, 1F, 1F);
+                world.breakBlock(pos, false);
+                MikuEntity miku = ModEntities.MIKU.create(world);
+//				world.playSound(null, pos, ModSoundEvents.MIKU_CANUDINHO, SoundCategory.BLOCKS, 1F, 1F);
+                if (miku != null) {
+                    miku.setPosition(new Vec3d(pos.getX() + 0.5D, pos.getY(), pos.getZ() + 0.5D));
+                    miku.setOwner(player);
+                    miku.setInSittingPose(true);
+                    miku.setSitting(true);
+                    miku.lookAt(miku.getCommandSource().getEntityAnchor(), player.getPos().add(0,1D,0));
+                }
+                world.spawnEntity(miku);
+
 				return ActionResult.SUCCESS;
 			}
 		}
