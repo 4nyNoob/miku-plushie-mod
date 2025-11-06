@@ -9,10 +9,10 @@ import software.bernie.geckolib.core.animation.AnimationState;
 import software.bernie.geckolib.model.GeoModel;
 
 public class MikuModel extends GeoModel<MikuEntity> {
-    private final String entity = "miku-plush";
+    private final String entity = "miku_plush";
 
     private final Identifier model = Identifier.of(MikuPlushie.MOD_ID, "geo/entity/" + entity + ".geo.json");
-    private final Identifier texture = Identifier.of(MikuPlushie.MOD_ID, "textures/block/" + entity + ".png");
+    private final Identifier texture = Identifier.of(MikuPlushie.MOD_ID, "textures/block/" + entity.replace('_', '-') + ".png");
     private final Identifier animations = Identifier.of(MikuPlushie.MOD_ID, "animations/" + entity + ".animation.json");
 
 
