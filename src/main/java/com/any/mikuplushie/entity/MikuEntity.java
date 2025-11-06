@@ -2,18 +2,19 @@ package com.any.mikuplushie.entity;
 
 import com.any.mikuplushie.ModItems;
 import net.minecraft.block.Blocks;
-import net.minecraft.entity.EntityDimensions;
-import net.minecraft.entity.EntityPose;
-import net.minecraft.entity.EntityStatuses;
-import net.minecraft.entity.EntityType;
+import net.minecraft.entity.*;
 import net.minecraft.entity.ai.goal.FollowOwnerGoal;
 import net.minecraft.entity.ai.goal.LookAtEntityGoal;
 import net.minecraft.entity.ai.goal.SwimGoal;
 import net.minecraft.entity.attribute.DefaultAttributeContainer;
 import net.minecraft.entity.attribute.EntityAttributes;
+import net.minecraft.entity.data.DataTracker;
+import net.minecraft.entity.data.TrackedData;
+import net.minecraft.entity.data.TrackedDataHandlerRegistry;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.mob.MobEntity;
+import net.minecraft.entity.passive.ParrotEntity;
 import net.minecraft.entity.passive.PassiveEntity;
 import net.minecraft.entity.passive.TameableEntity;
 import net.minecraft.entity.player.PlayerEntity;
@@ -22,6 +23,8 @@ import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
+import net.minecraft.util.StringIdentifiable;
+import net.minecraft.util.function.ValueLists;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.EntityView;
 import net.minecraft.world.World;
@@ -35,9 +38,12 @@ import software.bernie.geckolib.core.animation.RawAnimation;
 import software.bernie.geckolib.util.GeckoLibUtil;
 
 import java.util.List;
+import java.util.function.IntFunction;
 
 public class MikuEntity extends TameableEntity implements GeoEntity {
     private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
+
+    private static final TrackedData<Integer> VARIANT = DataTracker.registerData(MikuEntity.class, TrackedDataHandlerRegistry.INTEGER);
 
     private static final RawAnimation IDLE = RawAnimation.begin().thenLoop("misc.idle");
     private static final RawAnimation SIT = RawAnimation.begin().thenLoop("misc.sit");
@@ -74,13 +80,11 @@ public class MikuEntity extends TameableEntity implements GeoEntity {
 
     @Override
     protected float getActiveEyeHeight(EntityPose pose, EntityDimensions dimensions) {
-//        super.getActiveEyeHeight(pose, dimensions);
         if (pose.equals(EntityPose.STANDING)){
-            return 0.65F;
+            return 0.6F;
         } else {
             return 0.85F;
         }
-//        return pose.equals(EntityPose.SITTING) ? 0.65F : 0.85F;
     }
 
     @Override
@@ -109,15 +113,9 @@ public class MikuEntity extends TameableEntity implements GeoEntity {
 
             if (!this.isSilent()) {
                 this.getWorld()
-                    .playSound(
-                        null,
-                        this.getX(),
-                        this.getY(),
-                        this.getZ(),
-                        SoundEvents.ENTITY_GENERIC_EAT,
-                        this.getSoundCategory(),
-                        1.0F,
-                        1.0F + (this.random.nextFloat() - this.random.nextFloat()) * 0.2F
+                    .playSound(null, this.getX(), this.getY(), this.getZ(),
+                        SoundEvents.ENTITY_GENERIC_EAT, this.getSoundCategory(),
+                        1.0F, 1.0F + (this.random.nextFloat() - this.random.nextFloat()) * 0.2F
                     );
             }
 
@@ -166,14 +164,14 @@ public class MikuEntity extends TameableEntity implements GeoEntity {
     public void setNearbySongPlaying(BlockPos songPosition, boolean playing) {
         this.songSource = songPosition;
         this.songPlaying = playing;
-        int randomDance = this.random.nextBetween(1, 5);
-        switch (randomDance) {
-            case 1: SELECTED_DANCE = DANCE; break;
-            case 2: SELECTED_DANCE = DANCE2; break;
-            case 3: SELECTED_DANCE = DANCE3; break;
-            case 4: SELECTED_DANCE = DANCE4; break;
-            case 5: SELECTED_DANCE = DANCE5; break;
-        }
+            int randomDance = random.nextBetween(1, 5);
+            switch (randomDance) {
+                case 1: SELECTED_DANCE = DANCE; break;
+                case 2: SELECTED_DANCE = DANCE2; break;
+                case 3: SELECTED_DANCE = DANCE3; break;
+                case 4: SELECTED_DANCE = DANCE4; break;
+                case 5: SELECTED_DANCE = DANCE5; break;
+            }
     }
 
     public boolean isSongPlaying() {

@@ -242,8 +242,8 @@
 				"body": {
 					"rotation": {
 						"vector": [
-							"math.sin(query.anim_time * 360 - (45 * 2)) * 5 + 15",
-							"math.sin(query.anim_time * 360 - (45 * 0)) * 15",
+							"-math.sin(query.anim_time * 360 - (45 * 2)) * 5 + 15",
+							"-math.sin(query.anim_time * 360 - (45 * 0)) * 15",
 							"math.sin(query.anim_time * 360 - (45 * 0)) * 10"
 						]
 					},
@@ -281,26 +281,26 @@
 				},
 				"root": {
 					"position": {
-						"vector": ["math.sin(query.anim_time * 360 - (45 * 0)) * -1 ", 0, 0]
+						"vector": ["-math.sin(query.anim_time * 360 - (45 * 0)) * 1 ", 0, 0]
 					}
 				},
 				"head": {
 					"rotation": {
 						"vector": [
-							"math.sin(query.anim_time * 360 - (45 * 2)) * -5 - 15",
-							"math.sin(query.anim_time * 360 - (45 * 0)) * -15",
+							"-math.sin(query.anim_time * 360 - (45 * 2)) * -5 - 15",
+							"-math.sin(query.anim_time * 360 - (45 * 0)) * -15",
 							"math.sin(query.anim_time * 360 - (45 * 0)) * -20"
 						]
 					}
 				},
 				"left_hair": {
 					"rotation": {
-						"vector": ["math.sin(query.anim_time * 360 - (45 * 5)) * -10 + 10", 0, 0]
+						"vector": ["-math.sin(query.anim_time * 360 - (45 * 5)) * -10 + 10", 0, 0]
 					}
 				},
 				"right_hair": {
 					"rotation": {
-						"vector": ["math.sin(query.anim_time * 360 - (45 * 5)) * 10 + 10", 0, 0]
+						"vector": ["-math.sin(query.anim_time * 360 - (45 * 5)) * 10 + 10", 0, 0]
 					}
 				}
 			}
@@ -311,7 +311,7 @@
 			"bones": {
 				"body": {
 					"rotation": {
-						"vector": [15, "math.sin(query.anim_time * 240 - 0) * 15", 0]
+						"vector": [15, "-math.sin(query.anim_time * 240 - 0) * 15", 0]
 					},
 					"position": {
 						"vector": [0, "math.exp((math.sin(query.anim_time * 960) * 2)) * -0.135 * 0.5", 0]
@@ -319,12 +319,12 @@
 				},
 				"left_arm": {
 					"rotation": {
-						"vector": ["math.atan(math.sin(query.anim_time * 480 - 45) * 3) * q.miku.is_game * -40 - 70", -30, 0]
+						"vector": ["-math.atan(math.sin(query.anim_time * 480 - 45) * 3) * q.miku.is_game * -40 - 90", -30, 0]
 					}
 				},
 				"right_arm": {
 					"rotation": {
-						"vector": ["math.atan(math.sin(query.anim_time * 480 - 45) * 3) * q.miku.is_game * 40 - 70", 30, 0]
+						"vector": ["-math.atan(math.sin(query.anim_time * 480 - 45) * 3) * q.miku.is_game * 40 - 90", 30, 0]
 					}
 				},
 				"hair": {
@@ -334,7 +334,7 @@
 				},
 				"head": {
 					"rotation": {
-						"vector": [-15, "math.sin(query.anim_time * 240 - 0) * -15", "math.sin(query.anim_time * 240 - 0) * -4"]
+						"vector": [-15, "-math.sin(query.anim_time * 240 - 0) * -15", "math.sin(query.anim_time * 240 - 0) * -4"]
 					}
 				}
 			}

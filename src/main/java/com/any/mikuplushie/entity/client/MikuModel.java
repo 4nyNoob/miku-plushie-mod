@@ -9,10 +9,10 @@ import software.bernie.geckolib.core.animation.AnimationState;
 import software.bernie.geckolib.model.GeoModel;
 
 public class MikuModel extends GeoModel<MikuEntity> {
-    private final String entity = "miku_plush";
+    private final String entity = "miku-plush";
 
     private final Identifier model = Identifier.of(MikuPlushie.MOD_ID, "geo/entity/" + entity + ".geo.json");
-    private final Identifier texture = Identifier.of(MikuPlushie.MOD_ID, "textures/block/" + entity.replace('_', '-') + ".png");
+    private final Identifier texture = Identifier.of(MikuPlushie.MOD_ID, "textures/block/" + entity + ".png");
     private final Identifier animations = Identifier.of(MikuPlushie.MOD_ID, "animations/" + entity + ".animation.json");
 
 
@@ -44,22 +44,25 @@ public class MikuModel extends GeoModel<MikuEntity> {
             head.setRotY(headYaw * ((float) Math.PI / 180F));
             hair.setRotX(-headPitch * ((float) Math.PI / 180F));
         }
-        //animation variables
-//        float limbSwing = (float) state.getAnimationTick() / 2;
-//        float swingAmm = 1;
+
+        //ANIMATION DEBUG
+        //float limbSwing = (float) state.getAnimationTick() / 2;
+        //float swingAmm = 1;
+
+        //ANIM VARIABLES
         float limbSwing = state.getLimbSwing();
         float swingAmm = state.getLimbSwingAmount();
         float toRad = (float) (Math.PI / 180);
         float swingSpeed = 1F;
 
-
+        //GET BONES
         CoreGeoBone root = this.getAnimationProcessor().getBone("root_offset");
         CoreGeoBone left_leg = this.getAnimationProcessor().getBone("left_leg_offset");
         CoreGeoBone right_leg = this.getAnimationProcessor().getBone("right_leg_offset");
         CoreGeoBone left_arm = this.getAnimationProcessor().getBone("left_arm_offset");
         CoreGeoBone right_arm = this.getAnimationProcessor().getBone("right_arm_offset");
 
-        //animation bones
+        //ANIM CODE
         root.setRotZ((float) Math.sin(limbSwing * swingSpeed) * (swingAmm * 5 * toRad));
         root.setPosY((float) Math.sin(limbSwing * swingSpeed * 2) * (swingAmm * 1) + (swingAmm * 1));
 
