@@ -5,6 +5,7 @@ import com.any.mikuplushie.ModItems;
 import com.any.mikuplushie.ModSoundEvents;
 import com.any.mikuplushie.datagen.ModTagProvider;
 import com.any.mikuplushie.entity.MikuEntity;
+import com.any.mikuplushie.entity.variant.MikuVariant;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.HorizontalFacingBlock;
@@ -46,6 +47,9 @@ public class MikuPlushieBlock extends Block {
 //				world.playSound(null, pos, ModSoundEvents.MIKU_CANUDINHO, SoundCategory.BLOCKS, 1F, 1F);
                 if (miku != null) {
                     miku.setPosition(new Vec3d(pos.getX() + 0.5D, pos.getY(), pos.getZ() + 0.5D));
+                    String mikuVariant = this.getLootTableId().getPath().split("/")[1].toUpperCase();
+                    System.out.println(mikuVariant);
+                    miku.setVariant(MikuVariant.valueOf(mikuVariant));
                     miku.setOwner(player);
                     miku.setInSittingPose(true);
                     miku.setSitting(true);
