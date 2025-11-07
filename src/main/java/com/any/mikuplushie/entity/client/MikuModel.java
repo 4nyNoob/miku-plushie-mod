@@ -2,6 +2,7 @@ package com.any.mikuplushie.entity.client;
 
 import com.any.mikuplushie.MikuPlushie;
 import com.any.mikuplushie.entity.MikuEntity;
+import com.any.mikuplushie.entity.variant.MikuVariant;
 import net.minecraft.util.Identifier;
 import software.bernie.geckolib.constant.DataTickets;
 import software.bernie.geckolib.core.animatable.model.CoreGeoBone;
@@ -23,7 +24,11 @@ public class MikuModel extends GeoModel<MikuEntity> {
 
     @Override
     public Identifier getTextureResource(MikuEntity animatable) {
-        return texture;
+//        String variantName = animatable.getVariant().name().toLowerCase().replace('_', '-');
+        String variantName = animatable.getVariant().getBlock().replace('_', '-');
+        String textureFile = "textures/block/" + variantName + ".png";
+        return Identifier.of(MikuPlushie.MOD_ID, textureFile);
+//        return texture;
     }
 
     @Override
@@ -37,12 +42,14 @@ public class MikuModel extends GeoModel<MikuEntity> {
 
         CoreGeoBone head = this.getAnimationProcessor().getBone("head_offset");
         CoreGeoBone hair = this.getAnimationProcessor().getBone("hair_offset");
+        CoreGeoBone longerHair = this.getAnimationProcessor().getBone("longer_hair_offset");
         float headPitch = state.getData(DataTickets.ENTITY_MODEL_DATA).headPitch();
         float headYaw = state.getData(DataTickets.ENTITY_MODEL_DATA).netHeadYaw();
         if (head != null) {
             head.setRotX(headPitch * ((float) Math.PI / 180F));
             head.setRotY(headYaw * ((float) Math.PI / 180F));
             hair.setRotX(-headPitch * ((float) Math.PI / 180F));
+            longerHair.setRotX(-headPitch * ((float) Math.PI / 180F));
         }
 
         //ANIMATION DEBUG

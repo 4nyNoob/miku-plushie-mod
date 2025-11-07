@@ -1,6 +1,7 @@
 package com.any.mikuplushie.entity;
 
 import com.any.mikuplushie.ModItems;
+import com.any.mikuplushie.entity.variant.MikuVariant;
 import net.minecraft.block.Blocks;
 import net.minecraft.entity.*;
 import net.minecraft.entity.ai.goal.FollowOwnerGoal;
@@ -19,14 +20,19 @@ import net.minecraft.entity.passive.PassiveEntity;
 import net.minecraft.entity.passive.TameableEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
+import net.minecraft.nbt.NbtCompound;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
 import net.minecraft.util.StringIdentifiable;
+import net.minecraft.util.Util;
 import net.minecraft.util.function.ValueLists;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.random.Random;
 import net.minecraft.world.EntityView;
+import net.minecraft.world.LocalDifficulty;
+import net.minecraft.world.ServerWorldAccess;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 import software.bernie.geckolib.animatable.GeoEntity;
@@ -64,6 +70,7 @@ public class MikuEntity extends TameableEntity implements GeoEntity {
         super(entityType, world);
     }
 
+    //GOALS AND ATTRIBUTES
     @Override
     public void initGoals() {
         this.goalSelector.add(0, new SwimGoal(this));
@@ -78,6 +85,24 @@ public class MikuEntity extends TameableEntity implements GeoEntity {
             .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.3F);
     }
 
+    //GECKOLIB STUFF
+    @Override
+    public void registerControllers(AnimatableManager.ControllerRegistrar controllers) {
+        controllers.add(new AnimationController<>(this, "Miku", state -> {
+            if (MikuEntity.this.isInSittingPose()){
+                return  state.setAndContinue(MikuEntity.this.isSongPlaying() ? SIT_DANCE : SIT);
+            } else {
+                return  state.setAndContinue(MikuEntity.this.isSongPlaying() ? SELECTED_DANCE : IDLE);
+            }
+        }));
+    }
+
+    @Override
+    public AnimatableInstanceCache getAnimatableInstanceCache() {
+        return this.cache;
+    }
+
+    //MC ENTITY STUFF
     @Override
     protected float getActiveEyeHeight(EntityPose pose, EntityDimensions dimensions) {
         if (pose.equals(EntityPose.STANDING)){
@@ -93,16 +118,24 @@ public class MikuEntity extends TameableEntity implements GeoEntity {
     }
 
     @Override
-    public void registerControllers(AnimatableManager.ControllerRegistrar controllers) {
-        controllers.add(new AnimationController<>(this, "Miku", state -> {
-            if (MikuEntity.this.isInSittingPose()){
-                return  state.setAndContinue(MikuEntity.this.isSongPlaying() ? SIT_DANCE : SIT);
-            } else {
-                return  state.setAndContinue(MikuEntity.this.isSongPlaying() ? SELECTED_DANCE : IDLE);
-            }
-        }));
+    public EntityView method_48926() {
+        return this.getWorld();
     }
 
+    @Override
+    protected void initDataTracker() {
+        super.initDataTracker();
+        this.dataTracker.startTracking(VARIANT, 0);
+    }
+
+    @Override
+    public EntityData initialize(ServerWorldAccess world, LocalDifficulty difficulty, SpawnReason spawnReason, @Nullable EntityData entityData, @Nullable NbtCompound entityNbt) {
+        MikuVariant variant = Util.getRandom(MikuVariant.values(), this.random);
+        setVariant(variant);
+        return super.initialize(world, difficulty, spawnReason, entityData, entityNbt);
+    }
+
+    //ENTITY RIGHT CLICK
     @Override
     public ActionResult interactMob(PlayerEntity player, Hand hand) {
         ItemStack itemStack = player.getStackInHand(hand);
@@ -145,11 +178,12 @@ public class MikuEntity extends TameableEntity implements GeoEntity {
         }
     }
 
+    //GET NEARBY SONG PLAYING
     @Override
     public void tickMovement() {
         if (
             this.songSource == null
-            || !this.songSource.isWithinDistance(this.getPos(), 4)
+            || !this.songSource.isWithinDistance(this.getPos(), 8D)
             || !this.getWorld().getBlockState(this.songSource).isOf(Blocks.JUKEBOX)
         )
         {
@@ -158,33 +192,60 @@ public class MikuEntity extends TameableEntity implements GeoEntity {
         }
 
         super.tickMovement();
+
     }
 
     @Override
     public void setNearbySongPlaying(BlockPos songPosition, boolean playing) {
         this.songSource = songPosition;
         this.songPlaying = playing;
-            int randomDance = random.nextBetween(1, 5);
-            switch (randomDance) {
-                case 1: SELECTED_DANCE = DANCE; break;
-                case 2: SELECTED_DANCE = DANCE2; break;
-                case 3: SELECTED_DANCE = DANCE3; break;
-                case 4: SELECTED_DANCE = DANCE4; break;
-                case 5: SELECTED_DANCE = DANCE5; break;
-            }
+//        if (!songPlaying && songSource != null){
+        Random random = this.random;
+//        random.setSeed(this.getPos().hashCode());
+        int randomDance = random.nextBetweenExclusive(1, 5);
+//        System.out.println(this.getPos().hashCode());
+        switch (randomDance) {
+            case 1: SELECTED_DANCE = DANCE; break;
+            case 2: SELECTED_DANCE = DANCE2; break;
+            case 3: SELECTED_DANCE = DANCE3; break;
+            case 4: SELECTED_DANCE = DANCE4; break;
+            case 5: SELECTED_DANCE = DANCE5; break;
+//            default: SELECTED_DANCE = DANCE; break;
+        }
+//        }
     }
 
     public boolean isSongPlaying() {
         return this.songPlaying;
     }
 
+    //MIKU VARIANTS
+
+    public MikuVariant getVariant () {
+        return MikuVariant.byId(this.getTypeVariant() & 255);
+    }
+
+    private int getTypeVariant() {
+        return this.dataTracker.get(VARIANT);
+    }
+
+    public void setVariant(MikuVariant variant) {
+        this.dataTracker.set(VARIANT, variant.getId() & 255);
+    }
+//
+//    public void setVariantByName(MikuVariant variant) {
+//        this.dataTracker.set(VARIANT, variant.getId() & 255);
+//    }
+
     @Override
-    public AnimatableInstanceCache getAnimatableInstanceCache() {
-        return this.cache;
+    public void readCustomDataFromNbt(NbtCompound nbt) {
+        super.readCustomDataFromNbt(nbt);
+        this.dataTracker.set(VARIANT, nbt.getInt("Variant"));
     }
 
     @Override
-    public EntityView method_48926() {
-        return this.getWorld();
+    public void writeCustomDataToNbt(NbtCompound nbt) {
+        super.writeCustomDataToNbt(nbt);
+        nbt.putInt("Variant", this.getTypeVariant());
     }
 }
