@@ -1,6 +1,8 @@
 package com.any.mikuplushie.entity;
 
+import com.any.mikuplushie.ModEntities;
 import com.any.mikuplushie.ModItems;
+import com.any.mikuplushie.ModSoundEvents;
 import com.any.mikuplushie.entity.variant.MikuVariant;
 import net.minecraft.block.Blocks;
 import net.minecraft.entity.*;
@@ -9,6 +11,7 @@ import net.minecraft.entity.ai.goal.LookAtEntityGoal;
 import net.minecraft.entity.ai.goal.SwimGoal;
 import net.minecraft.entity.attribute.DefaultAttributeContainer;
 import net.minecraft.entity.attribute.EntityAttributes;
+import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.data.DataTracker;
 import net.minecraft.entity.data.TrackedData;
 import net.minecraft.entity.data.TrackedDataHandlerRegistry;
@@ -21,7 +24,9 @@ import net.minecraft.entity.passive.TameableEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NbtCompound;
+import net.minecraft.particle.ParticleTypes;
 import net.minecraft.server.world.ServerWorld;
+import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
@@ -135,6 +140,16 @@ public class MikuEntity extends TameableEntity implements GeoEntity {
         return super.initialize(world, difficulty, spawnReason, entityData, entityNbt);
     }
 
+    @Override
+    protected @Nullable SoundEvent getDeathSound() {
+        return ModSoundEvents.MIKU_BYE;
+    }
+
+    @Override
+    public float getSoundPitch() {
+        return 1F;
+    }
+
     //ENTITY RIGHT CLICK
     @Override
     public ActionResult interactMob(PlayerEntity player, Hand hand) {
@@ -222,7 +237,7 @@ public class MikuEntity extends TameableEntity implements GeoEntity {
     //MIKU VARIANTS
 
     public MikuVariant getVariant () {
-        return MikuVariant.byId(this.getTypeVariant() & 255);
+        return MikuVariant.byId(this.getTypeVariant()/* & 255*/);
     }
 
     private int getTypeVariant() {
@@ -230,7 +245,7 @@ public class MikuEntity extends TameableEntity implements GeoEntity {
     }
 
     public void setVariant(MikuVariant variant) {
-        this.dataTracker.set(VARIANT, variant.getId() & 255);
+        this.dataTracker.set(VARIANT, variant.getId()/* & 255*/);
     }
 //
 //    public void setVariantByName(MikuVariant variant) {

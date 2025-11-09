@@ -19,7 +19,12 @@ public class MikuModel extends GeoModel<MikuEntity> {
 
     @Override
     public Identifier getModelResource(MikuEntity animatable) {
-        return model;
+        MikuVariant variant = animatable.getVariant();
+        if (variant.equals(MikuVariant.MIKU_PLUSH_MUSHROOM) || variant.equals(MikuVariant.MIKU_PLUSH_WEREWOMAN)) {
+            return Identifier.of(MikuPlushie.MOD_ID, "geo/entity/" + entity + "_2" + ".geo.json");
+        } else {
+            return model;
+        }
     }
 
     @Override

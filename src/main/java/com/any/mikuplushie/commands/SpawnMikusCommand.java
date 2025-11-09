@@ -1,7 +1,10 @@
 package com.any.mikuplushie.commands;
 
 import com.any.mikuplushie.ModBlocks;
+import com.any.mikuplushie.ModEntities;
 import com.any.mikuplushie.datagen.ModTagProvider;
+import com.any.mikuplushie.entity.MikuEntity;
+import com.any.mikuplushie.entity.variant.MikuVariant;
 import com.mojang.brigadier.CommandDispatcher;
 import net.minecraft.block.Block;
 import net.minecraft.command.argument.Vec3ArgumentType;
@@ -9,6 +12,7 @@ import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.decoration.ArmorStandEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.nbt.NbtTypes;
 import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.server.command.CommandManager;
@@ -61,11 +65,17 @@ public class SpawnMikusCommand {
             }
         }
 
+        List<MikuVariant> VARIANTS = new ArrayList<>();
+        for (int variant = 0; variant < MikuVariant.values().length; variant++) {
+            VARIANTS.add(MikuVariant.byId(variant));
+        }
+
         //LIST OF LISTS
         List<List<?>> LISTS = List.of(
             PLUSHIES,
             PICKAXES,
-            BLOCKS
+            BLOCKS,
+            VARIANTS
         );
 
         for (int list = 0; list < LISTS.size(); list++) {
@@ -85,9 +95,23 @@ public class SpawnMikusCommand {
                         if (currentList.contains(ModBlocks.MIKU_PLUSH_BR)){
                             BlockPos blockPos = spawnPos.add(c * spacing, list * spacing + 1, r * spacing);
                             world.setBlockState(blockPos, ((Block) currentList.get(plushies)).getDefaultState());
+                        } else if (currentList.contains(MikuVariant.MIKU_PLUSH_BR)) {
+                            MikuEntity mikuEntity = new MikuEntity(ModEntities.MIKU, world);
+                            mikuEntity.setPosition(
+                                spawnPos.getX() + c * spacing + 0.5,
+                                spawnPos.getY() + list * spacing,
+                                spawnPos.getZ() + r * spacing + 0.5
+                            );
+                            mikuEntity.setHeadYaw(180F);
+                            mikuEntity.setVariant(MikuVariant.byId(plushies));
+                            mikuEntity.setAiDisabled(true);
+                            mikuEntity.setCustomName(Text.of("Plush"));
+                            mikuEntity.setCustomNameVisible(false);
+                            mikuEntity.setSilent(true);
+                            world.spawnEntity(mikuEntity);
                         }
                         //CREATE AND SPAWN ARMOR STAND
-                        else  {
+                        else {
                             ArmorStandEntity armorStandEntity = new ArmorStandEntity(world,
                                 spawnPos.getX() + c * spacing + 0.5,
                                 spawnPos.getY() + list * spacing,

@@ -10,11 +10,15 @@ import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.HorizontalFacingBlock;
 import net.minecraft.block.ShapeContext;
+import net.minecraft.client.gui.screen.world.WorldListWidget;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.item.ItemStack;
+import net.minecraft.particle.ParticleEffect;
+import net.minecraft.particle.ParticleTypes;
 import net.minecraft.sound.SoundCategory;
+import net.minecraft.sound.SoundEvents;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.DirectionProperty;
 import net.minecraft.util.ActionResult;
@@ -24,6 +28,7 @@ import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.util.math.Vec3d;
+import net.minecraft.util.math.random.Random;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
@@ -40,6 +45,7 @@ public class MikuPlushieBlock extends Block {
 
 	@Override
 	public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
+
 		if (!world.isClient){
 			if (player.getStackInHand(hand).isOf(ModItems.CANUDINHO) && this.asItem().getDefaultStack().isIn(ModTagProvider.BR_MIKU_ITEMS)){
                 world.breakBlock(pos, false);
@@ -48,18 +54,32 @@ public class MikuPlushieBlock extends Block {
                 if (miku != null) {
                     miku.setPosition(new Vec3d(pos.getX() + 0.5D, pos.getY(), pos.getZ() + 0.5D));
                     String mikuVariant = this.getLootTableId().getPath().split("/")[1].toUpperCase();
-                    System.out.println(mikuVariant);
                     miku.setVariant(MikuVariant.valueOf(mikuVariant));
-                    miku.setOwner(player);
+//                    miku.setOwner(player);
                     miku.setInSittingPose(true);
                     miku.setSitting(true);
                     miku.lookAt(miku.getCommandSource().getEntityAnchor(), player.getPos().add(0,1D,0));
+
+
                 }
                 world.spawnEntity(miku);
-
+                world.playSound(null, pos, ModSoundEvents.MIKU_CANUDINHO, SoundCategory.BLOCKS);
 				return ActionResult.SUCCESS;
 			}
-		}
+		} else if (player.getStackInHand(hand).isOf(ModItems.CANUDINHO) && this.asItem().getDefaultStack().isIn(ModTagProvider.BR_MIKU_ITEMS)) {
+            Random random = world.getRandom();
+            for (int particles = 0; particles < 250; particles++) {
+                world.addParticle(
+                    ParticleTypes.FIREWORK,
+                    pos.getX() + 0.5D,
+                    pos.getY() + 0.5D,
+                    pos.getZ() + 0.5D,
+                    random.nextGaussian() * 0.05,
+                    random.nextGaussian() * 0.075,
+                    random.nextGaussian() * 0.05
+                );
+            }
+        }
 		return super.onUse(state, world, pos, player, hand, hit);
 	}
 

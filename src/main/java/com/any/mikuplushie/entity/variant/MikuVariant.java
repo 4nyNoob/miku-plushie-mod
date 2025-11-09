@@ -4,20 +4,10 @@ import java.util.Arrays;
 import java.util.Comparator;
 
 public enum MikuVariant {
-//    MIKU_PLUSH(0, "miku-plush"),
-//    MIKU_PLUSH_BR(1, "miku-plush-br"),
-//    MIKU_PLUSH_BR_AM(2, "miku-plush-br-am");
 
-    MIKU_PLUSH (45, "miku_plush"),
+//    MIKU_PLUSH (45, "miku_plush"),
+
     MIKU_PLUSH_BR (0, "miku_plush_br"),
-    MIKU_PLUSH_BR_BA (1, "miku_plush_br_ba"),
-    MIKU_PLUSH_BIK (2, "miku_plush_bik"),
-    MIKU_PLUSH_BR_BEACH (3, "miku_plush_br_beach"),
-    MIKU_PLUSH_BR_BRAID (4, "miku_plush_br_braid"),
-    MIKU_PLUSH_BR_BA_DRUM (5, "miku_plush_br_ba_drum"),
-    ;
-
-    /*MIKU_PLUSH_BR (0, "miku_plush_br"),
     MIKU_PLUSH_BR_BA (1, "miku_plush_br_ba"),
     MIKU_PLUSH_BIK (2, "miku_plush_bik"),
     MIKU_PLUSH_BR_BEACH (3, "miku_plush_br_beach"),
@@ -31,10 +21,10 @@ public enum MikuVariant {
     MIKU_PLUSH_BR_BIK_ORANGE (11, "miku_plush_br_bik_orange"),
     MIKU_PLUSH_BR_AM (12, "miku_plush_br_am"),
     MIKU_PLUSH_BR_FUT_FLA (13, "miku_plush_br_fut_fla"),
-    MIKU_PLUSH_BR_FUT_CAM (14, "miku_plush_br_fut_cam"),
-    MIKU_PLUSH_BR_FUT_CRVG (15, "miku_plush_br_fut_crvg"),
-    MIKU_PLUSH_BR_GO (16, "miku_plush_br_go"),
-    MIKU_PLUSH_BR_SCHOOL_PE (17, "miku_plush_br_school_pe"),
+    MIKU_PLUSH_BR_FUT_CRVG (14, "miku_plush_br_fut_crvg"),
+    MIKU_PLUSH_BR_GO (15, "miku_plush_br_go"),
+    MIKU_PLUSH_BR_SCHOOL_PE (16, "miku_plush_br_school_pe"),
+    MIKU_PLUSH_BR_FUT_CAM (17, "miku_plush_br_fut_cam"),
     MIKU_PLUSH_BR_RS (18, "miku_plush_br_rs"),
     MIKU_PLUSH_FROG (19, "miku_plush_frog"),
     MIKU_PLUSH_MUSHROOM (20, "miku_plush_mushroom"),
@@ -51,6 +41,9 @@ public enum MikuVariant {
     MIKU_PLUSH_MICHAEL_MYERS (31, "miku_plush_michael_myers"),
     MIKU_PLUSH_PUMPKIN (32, "miku_plush_pumpkin"),
     MIKU_PLUSH_GHOSTFACE (33, "miku_plush_ghostface"),
+    ;
+
+    /*
     MIKU_PLUSH_FRANKENSTEIN (34, "miku_plush_frankenstein"),
     MIKU_PLUSH_MUMMY (35, "miku_plush_mummy"),
     MIKU_PLUSH_GHOST (36, "miku_plush_ghost"),
@@ -74,14 +67,14 @@ public enum MikuVariant {
     MIKU_PLUSH_DONT_BELIEVE_IN_T (54, "miku_plush_dont_believe_in_t"),
     MIKU_PLUSH_STATIC (55, "miku_plush_static"),
     MIKU_PLUSH_MOCHIMOCHI (56, "miku_plush_mochimochi"),
-    MIKU_PLUSH_MONITORING (57, "miku_plush_monitoring");*/
+    MIKU_PLUSH_MONITORING (57, "miku_plush_monitoring");
+    */
 
     private static final MikuVariant[] BY_ID = Arrays.stream(values()).sorted(Comparator.comparingInt(MikuVariant::getId)).toArray(MikuVariant[]::new);
     private final int id;
     private final String block;
 
     MikuVariant (int id, String block) {
-//        this.name();
         this.id = id;
         this.block = block;
     }

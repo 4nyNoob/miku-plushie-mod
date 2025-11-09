@@ -133,22 +133,22 @@ public class ModBlocks {
 			"miku_plush_br_fut_cam",
 			false
 	);
-	public static final Block MIKU_PLUSH_BR_GO = register(
-			new MikuPlushieBlock(AbstractBlock.Settings.copy(Blocks.FLOWER_POT)
-			.sounds(BlockSoundGroup.WOOL)
-			.nonOpaque()
-			),
-			"miku_plush_br_go",
-			false
-	);
-	public static final Block MIKU_PLUSH_BR_SCHOOL_PE = register(
-			new MikuPlushieBlock(AbstractBlock.Settings.copy(Blocks.FLOWER_POT)
-			.sounds(BlockSoundGroup.WOOL)
-			.nonOpaque()
-			),
-			"miku_plush_br_school_pe",
-			false
-	);
+    public static final Block MIKU_PLUSH_BR_GO = register(
+        new MikuPlushieBlock(AbstractBlock.Settings.copy(Blocks.FLOWER_POT)
+            .sounds(BlockSoundGroup.WOOL)
+            .nonOpaque()
+        ),
+        "miku_plush_br_go",
+        false
+    );
+    public static final Block MIKU_PLUSH_BR_SCHOOL_PE = register(
+        new MikuPlushieBlock(AbstractBlock.Settings.copy(Blocks.FLOWER_POT)
+            .sounds(BlockSoundGroup.WOOL)
+            .nonOpaque()
+        ),
+        "miku_plush_br_school_pe",
+        false
+    );
 	public static final Block MIKU_PLUSH_BR_FUT_CRVG = register(
 			new MikuPlushieBlock(AbstractBlock.Settings.copy(Blocks.FLOWER_POT)
 			.sounds(BlockSoundGroup.WOOL)
