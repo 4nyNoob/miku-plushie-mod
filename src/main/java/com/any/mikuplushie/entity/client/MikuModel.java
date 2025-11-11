@@ -30,7 +30,15 @@ public class MikuModel extends GeoModel<MikuEntity> {
             return Identifier.of(MikuPlushie.MOD_ID, "geo/entity/" + entity + "_2" + ".geo.json");
         }
         else if (
-            variant.equals(MikuVariant.MIKU_PLUSH_XMAS_TREE)
+            variant.equals(MikuVariant.MIKU_PLUSH_XMAS_TREE) ||
+            variant.equals(MikuVariant.MIKU_PLUSH_SONIC) ||
+            variant.equals(MikuVariant.MIKU_PLUSH_DIGITAL_STARS_2025) ||
+            variant.equals(MikuVariant.MIKU_PLUSH_ROTTEN_GIRL) ||
+            variant.equals(MikuVariant.MIKU_PLUSH_PSYCHO_MODE) ||
+            variant.equals(MikuVariant.MIKU_PLUSH_DONT_BELIEVE_IN_T) ||
+            variant.equals(MikuVariant.MIKU_PLUSH_STATIC) ||
+            variant.equals(MikuVariant.MIKU_PLUSH_MOCHIMOCHI) ||
+            variant.equals(MikuVariant.MIKU_PLUSH_MONITORING)
         ) {
             return Identifier.of(MikuPlushie.MOD_ID, "geo/entity/" + entity + "_3" + ".geo.json");
         } else {

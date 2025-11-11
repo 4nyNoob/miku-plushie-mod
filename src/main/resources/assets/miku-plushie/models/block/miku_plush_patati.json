@@ -3,7 +3,7 @@
 	"credit": "Made with Blockbench",
 	"texture_size": [64, 64],
 	"textures": {
-		"particle": "miku-plushie:block/miku-plush_patati"
+		"particle": "miku-plushie:block/miku-plush-patati"
 	},
 	"elements": [
 		{
@@ -93,10 +93,10 @@
 			"to": [11, 16.5, 11],
 			"rotation": {"angle": 0, "axis": "y", "origin": [8, 9.5, 9]},
 			"faces": {
-				"north": {"uv": [12.5, 8, 14, 8.75], "texture": "#particle"},
-				"east": {"uv": [12.5, 8, 14, 8.75], "texture": "#particle"},
-				"south": {"uv": [14, 8, 12.5, 8.75], "texture": "#particle"},
-				"west": {"uv": [14, 8, 12.5, 8.75], "texture": "#particle"},
+				"north": {"uv": [10.5, 6, 12, 6.75], "texture": "#particle"},
+				"east": {"uv": [10.5, 6, 12, 6.75], "texture": "#particle"},
+				"south": {"uv": [12, 6, 10.5, 6.75], "texture": "#particle"},
+				"west": {"uv": [12, 6, 10.5, 6.75], "texture": "#particle"},
 				"up": {"uv": [12.25, 9.75, 10.75, 8.25], "texture": "#particle"},
 				"down": {"uv": [12.25, 8.25, 10.75, 9.75], "texture": "#particle"}
 			}
@@ -132,10 +132,10 @@
 			"to": [12, 13.5, 12],
 			"rotation": {"angle": 0, "axis": "y", "origin": [7, 7.5, 9]},
 			"faces": {
-				"north": {"uv": [10.5, 10, 12.5, 10.75], "texture": "#particle"},
-				"east": {"uv": [10.5, 10, 12.5, 10.75], "texture": "#particle"},
-				"south": {"uv": [10.5, 10, 12.5, 10.75], "texture": "#particle"},
-				"west": {"uv": [12.5, 10, 10.5, 10.75], "texture": "#particle"},
+				"north": {"uv": [7, 6, 9, 6.75], "texture": "#particle"},
+				"east": {"uv": [7, 6, 9, 6.75], "texture": "#particle"},
+				"south": {"uv": [7, 6, 9, 6.75], "texture": "#particle"},
+				"west": {"uv": [9, 6, 7, 6.75], "texture": "#particle"},
 				"up": {"uv": [12.5, 10, 10.5, 8], "texture": "#particle"},
 				"down": {"uv": [12.5, 8, 10.5, 10], "texture": "#particle"}
 			}
