@@ -5,8 +5,6 @@ import java.util.Comparator;
 
 public enum MikuVariant {
 
-//    MIKU_PLUSH (45, "miku_plush"),
-
     MIKU_PLUSH_BR (0, "miku_plush_br"),
     MIKU_PLUSH_BR_BA (1, "miku_plush_br_ba"),
     MIKU_PLUSH_BIK (2, "miku_plush_bik"),
@@ -41,9 +39,6 @@ public enum MikuVariant {
     MIKU_PLUSH_MICHAEL_MYERS (31, "miku_plush_michael_myers"),
     MIKU_PLUSH_PUMPKIN (32, "miku_plush_pumpkin"),
     MIKU_PLUSH_GHOSTFACE (33, "miku_plush_ghostface"),
-    ;
-
-    /*
     MIKU_PLUSH_FRANKENSTEIN (34, "miku_plush_frankenstein"),
     MIKU_PLUSH_MUMMY (35, "miku_plush_mummy"),
     MIKU_PLUSH_GHOST (36, "miku_plush_ghost"),
@@ -67,8 +62,8 @@ public enum MikuVariant {
     MIKU_PLUSH_DONT_BELIEVE_IN_T (54, "miku_plush_dont_believe_in_t"),
     MIKU_PLUSH_STATIC (55, "miku_plush_static"),
     MIKU_PLUSH_MOCHIMOCHI (56, "miku_plush_mochimochi"),
-    MIKU_PLUSH_MONITORING (57, "miku_plush_monitoring");
-    */
+    MIKU_PLUSH_MONITORING (57, "miku_plush_monitoring"),
+    ;
 
     private static final MikuVariant[] BY_ID = Arrays.stream(values()).sorted(Comparator.comparingInt(MikuVariant::getId)).toArray(MikuVariant[]::new);
     private final int id;
