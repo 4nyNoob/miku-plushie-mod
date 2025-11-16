@@ -4,13 +4,17 @@ import com.any.mikuplushie.ModBlocks;
 import com.any.mikuplushie.ModEntities;
 import com.any.mikuplushie.datagen.ModTagProvider;
 import com.any.mikuplushie.entity.MikuEntity;
+import com.any.mikuplushie.entity.TetoEntity;
 import com.any.mikuplushie.entity.variant.MikuVariant;
+import com.any.mikuplushie.entity.variant.TetoVariant;
 import com.mojang.brigadier.CommandDispatcher;
 import net.minecraft.block.Block;
 import net.minecraft.command.argument.Vec3ArgumentType;
+import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.decoration.ArmorStandEntity;
+import net.minecraft.entity.passive.TameableEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.registry.Registry;
@@ -68,9 +72,12 @@ public class SpawnMikusCommand {
             }
         }
 
-        List<MikuVariant> VARIANTS = new ArrayList<>();
+        List<String> VARIANTS = new ArrayList<>();
         for (int variant = 0; variant < MikuVariant.values().length; variant++) {
-            VARIANTS.add(MikuVariant.byId(variant));
+            VARIANTS.add(MikuVariant.byId(variant).getBlock());
+        }
+        for (int variant = 0; variant < TetoVariant.values().length; variant++) {
+            VARIANTS.add(TetoVariant.byId(variant).getBlock());
         }
 
         //LIST OF LISTS
@@ -87,6 +94,8 @@ public class SpawnMikusCommand {
             int plushiesRows = (int) Math.ceil(Math.sqrt(currentList.size()));
             int plushiesColumns = 9;
             int plushies = 0;
+            int mikuVariation = 0;
+            int tetoVariation = 0;
 
             //ROWS SPAWN
             for (int row = 0; row < plushiesRows; row++) {
@@ -94,30 +103,41 @@ public class SpawnMikusCommand {
                 for (int column = 0; column < plushiesColumns; column++) {
                     //AVOID SPAWNING MORE ARMOR STANDS THAN NECESSARY
                     if (plushies < currentList.size()) {
+
+                        //SPAWN ARMOR STANDS
+                        if (
+                            currentList.contains(PLUSHIES.get(0)) ||
+                            currentList.contains(PICKAXES.get(0))
+                        ){
+                            ItemStack itemStack = (ItemStack) currentList.get(plushies);
+                            Vec3d entitySpawnLocation = getEntitySpawnLocation(spawnPos, column, row, list, spacing);
+                            ArmorStandEntity armorStandEntity = getArmorStandEntity(world, entitySpawnLocation, itemStack);
+                            world.spawnEntity(armorStandEntity);
+                        }
+
                         //PLACE PLUSHIE BLOCKS
                         if (currentList.contains(ModBlocks.MIKU_PLUSH_BR)){
                             BlockPos blockPos = spawnPos.add(column * spacing, list * spacing + 1, row * spacing);
                             world.setBlockState(blockPos, ((Block) currentList.get(plushies)).getDefaultState());
                         }
                         //SPAWN MIKU ENTITIES
-                        else if (currentList.contains(MikuVariant.MIKU_PLUSH_BR)) {
+                        else if (currentList.contains(VARIANTS.get(0))) {
                             //CHECK IF BLOCK BELLOW IS EQUAL TO THE VARIATION
                             Vec3d entitySpawnLocation = getEntitySpawnLocation(spawnPos, column, row, list, spacing);
                             if (isVariationAboveBlock(world, entitySpawnLocation, ModTagProvider.BR_MIKU_ITEMS)) {
-                                MikuEntity mikuEntity = getMikuEntity(world, entitySpawnLocation, plushies);
+                                MikuEntity mikuEntity = getMikuEntity(world, entitySpawnLocation, mikuVariation);
                                 world.spawnEntity(mikuEntity);
+                                mikuVariation++;
+                            }
+                            if (isVariationAboveBlock(world, entitySpawnLocation, ModTagProvider.TETO_PLUSH)) {
+                                TetoEntity entity = getTetoEntity(world, entitySpawnLocation, tetoVariation);
+                                world.spawnEntity(entity);
+                                tetoVariation++;
                             }
                             //ELSE DO NOTHING
                             else {
                                 continue;
                             }
-                        }
-                        //SPAWN ARMOR STANDS
-                        else {
-                            ItemStack itemStack = (ItemStack) currentList.get(plushies);
-                            Vec3d entitySpawnLocation = getEntitySpawnLocation(spawnPos, column, row, list, spacing);
-                            ArmorStandEntity armorStandEntity = getArmorStandEntity(world, entitySpawnLocation, itemStack);
-                            world.spawnEntity(armorStandEntity);
                         }
                     }
                     plushies++;
@@ -149,6 +169,17 @@ public class SpawnMikusCommand {
         mikuEntity.setCustomName(Text.of("Plush"));
         mikuEntity.setSilent(true);
         return mikuEntity;
+    }
+
+    private static @NotNull TetoEntity getTetoEntity(ServerWorld world, Vec3d entitySpawn, int plushies) {
+        TetoEntity tetoEntity = new TetoEntity(ModEntities.TETO, world);
+        tetoEntity.setPosition(entitySpawn);
+        tetoEntity.setHeadYaw(180F);
+        tetoEntity.setVariant(TetoVariant.byId(plushies));
+        tetoEntity.setAiDisabled(true);
+        tetoEntity.setCustomName(Text.of("Plush"));
+        tetoEntity.setSilent(true);
+        return tetoEntity;
     }
 
     private static @NotNull ArmorStandEntity getArmorStandEntity(ServerWorld world, Vec3d entitySpawn, ItemStack plushItem) {
