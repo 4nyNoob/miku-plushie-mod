@@ -63,6 +63,8 @@ public enum MikuVariant {
     MIKU_PLUSH_STATIC (55, "miku_plush_static"),
     MIKU_PLUSH_MOCHIMOCHI (56, "miku_plush_mochimochi"),
     MIKU_PLUSH_MONITORING (57, "miku_plush_monitoring"),
+    MIKU_PLUSH_HOLLOW_KNIGHT (58, "miku_plush_hollow_knight"),
+    MIKU_PLUSH_HORNET (59, "miku_plush_hornet"),
     ;
 
     private static final MikuVariant[] BY_ID = Arrays.stream(values()).sorted(Comparator.comparingInt(MikuVariant::getId)).toArray(MikuVariant[]::new);

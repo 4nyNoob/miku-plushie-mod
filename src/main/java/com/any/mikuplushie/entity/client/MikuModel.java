@@ -30,7 +30,7 @@ public class MikuModel extends GeoModel<MikuEntity> {
             variant.equals(MikuVariant.MIKU_PLUSH_WITCH)) {
             return Identifier.of(MikuPlushie.MOD_ID, "geo/entity/" + entity + "_2" + ".geo.json");
         }
-        //VARIANTES THAT USE THE 3RD MODEL
+        //VARIANTS THAT USE THE 3RD MODEL
         else if (
             variant.equals(MikuVariant.MIKU_PLUSH_XMAS_TREE) ||
             variant.equals(MikuVariant.MIKU_PLUSH_SONIC) ||
@@ -40,7 +40,9 @@ public class MikuModel extends GeoModel<MikuEntity> {
             variant.equals(MikuVariant.MIKU_PLUSH_DONT_BELIEVE_IN_T) ||
             variant.equals(MikuVariant.MIKU_PLUSH_STATIC) ||
             variant.equals(MikuVariant.MIKU_PLUSH_MOCHIMOCHI) ||
-            variant.equals(MikuVariant.MIKU_PLUSH_MONITORING)
+            variant.equals(MikuVariant.MIKU_PLUSH_MONITORING) ||
+            variant.equals(MikuVariant.MIKU_PLUSH_HOLLOW_KNIGHT) ||
+            variant.equals(MikuVariant.MIKU_PLUSH_HORNET)
         ) {
             return Identifier.of(MikuPlushie.MOD_ID, "geo/entity/" + entity + "_3" + ".geo.json");
         }
