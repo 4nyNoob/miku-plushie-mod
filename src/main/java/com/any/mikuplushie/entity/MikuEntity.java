@@ -1,6 +1,5 @@
 package com.any.mikuplushie.entity;
 
-import com.any.mikuplushie.ModEntities;
 import com.any.mikuplushie.ModItems;
 import com.any.mikuplushie.ModSoundEvents;
 import com.any.mikuplushie.entity.variant.MikuVariant;
@@ -11,28 +10,21 @@ import net.minecraft.entity.ai.goal.LookAtEntityGoal;
 import net.minecraft.entity.ai.goal.SwimGoal;
 import net.minecraft.entity.attribute.DefaultAttributeContainer;
 import net.minecraft.entity.attribute.EntityAttributes;
-import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.data.DataTracker;
 import net.minecraft.entity.data.TrackedData;
 import net.minecraft.entity.data.TrackedDataHandlerRegistry;
-import net.minecraft.entity.effect.StatusEffectInstance;
-import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.mob.MobEntity;
-import net.minecraft.entity.passive.ParrotEntity;
 import net.minecraft.entity.passive.PassiveEntity;
 import net.minecraft.entity.passive.TameableEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NbtCompound;
-import net.minecraft.particle.ParticleTypes;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
-import net.minecraft.util.StringIdentifiable;
 import net.minecraft.util.Util;
-import net.minecraft.util.function.ValueLists;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.random.Random;
 import net.minecraft.world.EntityView;
@@ -41,20 +33,16 @@ import net.minecraft.world.ServerWorldAccess;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 import software.bernie.geckolib.animatable.GeoEntity;
-import software.bernie.geckolib.constant.DefaultAnimations;
 import software.bernie.geckolib.core.animatable.instance.AnimatableInstanceCache;
 import software.bernie.geckolib.core.animation.AnimatableManager;
 import software.bernie.geckolib.core.animation.AnimationController;
 import software.bernie.geckolib.core.animation.RawAnimation;
 import software.bernie.geckolib.util.GeckoLibUtil;
 
-import java.util.List;
-import java.util.function.IntFunction;
-
 public class MikuEntity extends TameableEntity implements GeoEntity {
     private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
 
-    private static final TrackedData<Integer> VARIANT = DataTracker.registerData(MikuEntity.class, TrackedDataHandlerRegistry.INTEGER);
+    private static final TrackedData<Integer> MIKU_VARIANT = DataTracker.registerData(MikuEntity.class, TrackedDataHandlerRegistry.INTEGER);
 
     private static final RawAnimation IDLE = RawAnimation.begin().thenLoop("misc.idle");
     private static final RawAnimation SIT = RawAnimation.begin().thenLoop("misc.sit");
@@ -90,7 +78,7 @@ public class MikuEntity extends TameableEntity implements GeoEntity {
             .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.3F);
     }
 
-    //GECKOLIB STUFF
+    //GECKO LIB STUFF
     @Override
     public void registerControllers(AnimatableManager.ControllerRegistrar controllers) {
         controllers.add(new AnimationController<>(this, "Miku", state -> {
@@ -130,7 +118,7 @@ public class MikuEntity extends TameableEntity implements GeoEntity {
     @Override
     protected void initDataTracker() {
         super.initDataTracker();
-        this.dataTracker.startTracking(VARIANT, 0);
+        this.dataTracker.startTracking(MIKU_VARIANT, 0);
     }
 
     @Override
@@ -214,20 +202,15 @@ public class MikuEntity extends TameableEntity implements GeoEntity {
     public void setNearbySongPlaying(BlockPos songPosition, boolean playing) {
         this.songSource = songPosition;
         this.songPlaying = playing;
-//        if (!songPlaying && songSource != null){
         Random random = this.random;
-//        random.setSeed(this.getPos().hashCode());
         int randomDance = random.nextBetweenExclusive(1, 5);
-//        System.out.println(this.getPos().hashCode());
         switch (randomDance) {
             case 1: SELECTED_DANCE = DANCE; break;
             case 2: SELECTED_DANCE = DANCE2; break;
             case 3: SELECTED_DANCE = DANCE3; break;
             case 4: SELECTED_DANCE = DANCE4; break;
             case 5: SELECTED_DANCE = DANCE5; break;
-//            default: SELECTED_DANCE = DANCE; break;
         }
-//        }
     }
 
     public boolean isSongPlaying() {
@@ -236,26 +219,22 @@ public class MikuEntity extends TameableEntity implements GeoEntity {
 
     //MIKU VARIANTS
 
-    public MikuVariant getVariant () {
+    public MikuVariant getMikuVariant() {
         return MikuVariant.byId(this.getTypeVariant()/* & 255*/);
     }
 
     private int getTypeVariant() {
-        return this.dataTracker.get(VARIANT);
+        return this.dataTracker.get(MIKU_VARIANT);
     }
 
     public void setVariant(MikuVariant variant) {
-        this.dataTracker.set(VARIANT, variant.getId()/* & 255*/);
+        this.dataTracker.set(MIKU_VARIANT, variant.getId()/* & 255*/);
     }
-//
-//    public void setVariantByName(MikuVariant variant) {
-//        this.dataTracker.set(VARIANT, variant.getId() & 255);
-//    }
 
     @Override
     public void readCustomDataFromNbt(NbtCompound nbt) {
         super.readCustomDataFromNbt(nbt);
-        this.dataTracker.set(VARIANT, nbt.getInt("Variant"));
+        this.dataTracker.set(MIKU_VARIANT, nbt.getInt("Variant"));
     }
 
     @Override

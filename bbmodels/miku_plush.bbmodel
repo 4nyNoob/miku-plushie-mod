@@ -322,7 +322,6 @@
 			"to": [3.25, 17.75, 3.25],
 			"autouv": 0,
 			"color": 0,
-			"visibility": false,
 			"origin": [0, 11.5, 0],
 			"faces": {
 				"north": {
@@ -1027,7 +1026,6 @@
 			"to": [-3.25, 11.25, 3.25],
 			"autouv": 0,
 			"color": 1,
-			"visibility": false,
 			"origin": [0, 12, 0],
 			"faces": {
 				"north": {
@@ -4793,7 +4791,6 @@
 			"to": [1.5, 11.5, -2],
 			"autouv": 0,
 			"color": 3,
-			"visibility": false,
 			"origin": [-0.5, 10.5, 0],
 			"faces": {
 				"north": {
@@ -5284,7 +5281,6 @@
 			"to": [-3.25, 11.25, -0.75],
 			"autouv": 0,
 			"color": 1,
-			"visibility": false,
 			"origin": [0, 12, 0],
 			"faces": {
 				"north": {

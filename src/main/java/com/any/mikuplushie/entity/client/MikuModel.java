@@ -19,7 +19,8 @@ public class MikuModel extends GeoModel<MikuEntity> {
 
     @Override
     public Identifier getModelResource(MikuEntity animatable) {
-        MikuVariant variant = animatable.getVariant();
+        MikuVariant variant = animatable.getMikuVariant();
+        //VARIANTS THAT USE THE 2ND MODEL
         if (
             variant.equals(MikuVariant.MIKU_PLUSH_MUSHROOM) ||
             variant.equals(MikuVariant.MIKU_PLUSH_WEREWOMAN) ||
@@ -29,6 +30,7 @@ public class MikuModel extends GeoModel<MikuEntity> {
             variant.equals(MikuVariant.MIKU_PLUSH_WITCH)) {
             return Identifier.of(MikuPlushie.MOD_ID, "geo/entity/" + entity + "_2" + ".geo.json");
         }
+        //VARIANTES THAT USE THE 3RD MODEL
         else if (
             variant.equals(MikuVariant.MIKU_PLUSH_XMAS_TREE) ||
             variant.equals(MikuVariant.MIKU_PLUSH_SONIC) ||
@@ -41,18 +43,16 @@ public class MikuModel extends GeoModel<MikuEntity> {
             variant.equals(MikuVariant.MIKU_PLUSH_MONITORING)
         ) {
             return Identifier.of(MikuPlushie.MOD_ID, "geo/entity/" + entity + "_3" + ".geo.json");
-        } else {
+        }
+        //DEFAULT MODEL
+        else {
             return model;
         }
     }
 
     @Override
     public Identifier getTextureResource(MikuEntity animatable) {
-//        String variantName = animatable.getVariant().name().toLowerCase().replace('_', '-');
-        String variantName = animatable.getVariant().getBlock().replace('_', '-');
-        String textureFile = "textures/block/" + variantName + ".png";
-        return Identifier.of(MikuPlushie.MOD_ID, textureFile);
-//        return texture;
+        return Identifier.of(MikuPlushie.MOD_ID, variantToBlockTextureName(animatable));
     }
 
     @Override
@@ -103,6 +103,9 @@ public class MikuModel extends GeoModel<MikuEntity> {
         right_arm.setRotX((float) Math.sin(limbSwing * swingSpeed) * (swingAmm * -50 * toRad));
 
         hair.setRotZ((float) Math.sin(limbSwing * swingSpeed - (45/20F)) * (swingAmm * -10 * toRad));
+    }
 
+    private String variantToBlockTextureName (MikuEntity animatable) {
+        return "textures/block/" + animatable.getMikuVariant().getBlock().replace('_', '-') + ".png";
     }
 }
