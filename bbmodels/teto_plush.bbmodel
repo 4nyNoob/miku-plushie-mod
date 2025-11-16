@@ -657,7 +657,6 @@
 			"to": [-3.25, 11.25, 3.25],
 			"autouv": 0,
 			"color": 1,
-			"visibility": false,
 			"origin": [0, 12, 0],
 			"faces": {
 				"north": {
@@ -1499,7 +1498,7 @@
 					"texture": 9
 				},
 				"south": {
-					"uv": [25, 3, 23, 6],
+					"uv": [1, 0, 0, 1],
 					"texture": 9
 				},
 				"west": {
@@ -1540,7 +1539,7 @@
 					"texture": 9
 				},
 				"south": {
-					"uv": [24, 0, 22, 3],
+					"uv": [1, 0, 0, 1],
 					"texture": 9
 				},
 				"west": {
@@ -1581,7 +1580,7 @@
 					"texture": 9
 				},
 				"south": {
-					"uv": [22, 0, 24, 3],
+					"uv": [0, 0, 1, 1],
 					"texture": 9
 				},
 				"west": {
@@ -1744,7 +1743,7 @@
 					"texture": 9
 				},
 				"south": {
-					"uv": [30, 0, 27, 4],
+					"uv": [1, 0, 0, 1],
 					"texture": 9
 				},
 				"west": {
@@ -2396,7 +2395,7 @@
 					"texture": 9
 				},
 				"south": {
-					"uv": [48, 42, 50, 43],
+					"uv": [0, 0, 1, 1],
 					"texture": 9
 				},
 				"west": {
@@ -2439,7 +2438,7 @@
 					"texture": 9
 				},
 				"south": {
-					"uv": [48, 43, 50, 44],
+					"uv": [0, 0, 1, 1],
 					"texture": 9
 				},
 				"west": {
@@ -2482,7 +2481,7 @@
 					"texture": 9
 				},
 				"south": {
-					"uv": [48, 44, 50, 45],
+					"uv": [0, 0, 1, 1],
 					"texture": 9
 				},
 				"west": {
@@ -2525,7 +2524,7 @@
 					"texture": 9
 				},
 				"south": {
-					"uv": [48, 43, 50, 44],
+					"uv": [0, 0, 1, 1],
 					"texture": 9
 				},
 				"west": {
@@ -2568,7 +2567,7 @@
 					"texture": 9
 				},
 				"south": {
-					"uv": [48, 42, 50, 43],
+					"uv": [0, 0, 1, 1],
 					"texture": 9
 				},
 				"west": {
@@ -2611,7 +2610,7 @@
 					"texture": 9
 				},
 				"south": {
-					"uv": [48, 44, 50, 45],
+					"uv": [0, 0, 1, 1],
 					"texture": 9
 				},
 				"west": {
@@ -3118,7 +3117,7 @@
 					"texture": 9
 				},
 				"south": {
-					"uv": [50, 42, 48, 43],
+					"uv": [1, 0, 0, 1],
 					"texture": 9
 				},
 				"west": {
@@ -3161,7 +3160,7 @@
 					"texture": 9
 				},
 				"south": {
-					"uv": [50, 43, 48, 44],
+					"uv": [1, 0, 0, 1],
 					"texture": 9
 				},
 				"west": {
@@ -3204,7 +3203,7 @@
 					"texture": 9
 				},
 				"south": {
-					"uv": [50, 44, 48, 45],
+					"uv": [1, 0, 0, 1],
 					"texture": 9
 				},
 				"west": {
@@ -3247,7 +3246,7 @@
 					"texture": 9
 				},
 				"south": {
-					"uv": [50, 43, 48, 44],
+					"uv": [1, 0, 0, 1],
 					"texture": 9
 				},
 				"west": {
@@ -3290,7 +3289,7 @@
 					"texture": 9
 				},
 				"south": {
-					"uv": [50, 42, 48, 43],
+					"uv": [1, 0, 0, 1],
 					"texture": 9
 				},
 				"west": {
@@ -3333,7 +3332,7 @@
 					"texture": 9
 				},
 				"south": {
-					"uv": [50, 44, 48, 45],
+					"uv": [1, 0, 0, 1],
 					"texture": 9
 				},
 				"west": {
@@ -4029,7 +4028,7 @@
 			"shade": true,
 			"mirror_uv": false,
 			"selected": false,
-			"visibility": false,
+			"visibility": true,
 			"autouv": 0,
 			"isOpen": true
 		},
@@ -4046,7 +4045,7 @@
 			"shade": true,
 			"mirror_uv": false,
 			"selected": false,
-			"visibility": false,
+			"visibility": true,
 			"autouv": 0,
 			"isOpen": true
 		},
@@ -4252,7 +4251,7 @@
 			"selected": false,
 			"visibility": true,
 			"autouv": 0,
-			"isOpen": false
+			"isOpen": true
 		},
 		{
 			"uuid": "67d1e100-cbda-72f3-6547-6b9374ae9207",
@@ -4405,7 +4404,7 @@
 			"selected": false,
 			"visibility": true,
 			"autouv": 0,
-			"isOpen": false
+			"isOpen": true
 		},
 		{
 			"uuid": "17ee3546-7f81-7de3-0af3-c40dd690359a",
@@ -4507,7 +4506,7 @@
 			"selected": false,
 			"visibility": true,
 			"autouv": 0,
-			"isOpen": false
+			"isOpen": true
 		},
 		{
 			"uuid": "a935d78b-f2cf-be84-a2fa-0eb72ddb41b4",
@@ -4885,7 +4884,7 @@
 														},
 														{
 															"uuid": "13e53db5-e7e1-3979-27b2-590c28aef7bc",
-															"isOpen": false,
+															"isOpen": true,
 															"children": ["41811bdc-d338-9518-1f90-27dba5da28dd", "da86f547-51c2-36cc-267c-35d571a55812"]
 														},
 														{
@@ -4936,7 +4935,7 @@
 														},
 														{
 															"uuid": "61ace6f6-8b8b-a212-aa2a-e3ce98bd6014",
-															"isOpen": false,
+															"isOpen": true,
 															"children": [
 																{
 																	"uuid": "17ee3546-7f81-7de3-0af3-c40dd690359a",
@@ -4981,7 +4980,7 @@
 																		},
 																		{
 																			"uuid": "9e90331a-b875-a48f-0382-09773a38a135",
-																			"isOpen": false,
+																			"isOpen": true,
 																			"children": [
 																				"04435ddc-45cf-a85d-3b52-c477e378edac",
 																				"7a11a794-12d4-c056-4602-ba52b95bd8d0",
@@ -10511,7 +10510,7 @@
 			"override": false,
 			"length": 1.5,
 			"snapping": 24,
-			"selected": true,
+			"selected": false,
 			"saved": true,
 			"path": "../src/main/resources/assets/miku-plushie/animations/teto_plush.animation.json",
 			"anim_time_update": "",
