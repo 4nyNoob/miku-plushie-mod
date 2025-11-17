@@ -1,6 +1,5 @@
 package com.any.mikuplushie.commands;
 
-import com.any.mikuplushie.ModBlocks;
 import com.any.mikuplushie.ModEntities;
 import com.any.mikuplushie.datagen.ModTagProvider;
 import com.any.mikuplushie.entity.MikuEntity;
@@ -10,11 +9,9 @@ import com.any.mikuplushie.entity.variant.TetoVariant;
 import com.mojang.brigadier.CommandDispatcher;
 import net.minecraft.block.Block;
 import net.minecraft.command.argument.Vec3ArgumentType;
-import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.decoration.ArmorStandEntity;
-import net.minecraft.entity.passive.TameableEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.registry.Registry;
@@ -82,8 +79,8 @@ public class SpawnMikusCommand {
 
         //LIST OF LISTS
         List<List<?>> LISTS = List.of(
-            PLUSHIES,
             PICKAXES,
+            PLUSHIES,
             BLOCKS,
             VARIANTS
         );
@@ -104,10 +101,10 @@ public class SpawnMikusCommand {
                     //AVOID SPAWNING MORE ARMOR STANDS THAN NECESSARY
                     if (plushies < currentList.size()) {
 
-                        //SPAWN ARMOR STANDS
+                        //SPAWN ITEM ARMOR STANDS
                         if (
-                            currentList.contains(PLUSHIES.get(0)) ||
-                            currentList.contains(PICKAXES.get(0))
+                            currentList.contains(PICKAXES.get(0)) ||
+                            currentList.contains(PLUSHIES.get(0))
                         ){
                             ItemStack itemStack = (ItemStack) currentList.get(plushies);
                             Vec3d entitySpawnLocation = getEntitySpawnLocation(spawnPos, column, row, list, spacing);
@@ -116,29 +113,35 @@ public class SpawnMikusCommand {
                         }
 
                         //PLACE PLUSHIE BLOCKS
-                        if (currentList.contains(ModBlocks.MIKU_PLUSH_BR)){
+                        if (currentList.contains(BLOCKS.get(0))){
                             BlockPos blockPos = spawnPos.add(column * spacing, list * spacing + 1, row * spacing);
                             world.setBlockState(blockPos, ((Block) currentList.get(plushies)).getDefaultState());
                         }
+
                         //SPAWN MIKU ENTITIES
                         else if (currentList.contains(VARIANTS.get(0))) {
-                            //CHECK IF BLOCK BELLOW IS EQUAL TO THE VARIATION
                             Vec3d entitySpawnLocation = getEntitySpawnLocation(spawnPos, column, row, list, spacing);
-                            if (isVariationAboveBlock(world, entitySpawnLocation, ModTagProvider.BR_MIKU_ITEMS)) {
-                                MikuEntity mikuEntity = getMikuEntity(world, entitySpawnLocation, mikuVariation);
-                                world.spawnEntity(mikuEntity);
+
+                            //CHECK IF BLOCK BELLOW IS A MIKU PLUSH
+                            if (isVariationAboveBlock(world, entitySpawnLocation, ModTagProvider.MIKU_PLUSH)) {
+                                MikuEntity entity = getMikuEntity(world, entitySpawnLocation, mikuVariation);
+                                world.spawnEntity(entity);
                                 mikuVariation++;
                             }
+
+                            //CHECK IF BLOCK BELLOW IS A TETO PLUSH
                             if (isVariationAboveBlock(world, entitySpawnLocation, ModTagProvider.TETO_PLUSH)) {
                                 TetoEntity entity = getTetoEntity(world, entitySpawnLocation, tetoVariation);
                                 world.spawnEntity(entity);
                                 tetoVariation++;
                             }
+
                             //ELSE DO NOTHING
                             else {
                                 continue;
                             }
                         }
+
                     }
                     plushies++;
                 }
