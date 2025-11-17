@@ -10,17 +10,15 @@ import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.HorizontalFacingBlock;
 import net.minecraft.block.ShapeContext;
-import net.minecraft.client.gui.screen.world.WorldListWidget;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.item.ItemStack;
-import net.minecraft.particle.ParticleEffect;
 import net.minecraft.particle.ParticleTypes;
 import net.minecraft.sound.SoundCategory;
-import net.minecraft.sound.SoundEvents;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.DirectionProperty;
+import net.minecraft.text.Text;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.BlockRotation;
 import net.minecraft.util.Hand;
@@ -34,8 +32,6 @@ import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 
-import java.util.Objects;
-
 public class MikuPlushieBlock extends Block {
 	public static final DirectionProperty FACING = HorizontalFacingBlock.FACING;
 	public MikuPlushieBlock(Settings settings) {
@@ -47,7 +43,7 @@ public class MikuPlushieBlock extends Block {
 	public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
 
 		if (!world.isClient){
-			if (player.getStackInHand(hand).isOf(ModItems.CANUDINHO) && this.asItem().getDefaultStack().isIn(ModTagProvider.BR_MIKU_ITEMS)){
+			if (player.getStackInHand(hand).isOf(ModItems.CANUDINHO) && this.asItem().getDefaultStack().isIn(ModTagProvider.MIKU_PLUSH)){
                 world.breakBlock(pos, false);
                 MikuEntity miku = ModEntities.MIKU.create(world);
 //				world.playSound(null, pos, ModSoundEvents.MIKU_CANUDINHO, SoundCategory.BLOCKS, 1F, 1F);
@@ -59,14 +55,14 @@ public class MikuPlushieBlock extends Block {
                     miku.setInSittingPose(true);
                     miku.setSitting(true);
                     miku.lookAt(miku.getCommandSource().getEntityAnchor(), player.getPos().add(0,1D,0));
-
+                    miku.setCustomName(Text.of("Plush"));
 
                 }
                 world.spawnEntity(miku);
                 world.playSound(null, pos, ModSoundEvents.MIKU_CANUDINHO, SoundCategory.BLOCKS);
 				return ActionResult.SUCCESS;
 			}
-		} else if (player.getStackInHand(hand).isOf(ModItems.CANUDINHO) && this.asItem().getDefaultStack().isIn(ModTagProvider.BR_MIKU_ITEMS)) {
+		} else if (player.getStackInHand(hand).isOf(ModItems.CANUDINHO) && this.asItem().getDefaultStack().isIn(ModTagProvider.MIKU_PLUSH)) {
             Random random = world.getRandom();
             for (int particles = 0; particles < 250; particles++) {
                 world.addParticle(
@@ -97,7 +93,7 @@ public class MikuPlushieBlock extends Block {
 			world.playSound(null, pos, ModSoundEvents.LEN_OIE, SoundCategory.BLOCKS, 0.5F, 1);
 		} else if(this.asItem().getDefaultStack().isIn(ModTagProvider.LUKA_PLUSH)){
 			world.playSound(null, pos, ModSoundEvents.LUKA_OIE, SoundCategory.BLOCKS, 0.5F, 1);
-		} else if(this.asItem().getDefaultStack().isIn(ModTagProvider.BR_MIKU_ITEMS)){
+		} else if(this.asItem().getDefaultStack().isIn(ModTagProvider.MIKU_PLUSH)){
 			world.playSound(null, pos, ModSoundEvents.MIKU_OIE, SoundCategory.BLOCKS, 0.5F, 1);
 		}
 		super.onPlaced(world, pos, state, placer, itemStack);
@@ -117,7 +113,7 @@ public class MikuPlushieBlock extends Block {
 			world.playSound(null, pos, ModSoundEvents.LEN_BYE, SoundCategory.BLOCKS, 0.5F, 1);
 		} else if(this.asItem().getDefaultStack().isIn(ModTagProvider.LUKA_PLUSH)){
 			world.playSound(null, pos, ModSoundEvents.LUKA_BYE, SoundCategory.BLOCKS, 0.5F, 1);
-		} else if(this.asItem().getDefaultStack().isIn(ModTagProvider.BR_MIKU_ITEMS)){
+		} else if(this.asItem().getDefaultStack().isIn(ModTagProvider.MIKU_PLUSH)){
 			world.playSound(null, pos, ModSoundEvents.MIKU_BYE, SoundCategory.BLOCKS, 0.5F, 1);
 		}
         super.onBreak(world, pos, state, player);

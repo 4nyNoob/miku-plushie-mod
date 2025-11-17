@@ -32,7 +32,7 @@ public class MikuPlushieBlockItem extends BlockItem implements Equipment {
 	public static void PlayMikuSound(LivingEntity entity){
 		ItemStack stack = entity.getStackInHand(entity.getActiveHand());
 
-		if (stack.isIn(ModTagProvider.BR_MIKU_ITEMS)){
+		if (stack.isIn(ModTagProvider.MIKU_PLUSH)){
 			entity.playSound(ModSoundEvents.MIKU_DOR, 1f, 1);
 		}
 		if (stack.isIn(ModTagProvider.AIKO_PLUSH)) {

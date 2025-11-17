@@ -20,7 +20,7 @@ public class ModTagProvider extends FabricTagProvider.ItemTagProvider {
     }
 
     public static final TagKey<Item> PLUSHIES = TagKey.of(RegistryKeys.ITEM, Identifier.of(MikuPlushie.MOD_ID, "plushies"));
-    public static final TagKey<Item> BR_MIKU_ITEMS = TagKey.of(RegistryKeys.ITEM, Identifier.of(MikuPlushie.MOD_ID, "br_miku_plush"));
+    public static final TagKey<Item> MIKU_PLUSH = TagKey.of(RegistryKeys.ITEM, Identifier.of(MikuPlushie.MOD_ID, "miku_plush"));
     public static final TagKey<Item> AIKO_PLUSH = TagKey.of(RegistryKeys.ITEM, Identifier.of(MikuPlushie.MOD_ID, "aiko_plush"));
     public static final TagKey<Item> TETO_PLUSH = TagKey.of(RegistryKeys.ITEM, Identifier.of(MikuPlushie.MOD_ID, "teto_plush"));
     public static final TagKey<Item> TETO_PICKAXE = TagKey.of(RegistryKeys.ITEM, Identifier.of(MikuPlushie.MOD_ID, "teto_pickaxe"));
@@ -32,7 +32,7 @@ public class ModTagProvider extends FabricTagProvider.ItemTagProvider {
 
     @Override
     protected void configure(RegistryWrapper.WrapperLookup wrapperLookup) {
-        getOrCreateTagBuilder(BR_MIKU_ITEMS)
+        getOrCreateTagBuilder(MIKU_PLUSH)
             .add(ModItems.MIKU_PLUSH_BR)
             .add(ModItems.MIKU_PLUSH_BR_BA)
             .add(ModItems.MIKU_PLUSH_BIK)
@@ -139,7 +139,7 @@ public class ModTagProvider extends FabricTagProvider.ItemTagProvider {
         ;
 
         getOrCreateTagBuilder(PLUSHIES)
-            .addOptionalTag(BR_MIKU_ITEMS)
+            .addOptionalTag(MIKU_PLUSH)
             .addOptionalTag(AIKO_PLUSH)
             .addOptionalTag(TETO_PLUSH)
             .addOptionalTag(AKITA_NERU_PLUSH)

@@ -2,7 +2,7 @@
   "replace": false,
   "values": [
     {
-      "id": "#miku-plushie:br_miku_plush",
+      "id": "#miku-plushie:miku_plush",
       "required": false
     },
     {
