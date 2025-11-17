@@ -1,9 +1,7 @@
-package com.any.mikuplushie.entity.client;
+package com.any.mikuplushie.entity.client.model;
 
 import com.any.mikuplushie.MikuPlushie;
-import com.any.mikuplushie.entity.MikuEntity;
 import com.any.mikuplushie.entity.TetoEntity;
-import com.any.mikuplushie.entity.variant.MikuVariant;
 import net.minecraft.util.Identifier;
 import software.bernie.geckolib.constant.DataTickets;
 import software.bernie.geckolib.core.animatable.model.CoreGeoBone;

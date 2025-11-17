@@ -1,4 +1,4 @@
-package com.any.mikuplushie.entity.client;
+package com.any.mikuplushie.entity.client.model;
 
 import com.any.mikuplushie.MikuPlushie;
 import com.any.mikuplushie.entity.MikuEntity;

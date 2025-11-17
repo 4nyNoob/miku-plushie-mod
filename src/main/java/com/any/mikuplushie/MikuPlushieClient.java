@@ -1,6 +1,8 @@
 package com.any.mikuplushie;
 
-import com.any.mikuplushie.entity.client.*;
+import com.any.mikuplushie.entity.client.render.AikoRender;
+import com.any.mikuplushie.entity.client.render.MikuRender;
+import com.any.mikuplushie.entity.client.render.TetoRender;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
@@ -9,7 +11,6 @@ import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
 import net.minecraft.client.render.RenderLayer;
 import software.bernie.geckolib.core.molang.LazyVariable;
 import software.bernie.geckolib.core.molang.MolangParser;
-import software.bernie.geckolib.core.molang.MolangQueries;
 
 @Environment(EnvType.CLIENT)
 public class MikuPlushieClient implements ClientModInitializer {
