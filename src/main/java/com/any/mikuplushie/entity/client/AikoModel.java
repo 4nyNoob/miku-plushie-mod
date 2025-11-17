@@ -1,0 +1,75 @@
+package com.any.mikuplushie.entity.client;
+
+import com.any.mikuplushie.MikuPlushie;
+import com.any.mikuplushie.entity.AikoEntity;
+import com.any.mikuplushie.entity.TetoEntity;
+import net.minecraft.util.Identifier;
+import software.bernie.geckolib.constant.DataTickets;
+import software.bernie.geckolib.core.animatable.model.CoreGeoBone;
+import software.bernie.geckolib.core.animation.AnimationState;
+import software.bernie.geckolib.model.GeoModel;
+
+public class AikoModel extends GeoModel<AikoEntity> {
+    private final String entity = "aiko_plush";
+
+    private final Identifier model = Identifier.of(MikuPlushie.MOD_ID, "geo/entity/" + entity + ".geo.json");
+    private final Identifier texture = Identifier.of(MikuPlushie.MOD_ID, "textures/block/" + entity.replace('_', '-') + ".png");
+    private final Identifier animations = Identifier.of(MikuPlushie.MOD_ID, "animations/" + entity + ".animation.json");
+
+
+    @Override
+    public Identifier getModelResource(AikoEntity animatable) {
+        return model;
+    }
+
+    @Override
+    public Identifier getTextureResource(AikoEntity animatable) {
+        return texture;
+    }
+
+    @Override
+    public Identifier getAnimationResource(AikoEntity animatable) {
+        return animations;
+    }
+
+    @Override
+    public void setCustomAnimations(AikoEntity animatable, long instanceId, AnimationState<AikoEntity> state) {
+        super.setCustomAnimations(animatable, instanceId, state);
+
+        CoreGeoBone head = this.getAnimationProcessor().getBone("head_offset");
+        float headPitch = state.getData(DataTickets.ENTITY_MODEL_DATA).headPitch();
+        float headYaw = state.getData(DataTickets.ENTITY_MODEL_DATA).netHeadYaw();
+        if (head != null) {
+            head.setRotX(headPitch * ((float) Math.PI / 180F));
+            head.setRotY(headYaw * ((float) Math.PI / 180F));
+        }
+
+        //ANIMATION DEBUG
+        //float limbSwing = (float) state.getAnimationTick() / 2;
+        //float swingAmm = 1;
+
+        //ANIM VARIABLES
+        float limbSwing = state.getLimbSwing();
+        float swingAmm = state.getLimbSwingAmount();
+        float toRad = (float) (Math.PI / 180);
+        float swingSpeed = 1F;
+
+        //GET BONES
+        CoreGeoBone root = this.getAnimationProcessor().getBone("root_offset");
+        CoreGeoBone left_leg = this.getAnimationProcessor().getBone("left_leg_offset");
+        CoreGeoBone right_leg = this.getAnimationProcessor().getBone("right_leg_offset");
+        CoreGeoBone left_arm = this.getAnimationProcessor().getBone("left_arm_offset");
+        CoreGeoBone right_arm = this.getAnimationProcessor().getBone("right_arm_offset");
+
+        //ANIM CODE
+        root.setRotZ((float) Math.sin(limbSwing * swingSpeed) * (swingAmm * 5 * toRad));
+        root.setPosY((float) Math.sin(limbSwing * swingSpeed * 2) * (swingAmm * 1) + (swingAmm * 1));
+
+        left_leg.setRotX((float) Math.sin(limbSwing * swingSpeed) * (swingAmm * -50 * toRad));
+        right_leg.setRotX((float) Math.sin(limbSwing * swingSpeed) * (swingAmm * 50 * toRad));
+        left_arm.setRotX((float) Math.sin(limbSwing * swingSpeed) * (swingAmm * 50 * toRad));
+        right_arm.setRotX((float) Math.sin(limbSwing * swingSpeed) * (swingAmm * -50 * toRad));
+
+    }
+
+}

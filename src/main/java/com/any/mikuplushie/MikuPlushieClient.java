@@ -1,8 +1,6 @@
 package com.any.mikuplushie;
 
-import com.any.mikuplushie.entity.MikuEntity;
-import com.any.mikuplushie.entity.client.MikuRender;
-import com.any.mikuplushie.entity.client.TetoRender;
+import com.any.mikuplushie.entity.client.*;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
@@ -113,5 +111,6 @@ public class MikuPlushieClient implements ClientModInitializer {
         MolangParser.INSTANCE.register(new LazyVariable("q.miku.is_game", 1));
         EntityRendererRegistry.register(ModEntities.MIKU, MikuRender::new);
         EntityRendererRegistry.register(ModEntities.TETO, TetoRender::new);
+        EntityRendererRegistry.register(ModEntities.AIKO, AikoRender::new);
 	}
 }

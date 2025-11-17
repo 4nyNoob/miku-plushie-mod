@@ -1,6 +1,7 @@
 package com.any.mikuplushie;
 
 import com.any.mikuplushie.commands.SpawnMikusCommand;
+import com.any.mikuplushie.entity.AikoEntity;
 import com.any.mikuplushie.entity.MikuEntity;
 import com.any.mikuplushie.entity.TetoEntity;
 import net.fabricmc.fabric.api.command.v2.CommandRegistrationCallback;
@@ -31,10 +32,17 @@ public class ModEntities {
             FabricEntityTypeBuilder.create(SpawnGroup.CREATURE, TetoEntity::new)
                 .dimensions(EntityDimensions.fixed(0.8F, 0.8F)).build());
 
+    public static final EntityType<AikoEntity> AIKO =
+        Registry.register(Registries.ENTITY_TYPE,
+            new Identifier(MikuPlushie.MOD_ID, "aiko_plush"),
+            FabricEntityTypeBuilder.create(SpawnGroup.CREATURE, AikoEntity::new)
+                .dimensions(EntityDimensions.fixed(0.8F, 0.8F)).build());
+
     public static void initialize(){
         MikuPlushie.LOGGER.info("Registering " + MikuPlushie.MOD_ID + " Entities");
 
         FabricDefaultAttributeRegistry.register(MIKU, MikuEntity.createAttributes());
         FabricDefaultAttributeRegistry.register(TETO, TetoEntity.createAttributes());
+        FabricDefaultAttributeRegistry.register(AIKO, AikoEntity.createAttributes());
     }
 }
