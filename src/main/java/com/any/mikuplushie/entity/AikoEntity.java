@@ -28,16 +28,6 @@ public class AikoEntity extends MikuEntity{
 
     //MC ENTITY STUFF
     @Override
-    protected void initDataTracker() {
-        super.initDataTracker();
-    }
-
-    @Override
-    public EntityData initialize(ServerWorldAccess world, LocalDifficulty difficulty, SpawnReason spawnReason, @Nullable EntityData entityData, @Nullable NbtCompound entityNbt) {
-        return super.initialize(world, difficulty, spawnReason, entityData, entityNbt);
-    }
-
-    @Override
     protected @Nullable SoundEvent getDeathSound() {
         return ModSoundEvents.AIKO_BYE;
     }
