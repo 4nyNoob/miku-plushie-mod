@@ -2,16 +2,18 @@ package com.any.mikuplushie.commands;
 
 import com.any.mikuplushie.ModEntities;
 import com.any.mikuplushie.datagen.ModTagProvider;
-import com.any.mikuplushie.entity.MikuEntity;
-import com.any.mikuplushie.entity.TetoEntity;
+import com.any.mikuplushie.entity.*;
 import com.any.mikuplushie.entity.variant.MikuVariant;
+import com.any.mikuplushie.entity.variant.NeruVariant;
 import com.any.mikuplushie.entity.variant.TetoVariant;
 import com.mojang.brigadier.CommandDispatcher;
 import net.minecraft.block.Block;
+import net.minecraft.command.argument.EntityAnchorArgumentType;
 import net.minecraft.command.argument.Vec3ArgumentType;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.decoration.ArmorStandEntity;
+import net.minecraft.entity.passive.TameableEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.registry.Registry;
@@ -93,6 +95,7 @@ public class SpawnMikusCommand {
             int plushies = 0;
             int mikuVariation = 0;
             int tetoVariation = 0;
+            int neruVariation = 0;
 
             //ROWS SPAWN
             for (int row = 0; row < plushiesRows; row++) {
@@ -124,16 +127,64 @@ public class SpawnMikusCommand {
 
                             //CHECK IF BLOCK BELLOW IS A MIKU PLUSH
                             if (isVariationAboveBlock(world, entitySpawnLocation, ModTagProvider.MIKU_PLUSH)) {
-                                MikuEntity entity = getMikuEntity(world, entitySpawnLocation, mikuVariation);
+                                MikuEntity entity = new MikuEntity(ModEntities.MIKU, world);
+                                entity.setVariant(MikuVariant.byId(mikuVariation));
+                                setupEntity(entity, entitySpawnLocation);
                                 world.spawnEntity(entity);
                                 mikuVariation++;
                             }
 
                             //CHECK IF BLOCK BELLOW IS A TETO PLUSH
                             if (isVariationAboveBlock(world, entitySpawnLocation, ModTagProvider.TETO_PLUSH)) {
-                                TetoEntity entity = getTetoEntity(world, entitySpawnLocation, tetoVariation);
+                                TetoEntity entity = new TetoEntity(ModEntities.TETO, world);
+                                entity.setVariant(TetoVariant.byId(tetoVariation));
+                                setupEntity(entity, entitySpawnLocation);
                                 world.spawnEntity(entity);
                                 tetoVariation++;
+                            }
+
+                            //CHECK IF BLOCK BELLOW IS A AIKO PLUSH
+                            if (isVariationAboveBlock(world, entitySpawnLocation, ModTagProvider.AIKO_PLUSH)) {
+                                AikoEntity entity = new AikoEntity(ModEntities.AIKO, world);
+                                setupEntity(entity, entitySpawnLocation);
+                                world.spawnEntity(entity);
+                            }
+
+                            //CHECK IF BLOCK BELLOW IS A NERU PLUSH
+                            if (isVariationAboveBlock(world, entitySpawnLocation, ModTagProvider.NERU_PLUSH)) {
+                                NeruEntity entity = new NeruEntity(ModEntities.NERU, world);
+                                entity.setVariant(NeruVariant.byId(neruVariation));
+                                setupEntity(entity, entitySpawnLocation);
+                                world.spawnEntity(entity);
+                                neruVariation++;
+                            }
+
+                            //CHECK IF BLOCK BELLOW IS A RIN PLUSH
+                            if (isVariationAboveBlock(world, entitySpawnLocation, ModTagProvider.RIN_PLUSH)) {
+                                RinEntity entity = new RinEntity(ModEntities.RIN, world);
+                                setupEntity(entity, entitySpawnLocation);
+                                world.spawnEntity(entity);
+                            }
+
+                            //CHECK IF BLOCK BELLOW IS A LEN PLUSH
+                            if (isVariationAboveBlock(world, entitySpawnLocation, ModTagProvider.LEN_PLUSH)) {
+                                LenEntity entity = new LenEntity(ModEntities.LEN, world);
+                                setupEntity(entity, entitySpawnLocation);
+                                world.spawnEntity(entity);
+                            }
+
+                            //CHECK IF BLOCK BELLOW IS A KONOHA PLUSH
+                            if (isVariationAboveBlock(world, entitySpawnLocation, ModTagProvider.KONOHA_PLUSH)) {
+                                KonohaEntity entity = new KonohaEntity(ModEntities.KONOHA, world);
+                                setupEntity(entity, entitySpawnLocation);
+                                world.spawnEntity(entity);
+                            }
+
+                            //CHECK IF BLOCK BELLOW IS A LUKA PLUSH
+                            if (isVariationAboveBlock(world, entitySpawnLocation, ModTagProvider.LUKA_PLUSH)) {
+                                LukaEntity entity = new LukaEntity(ModEntities.LUKA, world);
+                                setupEntity(entity, entitySpawnLocation);
+                                world.spawnEntity(entity);
                             }
 
                             //ELSE DO NOTHING
@@ -163,26 +214,12 @@ public class SpawnMikusCommand {
         );
     }
 
-    private static @NotNull MikuEntity getMikuEntity(ServerWorld world, Vec3d entitySpawn, int plushies) {
-        MikuEntity mikuEntity = new MikuEntity(ModEntities.MIKU, world);
-        mikuEntity.setPosition(entitySpawn);
-        mikuEntity.setHeadYaw(180F);
-        mikuEntity.setVariant(MikuVariant.byId(plushies));
-        mikuEntity.setAiDisabled(true);
-        mikuEntity.setCustomName(Text.of("Plush"));
-        mikuEntity.setSilent(true);
-        return mikuEntity;
-    }
-
-    private static @NotNull TetoEntity getTetoEntity(ServerWorld world, Vec3d entitySpawn, int plushies) {
-        TetoEntity tetoEntity = new TetoEntity(ModEntities.TETO, world);
-        tetoEntity.setPosition(entitySpawn);
-        tetoEntity.setHeadYaw(180F);
-        tetoEntity.setVariant(TetoVariant.byId(plushies));
-        tetoEntity.setAiDisabled(true);
-        tetoEntity.setCustomName(Text.of("Plush"));
-        tetoEntity.setSilent(true);
-        return tetoEntity;
+    private static void setupEntity(TameableEntity entity, Vec3d entitySpawn) {
+        entity.setPosition(entitySpawn);
+        entity.lookAt(EntityAnchorArgumentType.EntityAnchor.FEET, entitySpawn.add(0, 0 ,-1));
+        entity.setAiDisabled(true);
+        entity.setCustomName(Text.of("Plush"));
+        entity.setSilent(true);
     }
 
     private static @NotNull ArmorStandEntity getArmorStandEntity(ServerWorld world, Vec3d entitySpawn, ItemStack plushItem) {

@@ -29,10 +29,10 @@ public class ModSoundEvents {
 	public static final SoundEvent TETO_EQUIP = registerSound("teto_equip");
 
 	//AKITA NERU VOICE
-	public static final SoundEvent AKITA_NERU_OIE = registerSound("neru_oie");
-	public static final SoundEvent AKITA_NERU_DOR = registerSound("neru_dor");
-	public static final SoundEvent AKITA_NERU_BYE = registerSound("neru_bye");
-	public static final SoundEvent AKITA_NERU_EQUIP = registerSound("neru_equip");
+	public static final SoundEvent NERU_OIE = registerSound("neru_oie");
+	public static final SoundEvent NERU_DOR = registerSound("neru_dor");
+	public static final SoundEvent NERU_BYE = registerSound("neru_bye");
+	public static final SoundEvent NERU_EQUIP = registerSound("neru_equip");
 
 	//RIN VOICE
 	public static final SoundEvent RIN_OIE = registerSound("rin_oie");

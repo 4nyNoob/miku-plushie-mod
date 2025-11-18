@@ -24,7 +24,7 @@ public class ModTagProvider extends FabricTagProvider.ItemTagProvider {
     public static final TagKey<Item> AIKO_PLUSH = TagKey.of(RegistryKeys.ITEM, Identifier.of(MikuPlushie.MOD_ID, "aiko_plush"));
     public static final TagKey<Item> TETO_PLUSH = TagKey.of(RegistryKeys.ITEM, Identifier.of(MikuPlushie.MOD_ID, "teto_plush"));
     public static final TagKey<Item> TETO_PICKAXE = TagKey.of(RegistryKeys.ITEM, Identifier.of(MikuPlushie.MOD_ID, "teto_pickaxe"));
-    public static final TagKey<Item> AKITA_NERU_PLUSH = TagKey.of(RegistryKeys.ITEM, Identifier.of(MikuPlushie.MOD_ID, "akita_neru_plush"));
+    public static final TagKey<Item> NERU_PLUSH = TagKey.of(RegistryKeys.ITEM, Identifier.of(MikuPlushie.MOD_ID, "neru_plush"));
     public static final TagKey<Item> RIN_PLUSH = TagKey.of(RegistryKeys.ITEM, Identifier.of(MikuPlushie.MOD_ID, "rin_plush"));
     public static final TagKey<Item> LEN_PLUSH = TagKey.of(RegistryKeys.ITEM, Identifier.of(MikuPlushie.MOD_ID, "len_plush"));
     public static final TagKey<Item> LUKA_PLUSH = TagKey.of(RegistryKeys.ITEM, Identifier.of(MikuPlushie.MOD_ID, "luka_plush"));
@@ -121,7 +121,7 @@ public class ModTagProvider extends FabricTagProvider.ItemTagProvider {
             .add(ModItems.TETO_PICKAXE_SOME_MORE_OF_THAT_SONG)
             .add(ModItems.TETO_PICKAXE_SYNTHV)
         ;
-        getOrCreateTagBuilder(AKITA_NERU_PLUSH)
+        getOrCreateTagBuilder(NERU_PLUSH)
             .add(ModItems.AKITA_NERU_PLUSH)
             .add(ModItems.AKITA_NERU_PLUSH_TAILS)
         ;
@@ -142,7 +142,7 @@ public class ModTagProvider extends FabricTagProvider.ItemTagProvider {
             .addOptionalTag(MIKU_PLUSH)
             .addOptionalTag(AIKO_PLUSH)
             .addOptionalTag(TETO_PLUSH)
-            .addOptionalTag(AKITA_NERU_PLUSH)
+            .addOptionalTag(NERU_PLUSH)
             .addOptionalTag(RIN_PLUSH)
             .addOptionalTag(LEN_PLUSH)
             .addOptionalTag(LUKA_PLUSH)

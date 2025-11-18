@@ -1,8 +1,6 @@
 package com.any.mikuplushie;
 
-import com.any.mikuplushie.entity.client.render.AikoRender;
-import com.any.mikuplushie.entity.client.render.MikuRender;
-import com.any.mikuplushie.entity.client.render.TetoRender;
+import com.any.mikuplushie.entity.client.render.*;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
@@ -113,5 +111,10 @@ public class MikuPlushieClient implements ClientModInitializer {
         EntityRendererRegistry.register(ModEntities.MIKU, MikuRender::new);
         EntityRendererRegistry.register(ModEntities.TETO, TetoRender::new);
         EntityRendererRegistry.register(ModEntities.AIKO, AikoRender::new);
+        EntityRendererRegistry.register(ModEntities.NERU, NeruRender::new);
+        EntityRendererRegistry.register(ModEntities.RIN, RinRender::new);
+        EntityRendererRegistry.register(ModEntities.LEN, LenRender::new);
+        EntityRendererRegistry.register(ModEntities.KONOHA, KonohaRender::new);
+        EntityRendererRegistry.register(ModEntities.LUKA, LukaRender::new);
 	}
 }
