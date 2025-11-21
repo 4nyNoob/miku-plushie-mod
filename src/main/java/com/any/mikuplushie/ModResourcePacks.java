@@ -11,8 +11,13 @@ public class ModResourcePacks {
     public static void initialize () {
         MikuPlushie.LOGGER.info("Registering " + MikuPlushie.MOD_ID + " Resource Packs");
 
+//        FabricLoader.getInstance().getModContainer(MikuPlushie.MOD_ID).ifPresent(modContainer ->
+//            ResourceManagerHelper.registerBuiltinResourcePack(asId("en_us_dub"), modContainer,
+//                Text.literal("EN_US-DUB"), ResourcePackActivationType.NORMAL)
+//        );
         FabricLoader.getInstance().getModContainer(MikuPlushie.MOD_ID).ifPresent(modContainer ->
-        ResourceManagerHelper.registerBuiltinResourcePack(asId("en_us_dub"), modContainer, Text.literal("EN_US-DUB"), ResourcePackActivationType.NORMAL)
+            ResourceManagerHelper.registerBuiltinResourcePack(asId("legacy_textures"), modContainer,
+                Text.literal("Legacy Textures"), ResourcePackActivationType.NORMAL)
         );
     }
 
