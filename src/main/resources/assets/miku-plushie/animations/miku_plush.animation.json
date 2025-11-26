@@ -683,6 +683,63 @@
 					}
 				}
 			}
+		},
+		"attack.swipe": {
+			"animation_length": 0.5,
+			"bones": {
+				"body": {
+					"rotation": {
+						"vector": [0, "-math.atan(math.sin(query.anim_time * (360 * 2) - (45 * 2)) * 3) * q.miku.is_game * 20", 0]
+					}
+				},
+				"right_arm": {
+					"rotation": {
+						"vector": [
+							"-math.atan(math.sin(query.anim_time * (360 * 2) - (45 * 6)) * 3) * q.miku.is_game * 45 - 90",
+							"-math.atan(math.sin(query.anim_time * (360 * 2) - (45 * 2)) * 3) * q.miku.is_game * 45 + 45",
+							"math.atan(math.sin(query.anim_time * (360 * 2) - (45 * 2)) * 3) * q.miku.is_game * 22.5 - 45"
+						]
+					}
+				}
+			}
+		},
+		"attack.swipe2": {
+			"animation_length": 0.5417,
+			"bones": {
+				"body": {
+					"rotation": {
+						"vector": [0, "-math.atan(math.sin(query.anim_time * (360 * 2) - (45 * 2)) * 3) * q.miku.is_game * -30", 0]
+					}
+				},
+				"right_arm": {
+					"rotation": {
+						"vector": [
+							"-math.atan(math.sin(query.anim_time * (360 * 2) - (45 * 6)) * 3) * q.miku.is_game * 45 - 60",
+							"-math.atan(math.sin(query.anim_time * (360 * 2) - (45 * 6)) * 3) * q.miku.is_game * 45",
+							90
+						]
+					}
+				}
+			}
+		},
+		"attack.swipe3": {
+			"animation_length": 0.5,
+			"bones": {
+				"body": {
+					"rotation": {
+						"vector": ["-math.sin(query.anim_time * (360 * 2) - (45 * 7)) * 10 + 5", 0, 0]
+					}
+				},
+				"right_arm": {
+					"rotation": {
+						"vector": [
+							"-math.atan(math.sin(query.anim_time * (360 * 2) - (45 * 0)) * 3) * q.miku.is_game * 45 - 60",
+							"-math.atan(math.sin(query.anim_time * (360 * 2) - (45 * 0)) * 3) * q.miku.is_game * -30",
+							0
+						]
+					}
+				}
+			}
 		}
 	},
 	"geckolib_format_version": 2
