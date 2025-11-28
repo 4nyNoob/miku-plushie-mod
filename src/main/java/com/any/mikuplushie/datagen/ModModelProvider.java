@@ -2,16 +2,28 @@ package com.any.mikuplushie.datagen;
 
 import com.any.mikuplushie.ModBlocks;
 import com.any.mikuplushie.ModItems;
+import com.google.gson.JsonElement;
+import it.unimi.dsi.fastutil.ints.Int2ObjectMap;
+import it.unimi.dsi.fastutil.ints.Int2ObjectOpenHashMap;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
-import net.minecraft.data.client.BlockStateModelGenerator;
-import net.minecraft.data.client.ItemModelGenerator;
-import net.minecraft.data.client.Models;
+import net.minecraft.block.Block;
+import net.minecraft.block.CropBlock;
+import net.minecraft.data.client.*;
+import net.minecraft.item.Item;
+import net.minecraft.state.property.Property;
+import net.minecraft.util.Identifier;
+
+import java.util.function.BiConsumer;
+import java.util.function.Consumer;
+import java.util.function.Function;
+import java.util.function.Supplier;
 
 public class ModModelProvider extends FabricModelProvider {
+
 	public ModModelProvider(FabricDataOutput output) {
 		super(output);
-	}
+    }
 
 	@Override
 	public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
@@ -93,11 +105,15 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerNorthDefaultHorizontalRotation(ModBlocks.MIKU_PLUSH_HOLLOW_KNIGHT);
         blockStateModelGenerator.registerNorthDefaultHorizontalRotation(ModBlocks.MIKU_PLUSH_HORNET);
         blockStateModelGenerator.registerNorthDefaultHorizontalRotation(ModBlocks.TETO_PLUSH_SYNTHV);
+
+        BlockModels.registerCrop(blockStateModelGenerator, ModBlocks.LEEK_CROP, CropBlock.AGE, 0, 1, 2, 3, 4, 5, 6, 7);
 	}
 
 	@Override
 	public void generateItemModels(ItemModelGenerator itemModelGenerator) {
 		itemModelGenerator.register(ModItems.CANUDINHO, Models.GENERATED);
+        itemModelGenerator.register(ModItems.LEEK_SEEDS, Models.GENERATED);
+        itemModelGenerator.register(ModItems.LEEK, Models.HANDHELD);
 //		itemModelGenerator.register(ModItems.BAGUETTE, Models.GENERATED);
 	}
 }

@@ -16,98 +16,104 @@ public class MikuPlushieClient implements ClientModInitializer {
 	public void onInitializeClient() {
         MikuPlushie.LOGGER.info("Registering " + MikuPlushie.MOD_ID + " Block Render Layer Maps");
 
-		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MIKU_PLUSH_BR, RenderLayer.getCutout());
-		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MIKU_PLUSH_BR_BA, RenderLayer.getCutout());
-		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MIKU_PLUSH_BIK, RenderLayer.getCutout());
-		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MIKU_PLUSH_BR_BEACH, RenderLayer.getCutout());
-		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MIKU_PLUSH_BR_BRAID, RenderLayer.getCutout());
-		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MIKU_PLUSH_BR_BA_DRUM, RenderLayer.getCutout());
-		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MIKU_PLUSH_BR_PA, RenderLayer.getCutout());
-		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MIKU_PLUSH_BR_SP, RenderLayer.getCutout());
-		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MIKU_PLUSH_BR_MG, RenderLayer.getCutout());
-		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MIKU_PLUSH_BR_BROWN_BRO, RenderLayer.getCutout());
-		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MIKU_PLUSH_BR_ELECTRICIAN, RenderLayer.getCutout());
-		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MIKU_PLUSH_BR_BIK_ORANGE, RenderLayer.getCutout());
-		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MIKU_PLUSH_BR_AM, RenderLayer.getCutout());
-		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MIKU_PLUSH_BR_FUT_FLA, RenderLayer.getCutout());
-		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MIKU_PLUSH_BR_FUT_CAM, RenderLayer.getCutout());
-		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MIKU_PLUSH_BR_GO, RenderLayer.getCutout());
-		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MIKU_PLUSH_BR_SCHOOL_PE, RenderLayer.getCutout());
-		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MIKU_PLUSH_BR_FUT_CRVG, RenderLayer.getCutout());
-		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MIKU_PLUSH_BR_RS, RenderLayer.getCutout());
-		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MIKU_PLUSH_FROG, RenderLayer.getCutout());
-		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MIKU_PLUSH_MUSHROOM, RenderLayer.getCutout());
-		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MIKU_PLUSH_SENBONZAKURA, RenderLayer.getCutout());
-		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MIKU_PLUSH_URAOTOMELOVERS, RenderLayer.getCutout());
-		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MIKU_PLUSH_PERSONADANCING, RenderLayer.getCutout());
-		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MIKU_PLUSH_HELLOPLANET, RenderLayer.getCutout());
-		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MIKU_PLUSH_HACHUNE, RenderLayer.getCutout());
-		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MIKU_PLUSH_ZATSUNE, RenderLayer.getCutout());
-		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MIKU_PLUSH_INFINITY, RenderLayer.getCutout());
-		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MIKU_PLUSH_VAMPIRE, RenderLayer.getCutout());
-		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MIKU_PLUSH_WEREWOMAN, RenderLayer.getCutout());
-		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MIKU_PLUSH_JASON, RenderLayer.getCutout());
-		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MIKU_PLUSH_MICHAEL_MYERS, RenderLayer.getCutout());
-		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MIKU_PLUSH_PUMPKIN, RenderLayer.getCutout());
-		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MIKU_PLUSH_GHOSTFACE, RenderLayer.getCutout());
-		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MIKU_PLUSH_FRANKENSTEIN, RenderLayer.getCutout());
-		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MIKU_PLUSH_MUMMY, RenderLayer.getCutout());
-		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MIKU_PLUSH_PATATI, RenderLayer.getCutout());
-		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MIKU_PLUSH_PATATA, RenderLayer.getCutout());
-		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MIKU_PLUSH_DEVIL, RenderLayer.getCutout());
-		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MIKU_PLUSH_WITCH, RenderLayer.getCutout());
-		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MIKU_PLUSH_SANTA, RenderLayer.getCutout());
-		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MIKU_PLUSH_REINDEER, RenderLayer.getCutout());
-		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MIKU_PLUSH_SANTA_ELF, RenderLayer.getCutout());
-		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MIKU_PLUSH_XMAS_TREE, RenderLayer.getCutout());
-		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MIKU_PLUSH, RenderLayer.getCutout());
-		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MIKU_PLUSH_SONIC_CROSSWORLDS, RenderLayer.getCutout());
-		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MIKU_PLUSH_FORTNITE_NEKO, RenderLayer.getCutout());
-		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MIKU_PLUSH_V4, RenderLayer.getCutout());
-		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MIKU_PLUSH_MESMERIZER, RenderLayer.getCutout());
-		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MIKU_PLUSH_SONIC, RenderLayer.getCutout());
-		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MIKU_PLUSH_DIGITAL_STARS_2025, RenderLayer.getCutout());
-		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MIKU_PLUSH_ROTTEN_GIRL, RenderLayer.getCutout());
-		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MIKU_PLUSH_PSYCHO_MODE, RenderLayer.getCutout());
-		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MIKU_PLUSH_DONT_BELIEVE_IN_T, RenderLayer.getCutout());
-		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MIKU_PLUSH_STATIC, RenderLayer.getCutout());
-		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MIKU_PLUSH_MOCHIMOCHI, RenderLayer.getCutout());
-		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MIKU_PLUSH_MONITORING, RenderLayer.getCutout());
-		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MIKU_PLUSH_HOLLOW_KNIGHT, RenderLayer.getCutout());
-		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MIKU_PLUSH_HORNET, RenderLayer.getCutout());
+        //PLUSH CUTOUT
+        BlockRenderLayerMap.INSTANCE.putBlocks(RenderLayer.getCutout(),
+            ModBlocks.MIKU_PLUSH_BR,
+            ModBlocks.MIKU_PLUSH_BR_BA,
+            ModBlocks.MIKU_PLUSH_BIK,
+            ModBlocks.MIKU_PLUSH_BR_BEACH,
+            ModBlocks.MIKU_PLUSH_BR_BRAID,
+            ModBlocks.MIKU_PLUSH_BR_BA_DRUM,
+            ModBlocks.MIKU_PLUSH_BR_PA,
+            ModBlocks.MIKU_PLUSH_BR_SP,
+            ModBlocks.MIKU_PLUSH_BR_MG,
+            ModBlocks.MIKU_PLUSH_BR_BROWN_BRO,
+            ModBlocks.MIKU_PLUSH_BR_ELECTRICIAN,
+            ModBlocks.MIKU_PLUSH_BR_BIK_ORANGE,
+            ModBlocks.MIKU_PLUSH_BR_AM,
+            ModBlocks.MIKU_PLUSH_BR_FUT_FLA,
+            ModBlocks.MIKU_PLUSH_BR_FUT_CAM,
+            ModBlocks.MIKU_PLUSH_BR_GO,
+            ModBlocks.MIKU_PLUSH_BR_SCHOOL_PE,
+            ModBlocks.MIKU_PLUSH_BR_FUT_CRVG,
+            ModBlocks.MIKU_PLUSH_BR_RS,
+            ModBlocks.MIKU_PLUSH_FROG,
+            ModBlocks.MIKU_PLUSH_MUSHROOM,
+            ModBlocks.MIKU_PLUSH_SENBONZAKURA,
+            ModBlocks.MIKU_PLUSH_URAOTOMELOVERS,
+            ModBlocks.MIKU_PLUSH_PERSONADANCING,
+            ModBlocks.MIKU_PLUSH_HELLOPLANET,
+            ModBlocks.MIKU_PLUSH_HACHUNE,
+            ModBlocks.MIKU_PLUSH_ZATSUNE,
+            ModBlocks.MIKU_PLUSH_INFINITY,
+            ModBlocks.MIKU_PLUSH_VAMPIRE,
+            ModBlocks.MIKU_PLUSH_WEREWOMAN,
+            ModBlocks.MIKU_PLUSH_JASON,
+            ModBlocks.MIKU_PLUSH_MICHAEL_MYERS,
+            ModBlocks.MIKU_PLUSH_PUMPKIN,
+            ModBlocks.MIKU_PLUSH_GHOSTFACE,
+            ModBlocks.MIKU_PLUSH_FRANKENSTEIN,
+            ModBlocks.MIKU_PLUSH_MUMMY,
+            ModBlocks.MIKU_PLUSH_PATATI,
+            ModBlocks.MIKU_PLUSH_PATATA,
+            ModBlocks.MIKU_PLUSH_DEVIL,
+            ModBlocks.MIKU_PLUSH_WITCH,
+            ModBlocks.MIKU_PLUSH_SANTA,
+            ModBlocks.MIKU_PLUSH_REINDEER,
+            ModBlocks.MIKU_PLUSH_SANTA_ELF,
+            ModBlocks.MIKU_PLUSH_XMAS_TREE,
+            ModBlocks.MIKU_PLUSH,
+            ModBlocks.MIKU_PLUSH_SONIC_CROSSWORLDS,
+            ModBlocks.MIKU_PLUSH_FORTNITE_NEKO,
+            ModBlocks.MIKU_PLUSH_V4,
+            ModBlocks.MIKU_PLUSH_MESMERIZER,
+            ModBlocks.MIKU_PLUSH_SONIC,
+            ModBlocks.MIKU_PLUSH_DIGITAL_STARS_2025,
+            ModBlocks.MIKU_PLUSH_ROTTEN_GIRL,
+            ModBlocks.MIKU_PLUSH_PSYCHO_MODE,
+            ModBlocks.MIKU_PLUSH_DONT_BELIEVE_IN_T,
+            ModBlocks.MIKU_PLUSH_STATIC,
+            ModBlocks.MIKU_PLUSH_MOCHIMOCHI,
+            ModBlocks.MIKU_PLUSH_MONITORING,
+            ModBlocks.MIKU_PLUSH_HOLLOW_KNIGHT,
+            ModBlocks.MIKU_PLUSH_HORNET,
 
-		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.AIKO_PLUSH, RenderLayer.getCutout());
+            ModBlocks.AIKO_PLUSH,
 
-		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.TETO_PLUSH, RenderLayer.getCutout());
-		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.TETO_PLUSH_MESMERIZER, RenderLayer.getCutout());
-		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.TETO_PLUSH_SHADOW, RenderLayer.getCutout());
-		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.TETO_PLUSH_BIRDBRAIN, RenderLayer.getCutout());
-		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.TETO_PLUSH_REGRET_ROCK, RenderLayer.getCutout());
-		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.TETO_PLUSH_DONT_BELIEVE_IN_T, RenderLayer.getCutout());
-		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.TETO_PLUSH_LIAR_DANCER, RenderLayer.getCutout());
-		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.TETO_PLUSH_WHATCHACALLITSNAME, RenderLayer.getCutout());
-		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.TETO_PLUSH_SOME_MORE_OF_THAT_SONG, RenderLayer.getCutout());
-		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.TETO_PLUSH_LOBSTER, RenderLayer.getCutout());
-		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.TETO_PLUSH_SYNTHV, RenderLayer.getCutout());
+            ModBlocks.TETO_PLUSH,
+            ModBlocks.TETO_PLUSH_MESMERIZER,
+            ModBlocks.TETO_PLUSH_SHADOW,
+            ModBlocks.TETO_PLUSH_BIRDBRAIN,
+            ModBlocks.TETO_PLUSH_REGRET_ROCK,
+            ModBlocks.TETO_PLUSH_DONT_BELIEVE_IN_T,
+            ModBlocks.TETO_PLUSH_LIAR_DANCER,
+            ModBlocks.TETO_PLUSH_WHATCHACALLITSNAME,
+            ModBlocks.TETO_PLUSH_SOME_MORE_OF_THAT_SONG,
+            ModBlocks.TETO_PLUSH_LOBSTER,
+            ModBlocks.TETO_PLUSH_SYNTHV,
 
-		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.AKITA_NERU_PLUSH, RenderLayer.getCutout());
-		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.AKITA_NERU_PLUSH_TAILS, RenderLayer.getCutout());
+            ModBlocks.AKITA_NERU_PLUSH,
+            ModBlocks.AKITA_NERU_PLUSH_TAILS,
 
-		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.RIN_PLUSH, RenderLayer.getCutout());
+            ModBlocks.RIN_PLUSH,
 
-		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.LEN_PLUSH, RenderLayer.getCutout());
+            ModBlocks.LEN_PLUSH,
 
-		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.LUKA_PLUSH, RenderLayer.getCutout());
+            ModBlocks.LUKA_PLUSH,
 
-		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.KONOHA_PLUSH, RenderLayer.getCutout());
+            ModBlocks.KONOHA_PLUSH
+        );
 
+        //CROP CUTOUT
+		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.LEEK_CROP, RenderLayer.getCutout());
 
-
-		//TRANSLUCENT
+		//PLUSH TRANSLUCENT
 		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MIKU_PLUSH_GHOST, RenderLayer.getTranslucent());
-//		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.TETO_PLUSH_WHATCHACALLITSNAME, RenderLayer.getTranslucent());
 
+        //GLIB QUERY
         MolangParser.INSTANCE.register(new LazyVariable("q.miku.is_game", 1));
+
+        //ENTITIES RENDERERS
         EntityRendererRegistry.register(ModEntities.MIKU, MikuRender::new);
         EntityRendererRegistry.register(ModEntities.TETO, TetoRender::new);
         EntityRendererRegistry.register(ModEntities.AIKO, AikoRender::new);

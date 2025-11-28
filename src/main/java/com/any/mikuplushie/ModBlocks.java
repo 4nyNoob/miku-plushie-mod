@@ -1,5 +1,6 @@
 package com.any.mikuplushie;
 
+import com.any.mikuplushie.block.LeekCropBlock;
 import com.any.mikuplushie.block.MikuPlushieBlock;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
@@ -638,7 +639,12 @@ public class ModBlocks {
         false
     );
 
-
+    public static final LeekCropBlock LEEK_CROP = (LeekCropBlock) register(
+        new LeekCropBlock(AbstractBlock.Settings.create()
+            .nonOpaque().noCollision().ticksRandomly().breakInstantly().sounds(BlockSoundGroup.CROP)),
+        "leek_crop",
+        false
+    );
 
 
 	public static Block register(Block block, String name, boolean shouldRegisterItem) {

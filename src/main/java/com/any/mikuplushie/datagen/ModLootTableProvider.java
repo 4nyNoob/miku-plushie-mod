@@ -2,8 +2,14 @@ package com.any.mikuplushie.datagen;
 
 import com.any.mikuplushie.ModBlocks;
 import com.any.mikuplushie.ModItems;
+import com.any.mikuplushie.block.LeekCropBlock;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
+import net.minecraft.block.Blocks;
+import net.minecraft.block.CropBlock;
+import net.minecraft.loot.condition.BlockStatePropertyLootCondition;
+import net.minecraft.loot.condition.LootCondition;
+import net.minecraft.predicate.StatePredicate;
 import net.minecraft.registry.RegistryWrapper;
 
 import java.util.concurrent.CompletableFuture;
@@ -93,5 +99,9 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.MIKU_PLUSH_HOLLOW_KNIGHT, ModItems.MIKU_PLUSH_HOLLOW_KNIGHT);
         addDrop(ModBlocks.MIKU_PLUSH_HORNET, ModItems.MIKU_PLUSH_HORNET);
         addDrop(ModBlocks.TETO_PLUSH_SYNTHV, ModItems.TETO_PLUSH_SYNTHV);
+
+        LootCondition.Builder leekLootCondition =
+            BlockStatePropertyLootCondition.builder(ModBlocks.LEEK_CROP).properties(StatePredicate.Builder.create().exactMatch(CropBlock.AGE, 7));
+        addDrop(ModBlocks.LEEK_CROP, cropDrops(ModBlocks.LEEK_CROP, ModItems.LEEK, ModItems.LEEK_SEEDS, leekLootCondition));
 	}
 }

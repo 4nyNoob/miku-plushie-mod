@@ -6,10 +6,7 @@ import com.any.mikuplushie.item.PlushToolMaterial;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroup;
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.PickaxeItem;
+import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKey;
@@ -33,6 +30,8 @@ public class ModItems {
         register(new Item(new Item.Settings().rarity(Rarity.RARE)), "canudinho");
 	public static final Item BAGUETTE =
         register(new Item(new Item.Settings().food(ModFoodComponents.BAGUETTE)), "baguette");
+
+
 	public static final Item MIKU_PLUSH_BR =
         register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_BR, new Item.Settings()), "miku_plush_br");
 	public static final Item MIKU_PLUSH_BR_BA =
@@ -216,6 +215,11 @@ public class ModItems {
         register(new PickaxeItem(PlushToolMaterial.PLUSH_TOOL_MATERIAL, 1, -2.8f, new FabricItemSettings()), "teto_pickaxe_synthv");
 
 
+    public static final Item LEEK_SEEDS =
+        register(new AliasedBlockItem(ModBlocks.LEEK_CROP, new Item.Settings()), "leek_seeds");
+    public static final Item LEEK =
+        register(new Item(new Item.Settings().food(ModFoodComponents.LEEK)), "leek");
+
 
 
 	public static Item register(Item item, String id) {
@@ -236,6 +240,8 @@ public class ModItems {
 		ItemGroupEvents.modifyEntriesEvent(MIKU_GROUP_KEY).register(itemGroup -> {
 			itemGroup.add(ModItems.CANUDINHO);
 			itemGroup.add(ModItems.BAGUETTE);
+			itemGroup.add(ModItems.LEEK_SEEDS);
+			itemGroup.add(ModItems.LEEK);
 
 			itemGroup.add(ModItems.MIKU_PLUSH_BR);
 			itemGroup.add(ModItems.MIKU_PLUSH_BR_BA);
