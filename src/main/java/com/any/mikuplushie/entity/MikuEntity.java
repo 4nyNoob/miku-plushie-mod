@@ -3,7 +3,9 @@ package com.any.mikuplushie.entity;
 import com.any.mikuplushie.ModItems;
 import com.any.mikuplushie.ModSoundEvents;
 import com.any.mikuplushie.entity.variant.MikuVariant;
+import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.minecraft.block.Blocks;
+import net.minecraft.data.server.tag.TagProvider;
 import net.minecraft.entity.*;
 import net.minecraft.entity.ai.goal.*;
 import net.minecraft.entity.attribute.DefaultAttributeContainer;
@@ -17,8 +19,10 @@ import net.minecraft.entity.passive.PassiveEntity;
 import net.minecraft.entity.passive.TameableEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.Items;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.recipe.Ingredient;
+import net.minecraft.registry.tag.ItemTags;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
@@ -220,10 +224,13 @@ public class MikuEntity extends TameableEntity implements GeoEntity {
     //ENTITY RIGHT CLICK
     @Override
     public ActionResult interactMob(PlayerEntity player, Hand hand) {
-        ItemStack itemStack = player.getStackInHand(hand);
+        ItemStack playerItemStack = player.getStackInHand(player.getActiveHand());
+        ItemStack entityHandStack = this.getMainHandStack();
+
+        //UNTAMED INTERACTION
         if (!this.isTamed() && player.getStackInHand(hand).isOf(ModItems.CANUDINHO)) {
             if (!player.getAbilities().creativeMode) {
-                itemStack.decrement(1);
+                playerItemStack.decrement(1);
             }
 
             if (!this.isSilent()) {
@@ -244,20 +251,43 @@ public class MikuEntity extends TameableEntity implements GeoEntity {
             }
 
             return ActionResult.success(this.getWorld().isClient);
-        } else if (this.isOnGround() && this.isTamed() && this.isOwner(player)) {
+        }
+        //TAMED INTERACTION
+        else if (this.isOnGround() && this.isTamed() && this.isOwner(player)) {
+            //DO STUFF ON SERVER
             if (!this.getWorld().isClient) {
-                this.setSitting(!this.isSitting());
-                this.setInSittingPose(!this.isInSittingPose());
-                if (this.isInSittingPose()) {
-                    this.setPose(EntityPose.STANDING);
-                } else {
-                    this.setPose(EntityPose.SITTING);
+                //DROP HELD ITEM
+                if (player.isSneaking() && playerItemStack.isEmpty()) {
+                    this.dropStack(entityHandStack);
+                    this.equipStack(EquipmentSlot.MAINHAND, ItemStack.EMPTY);
+                }
+                //TOGGLE SITTING POSE
+                else {
+                    this.setSitting(!this.isSitting());
+                    this.setInSittingPose(!this.isInSittingPose());
+                    if (this.isInSittingPose()) {
+                        this.setPose(EntityPose.STANDING);
+                    } else {
+                        this.setPose(EntityPose.SITTING);
+                    }
                 }
             }
             return ActionResult.success(this.getWorld().isClient);
-        } else {
+        }
+        //OTHER PLAYER INTERACTION
+        else {
             return super.interactMob(player, hand);
         }
+    }
+
+    @Override
+    public boolean canPickupItem(ItemStack stack) {
+        return stack.isIn(ItemTags.SWORDS);
+    }
+
+    @Override
+    public boolean canPickUpLoot() {
+        return true;
     }
 
     //GET NEARBY SONG PLAYING
@@ -281,8 +311,7 @@ public class MikuEntity extends TameableEntity implements GeoEntity {
     public void setNearbySongPlaying(BlockPos songPosition, boolean playing) {
         this.songSource = songPosition;
         this.songPlaying = playing;
-        Random rand = this.random;
-        int randomDance = rand.nextBetweenExclusive(1, 5);
+        int randomDance = this.random.nextBetweenExclusive(1, 5);
         switch (randomDance) {
             case 1: SELECTED_DANCE = DANCE; break;
             case 2: SELECTED_DANCE = DANCE2; break;

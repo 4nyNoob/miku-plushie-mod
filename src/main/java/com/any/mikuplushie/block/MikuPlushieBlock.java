@@ -52,8 +52,8 @@ public class MikuPlushieBlock extends Block {
                     String mikuVariant = this.getLootTableId().getPath().split("/")[1].toUpperCase();
                     miku.setVariant(MikuVariant.valueOf(mikuVariant));
 //                    miku.setOwner(player);
-                    miku.setInSittingPose(true);
-                    miku.setSitting(true);
+//                    miku.setInSittingPose(true);
+//                    miku.setSitting(true);
                     miku.lookAt(miku.getCommandSource().getEntityAnchor(), player.getPos().add(0,1D,0));
                     miku.setCustomName(Text.of("Plush"));
 

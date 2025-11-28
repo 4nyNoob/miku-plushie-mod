@@ -2,6 +2,8 @@ package com.any.mikuplushie.entity.client.render;
 
 import com.any.mikuplushie.entity.MikuEntity;
 import com.any.mikuplushie.entity.client.model.MikuModel;
+import com.any.mikuplushie.entity.variant.MikuVariant;
+import net.minecraft.client.render.RenderLayer;
 import net.minecraft.client.render.VertexConsumer;
 import net.minecraft.client.render.VertexConsumerProvider;
 import net.minecraft.client.render.entity.EntityRendererFactory;
@@ -9,6 +11,7 @@ import net.minecraft.client.render.model.json.ModelTransformationMode;
 import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ShieldItem;
+import net.minecraft.util.Identifier;
 import net.minecraft.util.math.RotationAxis;
 import org.jetbrains.annotations.Nullable;
 import software.bernie.geckolib.cache.object.BakedGeoModel;
@@ -70,6 +73,16 @@ public class MikuRender extends GeoEntityRenderer<MikuEntity> {
                 super.renderStackForBone(poseStack, bone, stack, animatable, bufferSource, partialTick, packedLight, packedOverlay);
             }
         });
+    }
+
+    @Override
+    public RenderLayer getRenderType(MikuEntity animatable, Identifier texture, VertexConsumerProvider bufferSource, float partialTick) {
+        //USE TRANSLUCENT RENDER ON SPECIFIC VARIATION
+        if (animatable.getMikuVariant().equals(MikuVariant.MIKU_PLUSH_GHOST)){
+            return RenderLayer.getEntityTranslucent(texture);
+        } else {
+            return super.getRenderType(animatable, texture, bufferSource, partialTick);
+        }
     }
 
     @Override
