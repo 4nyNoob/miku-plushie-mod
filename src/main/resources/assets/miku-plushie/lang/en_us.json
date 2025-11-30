@@ -177,6 +177,8 @@
 
   "item.miku-plushie.canudinho": "Canudinho",
   "item.miku-plushie.baguette": "Baguette",
+  "item.miku-plushie.leek": "Leek",
+  "item.miku-plushie.leek_seeds": "Leek Seeds",
 
   "entity.miku-plushie.miku_plush": "Hatsune Miku",
   "entity.miku-plushie.teto_plush": "Kasane Teto",
@@ -193,6 +195,7 @@
   "sound.miku-plushie.dor": "Miku: Pain",
   "sound.miku-plushie.bye": "Miku: Bye",
   "sound.miku-plushie.equip": "Miku: Equip",
+  "sound.miku-plushie.eat": "Miku: Eat",
 
   "sound.aiko-plushie.oie": "Aiko: Hi",
   "sound.aiko-plushie.dor": "Aiko: Pain",

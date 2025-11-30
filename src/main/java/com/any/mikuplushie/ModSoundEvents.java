@@ -15,6 +15,7 @@ public class ModSoundEvents {
 	public static final SoundEvent MIKU_DOR = registerSound("dor");
 	public static final SoundEvent MIKU_BYE = registerSound("bye");
 	public static final SoundEvent MIKU_EQUIP = registerSound("equip");
+	public static final SoundEvent MIKU_EAT = registerSound("eat");
 
 	//AIKO VOICE
 	public static final SoundEvent AIKO_OIE = registerSound("aiko_oie");

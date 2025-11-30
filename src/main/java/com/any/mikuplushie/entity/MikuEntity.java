@@ -1,11 +1,16 @@
 package com.any.mikuplushie.entity;
 
+import com.any.mikuplushie.ModBlocks;
 import com.any.mikuplushie.ModItems;
 import com.any.mikuplushie.ModSoundEvents;
+import com.any.mikuplushie.block.LeekCropBlock;
+import com.any.mikuplushie.entity.goals.EatLeekGoal;
+import com.any.mikuplushie.entity.goals.MikuDelayedAttackGoal;
 import com.any.mikuplushie.entity.variant.MikuVariant;
-import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
+import com.mojang.datafixers.kinds.IdF;
+import net.minecraft.block.Block;
+import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
-import net.minecraft.data.server.tag.TagProvider;
 import net.minecraft.entity.*;
 import net.minecraft.entity.ai.goal.*;
 import net.minecraft.entity.attribute.DefaultAttributeContainer;
@@ -14,28 +19,27 @@ import net.minecraft.entity.data.DataTracker;
 import net.minecraft.entity.data.TrackedData;
 import net.minecraft.entity.data.TrackedDataHandlerRegistry;
 import net.minecraft.entity.mob.MobEntity;
-import net.minecraft.entity.mob.PathAwareEntity;
 import net.minecraft.entity.passive.PassiveEntity;
 import net.minecraft.entity.passive.TameableEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.Items;
 import net.minecraft.nbt.NbtCompound;
+import net.minecraft.particle.*;
+import net.minecraft.predicate.block.BlockStatePredicate;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.registry.tag.ItemTags;
 import net.minecraft.server.world.ServerWorld;
+import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
 import net.minecraft.util.Util;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.random.Random;
-import net.minecraft.world.EntityView;
-import net.minecraft.world.LocalDifficulty;
-import net.minecraft.world.ServerWorldAccess;
-import net.minecraft.world.World;
+import net.minecraft.util.math.Vec3d;
+import net.minecraft.world.*;
 import org.jetbrains.annotations.Nullable;
+import org.spongepowered.include.com.google.common.base.Predicates;
 import software.bernie.geckolib.animatable.GeoEntity;
 import software.bernie.geckolib.core.animatable.instance.AnimatableInstanceCache;
 import software.bernie.geckolib.core.animation.AnimatableManager;
@@ -43,11 +47,28 @@ import software.bernie.geckolib.core.animation.AnimationController;
 import software.bernie.geckolib.core.animation.RawAnimation;
 import software.bernie.geckolib.util.GeckoLibUtil;
 
+import java.util.EnumSet;
+import java.util.List;
+import java.util.function.Predicate;
+
 public class MikuEntity extends TameableEntity implements GeoEntity {
-    private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
 
     private static final TrackedData<Integer> MIKU_VARIANT = DataTracker.registerData(MikuEntity.class, TrackedDataHandlerRegistry.INTEGER);
 
+    private boolean songPlaying;
+    @Nullable
+    private BlockPos songSource;
+
+
+
+    private static final int MAX_LEEK_TIMER = 40;
+    private int eatLeekTimer;
+    private EatLeekGoal eatLeekGoal;
+    public boolean eatingLeek;
+
+
+
+    private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
     private static final RawAnimation IDLE = RawAnimation.begin().thenLoop("misc.idle");
     private static final RawAnimation SIT = RawAnimation.begin().thenLoop("misc.sit");
     private static final RawAnimation SIT_DANCE = RawAnimation.begin().thenLoop("misc.sit-dance");
@@ -59,13 +80,12 @@ public class MikuEntity extends TameableEntity implements GeoEntity {
     private static final RawAnimation SWIPE = RawAnimation.begin().thenPlay("attack.swipe");
     private static final RawAnimation SWIPE2 = RawAnimation.begin().thenPlay("attack.swipe2");
     private static final RawAnimation SWIPE3 = RawAnimation.begin().thenPlay("attack.swipe3");
+    private static final RawAnimation EAT = RawAnimation.begin().thenPlay("misc.eat");
 
     private static RawAnimation SELECTED_DANCE = DANCE;
     private static RawAnimation SELECTED_ATTACK = SWIPE;
 
-    private boolean songPlaying;
-    @Nullable
-    private BlockPos songSource;
+
 
     public MikuEntity(EntityType<? extends TameableEntity> entityType, World world) {
         super(entityType, world);
@@ -74,14 +94,16 @@ public class MikuEntity extends TameableEntity implements GeoEntity {
     //GOALS AND ATTRIBUTES
     @Override
     public void initGoals() {
+        this.eatLeekGoal = new EatLeekGoal(this);
         this.goalSelector.add(0, new SwimGoal(this));
         this.goalSelector.add(1, new SitGoal(this));
         this.goalSelector.add(2, new MikuDelayedAttackGoal(this, 1.5F, true));
         this.goalSelector.add(4, new FollowOwnerGoal(this,1.0F, 5F, 1F, true));
-        this.goalSelector.add(5, new TemptGoal(this, 1.5, Ingredient.ofItems(ModItems.CANUDINHO), false));
-        this.goalSelector.add(6, new LookAtEntityGoal(this, MikuEntity.class, 8F));
-        this.goalSelector.add(7, new LookAtEntityGoal(this, PlayerEntity.class, 8F));
-        this.goalSelector.add(8, new LookAroundGoal(this));
+        this.goalSelector.add(5, this.eatLeekGoal);
+        this.goalSelector.add(6, new TemptGoal(this, 1.5, Ingredient.ofItems(ModItems.CANUDINHO), false));
+        this.goalSelector.add(7, new LookAtEntityGoal(this, MikuEntity.class, 8F));
+        this.goalSelector.add(8, new LookAtEntityGoal(this, PlayerEntity.class, 8F));
+        this.goalSelector.add(9, new LookAroundGoal(this));
         this.targetSelector.add(1, new TrackOwnerAttackerGoal(this));
         this.targetSelector.add(2, new AttackWithOwnerGoal(this));
     }
@@ -93,20 +115,32 @@ public class MikuEntity extends TameableEntity implements GeoEntity {
             .add(EntityAttributes.GENERIC_ATTACK_DAMAGE, 2.0F);
     }
 
-    //GECKO LIB STUFF
+    //ANIMATION CONTROLLER
     @Override
     public void registerControllers(AnimatableManager.ControllerRegistrar controllers) {
         controllers.add(new AnimationController<>(this, "Miku", 2, state -> {
+
+            //MIKU SIT OR DANCE WHEN SONG IS PLAYING NEARBY
             if (MikuEntity.this.isInSittingPose()){
                 return state.setAndContinue(MikuEntity.this.isSongPlaying() ? SIT_DANCE : SIT);
-            } else {
+            }
 
+            //EATING ANIMATION
+            else if (MikuEntity.this.isEatingLeek()) {
+                return state.setAndContinue(EAT);
+            }
+
+            else {
+                //DANCE WHEN SONG IS PLAYING NEARBY
                 if (MikuEntity.this.isSongPlaying()){
                     return state.setAndContinue(SELECTED_DANCE);
                 } else {
+                    //ATTACK
                     if (MikuEntity.this.handSwinging){
                         return state.setAndContinue(SELECTED_ATTACK);
-                    } else {
+                    }
+                    //IDLE
+                    else {
                         return state.setAndContinue(IDLE);
                     }
                 }
@@ -143,45 +177,6 @@ public class MikuEntity extends TameableEntity implements GeoEntity {
             case 1: SELECTED_ATTACK = SWIPE; break;
             case 2: SELECTED_ATTACK = SWIPE2; break;
             case 3: SELECTED_ATTACK = SWIPE3; break;
-        }
-    }
-
-    //MIKU DELAYED ATTACK GOAL
-    static class MikuDelayedAttackGoal extends MeleeAttackGoal {
-        private int attackDelay = 5;
-        private LivingEntity target;
-        private boolean mikuAttacking;
-
-        public MikuDelayedAttackGoal(PathAwareEntity mob, double speed, boolean pauseWhenMobIdle) {
-            super(mob, speed, pauseWhenMobIdle);
-        }
-        /**
-        *   Swing the entity hand but handle the actual attack on the {@link  com.any.mikuplushie.entity.MikuEntity.MikuDelayedAttackGoal#tick()} method
-        */
-        protected void attack(LivingEntity target, double squaredDistance) {
-            double d = this.getSquaredMaxAttackDistance(target);
-            if (squaredDistance <= d && this.isCooledDown()) {
-                this.resetCooldown();
-                this.mob.swingHand(Hand.MAIN_HAND);
-                this.target = target;
-                this.mikuAttacking = true;
-            }
-        }
-        /**
-        *   Receive the attack command but wait 5 ticks to execute it, then reset
-        */
-        @Override
-        public void tick() {
-            if (this.mikuAttacking){
-                --this.attackDelay;
-                if (this.attackDelay < 0){
-                    this.mob.tryAttack(this.target);
-                    this.mikuAttacking = false;
-                }
-            } else {
-                this.attackDelay = 5;
-            }
-            super.tick();
         }
     }
 
@@ -280,6 +275,7 @@ public class MikuEntity extends TameableEntity implements GeoEntity {
         }
     }
 
+    //PICK UP SWORDS FORM THE GROUND
     @Override
     public boolean canPickupItem(ItemStack stack) {
         return stack.isIn(ItemTags.SWORDS);
@@ -290,9 +286,19 @@ public class MikuEntity extends TameableEntity implements GeoEntity {
         return true;
     }
 
-    //GET NEARBY SONG PLAYING
+    @Override
+    protected void mobTick() {
+        //UPDATE LEEK TIMER
+        this.eatLeekTimer = this.eatLeekGoal.getTimer();
+        super.mobTick();
+    }
+
     @Override
     public void tickMovement() {
+        super.tickMovement();
+        this.tickHandSwing();
+
+        //GET NEARBY SONG PLAYING
         if (
             this.songSource == null
             || !this.songSource.isWithinDistance(this.getPos(), 8D)
@@ -303,8 +309,47 @@ public class MikuEntity extends TameableEntity implements GeoEntity {
             this.songSource = null;
         }
 
-        super.tickMovement();
-        this.tickHandSwing();
+        //CLIENT LEEK EATING TIMER
+        if (this.getWorld().isClient){
+            //DECREASE LEEK TIMER UNTIL 0
+            this.eatLeekTimer = Math.max(0, this.eatLeekTimer -1);
+            //SET EATING LEEK TRUE IF THE COUNTER IS RUNNING
+            this.setEatingLeek(eatLeekTimer > 0);
+
+            //SPAWN EATING PARTICLES
+            if (eatLeekTimer > 0 && !this.isInSittingPose()) {
+                Vec3d mikuPos = this.getPos();
+                this.getWorld().addParticle(
+                    new BlockStateParticleEffect(ParticleTypes.BLOCK, ModBlocks.LEEK_CROP.withAge(7)),
+                    mikuPos.getX(),
+                    mikuPos.getY() + 0.5D,
+                    mikuPos.getZ(),
+                    this.random.nextGaussian() * 0.5,
+                    this.random.nextGaussian() * 0.5,
+                    this.random.nextGaussian() * 0.5
+                );
+            }
+
+        }
+    }
+
+    //SET LEEK TIMER 40 TICKS WHEN LEEK EATING STATUS IS TRUE
+    @Override
+    public void handleStatus(byte status) {
+        if (status == 10){
+            this.eatLeekTimer = MAX_LEEK_TIMER;
+        } else {
+            super.handleStatus(status);
+        }
+    }
+
+    //EATING LEEK GETTER AND SETTER
+    public boolean isEatingLeek(){
+        return this.eatingLeek;
+    }
+
+    public void setEatingLeek(boolean eatingLeek){
+        this.eatingLeek = eatingLeek;
     }
 
     @Override
@@ -326,7 +371,6 @@ public class MikuEntity extends TameableEntity implements GeoEntity {
     }
 
     //MIKU VARIANTS
-
     public MikuVariant getMikuVariant() {
         return MikuVariant.byId(this.getTypeVariant()/* & 255*/);
     }
