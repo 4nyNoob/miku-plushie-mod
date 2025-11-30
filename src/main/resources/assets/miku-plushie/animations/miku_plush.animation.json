@@ -740,6 +740,37 @@
 					}
 				}
 			}
+		},
+		"misc.eat": {
+			"loop": true,
+			"animation_length": 0.6667,
+			"bones": {
+				"body": {
+					"rotation": {
+						"vector": ["-math.sin(query.anim_time * (360 * 3) - (45 * 0)) * 5 + 5", 0, 0]
+					}
+				},
+				"left_arm": {
+					"rotation": {
+						"vector": ["-math.sin(query.anim_time * (360 * 1.5) - (45 * 0)) * 30 - 80", "-math.sin(query.anim_time * (360 * 1.5) - (45 * 2)) * 30", 0]
+					}
+				},
+				"right_arm": {
+					"rotation": {
+						"vector": ["-math.sin(query.anim_time * (360 * 1.5) - (45 * 0)) * -30 - 80", "-math.sin(query.anim_time * (360 * 1.5) - (45 * 2)) * 30", 0]
+					}
+				},
+				"head": {
+					"rotation": {
+						"vector": ["-math.sin(query.anim_time * (360 * 3) - (45 * 5)) * 10", 0, 0]
+					}
+				},
+				"hair": {
+					"rotation": {
+						"vector": ["-math.sin(query.anim_time * (360 * 3) - (45 * 0)) * 10", 0, "math.sin(query.anim_time * (360 * 3/2) - (45 * 2)) * 5"]
+					}
+				}
+			}
 		}
 	},
 	"geckolib_format_version": 2

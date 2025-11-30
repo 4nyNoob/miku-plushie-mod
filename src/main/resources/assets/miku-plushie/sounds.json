@@ -56,6 +56,15 @@
       "miku-plushie:miku/miku-equip4"
     ]
   },
+  "eat" : {
+    "subtitle": "sound.miku-plushie.eat",
+    "sounds": [
+      "miku-plushie:miku/miku-eat",
+      "miku-plushie:miku/miku-eat2",
+      "miku-plushie:miku/miku-eat3",
+      "miku-plushie:miku/miku-eat4"
+    ]
+  },
 
 
 
