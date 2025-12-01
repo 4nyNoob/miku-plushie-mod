@@ -93,6 +93,8 @@ public class ModTagProvider extends FabricTagProvider.ItemTagProvider {
             .add(ModItems.MIKU_PLUSH_MONITORING)
             .add(ModItems.MIKU_PLUSH_HOLLOW_KNIGHT)
             .add(ModItems.MIKU_PLUSH_HORNET)
+            .add(ModItems.MIKU_PLUSH_WORLD_IS_MINE)
+            .add(ModItems.MIKU_PLUSH_ROLLING_GIRL)
         ;
         getOrCreateTagBuilder(AIKO_PLUSH)
             .add(ModItems.AIKO_PLUSH)
@@ -109,6 +111,7 @@ public class ModTagProvider extends FabricTagProvider.ItemTagProvider {
             .add(ModItems.TETO_PLUSH_SOME_MORE_OF_THAT_SONG)
             .add(ModItems.TETO_PLUSH_LOBSTER)
             .add(ModItems.TETO_PLUSH_SYNTHV)
+            .add(ModItems.TETO_PLUSH_SPOKEN_FOR)
         ;
         getOrCreateTagBuilder(TETO_PICKAXE)
             .add(ModItems.TETO_PICKAXE)
@@ -120,6 +123,7 @@ public class ModTagProvider extends FabricTagProvider.ItemTagProvider {
             .add(ModItems.TETO_PICKAXE_WHATCHACALLITSNAME)
             .add(ModItems.TETO_PICKAXE_SOME_MORE_OF_THAT_SONG)
             .add(ModItems.TETO_PICKAXE_SYNTHV)
+            .add(ModItems.TETO_PICKAXE_SPOKEN_FOR)
         ;
         getOrCreateTagBuilder(NERU_PLUSH)
             .add(ModItems.AKITA_NERU_PLUSH)

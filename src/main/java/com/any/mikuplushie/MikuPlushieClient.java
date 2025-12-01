@@ -77,6 +77,8 @@ public class MikuPlushieClient implements ClientModInitializer {
             ModBlocks.MIKU_PLUSH_MONITORING,
             ModBlocks.MIKU_PLUSH_HOLLOW_KNIGHT,
             ModBlocks.MIKU_PLUSH_HORNET,
+            ModBlocks.MIKU_PLUSH_WORLD_IS_MINE,
+            ModBlocks.MIKU_PLUSH_ROLLING_GIRL,
 
             ModBlocks.AIKO_PLUSH,
 
@@ -91,6 +93,7 @@ public class MikuPlushieClient implements ClientModInitializer {
             ModBlocks.TETO_PLUSH_SOME_MORE_OF_THAT_SONG,
             ModBlocks.TETO_PLUSH_LOBSTER,
             ModBlocks.TETO_PLUSH_SYNTHV,
+            ModBlocks.TETO_PLUSH_SPOKEN_FOR,
 
             ModBlocks.AKITA_NERU_PLUSH,
             ModBlocks.AKITA_NERU_PLUSH_TAILS,

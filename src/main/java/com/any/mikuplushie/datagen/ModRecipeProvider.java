@@ -560,6 +560,21 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .input(Items.SPYGLASS)
                 .criterion(FabricRecipeProvider.hasItem(ModBlocks.MIKU_PLUSH), FabricRecipeProvider.conditionsFromItem(ModBlocks.MIKU_PLUSH))
                 .offerTo(exporter);
+
+            ShapelessRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ModBlocks.MIKU_PLUSH_WORLD_IS_MINE)
+                .input(ModBlocks.MIKU_PLUSH)
+                .input(Items.WHITE_WOOL)
+                .input(Items.GOLD_INGOT)
+                .input(Items.CAKE)
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.MIKU_PLUSH), FabricRecipeProvider.conditionsFromItem(ModBlocks.MIKU_PLUSH))
+                .offerTo(exporter);
+
+            ShapelessRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ModBlocks.MIKU_PLUSH_ROLLING_GIRL)
+                .input(ModBlocks.MIKU_PLUSH)
+                .input(Items.WHITE_WOOL)
+                .input(Items.BROWN_WOOL)
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.MIKU_PLUSH), FabricRecipeProvider.conditionsFromItem(ModBlocks.MIKU_PLUSH))
+                .offerTo(exporter);
         }
 
         //TETO
@@ -719,6 +734,20 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .input('1', Items.DIAMOND)
                 .input('2', ModBlocks.TETO_PLUSH_SYNTHV)
                 .criterion(FabricRecipeProvider.hasItem(ModBlocks.TETO_PLUSH_SYNTHV), FabricRecipeProvider.conditionsFromItem(ModBlocks.TETO_PLUSH_SYNTHV))
+                .offerTo(exporter);
+
+            ShapelessRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ModBlocks.TETO_PLUSH_SPOKEN_FOR)
+                .input(ModBlocks.TETO_PLUSH)
+                .input(Items.PINK_DYE, 1)
+                .input(Items.GLOWSTONE_DUST, 1)
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.TETO_PLUSH), FabricRecipeProvider.conditionsFromItem(ModBlocks.TETO_PLUSH))
+                .offerTo(exporter);
+
+            ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.TETO_PICKAXE_SPOKEN_FOR)
+                .pattern("121")
+                .input('1', Items.DIAMOND)
+                .input('2', ModBlocks.TETO_PLUSH_SPOKEN_FOR)
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.TETO_PLUSH_SPOKEN_FOR), FabricRecipeProvider.conditionsFromItem(ModBlocks.TETO_PLUSH_SPOKEN_FOR))
                 .offerTo(exporter);
         }
 

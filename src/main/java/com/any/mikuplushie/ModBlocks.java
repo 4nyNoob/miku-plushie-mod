@@ -638,7 +638,33 @@ public class ModBlocks {
         "teto_plush_synthv",
         false
     );
+    public static final Block MIKU_PLUSH_WORLD_IS_MINE = register(
+        new MikuPlushieBlock(AbstractBlock.Settings.copy(Blocks.FLOWER_POT)
+            .sounds(BlockSoundGroup.WOOL)
+            .nonOpaque()
+        ),
+        "miku_plush_world_is_mine",
+        false
+    );
+    public static final Block MIKU_PLUSH_ROLLING_GIRL = register(
+        new MikuPlushieBlock(AbstractBlock.Settings.copy(Blocks.FLOWER_POT)
+            .sounds(BlockSoundGroup.WOOL)
+            .nonOpaque()
+        ),
+        "miku_plush_rolling_girl",
+        false
+    );
+    public static final Block TETO_PLUSH_SPOKEN_FOR = register(
+        new MikuPlushieBlock(AbstractBlock.Settings.copy(Blocks.FLOWER_POT)
+            .sounds(BlockSoundGroup.WOOL)
+            .nonOpaque()
+        ),
+        "teto_plush_spoken_for",
+        false
+    );
 
+
+    //NON PLUSH STUFF
     public static final LeekCropBlock LEEK_CROP = (LeekCropBlock) register(
         new LeekCropBlock(AbstractBlock.Settings.create()
             .nonOpaque().noCollision().ticksRandomly().breakInstantly().sounds(BlockSoundGroup.CROP)),

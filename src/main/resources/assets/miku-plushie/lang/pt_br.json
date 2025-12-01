@@ -123,7 +123,7 @@
   "item.miku-plushie.akita_neru_plush_tails.tooltip": "§b§n@4ny.bsky.social",
   "block.miku-plushie.teto_plush_birdbrain": "Pelúcia Da Teto Cérebro de Passarinho",
   "item.miku-plushie.teto_plush_birdbrain.tooltip": "§b§n@ricedeity",
-  "item.miku-plushie.teto_pickaxe_birdbrain": "Pelúcia Da Teto Cérebro de Passarinho",
+  "item.miku-plushie.teto_pickaxe_birdbrain": "Picareta Da Teto Cérebro de Passarinho",
 
   "block.miku-plushie.miku_plush_digital_stars_2025": "Pelúcia Da Miku Digital Stars 2025",
   "item.miku-plushie.miku_plush_digital_stars_2025.tooltip": "§b§n@lalalalack",
@@ -168,7 +168,15 @@
   "item.miku-plushie.miku_plush_hornet.tooltip": "§b§nAri Gibson",
   "block.miku-plushie.teto_plush_synthv": "Pelúcia Da Teto SynthV",
   "item.miku-plushie.teto_plush_synthv.tooltip": "§b§n@sakauchi0",
-  "item.miku-plushie.teto_pickaxe_synthv": "Pelúcia Da Teto SynthV",
+  "item.miku-plushie.teto_pickaxe_synthv": "Picareta Da Teto SynthV",
+
+  "block.miku-plushie.miku_plush_world_is_mine": "Pelúcia Da Miku World Is Mine",
+  "item.miku-plushie.miku_plush_world_is_mine.tooltip": "§b§n@shiru",
+  "block.miku-plushie.miku_plush_rolling_girl": "Pelúcia Da Miku Rolling Girl",
+  "item.miku-plushie.miku_plush_rolling_girl.tooltip": "§b§nMinakata Laboratory",
+  "block.miku-plushie.teto_plush_spoken_for": "Pelúcia Da Teto Spoken For",
+  "item.miku-plushie.teto_plush_spoken_for.tooltip": "§b§n@hoshizoralone.bsky.social",
+  "item.miku-plushie.teto_pickaxe_spoken_for": "Picareta Da Teto Spoken For",
 
 
   "item.group.miku_plushies": "Mikus!!",

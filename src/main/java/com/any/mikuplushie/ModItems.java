@@ -214,6 +214,16 @@ public class ModItems {
     public static final Item TETO_PICKAXE_SYNTHV =
         register(new PickaxeItem(PlushToolMaterial.PLUSH_TOOL_MATERIAL, 1, -2.8f, new FabricItemSettings()), "teto_pickaxe_synthv");
 
+    public static final Item MIKU_PLUSH_WORLD_IS_MINE =
+        register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_WORLD_IS_MINE, new Item.Settings()), "miku_plush_world_is_mine");
+    public static final Item MIKU_PLUSH_ROLLING_GIRL =
+        register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_ROLLING_GIRL, new Item.Settings()), "miku_plush_rolling_girl");
+    public static final Item TETO_PLUSH_SPOKEN_FOR =
+        register(new MikuPlushieBlockItem(ModBlocks.TETO_PLUSH_SPOKEN_FOR, new Item.Settings()), "teto_plush_spoken_for");
+    public static final Item TETO_PICKAXE_SPOKEN_FOR =
+        register(new PickaxeItem(PlushToolMaterial.PLUSH_TOOL_MATERIAL, 1, -2.8f, new FabricItemSettings()), "teto_pickaxe_spoken_for");
+
+
 
     public static final Item LEEK_SEEDS =
         register(new AliasedBlockItem(ModBlocks.LEEK_CROP, new Item.Settings()), "leek_seeds");
@@ -330,6 +340,10 @@ public class ModItems {
             itemGroup.add(ModItems.MIKU_PLUSH_HORNET);
             itemGroup.add(ModItems.TETO_PLUSH_SYNTHV);
             itemGroup.add(ModItems.TETO_PICKAXE_SYNTHV);
+            itemGroup.add(ModItems.MIKU_PLUSH_WORLD_IS_MINE);
+            itemGroup.add(ModItems.MIKU_PLUSH_ROLLING_GIRL);
+            itemGroup.add(ModItems.TETO_PLUSH_SPOKEN_FOR);
+            itemGroup.add(ModItems.TETO_PICKAXE_SPOKEN_FOR);
 		});
 	}
 }

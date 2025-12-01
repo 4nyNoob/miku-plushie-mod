@@ -170,6 +170,14 @@
   "item.miku-plushie.teto_plush_synthv.tooltip": "§b§n@sakauchi0",
   "item.miku-plushie.teto_pickaxe_synthv": "SynthV Teto Pickaxe",
 
+  "block.miku-plushie.miku_plush_world_is_mine": "World Is Mine Miku Plush",
+  "item.miku-plushie.miku_plush_world_is_mine.tooltip": "§b§n@shiru",
+  "block.miku-plushie.miku_plush_rolling_girl": "Rolling Girl Miku Plush",
+  "item.miku-plushie.miku_plush_rolling_girl.tooltip": "§b§nMinakata Laboratory",
+  "block.miku-plushie.teto_plush_spoken_for": "Spoken For Teto Plush",
+  "item.miku-plushie.teto_plush_spoken_for.tooltip": "§b§n@hoshizoralone.bsky.social",
+  "item.miku-plushie.teto_pickaxe_spoken_for": "Spoken For Teto Pickaxe",
+
 
   "item.group.miku_plushies": "Mikus!!",
 

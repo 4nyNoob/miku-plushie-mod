@@ -375,12 +375,12 @@
 				},
 				"left_arm": {
 					"rotation": {
-						"vector": [0, -90, "math.sin(query.anim_time * 360 - (45 * 0)) * -40 - 130"]
+						"vector": [0, -180, "math.sin(query.anim_time * 360 - (45 * 0)) * -40 - 130"]
 					}
 				},
 				"right_arm": {
 					"rotation": {
-						"vector": [0, 90, "math.sin(query.anim_time * 360 - (45 * 0)) * -40 + 130"]
+						"vector": [0, -180, "math.sin(query.anim_time * 360 - (45 * 0)) * -40 + 130"]
 					}
 				},
 				"hair": {
@@ -425,6 +425,11 @@
 						"vector": ["-math.sin(query.anim_time * 360 - (45 * 5)) * 10 + 10", 0, 0]
 					}
 				},
+				"miku_plush_bik_orange": {
+					"rotation": {
+						"vector": [0, 0, "math.sin(query.anim_time * 360 - (45 * 2)) * 15 - 15"]
+					}
+				},
 				"left_sleeve": {
 					"rotation": {
 						"vector": ["-math.sin(query.anim_time * 360 - (45 * 2)) * 20 - 20", 0, 0]
@@ -433,26 +438,6 @@
 				"right_sleeve": {
 					"rotation": {
 						"vector": ["-math.sin(query.anim_time * 360 - (45 * 2)) * -20 - 20", 0, 0]
-					}
-				},
-				"miku_plush_xmass_tree_head": {
-					"rotation": {
-						"vector": [0, 0, "math.sin(query.anim_time * 360 - (45 * 1)) * -5"]
-					}
-				},
-				"miku_plush_xmass_tree_head2": {
-					"rotation": {
-						"vector": [0, 0, "math.sin(query.anim_time * 360 - (45 * 2)) * -10"]
-					}
-				},
-				"right_hair3": {
-					"rotation": {
-						"vector": ["-math.sin(query.anim_time * 360 - (45 * 5)) * 10 + 10", 0, 0]
-					}
-				},
-				"left_hair3": {
-					"rotation": {
-						"vector": ["-math.sin(query.anim_time * 360 - (45 * 5)) * -10 + 10", 0, 0]
 					}
 				}
 			}
@@ -747,7 +732,10 @@
 			"bones": {
 				"body": {
 					"rotation": {
-						"vector": ["-math.sin(query.anim_time * (360 * 3) - (45 * 0)) * 5 + 5", 0, 0]
+						"vector": ["-math.sin(query.anim_time * (360 * 3) - (45 * 0)) * 5 + 5", 0, "math.sin(query.anim_time * (360 * 3/2) - (45 * 1)) * 5"]
+					},
+					"position": {
+						"vector": [0, "math.sin(query.anim_time * (360 * 3) - (45 * 1)) * 0.25 - (0.25/2)", 0]
 					}
 				},
 				"left_arm": {
@@ -767,7 +755,7 @@
 				},
 				"hair": {
 					"rotation": {
-						"vector": ["-math.sin(query.anim_time * (360 * 3) - (45 * 0)) * 10", 0, "math.sin(query.anim_time * (360 * 3/2) - (45 * 2)) * 5"]
+						"vector": ["-math.sin(query.anim_time * (360 * 3) - (45 * 0)) * 10", 0, "math.sin(query.anim_time * (360 * 3/2) - (45 * 1)) * 5"]
 					}
 				}
 			}

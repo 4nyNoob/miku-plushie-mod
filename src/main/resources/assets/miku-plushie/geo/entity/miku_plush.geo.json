@@ -1909,6 +1909,41 @@
 					]
 				},
 				{
+					"name": "miku_plush_world_is_mine",
+					"parent": "head-ornaments",
+					"pivot": [-2.3, 17, 0.8],
+					"cubes": [
+						{
+							"origin": [-0.5, 17.5, -2],
+							"size": [3, 3, 3],
+							"pivot": [1, 19, -0.5],
+							"rotation": [0, -45, 0],
+							"uv": {
+								"north": {"uv": [35, 21], "uv_size": [3, 3]},
+								"east": {"uv": [38, 21], "uv_size": [-3, 3]},
+								"south": {"uv": [35, 21], "uv_size": [3, 3]},
+								"west": {"uv": [38, 21], "uv_size": [-3, 3]},
+								"up": {"uv": [0, 0], "uv_size": [1, 1]},
+								"down": {"uv": [0, 1], "uv_size": [1, -1]}
+							}
+						},
+						{
+							"origin": [-2.3, 17, 0.8],
+							"size": [3, 3, 0],
+							"pivot": [-2.3, 17, 0.8],
+							"rotation": [0, 0, -45],
+							"uv": {
+								"north": {"uv": [8, 39], "uv_size": [3, 3]},
+								"east": {"uv": [1, 0], "uv_size": [0, 1]},
+								"south": {"uv": [1, 0], "uv_size": [-1, 1]},
+								"west": {"uv": [1, 0], "uv_size": [0, 1]},
+								"up": {"uv": [1, 1], "uv_size": [0, -1], "uv_rotation": 90},
+								"down": {"uv": [1, 0], "uv_size": [0, 1], "uv_rotation": 270}
+							}
+						}
+					]
+				},
+				{
 					"name": "ahoge",
 					"parent": "head",
 					"pivot": [0.5, 17.75, 0],
