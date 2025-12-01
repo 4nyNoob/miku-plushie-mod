@@ -29,7 +29,7 @@ public class LukaEntity extends MikuEntity{
     //MC ENTITY STUFF
     @Override
     protected @Nullable SoundEvent getDeathSound() {
-        return ModSoundEvents.TETO_BYE;
+        return ModSoundEvents.LUKA_BYE;
     }
 
     //GECKO LIB STUFF
