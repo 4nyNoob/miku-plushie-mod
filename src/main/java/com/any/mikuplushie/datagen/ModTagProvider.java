@@ -4,6 +4,8 @@ import com.any.mikuplushie.MikuPlushie;
 import com.any.mikuplushie.ModItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
+import net.minecraft.entity.Entity;
+import net.minecraft.entity.EntityType;
 import net.minecraft.item.Item;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.RegistryWrapper;
@@ -29,6 +31,9 @@ public class ModTagProvider extends FabricTagProvider.ItemTagProvider {
     public static final TagKey<Item> LEN_PLUSH = TagKey.of(RegistryKeys.ITEM, Identifier.of(MikuPlushie.MOD_ID, "len_plush"));
     public static final TagKey<Item> LUKA_PLUSH = TagKey.of(RegistryKeys.ITEM, Identifier.of(MikuPlushie.MOD_ID, "luka_plush"));
     public static final TagKey<Item> KONOHA_PLUSH = TagKey.of(RegistryKeys.ITEM, Identifier.of(MikuPlushie.MOD_ID, "konoha_plush"));
+    public static final TagKey<Item> MEIKO_PLUSH = TagKey.of(RegistryKeys.ITEM, Identifier.of(MikuPlushie.MOD_ID, "meiko_plush"));
+
+
 
     @Override
     protected void configure(RegistryWrapper.WrapperLookup wrapperLookup) {
@@ -141,6 +146,9 @@ public class ModTagProvider extends FabricTagProvider.ItemTagProvider {
         getOrCreateTagBuilder(KONOHA_PLUSH)
             .add(ModItems.KONOHA_PLUSH)
         ;
+        getOrCreateTagBuilder(MEIKO_PLUSH)
+            .add(ModItems.MEIKO_PLUSH)
+        ;
 
         getOrCreateTagBuilder(PLUSHIES)
             .addOptionalTag(MIKU_PLUSH)
@@ -151,6 +159,9 @@ public class ModTagProvider extends FabricTagProvider.ItemTagProvider {
             .addOptionalTag(LEN_PLUSH)
             .addOptionalTag(LUKA_PLUSH)
             .addOptionalTag(KONOHA_PLUSH)
+            .addOptionalTag(MEIKO_PLUSH)
         ;
+
+
     }
 }

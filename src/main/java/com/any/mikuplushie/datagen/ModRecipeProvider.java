@@ -751,5 +751,19 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .offerTo(exporter);
         }
 
+        //MEIKO
+        {
+            ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ModBlocks.MEIKO_PLUSH)
+                .pattern("121")
+                .pattern(" 3 ")
+                .input('1', Items.BROWN_WOOL)
+                .input('2', Items.WHITE_WOOL)
+                .input('3', Items.RED_WOOL)
+                .criterion(FabricRecipeProvider.hasItem(Items.BROWN_WOOL), FabricRecipeProvider.conditionsFromItem(Items.BROWN_WOOL))
+                .criterion(FabricRecipeProvider.hasItem(Items.WHITE_WOOL), FabricRecipeProvider.conditionsFromItem(Items.WHITE_WOOL))
+                .criterion(FabricRecipeProvider.hasItem(Items.RED_WOOL), FabricRecipeProvider.conditionsFromItem(Items.RED_WOOL))
+                .offerTo(exporter);
+        }
+
     }
 }

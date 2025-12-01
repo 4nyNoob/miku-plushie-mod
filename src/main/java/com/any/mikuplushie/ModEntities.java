@@ -70,6 +70,12 @@ public class ModEntities {
             FabricEntityTypeBuilder.create(SpawnGroup.CREATURE, LukaEntity::new)
                 .dimensions(EntityDimensions.fixed(PLUSH_WIDTH, PLUSH_HEIGHT)).build());
 
+    public static final EntityType<MeikoEntity> MEIKO =
+        Registry.register(Registries.ENTITY_TYPE,
+            new Identifier(MikuPlushie.MOD_ID, "meiko_plush"),
+            FabricEntityTypeBuilder.create(SpawnGroup.CREATURE, MeikoEntity::new)
+                .dimensions(EntityDimensions.fixed(PLUSH_WIDTH, PLUSH_HEIGHT)).build());
+
     public static void initialize(){
         MikuPlushie.LOGGER.info("Registering " + MikuPlushie.MOD_ID + " Entities");
 
@@ -81,5 +87,6 @@ public class ModEntities {
         FabricDefaultAttributeRegistry.register(LEN, LenEntity.createAttributes());
         FabricDefaultAttributeRegistry.register(KONOHA, KonohaEntity.createAttributes());
         FabricDefaultAttributeRegistry.register(LUKA, LukaEntity.createAttributes());
+        FabricDefaultAttributeRegistry.register(MEIKO, MeikoEntity.createAttributes());
     }
 }

@@ -32,6 +32,10 @@
     {
       "id": "#miku-plushie:konoha_plush",
       "required": false
+    },
+    {
+      "id": "#miku-plushie:meiko_plush",
+      "required": false
     }
   ]
 }

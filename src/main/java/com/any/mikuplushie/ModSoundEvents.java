@@ -53,6 +53,12 @@ public class ModSoundEvents {
 	public static final SoundEvent LUKA_BYE = registerSound("luka_bye");
 	public static final SoundEvent LUKA_EQUIP = registerSound("luka_equip");
 
+	//MEIKO VOICE
+	public static final SoundEvent MEIKO_OIE = registerSound("meiko_oie");
+	public static final SoundEvent MEIKO_DOR = registerSound("meiko_dor");
+	public static final SoundEvent MEIKO_BYE = registerSound("meiko_bye");
+	public static final SoundEvent MEIKO_EQUIP = registerSound("meiko_equip");
+
 	private static SoundEvent registerSound(String id) {
 		Identifier identifier = Identifier.of(MikuPlushie.MOD_ID, id);
 		return Registry.register(Registries.SOUND_EVENT, identifier, SoundEvent.of(identifier));

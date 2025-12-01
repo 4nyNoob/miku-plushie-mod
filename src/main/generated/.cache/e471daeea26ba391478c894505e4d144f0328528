@@ -1,4 +1,4 @@
-// 1.20.1	2025-12-01T00:12:52.867975463	miku plushies/Block Loot Tables
+// 1.20.1	2025-12-01T15:55:45.543161859	miku plushies/Block Loot Tables
 7f941a076fe7908b6c5d59836c67e5bcb3417d8b data/miku-plushie/loot_tables/blocks/teto_plush_dont_believe_in_t.json
 af68195ac8c10224169e0ac3c60fab2ecb875557 data/miku-plushie/loot_tables/blocks/miku_plush_frankenstein.json
 4916a50ba16c00f7477badf2b5a08cb0a7259d75 data/miku-plushie/loot_tables/blocks/teto_plush_spoken_for.json
@@ -38,6 +38,7 @@ fcfdbb3e46168e253ab1a9a4371466a7b4e5e03d data/miku-plushie/loot_tables/blocks/mi
 f9d35336b46fc5a9d1744a5c4d4334371027807c data/miku-plushie/loot_tables/blocks/miku_plush_witch.json
 f1fbdfe3754d8395a66add8a7737a4f354c6f7d1 data/miku-plushie/loot_tables/blocks/miku_plush_senbonzakura.json
 3582937f861504a3da5814611712b927826b18bb data/miku-plushie/loot_tables/blocks/miku_plush_static.json
+06ede437dc69112484904b62970ef1ae03f5ab1f data/miku-plushie/loot_tables/blocks/meiko_plush.json
 3a0f1bd85d1467bf9ca9381f28d337d4a2914bf6 data/miku-plushie/loot_tables/blocks/miku_plush_br_electrician.json
 4fab21a53ca84094f118efd3d57687ff24147a1f data/miku-plushie/loot_tables/blocks/teto_plush_mesmerizer.json
 cc234190234f43cee0d3434e4f984586443fe66e data/miku-plushie/loot_tables/blocks/luka_plush.json

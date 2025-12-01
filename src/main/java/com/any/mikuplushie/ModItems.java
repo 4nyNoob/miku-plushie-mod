@@ -223,6 +223,9 @@ public class ModItems {
     public static final Item TETO_PICKAXE_SPOKEN_FOR =
         register(new PickaxeItem(PlushToolMaterial.PLUSH_TOOL_MATERIAL, 1, -2.8f, new FabricItemSettings()), "teto_pickaxe_spoken_for");
 
+    public static final Item MEIKO_PLUSH =
+        register(new MikuPlushieBlockItem(ModBlocks.MEIKO_PLUSH, new Item.Settings()), "meiko_plush");
+
 
 
     public static final Item LEEK_SEEDS =
@@ -344,6 +347,7 @@ public class ModItems {
             itemGroup.add(ModItems.MIKU_PLUSH_ROLLING_GIRL);
             itemGroup.add(ModItems.TETO_PLUSH_SPOKEN_FOR);
             itemGroup.add(ModItems.TETO_PICKAXE_SPOKEN_FOR);
+            itemGroup.add(ModItems.MEIKO_PLUSH);
 		});
 	}
 }

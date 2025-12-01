@@ -53,6 +53,9 @@ public class MikuPlushieBlockItem extends BlockItem implements Equipment {
 		if (stack.isIn(ModTagProvider.LUKA_PLUSH)) {
 			entity.playSound(ModSoundEvents.LUKA_DOR, 1f, 1);
 		}
+		if (stack.isIn(ModTagProvider.MEIKO_PLUSH)) {
+			entity.playSound(ModSoundEvents.MEIKO_DOR, 1f, 1);
+		}
 
 	}
 
@@ -82,6 +85,9 @@ public class MikuPlushieBlockItem extends BlockItem implements Equipment {
 		}
 		if (stack.isIn(ModTagProvider.LUKA_PLUSH)) {
 			return ModSoundEvents.LUKA_EQUIP;
+		}
+		if (stack.isIn(ModTagProvider.MEIKO_PLUSH)) {
+			return ModSoundEvents.MEIKO_EQUIP;
 		}
 
 		return ModSoundEvents.MIKU_EQUIP;

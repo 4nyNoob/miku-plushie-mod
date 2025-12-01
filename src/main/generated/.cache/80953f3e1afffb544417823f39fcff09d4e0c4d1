@@ -1,4 +1,4 @@
-// 1.20.1	2025-12-01T00:12:52.868921884	miku plushies/Recipes
+// 1.20.1	2025-12-01T15:55:45.543934679	miku plushies/Recipes
 020e171290513add5ebd7fe9199c838981efa01f data/miku-plushie/recipes/miku_plush_br_electrician.json
 480bf244e6ecefafda372e83472422338520f814 data/miku-plushie/advancements/recipes/decorations/miku_plush.json
 cad6d2c25fdb8a11213325148452081da9764b9a data/miku-plushie/recipes/miku_plush_vampire.json
@@ -72,6 +72,7 @@ ea8c69d3789d0a4bf114d542449b3e575d7c4255 data/miku-plushie/advancements/recipes/
 fde47d54d88c53eea55970a6210988fa0c17379e data/miku-plushie/advancements/recipes/food/baguette.json
 651715e894bda27b1141c60fd214f6085ddddec2 data/miku-plushie/advancements/recipes/decorations/miku_plush_devil.json
 f7966097abbadb8111b9388182cef1a6f33c86d2 data/miku-plushie/recipes/miku_plush_psycho_mode.json
+cab7e262d2efad9b14ac3c0c1441eff55529f6b6 data/miku-plushie/advancements/recipes/decorations/meiko_plush.json
 4022eda1c75bb36185e9fcce597b41c974ed737c data/miku-plushie/advancements/recipes/decorations/miku_plush_pumpkin.json
 0ef1d5255b556082a0db8f3da901eb66d7202396 data/miku-plushie/recipes/teto_pickaxe_synthv.json
 1b9f1d40624c52af284839169976d5760daeafa9 data/miku-plushie/recipes/miku_plush_ghostface.json
@@ -175,6 +176,7 @@ bd2a2d5218b8b71ad333c39eba9d4b8833e2323f data/miku-plushie/advancements/recipes/
 d0f608c2692bad237ae94071ff3f06ae2b20470f data/miku-plushie/advancements/recipes/decorations/miku_plush_mochimochi.json
 cf2daf8e2217b78ae44a32ccfda85a85df59924f data/miku-plushie/recipes/teto_pickaxe_birdbrain.json
 da5d1fa85d89fd83856421c60e68c950c7a4e3d5 data/miku-plushie/recipes/miku_plush_br_fut_fla.json
+1dcac1dc2ab0f05ea348f7af04062600eb5fd388 data/miku-plushie/recipes/meiko_plush.json
 7fdd9a708ad7a8d9bac807ee3db51cec4a15bb33 data/miku-plushie/advancements/recipes/decorations/luka_plush.json
 98b72c61a2f01b381fb60ab5c131ef4451831145 data/miku-plushie/recipes/miku_plush_sonic_crossworlds.json
 83e568b2e3ac549b2ff7e2d6d0442fe113ad958d data/miku-plushie/advancements/recipes/tools/teto_pickaxe_synthv.json

@@ -662,6 +662,14 @@ public class ModBlocks {
         "teto_plush_spoken_for",
         false
     );
+    public static final Block MEIKO_PLUSH = register(
+        new MikuPlushieBlock(AbstractBlock.Settings.copy(Blocks.FLOWER_POT)
+            .sounds(BlockSoundGroup.WOOL)
+            .nonOpaque()
+        ),
+        "meiko_plush",
+        false
+    );
 
 
     //NON PLUSH STUFF
