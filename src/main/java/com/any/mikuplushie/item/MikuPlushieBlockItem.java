@@ -2,7 +2,7 @@ package com.any.mikuplushie.item;
 
 import com.any.mikuplushie.MikuPlushie;
 import com.any.mikuplushie.ModSoundEvents;
-import com.any.mikuplushie.datagen.ModTagProvider;
+import com.any.mikuplushie.datagen.ModItemTagProvider;
 import net.minecraft.block.Block;
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.entity.EquipmentSlot;
@@ -32,28 +32,28 @@ public class MikuPlushieBlockItem extends BlockItem implements Equipment {
 	public static void PlayMikuSound(LivingEntity entity){
 		ItemStack stack = entity.getStackInHand(entity.getActiveHand());
 
-		if (stack.isIn(ModTagProvider.MIKU_PLUSH)){
+		if (stack.isIn(ModItemTagProvider.MIKU_PLUSH)){
 			entity.playSound(ModSoundEvents.MIKU_DOR, 1f, 1);
 		}
-		if (stack.isIn(ModTagProvider.AIKO_PLUSH)) {
+		if (stack.isIn(ModItemTagProvider.AIKO_PLUSH)) {
 			entity.playSound(ModSoundEvents.AIKO_DOR, 1f, 1);
 		}
-		if (stack.isIn(ModTagProvider.TETO_PLUSH)) {
+		if (stack.isIn(ModItemTagProvider.TETO_PLUSH)) {
 			entity.playSound(ModSoundEvents.TETO_DOR, 1f, 1);
 		}
-		if (stack.isIn(ModTagProvider.NERU_PLUSH)) {
+		if (stack.isIn(ModItemTagProvider.NERU_PLUSH)) {
 			entity.playSound(ModSoundEvents.NERU_DOR, 1f, 1);
 		}
-		if (stack.isIn(ModTagProvider.RIN_PLUSH)) {
+		if (stack.isIn(ModItemTagProvider.RIN_PLUSH)) {
 			entity.playSound(ModSoundEvents.RIN_DOR, 1f, 1);
 		}
-		if (stack.isIn(ModTagProvider.LEN_PLUSH)) {
+		if (stack.isIn(ModItemTagProvider.LEN_PLUSH)) {
 			entity.playSound(ModSoundEvents.LEN_DOR, 1f, 1);
 		}
-		if (stack.isIn(ModTagProvider.LUKA_PLUSH)) {
+		if (stack.isIn(ModItemTagProvider.LUKA_PLUSH)) {
 			entity.playSound(ModSoundEvents.LUKA_DOR, 1f, 1);
 		}
-		if (stack.isIn(ModTagProvider.MEIKO_PLUSH)) {
+		if (stack.isIn(ModItemTagProvider.MEIKO_PLUSH)) {
 			entity.playSound(ModSoundEvents.MEIKO_DOR, 1f, 1);
 		}
 
@@ -68,25 +68,25 @@ public class MikuPlushieBlockItem extends BlockItem implements Equipment {
 	public SoundEvent getEquipSound() {
 		ItemStack stack = this.getDefaultStack();
 
-		if (stack.isIn(ModTagProvider.AIKO_PLUSH)) {
+		if (stack.isIn(ModItemTagProvider.AIKO_PLUSH)) {
 			return ModSoundEvents.AIKO_EQUIP;
 		}
-		if (stack.isIn(ModTagProvider.TETO_PLUSH)) {
+		if (stack.isIn(ModItemTagProvider.TETO_PLUSH)) {
 			return ModSoundEvents.TETO_EQUIP;
 		}
-		if (stack.isIn(ModTagProvider.NERU_PLUSH)) {
+		if (stack.isIn(ModItemTagProvider.NERU_PLUSH)) {
 			return ModSoundEvents.NERU_EQUIP;
 		}
-		if (stack.isIn(ModTagProvider.RIN_PLUSH)) {
+		if (stack.isIn(ModItemTagProvider.RIN_PLUSH)) {
 			return ModSoundEvents.RIN_EQUIP;
 		}
-		if (stack.isIn(ModTagProvider.LEN_PLUSH)) {
+		if (stack.isIn(ModItemTagProvider.LEN_PLUSH)) {
 			return ModSoundEvents.LEN_EQUIP;
 		}
-		if (stack.isIn(ModTagProvider.LUKA_PLUSH)) {
+		if (stack.isIn(ModItemTagProvider.LUKA_PLUSH)) {
 			return ModSoundEvents.LUKA_EQUIP;
 		}
-		if (stack.isIn(ModTagProvider.MEIKO_PLUSH)) {
+		if (stack.isIn(ModItemTagProvider.MEIKO_PLUSH)) {
 			return ModSoundEvents.MEIKO_EQUIP;
 		}
 

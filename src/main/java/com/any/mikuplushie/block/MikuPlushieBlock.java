@@ -3,7 +3,7 @@ package com.any.mikuplushie.block;
 import com.any.mikuplushie.ModEntities;
 import com.any.mikuplushie.ModItems;
 import com.any.mikuplushie.ModSoundEvents;
-import com.any.mikuplushie.datagen.ModTagProvider;
+import com.any.mikuplushie.datagen.ModItemTagProvider;
 import com.any.mikuplushie.entity.MikuEntity;
 import com.any.mikuplushie.entity.variant.MikuVariant;
 import net.minecraft.block.Block;
@@ -43,7 +43,7 @@ public class MikuPlushieBlock extends Block {
 	public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
 
 		if (!world.isClient){
-			if (player.getStackInHand(hand).isOf(ModItems.CANUDINHO) && this.asItem().getDefaultStack().isIn(ModTagProvider.MIKU_PLUSH)){
+			if (player.getStackInHand(hand).isOf(ModItems.CANUDINHO) && this.asItem().getDefaultStack().isIn(ModItemTagProvider.MIKU_PLUSH)){
                 world.breakBlock(pos, false);
                 MikuEntity miku = ModEntities.MIKU.create(world);
 //				world.playSound(null, pos, ModSoundEvents.MIKU_CANUDINHO, SoundCategory.BLOCKS, 1F, 1F);
@@ -62,7 +62,7 @@ public class MikuPlushieBlock extends Block {
                 world.playSound(null, pos, ModSoundEvents.MIKU_CANUDINHO, SoundCategory.BLOCKS);
 				return ActionResult.SUCCESS;
 			}
-		} else if (player.getStackInHand(hand).isOf(ModItems.CANUDINHO) && this.asItem().getDefaultStack().isIn(ModTagProvider.MIKU_PLUSH)) {
+		} else if (player.getStackInHand(hand).isOf(ModItems.CANUDINHO) && this.asItem().getDefaultStack().isIn(ModItemTagProvider.MIKU_PLUSH)) {
             Random random = world.getRandom();
             for (int particles = 0; particles < 250; particles++) {
                 world.addParticle(
@@ -81,21 +81,21 @@ public class MikuPlushieBlock extends Block {
 
 	@Override
 	public void onPlaced(World world, BlockPos pos, BlockState state, @Nullable LivingEntity placer, ItemStack itemStack) {
-		if(this.asItem().getDefaultStack().isIn(ModTagProvider.AIKO_PLUSH)){
+		if(this.asItem().getDefaultStack().isIn(ModItemTagProvider.AIKO_PLUSH)){
 			world.playSound(null, pos, ModSoundEvents.AIKO_OIE, SoundCategory.BLOCKS, 0.5F, 1);
-		} else if(this.asItem().getDefaultStack().isIn(ModTagProvider.TETO_PLUSH)){
+		} else if(this.asItem().getDefaultStack().isIn(ModItemTagProvider.TETO_PLUSH)){
 			world.playSound(null, pos, ModSoundEvents.TETO_OIE, SoundCategory.BLOCKS, 0.5F, 1);
-		} else if(this.asItem().getDefaultStack().isIn(ModTagProvider.NERU_PLUSH)){
+		} else if(this.asItem().getDefaultStack().isIn(ModItemTagProvider.NERU_PLUSH)){
 			world.playSound(null, pos, ModSoundEvents.NERU_OIE, SoundCategory.BLOCKS, 0.5F, 1);
-		} else if(this.asItem().getDefaultStack().isIn(ModTagProvider.RIN_PLUSH)){
+		} else if(this.asItem().getDefaultStack().isIn(ModItemTagProvider.RIN_PLUSH)){
 			world.playSound(null, pos, ModSoundEvents.RIN_OIE, SoundCategory.BLOCKS, 0.5F, 1);
-		} else if(this.asItem().getDefaultStack().isIn(ModTagProvider.LEN_PLUSH)){
+		} else if(this.asItem().getDefaultStack().isIn(ModItemTagProvider.LEN_PLUSH)){
 			world.playSound(null, pos, ModSoundEvents.LEN_OIE, SoundCategory.BLOCKS, 0.5F, 1);
-		} else if(this.asItem().getDefaultStack().isIn(ModTagProvider.LUKA_PLUSH)){
+		} else if(this.asItem().getDefaultStack().isIn(ModItemTagProvider.LUKA_PLUSH)){
 			world.playSound(null, pos, ModSoundEvents.LUKA_OIE, SoundCategory.BLOCKS, 0.5F, 1);
-		} else if(this.asItem().getDefaultStack().isIn(ModTagProvider.MEIKO_PLUSH)){
+		} else if(this.asItem().getDefaultStack().isIn(ModItemTagProvider.MEIKO_PLUSH)){
 			world.playSound(null, pos, ModSoundEvents.MEIKO_OIE, SoundCategory.BLOCKS, 0.5F, 1);
-		} else if(this.asItem().getDefaultStack().isIn(ModTagProvider.MIKU_PLUSH)){
+		} else if(this.asItem().getDefaultStack().isIn(ModItemTagProvider.MIKU_PLUSH)){
 			world.playSound(null, pos, ModSoundEvents.MIKU_OIE, SoundCategory.BLOCKS, 0.5F, 1);
 		}
 		super.onPlaced(world, pos, state, placer, itemStack);
@@ -103,21 +103,21 @@ public class MikuPlushieBlock extends Block {
 
 	@Override
 	public void onBreak(World world, BlockPos pos, BlockState state, PlayerEntity player) {
-		if(this.asItem().getDefaultStack().isIn(ModTagProvider.AIKO_PLUSH)){
+		if(this.asItem().getDefaultStack().isIn(ModItemTagProvider.AIKO_PLUSH)){
 			world.playSound(null, pos, ModSoundEvents.AIKO_BYE, SoundCategory.BLOCKS, 0.5F, 1);
-		} else if(this.asItem().getDefaultStack().isIn(ModTagProvider.TETO_PLUSH)){
+		} else if(this.asItem().getDefaultStack().isIn(ModItemTagProvider.TETO_PLUSH)){
 			world.playSound(null, pos, ModSoundEvents.TETO_BYE, SoundCategory.BLOCKS, 0.5F, 1);
-		} else if(this.asItem().getDefaultStack().isIn(ModTagProvider.NERU_PLUSH)){
+		} else if(this.asItem().getDefaultStack().isIn(ModItemTagProvider.NERU_PLUSH)){
 			world.playSound(null, pos, ModSoundEvents.NERU_BYE, SoundCategory.BLOCKS, 0.5F, 1);
-		} else if(this.asItem().getDefaultStack().isIn(ModTagProvider.RIN_PLUSH)){
+		} else if(this.asItem().getDefaultStack().isIn(ModItemTagProvider.RIN_PLUSH)){
 			world.playSound(null, pos, ModSoundEvents.RIN_BYE, SoundCategory.BLOCKS, 0.5F, 1);
-		} else if(this.asItem().getDefaultStack().isIn(ModTagProvider.LEN_PLUSH)){
+		} else if(this.asItem().getDefaultStack().isIn(ModItemTagProvider.LEN_PLUSH)){
 			world.playSound(null, pos, ModSoundEvents.LEN_BYE, SoundCategory.BLOCKS, 0.5F, 1);
-		} else if(this.asItem().getDefaultStack().isIn(ModTagProvider.LUKA_PLUSH)){
+		} else if(this.asItem().getDefaultStack().isIn(ModItemTagProvider.LUKA_PLUSH)){
 			world.playSound(null, pos, ModSoundEvents.LUKA_BYE, SoundCategory.BLOCKS, 0.5F, 1);
-		}else if(this.asItem().getDefaultStack().isIn(ModTagProvider.MEIKO_PLUSH)){
+		}else if(this.asItem().getDefaultStack().isIn(ModItemTagProvider.MEIKO_PLUSH)){
 			world.playSound(null, pos, ModSoundEvents.MEIKO_BYE, SoundCategory.BLOCKS, 0.5F, 1);
-		} else if(this.asItem().getDefaultStack().isIn(ModTagProvider.MIKU_PLUSH)){
+		} else if(this.asItem().getDefaultStack().isIn(ModItemTagProvider.MIKU_PLUSH)){
 			world.playSound(null, pos, ModSoundEvents.MIKU_BYE, SoundCategory.BLOCKS, 0.5F, 1);
 		}
         super.onBreak(world, pos, state, player);

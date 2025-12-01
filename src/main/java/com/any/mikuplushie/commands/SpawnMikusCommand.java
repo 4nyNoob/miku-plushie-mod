@@ -1,7 +1,7 @@
 package com.any.mikuplushie.commands;
 
 import com.any.mikuplushie.ModEntities;
-import com.any.mikuplushie.datagen.ModTagProvider;
+import com.any.mikuplushie.datagen.ModItemTagProvider;
 import com.any.mikuplushie.entity.*;
 import com.any.mikuplushie.entity.variant.MikuVariant;
 import com.any.mikuplushie.entity.variant.NeruVariant;
@@ -56,17 +56,17 @@ public class SpawnMikusCommand {
         List<ItemStack> PICKAXES = new ArrayList<>();
 
         for (int item = 0; item < itemRegistry.size(); item++) {
-            if (Objects.requireNonNull(itemRegistry.get(item)).getDefaultStack().isIn(ModTagProvider.PLUSHIES)){
+            if (Objects.requireNonNull(itemRegistry.get(item)).getDefaultStack().isIn(ModItemTagProvider.PLUSHIES)){
                 PLUSHIES.add(Objects.requireNonNull(itemRegistry.get(item)).getDefaultStack());
             }
-            if (Objects.requireNonNull(itemRegistry.get(item)).getDefaultStack().isIn(ModTagProvider.TETO_PICKAXE)){
+            if (Objects.requireNonNull(itemRegistry.get(item)).getDefaultStack().isIn(ModItemTagProvider.TETO_PICKAXE)){
                 PICKAXES.add(Objects.requireNonNull(itemRegistry.get(item)).getDefaultStack());
             }
         }
 
         List<Block> BLOCKS = new ArrayList<>();
         for (int block = 0; block < blockRegistry.size(); block++) {
-            if (Objects.requireNonNull(blockRegistry.get(block)).asItem().getDefaultStack().isIn(ModTagProvider.PLUSHIES)){
+            if (Objects.requireNonNull(blockRegistry.get(block)).asItem().getDefaultStack().isIn(ModItemTagProvider.PLUSHIES)){
                 BLOCKS.add(blockRegistry.get(block));
             }
         }
@@ -126,7 +126,7 @@ public class SpawnMikusCommand {
                             Vec3d entitySpawnLocation = getEntitySpawnLocation(spawnPos, column, row, list, spacing);
 
                             //CHECK IF BLOCK BELLOW IS A MIKU PLUSH
-                            if (isVariationAboveBlock(world, entitySpawnLocation, ModTagProvider.MIKU_PLUSH)) {
+                            if (isVariationAboveBlock(world, entitySpawnLocation, ModItemTagProvider.MIKU_PLUSH)) {
                                 MikuEntity entity = new MikuEntity(ModEntities.MIKU, world);
                                 entity.setVariant(MikuVariant.byId(mikuVariation));
                                 setupEntity(entity, entitySpawnLocation);
@@ -135,7 +135,7 @@ public class SpawnMikusCommand {
                             }
 
                             //CHECK IF BLOCK BELLOW IS A TETO PLUSH
-                            if (isVariationAboveBlock(world, entitySpawnLocation, ModTagProvider.TETO_PLUSH)) {
+                            if (isVariationAboveBlock(world, entitySpawnLocation, ModItemTagProvider.TETO_PLUSH)) {
                                 TetoEntity entity = new TetoEntity(ModEntities.TETO, world);
                                 entity.setVariant(TetoVariant.byId(tetoVariation));
                                 setupEntity(entity, entitySpawnLocation);
@@ -144,14 +144,14 @@ public class SpawnMikusCommand {
                             }
 
                             //CHECK IF BLOCK BELLOW IS A AIKO PLUSH
-                            if (isVariationAboveBlock(world, entitySpawnLocation, ModTagProvider.AIKO_PLUSH)) {
+                            if (isVariationAboveBlock(world, entitySpawnLocation, ModItemTagProvider.AIKO_PLUSH)) {
                                 AikoEntity entity = new AikoEntity(ModEntities.AIKO, world);
                                 setupEntity(entity, entitySpawnLocation);
                                 world.spawnEntity(entity);
                             }
 
                             //CHECK IF BLOCK BELLOW IS A NERU PLUSH
-                            if (isVariationAboveBlock(world, entitySpawnLocation, ModTagProvider.NERU_PLUSH)) {
+                            if (isVariationAboveBlock(world, entitySpawnLocation, ModItemTagProvider.NERU_PLUSH)) {
                                 NeruEntity entity = new NeruEntity(ModEntities.NERU, world);
                                 entity.setVariant(NeruVariant.byId(neruVariation));
                                 setupEntity(entity, entitySpawnLocation);
@@ -160,28 +160,28 @@ public class SpawnMikusCommand {
                             }
 
                             //CHECK IF BLOCK BELLOW IS A RIN PLUSH
-                            if (isVariationAboveBlock(world, entitySpawnLocation, ModTagProvider.RIN_PLUSH)) {
+                            if (isVariationAboveBlock(world, entitySpawnLocation, ModItemTagProvider.RIN_PLUSH)) {
                                 RinEntity entity = new RinEntity(ModEntities.RIN, world);
                                 setupEntity(entity, entitySpawnLocation);
                                 world.spawnEntity(entity);
                             }
 
                             //CHECK IF BLOCK BELLOW IS A LEN PLUSH
-                            if (isVariationAboveBlock(world, entitySpawnLocation, ModTagProvider.LEN_PLUSH)) {
+                            if (isVariationAboveBlock(world, entitySpawnLocation, ModItemTagProvider.LEN_PLUSH)) {
                                 LenEntity entity = new LenEntity(ModEntities.LEN, world);
                                 setupEntity(entity, entitySpawnLocation);
                                 world.spawnEntity(entity);
                             }
 
                             //CHECK IF BLOCK BELLOW IS A KONOHA PLUSH
-                            if (isVariationAboveBlock(world, entitySpawnLocation, ModTagProvider.KONOHA_PLUSH)) {
+                            if (isVariationAboveBlock(world, entitySpawnLocation, ModItemTagProvider.KONOHA_PLUSH)) {
                                 KonohaEntity entity = new KonohaEntity(ModEntities.KONOHA, world);
                                 setupEntity(entity, entitySpawnLocation);
                                 world.spawnEntity(entity);
                             }
 
                             //CHECK IF BLOCK BELLOW IS A LUKA PLUSH
-                            if (isVariationAboveBlock(world, entitySpawnLocation, ModTagProvider.LUKA_PLUSH)) {
+                            if (isVariationAboveBlock(world, entitySpawnLocation, ModItemTagProvider.LUKA_PLUSH)) {
                                 LukaEntity entity = new LukaEntity(ModEntities.LUKA, world);
                                 setupEntity(entity, entitySpawnLocation);
                                 world.spawnEntity(entity);
