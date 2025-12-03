@@ -42,7 +42,7 @@ public class ModEntities {
 
     public static final EntityType<NeruEntity> NERU =
         Registry.register(Registries.ENTITY_TYPE,
-            new Identifier(MikuPlushie.MOD_ID, "neru_plush"),
+            new Identifier(MikuPlushie.MOD_ID, "akita_neru_plush"),
             FabricEntityTypeBuilder.create(SpawnGroup.CREATURE, NeruEntity::new)
                 .dimensions(EntityDimensions.fixed(PLUSH_WIDTH, PLUSH_HEIGHT)).build());
 
