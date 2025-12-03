@@ -14,7 +14,7 @@
 	"geckolib_modid": "",
 	"geckolib_model_type": {},
 	"geckolib_filepath_cache": {
-		"model": "/mnt/SG4TB/repos/miku-plushies/src/main/resources/assets/miku-plushie/geo/entity/miku_plush.geo.json",
+		"model": "/mnt/SG4TB/repos/miku-plushies/src/main/resources/assets/miku-plushie/geo/entity/meiko_plush.geo.json",
 		"animation": "/mnt/SG4TB/repos/miku-plushies/miku-plushie/animations/miku_plush.animation.json"
 	},
 	"resolution": {
