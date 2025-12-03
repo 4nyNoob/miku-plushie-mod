@@ -113,6 +113,8 @@ public class MikuPlushieBlock extends Block {
 			world.playSound(null, pos, ModSoundEvents.LUKA_OIE, SoundCategory.BLOCKS, 0.5F, 1);
 		} else if(this.asItem().getDefaultStack().isIn(ModItemTagProvider.MEIKO_PLUSH)){
 			world.playSound(null, pos, ModSoundEvents.MEIKO_OIE, SoundCategory.BLOCKS, 0.5F, 1);
+		} else if(this.asItem().getDefaultStack().isIn(ModItemTagProvider.GUMI_PLUSH)){
+			world.playSound(null, pos, ModSoundEvents.GUMI_OIE, SoundCategory.BLOCKS, 0.5F, 1);
 		} else if(this.asItem().getDefaultStack().isIn(ModItemTagProvider.MIKU_PLUSH)){
 			world.playSound(null, pos, ModSoundEvents.MIKU_OIE, SoundCategory.BLOCKS, 0.5F, 1);
 		}
@@ -133,8 +135,10 @@ public class MikuPlushieBlock extends Block {
 			world.playSound(null, pos, ModSoundEvents.LEN_BYE, SoundCategory.BLOCKS, 0.5F, 1);
 		} else if(this.asItem().getDefaultStack().isIn(ModItemTagProvider.LUKA_PLUSH)){
 			world.playSound(null, pos, ModSoundEvents.LUKA_BYE, SoundCategory.BLOCKS, 0.5F, 1);
-		}else if(this.asItem().getDefaultStack().isIn(ModItemTagProvider.MEIKO_PLUSH)){
+        } else if(this.asItem().getDefaultStack().isIn(ModItemTagProvider.MEIKO_PLUSH)){
 			world.playSound(null, pos, ModSoundEvents.MEIKO_BYE, SoundCategory.BLOCKS, 0.5F, 1);
+		} else if(this.asItem().getDefaultStack().isIn(ModItemTagProvider.GUMI_PLUSH)){
+			world.playSound(null, pos, ModSoundEvents.GUMI_BYE, SoundCategory.BLOCKS, 0.5F, 1);
 		} else if(this.asItem().getDefaultStack().isIn(ModItemTagProvider.MIKU_PLUSH)){
 			world.playSound(null, pos, ModSoundEvents.MIKU_BYE, SoundCategory.BLOCKS, 0.5F, 1);
 		}

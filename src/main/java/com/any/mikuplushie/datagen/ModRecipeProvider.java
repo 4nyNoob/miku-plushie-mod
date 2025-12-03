@@ -777,5 +777,31 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .offerTo(exporter);
         }
 
+        //GUMI
+        {
+            ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ModBlocks.GUMI_PLUSH)
+                .pattern("121")
+                .pattern(" 3 ")
+                .input('1', Items.LIME_WOOL)
+                .input('2', Items.WHITE_WOOL)
+                .input('3', Items.ORANGE_WOOL)
+                .criterion(FabricRecipeProvider.hasItem(Items.LIME_WOOL), FabricRecipeProvider.conditionsFromItem(Items.LIME_WOOL))
+                .criterion(FabricRecipeProvider.hasItem(Items.WHITE_WOOL), FabricRecipeProvider.conditionsFromItem(Items.WHITE_WOOL))
+                .criterion(FabricRecipeProvider.hasItem(Items.ORANGE_WOOL), FabricRecipeProvider.conditionsFromItem(Items.ORANGE_WOOL))
+                .offerTo(exporter);
+
+//            ShapelessRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ModBlocks.MEIKO_PLUSH_V3)
+//                .input(ModBlocks.MEIKO_PLUSH)
+//                .input(Items.IRON_INGOT, 1)
+//                .criterion(FabricRecipeProvider.hasItem(ModBlocks.MEIKO_PLUSH), FabricRecipeProvider.conditionsFromItem(ModBlocks.MEIKO_PLUSH))
+//                .offerTo(exporter);
+//
+//            ShapelessRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ModBlocks.MEIKO_PLUSH_V4)
+//                .input(ModBlocks.MEIKO_PLUSH)
+//                .input(Items.IRON_INGOT, 2)
+//                .criterion(FabricRecipeProvider.hasItem(ModBlocks.MEIKO_PLUSH), FabricRecipeProvider.conditionsFromItem(ModBlocks.MEIKO_PLUSH))
+//                .offerTo(exporter);
+        }
+
     }
 }

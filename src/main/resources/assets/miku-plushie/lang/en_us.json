@@ -183,6 +183,8 @@
   "item.miku-plushie.meiko_plush_v3.tooltip": "§b§n@iximaxima",
   "block.miku-plushie.meiko_plush_v4": "Meiko Plush V4",
   "item.miku-plushie.meiko_plush_v4.tooltip": "§b§n@iximaxima",
+  "block.miku-plushie.gumi_plush": "Gumi Plush",
+  "item.miku-plushie.gumi_plush.tooltip": "§b§n@masyuuki",
 
 
   "item.group.miku_plushies": "Mikus!!",
@@ -202,6 +204,8 @@
   "entity.miku-plushie.len_plush": "Kagamine Len",
   "entity.miku-plushie.konoha_plush": "Konoha",
   "entity.miku-plushie.luka_plush": "Megurine Luka",
+  "entity.miku-plushie.meiko_plush": "Meiko",
+  "entity.miku-plushie.gumi_plush": "Gumi",
 
 
   "sound.miku-plushie.canudinho": "Miku: Canudinho",
@@ -239,5 +243,15 @@
   "sound.luka-plushie.oie": "Luka: Hi",
   "sound.luka-plushie.dor": "Luka: Pain",
   "sound.luka-plushie.bye": "Luka: Bye",
-  "sound.luka-plushie.equip": "Len: Equip"
+  "sound.luka-plushie.equip": "Luka: Equip",
+
+  "sound.meiko-plushie.oie": "Meiko: Hi",
+  "sound.meiko-plushie.dor": "Meiko: Pain",
+  "sound.meiko-plushie.bye": "Meiko: Bye",
+  "sound.meiko-plushie.equip": "Meiko: Equip",
+
+  "sound.gumi-plushie.oie": "Gumi: Hi",
+  "sound.gumi-plushie.dor": "Gumi: Pain",
+  "sound.gumi-plushie.bye": "Gumi: Bye",
+  "sound.gumi-plushie.equip": "Gumi: Equip"
 }

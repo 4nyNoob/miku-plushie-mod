@@ -108,7 +108,9 @@ public class MikuPlushieClient implements ClientModInitializer {
 
             ModBlocks.MEIKO_PLUSH,
             ModBlocks.MEIKO_PLUSH_V3,
-            ModBlocks.MEIKO_PLUSH_V4
+            ModBlocks.MEIKO_PLUSH_V4,
+
+            ModBlocks.GUMI_PLUSH
         );
 
         //CROP CUTOUT
@@ -130,5 +132,6 @@ public class MikuPlushieClient implements ClientModInitializer {
         EntityRendererRegistry.register(ModEntities.KONOHA, KonohaRender::new);
         EntityRendererRegistry.register(ModEntities.LUKA, LukaRender::new);
         EntityRendererRegistry.register(ModEntities.MEIKO, MeikoRender::new);
+        EntityRendererRegistry.register(ModEntities.GUMI, GumiRender::new);
 	}
 }

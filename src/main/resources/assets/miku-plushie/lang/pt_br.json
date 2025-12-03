@@ -179,6 +179,12 @@
   "item.miku-plushie.teto_pickaxe_spoken_for": "Picareta Da Teto Spoken For",
   "block.miku-plushie.meiko_plush": "Pelúcia Da Meiko",
   "item.miku-plushie.meiko_plush.tooltip": "§b§n@wassy_m",
+  "block.miku-plushie.meiko_plush_v3": "Pelúcia Da Meiko V3",
+  "item.miku-plushie.meiko_plush_v3.tooltip": "§b§n@iximaxima",
+  "block.miku-plushie.meiko_plush_v4": "Pelúcia Da Meiko V4",
+  "item.miku-plushie.meiko_plush_v4.tooltip": "§b§n@iximaxima",
+  "block.miku-plushie.gumi_plush": "Pelúcia Da Gumi",
+  "item.miku-plushie.gumi_plush.tooltip": "§b§n@masyuuki",
 
 
   "item.group.miku_plushies": "Mikus!!",
@@ -189,7 +195,7 @@
   "item.miku-plushie.baguette": "Baguete",
   "item.miku-plushie.leek": "Alho Poró",
   "item.miku-plushie.leek_seeds": "Semente De Alho Poró",
-  
+
   "entity.miku-plushie.miku_plush": "Hatsune Miku",
   "entity.miku-plushie.teto_plush": "Kasane Teto",
   "entity.miku-plushie.aiko_plush": "Kikyuune Aiko",
@@ -198,6 +204,8 @@
   "entity.miku-plushie.len_plush": "Kagamine Len",
   "entity.miku-plushie.konoha_plush": "Konoha",
   "entity.miku-plushie.luka_plush": "Megurine Luka",
+  "entity.miku-plushie.meiko_plush": "Meiko",
+  "entity.miku-plushie.gumi_plush": "Gumi",
 
 
   "sound.miku-plushie.canudinho": "Miku: Canudinho",
@@ -217,10 +225,10 @@
   "sound.teto-plushie.bye": "Teto: Tchau",
   "sound.teto-plushie.equip": "Teto: Equipada",
 
-  "sound.neru-plushie.oie": "Akita Neru: Oie",
-  "sound.neru-plushie.dor": "Akita Neru: Dor",
-  "sound.neru-plushie.bye": "Akita Neru: Tchau",
-  "sound.neru-plushie.equip": "Akita Neru: Equipada",
+  "sound.neru-plushie.oie": "Neru: Oie",
+  "sound.neru-plushie.dor": "Neru: Dor",
+  "sound.neru-plushie.bye": "Neru: Tchau",
+  "sound.neru-plushie.equip": "Neru: Equipada",
 
   "sound.rin-plushie.oie": "Rin: Oie",
   "sound.rin-plushie.dor": "Rin: Dor",
@@ -235,5 +243,15 @@
   "sound.luka-plushie.oie": "Luka: Oie",
   "sound.luka-plushie.dor": "Luka: Dor",
   "sound.luka-plushie.bye": "Luka: Tchau",
-  "sound.luka-plushie.equip": "Luka: Equipada"
+  "sound.luka-plushie.equip": "Luka: Equipada",
+
+  "sound.meiko-plushie.oie": "Meiko: Oie",
+  "sound.meiko-plushie.dor": "Meiko: Dor",
+  "sound.meiko-plushie.bye": "Meiko: Tchau",
+  "sound.meiko-plushie.equip": "Meiko: Equipada",
+
+  "sound.gumi-plushie.oie": "Gumi: Oie",
+  "sound.gumi-plushie.dor": "Gumi: Dor",
+  "sound.gumi-plushie.bye": "Gumi: Tchau",
+  "sound.gumi-plushie.equip": "Gumi: Equipada"
 }

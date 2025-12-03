@@ -686,6 +686,14 @@ public class ModBlocks {
         "meiko_plush_v4",
         false
     );
+    public static final Block GUMI_PLUSH = register(
+        new MikuPlushieBlock(AbstractBlock.Settings.copy(Blocks.FLOWER_POT)
+            .sounds(BlockSoundGroup.WOOL)
+            .nonOpaque()
+        ),
+        "gumi_plush",
+        false
+    );
 
 
     //NON PLUSH STUFF

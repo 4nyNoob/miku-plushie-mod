@@ -30,6 +30,7 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
     public static final TagKey<Item> LUKA_PLUSH = TagKey.of(RegistryKeys.ITEM, Identifier.of(MikuPlushie.MOD_ID, "luka_plush"));
     public static final TagKey<Item> KONOHA_PLUSH = TagKey.of(RegistryKeys.ITEM, Identifier.of(MikuPlushie.MOD_ID, "konoha_plush"));
     public static final TagKey<Item> MEIKO_PLUSH = TagKey.of(RegistryKeys.ITEM, Identifier.of(MikuPlushie.MOD_ID, "meiko_plush"));
+    public static final TagKey<Item> GUMI_PLUSH = TagKey.of(RegistryKeys.ITEM, Identifier.of(MikuPlushie.MOD_ID, "gumi_plush"));
 
     @Override
     protected void configure(RegistryWrapper.WrapperLookup wrapperLookup) {
@@ -147,6 +148,9 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
             .add(ModItems.MEIKO_PLUSH_V3)
             .add(ModItems.MEIKO_PLUSH_V4)
         ;
+        getOrCreateTagBuilder(GUMI_PLUSH)
+            .add(ModItems.GUMI_PLUSH)
+        ;
 
         getOrCreateTagBuilder(PLUSHIES)
             .addOptionalTag(MIKU_PLUSH)
@@ -158,6 +162,7 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
             .addOptionalTag(LUKA_PLUSH)
             .addOptionalTag(KONOHA_PLUSH)
             .addOptionalTag(MEIKO_PLUSH)
+            .addOptionalTag(GUMI_PLUSH)
         ;
 
     }

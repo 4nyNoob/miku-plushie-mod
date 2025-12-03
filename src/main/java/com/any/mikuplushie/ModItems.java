@@ -229,6 +229,8 @@ public class ModItems {
         register(new MikuPlushieBlockItem(ModBlocks.MEIKO_PLUSH_V3, new Item.Settings()), "meiko_plush_v3");
     public static final Item MEIKO_PLUSH_V4 =
         register(new MikuPlushieBlockItem(ModBlocks.MEIKO_PLUSH_V4, new Item.Settings()), "meiko_plush_v4");
+    public static final Item GUMI_PLUSH =
+        register(new MikuPlushieBlockItem(ModBlocks.GUMI_PLUSH, new Item.Settings()), "gumi_plush");
 
 
 
@@ -354,6 +356,7 @@ public class ModItems {
             itemGroup.add(ModItems.MEIKO_PLUSH);
             itemGroup.add(ModItems.MEIKO_PLUSH_V3);
             itemGroup.add(ModItems.MEIKO_PLUSH_V4);
+            itemGroup.add(ModItems.GUMI_PLUSH);
 		});
 	}
 }

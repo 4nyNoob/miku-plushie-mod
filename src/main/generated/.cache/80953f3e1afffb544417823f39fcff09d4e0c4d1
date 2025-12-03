@@ -1,4 +1,4 @@
-// 1.20.1	2025-12-03T11:08:35.28092632	miku plushies/Recipes
+// 1.20.1	2025-12-03T15:11:07.319122956	miku plushies/Recipes
 0c389692570e1bb4502ab41b21673265d98ca853 data/miku-plushie/recipes/miku_plush_rolling_girl.json
 fde9d0c149479567264b038468d0b35d28150cf7 data/miku-plushie/advancements/recipes/decorations/teto_plush_some_more_of_that_song.json
 1cd819617c5d34a1cc69c6f430b0cc130cfc94b2 data/miku-plushie/advancements/recipes/decorations/meiko_plush_v4.json
@@ -87,6 +87,7 @@ c84510975534b5009806a1ea752454926da7c84a data/miku-plushie/advancements/recipes/
 bd2a2d5218b8b71ad333c39eba9d4b8833e2323f data/miku-plushie/advancements/recipes/decorations/miku_plush_vampire.json
 da5d1fa85d89fd83856421c60e68c950c7a4e3d5 data/miku-plushie/recipes/miku_plush_br_fut_fla.json
 1dcac1dc2ab0f05ea348f7af04062600eb5fd388 data/miku-plushie/recipes/meiko_plush.json
+c35f72da21804ac511298467ba3f722510daede7 data/miku-plushie/advancements/recipes/decorations/gumi_plush.json
 7fdd9a708ad7a8d9bac807ee3db51cec4a15bb33 data/miku-plushie/advancements/recipes/decorations/luka_plush.json
 98b72c61a2f01b381fb60ab5c131ef4451831145 data/miku-plushie/recipes/miku_plush_sonic_crossworlds.json
 83e568b2e3ac549b2ff7e2d6d0442fe113ad958d data/miku-plushie/advancements/recipes/tools/teto_pickaxe_synthv.json
@@ -151,6 +152,7 @@ afa147e082a6140c4cee663be6c5a68fb8102a22 data/miku-plushie/recipes/miku_plush_br
 90b559ecf87820006089261b0a93420056510c03 data/miku-plushie/advancements/recipes/decorations/teto_plush_regret_rock.json
 cf5aec1974c876d32aadd7d1b6c8f1bbaba09166 data/miku-plushie/recipes/meiko_plush_v3.json
 4358f7b0de0e9dbf0d55510935053d89120f98bc data/miku-plushie/advancements/recipes/decorations/miku_plush_br_sp.json
+d7ddab764f543e79f281eb8ba189ee862f84f733 data/miku-plushie/recipes/gumi_plush.json
 49ce044da6f9786b90245a5b3140466c44cb05fc data/miku-plushie/recipes/miku_plush_ghost.json
 20c5dc70abf30c20f4bca5890affaaf4a76bc4d6 data/miku-plushie/recipes/teto_plush_whatchacallitsname.json
 f230253383c3c1af6250bc3853f68ac4351d3637 data/miku-plushie/recipes/miku_plush_sonic.json
