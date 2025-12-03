@@ -80,6 +80,6 @@ public class NeruModel extends GeoModel<NeruEntity> {
     }
 
     private String variantToBlockTextureName (NeruEntity animatable) {
-        return "textures/block/" + animatable.getNeruVariant().getBlock() + ".png";
+        return "textures/block/" + animatable.getVariant() + ".png";
     }
 }

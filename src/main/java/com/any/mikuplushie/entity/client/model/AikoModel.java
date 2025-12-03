@@ -23,7 +23,7 @@ public class AikoModel extends GeoModel<AikoEntity> {
 
     @Override
     public Identifier getTextureResource(AikoEntity animatable) {
-        return texture;
+        return Identifier.of(MikuPlushie.MOD_ID, variantToBlockTextureName(animatable));
     }
 
     @Override
@@ -71,4 +71,7 @@ public class AikoModel extends GeoModel<AikoEntity> {
 
     }
 
+    private String variantToBlockTextureName (AikoEntity animatable) {
+        return "textures/block/" + animatable.getVariant().replace('_', '-') + ".png";
+    }
 }

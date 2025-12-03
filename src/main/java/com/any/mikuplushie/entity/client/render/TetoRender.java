@@ -80,7 +80,7 @@ public class TetoRender extends GeoEntityRenderer<TetoEntity> {
     @Override
     public RenderLayer getRenderType(TetoEntity animatable, Identifier texture, VertexConsumerProvider bufferSource, float partialTick) {
         //USE TRANSLUCENT RENDER ON SPECIFIC VARIATION
-        if (animatable.getTetoVariant().equals(TetoVariant.TETO_PLUSH_WHATCHACALLITSNAME)){
+        if (animatable.getVariant().equals(TetoVariant.TETO_PLUSH_WHATCHACALLITSNAME.getBlock())){
             return RenderLayer.getEntityTranslucent(texture);
         } else {
             return super.getRenderType(animatable, texture, bufferSource, partialTick);

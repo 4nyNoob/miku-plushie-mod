@@ -78,7 +78,7 @@ public class MikuRender extends GeoEntityRenderer<MikuEntity> {
     @Override
     public RenderLayer getRenderType(MikuEntity animatable, Identifier texture, VertexConsumerProvider bufferSource, float partialTick) {
         //USE TRANSLUCENT RENDER ON SPECIFIC VARIATION
-        if (animatable.getMikuVariant().equals(MikuVariant.MIKU_PLUSH_GHOST)){
+        if (animatable.getVariant().equals(MikuVariant.MIKU_PLUSH_GHOST.getBlock())){
             return RenderLayer.getEntityTranslucent(texture);
         } else {
             return super.getRenderType(animatable, texture, bufferSource, partialTick);

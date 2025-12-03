@@ -25,7 +25,7 @@ public class RinModel extends GeoModel<RinEntity> {
 
     @Override
     public Identifier getTextureResource(RinEntity animatable) {
-        return texture;
+        return Identifier.of(MikuPlushie.MOD_ID, variantToBlockTextureName(animatable));
     }
 
     @Override
@@ -73,4 +73,7 @@ public class RinModel extends GeoModel<RinEntity> {
 
     }
 
+    private String variantToBlockTextureName (RinEntity animatable) {
+        return "textures/block/" + animatable.getVariant().replace('_', '-') + ".png";
+    }
 }

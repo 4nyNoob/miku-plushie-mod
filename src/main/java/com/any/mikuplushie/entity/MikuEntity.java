@@ -3,43 +3,26 @@ package com.any.mikuplushie.entity;
 import com.any.mikuplushie.ModBlocks;
 import com.any.mikuplushie.ModItems;
 import com.any.mikuplushie.ModSoundEvents;
-import com.any.mikuplushie.block.LeekCropBlock;
 import com.any.mikuplushie.entity.goals.EatLeekGoal;
 import com.any.mikuplushie.entity.goals.MikuDelayedAttackGoal;
 import com.any.mikuplushie.entity.variant.MikuVariant;
-import com.mojang.datafixers.kinds.IdF;
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockState;
-import net.minecraft.block.Blocks;
 import net.minecraft.entity.*;
 import net.minecraft.entity.ai.goal.*;
-import net.minecraft.entity.attribute.DefaultAttributeContainer;
-import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.entity.data.DataTracker;
 import net.minecraft.entity.data.TrackedData;
 import net.minecraft.entity.data.TrackedDataHandlerRegistry;
-import net.minecraft.entity.mob.MobEntity;
-import net.minecraft.entity.passive.PassiveEntity;
 import net.minecraft.entity.passive.TameableEntity;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.particle.*;
-import net.minecraft.predicate.block.BlockStatePredicate;
 import net.minecraft.recipe.Ingredient;
-import net.minecraft.registry.tag.ItemTags;
-import net.minecraft.server.world.ServerWorld;
-import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvent;
-import net.minecraft.sound.SoundEvents;
-import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
 import net.minecraft.util.Util;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.*;
 import org.jetbrains.annotations.Nullable;
-import org.spongepowered.include.com.google.common.base.Predicates;
 import software.bernie.geckolib.animatable.GeoEntity;
 import software.bernie.geckolib.core.animatable.instance.AnimatableInstanceCache;
 import software.bernie.geckolib.core.animation.AnimatableManager;
@@ -47,26 +30,14 @@ import software.bernie.geckolib.core.animation.AnimationController;
 import software.bernie.geckolib.core.animation.RawAnimation;
 import software.bernie.geckolib.util.GeckoLibUtil;
 
-import java.util.EnumSet;
-import java.util.List;
-import java.util.function.Predicate;
-
-public class MikuEntity extends TameableEntity implements GeoEntity {
+public class MikuEntity extends PlushEntity implements GeoEntity {
 
     private static final TrackedData<Integer> MIKU_VARIANT = DataTracker.registerData(MikuEntity.class, TrackedDataHandlerRegistry.INTEGER);
-
-    private boolean songPlaying;
-    @Nullable
-    private BlockPos songSource;
-
-
 
     private static final int MAX_LEEK_TIMER = 40;
     private int eatLeekTimer;
     private EatLeekGoal eatLeekGoal;
     public boolean eatingLeek;
-
-
 
     private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
     private static final RawAnimation IDLE = RawAnimation.begin().thenLoop("misc.idle");
@@ -84,8 +55,6 @@ public class MikuEntity extends TameableEntity implements GeoEntity {
 
     private static RawAnimation SELECTED_DANCE = DANCE;
     private static RawAnimation SELECTED_ATTACK = SWIPE;
-
-
 
     public MikuEntity(EntityType<? extends TameableEntity> entityType, World world) {
         super(entityType, world);
@@ -106,13 +75,6 @@ public class MikuEntity extends TameableEntity implements GeoEntity {
         this.goalSelector.add(9, new LookAroundGoal(this));
         this.targetSelector.add(1, new TrackOwnerAttackerGoal(this));
         this.targetSelector.add(2, new AttackWithOwnerGoal(this));
-    }
-
-    public static DefaultAttributeContainer.Builder createAttributes() {
-        return MobEntity.createMobAttributes()
-            .add(EntityAttributes.GENERIC_MAX_HEALTH, 10.0F)
-            .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.3F)
-            .add(EntityAttributes.GENERIC_ATTACK_DAMAGE, 2.0F);
     }
 
     //ANIMATION CONTROLLER
@@ -154,21 +116,7 @@ public class MikuEntity extends TameableEntity implements GeoEntity {
         return this.cache;
     }
 
-    //MC ENTITY STUFF
-    @Override
-    protected float getActiveEyeHeight(EntityPose pose, EntityDimensions dimensions) {
-        if (pose.equals(EntityPose.STANDING)){
-            return 0.6F;
-        } else {
-            return 0.85F;
-        }
-    }
-
-    @Override
-    public final int getHandSwingDuration() {
-        return 10;
-    }
-
+    //RANDOM ATTACK ANIM
     @Override
     public void swingHand(Hand hand) {
         super.swingHand(hand);
@@ -180,134 +128,23 @@ public class MikuEntity extends TameableEntity implements GeoEntity {
         }
     }
 
-    @Override
-    public @Nullable PassiveEntity createChild(ServerWorld world, PassiveEntity entity) {
-        return null;
-    }
-
-    @Override
-    public EntityView method_48926() {
-        return this.getWorld();
-    }
-
+    //TRACK VARIANT
     @Override
     protected void initDataTracker() {
         super.initDataTracker();
-        //TRACK MIKU VARIANT BETWEEN SERVER AND CLIENT
         this.dataTracker.startTracking(MIKU_VARIANT, 0);
     }
 
-    @Override
-    public EntityData initialize(ServerWorldAccess world, LocalDifficulty difficulty, SpawnReason spawnReason, @Nullable EntityData entityData, @Nullable NbtCompound entityNbt) {
-        //INITIALIZE MIKU WITH A RANDOM VARIANT
-        MikuVariant variant = Util.getRandom(MikuVariant.values(), this.random);
-        setVariant(variant);
-        return super.initialize(world, difficulty, spawnReason, entityData, entityNbt);
-    }
-
+    //DEATH SOUND
     @Override
     protected @Nullable SoundEvent getDeathSound() {
         return ModSoundEvents.MIKU_BYE;
     }
 
-    @Override
-    public float getSoundPitch() {
-        //FIXED SOUND PITCH
-        return 1F;
-    }
-
-    //ENTITY RIGHT CLICK
-    @Override
-    public ActionResult interactMob(PlayerEntity player, Hand hand) {
-        ItemStack playerItemStack = player.getStackInHand(player.getActiveHand());
-        ItemStack entityHandStack = this.getMainHandStack();
-
-        //UNTAMED INTERACTION
-        if (!this.isTamed() && player.getStackInHand(hand).isOf(ModItems.CANUDINHO)) {
-            if (!player.getAbilities().creativeMode) {
-                playerItemStack.decrement(1);
-            }
-
-            if (!this.isSilent()) {
-                this.getWorld()
-                    .playSound(null, this.getX(), this.getY(), this.getZ(),
-                        SoundEvents.ENTITY_GENERIC_EAT, this.getSoundCategory(),
-                        1.0F, 1.0F + (this.random.nextFloat() - this.random.nextFloat()) * 0.2F
-                    );
-            }
-
-            if (!this.getWorld().isClient) {
-                if (this.random.nextInt(10) == 0) {
-                    this.setOwner(player);
-                    this.getWorld().sendEntityStatus(this, EntityStatuses.ADD_POSITIVE_PLAYER_REACTION_PARTICLES);
-                } else {
-                    this.getWorld().sendEntityStatus(this, EntityStatuses.ADD_NEGATIVE_PLAYER_REACTION_PARTICLES);
-                }
-            }
-
-            return ActionResult.success(this.getWorld().isClient);
-        }
-        //TAMED INTERACTION
-        else if (this.isOnGround() && this.isTamed() && this.isOwner(player)) {
-            //DO STUFF ON SERVER
-            if (!this.getWorld().isClient) {
-                //DROP HELD ITEM
-                if (player.isSneaking() && playerItemStack.isEmpty()) {
-                    this.dropStack(entityHandStack);
-                    this.equipStack(EquipmentSlot.MAINHAND, ItemStack.EMPTY);
-                }
-                //TOGGLE SITTING POSE
-                else {
-                    this.setSitting(!this.isSitting());
-                    this.setInSittingPose(!this.isInSittingPose());
-                    if (this.isInSittingPose()) {
-                        this.setPose(EntityPose.STANDING);
-                    } else {
-                        this.setPose(EntityPose.SITTING);
-                    }
-                }
-            }
-            return ActionResult.success(this.getWorld().isClient);
-        }
-        //OTHER PLAYER INTERACTION
-        else {
-            return super.interactMob(player, hand);
-        }
-    }
-
-    //PICK UP SWORDS FORM THE GROUND
-    @Override
-    public boolean canPickupItem(ItemStack stack) {
-        return stack.isIn(ItemTags.SWORDS);
-    }
-
-    @Override
-    public boolean canPickUpLoot() {
-        return true;
-    }
-
-    @Override
-    protected void mobTick() {
-        //UPDATE LEEK TIMER
-        this.eatLeekTimer = this.eatLeekGoal.getTimer();
-        super.mobTick();
-    }
-
+    //UPDATE EAT LEEK GOAL
     @Override
     public void tickMovement() {
         super.tickMovement();
-        this.tickHandSwing();
-
-        //GET NEARBY SONG PLAYING
-        if (
-            this.songSource == null
-            || !this.songSource.isWithinDistance(this.getPos(), 8D)
-            || !this.getWorld().getBlockState(this.songSource).isOf(Blocks.JUKEBOX)
-        )
-        {
-            this.songPlaying = false;
-            this.songSource = null;
-        }
 
         //CLIENT LEEK EATING TIMER
         if (this.getWorld().isClient){
@@ -352,6 +189,7 @@ public class MikuEntity extends TameableEntity implements GeoEntity {
         this.eatingLeek = eatingLeek;
     }
 
+    //SELECT RANDOM DANCE
     @Override
     public void setNearbySongPlaying(BlockPos songPosition, boolean playing) {
         this.songSource = songPosition;
@@ -366,13 +204,9 @@ public class MikuEntity extends TameableEntity implements GeoEntity {
         }
     }
 
-    public boolean isSongPlaying() {
-        return this.songPlaying;
-    }
-
     //MIKU VARIANTS
-    public MikuVariant getMikuVariant() {
-        return MikuVariant.byId(this.getTypeVariant()/* & 255*/);
+    public String getVariant() {
+        return MikuVariant.byId(this.getTypeVariant()).getBlock();
     }
 
     private int getTypeVariant() {
@@ -381,6 +215,13 @@ public class MikuEntity extends TameableEntity implements GeoEntity {
 
     public void setVariant(MikuVariant variant) {
         this.dataTracker.set(MIKU_VARIANT, variant.getId()/* & 255*/);
+    }
+
+    public void setVariantByBlock(String variant) {
+        for (int variation = 0; variation < MikuVariant.values().length; variation++) {
+            if (MikuVariant.byId(variation).getBlock().equals(variant))
+                this.dataTracker.set(MIKU_VARIANT, variation);
+        }
     }
 
     @Override

@@ -19,30 +19,30 @@ public class MikuModel extends GeoModel<MikuEntity> {
 
     @Override
     public Identifier getModelResource(MikuEntity animatable) {
-        MikuVariant variant = animatable.getMikuVariant();
+        String variant = animatable.getVariant();
         //VARIANTS THAT USE THE 2ND MODEL
         if (
-            variant.equals(MikuVariant.MIKU_PLUSH_MUSHROOM) ||
-            variant.equals(MikuVariant.MIKU_PLUSH_WEREWOMAN) ||
-            variant.equals(MikuVariant.MIKU_PLUSH_PATATI) ||
-            variant.equals(MikuVariant.MIKU_PLUSH_PATATA) ||
-            variant.equals(MikuVariant.MIKU_PLUSH_DEVIL) ||
-            variant.equals(MikuVariant.MIKU_PLUSH_WITCH)) {
+            variant.equals(MikuVariant.MIKU_PLUSH_MUSHROOM.getBlock()) ||
+            variant.equals(MikuVariant.MIKU_PLUSH_WEREWOMAN.getBlock()) ||
+            variant.equals(MikuVariant.MIKU_PLUSH_PATATI.getBlock()) ||
+            variant.equals(MikuVariant.MIKU_PLUSH_PATATA.getBlock()) ||
+            variant.equals(MikuVariant.MIKU_PLUSH_DEVIL.getBlock()) ||
+            variant.equals(MikuVariant.MIKU_PLUSH_WITCH.getBlock())) {
             return Identifier.of(MikuPlushie.MOD_ID, "geo/entity/" + entity + "_2" + ".geo.json");
         }
         //VARIANTS THAT USE THE 3RD MODEL
         else if (
-            variant.equals(MikuVariant.MIKU_PLUSH_XMAS_TREE) ||
-            variant.equals(MikuVariant.MIKU_PLUSH_SONIC) ||
-            variant.equals(MikuVariant.MIKU_PLUSH_DIGITAL_STARS_2025) ||
-            variant.equals(MikuVariant.MIKU_PLUSH_ROTTEN_GIRL) ||
-            variant.equals(MikuVariant.MIKU_PLUSH_PSYCHO_MODE) ||
-            variant.equals(MikuVariant.MIKU_PLUSH_DONT_BELIEVE_IN_T) ||
-            variant.equals(MikuVariant.MIKU_PLUSH_STATIC) ||
-            variant.equals(MikuVariant.MIKU_PLUSH_MOCHIMOCHI) ||
-            variant.equals(MikuVariant.MIKU_PLUSH_MONITORING) ||
-            variant.equals(MikuVariant.MIKU_PLUSH_HOLLOW_KNIGHT) ||
-            variant.equals(MikuVariant.MIKU_PLUSH_HORNET)
+            variant.equals(MikuVariant.MIKU_PLUSH_XMAS_TREE.getBlock()) ||
+            variant.equals(MikuVariant.MIKU_PLUSH_SONIC.getBlock()) ||
+            variant.equals(MikuVariant.MIKU_PLUSH_DIGITAL_STARS_2025.getBlock()) ||
+            variant.equals(MikuVariant.MIKU_PLUSH_ROTTEN_GIRL.getBlock()) ||
+            variant.equals(MikuVariant.MIKU_PLUSH_PSYCHO_MODE.getBlock()) ||
+            variant.equals(MikuVariant.MIKU_PLUSH_DONT_BELIEVE_IN_T.getBlock()) ||
+            variant.equals(MikuVariant.MIKU_PLUSH_STATIC.getBlock()) ||
+            variant.equals(MikuVariant.MIKU_PLUSH_MOCHIMOCHI.getBlock()) ||
+            variant.equals(MikuVariant.MIKU_PLUSH_MONITORING.getBlock()) ||
+            variant.equals(MikuVariant.MIKU_PLUSH_HOLLOW_KNIGHT.getBlock()) ||
+            variant.equals(MikuVariant.MIKU_PLUSH_HORNET.getBlock())
         ) {
             return Identifier.of(MikuPlushie.MOD_ID, "geo/entity/" + entity + "_3" + ".geo.json");
         }
@@ -112,6 +112,6 @@ public class MikuModel extends GeoModel<MikuEntity> {
     }
 
     private String variantToBlockTextureName (MikuEntity animatable) {
-        return "textures/block/" + animatable.getMikuVariant().getBlock().replace('_', '-') + ".png";
+        return "textures/block/" + animatable.getVariant().replace('_', '-') + ".png";
     }
 }

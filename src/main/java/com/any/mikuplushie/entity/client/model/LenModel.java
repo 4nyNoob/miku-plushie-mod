@@ -25,7 +25,7 @@ public class LenModel extends GeoModel<LenEntity> {
 
     @Override
     public Identifier getTextureResource(LenEntity animatable) {
-        return texture;
+        return Identifier.of(MikuPlushie.MOD_ID, variantToBlockTextureName(animatable));
     }
 
     @Override
@@ -73,4 +73,7 @@ public class LenModel extends GeoModel<LenEntity> {
 
     }
 
+    private String variantToBlockTextureName (LenEntity animatable) {
+        return "textures/block/" + animatable.getVariant().replace('_', '-') + ".png";
+    }
 }

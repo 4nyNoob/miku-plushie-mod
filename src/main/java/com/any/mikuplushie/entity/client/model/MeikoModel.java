@@ -14,7 +14,7 @@ public class MeikoModel extends GeoModel<MeikoEntity> {
 
     private final Identifier model = Identifier.of(MikuPlushie.MOD_ID, "geo/entity/" + entity + ".geo.json");
     private final Identifier texture = Identifier.of(MikuPlushie.MOD_ID, "textures/block/" + entity.replace('_', '-') + ".png");
-    private final Identifier animations = Identifier.of(MikuPlushie.MOD_ID, "animations/" + entity + ".animation.json");
+    private final Identifier animations = Identifier.of(MikuPlushie.MOD_ID, "animations/" + "miku_plush" + ".animation.json");
 
 
     @Override
@@ -78,6 +78,6 @@ public class MeikoModel extends GeoModel<MeikoEntity> {
     }
 
     private String variantToBlockTextureName (MeikoEntity animatable) {
-        return "textures/block/" + animatable.getMeikoVariant().getBlock().replace('_', '-') + ".png";
+        return "textures/block/" + animatable.getVariant().replace('_', '-') + ".png";
     }
 }

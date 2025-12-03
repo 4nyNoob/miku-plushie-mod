@@ -25,7 +25,7 @@ public class LukaModel extends GeoModel<LukaEntity> {
 
     @Override
     public Identifier getTextureResource(LukaEntity animatable) {
-        return texture;
+        return Identifier.of(MikuPlushie.MOD_ID, variantToBlockTextureName(animatable));
     }
 
     @Override
@@ -73,4 +73,7 @@ public class LukaModel extends GeoModel<LukaEntity> {
 
     }
 
+    private String variantToBlockTextureName (LukaEntity animatable) {
+        return "textures/block/" + animatable.getVariant().replace('_', '-') + ".png";
+    }
 }

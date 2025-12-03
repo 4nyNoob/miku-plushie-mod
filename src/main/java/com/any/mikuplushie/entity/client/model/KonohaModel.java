@@ -25,7 +25,7 @@ public class KonohaModel extends GeoModel<KonohaEntity> {
 
     @Override
     public Identifier getTextureResource(KonohaEntity animatable) {
-        return texture;
+        return Identifier.of(MikuPlushie.MOD_ID, variantToBlockTextureName(animatable));
     }
 
     @Override
@@ -73,4 +73,7 @@ public class KonohaModel extends GeoModel<KonohaEntity> {
 
     }
 
+    private String variantToBlockTextureName (KonohaEntity animatable) {
+        return "textures/block/" + animatable.getVariant().replace('_', '-') + ".png";
+    }
 }
