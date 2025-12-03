@@ -144,6 +144,8 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
         ;
         getOrCreateTagBuilder(MEIKO_PLUSH)
             .add(ModItems.MEIKO_PLUSH)
+            .add(ModItems.MEIKO_PLUSH_V3)
+            .add(ModItems.MEIKO_PLUSH_V4)
         ;
 
         getOrCreateTagBuilder(PLUSHIES)

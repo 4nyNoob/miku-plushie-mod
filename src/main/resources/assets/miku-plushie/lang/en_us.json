@@ -179,6 +179,10 @@
   "item.miku-plushie.teto_pickaxe_spoken_for": "Spoken For Teto Pickaxe",
   "block.miku-plushie.meiko_plush": "Meiko Plush",
   "item.miku-plushie.meiko_plush.tooltip": "§b§n@wassy_m",
+  "block.miku-plushie.meiko_plush_v3": "Meiko Plush V3",
+  "item.miku-plushie.meiko_plush_v3.tooltip": "§b§n@iximaxima",
+  "block.miku-plushie.meiko_plush_v4": "Meiko Plush V4",
+  "item.miku-plushie.meiko_plush_v4.tooltip": "§b§n@iximaxima",
 
 
   "item.group.miku_plushies": "Mikus!!",

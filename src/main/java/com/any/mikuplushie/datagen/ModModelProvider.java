@@ -109,6 +109,8 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerNorthDefaultHorizontalRotation(ModBlocks.MIKU_PLUSH_ROLLING_GIRL);
         blockStateModelGenerator.registerNorthDefaultHorizontalRotation(ModBlocks.TETO_PLUSH_SPOKEN_FOR);
         blockStateModelGenerator.registerNorthDefaultHorizontalRotation(ModBlocks.MEIKO_PLUSH);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(ModBlocks.MEIKO_PLUSH_V3);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(ModBlocks.MEIKO_PLUSH_V4);
 
         BlockModels.registerCrop(blockStateModelGenerator, ModBlocks.LEEK_CROP, CropBlock.AGE, 0, 1, 2, 3, 4, 5, 6, 7);
 	}

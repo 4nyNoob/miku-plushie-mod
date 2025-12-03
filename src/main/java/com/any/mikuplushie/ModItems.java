@@ -225,6 +225,10 @@ public class ModItems {
 
     public static final Item MEIKO_PLUSH =
         register(new MikuPlushieBlockItem(ModBlocks.MEIKO_PLUSH, new Item.Settings()), "meiko_plush");
+    public static final Item MEIKO_PLUSH_V3 =
+        register(new MikuPlushieBlockItem(ModBlocks.MEIKO_PLUSH_V3, new Item.Settings()), "meiko_plush_v3");
+    public static final Item MEIKO_PLUSH_V4 =
+        register(new MikuPlushieBlockItem(ModBlocks.MEIKO_PLUSH_V4, new Item.Settings()), "meiko_plush_v4");
 
 
 
@@ -348,6 +352,8 @@ public class ModItems {
             itemGroup.add(ModItems.TETO_PLUSH_SPOKEN_FOR);
             itemGroup.add(ModItems.TETO_PICKAXE_SPOKEN_FOR);
             itemGroup.add(ModItems.MEIKO_PLUSH);
+            itemGroup.add(ModItems.MEIKO_PLUSH_V3);
+            itemGroup.add(ModItems.MEIKO_PLUSH_V4);
 		});
 	}
 }

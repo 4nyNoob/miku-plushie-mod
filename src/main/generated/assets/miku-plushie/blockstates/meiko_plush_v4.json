@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "miku-plushie:block/meiko_plush_v4",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "miku-plushie:block/meiko_plush_v4"
+    },
+    "facing=south": {
+      "model": "miku-plushie:block/meiko_plush_v4",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "miku-plushie:block/meiko_plush_v4",
+      "y": 270
+    }
+  }
+}

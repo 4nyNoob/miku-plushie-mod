@@ -6,6 +6,8 @@ import java.util.Comparator;
 public enum MeikoVariant {
 
     MEIKO_PLUSH (0, "meiko_plush"),
+    MEIKO_PLUSH_V3 (0, "meiko_plush_v3"),
+    MEIKO_PLUSH_V4 (0, "meiko_plush_v4"),
     ;
 
     private static final MeikoVariant[] BY_ID = Arrays.stream(values()).sorted(Comparator.comparingInt(MeikoVariant::getId)).toArray(MeikoVariant[]::new);

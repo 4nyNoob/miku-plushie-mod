@@ -106,7 +106,9 @@ public class MikuPlushieClient implements ClientModInitializer {
 
             ModBlocks.KONOHA_PLUSH,
 
-            ModBlocks.MEIKO_PLUSH
+            ModBlocks.MEIKO_PLUSH,
+            ModBlocks.MEIKO_PLUSH_V3,
+            ModBlocks.MEIKO_PLUSH_V4
         );
 
         //CROP CUTOUT

@@ -670,6 +670,22 @@ public class ModBlocks {
         "meiko_plush",
         false
     );
+    public static final Block MEIKO_PLUSH_V3 = register(
+        new MikuPlushieBlock(AbstractBlock.Settings.copy(Blocks.FLOWER_POT)
+            .sounds(BlockSoundGroup.WOOL)
+            .nonOpaque()
+        ),
+        "meiko_plush_v3",
+        false
+    );
+    public static final Block MEIKO_PLUSH_V4 = register(
+        new MikuPlushieBlock(AbstractBlock.Settings.copy(Blocks.FLOWER_POT)
+            .sounds(BlockSoundGroup.WOOL)
+            .nonOpaque()
+        ),
+        "meiko_plush_v4",
+        false
+    );
 
 
     //NON PLUSH STUFF
