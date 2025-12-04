@@ -106,6 +106,10 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.MEIKO_PLUSH_V3, ModItems.MEIKO_PLUSH_V3);
         addDrop(ModBlocks.MEIKO_PLUSH_V4, ModItems.MEIKO_PLUSH_V4);
         addDrop(ModBlocks.GUMI_PLUSH, ModItems.GUMI_PLUSH);
+        addDrop(ModBlocks.GUMI_PLUSH_V3, ModItems.GUMI_PLUSH_V3);
+        addDrop(ModBlocks.GUMI_PLUSH_V4, ModItems.GUMI_PLUSH_V4);
+        addDrop(ModBlocks.GUMI_PLUSH_V6, ModItems.GUMI_PLUSH_V6);
+        addDrop(ModBlocks.MIKU_PLUSH_DEEP_SEA_GIRL, ModItems.MIKU_PLUSH_DEEP_SEA_GIRL);
 
         LootCondition.Builder leekLootCondition =
             BlockStatePropertyLootCondition.builder(ModBlocks.LEEK_CROP).properties(StatePredicate.Builder.create().exactMatch(CropBlock.AGE, 7));

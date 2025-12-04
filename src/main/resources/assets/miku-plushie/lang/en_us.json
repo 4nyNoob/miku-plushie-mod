@@ -185,6 +185,14 @@
   "item.miku-plushie.meiko_plush_v4.tooltip": "§b§n@iximaxima",
   "block.miku-plushie.gumi_plush": "Gumi Plush",
   "item.miku-plushie.gumi_plush.tooltip": "§b§n@masyuuki",
+  "block.miku-plushie.gumi_plush_v3": "Gumi Plush V3",
+  "item.miku-plushie.gumi_plush_v3.tooltip": "§b§n@masyuuki",
+  "block.miku-plushie.gumi_plush_v4": "Gumi Plush V4",
+  "item.miku-plushie.gumi_plush_v4.tooltip": "§b§n@masyuuki",
+  "block.miku-plushie.gumi_plush_v6": "Gumi Plush V6",
+  "item.miku-plushie.gumi_plush_v6.tooltip": "§b§n@nounoknown",
+  "block.miku-plushie.miku_plush_deep_sea_girl": "Deep Sea Girl Miku Plush",
+  "item.miku-plushie.miku_plush_deep_sea_girl.tooltip": "§b§n@haruyo_",
 
 
   "item.group.miku_plushies": "Mikus!!",

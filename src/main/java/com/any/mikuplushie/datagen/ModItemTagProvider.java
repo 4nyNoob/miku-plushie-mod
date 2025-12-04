@@ -97,6 +97,7 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
             .add(ModItems.MIKU_PLUSH_HORNET)
             .add(ModItems.MIKU_PLUSH_WORLD_IS_MINE)
             .add(ModItems.MIKU_PLUSH_ROLLING_GIRL)
+            .add(ModItems.MIKU_PLUSH_DEEP_SEA_GIRL)
         ;
         getOrCreateTagBuilder(AIKO_PLUSH)
             .add(ModItems.AIKO_PLUSH)
@@ -150,6 +151,9 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
         ;
         getOrCreateTagBuilder(GUMI_PLUSH)
             .add(ModItems.GUMI_PLUSH)
+            .add(ModItems.GUMI_PLUSH_V3)
+            .add(ModItems.GUMI_PLUSH_V4)
+            .add(ModItems.GUMI_PLUSH_V6)
         ;
 
         getOrCreateTagBuilder(PLUSHIES)

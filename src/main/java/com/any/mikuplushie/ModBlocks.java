@@ -694,6 +694,38 @@ public class ModBlocks {
         "gumi_plush",
         false
     );
+    public static final Block GUMI_PLUSH_V3 = register(
+        new MikuPlushieBlock(AbstractBlock.Settings.copy(Blocks.FLOWER_POT)
+            .sounds(BlockSoundGroup.WOOL)
+            .nonOpaque()
+        ),
+        "gumi_plush_v3",
+        false
+    );
+    public static final Block GUMI_PLUSH_V4 = register(
+        new MikuPlushieBlock(AbstractBlock.Settings.copy(Blocks.FLOWER_POT)
+            .sounds(BlockSoundGroup.WOOL)
+            .nonOpaque()
+        ),
+        "gumi_plush_v4",
+        false
+    );
+    public static final Block GUMI_PLUSH_V6 = register(
+        new MikuPlushieBlock(AbstractBlock.Settings.copy(Blocks.FLOWER_POT)
+            .sounds(BlockSoundGroup.WOOL)
+            .nonOpaque()
+        ),
+        "gumi_plush_v6",
+        false
+    );
+    public static final Block MIKU_PLUSH_DEEP_SEA_GIRL = register(
+        new MikuPlushieBlock(AbstractBlock.Settings.copy(Blocks.FLOWER_POT)
+            .sounds(BlockSoundGroup.WOOL)
+            .nonOpaque()
+        ),
+        "miku_plush_deep_sea_girl",
+        false
+    );
 
 
     //NON PLUSH STUFF

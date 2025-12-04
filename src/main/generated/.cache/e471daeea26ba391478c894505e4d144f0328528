@@ -1,4 +1,4 @@
-// 1.20.1	2025-12-03T15:11:07.318241799	miku plushies/Block Loot Tables
+// 1.20.1	2025-12-03T23:35:40.975582465	miku plushies/Block Loot Tables
 7f941a076fe7908b6c5d59836c67e5bcb3417d8b data/miku-plushie/loot_tables/blocks/teto_plush_dont_believe_in_t.json
 af68195ac8c10224169e0ac3c60fab2ecb875557 data/miku-plushie/loot_tables/blocks/miku_plush_frankenstein.json
 4916a50ba16c00f7477badf2b5a08cb0a7259d75 data/miku-plushie/loot_tables/blocks/teto_plush_spoken_for.json
@@ -7,12 +7,15 @@ d36adccb87a5ac543b64c2b85553704fab2d7d07 data/miku-plushie/loot_tables/blocks/te
 0fea5493d292ce6f29c90c0439dae3e44ebc2a0b data/miku-plushie/loot_tables/blocks/miku_plush_patata.json
 1605dca8474dc1cb7ac58d618cbdcc6b4c0ca9fb data/miku-plushie/loot_tables/blocks/miku_plush_br_sp.json
 bb3a4eb9eec16987d8a09f5e74306c34e201efc9 data/miku-plushie/loot_tables/blocks/miku_plush_zatsune.json
+be9d2127b1e6ca35e8cce10dc4a4838551d58133 data/miku-plushie/loot_tables/blocks/miku_plush_deep_sea_girl.json
 df25f93b71ca591017a3c1df30997c2fc8d22cf5 data/miku-plushie/loot_tables/blocks/teto_plush_lobster.json
 9780fd8b35e0d523ecbda361f6492d421c8b8ba4 data/miku-plushie/loot_tables/blocks/teto_plush_whatchacallitsname.json
+f586905a82d7b05e6d638f8dd2b0bb4a9299d7a6 data/miku-plushie/loot_tables/blocks/gumi_plush_v4.json
 8ab338800082d6d02871cc2448e1e668e106f861 data/miku-plushie/loot_tables/blocks/miku_plush_frog.json
 3fe3c565ffe7e4f77f0252bfd2379452f1187223 data/miku-plushie/loot_tables/blocks/miku_plush_hachune.json
 8f3c4d425a955f311d639d3bc09dcc751a9ae9f4 data/miku-plushie/loot_tables/blocks/teto_plush_shadow.json
 98d66e332924e1e96c41d77802cb173a5621e04c data/miku-plushie/loot_tables/blocks/miku_plush_rotten_girl.json
+a6e264c78642053b4925c060a025cc2c2c500d14 data/miku-plushie/loot_tables/blocks/gumi_plush_v3.json
 97705567dfc6f80b78d4ae956e652a3136a7865a data/miku-plushie/loot_tables/blocks/miku_plush_helloplanet.json
 5e0ec000526aa745b9c72446702e910198ed6720 data/miku-plushie/loot_tables/blocks/miku_plush_fortnite_neko.json
 b4f73d60abb9faa63d1134aa3fb2f325bfcdcb92 data/miku-plushie/loot_tables/blocks/miku_plush_personadancing.json
@@ -51,6 +54,7 @@ d931c5e28a5649af93c0cb9f815a40680784eb5b data/miku-plushie/loot_tables/blocks/gu
 c2e9e9c6f6aa207aed47d94e7aa0f081c3032ede data/miku-plushie/loot_tables/blocks/miku_plush_br_brown_bro.json
 66db0e6db50ecb6f7d7a92e616d8f02c30133f95 data/miku-plushie/loot_tables/blocks/miku_plush_psycho_mode.json
 1184382ef49c1660da70d43b367eda9f86902c90 data/miku-plushie/loot_tables/blocks/miku_plush.json
+df5a1cf70a6311ee34047143f589101ea7c3e33c data/miku-plushie/loot_tables/blocks/gumi_plush_v6.json
 943b83b469c0d20e21a184bbf57dc2cf40bf92fb data/miku-plushie/loot_tables/blocks/miku_plush_rolling_girl.json
 e87577a5cfa038d4c100bb6e2e8e60b4d86a8fa0 data/miku-plushie/loot_tables/blocks/miku_plush_br_fut_cam.json
 0c154444201255fa994c3038e5b13ef363dc6f70 data/miku-plushie/loot_tables/blocks/miku_plush_br_ba.json

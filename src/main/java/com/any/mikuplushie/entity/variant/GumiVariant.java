@@ -6,6 +6,9 @@ import java.util.Comparator;
 public enum GumiVariant {
 
     GUMI_PLUSH (0, "gumi_plush"),
+    GUMI_PLUSH_V3 (1, "gumi_plush_v3"),
+    GUMI_PLUSH_V4 (2, "gumi_plush_v4"),
+    GUMI_PLUSH_V6 (3, "gumi_plush_v6"),
     ;
 
     private static final GumiVariant[] BY_ID = Arrays.stream(values()).sorted(Comparator.comparingInt(GumiVariant::getId)).toArray(GumiVariant[]::new);

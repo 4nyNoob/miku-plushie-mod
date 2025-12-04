@@ -4,8 +4,8 @@
 	"ambientocclusion": false,
 	"texture_size": [64, 64],
 	"textures": {
-		"particle": "miku-plushie:block/gumi-plush",
-		"base": "miku-plushie:block/gumi-plush"
+		"particle": "miku-plushie:block/gumi-plush-v3",
+		"base": "miku-plushie:block/gumi-plush-v3"
 	},
 	"elements": [
 		{
@@ -189,12 +189,26 @@
 			"to": [8, 2, 8],
 			"rotation": {"angle": 22.5, "axis": "y", "origin": [8, 1, 8]},
 			"faces": {
-				"north": {"uv": [12, 7.5, 12.5, 8], "texture": "#base"},
-				"east": {"uv": [10.5, 7.5, 12, 8], "texture": "#base"},
-				"south": {"uv": [14, 7.5, 14.5, 8], "texture": "#base"},
-				"west": {"uv": [12.5, 7.5, 14, 8], "texture": "#base"},
-				"up": {"uv": [12.5, 7.5, 12, 6], "texture": "#base"},
-				"down": {"uv": [13, 6, 12.5, 7.5], "texture": "#base"}
+				"north": {"uv": [12, 5.5, 12.5, 6], "texture": "#base"},
+				"east": {"uv": [10.5, 5.5, 12, 6], "texture": "#base"},
+				"south": {"uv": [14, 5.5, 14.5, 6], "texture": "#base"},
+				"west": {"uv": [12.5, 5.5, 14, 6], "texture": "#base"},
+				"up": {"uv": [12.5, 5.5, 12, 4], "texture": "#base"},
+				"down": {"uv": [13, 4, 12.5, 5.5], "texture": "#base"}
+			}
+		},
+		{
+			"name": "leg",
+			"from": [5.75, -0.25, 1.75],
+			"to": [8.25, 2.25, 8.25],
+			"rotation": {"angle": 22.5, "axis": "y", "origin": [8, 1, 8]},
+			"faces": {
+				"north": {"uv": [1.5, 6, 2, 6.5], "texture": "#base"},
+				"east": {"uv": [0, 6, 1.5, 6.5], "texture": "#base"},
+				"south": {"uv": [3.5, 6, 4, 6.5], "texture": "#base"},
+				"west": {"uv": [2, 6, 3.5, 6.5], "texture": "#base"},
+				"up": {"uv": [2, 6, 1.5, 4.5], "texture": "#base"},
+				"down": {"uv": [2.5, 4.5, 2, 6], "texture": "#base"}
 			}
 		},
 		{
@@ -237,6 +251,20 @@
 				"west": {"uv": [12, 5.5, 10.5, 6], "texture": "#base"},
 				"up": {"uv": [12, 5.5, 12.5, 4], "texture": "#base"},
 				"down": {"uv": [12.5, 4, 13, 5.5], "texture": "#base"}
+			}
+		},
+		{
+			"name": "leg",
+			"from": [7.75, -0.25, 1.75],
+			"to": [10.25, 2.25, 8.25],
+			"rotation": {"angle": -22.5, "axis": "y", "origin": [8, 1, 8]},
+			"faces": {
+				"north": {"uv": [2, 6, 1.5, 6.5], "texture": "#base"},
+				"east": {"uv": [3.5, 6, 2, 6.5], "texture": "#base"},
+				"south": {"uv": [4, 6, 3.5, 6.5], "texture": "#base"},
+				"west": {"uv": [1.5, 6, 0, 6.5], "texture": "#base"},
+				"up": {"uv": [1.5, 6, 2, 4.5], "texture": "#base"},
+				"down": {"uv": [2, 4.5, 2.5, 6], "texture": "#base"}
 			}
 		}
 	],
@@ -311,13 +339,13 @@
 					"name": "leg",
 					"origin": [8, 0, 8],
 					"color": 0,
-					"children": [11, 12, 13]
+					"children": [11, 12, 13, 14]
 				},
 				{
 					"name": "leg",
 					"origin": [8, 0, 8],
 					"color": 0,
-					"children": [14, 15, 16]
+					"children": [15, 16, 17, 18]
 				}
 			]
 		}

@@ -79,6 +79,7 @@ public class MikuPlushieClient implements ClientModInitializer {
             ModBlocks.MIKU_PLUSH_HORNET,
             ModBlocks.MIKU_PLUSH_WORLD_IS_MINE,
             ModBlocks.MIKU_PLUSH_ROLLING_GIRL,
+            ModBlocks.MIKU_PLUSH_DEEP_SEA_GIRL,
 
             ModBlocks.AIKO_PLUSH,
 
@@ -110,7 +111,10 @@ public class MikuPlushieClient implements ClientModInitializer {
             ModBlocks.MEIKO_PLUSH_V3,
             ModBlocks.MEIKO_PLUSH_V4,
 
-            ModBlocks.GUMI_PLUSH
+            ModBlocks.GUMI_PLUSH,
+            ModBlocks.GUMI_PLUSH_V3,
+            ModBlocks.GUMI_PLUSH_V4,
+            ModBlocks.GUMI_PLUSH_V6
         );
 
         //CROP CUTOUT

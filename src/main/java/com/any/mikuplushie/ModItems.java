@@ -231,6 +231,14 @@ public class ModItems {
         register(new MikuPlushieBlockItem(ModBlocks.MEIKO_PLUSH_V4, new Item.Settings()), "meiko_plush_v4");
     public static final Item GUMI_PLUSH =
         register(new MikuPlushieBlockItem(ModBlocks.GUMI_PLUSH, new Item.Settings()), "gumi_plush");
+    public static final Item GUMI_PLUSH_V3 =
+        register(new MikuPlushieBlockItem(ModBlocks.GUMI_PLUSH_V3, new Item.Settings()), "gumi_plush_v3");
+    public static final Item GUMI_PLUSH_V4 =
+        register(new MikuPlushieBlockItem(ModBlocks.GUMI_PLUSH_V4, new Item.Settings()), "gumi_plush_v4");
+    public static final Item GUMI_PLUSH_V6 =
+        register(new MikuPlushieBlockItem(ModBlocks.GUMI_PLUSH_V6, new Item.Settings()), "gumi_plush_v6");
+    public static final Item MIKU_PLUSH_DEEP_SEA_GIRL =
+        register(new MikuPlushieBlockItem(ModBlocks.MIKU_PLUSH_DEEP_SEA_GIRL, new Item.Settings()), "miku_plush_deep_sea_girl");
 
 
 
@@ -357,6 +365,10 @@ public class ModItems {
             itemGroup.add(ModItems.MEIKO_PLUSH_V3);
             itemGroup.add(ModItems.MEIKO_PLUSH_V4);
             itemGroup.add(ModItems.GUMI_PLUSH);
+            itemGroup.add(ModItems.GUMI_PLUSH_V3);
+            itemGroup.add(ModItems.GUMI_PLUSH_V4);
+            itemGroup.add(ModItems.GUMI_PLUSH_V6);
+            itemGroup.add(ModItems.MIKU_PLUSH_DEEP_SEA_GIRL);
 		});
 	}
 }

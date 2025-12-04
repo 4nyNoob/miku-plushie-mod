@@ -575,6 +575,13 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .input(Items.BROWN_WOOL)
                 .criterion(FabricRecipeProvider.hasItem(ModBlocks.MIKU_PLUSH), FabricRecipeProvider.conditionsFromItem(ModBlocks.MIKU_PLUSH))
                 .offerTo(exporter);
+
+            ShapelessRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ModBlocks.MIKU_PLUSH_DEEP_SEA_GIRL)
+                .input(ModBlocks.MIKU_PLUSH)
+                .input(Items.TUBE_CORAL)
+                .input(Items.BUBBLE_CORAL)
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.MIKU_PLUSH), FabricRecipeProvider.conditionsFromItem(ModBlocks.MIKU_PLUSH))
+                .offerTo(exporter);
         }
 
         //TETO
@@ -790,17 +797,23 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .criterion(FabricRecipeProvider.hasItem(Items.ORANGE_WOOL), FabricRecipeProvider.conditionsFromItem(Items.ORANGE_WOOL))
                 .offerTo(exporter);
 
-//            ShapelessRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ModBlocks.MEIKO_PLUSH_V3)
-//                .input(ModBlocks.MEIKO_PLUSH)
-//                .input(Items.IRON_INGOT, 1)
-//                .criterion(FabricRecipeProvider.hasItem(ModBlocks.MEIKO_PLUSH), FabricRecipeProvider.conditionsFromItem(ModBlocks.MEIKO_PLUSH))
-//                .offerTo(exporter);
-//
-//            ShapelessRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ModBlocks.MEIKO_PLUSH_V4)
-//                .input(ModBlocks.MEIKO_PLUSH)
-//                .input(Items.IRON_INGOT, 2)
-//                .criterion(FabricRecipeProvider.hasItem(ModBlocks.MEIKO_PLUSH), FabricRecipeProvider.conditionsFromItem(ModBlocks.MEIKO_PLUSH))
-//                .offerTo(exporter);
+            ShapelessRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ModBlocks.GUMI_PLUSH_V3)
+                .input(ModBlocks.GUMI_PLUSH)
+                .input(Items.IRON_INGOT, 1)
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.GUMI_PLUSH), FabricRecipeProvider.conditionsFromItem(ModBlocks.GUMI_PLUSH))
+                .offerTo(exporter);
+
+            ShapelessRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ModBlocks.GUMI_PLUSH_V4)
+                .input(ModBlocks.GUMI_PLUSH)
+                .input(Items.IRON_INGOT, 2)
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.GUMI_PLUSH), FabricRecipeProvider.conditionsFromItem(ModBlocks.GUMI_PLUSH))
+                .offerTo(exporter);
+
+            ShapelessRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ModBlocks.GUMI_PLUSH_V6)
+                .input(ModBlocks.GUMI_PLUSH_V4)
+                .input(Items.REDSTONE, 1)
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.GUMI_PLUSH_V4), FabricRecipeProvider.conditionsFromItem(ModBlocks.GUMI_PLUSH_V4))
+                .offerTo(exporter);
         }
 
     }
