@@ -1,5 +1,6 @@
 package com.any.mikuplushie;
 
+import com.any.mikuplushie.datagen.ModItemTagProvider;
 import com.any.mikuplushie.item.MikuPlushieBlockItem;
 import com.any.mikuplushie.item.ModFoodComponents;
 import com.any.mikuplushie.item.PlushToolMaterial;
@@ -14,7 +15,14 @@ import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.Rarity;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Objects;
+
 public class ModItems {
+
+    public static List<Item> PLUSH_ITEMS = new ArrayList<>();
+    public static List<Item> PICKAXE_ITEMS = new ArrayList<>();
 
 	public static final RegistryKey<ItemGroup> MIKU_GROUP_KEY = RegistryKey.of(Registries.ITEM_GROUP.getKey(),
 		new Identifier(MikuPlushie.MOD_ID, "item_group")
@@ -30,6 +38,7 @@ public class ModItems {
         register(new Item(new Item.Settings().rarity(Rarity.RARE)), "canudinho");
 	public static final Item BAGUETTE =
         register(new Item(new Item.Settings().food(ModFoodComponents.BAGUETTE)), "baguette");
+
 
 
 	public static final Item MIKU_PLUSH_BR =
@@ -249,12 +258,19 @@ public class ModItems {
 
 
 
-	public static Item register(Item item, String id) {
-		// Create the identifier for the item.
-		Identifier itemID = Identifier.of(MikuPlushie.MOD_ID, id);
 
-        // Return the registered item!
-		return Registry.register(Registries.ITEM, itemID, item);
+	public static Item register(Item item, String id) {
+		Identifier itemID = Identifier.of(MikuPlushie.MOD_ID, id);
+        Item register = Registry.register(Registries.ITEM, itemID, item);
+
+        if (item instanceof MikuPlushieBlockItem){
+            PLUSH_ITEMS.add(item.getDefaultStack().getItem());
+        }
+        if (item instanceof PickaxeItem){
+            PICKAXE_ITEMS.add(item);
+        }
+
+        return register;
 	}
 
 
@@ -265,110 +281,119 @@ public class ModItems {
 		Registry.register(Registries.ITEM_GROUP, MIKU_GROUP_KEY, MIKU_GROUP);
 
 		ItemGroupEvents.modifyEntriesEvent(MIKU_GROUP_KEY).register(itemGroup -> {
+
 			itemGroup.add(ModItems.CANUDINHO);
 			itemGroup.add(ModItems.BAGUETTE);
 			itemGroup.add(ModItems.LEEK_SEEDS);
 			itemGroup.add(ModItems.LEEK);
 
-			itemGroup.add(ModItems.MIKU_PLUSH_BR);
-			itemGroup.add(ModItems.MIKU_PLUSH_BR_BA);
-			itemGroup.add(ModItems.MIKU_PLUSH_BIK);
-			itemGroup.add(ModItems.MIKU_PLUSH_BR_BEACH);
-			itemGroup.add(ModItems.MIKU_PLUSH_BR_BRAID);
-			itemGroup.add(ModItems.MIKU_PLUSH_BR_BA_DRUM);
-			itemGroup.add(ModItems.MIKU_PLUSH_BR_PA);
-			itemGroup.add(ModItems.MIKU_PLUSH_BR_SP);
-			itemGroup.add(ModItems.MIKU_PLUSH_BR_MG);
-			itemGroup.add(ModItems.MIKU_PLUSH_BR_BROWN_BRO);
-			itemGroup.add(ModItems.MIKU_PLUSH_BR_ELECTRICIAN);
-			itemGroup.add(ModItems.MIKU_PLUSH_BR_BIK_ORANGE);
-			itemGroup.add(ModItems.MIKU_PLUSH_BR_AM);
-			itemGroup.add(ModItems.MIKU_PLUSH_BR_FUT_FLA);
-			itemGroup.add(ModItems.MIKU_PLUSH_BR_FUT_CAM);
-			itemGroup.add(ModItems.MIKU_PLUSH_BR_FUT_CRVG);
-			itemGroup.add(ModItems.MIKU_PLUSH_BR_GO);
-			itemGroup.add(ModItems.MIKU_PLUSH_BR_SCHOOL_PE);
-			itemGroup.add(ModItems.MIKU_PLUSH_BR_RS);
-			itemGroup.add(ModItems.MIKU_PLUSH_FROG);
-			itemGroup.add(ModItems.MIKU_PLUSH_MUSHROOM);
-			itemGroup.add(ModItems.MIKU_PLUSH_SENBONZAKURA);
-			itemGroup.add(ModItems.MIKU_PLUSH_URAOTOMELOVERS);
-			itemGroup.add(ModItems.MIKU_PLUSH_PERSONADANCING);
-			itemGroup.add(ModItems.MIKU_PLUSH_HELLOPLANET);
-			itemGroup.add(ModItems.MIKU_PLUSH_HACHUNE);
-			itemGroup.add(ModItems.MIKU_PLUSH_ZATSUNE);
-			itemGroup.add(ModItems.MIKU_PLUSH_INFINITY);
-			itemGroup.add(ModItems.MIKU_PLUSH_VAMPIRE);
-			itemGroup.add(ModItems.MIKU_PLUSH_WEREWOMAN);
-			itemGroup.add(ModItems.MIKU_PLUSH_JASON);
-			itemGroup.add(ModItems.MIKU_PLUSH_MICHAEL_MYERS);
-			itemGroup.add(ModItems.MIKU_PLUSH_PUMPKIN);
-			itemGroup.add(ModItems.MIKU_PLUSH_GHOSTFACE);
-			itemGroup.add(ModItems.MIKU_PLUSH_FRANKENSTEIN);
-			itemGroup.add(ModItems.MIKU_PLUSH_MUMMY);
-			itemGroup.add(ModItems.MIKU_PLUSH_GHOST);
-			itemGroup.add(ModItems.MIKU_PLUSH_PATATI);
-			itemGroup.add(ModItems.MIKU_PLUSH_PATATA);
-			itemGroup.add(ModItems.MIKU_PLUSH_DEVIL);
-			itemGroup.add(ModItems.MIKU_PLUSH_WITCH);
-			itemGroup.add(ModItems.MIKU_PLUSH_SANTA);
-			itemGroup.add(ModItems.MIKU_PLUSH_REINDEER);
-			itemGroup.add(ModItems.MIKU_PLUSH_SANTA_ELF);
-			itemGroup.add(ModItems.MIKU_PLUSH_XMAS_TREE);
-			itemGroup.add(ModItems.AIKO_PLUSH);
-			itemGroup.add(ModItems.TETO_PLUSH);
-			itemGroup.add(ModItems.TETO_PICKAXE);
-			itemGroup.add(ModItems.AKITA_NERU_PLUSH);
-			itemGroup.add(ModItems.MIKU_PLUSH);
-			itemGroup.add(ModItems.RIN_PLUSH);
-			itemGroup.add(ModItems.LEN_PLUSH);
-			itemGroup.add(ModItems.MIKU_PLUSH_SONIC_CROSSWORLDS);
-			itemGroup.add(ModItems.MIKU_PLUSH_FORTNITE_NEKO);
-			itemGroup.add(ModItems.MIKU_PLUSH_V4);
-			itemGroup.add(ModItems.MIKU_PLUSH_MESMERIZER);
-			itemGroup.add(ModItems.TETO_PLUSH_MESMERIZER);
-			itemGroup.add(ModItems.TETO_PICKAXE_MESMERIZER);
-			itemGroup.add(ModItems.MIKU_PLUSH_SONIC);
-			itemGroup.add(ModItems.TETO_PLUSH_SHADOW);
-			itemGroup.add(ModItems.AKITA_NERU_PLUSH_TAILS);
-			itemGroup.add(ModItems.TETO_PLUSH_BIRDBRAIN);
-			itemGroup.add(ModItems.TETO_PICKAXE_BIRDBRAIN);
-			itemGroup.add(ModItems.MIKU_PLUSH_DIGITAL_STARS_2025);
-			itemGroup.add(ModItems.MIKU_PLUSH_ROTTEN_GIRL);
-			itemGroup.add(ModItems.TETO_PLUSH_REGRET_ROCK);
-			itemGroup.add(ModItems.TETO_PICKAXE_REGRET_ROCK);
-			itemGroup.add(ModItems.MIKU_PLUSH_PSYCHO_MODE);
-			itemGroup.add(ModItems.MIKU_PLUSH_DONT_BELIEVE_IN_T);
-			itemGroup.add(ModItems.TETO_PLUSH_DONT_BELIEVE_IN_T);
-			itemGroup.add(ModItems.TETO_PICKAXE_DONT_BELIEVE_IN_T);
-			itemGroup.add(ModItems.TETO_PLUSH_LIAR_DANCER);
-			itemGroup.add(ModItems.TETO_PICKAXE_LIAR_DANCER);
-			itemGroup.add(ModItems.MIKU_PLUSH_STATIC);
-			itemGroup.add(ModItems.MIKU_PLUSH_MOCHIMOCHI);
-			itemGroup.add(ModItems.TETO_PLUSH_WHATCHACALLITSNAME);
-			itemGroup.add(ModItems.TETO_PICKAXE_WHATCHACALLITSNAME);
-			itemGroup.add(ModItems.MIKU_PLUSH_MONITORING);
-			itemGroup.add(ModItems.KONOHA_PLUSH);
-			itemGroup.add(ModItems.LUKA_PLUSH);
-            itemGroup.add(ModItems.TETO_PLUSH_SOME_MORE_OF_THAT_SONG);
-            itemGroup.add(ModItems.TETO_PICKAXE_SOME_MORE_OF_THAT_SONG);
-            itemGroup.add(ModItems.TETO_PLUSH_LOBSTER);
-            itemGroup.add(ModItems.MIKU_PLUSH_HOLLOW_KNIGHT);
-            itemGroup.add(ModItems.MIKU_PLUSH_HORNET);
-            itemGroup.add(ModItems.TETO_PLUSH_SYNTHV);
-            itemGroup.add(ModItems.TETO_PICKAXE_SYNTHV);
-            itemGroup.add(ModItems.MIKU_PLUSH_WORLD_IS_MINE);
-            itemGroup.add(ModItems.MIKU_PLUSH_ROLLING_GIRL);
-            itemGroup.add(ModItems.TETO_PLUSH_SPOKEN_FOR);
-            itemGroup.add(ModItems.TETO_PICKAXE_SPOKEN_FOR);
-            itemGroup.add(ModItems.MEIKO_PLUSH);
-            itemGroup.add(ModItems.MEIKO_PLUSH_V3);
-            itemGroup.add(ModItems.MEIKO_PLUSH_V4);
-            itemGroup.add(ModItems.GUMI_PLUSH);
-            itemGroup.add(ModItems.GUMI_PLUSH_V3);
-            itemGroup.add(ModItems.GUMI_PLUSH_V4);
-            itemGroup.add(ModItems.GUMI_PLUSH_V6);
-            itemGroup.add(ModItems.MIKU_PLUSH_DEEP_SEA_GIRL);
+            for (Item plushItem : PLUSH_ITEMS) {
+                itemGroup.add(plushItem);
+            }
+            for (Item pickaxeItem : PICKAXE_ITEMS) {
+                itemGroup.add(pickaxeItem);
+            }
+
+
+//			itemGroup.add(ModItems.MIKU_PLUSH_BR);
+//			itemGroup.add(ModItems.MIKU_PLUSH_BR_BA);
+//			itemGroup.add(ModItems.MIKU_PLUSH_BIK);
+//			itemGroup.add(ModItems.MIKU_PLUSH_BR_BEACH);
+//			itemGroup.add(ModItems.MIKU_PLUSH_BR_BRAID);
+//			itemGroup.add(ModItems.MIKU_PLUSH_BR_BA_DRUM);
+//			itemGroup.add(ModItems.MIKU_PLUSH_BR_PA);
+//			itemGroup.add(ModItems.MIKU_PLUSH_BR_SP);
+//			itemGroup.add(ModItems.MIKU_PLUSH_BR_MG);
+//			itemGroup.add(ModItems.MIKU_PLUSH_BR_BROWN_BRO);
+//			itemGroup.add(ModItems.MIKU_PLUSH_BR_ELECTRICIAN);
+//			itemGroup.add(ModItems.MIKU_PLUSH_BR_BIK_ORANGE);
+//			itemGroup.add(ModItems.MIKU_PLUSH_BR_AM);
+//			itemGroup.add(ModItems.MIKU_PLUSH_BR_FUT_FLA);
+//			itemGroup.add(ModItems.MIKU_PLUSH_BR_FUT_CAM);
+//			itemGroup.add(ModItems.MIKU_PLUSH_BR_FUT_CRVG);
+//			itemGroup.add(ModItems.MIKU_PLUSH_BR_GO);
+//			itemGroup.add(ModItems.MIKU_PLUSH_BR_SCHOOL_PE);
+//			itemGroup.add(ModItems.MIKU_PLUSH_BR_RS);
+//			itemGroup.add(ModItems.MIKU_PLUSH_FROG);
+//			itemGroup.add(ModItems.MIKU_PLUSH_MUSHROOM);
+//			itemGroup.add(ModItems.MIKU_PLUSH_SENBONZAKURA);
+//			itemGroup.add(ModItems.MIKU_PLUSH_URAOTOMELOVERS);
+//			itemGroup.add(ModItems.MIKU_PLUSH_PERSONADANCING);
+//			itemGroup.add(ModItems.MIKU_PLUSH_HELLOPLANET);
+//			itemGroup.add(ModItems.MIKU_PLUSH_HACHUNE);
+//			itemGroup.add(ModItems.MIKU_PLUSH_ZATSUNE);
+//			itemGroup.add(ModItems.MIKU_PLUSH_INFINITY);
+//			itemGroup.add(ModItems.MIKU_PLUSH_VAMPIRE);
+//			itemGroup.add(ModItems.MIKU_PLUSH_WEREWOMAN);
+//			itemGroup.add(ModItems.MIKU_PLUSH_JASON);
+//			itemGroup.add(ModItems.MIKU_PLUSH_MICHAEL_MYERS);
+//			itemGroup.add(ModItems.MIKU_PLUSH_PUMPKIN);
+//			itemGroup.add(ModItems.MIKU_PLUSH_GHOSTFACE);
+//			itemGroup.add(ModItems.MIKU_PLUSH_FRANKENSTEIN);
+//			itemGroup.add(ModItems.MIKU_PLUSH_MUMMY);
+//			itemGroup.add(ModItems.MIKU_PLUSH_GHOST);
+//			itemGroup.add(ModItems.MIKU_PLUSH_PATATI);
+//			itemGroup.add(ModItems.MIKU_PLUSH_PATATA);
+//			itemGroup.add(ModItems.MIKU_PLUSH_DEVIL);
+//			itemGroup.add(ModItems.MIKU_PLUSH_WITCH);
+//			itemGroup.add(ModItems.MIKU_PLUSH_SANTA);
+//			itemGroup.add(ModItems.MIKU_PLUSH_REINDEER);
+//			itemGroup.add(ModItems.MIKU_PLUSH_SANTA_ELF);
+//			itemGroup.add(ModItems.MIKU_PLUSH_XMAS_TREE);
+//			itemGroup.add(ModItems.AIKO_PLUSH);
+//			itemGroup.add(ModItems.TETO_PLUSH);
+//			itemGroup.add(ModItems.TETO_PICKAXE);
+//			itemGroup.add(ModItems.AKITA_NERU_PLUSH);
+//			itemGroup.add(ModItems.MIKU_PLUSH);
+//			itemGroup.add(ModItems.RIN_PLUSH);
+//			itemGroup.add(ModItems.LEN_PLUSH);
+//			itemGroup.add(ModItems.MIKU_PLUSH_SONIC_CROSSWORLDS);
+//			itemGroup.add(ModItems.MIKU_PLUSH_FORTNITE_NEKO);
+//			itemGroup.add(ModItems.MIKU_PLUSH_V4);
+//			itemGroup.add(ModItems.MIKU_PLUSH_MESMERIZER);
+//			itemGroup.add(ModItems.TETO_PLUSH_MESMERIZER);
+//			itemGroup.add(ModItems.TETO_PICKAXE_MESMERIZER);
+//			itemGroup.add(ModItems.MIKU_PLUSH_SONIC);
+//			itemGroup.add(ModItems.TETO_PLUSH_SHADOW);
+//			itemGroup.add(ModItems.AKITA_NERU_PLUSH_TAILS);
+//			itemGroup.add(ModItems.TETO_PLUSH_BIRDBRAIN);
+//			itemGroup.add(ModItems.TETO_PICKAXE_BIRDBRAIN);
+//			itemGroup.add(ModItems.MIKU_PLUSH_DIGITAL_STARS_2025);
+//			itemGroup.add(ModItems.MIKU_PLUSH_ROTTEN_GIRL);
+//			itemGroup.add(ModItems.TETO_PLUSH_REGRET_ROCK);
+//			itemGroup.add(ModItems.TETO_PICKAXE_REGRET_ROCK);
+//			itemGroup.add(ModItems.MIKU_PLUSH_PSYCHO_MODE);
+//			itemGroup.add(ModItems.MIKU_PLUSH_DONT_BELIEVE_IN_T);
+//			itemGroup.add(ModItems.TETO_PLUSH_DONT_BELIEVE_IN_T);
+//			itemGroup.add(ModItems.TETO_PICKAXE_DONT_BELIEVE_IN_T);
+//			itemGroup.add(ModItems.TETO_PLUSH_LIAR_DANCER);
+//			itemGroup.add(ModItems.TETO_PICKAXE_LIAR_DANCER);
+//			itemGroup.add(ModItems.MIKU_PLUSH_STATIC);
+//			itemGroup.add(ModItems.MIKU_PLUSH_MOCHIMOCHI);
+//			itemGroup.add(ModItems.TETO_PLUSH_WHATCHACALLITSNAME);
+//			itemGroup.add(ModItems.TETO_PICKAXE_WHATCHACALLITSNAME);
+//			itemGroup.add(ModItems.MIKU_PLUSH_MONITORING);
+//			itemGroup.add(ModItems.KONOHA_PLUSH);
+//			itemGroup.add(ModItems.LUKA_PLUSH);
+//            itemGroup.add(ModItems.TETO_PLUSH_SOME_MORE_OF_THAT_SONG);
+//            itemGroup.add(ModItems.TETO_PICKAXE_SOME_MORE_OF_THAT_SONG);
+//            itemGroup.add(ModItems.TETO_PLUSH_LOBSTER);
+//            itemGroup.add(ModItems.MIKU_PLUSH_HOLLOW_KNIGHT);
+//            itemGroup.add(ModItems.MIKU_PLUSH_HORNET);
+//            itemGroup.add(ModItems.TETO_PLUSH_SYNTHV);
+//            itemGroup.add(ModItems.TETO_PICKAXE_SYNTHV);
+//            itemGroup.add(ModItems.MIKU_PLUSH_WORLD_IS_MINE);
+//            itemGroup.add(ModItems.MIKU_PLUSH_ROLLING_GIRL);
+//            itemGroup.add(ModItems.TETO_PLUSH_SPOKEN_FOR);
+//            itemGroup.add(ModItems.TETO_PICKAXE_SPOKEN_FOR);
+//            itemGroup.add(ModItems.MEIKO_PLUSH);
+//            itemGroup.add(ModItems.MEIKO_PLUSH_V3);
+//            itemGroup.add(ModItems.MEIKO_PLUSH_V4);
+//            itemGroup.add(ModItems.GUMI_PLUSH);
+//            itemGroup.add(ModItems.GUMI_PLUSH_V3);
+//            itemGroup.add(ModItems.GUMI_PLUSH_V4);
+//            itemGroup.add(ModItems.GUMI_PLUSH_V6);
+//            itemGroup.add(ModItems.MIKU_PLUSH_DEEP_SEA_GIRL);
 		});
 	}
 }

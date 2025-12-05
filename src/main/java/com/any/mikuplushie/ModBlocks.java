@@ -2,9 +2,12 @@ package com.any.mikuplushie;
 
 import com.any.mikuplushie.block.LeekCropBlock;
 import com.any.mikuplushie.block.MikuPlushieBlock;
+import com.any.mikuplushie.datagen.ModItemTagProvider;
+import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
+import net.minecraft.client.render.RenderLayer;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
@@ -12,7 +15,12 @@ import net.minecraft.registry.Registry;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class ModBlocks {
+
+    public static List<Block> PLUSH_BLOCKS = new ArrayList<>();
 
 	public static final Block MIKU_PLUSH_BR = register(
 			new MikuPlushieBlock(AbstractBlock.Settings.copy(Blocks.FLOWER_POT)
@@ -738,12 +746,20 @@ public class ModBlocks {
 
 
 	public static Block register(Block block, String name, boolean shouldRegisterItem) {
-		Identifier id = Identifier.of(MikuPlushie.MOD_ID, name);
-		if (shouldRegisterItem) {
-			BlockItem blockItem = new BlockItem(block, new Item.Settings());
-			Registry.register(Registries.ITEM, id, blockItem);
-		}
-		return Registry.register(Registries.BLOCK, id, block);
+        Identifier id = Identifier.of(MikuPlushie.MOD_ID, name);
+        if (shouldRegisterItem) {
+            BlockItem blockItem = new BlockItem(block, new Item.Settings());
+            Registry.register(Registries.ITEM, id, blockItem);
+        }
+
+        Block register = Registry.register(Registries.BLOCK, id, block);
+
+        //IF BLOCK IS A PLUSH ADD IT TO THE LIST
+        if (block instanceof MikuPlushieBlock){
+            PLUSH_BLOCKS.add(block);
+        }
+
+        return register;
 	}
 
 	public static void initialize() {

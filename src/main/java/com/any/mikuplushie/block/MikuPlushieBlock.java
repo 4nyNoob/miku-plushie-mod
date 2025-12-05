@@ -15,11 +15,14 @@ import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.SpawnReason;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.item.ItemStack;
 import net.minecraft.particle.ParticleTypes;
 import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKeys;
+import net.minecraft.registry.tag.ItemTags;
+import net.minecraft.registry.tag.TagKey;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.DirectionProperty;
@@ -49,10 +52,13 @@ public class MikuPlushieBlock extends Block {
 	@Override
 	public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
 
+        String currentPlush = state.getBlock().getTranslationKey().split("[.]")[2];
 
-        if (player.getStackInHand(hand).isOf(ModItems.CANUDINHO) && this.asItem().getDefaultStack().isIn(ModItemTagProvider.MIKU_PLUSH)){
+        if (
+            player.getStackInHand(hand).isOf(ModItems.CANUDINHO) &&
+            currentPlush.contains("miku_plush")
+        ){
             if (!world.isClient) {
-                world.breakBlock(pos, false, player);
 
                 //GET BLOCK NAME
                 String blockName = world.getBlockState(pos).getBlock().getTranslationKey().split("[.]")[2];
@@ -72,12 +78,13 @@ public class MikuPlushieBlock extends Block {
                         Objects.requireNonNull(spawned).setVariantByBlock(blockName);
                         spawned.setPosition(entitySpawnLocation);
                             //DEBUG STUFF
-                            spawned.setAiDisabled(true);
-                            spawned.setCustomName(Text.of("Plush"));
+//                            spawned.setAiDisabled(true);
+//                            spawned.setCustomName(Text.of("Plush"));
                     }
                 }
 
                 world.playSound(null, pos, ModSoundEvents.MIKU_CANUDINHO, SoundCategory.BLOCKS);
+                world.breakBlock(pos, false, player);
                 return ActionResult.SUCCESS;
             } else {
                 Random random = world.getRandom();
@@ -99,49 +106,66 @@ public class MikuPlushieBlock extends Block {
 
 	@Override
 	public void onPlaced(World world, BlockPos pos, BlockState state, @Nullable LivingEntity placer, ItemStack itemStack) {
-		if(this.asItem().getDefaultStack().isIn(ModItemTagProvider.AIKO_PLUSH)){
+
+        String currentPlush = state.getBlock().getTranslationKey().split("[.]")[2];
+
+		if(currentPlush.contains("aiko_plush")){
 			world.playSound(null, pos, ModSoundEvents.AIKO_OIE, SoundCategory.BLOCKS, 0.5F, 1);
-		} else if(this.asItem().getDefaultStack().isIn(ModItemTagProvider.TETO_PLUSH)){
+		} else if(currentPlush.contains("teto_plush")){
 			world.playSound(null, pos, ModSoundEvents.TETO_OIE, SoundCategory.BLOCKS, 0.5F, 1);
-		} else if(this.asItem().getDefaultStack().isIn(ModItemTagProvider.NERU_PLUSH)){
+		} else if(currentPlush.contains("neru_plush")){
 			world.playSound(null, pos, ModSoundEvents.NERU_OIE, SoundCategory.BLOCKS, 0.5F, 1);
-		} else if(this.asItem().getDefaultStack().isIn(ModItemTagProvider.RIN_PLUSH)){
+		} else if(currentPlush.contains("rin_plush")){
 			world.playSound(null, pos, ModSoundEvents.RIN_OIE, SoundCategory.BLOCKS, 0.5F, 1);
-		} else if(this.asItem().getDefaultStack().isIn(ModItemTagProvider.LEN_PLUSH)){
+		} else if(currentPlush.contains("len_plush")){
 			world.playSound(null, pos, ModSoundEvents.LEN_OIE, SoundCategory.BLOCKS, 0.5F, 1);
-		} else if(this.asItem().getDefaultStack().isIn(ModItemTagProvider.LUKA_PLUSH)){
+		} else if(currentPlush.contains("luka_plush")){
 			world.playSound(null, pos, ModSoundEvents.LUKA_OIE, SoundCategory.BLOCKS, 0.5F, 1);
-		} else if(this.asItem().getDefaultStack().isIn(ModItemTagProvider.MEIKO_PLUSH)){
+		} else if(currentPlush.contains("meiko_plush")){
 			world.playSound(null, pos, ModSoundEvents.MEIKO_OIE, SoundCategory.BLOCKS, 0.5F, 1);
-		} else if(this.asItem().getDefaultStack().isIn(ModItemTagProvider.GUMI_PLUSH)){
+		} else if(currentPlush.contains("gumi_plush")){
 			world.playSound(null, pos, ModSoundEvents.GUMI_OIE, SoundCategory.BLOCKS, 0.5F, 1);
-		} else if(this.asItem().getDefaultStack().isIn(ModItemTagProvider.MIKU_PLUSH)){
+		} else if(currentPlush.contains("miku_plush")){
 			world.playSound(null, pos, ModSoundEvents.MIKU_OIE, SoundCategory.BLOCKS, 0.5F, 1);
 		}
 		super.onPlaced(world, pos, state, placer, itemStack);
 	}
 
-	@Override
+    @Override
+    public ItemStack getPickStack(BlockView world, BlockPos pos, BlockState state) {
+        for (int plush = 0; plush < ModItems.PLUSH_ITEMS.size(); plush++) {
+            String plushNames = ModItems.PLUSH_ITEMS.get(plush).getTranslationKey().split("[.]")[2];
+            String currentPlush = state.getBlock().getTranslationKey().split("[.]")[2];
+            if (plushNames.equals(currentPlush)){
+                return ModItems.PLUSH_ITEMS.get(plush).getDefaultStack();
+            }
+        }
+        return ItemStack.EMPTY;
+    }
+
+    @Override
 	public void onBreak(World world, BlockPos pos, BlockState state, PlayerEntity player) {
-		if(this.asItem().getDefaultStack().isIn(ModItemTagProvider.AIKO_PLUSH)){
-			world.playSound(null, pos, ModSoundEvents.AIKO_BYE, SoundCategory.BLOCKS, 0.5F, 1);
-		} else if(this.asItem().getDefaultStack().isIn(ModItemTagProvider.TETO_PLUSH)){
-			world.playSound(null, pos, ModSoundEvents.TETO_BYE, SoundCategory.BLOCKS, 0.5F, 1);
-		} else if(this.asItem().getDefaultStack().isIn(ModItemTagProvider.NERU_PLUSH)){
-			world.playSound(null, pos, ModSoundEvents.NERU_BYE, SoundCategory.BLOCKS, 0.5F, 1);
-		} else if(this.asItem().getDefaultStack().isIn(ModItemTagProvider.RIN_PLUSH)){
-			world.playSound(null, pos, ModSoundEvents.RIN_BYE, SoundCategory.BLOCKS, 0.5F, 1);
-		} else if(this.asItem().getDefaultStack().isIn(ModItemTagProvider.LEN_PLUSH)){
-			world.playSound(null, pos, ModSoundEvents.LEN_BYE, SoundCategory.BLOCKS, 0.5F, 1);
-		} else if(this.asItem().getDefaultStack().isIn(ModItemTagProvider.LUKA_PLUSH)){
-			world.playSound(null, pos, ModSoundEvents.LUKA_BYE, SoundCategory.BLOCKS, 0.5F, 1);
-        } else if(this.asItem().getDefaultStack().isIn(ModItemTagProvider.MEIKO_PLUSH)){
-			world.playSound(null, pos, ModSoundEvents.MEIKO_BYE, SoundCategory.BLOCKS, 0.5F, 1);
-		} else if(this.asItem().getDefaultStack().isIn(ModItemTagProvider.GUMI_PLUSH)){
-			world.playSound(null, pos, ModSoundEvents.GUMI_BYE, SoundCategory.BLOCKS, 0.5F, 1);
-		} else if(this.asItem().getDefaultStack().isIn(ModItemTagProvider.MIKU_PLUSH)){
-			world.playSound(null, pos, ModSoundEvents.MIKU_BYE, SoundCategory.BLOCKS, 0.5F, 1);
-		}
+        String currentPlush = state.getBlock().getTranslationKey().split("[.]")[2];
+
+        if(currentPlush.contains("aiko_plush")){
+            world.playSound(null, pos, ModSoundEvents.AIKO_BYE, SoundCategory.BLOCKS, 0.5F, 1);
+        } else if(currentPlush.contains("teto_plush")){
+            world.playSound(null, pos, ModSoundEvents.TETO_BYE, SoundCategory.BLOCKS, 0.5F, 1);
+        } else if(currentPlush.contains("neru_plush")){
+            world.playSound(null, pos, ModSoundEvents.NERU_BYE, SoundCategory.BLOCKS, 0.5F, 1);
+        } else if(currentPlush.contains("rin_plush")){
+            world.playSound(null, pos, ModSoundEvents.RIN_BYE, SoundCategory.BLOCKS, 0.5F, 1);
+        } else if(currentPlush.contains("len_plush")){
+            world.playSound(null, pos, ModSoundEvents.LEN_BYE, SoundCategory.BLOCKS, 0.5F, 1);
+        } else if(currentPlush.contains("luka_plush")){
+            world.playSound(null, pos, ModSoundEvents.LUKA_BYE, SoundCategory.BLOCKS, 0.5F, 1);
+        } else if(currentPlush.contains("meiko_plush")){
+            world.playSound(null, pos, ModSoundEvents.MEIKO_BYE, SoundCategory.BLOCKS, 0.5F, 1);
+        } else if(currentPlush.contains("gumi_plush")){
+            world.playSound(null, pos, ModSoundEvents.GUMI_BYE, SoundCategory.BLOCKS, 0.5F, 1);
+        } else if(currentPlush.contains("miku_plush")){
+            world.playSound(null, pos, ModSoundEvents.MIKU_BYE, SoundCategory.BLOCKS, 0.5F, 1);
+        }
         super.onBreak(world, pos, state, player);
     }
 

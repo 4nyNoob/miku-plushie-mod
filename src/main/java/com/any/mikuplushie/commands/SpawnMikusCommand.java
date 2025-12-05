@@ -1,9 +1,13 @@
 package com.any.mikuplushie.commands;
 
 import com.any.mikuplushie.MikuPlushie;
+import com.any.mikuplushie.ModBlocks;
+import com.any.mikuplushie.ModItems;
+import com.any.mikuplushie.block.MikuPlushieBlock;
 import com.any.mikuplushie.datagen.ModItemTagProvider;
 import com.any.mikuplushie.entity.MikuEntity;
 import com.any.mikuplushie.entity.PlushEntity;
+import com.any.mikuplushie.item.MikuPlushieBlockItem;
 import com.mojang.brigadier.CommandDispatcher;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -52,30 +56,23 @@ public class SpawnMikusCommand {
         BlockPos spawnPos = BlockPos.ofFloored(posArgument);
         int spacing = 3;
 
-        //CREATE LISTS FROM ITEM TAG
-        Registry<Item> itemRegistry = world.getRegistryManager().get(RegistryKeys.ITEM);
-        Registry<Block> blockRegistry = world.getRegistryManager().get(RegistryKeys.BLOCK);
-        List<ItemStack> PLUSHIES = new ArrayList<>();
+        //CREATE ITEM STACK LISTS
         List<ItemStack> PICKAXES = new ArrayList<>();
-
-        for (int item = 0; item < itemRegistry.size(); item++) {
-            if (Objects.requireNonNull(itemRegistry.get(item)).getDefaultStack().isIn(ModItemTagProvider.PLUSHIES)){
-                PLUSHIES.add(Objects.requireNonNull(itemRegistry.get(item)).getDefaultStack());
-            }
-            if (Objects.requireNonNull(itemRegistry.get(item)).getDefaultStack().isIn(ModItemTagProvider.TETO_PICKAXE)){
-                PICKAXES.add(Objects.requireNonNull(itemRegistry.get(item)).getDefaultStack());
-            }
+        for (int pickaxe = 0; pickaxe < ModItems.PICKAXE_ITEMS.size(); pickaxe++) {
+            ItemStack pickaxeStack = ModItems.PICKAXE_ITEMS.get(pickaxe).getDefaultStack();
+            PICKAXES.add(pickaxeStack);
+        }
+        List<ItemStack> PLUSHIES = new ArrayList<>();
+        for (int plush = 0; plush < ModItems.PLUSH_ITEMS.size(); plush++) {
+            ItemStack plushStack = ModItems.PLUSH_ITEMS.get(plush).getDefaultStack();
+            PLUSHIES.add(plushStack);
         }
 
-        List<Block> BLOCKS = new ArrayList<>();
-        for (int block = 0; block < blockRegistry.size(); block++) {
-            if (Objects.requireNonNull(blockRegistry.get(block)).asItem().getDefaultStack().isIn(ModItemTagProvider.PLUSHIES)){
-                BLOCKS.add(blockRegistry.get(block));
-            }
-        }
+        //GET BLOCKS LIST FROM THE ALREADY MADE BLOCK LIST
+        List<Block> BLOCKS = new ArrayList<>(ModBlocks.PLUSH_BLOCKS);
 
+        //CREATE VARIANTS LIST FROM BLOCK LIST NAMES
         List<String> VARIANTS = new ArrayList<>();
-
         for (Block value : BLOCKS) {
             String blockName = value.getTranslationKey().split("[.]")[2];
             VARIANTS.add(blockName);
