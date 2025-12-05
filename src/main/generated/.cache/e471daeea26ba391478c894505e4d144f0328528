@@ -1,4 +1,4 @@
-// 1.20.1	2025-12-03T23:35:40.975582465	miku plushies/Block Loot Tables
+// 1.20.1	2025-12-04T21:09:56.704092673	miku plushies/Block Loot Tables
 7f941a076fe7908b6c5d59836c67e5bcb3417d8b data/miku-plushie/loot_tables/blocks/teto_plush_dont_believe_in_t.json
 af68195ac8c10224169e0ac3c60fab2ecb875557 data/miku-plushie/loot_tables/blocks/miku_plush_frankenstein.json
 4916a50ba16c00f7477badf2b5a08cb0a7259d75 data/miku-plushie/loot_tables/blocks/teto_plush_spoken_for.json
@@ -14,8 +14,8 @@ f586905a82d7b05e6d638f8dd2b0bb4a9299d7a6 data/miku-plushie/loot_tables/blocks/gu
 8ab338800082d6d02871cc2448e1e668e106f861 data/miku-plushie/loot_tables/blocks/miku_plush_frog.json
 3fe3c565ffe7e4f77f0252bfd2379452f1187223 data/miku-plushie/loot_tables/blocks/miku_plush_hachune.json
 8f3c4d425a955f311d639d3bc09dcc751a9ae9f4 data/miku-plushie/loot_tables/blocks/teto_plush_shadow.json
-98d66e332924e1e96c41d77802cb173a5621e04c data/miku-plushie/loot_tables/blocks/miku_plush_rotten_girl.json
 a6e264c78642053b4925c060a025cc2c2c500d14 data/miku-plushie/loot_tables/blocks/gumi_plush_v3.json
+98d66e332924e1e96c41d77802cb173a5621e04c data/miku-plushie/loot_tables/blocks/miku_plush_rotten_girl.json
 97705567dfc6f80b78d4ae956e652a3136a7865a data/miku-plushie/loot_tables/blocks/miku_plush_helloplanet.json
 5e0ec000526aa745b9c72446702e910198ed6720 data/miku-plushie/loot_tables/blocks/miku_plush_fortnite_neko.json
 b4f73d60abb9faa63d1134aa3fb2f325bfcdcb92 data/miku-plushie/loot_tables/blocks/miku_plush_personadancing.json
@@ -32,6 +32,7 @@ d10c7f30cdf6c842e8dae6347c0d16cded697b51 data/miku-plushie/loot_tables/blocks/te
 c0df91fd321c23fe33faa565391734b2c8e2f43e data/miku-plushie/loot_tables/blocks/miku_plush_mummy.json
 16f14b1214abe2ea48c3be8256fb7c9b2241ca47 data/miku-plushie/loot_tables/blocks/miku_plush_devil.json
 30a25558dfef652b56f08188e2b4da888a2dbe74 data/miku-plushie/loot_tables/blocks/miku_plush_br_fut_fla.json
+a2a6fcd9bd651597165096bce1c58a75e57402df data/miku-plushie/loot_tables/blocks/akita_neru_plush.json
 a5043fa29be2869b0742b670a266dbc1bda5e44c data/miku-plushie/loot_tables/blocks/miku_plush_dont_believe_in_t.json
 f0bfa240059f2c1854efab047060e68c4ccc1b47 data/miku-plushie/loot_tables/blocks/miku_plush_digital_stars_2025.json
 c8a0509df1543d36ec3c19a7d905b00a8e88fc20 data/miku-plushie/loot_tables/blocks/miku_plush_br_go.json
@@ -45,8 +46,8 @@ f1fbdfe3754d8395a66add8a7737a4f354c6f7d1 data/miku-plushie/loot_tables/blocks/mi
 3a0f1bd85d1467bf9ca9381f28d337d4a2914bf6 data/miku-plushie/loot_tables/blocks/miku_plush_br_electrician.json
 4fab21a53ca84094f118efd3d57687ff24147a1f data/miku-plushie/loot_tables/blocks/teto_plush_mesmerizer.json
 cc234190234f43cee0d3434e4f984586443fe66e data/miku-plushie/loot_tables/blocks/luka_plush.json
-be99bc4b6a298a863ccc60941db526ad7fda33d7 data/miku-plushie/loot_tables/blocks/miku_plush_br.json
 b22691746ff3cd46ae1289b5150a15327ebb6465 data/miku-plushie/loot_tables/blocks/teto_plush_regret_rock.json
+be99bc4b6a298a863ccc60941db526ad7fda33d7 data/miku-plushie/loot_tables/blocks/miku_plush_br.json
 4ebbbdbd5715ee441f64b8496abcfc56d1db2e8d data/miku-plushie/loot_tables/blocks/miku_plush_mochimochi.json
 d931c5e28a5649af93c0cb9f815a40680784eb5b data/miku-plushie/loot_tables/blocks/gumi_plush.json
 035644ee9d9adfe1f624ab7454cc879ba13ddd8a data/miku-plushie/loot_tables/blocks/akita_neru_plush_tails.json
@@ -71,7 +72,7 @@ cc50ec6f15e00836f5d95b20bfa51443590e7bf4 data/miku-plushie/loot_tables/blocks/me
 2ab6ff45cb09f8aa06d63e605a14f6f3a73e91f0 data/miku-plushie/loot_tables/blocks/miku_plush_world_is_mine.json
 84d7777edfe8d2fd6ce83a54880a09945bf3227c data/miku-plushie/loot_tables/blocks/miku_plush_sonic.json
 0971782ec23621996b3756abfdb2688ca14e9736 data/miku-plushie/loot_tables/blocks/miku_plush_br_mg.json
-a2a6fcd9bd651597165096bce1c58a75e57402df data/miku-plushie/loot_tables/blocks/aiko_plush.json
+e2fa679e9c054a53cf2dec86db07ffea16be9944 data/miku-plushie/loot_tables/blocks/aiko_plush.json
 dcd9c2497b3df29a750fa506567f3f4b9d26aac8 data/miku-plushie/loot_tables/blocks/miku_plush_br_school_pe.json
 039f696e0d95fedc054c1db92dc395cd96f291db data/miku-plushie/loot_tables/blocks/miku_plush_patati.json
 65c217979b7a708148f5730f39ca8ed5cc377541 data/miku-plushie/loot_tables/blocks/miku_plush_xmas_tree.json
