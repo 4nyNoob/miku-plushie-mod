@@ -2,12 +2,15 @@ package com.any.mikuplushie;
 
 import com.any.mikuplushie.commands.SpawnMikusCommand;
 import com.any.mikuplushie.entity.*;
+import com.any.mikuplushie.entity.variant.MeikoVariant;
+import com.any.mikuplushie.entity.variant.NeruVariant;
 import net.fabricmc.fabric.api.command.v2.CommandRegistrationCallback;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricEntityTypeBuilder;
 import net.minecraft.entity.EntityDimensions;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.SpawnGroup;
+import net.minecraft.entity.attribute.DefaultAttributeContainer;
 import net.minecraft.entity.mob.MobEntity;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
@@ -16,71 +19,31 @@ import software.bernie.example.entity.BatEntity;
 import software.bernie.example.registry.EntityRegistry;
 import software.bernie.geckolib.GeckoLib;
 
+import java.lang.reflect.InvocationTargetException;
+
 public class ModEntities {
 
 
     private static final float PLUSH_WIDTH = 0.6F;
     private static final float PLUSH_HEIGHT = 0.8F;
 
-    public static final EntityType<MikuEntity> MIKU =
-        Registry.register(Registries.ENTITY_TYPE,
-            new Identifier(MikuPlushie.MOD_ID, "miku_plush"),
-            FabricEntityTypeBuilder.create(SpawnGroup.CREATURE, MikuEntity::new)
-                .dimensions(EntityDimensions.fixed(PLUSH_WIDTH, PLUSH_HEIGHT)).build());
+    public static final EntityType<MikuEntity> MIKU = registerMob("miku_plush", MikuEntity::new);
+    public static final EntityType<TetoEntity> TETO = registerMob("teto_plush", TetoEntity::new);
+    public static final EntityType<AikoEntity> AIKO = registerMob("aiko_plush", AikoEntity::new);
+    public static final EntityType<NeruEntity> NERU = registerMob("akita_neru_plush", NeruEntity::new);
+    public static final EntityType<RinEntity> RIN = registerMob("rin_plush", RinEntity::new);
+    public static final EntityType<LenEntity> LEN = registerMob("len_plush", LenEntity::new);
+    public static final EntityType<KonohaEntity> KONOHA = registerMob("konoha_plush", KonohaEntity::new);
+    public static final EntityType<LukaEntity> LUKA = registerMob("luka_plush", LukaEntity::new);
+    public static final EntityType<MeikoEntity> MEIKO = registerMob("meiko_plush", MeikoEntity::new);
+    public static final EntityType<GumiEntity> GUMI = registerMob("gumi_plush", GumiEntity::new);
 
-    public static final EntityType<TetoEntity> TETO =
-        Registry.register(Registries.ENTITY_TYPE,
-            new Identifier(MikuPlushie.MOD_ID, "teto_plush"),
-            FabricEntityTypeBuilder.create(SpawnGroup.CREATURE, TetoEntity::new)
-                .dimensions(EntityDimensions.fixed(PLUSH_WIDTH, PLUSH_HEIGHT)).build());
 
-    public static final EntityType<AikoEntity> AIKO =
-        Registry.register(Registries.ENTITY_TYPE,
-            new Identifier(MikuPlushie.MOD_ID, "aiko_plush"),
-            FabricEntityTypeBuilder.create(SpawnGroup.CREATURE, AikoEntity::new)
+    public static <T extends MobEntity> EntityType<T> registerMob(String name, EntityType.EntityFactory<T> entity) {
+        return Registry.register(Registries.ENTITY_TYPE,
+            new Identifier(MikuPlushie.MOD_ID, name), FabricEntityTypeBuilder.create(SpawnGroup.CREATURE, entity)
                 .dimensions(EntityDimensions.fixed(PLUSH_WIDTH, PLUSH_HEIGHT)).build());
-
-    public static final EntityType<NeruEntity> NERU =
-        Registry.register(Registries.ENTITY_TYPE,
-            new Identifier(MikuPlushie.MOD_ID, "akita_neru_plush"),
-            FabricEntityTypeBuilder.create(SpawnGroup.CREATURE, NeruEntity::new)
-                .dimensions(EntityDimensions.fixed(PLUSH_WIDTH, PLUSH_HEIGHT)).build());
-
-    public static final EntityType<RinEntity> RIN =
-        Registry.register(Registries.ENTITY_TYPE,
-            new Identifier(MikuPlushie.MOD_ID, "rin_plush"),
-            FabricEntityTypeBuilder.create(SpawnGroup.CREATURE, RinEntity::new)
-                .dimensions(EntityDimensions.fixed(PLUSH_WIDTH, PLUSH_HEIGHT)).build());
-
-    public static final EntityType<LenEntity> LEN =
-        Registry.register(Registries.ENTITY_TYPE,
-            new Identifier(MikuPlushie.MOD_ID, "len_plush"),
-            FabricEntityTypeBuilder.create(SpawnGroup.CREATURE, LenEntity::new)
-                .dimensions(EntityDimensions.fixed(PLUSH_WIDTH, PLUSH_HEIGHT)).build());
-
-    public static final EntityType<KonohaEntity> KONOHA =
-        Registry.register(Registries.ENTITY_TYPE,
-            new Identifier(MikuPlushie.MOD_ID, "konoha_plush"),
-            FabricEntityTypeBuilder.create(SpawnGroup.CREATURE, KonohaEntity::new)
-                .dimensions(EntityDimensions.fixed(PLUSH_WIDTH, PLUSH_HEIGHT)).build());
-
-    public static final EntityType<LukaEntity> LUKA =
-        Registry.register(Registries.ENTITY_TYPE,
-            new Identifier(MikuPlushie.MOD_ID, "luka_plush"),
-            FabricEntityTypeBuilder.create(SpawnGroup.CREATURE, LukaEntity::new)
-                .dimensions(EntityDimensions.fixed(PLUSH_WIDTH, PLUSH_HEIGHT)).build());
-
-    public static final EntityType<MeikoEntity> MEIKO =
-        Registry.register(Registries.ENTITY_TYPE,
-            new Identifier(MikuPlushie.MOD_ID, "meiko_plush"),
-            FabricEntityTypeBuilder.create(SpawnGroup.CREATURE, MeikoEntity::new)
-                .dimensions(EntityDimensions.fixed(PLUSH_WIDTH, PLUSH_HEIGHT)).build());
-
-    public static final EntityType<GumiEntity> GUMI =
-        Registry.register(Registries.ENTITY_TYPE,
-            new Identifier(MikuPlushie.MOD_ID, "gumi_plush"),
-            FabricEntityTypeBuilder.create(SpawnGroup.CREATURE, GumiEntity::new)
-                .dimensions(EntityDimensions.fixed(PLUSH_WIDTH, PLUSH_HEIGHT)).build());
+    }
 
     public static void initialize(){
         MikuPlushie.LOGGER.info("Registering " + MikuPlushie.MOD_ID + " Entities");
