@@ -14,9 +14,7 @@ public class NeruModel extends GeoModel<NeruEntity> {
     private final String entity = "neru_plush";
 
     private final Identifier model = Identifier.of(MikuPlushie.MOD_ID, "geo/entity/" + entity + ".geo.json");
-    private final Identifier texture = Identifier.of(MikuPlushie.MOD_ID, "textures/block/" + entity.replace('_', '-') + ".png");
-//    private final Identifier animations = Identifier.of(MikuPlushie.MOD_ID, "animations/" + entity + ".animation.json");
-    private final Identifier animations = Identifier.of(MikuPlushie.MOD_ID, "animations/aiko_plush.animation.json");
+    private final Identifier animations = Identifier.of(MikuPlushie.MOD_ID, "animations/plush.animation.json");
 
 
     @Override

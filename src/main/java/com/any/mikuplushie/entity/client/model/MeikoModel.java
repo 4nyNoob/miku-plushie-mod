@@ -13,8 +13,7 @@ public class MeikoModel extends GeoModel<MeikoEntity> {
     private final String entity = "meiko_plush";
 
     private final Identifier model = Identifier.of(MikuPlushie.MOD_ID, "geo/entity/" + entity + ".geo.json");
-    private final Identifier texture = Identifier.of(MikuPlushie.MOD_ID, "textures/block/" + entity.replace('_', '-') + ".png");
-    private final Identifier animations = Identifier.of(MikuPlushie.MOD_ID, "animations/" + "miku_plush" + ".animation.json");
+    private final Identifier animations = Identifier.of(MikuPlushie.MOD_ID, "animations/plush.animation.json");
 
 
     @Override

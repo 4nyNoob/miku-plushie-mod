@@ -414,7 +414,7 @@
 					]
 				},
 				{
-					"name": "left_hair",
+					"name": "miku_left_hair",
 					"parent": "hair_offset",
 					"pivot": [-4, 17.5, 2.5],
 					"rotation": [0, 0, 22.5],
@@ -561,8 +561,8 @@
 					]
 				},
 				{
-					"name": "left_hair2",
-					"parent": "left_hair",
+					"name": "miku_left_hair2",
+					"parent": "miku_left_hair",
 					"pivot": [-4.5, 11.5, 2.5],
 					"rotation": [0, 0, -22.5],
 					"cubes": [
@@ -683,7 +683,7 @@
 					]
 				},
 				{
-					"name": "right_hair",
+					"name": "miku_right_hair",
 					"parent": "hair_offset",
 					"pivot": [4, 17.5, 2.5],
 					"rotation": [0, 0, -22.5],
@@ -830,8 +830,8 @@
 					]
 				},
 				{
-					"name": "right_hair2",
-					"parent": "right_hair",
+					"name": "miku_right_hair2",
+					"parent": "miku_right_hair",
 					"pivot": [4.5, 11.5, 2.5],
 					"rotation": [0, 0, 22.5],
 					"cubes": [

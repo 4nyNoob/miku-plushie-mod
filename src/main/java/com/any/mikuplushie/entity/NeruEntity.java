@@ -24,6 +24,8 @@ import software.bernie.geckolib.core.animation.AnimationController;
 import software.bernie.geckolib.core.animation.RawAnimation;
 import software.bernie.geckolib.util.GeckoLibUtil;
 
+import java.util.List;
+
 public class NeruEntity extends PlushEntity {
 
     private static final TrackedData<Integer> NERU_VARIANT = DataTracker.registerData(NeruEntity.class, TrackedDataHandlerRegistry.INTEGER);
@@ -32,16 +34,18 @@ public class NeruEntity extends PlushEntity {
     private static final RawAnimation IDLE = RawAnimation.begin().thenLoop("misc.idle");
     private static final RawAnimation SIT = RawAnimation.begin().thenLoop("misc.sit");
     private static final RawAnimation SIT_DANCE = RawAnimation.begin().thenLoop("misc.sit-dance");
-    private static final RawAnimation DANCE = RawAnimation.begin().thenLoop("misc.dance");
-    private static final RawAnimation DANCE2 = RawAnimation.begin().thenLoop("misc.dance2");
-    private static final RawAnimation DANCE3 = RawAnimation.begin().thenLoop("misc.dance3");
-    private static final RawAnimation DANCE4 = RawAnimation.begin().thenLoop("misc.dance4");
-    private static final RawAnimation DANCE5 = RawAnimation.begin().thenLoop("misc.dance5");
+    private static final List<RawAnimation> DANCES = List.of(
+        RawAnimation.begin().thenLoop("misc.dance.generic.caramelldansen"),
+        RawAnimation.begin().thenLoop("misc.miku.miku"),
+        RawAnimation.begin().thenLoop("misc.miku.ievan-polkka"),
+        RawAnimation.begin().thenLoop("misc.miku.vegetable-juice"),
+        RawAnimation.begin().thenLoop("misc.miku.static")
+    );
     private static final RawAnimation SWIPE = RawAnimation.begin().thenPlay("attack.swipe");
     private static final RawAnimation SWIPE2 = RawAnimation.begin().thenPlay("attack.swipe2");
     private static final RawAnimation SWIPE3 = RawAnimation.begin().thenPlay("attack.swipe3");
 
-    private static RawAnimation SELECTED_DANCE = DANCE;
+    private static RawAnimation SELECTED_DANCE = DANCES.get(0);
     private static RawAnimation SELECTED_ATTACK = SWIPE;
 
     public NeruEntity(EntityType<? extends TameableEntity> entityType, World world) {
@@ -125,14 +129,8 @@ public class NeruEntity extends PlushEntity {
     public void setNearbySongPlaying(BlockPos songPosition, boolean playing) {
         this.songSource = songPosition;
         this.songPlaying = playing;
-        int randomDance = this.random.nextBetweenExclusive(1, 5);
-        switch (randomDance) {
-            case 1: SELECTED_DANCE = DANCE; break;
-            case 2: SELECTED_DANCE = DANCE2; break;
-            case 3: SELECTED_DANCE = DANCE3; break;
-            case 4: SELECTED_DANCE = DANCE4; break;
-            case 5: SELECTED_DANCE = DANCE5; break;
-        }
+        int randomDance = this.random.nextInt(DANCES.size());
+        SELECTED_DANCE = DANCES.get(randomDance);
     }
 
     //NERU VARIANTS

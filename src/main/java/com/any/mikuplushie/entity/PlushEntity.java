@@ -37,6 +37,8 @@ import software.bernie.geckolib.core.animation.AnimationController;
 import software.bernie.geckolib.core.animation.RawAnimation;
 import software.bernie.geckolib.util.GeckoLibUtil;
 
+import java.util.List;
+
 public class PlushEntity extends TameableEntity implements GeoEntity {
 
     //DANCE GLOBALS
@@ -48,17 +50,15 @@ public class PlushEntity extends TameableEntity implements GeoEntity {
     private static final RawAnimation IDLE = RawAnimation.begin().thenLoop("misc.idle");
     private static final RawAnimation SIT = RawAnimation.begin().thenLoop("misc.sit");
     private static final RawAnimation SIT_DANCE = RawAnimation.begin().thenLoop("misc.sit-dance");
-    private static final RawAnimation DANCE = RawAnimation.begin().thenLoop("misc.dance");
-    private static final RawAnimation DANCE2 = RawAnimation.begin().thenLoop("misc.dance2");
-    private static final RawAnimation DANCE3 = RawAnimation.begin().thenLoop("misc.dance3");
-    private static final RawAnimation DANCE4 = RawAnimation.begin().thenLoop("misc.dance4");
-    private static final RawAnimation DANCE5 = RawAnimation.begin().thenLoop("misc.dance5");
+    private static final List<RawAnimation> DANCES = List.of(
+        RawAnimation.begin().thenLoop("misc.dance.generic.caramelldansen")
+    );
     private static final RawAnimation SWIPE = RawAnimation.begin().thenPlay("attack.swipe");
     private static final RawAnimation SWIPE2 = RawAnimation.begin().thenPlay("attack.swipe2");
     private static final RawAnimation SWIPE3 = RawAnimation.begin().thenPlay("attack.swipe3");
 //    private static final RawAnimation EAT = RawAnimation.begin().thenPlay("misc.eat");
 
-    private static RawAnimation SELECTED_DANCE = DANCE;
+    private static RawAnimation SELECTED_DANCE = DANCES.get(0);
     private static RawAnimation SELECTED_ATTACK = SWIPE;
 
     protected PlushEntity(EntityType<? extends TameableEntity> entityType, World world) {
@@ -99,11 +99,6 @@ public class PlushEntity extends TameableEntity implements GeoEntity {
                 return state.setAndContinue(PlushEntity.this.isSongPlaying() ? SIT_DANCE : SIT);
             }
 
-//            //EATING ANIMATION
-//            else if (PlushEntity.this.isEatingLeek()) {
-//                return state.setAndContinue(EAT);
-//            }
-
             else {
                 //DANCE WHEN SONG IS PLAYING NEARBY
                 if (PlushEntity.this.isSongPlaying()){
@@ -119,6 +114,7 @@ public class PlushEntity extends TameableEntity implements GeoEntity {
                     }
                 }
             }
+
         }));
 
     }
@@ -242,6 +238,15 @@ public class PlushEntity extends TameableEntity implements GeoEntity {
     //IS SONG PLAYING FUNCTION
     public boolean isSongPlaying() {
         return this.songPlaying;
+    }
+
+    //SELECT RANDOM DANCE
+    @Override
+    public void setNearbySongPlaying(BlockPos songPosition, boolean playing) {
+        this.songSource = songPosition;
+        this.songPlaying = playing;
+        int randomDance = this.random.nextInt(DANCES.size());
+        SELECTED_DANCE = DANCES.get(randomDance);
     }
 
     //NO CHILD

@@ -30,6 +30,8 @@ import software.bernie.geckolib.core.animation.AnimationController;
 import software.bernie.geckolib.core.animation.RawAnimation;
 import software.bernie.geckolib.util.GeckoLibUtil;
 
+import java.util.List;
+
 public class MikuEntity extends PlushEntity implements GeoEntity {
 
     private static final TrackedData<Integer> MIKU_VARIANT = DataTracker.registerData(MikuEntity.class, TrackedDataHandlerRegistry.INTEGER);
@@ -43,17 +45,19 @@ public class MikuEntity extends PlushEntity implements GeoEntity {
     private static final RawAnimation IDLE = RawAnimation.begin().thenLoop("misc.idle");
     private static final RawAnimation SIT = RawAnimation.begin().thenLoop("misc.sit");
     private static final RawAnimation SIT_DANCE = RawAnimation.begin().thenLoop("misc.sit-dance");
-    private static final RawAnimation DANCE = RawAnimation.begin().thenLoop("misc.dance");
-    private static final RawAnimation DANCE2 = RawAnimation.begin().thenLoop("misc.dance2");
-    private static final RawAnimation DANCE3 = RawAnimation.begin().thenLoop("misc.dance3");
-    private static final RawAnimation DANCE4 = RawAnimation.begin().thenLoop("misc.dance4");
-    private static final RawAnimation DANCE5 = RawAnimation.begin().thenLoop("misc.dance5");
+    private static final List<RawAnimation> DANCES = List.of(
+        RawAnimation.begin().thenLoop("misc.dance.generic.caramelldansen"),
+        RawAnimation.begin().thenLoop("misc.dance.miku.miku"),
+        RawAnimation.begin().thenLoop("misc.dance.miku.ievan-polkka"),
+        RawAnimation.begin().thenLoop("misc.dance.miku.vegetable-juice"),
+        RawAnimation.begin().thenLoop("misc.dance.miku.static")
+    );
     private static final RawAnimation SWIPE = RawAnimation.begin().thenPlay("attack.swipe");
     private static final RawAnimation SWIPE2 = RawAnimation.begin().thenPlay("attack.swipe2");
     private static final RawAnimation SWIPE3 = RawAnimation.begin().thenPlay("attack.swipe3");
     private static final RawAnimation EAT = RawAnimation.begin().thenPlay("misc.eat");
 
-    private static RawAnimation SELECTED_DANCE = DANCE;
+    private static RawAnimation SELECTED_DANCE = DANCES.get(0);
     private static RawAnimation SELECTED_ATTACK = SWIPE;
 
     public MikuEntity(EntityType<? extends TameableEntity> entityType, World world) {
@@ -194,14 +198,8 @@ public class MikuEntity extends PlushEntity implements GeoEntity {
     public void setNearbySongPlaying(BlockPos songPosition, boolean playing) {
         this.songSource = songPosition;
         this.songPlaying = playing;
-        int randomDance = this.random.nextBetweenExclusive(1, 5);
-        switch (randomDance) {
-            case 1: SELECTED_DANCE = DANCE; break;
-            case 2: SELECTED_DANCE = DANCE2; break;
-            case 3: SELECTED_DANCE = DANCE3; break;
-            case 4: SELECTED_DANCE = DANCE4; break;
-            case 5: SELECTED_DANCE = DANCE5; break;
-        }
+        int randomDance = this.random.nextInt(DANCES.size());
+        SELECTED_DANCE = DANCES.get(randomDance);
     }
 
     //MIKU VARIANTS

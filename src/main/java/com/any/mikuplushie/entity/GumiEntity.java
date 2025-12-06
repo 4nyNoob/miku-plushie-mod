@@ -24,24 +24,16 @@ import software.bernie.geckolib.core.animation.AnimationController;
 import software.bernie.geckolib.core.animation.RawAnimation;
 import software.bernie.geckolib.util.GeckoLibUtil;
 
+import java.util.List;
+
 public class GumiEntity extends PlushEntity {
 
     private static final TrackedData<Integer> GUMI_VARIANT = DataTracker.registerData(GumiEntity.class, TrackedDataHandlerRegistry.INTEGER);
 
     private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
-    private static final RawAnimation IDLE = RawAnimation.begin().thenLoop("misc.idle");
-    private static final RawAnimation SIT = RawAnimation.begin().thenLoop("misc.sit");
-    private static final RawAnimation SIT_DANCE = RawAnimation.begin().thenLoop("misc.sit-dance");
-    private static final RawAnimation DANCE = RawAnimation.begin().thenLoop("misc.dance");
-    private static final RawAnimation DANCE2 = RawAnimation.begin().thenLoop("misc.dance2");
-    private static final RawAnimation DANCE3 = RawAnimation.begin().thenLoop("misc.dance3");
-    private static final RawAnimation DANCE4 = RawAnimation.begin().thenLoop("misc.dance4");
-    private static final RawAnimation DANCE5 = RawAnimation.begin().thenLoop("misc.dance5");
     private static final RawAnimation SWIPE = RawAnimation.begin().thenPlay("attack.swipe");
     private static final RawAnimation SWIPE2 = RawAnimation.begin().thenPlay("attack.swipe2");
     private static final RawAnimation SWIPE3 = RawAnimation.begin().thenPlay("attack.swipe3");
-
-    private static RawAnimation SELECTED_DANCE = DANCE;
     private static RawAnimation SELECTED_ATTACK = SWIPE;
 
     public GumiEntity(EntityType<? extends TameableEntity> entityType, World world) {
@@ -60,35 +52,6 @@ public class GumiEntity extends PlushEntity {
         this.goalSelector.add(9, new LookAroundGoal(this));
         this.targetSelector.add(1, new TrackOwnerAttackerGoal(this));
         this.targetSelector.add(2, new AttackWithOwnerGoal(this));
-    }
-
-    //ANIMATION CONTROLLER
-    @Override
-    public void registerControllers(AnimatableManager.ControllerRegistrar controllers) {
-        controllers.add(new AnimationController<>(this, "Miku", 2, state -> {
-
-            //SIT OR DANCE WHEN SONG IS PLAYING NEARBY
-            if (this.isInSittingPose()){
-                return state.setAndContinue(this.isSongPlaying() ? SIT_DANCE : SIT);
-            }
-
-            else {
-                //DANCE WHEN SONG IS PLAYING NEARBY
-                if (this.isSongPlaying()){
-                    return state.setAndContinue(SELECTED_DANCE);
-                } else {
-                    //ATTACK
-                    if (this.handSwinging){
-                        return state.setAndContinue(SELECTED_ATTACK);
-                    }
-                    //IDLE
-                    else {
-                        return state.setAndContinue(IDLE);
-                    }
-                }
-            }
-        }));
-
     }
 
     @Override
@@ -118,21 +81,6 @@ public class GumiEntity extends PlushEntity {
     @Override
     protected @Nullable SoundEvent getDeathSound() {
         return ModSoundEvents.GUMI_BYE;
-    }
-
-    //SELECT RANDOM DANCE
-    @Override
-    public void setNearbySongPlaying(BlockPos songPosition, boolean playing) {
-        this.songSource = songPosition;
-        this.songPlaying = playing;
-        int randomDance = this.random.nextBetweenExclusive(1, 5);
-        switch (randomDance) {
-            case 1: SELECTED_DANCE = DANCE; break;
-            case 2: SELECTED_DANCE = DANCE2; break;
-            case 3: SELECTED_DANCE = DANCE3; break;
-            case 4: SELECTED_DANCE = DANCE4; break;
-            case 5: SELECTED_DANCE = DANCE5; break;
-        }
     }
 
     //GUMI VARIANTS

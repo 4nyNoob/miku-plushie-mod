@@ -244,7 +244,7 @@
 					"pivot": [0, 17.5, 2.5]
 				},
 				{
-					"name": "left_hair",
+					"name": "teto_left_hair",
 					"parent": "hair",
 					"pivot": [4.25, 17, 3.5],
 					"cubes": [
@@ -280,8 +280,8 @@
 					]
 				},
 				{
-					"name": "left_hair2",
-					"parent": "left_hair",
+					"name": "teto_left_hair2",
+					"parent": "teto_left_hair",
 					"pivot": [4.25, 15.5, 3.5],
 					"cubes": [
 						{
@@ -316,8 +316,8 @@
 					]
 				},
 				{
-					"name": "left_hair3",
-					"parent": "left_hair2",
+					"name": "teto_left_hair3",
+					"parent": "teto_left_hair2",
 					"pivot": [4.25, 12.5, 3.5],
 					"cubes": [
 						{
@@ -352,8 +352,8 @@
 					]
 				},
 				{
-					"name": "left_hair4",
-					"parent": "left_hair3",
+					"name": "teto_left_hair4",
+					"parent": "teto_left_hair3",
 					"pivot": [4.25, 10.5, 3.5],
 					"cubes": [
 						{
@@ -373,7 +373,7 @@
 					]
 				},
 				{
-					"name": "right_hair",
+					"name": "teto_right_hair",
 					"parent": "hair",
 					"pivot": [-4.25, 17, 3.5],
 					"cubes": [
@@ -394,8 +394,8 @@
 					]
 				},
 				{
-					"name": "right_hair2",
-					"parent": "right_hair",
+					"name": "teto_right_hair2",
+					"parent": "teto_right_hair",
 					"pivot": [-4.25, 15.5, 3.5],
 					"cubes": [
 						{
@@ -415,8 +415,8 @@
 					]
 				},
 				{
-					"name": "right_hair3",
-					"parent": "right_hair2",
+					"name": "teto_right_hair3",
+					"parent": "teto_right_hair2",
 					"pivot": [-4.25, 12.5, 3.5],
 					"cubes": [
 						{
@@ -436,8 +436,8 @@
 					]
 				},
 				{
-					"name": "right_hair4",
-					"parent": "right_hair3",
+					"name": "teto_right_hair4",
+					"parent": "teto_right_hair3",
 					"pivot": [-4.25, 10.5, 3.5],
 					"cubes": [
 						{
