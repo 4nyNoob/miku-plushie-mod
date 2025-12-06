@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_miku_plush": {
+    "has_air": {
       "conditions": {
         "items": [
           {
             "items": [
-              "miku-plushie:miku_plush"
+              "minecraft:air"
             ]
           }
         ]
@@ -22,7 +22,7 @@
   },
   "requirements": [
     [
-      "has_miku_plush",
+      "has_air",
       "has_the_recipe"
     ]
   ],
