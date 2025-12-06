@@ -7,10 +7,13 @@ import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.minecraft.data.server.recipe.RecipeJsonProvider;
 import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
 import net.minecraft.data.server.recipe.ShapelessRecipeJsonBuilder;
+import net.minecraft.item.Item;
 import net.minecraft.item.Items;
 import net.minecraft.recipe.book.RecipeCategory;
 import net.minecraft.registry.RegistryWrapper;
 
+import java.util.Arrays;
+import java.util.List;
 import java.util.concurrent.CompletableFuture;
 import java.util.function.Consumer;
 
@@ -62,12 +65,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .criterion(FabricRecipeProvider.hasItem(Items.BROWN_WOOL), FabricRecipeProvider.conditionsFromItem(Items.BROWN_WOOL))
                 .offerTo(exporter);
 
-            ShapelessRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ModBlocks.AKITA_NERU_PLUSH_TAILS)
-                .input(ModBlocks.AKITA_NERU_PLUSH)
-                .input(Items.YELLOW_WOOL)
-                .input(Items.REDSTONE)
-                .criterion(FabricRecipeProvider.hasItem(ModBlocks.MIKU_PLUSH), FabricRecipeProvider.conditionsFromItem(ModBlocks.MIKU_PLUSH))
-                .offerTo(exporter);
+            simpleShapeless(exporter, ModItems.AKITA_NERU_PLUSH_TAILS, ModItems.AKITA_NERU_PLUSH, Items.YELLOW_WOOL, Items.REDSTONE);
         }
 
         //RIN
@@ -137,274 +135,42 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .criterion(FabricRecipeProvider.hasItem(Items.GRAY_WOOL), FabricRecipeProvider.conditionsFromItem(Items.GRAY_WOOL))
                 .offerTo(exporter);
 
-            ShapelessRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ModBlocks.MIKU_PLUSH_BR)
-                .input(ModBlocks.MIKU_PLUSH)
-                .input(Items.YELLOW_WOOL)
-                .input(Items.GREEN_WOOL)
-                .criterion(FabricRecipeProvider.hasItem(ModBlocks.MIKU_PLUSH), FabricRecipeProvider.conditionsFromItem(ModBlocks.MIKU_PLUSH))
-                .offerTo(exporter);
-
-            ShapelessRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ModBlocks.MIKU_PLUSH_BR_BA)
-                .input(ModBlocks.MIKU_PLUSH)
-                .input(Items.RED_WOOL)
-                .input(Items.WHITE_WOOL)
-                .input(Items.BLUE_WOOL)
-                .criterion(FabricRecipeProvider.hasItem(ModBlocks.MIKU_PLUSH), FabricRecipeProvider.conditionsFromItem(ModBlocks.MIKU_PLUSH))
-                .offerTo(exporter);
-
-            ShapelessRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ModBlocks.MIKU_PLUSH_BIK)
-                .input(ModBlocks.MIKU_PLUSH)
-                .input(Items.BLUE_WOOL)
-                .input(Items.WATER_BUCKET)
-                .criterion(FabricRecipeProvider.hasItem(ModBlocks.MIKU_PLUSH), FabricRecipeProvider.conditionsFromItem(ModBlocks.MIKU_PLUSH))
-                .offerTo(exporter);
-
-            ShapelessRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ModBlocks.MIKU_PLUSH_BR_BEACH)
-                .input(ModBlocks.MIKU_PLUSH)
-                .input(Items.YELLOW_WOOL)
-                .input(Items.GREEN_WOOL)
-                .input(Items.SAND)
-                .criterion(FabricRecipeProvider.hasItem(ModBlocks.MIKU_PLUSH), FabricRecipeProvider.conditionsFromItem(ModBlocks.MIKU_PLUSH))
-                .offerTo(exporter);
-
-            ShapelessRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ModBlocks.MIKU_PLUSH_BR_BRAID)
-                .input(ModBlocks.MIKU_PLUSH)
-                .input(Items.YELLOW_WOOL)
-                .input(Items.GREEN_WOOL)
-                .input(Items.GLOWSTONE)
-                .criterion(FabricRecipeProvider.hasItem(ModBlocks.MIKU_PLUSH), FabricRecipeProvider.conditionsFromItem(ModBlocks.MIKU_PLUSH))
-                .offerTo(exporter);
-
-            ShapelessRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ModBlocks.MIKU_PLUSH_BR_BA_DRUM)
-                .input(ModBlocks.MIKU_PLUSH)
-                .input(Items.RED_WOOL)
-                .input(Items.WHITE_WOOL)
-                .input(Items.BLUE_WOOL)
-                .input(Items.NOTE_BLOCK)
-                .criterion(FabricRecipeProvider.hasItem(ModBlocks.MIKU_PLUSH), FabricRecipeProvider.conditionsFromItem(ModBlocks.MIKU_PLUSH))
-                .offerTo(exporter);
-
-            ShapelessRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ModBlocks.MIKU_PLUSH_BR_PA)
-                .input(ModBlocks.MIKU_PLUSH)
-                .input(Items.WHITE_WOOL)
-                .input(Items.CORNFLOWER)
-                .criterion(FabricRecipeProvider.hasItem(ModBlocks.MIKU_PLUSH), FabricRecipeProvider.conditionsFromItem(ModBlocks.MIKU_PLUSH))
-                .offerTo(exporter);
-
-            ShapelessRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ModBlocks.MIKU_PLUSH_BR_SP)
-                .input(ModBlocks.MIKU_PLUSH)
-                .input(Items.WHITE_WOOL)
-                .input(Items.RED_WOOL)
-                .input(Items.BLACK_WOOL)
-                .input(Items.GRAY_CONCRETE)
-                .criterion(FabricRecipeProvider.hasItem(ModBlocks.MIKU_PLUSH), FabricRecipeProvider.conditionsFromItem(ModBlocks.MIKU_PLUSH))
-                .offerTo(exporter);
-
-            ShapelessRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ModBlocks.MIKU_PLUSH_BR_MG)
-                .input(ModBlocks.MIKU_PLUSH)
-                .input(Items.BROWN_WOOL)
-                .input(Items.RED_WOOL)
-                .input(Items.GOLD_NUGGET)
-                .criterion(FabricRecipeProvider.hasItem(ModBlocks.MIKU_PLUSH), FabricRecipeProvider.conditionsFromItem(ModBlocks.MIKU_PLUSH))
-                .offerTo(exporter);
-
-            ShapelessRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ModBlocks.MIKU_PLUSH_BR_BROWN_BRO)
-                .input(ModBlocks.MIKU_PLUSH)
-                .input(Items.BROWN_WOOL)
-                .input(Items.BLACK_WOOL)
-                .input(Items.IRON_NUGGET)
-                .criterion(FabricRecipeProvider.hasItem(ModBlocks.MIKU_PLUSH), FabricRecipeProvider.conditionsFromItem(ModBlocks.MIKU_PLUSH))
-                .offerTo(exporter);
-
-            ShapelessRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ModBlocks.MIKU_PLUSH_BR_ELECTRICIAN)
-                .input(ModBlocks.MIKU_PLUSH)
-                .input(Items.BROWN_WOOL)
-                .input(Items.BLUE_WOOL)
-                .input(Items.REDSTONE)
-                .criterion(FabricRecipeProvider.hasItem(ModBlocks.MIKU_PLUSH), FabricRecipeProvider.conditionsFromItem(ModBlocks.MIKU_PLUSH))
-                .offerTo(exporter);
-
-            ShapelessRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ModBlocks.MIKU_PLUSH_BR_BIK_ORANGE)
-                .input(ModBlocks.MIKU_PLUSH)
-                .input(Items.ORANGE_WOOL)
-                .input(Items.WATER_BUCKET)
-                .criterion(FabricRecipeProvider.hasItem(ModBlocks.MIKU_PLUSH), FabricRecipeProvider.conditionsFromItem(ModBlocks.MIKU_PLUSH))
-                .offerTo(exporter);
-
-            ShapelessRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ModBlocks.MIKU_PLUSH_BR_AM)
-                .input(ModBlocks.MIKU_PLUSH)
-                .input(Items.GREEN_WOOL)
-                .input(Items.YELLOW_WOOL)
-                .input(Items.BLUE_WOOL)
-                .input(Items.JUNGLE_SAPLING)
-                .criterion(FabricRecipeProvider.hasItem(ModBlocks.MIKU_PLUSH), FabricRecipeProvider.conditionsFromItem(ModBlocks.MIKU_PLUSH))
-                .offerTo(exporter);
-
-            ShapelessRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ModBlocks.MIKU_PLUSH_BR_FUT_FLA)
-                .input(ModBlocks.MIKU_PLUSH)
-                .input(Items.RED_WOOL)
-                .input(Items.BLACK_WOOL)
-                .criterion(FabricRecipeProvider.hasItem(ModBlocks.MIKU_PLUSH), FabricRecipeProvider.conditionsFromItem(ModBlocks.MIKU_PLUSH))
-                .offerTo(exporter);
-
-            ShapelessRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ModBlocks.MIKU_PLUSH_BR_FUT_CAM)
-                .input(ModBlocks.MIKU_PLUSH)
-                .input(Items.LIGHT_GRAY_WOOL)
-                .input(Items.BLACK_WOOL)
-                .criterion(FabricRecipeProvider.hasItem(ModBlocks.MIKU_PLUSH), FabricRecipeProvider.conditionsFromItem(ModBlocks.MIKU_PLUSH))
-                .offerTo(exporter);
-
-            ShapelessRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ModBlocks.MIKU_PLUSH_BR_FUT_CRVG)
-                .input(ModBlocks.MIKU_PLUSH)
-                .input(Items.WHITE_WOOL)
-                .input(Items.BLACK_WOOL)
-                .input(Items.CARTOGRAPHY_TABLE)
-                .criterion(FabricRecipeProvider.hasItem(ModBlocks.MIKU_PLUSH), FabricRecipeProvider.conditionsFromItem(ModBlocks.MIKU_PLUSH))
-                .offerTo(exporter);
-
-            ShapelessRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ModBlocks.MIKU_PLUSH_BR_GO)
-                .input(ModBlocks.MIKU_PLUSH)
-                .input(Items.YELLOW_WOOL)
-                .input(Items.GREEN_WOOL)
-                .input(Items.LEAD)
-                .criterion(FabricRecipeProvider.hasItem(ModBlocks.MIKU_PLUSH), FabricRecipeProvider.conditionsFromItem(ModBlocks.MIKU_PLUSH))
-                .offerTo(exporter);
-
-            ShapelessRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ModBlocks.MIKU_PLUSH_BR_SCHOOL_PE)
-                .input(ModBlocks.MIKU_PLUSH)
-                .input(Items.WHITE_WOOL)
-                .input(Items.BLUE_WOOL)
-                .input(Items.TUBE_CORAL_FAN)
-                .criterion(FabricRecipeProvider.hasItem(ModBlocks.MIKU_PLUSH), FabricRecipeProvider.conditionsFromItem(ModBlocks.MIKU_PLUSH))
-                .offerTo(exporter);
-
-            ShapelessRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ModBlocks.MIKU_PLUSH_BR_RS)
-                .input(ModBlocks.MIKU_PLUSH)
-                .input(Items.GRAY_WOOL)
-                .input(Items.RED_WOOL)
-                .input(Items.MOSS_BLOCK)
-                .criterion(FabricRecipeProvider.hasItem(ModBlocks.MIKU_PLUSH), FabricRecipeProvider.conditionsFromItem(ModBlocks.MIKU_PLUSH))
-                .offerTo(exporter);
-
-            ShapelessRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ModBlocks.MIKU_PLUSH_FROG)
-                .input(ModBlocks.MIKU_PLUSH)
-                .input(Items.LIGHT_BLUE_WOOL)
-                .input(Items.TADPOLE_BUCKET)
-                .criterion(FabricRecipeProvider.hasItem(ModBlocks.MIKU_PLUSH), FabricRecipeProvider.conditionsFromItem(ModBlocks.MIKU_PLUSH))
-                .offerTo(exporter);
-
-            ShapelessRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ModBlocks.MIKU_PLUSH_MUSHROOM)
-                .input(ModBlocks.MIKU_PLUSH)
-                .input(Items.MOSS_BLOCK)
-                .input(Items.RED_MUSHROOM_BLOCK)
-                .criterion(FabricRecipeProvider.hasItem(ModBlocks.MIKU_PLUSH), FabricRecipeProvider.conditionsFromItem(ModBlocks.MIKU_PLUSH))
-                .offerTo(exporter);
-
-            ShapelessRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ModBlocks.MIKU_PLUSH_SENBONZAKURA)
-                .input(ModBlocks.MIKU_PLUSH)
-                .input(Items.GREEN_WOOL)
-                .input(Items.CHERRY_LOG)
-                .criterion(FabricRecipeProvider.hasItem(ModBlocks.MIKU_PLUSH), FabricRecipeProvider.conditionsFromItem(ModBlocks.MIKU_PLUSH))
-                .offerTo(exporter);
-
-            ShapelessRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ModBlocks.MIKU_PLUSH_URAOTOMELOVERS)
-                .input(ModBlocks.MIKU_PLUSH)
-                .input(Items.WHITE_WOOL)
-                .input(Items.BLACK_WOOL)
-                .criterion(FabricRecipeProvider.hasItem(ModBlocks.MIKU_PLUSH), FabricRecipeProvider.conditionsFromItem(ModBlocks.MIKU_PLUSH))
-                .offerTo(exporter);
-
-            ShapelessRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ModBlocks.MIKU_PLUSH_PERSONADANCING)
-                .input(ModBlocks.MIKU_PLUSH)
-                .input(Items.WHITE_WOOL)
-                .input(Items.BLACK_WOOL)
-                .input(Items.NOTE_BLOCK)
-                .criterion(FabricRecipeProvider.hasItem(ModBlocks.MIKU_PLUSH), FabricRecipeProvider.conditionsFromItem(ModBlocks.MIKU_PLUSH))
-                .offerTo(exporter);
-
-            ShapelessRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ModBlocks.MIKU_PLUSH_HELLOPLANET)
-                .input(ModBlocks.MIKU_PLUSH)
-                .input(Items.WHITE_WOOL)
-                .input(Items.LIME_WOOL)
-                .input(Items.MAGENTA_WOOL)
-                .criterion(FabricRecipeProvider.hasItem(ModBlocks.MIKU_PLUSH), FabricRecipeProvider.conditionsFromItem(ModBlocks.MIKU_PLUSH))
-                .offerTo(exporter);
-
-            ShapelessRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ModBlocks.MIKU_PLUSH_HACHUNE)
-                .input(ModBlocks.MIKU_PLUSH)
-                .input(Items.LILY_OF_THE_VALLEY)
-                .criterion(FabricRecipeProvider.hasItem(ModBlocks.MIKU_PLUSH), FabricRecipeProvider.conditionsFromItem(ModBlocks.MIKU_PLUSH))
-                .offerTo(exporter);
-
-            ShapelessRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ModBlocks.MIKU_PLUSH_ZATSUNE)
-                .input(ModBlocks.MIKU_PLUSH)
-                .input(Items.BLACK_WOOL, 2)
-                .criterion(FabricRecipeProvider.hasItem(ModBlocks.MIKU_PLUSH), FabricRecipeProvider.conditionsFromItem(ModBlocks.MIKU_PLUSH))
-                .offerTo(exporter);
-
-            ShapelessRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ModBlocks.MIKU_PLUSH_INFINITY)
-                .input(ModBlocks.MIKU_PLUSH)
-                .input(Items.ENDER_EYE)
-                .criterion(FabricRecipeProvider.hasItem(ModBlocks.MIKU_PLUSH), FabricRecipeProvider.conditionsFromItem(ModBlocks.MIKU_PLUSH))
-                .offerTo(exporter);
-
-            ShapelessRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ModBlocks.MIKU_PLUSH_VAMPIRE)
-                .input(ModBlocks.MIKU_PLUSH)
-                .input(Items.FERMENTED_SPIDER_EYE)
-                .criterion(FabricRecipeProvider.hasItem(ModBlocks.MIKU_PLUSH), FabricRecipeProvider.conditionsFromItem(ModBlocks.MIKU_PLUSH))
-                .offerTo(exporter);
-
-            ShapelessRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ModBlocks.MIKU_PLUSH_WEREWOMAN)
-                .input(ModBlocks.MIKU_PLUSH)
-                .input(Items.BONE)
-                .input(Items.MUTTON)
-                .criterion(FabricRecipeProvider.hasItem(ModBlocks.MIKU_PLUSH), FabricRecipeProvider.conditionsFromItem(ModBlocks.MIKU_PLUSH))
-                .offerTo(exporter);
-
-            ShapelessRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ModBlocks.MIKU_PLUSH_JASON)
-                .input(ModBlocks.MIKU_PLUSH)
-                .input(Items.BIRCH_PLANKS)
-                .input(Items.BROWN_WOOL)
-                .input(Items.IRON_SWORD)
-                .criterion(FabricRecipeProvider.hasItem(ModBlocks.MIKU_PLUSH), FabricRecipeProvider.conditionsFromItem(ModBlocks.MIKU_PLUSH))
-                .offerTo(exporter);
-
-            ShapelessRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ModBlocks.MIKU_PLUSH_MICHAEL_MYERS)
-                .input(ModBlocks.MIKU_PLUSH)
-                .input(Items.BROWN_WOOL)
-                .input(Items.BLUE_WOOL)
-                .input(Items.IRON_SWORD)
-                .criterion(FabricRecipeProvider.hasItem(ModBlocks.MIKU_PLUSH), FabricRecipeProvider.conditionsFromItem(ModBlocks.MIKU_PLUSH))
-                .offerTo(exporter);
-
-            ShapelessRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ModBlocks.MIKU_PLUSH_PUMPKIN)
-                .input(ModBlocks.MIKU_PLUSH)
-                .input(Items.CARVED_PUMPKIN)
-                .criterion(FabricRecipeProvider.hasItem(ModBlocks.MIKU_PLUSH), FabricRecipeProvider.conditionsFromItem(ModBlocks.MIKU_PLUSH))
-                .offerTo(exporter);
-
-            ShapelessRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ModBlocks.MIKU_PLUSH_GHOSTFACE)
-                .input(ModBlocks.MIKU_PLUSH)
-                .input(Items.BIRCH_PLANKS)
-                .input(Items.BLACK_WOOL)
-                .input(Items.IRON_SWORD)
-                .criterion(FabricRecipeProvider.hasItem(ModBlocks.MIKU_PLUSH), FabricRecipeProvider.conditionsFromItem(ModBlocks.MIKU_PLUSH))
-                .offerTo(exporter);
-
-            ShapelessRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ModBlocks.MIKU_PLUSH_FRANKENSTEIN)
-                .input(ModBlocks.MIKU_PLUSH)
-                .input(Items.BROWN_WOOL)
-                .input(Items.GREEN_WOOL)
-                .input(Items.LIGHTNING_ROD)
-                .criterion(FabricRecipeProvider.hasItem(ModBlocks.MIKU_PLUSH), FabricRecipeProvider.conditionsFromItem(ModBlocks.MIKU_PLUSH))
-                .offerTo(exporter);
-
-            ShapelessRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ModBlocks.MIKU_PLUSH_MUMMY)
-                .input(ModBlocks.MIKU_PLUSH)
-                .input(Items.BLACK_WOOL)
-                .input(Items.PAPER, 2)
-                .criterion(FabricRecipeProvider.hasItem(ModBlocks.MIKU_PLUSH), FabricRecipeProvider.conditionsFromItem(ModBlocks.MIKU_PLUSH))
-                .offerTo(exporter);
+            simpleShapeless(exporter, ModItems.MIKU_PLUSH_BR, ModItems.MIKU_PLUSH, Items.YELLOW_WOOL, Items.GREEN_WOOL);
+            simpleShapeless(exporter, ModItems.MIKU_PLUSH_BR_BA, ModItems.MIKU_PLUSH, Items.RED_WOOL, Items.WHITE_WOOL, Items.BLUE_WOOL);
+            simpleShapeless(exporter, ModItems.MIKU_PLUSH_BIK, ModItems.MIKU_PLUSH, Items.BLUE_WOOL, Items.WATER_BUCKET);
+            simpleShapeless(exporter, ModItems.MIKU_PLUSH_BR_BEACH, ModItems.MIKU_PLUSH, Items.YELLOW_WOOL, Items.GREEN_WOOL, Items.SAND);
+            simpleShapeless(exporter, ModItems.MIKU_PLUSH_BR_BRAID, ModItems.MIKU_PLUSH, Items.YELLOW_WOOL, Items.GREEN_WOOL, Items.GLOWSTONE);
+            simpleShapeless(exporter, ModItems.MIKU_PLUSH_BR_BA_DRUM, ModItems.MIKU_PLUSH, Items.RED_WOOL, Items.WHITE_WOOL, Items.BLUE_WOOL, Items.NOTE_BLOCK);
+            simpleShapeless(exporter, ModItems.MIKU_PLUSH_BR_PA, ModItems.MIKU_PLUSH, Items.WHITE_WOOL, Items.CORNFLOWER);
+            simpleShapeless(exporter, ModItems.MIKU_PLUSH_BR_SP, ModItems.MIKU_PLUSH, Items.WHITE_WOOL, Items.RED_WOOL, Items.BLACK_WOOL, Items.GRAY_CONCRETE);
+            simpleShapeless(exporter, ModItems.MIKU_PLUSH_BR_MG, ModItems.MIKU_PLUSH, Items.BROWN_WOOL, Items.RED_WOOL, Items.GOLD_NUGGET);
+            simpleShapeless(exporter, ModItems.MIKU_PLUSH_BR_BROWN_BRO, ModItems.MIKU_PLUSH, Items.BROWN_WOOL, Items.BLACK_WOOL, Items.IRON_NUGGET);
+            simpleShapeless(exporter, ModItems.MIKU_PLUSH_BR_ELECTRICIAN, ModItems.MIKU_PLUSH, Items.BROWN_WOOL, Items.BLUE_WOOL, Items.REDSTONE);
+            simpleShapeless(exporter, ModItems.MIKU_PLUSH_BR_BIK_ORANGE, ModItems.MIKU_PLUSH, Items.ORANGE_WOOL, Items.WATER_BUCKET);
+            simpleShapeless(exporter, ModItems.MIKU_PLUSH_BR_AM, ModItems.MIKU_PLUSH, Items.GREEN_WOOL, Items.YELLOW_WOOL, Items.BLUE_WOOL, Items.JUNGLE_SAPLING);
+            simpleShapeless(exporter, ModItems.MIKU_PLUSH_BR_FUT_FLA, ModItems.MIKU_PLUSH, Items.RED_WOOL, Items.BLACK_WOOL);
+            simpleShapeless(exporter, ModItems.MIKU_PLUSH_BR_FUT_CAM, ModItems.MIKU_PLUSH, Items.LIGHT_GRAY_WOOL, Items.BLACK_WOOL);
+            simpleShapeless(exporter, ModItems.MIKU_PLUSH_BR_FUT_CRVG, ModItems.MIKU_PLUSH, Items.WHITE_WOOL, Items.BLACK_WOOL, Items.CARTOGRAPHY_TABLE);
+            simpleShapeless(exporter, ModItems.MIKU_PLUSH_BR_GO, ModItems.MIKU_PLUSH, Items.YELLOW_WOOL, Items.GREEN_WOOL, Items.LEAD);
+            simpleShapeless(exporter, ModItems.MIKU_PLUSH_BR_SCHOOL_PE, ModItems.MIKU_PLUSH, Items.WHITE_WOOL, Items.BLUE_WOOL, Items.TUBE_CORAL_FAN);
+            simpleShapeless(exporter, ModItems.MIKU_PLUSH_BR_RS, ModItems.MIKU_PLUSH, Items.GRAY_WOOL, Items.RED_WOOL, Items.MOSS_BLOCK);
+            simpleShapeless(exporter, ModItems.MIKU_PLUSH_FROG, ModItems.MIKU_PLUSH, Items.LIGHT_BLUE_WOOL, Items.TADPOLE_BUCKET);
+            simpleShapeless(exporter, ModItems.MIKU_PLUSH_MUSHROOM, ModItems.MIKU_PLUSH, Items.MOSS_BLOCK, Items.RED_MUSHROOM_BLOCK);
+            simpleShapeless(exporter, ModItems.MIKU_PLUSH_SENBONZAKURA, ModItems.MIKU_PLUSH, Items.GREEN_WOOL, Items.CHERRY_LOG);
+            simpleShapeless(exporter, ModItems.MIKU_PLUSH_URAOTOMELOVERS, ModItems.MIKU_PLUSH, Items.WHITE_WOOL, Items.BLACK_WOOL);
+            simpleShapeless(exporter, ModItems.MIKU_PLUSH_PERSONADANCING, ModItems.MIKU_PLUSH, Items.WHITE_WOOL, Items.BLACK_WOOL, Items.NOTE_BLOCK);
+            simpleShapeless(exporter, ModItems.MIKU_PLUSH_HELLOPLANET, ModItems.MIKU_PLUSH, Items.WHITE_WOOL, Items.LIME_WOOL, Items.MAGENTA_WOOL);
+            simpleShapeless(exporter, ModItems.MIKU_PLUSH_HACHUNE, ModItems.MIKU_PLUSH, Items.LILY_OF_THE_VALLEY);
+            simpleShapeless(exporter, ModItems.MIKU_PLUSH_ZATSUNE, ModItems.MIKU_PLUSH, Items.BLACK_WOOL, Items.BLACK_WOOL);
+            simpleShapeless(exporter, ModItems.MIKU_PLUSH_INFINITY, ModItems.MIKU_PLUSH, Items.ENDER_EYE);
+            simpleShapeless(exporter, ModItems.MIKU_PLUSH_VAMPIRE, ModItems.MIKU_PLUSH, Items.FERMENTED_SPIDER_EYE);
+            simpleShapeless(exporter, ModItems.MIKU_PLUSH_WEREWOMAN, ModItems.MIKU_PLUSH, Items.BONE, Items.MUTTON);
+            simpleShapeless(exporter, ModItems.MIKU_PLUSH_JASON, ModItems.MIKU_PLUSH, Items.BIRCH_PLANKS, Items.BROWN_WOOL, Items.IRON_SWORD);
+            simpleShapeless(exporter, ModItems.MIKU_PLUSH_MICHAEL_MYERS, ModItems.MIKU_PLUSH, Items.BROWN_WOOL, Items.BLUE_WOOL, Items.IRON_SWORD);
+            simpleShapeless(exporter, ModItems.MIKU_PLUSH_PUMPKIN, ModItems.MIKU_PLUSH, Items.CARVED_PUMPKIN);
+            simpleShapeless(exporter, ModItems.MIKU_PLUSH_GHOSTFACE, ModItems.MIKU_PLUSH, Items.BIRCH_PLANKS, Items.BLACK_WOOL, Items.IRON_SWORD);
+            simpleShapeless(exporter, ModItems.MIKU_PLUSH_FRANKENSTEIN, ModItems.MIKU_PLUSH, Items.BROWN_WOOL, Items.GREEN_WOOL, Items.LIGHTNING_ROD);
+            simpleShapeless(exporter, ModItems.MIKU_PLUSH_MUMMY, ModItems.MIKU_PLUSH, Items.BLACK_WOOL, Items.PAPER, Items.PAPER);
 
             ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ModBlocks.MIKU_PLUSH_GHOST)
                 .pattern("121")
@@ -417,171 +183,31 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .criterion(FabricRecipeProvider.hasItem(Items.GRAY_STAINED_GLASS), FabricRecipeProvider.conditionsFromItem(Items.GRAY_STAINED_GLASS))
                 .offerTo(exporter);
 
-            ShapelessRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ModBlocks.MIKU_PLUSH_PATATI)
-                .input(ModBlocks.MIKU_PLUSH)
-                .input(Items.YELLOW_WOOL)
-                .input(Items.LIGHT_BLUE_WOOL)
-                .input(Items.WHITE_WOOL)
-                .criterion(FabricRecipeProvider.hasItem(ModBlocks.MIKU_PLUSH), FabricRecipeProvider.conditionsFromItem(ModBlocks.MIKU_PLUSH))
-                .offerTo(exporter);
-
-            ShapelessRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ModBlocks.MIKU_PLUSH_PATATA)
-                .input(ModBlocks.MIKU_PLUSH)
-                .input(Items.YELLOW_WOOL)
-                .input(Items.LIME_WOOL)
-                .input(Items.RED_WOOL)
-                .criterion(FabricRecipeProvider.hasItem(ModBlocks.MIKU_PLUSH), FabricRecipeProvider.conditionsFromItem(ModBlocks.MIKU_PLUSH))
-                .offerTo(exporter);
-
-            ShapelessRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ModBlocks.MIKU_PLUSH_DEVIL)
-                .input(ModBlocks.MIKU_PLUSH)
-                .input(Items.MAGMA_BLOCK)
-                .input(Items.NETHERRACK)
-                .criterion(FabricRecipeProvider.hasItem(ModBlocks.MIKU_PLUSH), FabricRecipeProvider.conditionsFromItem(ModBlocks.MIKU_PLUSH))
-                .offerTo(exporter);
-
-            ShapelessRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ModBlocks.MIKU_PLUSH_WITCH)
-                .input(ModBlocks.MIKU_PLUSH)
-                .input(Items.PURPLE_WOOL)
-                .input(Items.GREEN_WOOL)
-                .input(Items.STICK)
-                .input(Items.WHEAT)
-                .criterion(FabricRecipeProvider.hasItem(ModBlocks.MIKU_PLUSH), FabricRecipeProvider.conditionsFromItem(ModBlocks.MIKU_PLUSH))
-                .offerTo(exporter);
-
-            ShapelessRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ModBlocks.MIKU_PLUSH_SANTA)
-                .input(ModBlocks.MIKU_PLUSH)
-                .input(Items.RED_WOOL)
-                .input(Items.WHITE_WOOL)
-                .input(Items.SNOW_BLOCK)
-                .criterion(FabricRecipeProvider.hasItem(ModBlocks.MIKU_PLUSH), FabricRecipeProvider.conditionsFromItem(ModBlocks.MIKU_PLUSH))
-                .offerTo(exporter);
-
-            ShapelessRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ModBlocks.MIKU_PLUSH_REINDEER)
-                .input(ModBlocks.MIKU_PLUSH)
-                .input(Items.BROWN_WOOL)
-                .input(Items.REDSTONE_TORCH)
-                .criterion(FabricRecipeProvider.hasItem(ModBlocks.MIKU_PLUSH), FabricRecipeProvider.conditionsFromItem(ModBlocks.MIKU_PLUSH))
-                .offerTo(exporter);
-
-            ShapelessRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ModBlocks.MIKU_PLUSH_SANTA_ELF)
-                .input(ModBlocks.MIKU_PLUSH)
-                .input(Items.LIME_WOOL)
-                .input(Items.RED_WOOL)
-                .criterion(FabricRecipeProvider.hasItem(ModBlocks.MIKU_PLUSH), FabricRecipeProvider.conditionsFromItem(ModBlocks.MIKU_PLUSH))
-                .offerTo(exporter);
-
-            ShapelessRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ModBlocks.MIKU_PLUSH_XMAS_TREE)
-                .input(ModBlocks.MIKU_PLUSH)
-                .input(Items.SPRUCE_LEAVES)
-                .input(Items.RED_WOOL)
-                .criterion(FabricRecipeProvider.hasItem(ModBlocks.MIKU_PLUSH), FabricRecipeProvider.conditionsFromItem(ModBlocks.MIKU_PLUSH))
-                .offerTo(exporter);
-
-            ShapelessRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ModBlocks.MIKU_PLUSH_SONIC_CROSSWORLDS)
-                .input(ModBlocks.MIKU_PLUSH)
-                .input(Items.MAGENTA_WOOL)
-                .input(Items.BLACK_WOOL)
-                .criterion(FabricRecipeProvider.hasItem(ModBlocks.MIKU_PLUSH), FabricRecipeProvider.conditionsFromItem(ModBlocks.MIKU_PLUSH))
-                .offerTo(exporter);
-
-            ShapelessRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ModBlocks.MIKU_PLUSH_FORTNITE_NEKO)
-                .input(ModBlocks.MIKU_PLUSH)
-                .input(Items.PINK_WOOL)
-                .input(Items.LIGHT_BLUE_WOOL)
-                .criterion(FabricRecipeProvider.hasItem(ModBlocks.MIKU_PLUSH), FabricRecipeProvider.conditionsFromItem(ModBlocks.MIKU_PLUSH))
-                .offerTo(exporter);
-
-            ShapelessRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ModBlocks.MIKU_PLUSH_V4)
-                .input(ModBlocks.MIKU_PLUSH)
-                .input(Items.IRON_INGOT)
-                .criterion(FabricRecipeProvider.hasItem(ModBlocks.MIKU_PLUSH), FabricRecipeProvider.conditionsFromItem(ModBlocks.MIKU_PLUSH))
-                .offerTo(exporter);
-
-            ShapelessRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ModBlocks.MIKU_PLUSH_MESMERIZER)
-                .input(ModBlocks.MIKU_PLUSH)
-                .input(Items.LIGHT_BLUE_WOOL, 2)
-                .criterion(FabricRecipeProvider.hasItem(ModBlocks.MIKU_PLUSH), FabricRecipeProvider.conditionsFromItem(ModBlocks.MIKU_PLUSH))
-                .offerTo(exporter);
-
-            ShapelessRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ModBlocks.MIKU_PLUSH_SONIC)
-                .input(ModBlocks.MIKU_PLUSH)
-                .input(Items.BLUE_WOOL)
-                .input(Items.REDSTONE)
-                .criterion(FabricRecipeProvider.hasItem(ModBlocks.MIKU_PLUSH), FabricRecipeProvider.conditionsFromItem(ModBlocks.MIKU_PLUSH))
-                .offerTo(exporter);
-
-            ShapelessRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ModBlocks.MIKU_PLUSH_DIGITAL_STARS_2025)
-                .input(ModBlocks.MIKU_PLUSH)
-                .input(Items.NOTE_BLOCK)
-                .input(Items.GOLD_NUGGET, 4)
-                .criterion(FabricRecipeProvider.hasItem(ModBlocks.MIKU_PLUSH), FabricRecipeProvider.conditionsFromItem(ModBlocks.MIKU_PLUSH))
-                .offerTo(exporter);
-
-            ShapelessRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ModBlocks.MIKU_PLUSH_ROTTEN_GIRL)
-                .input(ModBlocks.MIKU_PLUSH)
-                .input(Items.ROTTEN_FLESH)
-                .criterion(FabricRecipeProvider.hasItem(ModBlocks.MIKU_PLUSH), FabricRecipeProvider.conditionsFromItem(ModBlocks.MIKU_PLUSH))
-                .offerTo(exporter);
-
-            ShapelessRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ModBlocks.MIKU_PLUSH_PSYCHO_MODE)
-                .input(ModBlocks.MIKU_PLUSH)
-                .input(Items.AMETHYST_SHARD)
-                .criterion(FabricRecipeProvider.hasItem(ModBlocks.MIKU_PLUSH), FabricRecipeProvider.conditionsFromItem(ModBlocks.MIKU_PLUSH))
-                .offerTo(exporter);
-
-            ShapelessRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ModBlocks.MIKU_PLUSH_DONT_BELIEVE_IN_T)
-                .input(ModBlocks.MIKU_PLUSH)
-                .input(Items.WHITE_WOOL)
-                .input(Items.LIGHT_BLUE_WOOL)
-                .criterion(FabricRecipeProvider.hasItem(ModBlocks.MIKU_PLUSH), FabricRecipeProvider.conditionsFromItem(ModBlocks.MIKU_PLUSH))
-                .offerTo(exporter);
-
-            ShapelessRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ModBlocks.MIKU_PLUSH_STATIC)
-                .input(ModBlocks.MIKU_PLUSH)
-                .input(Items.YELLOW_DYE)
-                .input(Items.MAGENTA_DYE)
-                .input(Items.CYAN_DYE)
-                .input(Items.BLUE_WOOL)
-                .criterion(FabricRecipeProvider.hasItem(ModBlocks.MIKU_PLUSH), FabricRecipeProvider.conditionsFromItem(ModBlocks.MIKU_PLUSH))
-                .offerTo(exporter);
-
-            ShapelessRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ModBlocks.MIKU_PLUSH_MOCHIMOCHI)
-                .input(ModBlocks.MIKU_PLUSH)
-                .input(Items.LIGHT_BLUE_WOOL)
-                .input(Items.PINK_WOOL)
-                .input(Items.PINK_PETALS)
-                .criterion(FabricRecipeProvider.hasItem(ModBlocks.MIKU_PLUSH), FabricRecipeProvider.conditionsFromItem(ModBlocks.MIKU_PLUSH))
-                .offerTo(exporter);
-
-            ShapelessRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ModBlocks.MIKU_PLUSH_MONITORING)
-                .input(ModBlocks.MIKU_PLUSH)
-                .input(Items.BROWN_WOOL)
-                .input(Items.SPYGLASS)
-                .criterion(FabricRecipeProvider.hasItem(ModBlocks.MIKU_PLUSH), FabricRecipeProvider.conditionsFromItem(ModBlocks.MIKU_PLUSH))
-                .offerTo(exporter);
-
-            ShapelessRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ModBlocks.MIKU_PLUSH_WORLD_IS_MINE)
-                .input(ModBlocks.MIKU_PLUSH)
-                .input(Items.WHITE_WOOL)
-                .input(Items.GOLD_INGOT)
-                .input(Items.CAKE)
-                .criterion(FabricRecipeProvider.hasItem(ModBlocks.MIKU_PLUSH), FabricRecipeProvider.conditionsFromItem(ModBlocks.MIKU_PLUSH))
-                .offerTo(exporter);
-
-            ShapelessRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ModBlocks.MIKU_PLUSH_ROLLING_GIRL)
-                .input(ModBlocks.MIKU_PLUSH)
-                .input(Items.WHITE_WOOL)
-                .input(Items.BROWN_WOOL)
-                .criterion(FabricRecipeProvider.hasItem(ModBlocks.MIKU_PLUSH), FabricRecipeProvider.conditionsFromItem(ModBlocks.MIKU_PLUSH))
-                .offerTo(exporter);
-
-            ShapelessRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ModBlocks.MIKU_PLUSH_DEEP_SEA_GIRL)
-                .input(ModBlocks.MIKU_PLUSH)
-                .input(Items.TUBE_CORAL)
-                .input(Items.BUBBLE_CORAL)
-                .criterion(FabricRecipeProvider.hasItem(ModBlocks.MIKU_PLUSH), FabricRecipeProvider.conditionsFromItem(ModBlocks.MIKU_PLUSH))
-                .offerTo(exporter);
+            simpleShapeless(exporter, ModItems.MIKU_PLUSH_PATATI, ModItems.MIKU_PLUSH, Items.YELLOW_WOOL, Items.LIGHT_BLUE_WOOL, Items.WHITE_WOOL);
+            simpleShapeless(exporter, ModItems.MIKU_PLUSH_PATATA, ModItems.MIKU_PLUSH, Items.YELLOW_WOOL, Items.LIME_WOOL, Items.RED_WOOL);
+            simpleShapeless(exporter, ModItems.MIKU_PLUSH_DEVIL, ModItems.MIKU_PLUSH, Items.MAGMA_BLOCK, Items.NETHERRACK);
+            simpleShapeless(exporter, ModItems.MIKU_PLUSH_WITCH, ModItems.MIKU_PLUSH, Items.PURPLE_WOOL, Items.GREEN_WOOL, Items.STICK, Items.WHEAT);
+            simpleShapeless(exporter, ModItems.MIKU_PLUSH_SANTA, ModItems.MIKU_PLUSH, Items.RED_WOOL, Items.WHITE_WOOL, Items.SNOW_BLOCK);
+            simpleShapeless(exporter, ModItems.MIKU_PLUSH_REINDEER, ModItems.MIKU_PLUSH, Items.BROWN_WOOL, Items.REDSTONE_TORCH);
+            simpleShapeless(exporter, ModItems.MIKU_PLUSH_SANTA_ELF, ModItems.MIKU_PLUSH, Items.LIME_WOOL, Items.RED_WOOL);
+            simpleShapeless(exporter, ModItems.MIKU_PLUSH_XMAS_TREE, ModItems.MIKU_PLUSH, Items.SPRUCE_LEAVES, Items.RED_WOOL);
+            simpleShapeless(exporter, ModItems.MIKU_PLUSH_SONIC_CROSSWORLDS, ModItems.MIKU_PLUSH, Items.MAGENTA_WOOL, Items.BLACK_WOOL);
+            simpleShapeless(exporter, ModItems.MIKU_PLUSH_FORTNITE_NEKO, ModItems.MIKU_PLUSH, Items.PINK_WOOL, Items.LIGHT_BLUE_WOOL);
+            simpleShapeless(exporter, ModItems.MIKU_PLUSH_V4, ModItems.MIKU_PLUSH, Items.IRON_INGOT);
+            simpleShapeless(exporter, ModItems.MIKU_PLUSH_MESMERIZER, ModItems.MIKU_PLUSH, Items.LIGHT_BLUE_WOOL, Items.LIGHT_BLUE_WOOL);
+            simpleShapeless(exporter, ModItems.MIKU_PLUSH_SONIC, ModItems.MIKU_PLUSH, Items.BLUE_WOOL, Items.REDSTONE);
+            simpleShapeless(exporter, ModItems.MIKU_PLUSH_DIGITAL_STARS_2025, ModItems.MIKU_PLUSH, Items.NOTE_BLOCK, Items.GOLD_NUGGET, Items.GOLD_NUGGET, Items.GOLD_NUGGET, Items.GOLD_NUGGET);
+            simpleShapeless(exporter, ModItems.MIKU_PLUSH_ROTTEN_GIRL, ModItems.MIKU_PLUSH, Items.ROTTEN_FLESH);
+            simpleShapeless(exporter, ModItems.MIKU_PLUSH_PSYCHO_MODE, ModItems.MIKU_PLUSH, Items.AMETHYST_SHARD);
+            simpleShapeless(exporter, ModItems.MIKU_PLUSH_DONT_BELIEVE_IN_T, ModItems.MIKU_PLUSH, Items.WHITE_WOOL, Items.LIGHT_BLUE_WOOL);
+            simpleShapeless(exporter, ModItems.MIKU_PLUSH_STATIC, ModItems.MIKU_PLUSH, Items.YELLOW_DYE, Items.MAGENTA_DYE, Items.CYAN_DYE, Items.BLUE_WOOL);
+            simpleShapeless(exporter, ModItems.MIKU_PLUSH_MOCHIMOCHI, ModItems.MIKU_PLUSH, Items.LIGHT_BLUE_WOOL, Items.PINK_WOOL, Items.PINK_PETALS);
+            simpleShapeless(exporter, ModItems.MIKU_PLUSH_MONITORING, ModItems.MIKU_PLUSH, Items.BROWN_WOOL, Items.SPYGLASS);
+            simpleShapeless(exporter, ModItems.MIKU_PLUSH_HOLLOW_KNIGHT, ModItems.MIKU_PLUSH, Items.BLACK_WOOL, Items.IRON_SWORD, Items.BONE_BLOCK);
+            simpleShapeless(exporter, ModItems.MIKU_PLUSH_HORNET, ModItems.MIKU_PLUSH, Items.RED_WOOL, Items.IRON_SWORD, Items.BONE_BLOCK);
+            simpleShapeless(exporter, ModItems.MIKU_PLUSH_WORLD_IS_MINE, ModItems.MIKU_PLUSH, Items.WHITE_WOOL, Items.GOLD_INGOT, Items.CAKE);
+            simpleShapeless(exporter, ModItems.MIKU_PLUSH_ROLLING_GIRL, ModItems.MIKU_PLUSH, Items.WHITE_WOOL, Items.BROWN_WOOL);
+            simpleShapeless(exporter, ModItems.MIKU_PLUSH_DEEP_SEA_GIRL, ModItems.MIKU_PLUSH, Items.TUBE_CORAL, Items.BUBBLE_CORAL);
         }
 
         //TETO
@@ -596,166 +222,39 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .criterion(FabricRecipeProvider.hasItem(Items.WHITE_WOOL), FabricRecipeProvider.conditionsFromItem(Items.WHITE_WOOL))
                 .criterion(FabricRecipeProvider.hasItem(Items.LIGHT_GRAY_WOOL), FabricRecipeProvider.conditionsFromItem(Items.LIGHT_GRAY_WOOL))
                 .offerTo(exporter);
+            pickaxeRecipe(exporter, ModItems.TETO_PICKAXE, ModItems.TETO_PLUSH);
 
-            ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.TETO_PICKAXE)
-                .pattern("121")
-                .input('1', Items.DIAMOND)
-                .input('2', ModBlocks.TETO_PLUSH)
-                .criterion(FabricRecipeProvider.hasItem(ModBlocks.TETO_PLUSH), FabricRecipeProvider.conditionsFromItem(ModBlocks.TETO_PLUSH))
-                .criterion(FabricRecipeProvider.hasItem(Items.DIAMOND), FabricRecipeProvider.conditionsFromItem(Items.DIAMOND))
-                .offerTo(exporter);
+            simpleShapeless(exporter, ModItems.TETO_PLUSH_MESMERIZER, ModItems.TETO_PLUSH, Items.RED_WOOL, Items.RED_WOOL);
+            pickaxeRecipe(exporter, ModItems.TETO_PICKAXE_MESMERIZER, ModItems.TETO_PLUSH_MESMERIZER);
 
-            ShapelessRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ModBlocks.TETO_PLUSH_MESMERIZER)
-                .input(ModBlocks.TETO_PLUSH)
-                .input(Items.RED_WOOL, 2)
-                .criterion(FabricRecipeProvider.hasItem(ModBlocks.TETO_PLUSH), FabricRecipeProvider.conditionsFromItem(ModBlocks.TETO_PLUSH))
-                .offerTo(exporter);
+            simpleShapeless(exporter, ModItems.TETO_PLUSH_SHADOW, ModItems.TETO_PLUSH, Items.BLACK_WOOL, Items.REDSTONE);
 
-            ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.TETO_PICKAXE_MESMERIZER)
-                .pattern("121")
-                .input('1', Items.DIAMOND)
-                .input('2', ModBlocks.TETO_PLUSH_MESMERIZER)
-                .criterion(FabricRecipeProvider.hasItem(ModBlocks.TETO_PLUSH_MESMERIZER), FabricRecipeProvider.conditionsFromItem(ModBlocks.TETO_PLUSH_MESMERIZER))
-                .offerTo(exporter);
+            simpleShapeless(exporter, ModItems.TETO_PLUSH_BIRDBRAIN, ModItems.TETO_PLUSH, Items.WHEAT_SEEDS, Items.EGG);
+            pickaxeRecipe(exporter, ModItems.TETO_PICKAXE_BIRDBRAIN, ModItems.TETO_PLUSH_BIRDBRAIN);
 
-            ShapelessRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ModBlocks.TETO_PLUSH_SHADOW)
-                .input(ModBlocks.TETO_PLUSH)
-                .input(Items.BLACK_WOOL)
-                .input(Items.REDSTONE)
-                .criterion(FabricRecipeProvider.hasItem(ModBlocks.MIKU_PLUSH), FabricRecipeProvider.conditionsFromItem(ModBlocks.MIKU_PLUSH))
-                .offerTo(exporter);
+            simpleShapeless(exporter, ModItems.TETO_PLUSH_REGRET_ROCK, ModItems.TETO_PLUSH, Items.PURPLE_DYE);
+            pickaxeRecipe(exporter, ModItems.TETO_PICKAXE_REGRET_ROCK, ModItems.TETO_PLUSH_REGRET_ROCK);
 
-            ShapelessRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ModBlocks.TETO_PLUSH_BIRDBRAIN)
-                .input(ModBlocks.TETO_PLUSH)
-                .input(Items.WHEAT_SEEDS)
-                .input(Items.EGG)
-                .criterion(FabricRecipeProvider.hasItem(ModBlocks.TETO_PLUSH), FabricRecipeProvider.conditionsFromItem(ModBlocks.TETO_PLUSH))
-                .offerTo(exporter);
+            simpleShapeless(exporter, ModItems.TETO_PLUSH_DONT_BELIEVE_IN_T, ModItems.TETO_PLUSH, Items.WHITE_WOOL, Items.RED_WOOL);
+            pickaxeRecipe(exporter, ModItems.TETO_PICKAXE_DONT_BELIEVE_IN_T, ModItems.TETO_PLUSH_DONT_BELIEVE_IN_T);
 
-            ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.TETO_PICKAXE_BIRDBRAIN)
-                .pattern("121")
-                .input('1', Items.DIAMOND)
-                .input('2', ModBlocks.TETO_PLUSH_BIRDBRAIN)
-                .criterion(FabricRecipeProvider.hasItem(ModBlocks.TETO_PLUSH_BIRDBRAIN), FabricRecipeProvider.conditionsFromItem(ModBlocks.TETO_PLUSH_BIRDBRAIN))
-                .offerTo(exporter);
+            simpleShapeless(exporter, ModItems.TETO_PLUSH_LIAR_DANCER, ModItems.TETO_PLUSH, Items.BLACK_STAINED_GLASS, Items.BLACK_STAINED_GLASS, Items.WHITE_WOOL);
+            pickaxeRecipe(exporter, ModItems.TETO_PICKAXE_LIAR_DANCER, ModItems.TETO_PLUSH_LIAR_DANCER);
 
-            ShapelessRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ModBlocks.TETO_PLUSH_REGRET_ROCK)
-                .input(ModBlocks.TETO_PLUSH)
-                .input(Items.PURPLE_DYE)
-                .criterion(FabricRecipeProvider.hasItem(ModBlocks.TETO_PLUSH), FabricRecipeProvider.conditionsFromItem(ModBlocks.TETO_PLUSH))
-                .offerTo(exporter);
+            simpleShapeless(exporter, ModItems.TETO_PLUSH_WHATCHACALLITSNAME, ModItems.TETO_PLUSH, Items.GLASS, Items.GLASS, Items.RED_WOOL, Items.ORANGE_WOOL);
+            pickaxeRecipe(exporter, ModItems.TETO_PICKAXE_WHATCHACALLITSNAME, ModItems.TETO_PLUSH_WHATCHACALLITSNAME);
 
-            ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.TETO_PICKAXE_REGRET_ROCK)
-                .pattern("121")
-                .input('1', Items.DIAMOND)
-                .input('2', ModBlocks.TETO_PLUSH_REGRET_ROCK)
-                .criterion(FabricRecipeProvider.hasItem(ModBlocks.TETO_PLUSH_REGRET_ROCK), FabricRecipeProvider.conditionsFromItem(ModBlocks.TETO_PLUSH_REGRET_ROCK))
-                .offerTo(exporter);
+            simpleShapeless(exporter, ModItems.TETO_PLUSH_SOME_MORE_OF_THAT_SONG, ModItems.TETO_PLUSH, Items.LIGHT_BLUE_WOOL);
+            pickaxeRecipe(exporter, ModItems.TETO_PICKAXE_SOME_MORE_OF_THAT_SONG, ModItems.TETO_PLUSH_SOME_MORE_OF_THAT_SONG);
 
-            ShapelessRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ModBlocks.TETO_PLUSH_DONT_BELIEVE_IN_T)
-                .input(ModBlocks.TETO_PLUSH)
-                .input(Items.WHITE_WOOL)
-                .input(Items.RED_WOOL)
-                .criterion(FabricRecipeProvider.hasItem(ModBlocks.TETO_PLUSH), FabricRecipeProvider.conditionsFromItem(ModBlocks.TETO_PLUSH))
-                .offerTo(exporter);
+            simpleShapeless(exporter, ModItems.TETO_PLUSH_LOBSTER, ModItems.TETO_PLUSH, Items.SEAGRASS, Items.SEAGRASS);
 
-            ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.TETO_PICKAXE_DONT_BELIEVE_IN_T)
-                .pattern("121")
-                .input('1', Items.DIAMOND)
-                .input('2', ModBlocks.TETO_PLUSH_DONT_BELIEVE_IN_T)
-                .criterion(FabricRecipeProvider.hasItem(ModBlocks.TETO_PLUSH_DONT_BELIEVE_IN_T), FabricRecipeProvider.conditionsFromItem(ModBlocks.TETO_PLUSH_DONT_BELIEVE_IN_T))
-                .offerTo(exporter);
+            simpleShapeless(exporter, ModItems.TETO_PLUSH_SYNTHV, ModItems.TETO_PLUSH, Items.IRON_INGOT);
+            pickaxeRecipe(exporter, ModItems.TETO_PICKAXE_SYNTHV, ModItems.TETO_PLUSH_SYNTHV);
 
-            ShapelessRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ModBlocks.TETO_PLUSH_LIAR_DANCER)
-                .input(ModBlocks.TETO_PLUSH)
-                .input(Items.BLACK_STAINED_GLASS, 2)
-                .input(Items.WHITE_WOOL)
-                .criterion(FabricRecipeProvider.hasItem(ModBlocks.TETO_PLUSH), FabricRecipeProvider.conditionsFromItem(ModBlocks.TETO_PLUSH))
-                .offerTo(exporter);
+            simpleShapeless(exporter, ModItems.TETO_PLUSH_SPOKEN_FOR, ModItems.TETO_PLUSH, Items.PINK_DYE, Items.GLOWSTONE_DUST);
+            pickaxeRecipe(exporter, ModItems.TETO_PICKAXE_SPOKEN_FOR, ModItems.TETO_PLUSH_SPOKEN_FOR);
 
-            ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.TETO_PICKAXE_LIAR_DANCER)
-                .pattern("121")
-                .input('1', Items.DIAMOND)
-                .input('2', ModBlocks.TETO_PLUSH_LIAR_DANCER)
-                .criterion(FabricRecipeProvider.hasItem(ModBlocks.TETO_PLUSH_LIAR_DANCER), FabricRecipeProvider.conditionsFromItem(ModBlocks.TETO_PLUSH_LIAR_DANCER))
-                .offerTo(exporter);
-
-            ShapelessRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ModBlocks.TETO_PLUSH_WHATCHACALLITSNAME)
-                .input(ModBlocks.TETO_PLUSH)
-                .input(Items.GLASS, 2)
-                .input(Items.RED_WOOL)
-                .input(Items.ORANGE_WOOL)
-                .criterion(FabricRecipeProvider.hasItem(ModBlocks.TETO_PLUSH), FabricRecipeProvider.conditionsFromItem(ModBlocks.TETO_PLUSH))
-                .offerTo(exporter);
-
-            ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.TETO_PICKAXE_WHATCHACALLITSNAME)
-                .pattern("121")
-                .input('1', Items.DIAMOND)
-                .input('2', ModBlocks.TETO_PLUSH_WHATCHACALLITSNAME)
-                .criterion(FabricRecipeProvider.hasItem(ModBlocks.TETO_PLUSH_WHATCHACALLITSNAME), FabricRecipeProvider.conditionsFromItem(ModBlocks.TETO_PLUSH_WHATCHACALLITSNAME))
-                .offerTo(exporter);
-
-            ShapelessRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ModBlocks.TETO_PLUSH_SOME_MORE_OF_THAT_SONG)
-                .input(ModBlocks.TETO_PLUSH)
-                .input(Items.LIGHT_BLUE_WOOL, 1)
-                .criterion(FabricRecipeProvider.hasItem(ModBlocks.TETO_PLUSH), FabricRecipeProvider.conditionsFromItem(ModBlocks.TETO_PLUSH))
-                .offerTo(exporter);
-
-            ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.TETO_PICKAXE_SOME_MORE_OF_THAT_SONG)
-                .pattern("121")
-                .input('1', Items.DIAMOND)
-                .input('2', ModBlocks.TETO_PLUSH_SOME_MORE_OF_THAT_SONG)
-                .criterion(FabricRecipeProvider.hasItem(ModBlocks.TETO_PLUSH_SOME_MORE_OF_THAT_SONG), FabricRecipeProvider.conditionsFromItem(ModBlocks.TETO_PLUSH_SOME_MORE_OF_THAT_SONG))
-                .offerTo(exporter);
-
-            ShapelessRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ModBlocks.TETO_PLUSH_LOBSTER)
-                .input(ModBlocks.TETO_PLUSH)
-                .input(Items.SEAGRASS, 2)
-                .criterion(FabricRecipeProvider.hasItem(ModBlocks.TETO_PLUSH), FabricRecipeProvider.conditionsFromItem(ModBlocks.TETO_PLUSH))
-                .offerTo(exporter);
-
-            ShapelessRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ModBlocks.MIKU_PLUSH_HOLLOW_KNIGHT)
-                .input(ModBlocks.MIKU_PLUSH)
-                .input(Items.BLACK_WOOL, 1)
-                .input(Items.IRON_SWORD, 1)
-                .input(Items.BONE_BLOCK, 1)
-                .criterion(FabricRecipeProvider.hasItem(ModBlocks.MIKU_PLUSH), FabricRecipeProvider.conditionsFromItem(ModBlocks.MIKU_PLUSH))
-                .offerTo(exporter);
-
-            ShapelessRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ModBlocks.MIKU_PLUSH_HORNET)
-                .input(ModBlocks.MIKU_PLUSH)
-                .input(Items.RED_WOOL, 1)
-                .input(Items.IRON_SWORD, 1)
-                .input(Items.BONE_BLOCK, 1)
-                .criterion(FabricRecipeProvider.hasItem(ModBlocks.MIKU_PLUSH), FabricRecipeProvider.conditionsFromItem(ModBlocks.MIKU_PLUSH))
-                .offerTo(exporter);
-
-            ShapelessRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ModBlocks.TETO_PLUSH_SYNTHV)
-                .input(ModBlocks.TETO_PLUSH)
-                .input(Items.IRON_INGOT, 1)
-                .criterion(FabricRecipeProvider.hasItem(ModBlocks.TETO_PLUSH), FabricRecipeProvider.conditionsFromItem(ModBlocks.TETO_PLUSH))
-                .offerTo(exporter);
-
-            ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.TETO_PICKAXE_SYNTHV)
-                .pattern("121")
-                .input('1', Items.DIAMOND)
-                .input('2', ModBlocks.TETO_PLUSH_SYNTHV)
-                .criterion(FabricRecipeProvider.hasItem(ModBlocks.TETO_PLUSH_SYNTHV), FabricRecipeProvider.conditionsFromItem(ModBlocks.TETO_PLUSH_SYNTHV))
-                .offerTo(exporter);
-
-            ShapelessRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ModBlocks.TETO_PLUSH_SPOKEN_FOR)
-                .input(ModBlocks.TETO_PLUSH)
-                .input(Items.PINK_DYE, 1)
-                .input(Items.GLOWSTONE_DUST, 1)
-                .criterion(FabricRecipeProvider.hasItem(ModBlocks.TETO_PLUSH), FabricRecipeProvider.conditionsFromItem(ModBlocks.TETO_PLUSH))
-                .offerTo(exporter);
-
-            ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.TETO_PICKAXE_SPOKEN_FOR)
-                .pattern("121")
-                .input('1', Items.DIAMOND)
-                .input('2', ModBlocks.TETO_PLUSH_SPOKEN_FOR)
-                .criterion(FabricRecipeProvider.hasItem(ModBlocks.TETO_PLUSH_SPOKEN_FOR), FabricRecipeProvider.conditionsFromItem(ModBlocks.TETO_PLUSH_SPOKEN_FOR))
-                .offerTo(exporter);
         }
 
         //MEIKO
@@ -771,17 +270,8 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .criterion(FabricRecipeProvider.hasItem(Items.RED_WOOL), FabricRecipeProvider.conditionsFromItem(Items.RED_WOOL))
                 .offerTo(exporter);
 
-            ShapelessRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ModBlocks.MEIKO_PLUSH_V3)
-                .input(ModBlocks.MEIKO_PLUSH)
-                .input(Items.IRON_INGOT, 1)
-                .criterion(FabricRecipeProvider.hasItem(ModBlocks.MEIKO_PLUSH), FabricRecipeProvider.conditionsFromItem(ModBlocks.MEIKO_PLUSH))
-                .offerTo(exporter);
-
-            ShapelessRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ModBlocks.MEIKO_PLUSH_V4)
-                .input(ModBlocks.MEIKO_PLUSH)
-                .input(Items.IRON_INGOT, 2)
-                .criterion(FabricRecipeProvider.hasItem(ModBlocks.MEIKO_PLUSH), FabricRecipeProvider.conditionsFromItem(ModBlocks.MEIKO_PLUSH))
-                .offerTo(exporter);
+            simpleShapeless(exporter, ModItems.MEIKO_PLUSH_V3, ModItems.MEIKO_PLUSH, Items.IRON_INGOT);
+            simpleShapeless(exporter, ModItems.MEIKO_PLUSH_V4, ModItems.MEIKO_PLUSH, Items.IRON_INGOT, Items.IRON_INGOT);
         }
 
         //GUMI
@@ -797,24 +287,35 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .criterion(FabricRecipeProvider.hasItem(Items.ORANGE_WOOL), FabricRecipeProvider.conditionsFromItem(Items.ORANGE_WOOL))
                 .offerTo(exporter);
 
-            ShapelessRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ModBlocks.GUMI_PLUSH_V3)
-                .input(ModBlocks.GUMI_PLUSH)
-                .input(Items.IRON_INGOT, 1)
-                .criterion(FabricRecipeProvider.hasItem(ModBlocks.GUMI_PLUSH), FabricRecipeProvider.conditionsFromItem(ModBlocks.GUMI_PLUSH))
-                .offerTo(exporter);
-
-            ShapelessRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ModBlocks.GUMI_PLUSH_V4)
-                .input(ModBlocks.GUMI_PLUSH)
-                .input(Items.IRON_INGOT, 2)
-                .criterion(FabricRecipeProvider.hasItem(ModBlocks.GUMI_PLUSH), FabricRecipeProvider.conditionsFromItem(ModBlocks.GUMI_PLUSH))
-                .offerTo(exporter);
-
-            ShapelessRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ModBlocks.GUMI_PLUSH_V6)
-                .input(ModBlocks.GUMI_PLUSH_V4)
-                .input(Items.REDSTONE, 1)
-                .criterion(FabricRecipeProvider.hasItem(ModBlocks.GUMI_PLUSH_V4), FabricRecipeProvider.conditionsFromItem(ModBlocks.GUMI_PLUSH_V4))
-                .offerTo(exporter);
+            simpleShapeless(exporter, ModItems.GUMI_PLUSH_V3, ModItems.GUMI_PLUSH, Items.IRON_INGOT);
+            simpleShapeless(exporter, ModItems.GUMI_PLUSH_V4, ModItems.GUMI_PLUSH, Items.IRON_INGOT, Items.IRON_INGOT);
+            simpleShapeless(exporter, ModItems.GUMI_PLUSH_V6, ModItems.GUMI_PLUSH, Items.IRON_INGOT, Items.IRON_INGOT, Items.REDSTONE);
         }
 
+    }
+
+    public static void pickaxeRecipe (Consumer<RecipeJsonProvider> exporter, Item result, Item ingredient) {
+        ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, result)
+            .pattern("121")
+            .input('1', Items.DIAMOND)
+            .input('2', ingredient)
+            .criterion(FabricRecipeProvider.hasItem(ingredient), FabricRecipeProvider.conditionsFromItem(ingredient))
+            .offerTo(exporter);
+    }
+
+    public static void simpleShapeless (Consumer<RecipeJsonProvider> exporter, Item result, Item plush, Item... ingredients) {
+        //CREATE SHAPELESS RECIPE WITH A PLUSH
+        ShapelessRecipeJsonBuilder shapeless =
+            ShapelessRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, result)
+            .input(plush);
+
+        //ADD EXTRA INGREDIENTS AS NEEDED
+        for (Item ingredient : ingredients) {
+            shapeless.input(ingredient);
+        }
+
+        //ADD RECIPE UNLOCK REQUIREMENT AND EXPORT RECIPE
+        shapeless.criterion(FabricRecipeProvider.hasItem(plush), FabricRecipeProvider.conditionsFromItem(plush))
+        .offerTo(exporter);
     }
 }

@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_gumi_plush_v4": {
+    "has_gumi_plush": {
       "conditions": {
         "items": [
           {
             "items": [
-              "miku-plushie:gumi_plush_v4"
+              "miku-plushie:gumi_plush"
             ]
           }
         ]
@@ -22,7 +22,7 @@
   },
   "requirements": [
     [
-      "has_gumi_plush_v4",
+      "has_gumi_plush",
       "has_the_recipe"
     ]
   ],
