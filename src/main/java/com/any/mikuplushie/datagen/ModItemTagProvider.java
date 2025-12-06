@@ -34,127 +34,45 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
 
     @Override
     protected void configure(RegistryWrapper.WrapperLookup wrapperLookup) {
-        getOrCreateTagBuilder(MIKU_PLUSH)
-            .add(ModItems.MIKU_PLUSH_BR)
-            .add(ModItems.MIKU_PLUSH_BR_BA)
-            .add(ModItems.MIKU_PLUSH_BIK)
-            .add(ModItems.MIKU_PLUSH_BR_BEACH)
-            .add(ModItems.MIKU_PLUSH_BR_BRAID)
-            .add(ModItems.MIKU_PLUSH_BR_BA_DRUM)
-            .add(ModItems.MIKU_PLUSH_BR_PA)
-            .add(ModItems.MIKU_PLUSH_BR_SP)
-            .add(ModItems.MIKU_PLUSH_BR_MG)
-            .add(ModItems.MIKU_PLUSH_BR_BROWN_BRO)
-            .add(ModItems.MIKU_PLUSH_BR_ELECTRICIAN)
-            .add(ModItems.MIKU_PLUSH_BR_BIK_ORANGE)
-            .add(ModItems.MIKU_PLUSH_BR_AM)
-            .add(ModItems.MIKU_PLUSH_BR_FUT_FLA)
-            .add(ModItems.MIKU_PLUSH_BR_FUT_CAM)
-            .add(ModItems.MIKU_PLUSH_BR_GO)
-            .add(ModItems.MIKU_PLUSH_BR_SCHOOL_PE)
-            .add(ModItems.MIKU_PLUSH_BR_FUT_CRVG)
-            .add(ModItems.MIKU_PLUSH_BR_RS)
-            .add(ModItems.MIKU_PLUSH_FROG)
-            .add(ModItems.MIKU_PLUSH_MUSHROOM)
-            .add(ModItems.MIKU_PLUSH_SENBONZAKURA)
-            .add(ModItems.MIKU_PLUSH_URAOTOMELOVERS)
-            .add(ModItems.MIKU_PLUSH_PERSONADANCING)
-            .add(ModItems.MIKU_PLUSH_HELLOPLANET)
-            .add(ModItems.MIKU_PLUSH_HACHUNE)
-            .add(ModItems.MIKU_PLUSH_ZATSUNE)
-            .add(ModItems.MIKU_PLUSH_INFINITY)
-            .add(ModItems.MIKU_PLUSH_VAMPIRE)
-            .add(ModItems.MIKU_PLUSH_WEREWOMAN)
-            .add(ModItems.MIKU_PLUSH_JASON)
-            .add(ModItems.MIKU_PLUSH_MICHAEL_MYERS)
-            .add(ModItems.MIKU_PLUSH_PUMPKIN)
-            .add(ModItems.MIKU_PLUSH_GHOSTFACE)
-            .add(ModItems.MIKU_PLUSH_FRANKENSTEIN)
-            .add(ModItems.MIKU_PLUSH_MUMMY)
-            .add(ModItems.MIKU_PLUSH_GHOST)
-            .add(ModItems.MIKU_PLUSH_PATATI)
-            .add(ModItems.MIKU_PLUSH_PATATA)
-            .add(ModItems.MIKU_PLUSH_DEVIL)
-            .add(ModItems.MIKU_PLUSH_WITCH)
-            .add(ModItems.MIKU_PLUSH_SANTA)
-            .add(ModItems.MIKU_PLUSH_REINDEER)
-            .add(ModItems.MIKU_PLUSH_SANTA_ELF)
-            .add(ModItems.MIKU_PLUSH_XMAS_TREE)
-            .add(ModItems.MIKU_PLUSH)
-            .add(ModItems.MIKU_PLUSH_SONIC_CROSSWORLDS)
-            .add(ModItems.MIKU_PLUSH_FORTNITE_NEKO)
-            .add(ModItems.MIKU_PLUSH_V4)
-            .add(ModItems.MIKU_PLUSH_MESMERIZER)
-            .add(ModItems.MIKU_PLUSH_SONIC)
-            .add(ModItems.MIKU_PLUSH_DIGITAL_STARS_2025)
-            .add(ModItems.MIKU_PLUSH_ROTTEN_GIRL)
-            .add(ModItems.MIKU_PLUSH_PSYCHO_MODE)
-            .add(ModItems.MIKU_PLUSH_DONT_BELIEVE_IN_T)
-            .add(ModItems.MIKU_PLUSH_STATIC)
-            .add(ModItems.MIKU_PLUSH_MOCHIMOCHI)
-            .add(ModItems.MIKU_PLUSH_MONITORING)
-            .add(ModItems.MIKU_PLUSH_HOLLOW_KNIGHT)
-            .add(ModItems.MIKU_PLUSH_HORNET)
-            .add(ModItems.MIKU_PLUSH_WORLD_IS_MINE)
-            .add(ModItems.MIKU_PLUSH_ROLLING_GIRL)
-            .add(ModItems.MIKU_PLUSH_DEEP_SEA_GIRL)
-        ;
-        getOrCreateTagBuilder(AIKO_PLUSH)
-            .add(ModItems.AIKO_PLUSH)
-        ;
-        getOrCreateTagBuilder(TETO_PLUSH)
-            .add(ModItems.TETO_PLUSH)
-            .add(ModItems.TETO_PLUSH_MESMERIZER)
-            .add(ModItems.TETO_PLUSH_SHADOW)
-            .add(ModItems.TETO_PLUSH_BIRDBRAIN)
-            .add(ModItems.TETO_PLUSH_REGRET_ROCK)
-            .add(ModItems.TETO_PLUSH_DONT_BELIEVE_IN_T)
-            .add(ModItems.TETO_PLUSH_LIAR_DANCER)
-            .add(ModItems.TETO_PLUSH_WHATCHACALLITSNAME)
-            .add(ModItems.TETO_PLUSH_SOME_MORE_OF_THAT_SONG)
-            .add(ModItems.TETO_PLUSH_LOBSTER)
-            .add(ModItems.TETO_PLUSH_SYNTHV)
-            .add(ModItems.TETO_PLUSH_SPOKEN_FOR)
-        ;
-        getOrCreateTagBuilder(TETO_PICKAXE)
-            .add(ModItems.TETO_PICKAXE)
-            .add(ModItems.TETO_PICKAXE_MESMERIZER)
-            .add(ModItems.TETO_PICKAXE_BIRDBRAIN)
-            .add(ModItems.TETO_PICKAXE_REGRET_ROCK)
-            .add(ModItems.TETO_PICKAXE_DONT_BELIEVE_IN_T)
-            .add(ModItems.TETO_PICKAXE_LIAR_DANCER)
-            .add(ModItems.TETO_PICKAXE_WHATCHACALLITSNAME)
-            .add(ModItems.TETO_PICKAXE_SOME_MORE_OF_THAT_SONG)
-            .add(ModItems.TETO_PICKAXE_SYNTHV)
-            .add(ModItems.TETO_PICKAXE_SPOKEN_FOR)
-        ;
-        getOrCreateTagBuilder(NERU_PLUSH)
-            .add(ModItems.AKITA_NERU_PLUSH)
-            .add(ModItems.AKITA_NERU_PLUSH_TAILS)
-        ;
-        getOrCreateTagBuilder(RIN_PLUSH)
-            .add(ModItems.RIN_PLUSH)
-        ;
-        getOrCreateTagBuilder(LEN_PLUSH)
-            .add(ModItems.LEN_PLUSH)
-        ;
-        getOrCreateTagBuilder(LUKA_PLUSH)
-            .add(ModItems.LUKA_PLUSH)
-        ;
-        getOrCreateTagBuilder(KONOHA_PLUSH)
-            .add(ModItems.KONOHA_PLUSH)
-        ;
-        getOrCreateTagBuilder(MEIKO_PLUSH)
-            .add(ModItems.MEIKO_PLUSH)
-            .add(ModItems.MEIKO_PLUSH_V3)
-            .add(ModItems.MEIKO_PLUSH_V4)
-        ;
-        getOrCreateTagBuilder(GUMI_PLUSH)
-            .add(ModItems.GUMI_PLUSH)
-            .add(ModItems.GUMI_PLUSH_V3)
-            .add(ModItems.GUMI_PLUSH_V4)
-            .add(ModItems.GUMI_PLUSH_V6)
-        ;
+        //ADD PLUSHIES TO RESPECTIVE TAGS
+        for (Item plush : ModItems.PLUSH_ITEMS){
+            String plushName = plush.getTranslationKey().split("[.]")[2];
+            if (plushName.contains("miku_plush")){
+                getOrCreateTagBuilder(MIKU_PLUSH).add(plush);
+            }
+            if (plushName.contains("aiko_plush")){
+                getOrCreateTagBuilder(AIKO_PLUSH).add(plush);
+            }
+            if (plushName.contains("teto_plush")){
+                getOrCreateTagBuilder(TETO_PLUSH).add(plush);
+            }
+            if (plushName.contains("akita_neru_plush")){
+                getOrCreateTagBuilder(NERU_PLUSH).add(plush);
+            }
+            if (plushName.contains("rin_plush")){
+                getOrCreateTagBuilder(RIN_PLUSH).add(plush);
+            }
+            if (plushName.contains("len_plush")){
+                getOrCreateTagBuilder(LEN_PLUSH).add(plush);
+            }
+            if (plushName.contains("luka_plush")){
+                getOrCreateTagBuilder(LUKA_PLUSH).add(plush);
+            }
+            if (plushName.contains("konoha_plush")){
+                getOrCreateTagBuilder(KONOHA_PLUSH).add(plush);
+            }
+            if (plushName.contains("meiko_plush")){
+                getOrCreateTagBuilder(MEIKO_PLUSH).add(plush);
+            }
+            if (plushName.contains("gumi_plush")){
+                getOrCreateTagBuilder(GUMI_PLUSH).add(plush);
+            }
+        }
+
+        //ADD PICKAXES TO THEIR OWN TAG
+        for (Item pickaxe : ModItems.PICKAXE_ITEMS){
+            getOrCreateTagBuilder(TETO_PICKAXE).add(pickaxe);
+        }
 
         getOrCreateTagBuilder(PLUSHIES)
             .addOptionalTag(MIKU_PLUSH)
