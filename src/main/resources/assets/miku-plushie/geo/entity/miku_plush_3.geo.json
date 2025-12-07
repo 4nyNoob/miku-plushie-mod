@@ -48,6 +48,20 @@
 								"up": {"uv": [15, 12], "uv_size": [4, 3]},
 								"down": {"uv": [19, 15], "uv_size": [4, -3]}
 							}
+						},
+						{
+							"origin": [0, 5.5, 1.5],
+							"size": [0, 3, 4],
+							"pivot": [0, 7.5, 1.5],
+							"rotation": [-22.5, 0, 0],
+							"uv": {
+								"north": {"uv": [28, 46], "uv_size": [0, 3]},
+								"east": {"uv": [32, 46], "uv_size": [-4, 3]},
+								"south": {"uv": [28, 46], "uv_size": [0, 3]},
+								"west": {"uv": [28, 46], "uv_size": [4, 3]},
+								"up": {"uv": [28, 46], "uv_size": [0, 3]},
+								"down": {"uv": [28, 49], "uv_size": [0, -3]}
+							}
 						}
 					]
 				},
@@ -1302,6 +1316,71 @@
 								"west": {"uv": [43, 51], "uv_size": [0, 11]},
 								"up": {"uv": [43, 51], "uv_size": [4, 0]},
 								"down": {"uv": [43, 51], "uv_size": [4, 0]}
+							}
+						}
+					]
+				},
+				{
+					"name": "miku_plush_lucario_z",
+					"parent": "head-ornaments",
+					"pivot": [0, 14.5, 3.25]
+				},
+				{
+					"name": "miku_plush_lucario_z3",
+					"parent": "miku_plush_lucario_z",
+					"pivot": [-0.01046, 16.67292, -3.3],
+					"rotation": [0, 0, -22.5],
+					"cubes": [
+						{
+							"origin": [-1, 11.675, -3.3],
+							"size": [2, 5, 0],
+							"uv": {
+								"north": {"uv": [47, 47], "uv_size": [2, 4.99736]},
+								"east": {"uv": [47, 47], "uv_size": [0, 4.99736]},
+								"south": {"uv": [0, 0], "uv_size": [1, 0.99736]},
+								"west": {"uv": [47, 47], "uv_size": [0, 4.99736]},
+								"up": {"uv": [47.175, 47], "uv_size": [2, 0]},
+								"down": {"uv": [47.175, 47], "uv_size": [2, 0]}
+							}
+						}
+					]
+				},
+				{
+					"name": "miku_plush_lucario_z4",
+					"parent": "miku_plush_lucario_z3",
+					"pivot": [-1.01046, 11.67292, -3.3],
+					"rotation": [0, 0, 67.5],
+					"cubes": [
+						{
+							"origin": [-1.01046, 11.67292, -3.275],
+							"size": [4, 2, 0],
+							"uv": {
+								"north": {"uv": [47, 52], "uv_size": [2, 3.99736], "uv_rotation": 270},
+								"east": {"uv": [49.175, 47], "uv_size": [-2, 0], "uv_rotation": 90},
+								"south": {"uv": [0, 0], "uv_size": [1, 0.99736], "uv_rotation": 90},
+								"west": {"uv": [49.175, 47], "uv_size": [-2, 0], "uv_rotation": 90},
+								"up": {"uv": [47, 55.99736], "uv_size": [0, -3.99736], "uv_rotation": 90},
+								"down": {"uv": [47, 55.99736], "uv_size": [0, -3.99736], "uv_rotation": 90}
+							}
+						}
+					]
+				},
+				{
+					"name": "miku_plush_lucario_z2",
+					"parent": "miku_plush_lucario_z",
+					"pivot": [0, 14.5, 3.25],
+					"rotation": [22.5, 0, 0],
+					"cubes": [
+						{
+							"origin": [-1, 5.5, 3.25],
+							"size": [2, 9, 0],
+							"uv": {
+								"north": {"uv": [0, 0], "uv_size": [1, 1]},
+								"east": {"uv": [47, 47], "uv_size": [0, 9]},
+								"south": {"uv": [47, 47], "uv_size": [2, 9]},
+								"west": {"uv": [47, 47], "uv_size": [0, 9]},
+								"up": {"uv": [47.175, 47], "uv_size": [2, 0]},
+								"down": {"uv": [47.175, 47], "uv_size": [2, 0]}
 							}
 						}
 					]

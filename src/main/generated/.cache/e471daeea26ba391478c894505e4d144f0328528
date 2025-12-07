@@ -1,8 +1,9 @@
-// 1.20.1	2025-12-06T17:15:03.884910944	miku plushies/Block Loot Tables
+// 1.20.1	2025-12-07T11:55:19.052474728	miku plushies/Block Loot Tables
 7f941a076fe7908b6c5d59836c67e5bcb3417d8b data/miku-plushie/loot_tables/blocks/teto_plush_dont_believe_in_t.json
 af68195ac8c10224169e0ac3c60fab2ecb875557 data/miku-plushie/loot_tables/blocks/miku_plush_frankenstein.json
 4916a50ba16c00f7477badf2b5a08cb0a7259d75 data/miku-plushie/loot_tables/blocks/teto_plush_spoken_for.json
 93b11cd16ce81b4c9455e9703970fa1c1ca6a2bd data/miku-plushie/loot_tables/blocks/miku_plush_michael_myers.json
+a732b02c4ccdc2762484337a18612fd61e86cf9c data/miku-plushie/loot_tables/blocks/miku_plush_lucario_z.json
 d36adccb87a5ac543b64c2b85553704fab2d7d07 data/miku-plushie/loot_tables/blocks/teto_plush_birdbrain.json
 0fea5493d292ce6f29c90c0439dae3e44ebc2a0b data/miku-plushie/loot_tables/blocks/miku_plush_patata.json
 1605dca8474dc1cb7ac58d618cbdcc6b4c0ca9fb data/miku-plushie/loot_tables/blocks/miku_plush_br_sp.json

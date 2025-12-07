@@ -209,6 +209,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
             simpleShapeless(exporter, ModBlocks.MIKU_PLUSH_WORLD_IS_MINE, ModItems.MIKU_PLUSH, Items.WHITE_WOOL, Items.GOLD_INGOT, Items.CAKE);
             simpleShapeless(exporter, ModBlocks.MIKU_PLUSH_ROLLING_GIRL, ModItems.MIKU_PLUSH, Items.WHITE_WOOL, Items.BROWN_WOOL);
             simpleShapeless(exporter, ModBlocks.MIKU_PLUSH_DEEP_SEA_GIRL, ModItems.MIKU_PLUSH, Items.TUBE_CORAL, Items.BUBBLE_CORAL);
+            simpleShapeless(exporter, ModBlocks.MIKU_PLUSH_LUCARIO_Z, ModItems.MIKU_PLUSH, Items.IRON_BARS, Items.WHITE_WOOL, Items.REDSTONE);
         }
 
         //TETO

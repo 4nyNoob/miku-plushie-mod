@@ -4003,6 +4003,173 @@
 			},
 			"type": "cube",
 			"uuid": "2c7ca208-07dd-2acd-e273-08fc364e832a"
+		},
+		{
+			"name": "miku_plush_lucario_z",
+			"box_uv": false,
+			"render_order": "default",
+			"locked": false,
+			"allow_mirror_modeling": true,
+			"from": [-1, 11.675, -3.3],
+			"to": [1, 16.675, -3.3],
+			"autouv": 0,
+			"color": 8,
+			"origin": [0, 16.675, -3.3],
+			"faces": {
+				"north": {
+					"uv": [47, 47, 49, 51.99736],
+					"texture": 1
+				},
+				"east": {
+					"uv": [47, 47, 47, 51.99736],
+					"texture": 1
+				},
+				"south": {
+					"uv": [0, 0, 1, 0.99736],
+					"texture": 1
+				},
+				"west": {
+					"uv": [47, 47, 47, 51.99736],
+					"texture": 1
+				},
+				"up": {
+					"uv": [49.175, 47, 47.175, 47],
+					"texture": 1
+				},
+				"down": {
+					"uv": [49.175, 47, 47.175, 47],
+					"texture": 1
+				}
+			},
+			"type": "cube",
+			"uuid": "1e8842d5-3b37-f0bd-c421-0d7b0233256d"
+		},
+		{
+			"name": "miku_plush_lucario_z",
+			"box_uv": false,
+			"render_order": "default",
+			"locked": false,
+			"allow_mirror_modeling": true,
+			"from": [-2.98954, 11.67292, -3.275],
+			"to": [1.01046, 13.67292, -3.275],
+			"autouv": 0,
+			"color": 4,
+			"origin": [1.01046, 11.67292, -3.3],
+			"faces": {
+				"north": {
+					"uv": [47, 52, 49, 55.99736],
+					"rotation": 270,
+					"texture": 1
+				},
+				"east": {
+					"uv": [49.175, 47, 47.175, 47],
+					"rotation": 90,
+					"texture": 1
+				},
+				"south": {
+					"uv": [0, 0, 1, 0.99736],
+					"rotation": 90,
+					"texture": 1
+				},
+				"west": {
+					"uv": [49.175, 47, 47.175, 47],
+					"rotation": 90,
+					"texture": 1
+				},
+				"up": {
+					"uv": [47, 52, 47, 55.99736],
+					"rotation": 90,
+					"texture": 1
+				},
+				"down": {
+					"uv": [47, 52, 47, 55.99736],
+					"rotation": 90,
+					"texture": 1
+				}
+			},
+			"type": "cube",
+			"uuid": "6b5fd5d7-a1c4-c957-44de-34b511b89d27"
+		},
+		{
+			"name": "miku_plush_lucario_z",
+			"box_uv": false,
+			"render_order": "default",
+			"locked": false,
+			"allow_mirror_modeling": true,
+			"from": [-1, 5.5, 3.25],
+			"to": [1, 14.5, 3.25],
+			"autouv": 0,
+			"color": 9,
+			"origin": [0, 14.5, 3.25],
+			"faces": {
+				"north": {
+					"uv": [0, 0, 1, 1],
+					"texture": 1
+				},
+				"east": {
+					"uv": [47, 47, 47, 56],
+					"texture": 1
+				},
+				"south": {
+					"uv": [47, 47, 49, 56],
+					"texture": 1
+				},
+				"west": {
+					"uv": [47, 47, 47, 56],
+					"texture": 1
+				},
+				"up": {
+					"uv": [49.175, 47, 47.175, 47],
+					"texture": 1
+				},
+				"down": {
+					"uv": [49.175, 47, 47.175, 47],
+					"texture": 1
+				}
+			},
+			"type": "cube",
+			"uuid": "4c8667e9-abdc-aefa-ac42-778b5d5e8011"
+		},
+		{
+			"name": "miku_plush_lucario_z",
+			"box_uv": false,
+			"render_order": "default",
+			"locked": false,
+			"allow_mirror_modeling": true,
+			"from": [0, 5.5, 1.5],
+			"to": [0, 8.5, 5.5],
+			"autouv": 0,
+			"color": 6,
+			"rotation": [22.5, 0, 0],
+			"origin": [0, 7.5, 1.5],
+			"faces": {
+				"north": {
+					"uv": [28, 46, 28, 49],
+					"texture": 1
+				},
+				"east": {
+					"uv": [32, 46, 28, 49],
+					"texture": 1
+				},
+				"south": {
+					"uv": [28, 46, 28, 49],
+					"texture": 1
+				},
+				"west": {
+					"uv": [28, 46, 32, 49],
+					"texture": 1
+				},
+				"up": {
+					"uv": [28, 49, 28, 46],
+					"texture": 1
+				},
+				"down": {
+					"uv": [28, 46, 28, 49],
+					"texture": 1
+				}
+			},
+			"type": "cube",
+			"uuid": "a176e4ac-adae-0388-ae19-de601ab7d84f"
 		}
 	],
 	"groups": [
@@ -4225,7 +4392,7 @@
 			"selected": false,
 			"visibility": true,
 			"autouv": 0,
-			"isOpen": true
+			"isOpen": false
 		},
 		{
 			"uuid": "e839ab4d-3386-6e05-2b3d-8e3a619589cc",
@@ -4259,7 +4426,7 @@
 			"selected": false,
 			"visibility": true,
 			"autouv": 0,
-			"isOpen": true
+			"isOpen": false
 		},
 		{
 			"uuid": "f1a73a28-6977-5102-964a-6770e148cdc8",
@@ -4361,7 +4528,7 @@
 			"selected": false,
 			"visibility": true,
 			"autouv": 0,
-			"isOpen": true
+			"isOpen": false
 		},
 		{
 			"uuid": "b449f28c-7c98-6afe-6126-d17f643efc81",
@@ -4395,7 +4562,7 @@
 			"selected": false,
 			"visibility": true,
 			"autouv": 0,
-			"isOpen": true
+			"isOpen": false
 		},
 		{
 			"uuid": "44b5e032-1b49-bcd8-4038-ec15c4cd32ca",
@@ -4429,7 +4596,7 @@
 			"selected": false,
 			"visibility": true,
 			"autouv": 0,
-			"isOpen": false
+			"isOpen": true
 		},
 		{
 			"uuid": "f48a6bc8-ed98-a7bb-96bf-bd3af4aba717",
@@ -4480,7 +4647,7 @@
 			"selected": false,
 			"visibility": true,
 			"autouv": 0,
-			"isOpen": true
+			"isOpen": false
 		},
 		{
 			"uuid": "6e1d70f4-4bfe-8a17-1d64-b799ef744efa",
@@ -4497,7 +4664,7 @@
 			"selected": false,
 			"visibility": true,
 			"autouv": 0,
-			"isOpen": true
+			"isOpen": false
 		},
 		{
 			"uuid": "23242ea4-0c76-a7f8-d4a5-df520043be9c",
@@ -4786,7 +4953,7 @@
 			"selected": false,
 			"visibility": true,
 			"autouv": 0,
-			"isOpen": true
+			"isOpen": false
 		},
 		{
 			"uuid": "69eb307f-e916-5501-cc2d-b672d8c2ea3c",
@@ -4820,7 +4987,7 @@
 			"selected": false,
 			"visibility": true,
 			"autouv": 0,
-			"isOpen": true
+			"isOpen": false
 		},
 		{
 			"uuid": "c6cccf31-6cc8-1ec2-bfe8-43a954625fd0",
@@ -4855,6 +5022,74 @@
 			"visibility": true,
 			"autouv": 0,
 			"isOpen": false
+		},
+		{
+			"uuid": "fbe39768-509b-01e5-6b47-fed3adab8321",
+			"export": true,
+			"locked": false,
+			"origin": [0, 14.5, 3.25],
+			"rotation": [0, 0, 0],
+			"color": 0,
+			"name": "miku_plush_lucario_z",
+			"children": [],
+			"reset": false,
+			"shade": true,
+			"mirror_uv": false,
+			"selected": false,
+			"visibility": true,
+			"autouv": 0,
+			"isOpen": true
+		},
+		{
+			"uuid": "684c910f-554f-7c51-a63b-4a61778526ba",
+			"export": true,
+			"locked": false,
+			"origin": [0, 14.5, 3.25],
+			"rotation": [-22.5, 0, 0],
+			"color": 0,
+			"name": "miku_plush_lucario_z2",
+			"children": [],
+			"reset": false,
+			"shade": true,
+			"mirror_uv": false,
+			"selected": false,
+			"visibility": true,
+			"autouv": 0,
+			"isOpen": true
+		},
+		{
+			"uuid": "97e7576e-9e31-c7ab-6d37-8ee777ffa06a",
+			"export": true,
+			"locked": false,
+			"origin": [0.01046, 16.67292, -3.3],
+			"rotation": [0, 0, -22.5],
+			"color": 0,
+			"name": "miku_plush_lucario_z3",
+			"children": [],
+			"reset": false,
+			"shade": true,
+			"mirror_uv": false,
+			"selected": false,
+			"visibility": true,
+			"autouv": 0,
+			"isOpen": true
+		},
+		{
+			"uuid": "53b85f2f-df03-f7a4-23b9-d814dde70826",
+			"export": true,
+			"locked": false,
+			"origin": [1.01046, 11.67292, -3.3],
+			"rotation": [0, 0, 67.5],
+			"color": 0,
+			"name": "miku_plush_lucario_z4",
+			"children": [],
+			"reset": false,
+			"shade": true,
+			"mirror_uv": false,
+			"selected": false,
+			"visibility": true,
+			"autouv": 0,
+			"isOpen": true
 		}
 	],
 	"outliner": [
@@ -4874,7 +5109,7 @@
 								"0e8cc75e-1dfd-92ee-cd4d-06cef962edd1",
 								{
 									"uuid": "59584cfb-9667-07f4-92d2-ed112d70e9d0",
-									"isOpen": true,
+									"isOpen": false,
 									"children": [
 										{
 											"uuid": "9532540f-ed1d-5532-992e-971928a45a7b",
@@ -4922,7 +5157,7 @@
 								},
 								{
 									"uuid": "05125d78-0fb0-b8bc-e0df-ea1668fa31e7",
-									"isOpen": true,
+									"isOpen": false,
 									"children": [
 										{
 											"uuid": "4cb3df88-9ff2-1ccd-9173-b70073e76001",
@@ -4932,7 +5167,7 @@
 												"4d8e2717-48f1-15a7-03e0-7af3c617d165",
 												{
 													"uuid": "baec0393-25e5-25c5-176e-8642e0874545",
-													"isOpen": true,
+													"isOpen": false,
 													"children": [
 														{
 															"uuid": "beb4eadc-aff4-3a3c-852d-e674a83c8017",
@@ -5009,7 +5244,7 @@
 														"00533019-a10e-39c6-38d7-ea2f5a1a7cf3",
 														{
 															"uuid": "1d9cb158-27da-64e5-cc2b-d22f4e1bc2fe",
-															"isOpen": true,
+															"isOpen": false,
 															"children": [
 																"67aa7e66-1311-731d-ea47-aab24c497afe",
 																"3e24531a-b82c-6e54-3c88-ed6bb6664563",
@@ -5086,7 +5321,7 @@
 														},
 														{
 															"uuid": "bb9ea93b-1897-0c4f-c7bc-75a820cf0f82",
-															"isOpen": true,
+															"isOpen": false,
 															"children": [
 																"a56dc9f4-4ff9-d102-b29e-0ab792cb35fb",
 																"3f1b644f-a149-6883-2ff5-4a94f7d86dc3",
@@ -5102,7 +5337,7 @@
 														},
 														{
 															"uuid": "83e7e70e-2914-cd30-e47d-00372f2bd931",
-															"isOpen": true,
+															"isOpen": false,
 															"children": [
 																{
 																	"uuid": "c6cccf31-6cc8-1ec2-bfe8-43a954625fd0",
@@ -5117,17 +5352,40 @@
 																"2c7ca208-07dd-2acd-e273-08fc364e832a",
 																"7ca50467-e485-e939-b85b-2ad892bc7b1c"
 															]
+														},
+														{
+															"uuid": "fbe39768-509b-01e5-6b47-fed3adab8321",
+															"isOpen": true,
+															"children": [
+																{
+																	"uuid": "97e7576e-9e31-c7ab-6d37-8ee777ffa06a",
+																	"isOpen": true,
+																	"children": [
+																		"1e8842d5-3b37-f0bd-c421-0d7b0233256d",
+																		{
+																			"uuid": "53b85f2f-df03-f7a4-23b9-d814dde70826",
+																			"isOpen": true,
+																			"children": ["6b5fd5d7-a1c4-c957-44de-34b511b89d27"]
+																		}
+																	]
+																},
+																{
+																	"uuid": "684c910f-554f-7c51-a63b-4a61778526ba",
+																	"isOpen": true,
+																	"children": ["4c8667e9-abdc-aefa-ac42-778b5d5e8011"]
+																}
+															]
 														}
 													]
 												},
 												{
 													"uuid": "9e397390-52f2-64a8-c8e0-3f1fd549b0fa",
-													"isOpen": true,
+													"isOpen": false,
 													"children": ["4584c16f-974d-c59f-8a32-7d70789a5212"]
 												},
 												{
 													"uuid": "450ec773-1ced-f05c-4084-9f650c1dfcf9",
-													"isOpen": false,
+													"isOpen": true,
 													"children": [
 														{
 															"uuid": "44b5e032-1b49-bcd8-4038-ec15c4cd32ca",
@@ -5143,7 +5401,7 @@
 								},
 								{
 									"uuid": "6e1d70f4-4bfe-8a17-1d64-b799ef744efa",
-									"isOpen": true,
+									"isOpen": false,
 									"children": ["f172a0fd-b8cf-2862-abc6-2c0afd6bfc08", "22dbc5c8-5395-f3ac-ea06-07c66656c30c", "c1c29aa3-8a4e-b392-d958-c0764f75e3ba"]
 								},
 								{
@@ -5155,7 +5413,8 @@
 									"uuid": "868ae997-c504-c291-4da8-938b9affeafe",
 									"isOpen": false,
 									"children": ["94ef02cc-0e67-7b1b-93bf-37b0bb1f8b38", "a521b6b5-25d2-38c1-95d8-01bffda3b124"]
-								}
+								},
+								"a176e4ac-adae-0388-ae19-de601ab7d84f"
 							]
 						},
 						{
@@ -5517,7 +5776,35 @@
 			"internal": true,
 			"saved": true,
 			"uuid": "650ee1ba-922c-197d-e985-827815239c46",
-			"source": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAFRElEQVR4AeybwWskRRTGq5NhQ8bVy8YEjGjAEESJEFgJexFBT969iIKgIAiCePGgBw97EUEWBEVQEJT9F7yKCCG6XgyKiGJcjJC4uZg1Q9aZbedX2W9421s1nZ5J0jNNh3zz3vveq+p6X9X0ZKAz4fr87OzspBZ9Sgun7LzW39zcTIE4fJB3gbfvnk5fP3MmjdXF8lEBWEB2shCXrTmOuNls9qaxfo8MONcPOu7s1GQgc0jF8lEBDoed/muo4RCnlbHrQLF2Gs76sfzICaCFFrXs/rmzDT/swXNT3iomiOWjAkxPTzPu1LG/v3/HNUNctogjvnu97Wj6j92DO94OsXxUAC6ACIJi7EnDNmz92HXZXeUQ4eDmTR/i4/TLewG4uQl7e3spYGAI5FQrqzrFsvDys5ZcCLzfgXL4IDteMc1e3Gsll27cSHZb/znwUbudwLHrefkJJtLFsK1WywHrZ2NyQLvDHADOIsTZ/HH4NKt58IFiRLExPrB5fwJEyC4vL7vFxUW3srIiysERY3vkLUdC3ApLMXNzcymYn5/3NrsIciCbn9DiZRm4sbGBce1221memJw4jqYv7L6Ik+1St40lPg2wxkbj8NMgdL1s3p8AFp1tZn193dGseHy4UK0uZHP44k/SsqvAXoMm4Sxi+YmFhYVESRYN4AA+OSyAA/jisXAAHygPhw/gAb4FHLAcPhzAt4AD4vCHgT8BLHR2djbBAk2I34+/tLTkAH91gVA9HGAegG8BByy3urrq7zncb/At4Gy91jqo9QIMOrgK4yohQOimZznra9PEFRaAo/5Ko+G/et7V/fa11+k4LHhpctLz2Le6X0+BanXhmI3dsEL12VpuemqIenzLWT+bLywAjTKJbCM5vIf+2/06Kl8WztbinxRokrm3t7eTra2txNqYT11hAdQUF7M+cTtNMR7ZnCdH8KWwABx5+lCDNC0f3iJba3Oj4hcW4NNOJ6HpVvcbFw0S0wwxPlZ5YnLUYUcRhQVQEx+324kapGlicjQPn43JnQS44YFB5x5IABq0F1SzcNlcNqYmBG5Ug0BzIQJQfFQ7kABHnfw46+xHHz7f6oC9Bp8E5EKwddYfGwHsovFpFjssxkaA0NuDz3GLUI24mFBjI0CsgWH5WoBhFRz38fUJGPcdHHb99QkYVsFRH5+3vvoE5ClU9Xx9Aqq+w3n91ScgT6Gq5+sTUPUdzuuvPgF5ClU9X5+Aqu9wXn/1CchTqOr5+gRUbYeL9lOfgKKKVa1+JE4Aj9TyDHIZ4o6EADyRXrT54xKsVAFoAtC8HsjGzwMnxtYzB4Dn/4uEvHnIlyqAmpBlQUcBD0rypCi1NI7VHDzaKyhHPoZSBYgt6ig8T5aqjuatKIhDrHw/W6oAvPdZfL8F2lxoRzWeY08tzWOJlSOOoVQBjrJAu/BQPTsNOBFPXX3Ggc/cyw5c+PlJ99DXj6SC6/78cv+b6ZV7X+uhVAG66/G/7BrwwYAvNKmhn1/9y7svPHCfAz7ovjx/ZdY/yHjPVNMJIyFAd21D//72xE/JheY1BzTZr9d+cIAYIb44v5P8c3D4X2lYUBkBtLtr+zP067E485gDNM+poIadp3EsRaULUOTo96u9OPOtA2sPf+XeePRxv/PsPo0DmkWcy998787//UGy9Oe7CbZUAfo1xIKLgJse4Mb3/o/fOZplPG8JBEEY8KL7BLqHUgXgzm3RW1XEoTaUemfz6fTV5mUHaBbQOCIABEGYD/efc4jkzE+pAph1DOwykMY5TeDZzntu7fcveyeAvKC3gmLs/wAAAP//cpxcMAAAAAZJREFUAwB4pzSp0P5AQwAAAABJRU5ErkJggg=="
+			"source": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAFOElEQVR4AeybwWskRRTGq5NhQ8bVy8YEjGjAEESJEFgJexEP/gteREFQEARBvHjQg4e9iCALgiIoCMr+C15FhBBdLwZFRDGKERI3F7POkHVm2/n17Df7rK2e3u6ZpGeaDvnmvfe9V9X1vqrpyUBnxg35OTg4iC2GlOZO2Xmtv7u7GwNx+CDrAm/ePR+/euZMnFaXlk8VgAX4k4U4v2YccbPZHExj/QEZcK4dd93ZudlApk+l5VMF6A87/ddQwyFOK2PXgWLtNJz10/ITJ4AWmtey++fONpJhD56bS6xigrR8qgDz8/OMO3W0Wq3brhni/CKO+OG1jqPp3w6Pb3s7pOVTBeACiCAoxp40bMPWT7suu6scIhzfuJGE+DjD8okA3NyEo6OjGDAwBHKqlVWdYll4+b4lFwLvd6AcPvDHK6bZi0ft6NL169Fh+18HPuh0Ijh2PSs/w0S6GLbdbjtgfT8mB7Q7zAHgLEKczY/Dp1nNgw8UI4qN8YHNJydAhOz6+rpbXV11GxsbohwcMXZA3nQkxM2wFLO0tBSD5eXlxPqLIAf8/IwWL8vAnZ0djOt0Os7yxOTEcTSTwt6LONke9b+xxKcB1tho9D8NQtfz88kJYNF+M9vb245mxePDhWp1IZvDF3+Sll0F9ho0CWeRlp9ZWVmJlGTRAA7gk8MCOIAvHgsH8IHycPgAHuBbwAHL4cMBfAs4IA5/FCQngIUuLi5GWKAJ8Yfxl9bWHOCvLhCqhwPMA/At4IDlNjc3k3sO9xt8Czhbr7UWtYkARQdXYVwlBAjd9CxnfW2auNwCcNRfajSSr5539b59HXW7DgtemJ1NeOwbva+nQLW6cJpNu2GF6v1abnpqiHp8y1nfz+cWgEaZRLYR9e+h//S+jsqXhbO1+CcFmmTu/f39aG9vL7I2zacutwBqiotZn7gTx5gEfi4hJ/AltwAcefpQgzQtH97Cr7W5SfFzC/BxtxvRdLv3jYsGiWmGGB+rPDE56rCTiNwCqIkPO51IDdI0MTmah/djcicBbnig6NyFBKBBe0E1C+fn/JiaELhRFYHmQgSg+E5tIQHudPJx1tmPPny+1QF7DT4JyIVg66w/NQLYRePTLHZUTI0AobcHn+MWoRpxaUJNjQBpDYzK1wKMquC0j69PwLTv4Kjrr0/AqApO+vis9dUnIEuhqufrE1D1Hc7qrz4BWQpVPV+fgKrvcFZ/9QnIUqjq+foEVH2Hs/qrT0CWQlXP1yegajuct5/6BORVrGr1E3ECeKSWZ5DLEHciBOCJ9LzNj0uwUgWgCUDzeiCbGHAq+F8hgRqBnOrFFbWlCqAmZGmcRhTzmK6gHHkelORJUfxRUaoAocXTvG2QRon9Wp4s9bkicakC8N6nYS1cPscejuaxxOTsKYAfB0oVgKZsE+w0YHd9wPv1diz+Q18+EoO3dp+KAb4FNT/d/3p85d5XBihVABYE2GmAXxQ0qrGf/v5n4j73wH0OJEHv5dkri8mDjPfMNZ0wEQL01jby7y9P/BBdaF51QJP9fPU7B4gR4rPzB9Hfx/3/SsOCygig3d1qLdBvgtWFxxygeU4FNew8jWMpKl2APEd/WO3Fha8d2Hr4C/fao48nO8/u0zigWcS5/NW37vxf70Vrf7wdYUsVYFhDLDgPPnEvOnDhxyfdu99/42jW9X54SyAIwoDn3Uc99tZvqQL4d/pbywp71Icy3PFfbl52gGYBjSMCQBCEeb/1jEMkZ35KFcCso7DLQBrnNIGnu++4rV8/H5wA8oLeCoqx/wEAAP//GvhvpgAAAAZJREFUAwAwWDupt14YswAAAABJRU5ErkJggg=="
+		},
+		{
+			"name": "miku-plush-lucario-z.png",
+			"relative_path": "../miku-plushie/textures/block/miku-plush-lucario-z.png",
+			"folder": "",
+			"namespace": "",
+			"id": "11",
+			"group": "",
+			"width": 64,
+			"height": 64,
+			"uv_width": 64,
+			"uv_height": 64,
+			"particle": false,
+			"use_as_default": false,
+			"layers_enabled": false,
+			"sync_to_project": "",
+			"render_mode": "default",
+			"render_sides": "auto",
+			"pbr_channel": "color",
+			"frame_time": 1,
+			"frame_order_type": "loop",
+			"frame_order": "",
+			"frame_interpolate": false,
+			"visible": true,
+			"internal": true,
+			"saved": true,
+			"uuid": "8f4d3168-e303-d77a-f5f9-8edb76065bcd",
+			"source": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAHg0lEQVR4Aeyaf4hUVRTHzyybbpNlyJLFlqtrWWFihOUS9Y9BEdgfEgj9YVT+YZDRpq1RpJBQYFYU+SP/CET/EOyHJEYklYXiDxJRLIzth7/YamFZAnXcdGu6nzPvvLnzdt68mf3lzjLDfN8595xzz73n3PvuvfPe1EnSZ/fBrIAEu5ZZrVmQYJZX43O/8w3gA2S+3ZQthnzF4tzkyZOzxTWlpaUTQKcmBA7gA7YYOZy9qZg4XmZ+zSJazvSKANMPE41PAAFbp6AAWUxHzmW6pe+fvhhtXswsAXLeyYAjgm+f+oH7PDYRMPIgItZinFyVwSU+AdapwFBJMZkqRJp/35s603E4FRRjSThT8AViLctTdHV1pQzRGsijsmg5NgENjY1RW9FR6y+tSBLOFBt9r3bYZrohL/X5vHTIuNgE9M64NRV2yJp7uDVxhM00jj5YfzGv8pLQry0CB3nrolxTU1PWx/avjmTXvrsjy/RHbhQeUDZQzieA+9utyA0dvxaspv065rqhNs5WgCv731BnwsCv7iTO/sy6dQJMHaWTbn5IQLphtij6HHXQ+vgCzo+27fi+vvy6A3/6p9NycP9udUsZBgrg6+vrxYAslwDnCCXo7e4Wde4agQfIFU6GLpQxgl5dgg912FLJ7nMo9tAAmUuHJNOTQ0/HF0JdA1UV2CrjLj4f+OI+7+zsTAH49mULUp9+sjFcF5AZsPGBvE4za45x6trh28AaEJThAfIQgU5XcJeEguDNyMnDdSOwt4ChZmYUmSFaT9vBh/XVKgU0s+v93PkB6hCIQxKnrxPuaxxjGjgnWNYA08EDud+tARFb7Sg+qB8DDcqNtq+esHyDXLtyc07k7vWCck6amx1+Pfrnt298YB8S5y/kizGePncLYEQQgUMNFhlADjVQDuw0QYFc65gcGTy2jk+Pm+uu7lxTf0zcjS0E++++A3Ldnu+1jHLioR+kb/c3qsMmg61TWF1NtCvrTIDi31EdWX/Eg+D0NOnkSfpcAoKOqvPAsfNd3tfqYg3PLAHwTqb3OaMYdMyJ5PzGZXLx+MfSeWQbRQU8MnQq4OLqWH1omISgj8gWbf5ZwPqOKbLr8r2K9UdvkEUbjqp82uI3xXDbotUCpj2xKkedLpcAGnNoWdImPcvWyJQZc3Lnf+5hW8ycPvwSnAuSbQSwrUBDvcek57+QUsxbkkoDt6Knga3yyCKggyFcJzOzpgvovr1bupvcIk37Dvg9eGCn7Nv7mby95ll58ZnHFPAmt66w8vs8OwDlggTYUbZ+fD26smCOjJZVaQiN/HbhAe6NwpdCQQIw5KQGrQRkF5Ssw2wCGLGYQQEzzOSUhwl+Qny+rsX9jGXKA7/tluVtAqY8tVRviZ67FujPXZvuUN8entsAORT4PHof7DR+GVuDL4efed9i8WF20JMfvSohtq2Wk8CXefwvW1cJCO2drm7Phatkb9/VITiqzlnRLg+89YaideUrAu6+dFawPfHdajn+9Sox+sGWL6Vt+TqVmfzY/k0CzAaeQHxw4IkmwdeXy9sCp9QtbmnWE1t3ohQd8OR1r614Tgztr7dpsNZ4b/ff0tB4vRZJAvr/0k1atsu8O/6Qpx+/SkxuFL3PU9ZdJpj+QxG8+hzkpd8agD8LOkrRNTbPT026c0kIygbkxhs1mQaPAwcLPpwFLinh1GUKJ8FNXbUvYufcV/QtSMD4C5cLKjMDEBiN6tENFBY8NPSR9n4G8yAEmNLnsQvK7P3s+0bNvFxat7VlqvjYPr1Jtky8RrFz7mylyAB25TouZWdBG8U249otQLD3hzLKvk1QZu9/752l8vyTj+pZAF+VoGAGaMXzetWL30Hx5Kqs9OIOTvpbIobaLVMpZUsDlXbH7HM/htypSs/1RoNOcuoyoNeT2Old2Z4TmwqeGZiz4aRseYAzPg89bJt96eUPhZ2ItjmL8DAEG2x9oC+G/jMgsOp2gcLWZToh4gfdb3VXi5G78NDDRp2HH5RpHVnzzGbYshGbAAscT8ZHKbqRAg8vAPt8u3voAQ94+OGXFz5yj/7mQNe143Pp2urgHpzG9TM2AbZ9QX1wj1KOczia5NvPjZO1P/5ZskuxCShZq0qUC1OXpL219AubMZ0AFu6k3WtACWBBZJH0MWonBTtbic4NKAHmj0URWLka6YASwCJoi6Hx1Rg8fR5QAqhYLUjqZy0BSRka6/raDBjrI5wUX20GJGVorOtrM2Csj3BSfLUZkJShsa6vzYCxPsJJ8dVmQFKGxrr+is6AG5umjvj7heiAjngCCPqWqdOz4K/OU4P65yl/zdO/+XlRVcqOeAII+uyp31KAZFTaYd++4NWdr6iAH/EE+H0jGX75SvBXNAFDEvCEwXmp6gTYHy0Gk4KqToAGPsjX9lWdAP17rmZh4JeqToBugwlvfpJSU9UJYAZoEpKiLKEfdQmIvm+0Mu8ji8VBEorJy5WNqgQQLB23941+0MP1r5RRlQAL3E+CyYyiG0qMqgTYi1aoD3sRO5SBm69RlQDr1EjSWgJGMtuDaYsFkUXSx2D8Wd2qmwEshsACGCz9HwAA///zJFwfAAAABklEQVQDACIPddRk89CYAAAAAElFTkSuQmCC"
 		}
 	],
 	"collections": [
@@ -5538,8 +5825,8 @@
 			"override": false,
 			"length": 4,
 			"snapping": 24,
-			"selected": true,
-			"saved": false,
+			"selected": false,
+			"saved": true,
 			"path": "../miku-plushie/animations/plush.animation.json",
 			"anim_time_update": "",
 			"blend_weight": "",
@@ -5834,23 +6121,7 @@
 					"name": "hair_offset",
 					"type": "bone",
 					"rotation_global": false,
-					"quaternion_interpolation": false,
-					"keyframes": [
-						{
-							"channel": "rotation",
-							"data_points": [
-								{
-									"x": "0",
-									"y": "0",
-									"z": "math.sin(query.anim_time * 90  + (45 * 1)) * 6"
-								}
-							],
-							"uuid": "066e6e5a-0a54-b6d3-657d-8aef402079a7",
-							"time": 0,
-							"color": -1,
-							"interpolation": "linear"
-						}
-					]
+					"quaternion_interpolation": false
 				},
 				"f48a6bc8-ed98-a7bb-96bf-bd3af4aba717": {
 					"name": "left_sleeve",
@@ -5900,7 +6171,23 @@
 					"name": "hair",
 					"type": "bone",
 					"rotation_global": false,
-					"quaternion_interpolation": false
+					"quaternion_interpolation": false,
+					"keyframes": [
+						{
+							"channel": "rotation",
+							"data_points": [
+								{
+									"x": "0",
+									"y": "0",
+									"z": "math.sin(query.anim_time * 90  + (45 * 1)) * 6"
+								}
+							],
+							"uuid": "52f0bde5-1a44-d261-7674-94dac4e09798",
+							"time": 0,
+							"color": -1,
+							"interpolation": "linear"
+						}
+					]
 				},
 				"e839ab4d-3386-6e05-2b3d-8e3a619589cc": {
 					"name": "root_offset",
@@ -6111,6 +6398,78 @@
 					"type": "bone",
 					"rotation_global": false,
 					"quaternion_interpolation": false
+				},
+				"fbe39768-509b-01e5-6b47-fed3adab8321": {
+					"name": "miku_plush_lucario_z",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"684c910f-554f-7c51-a63b-4a61778526ba": {
+					"name": "miku_plush_lucario_z2",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false,
+					"keyframes": [
+						{
+							"channel": "rotation",
+							"data_points": [
+								{
+									"x": "0",
+									"y": "0",
+									"z": "math.sin(query.anim_time * 90  + (45 * 1)) * 6"
+								}
+							],
+							"uuid": "1da81a7d-c570-deda-03d9-0c446d9357bc",
+							"time": 0,
+							"color": -1,
+							"interpolation": "linear"
+						}
+					]
+				},
+				"97e7576e-9e31-c7ab-6d37-8ee777ffa06a": {
+					"name": "miku_plush_lucario_z3",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false,
+					"keyframes": [
+						{
+							"channel": "rotation",
+							"data_points": [
+								{
+									"x": "0",
+									"y": "0",
+									"z": "math.sin(query.anim_time * 90  + (45 * 1)) * 6"
+								}
+							],
+							"uuid": "c2729fcc-8fcd-6a10-d972-1940c322bb1f",
+							"time": 0,
+							"color": -1,
+							"interpolation": "linear"
+						}
+					]
+				},
+				"53b85f2f-df03-f7a4-23b9-d814dde70826": {
+					"name": "miku_plush_lucario_z4",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false,
+					"keyframes": [
+						{
+							"channel": "rotation",
+							"data_points": [
+								{
+									"x": "0",
+									"y": "0",
+									"z": "math.sin(query.anim_time * 90  + (45 * 2)) * 6"
+								}
+							],
+							"uuid": "1212a9f7-5fe9-96e5-30b3-bab679181b88",
+							"time": 0,
+							"color": -1,
+							"interpolation": "linear"
+						}
+					]
 				}
 			}
 		},
@@ -6370,6 +6729,264 @@
 							"interpolation": "linear"
 						}
 					]
+				},
+				"beb4eadc-aff4-3a3c-852d-e674a83c8017": {
+					"name": "hair_offset",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"08135e7f-59ab-e224-751b-05b1dd14dd82": {
+					"name": "miku_left_hair",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"00a8cdcd-2810-ea95-407c-3276a7cc9c3c": {
+					"name": "miku_left_hair2",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"31b979bc-03e8-19f3-343c-de51c3dc4ac2": {
+					"name": "miku_right_hair",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"e2bb6e66-5605-5765-76e1-d990ec082328": {
+					"name": "miku_right_hair2",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"e839ab4d-3386-6e05-2b3d-8e3a619589cc": {
+					"name": "root_offset",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"59584cfb-9667-07f4-92d2-ed112d70e9d0": {
+					"name": "left_arm_offset",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"f1a73a28-6977-5102-964a-6770e148cdc8": {
+					"name": "right_arm_offset",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"65fbe2a9-f781-ff41-8888-8b61bc285ef9": {
+					"name": "left_hand",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"726c78a1-6120-edbf-93f8-37451125d33d": {
+					"name": "right_hand",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"ffb9d122-0016-0c22-d9fd-0bad7abc9268": {
+					"name": "right_leg_offset",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"2c00b297-061f-cdc2-f166-76d4f2c3dfc4": {
+					"name": "left_leg_offset",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"05125d78-0fb0-b8bc-e0df-ea1668fa31e7": {
+					"name": "head_offset",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"b449f28c-7c98-6afe-6126-d17f643efc81": {
+					"name": "head-ornaments",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"9e397390-52f2-64a8-c8e0-3f1fd549b0fa": {
+					"name": "ahoge",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"450ec773-1ced-f05c-4084-9f650c1dfcf9": {
+					"name": "longer_hair_offset",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"1d9cb158-27da-64e5-cc2b-d22f4e1bc2fe": {
+					"name": "miku_plush_xmass_tree",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"6e1d70f4-4bfe-8a17-1d64-b799ef744efa": {
+					"name": "miku_plush_xmass_tree_body",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"23242ea4-0c76-a7f8-d4a5-df520043be9c": {
+					"name": "miku_plush_xmass_tree_head",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"ed258d11-2d45-11c8-819f-e6e70e8dfb53": {
+					"name": "miku_plush_xmass_tree_head2",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"a39e0c6a-a300-1a1c-f03d-77fe6c5540fd": {
+					"name": "miku_plush_sonic",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"8ffa669e-7c16-eeab-1cf6-2da2e45cefb5": {
+					"name": "miku_plush_sonic_left_ear",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"9d0b73c7-fab5-9a91-c538-7d35324236df": {
+					"name": "miku_plush_sonic_right_ear",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"60678b3f-6f35-ae63-3a06-766e69683d03": {
+					"name": "miku_plush_sonic2",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"760c517c-38a6-720a-948b-f29dfb48e3c2": {
+					"name": "miku_plush_sonic3",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"806f8725-4da7-a4eb-ce05-258cfca3a865": {
+					"name": "miku_plush_sonic4",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"8a8da0e2-deec-f865-badb-8a3ab98a9919": {
+					"name": "miku_plush_sonic5",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"114ced7a-6f9a-12c4-9748-772338b306b2": {
+					"name": "miku_plush_bik_orange",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"868ae997-c504-c291-4da8-938b9affeafe": {
+					"name": "miku_plush_digital_stars",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"d95dc401-a7bc-8d9c-dfaa-3d2d37ba4a3d": {
+					"name": "miku_plush_rotten_girl",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"9985fa4b-38f3-4e28-1cc5-8b50ecacf7b4": {
+					"name": "miku_right_hair3",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"d652a459-b1d4-bc67-15d1-242dea171875": {
+					"name": "miku_right_hair4",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"2759e9d6-f798-f319-6763-03a36279a0c8": {
+					"name": "miku_left_hair3",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"1b8c6a8a-20e9-7f8e-5dd1-e48cbfe632c9": {
+					"name": "miku_left_hair4",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"bb9ea93b-1897-0c4f-c7bc-75a820cf0f82": {
+					"name": "miku_plush_hollow_night",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"69eb307f-e916-5501-cc2d-b672d8c2ea3c": {
+					"name": "miku_plush_digital_stars2",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"83e7e70e-2914-cd30-e47d-00372f2bd931": {
+					"name": "miku_plush_hornet",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"c6cccf31-6cc8-1ec2-bfe8-43a954625fd0": {
+					"name": "miku_plush_hornet_horn",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"c7fd7b1c-25d4-74a2-7188-683fb58335d4": {
+					"name": "miku_plush_hornet_horn2",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"fbe39768-509b-01e5-6b47-fed3adab8321": {
+					"name": "miku_plush_lucario_z",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"684c910f-554f-7c51-a63b-4a61778526ba": {
+					"name": "miku_plush_lucario_z2",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"97e7576e-9e31-c7ab-6d37-8ee777ffa06a": {
+					"name": "miku_plush_lucario_z3",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"53b85f2f-df03-f7a4-23b9-d814dde70826": {
+					"name": "miku_plush_lucario_z4",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
 				}
 			}
 		},
@@ -6739,6 +7356,234 @@
 							"interpolation": "linear"
 						}
 					]
+				},
+				"beb4eadc-aff4-3a3c-852d-e674a83c8017": {
+					"name": "hair_offset",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"08135e7f-59ab-e224-751b-05b1dd14dd82": {
+					"name": "miku_left_hair",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"00a8cdcd-2810-ea95-407c-3276a7cc9c3c": {
+					"name": "miku_left_hair2",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"31b979bc-03e8-19f3-343c-de51c3dc4ac2": {
+					"name": "miku_right_hair",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"e2bb6e66-5605-5765-76e1-d990ec082328": {
+					"name": "miku_right_hair2",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"e839ab4d-3386-6e05-2b3d-8e3a619589cc": {
+					"name": "root_offset",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"59584cfb-9667-07f4-92d2-ed112d70e9d0": {
+					"name": "left_arm_offset",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"f1a73a28-6977-5102-964a-6770e148cdc8": {
+					"name": "right_arm_offset",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"65fbe2a9-f781-ff41-8888-8b61bc285ef9": {
+					"name": "left_hand",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"726c78a1-6120-edbf-93f8-37451125d33d": {
+					"name": "right_hand",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"ffb9d122-0016-0c22-d9fd-0bad7abc9268": {
+					"name": "right_leg_offset",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"2c00b297-061f-cdc2-f166-76d4f2c3dfc4": {
+					"name": "left_leg_offset",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"05125d78-0fb0-b8bc-e0df-ea1668fa31e7": {
+					"name": "head_offset",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"b449f28c-7c98-6afe-6126-d17f643efc81": {
+					"name": "head-ornaments",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"9e397390-52f2-64a8-c8e0-3f1fd549b0fa": {
+					"name": "ahoge",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"44b5e032-1b49-bcd8-4038-ec15c4cd32ca": {
+					"name": "longer_hair",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"450ec773-1ced-f05c-4084-9f650c1dfcf9": {
+					"name": "longer_hair_offset",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"1d9cb158-27da-64e5-cc2b-d22f4e1bc2fe": {
+					"name": "miku_plush_xmass_tree",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"6e1d70f4-4bfe-8a17-1d64-b799ef744efa": {
+					"name": "miku_plush_xmass_tree_body",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"a39e0c6a-a300-1a1c-f03d-77fe6c5540fd": {
+					"name": "miku_plush_sonic",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"8ffa669e-7c16-eeab-1cf6-2da2e45cefb5": {
+					"name": "miku_plush_sonic_left_ear",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"9d0b73c7-fab5-9a91-c538-7d35324236df": {
+					"name": "miku_plush_sonic_right_ear",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"114ced7a-6f9a-12c4-9748-772338b306b2": {
+					"name": "miku_plush_bik_orange",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"868ae997-c504-c291-4da8-938b9affeafe": {
+					"name": "miku_plush_digital_stars",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"d95dc401-a7bc-8d9c-dfaa-3d2d37ba4a3d": {
+					"name": "miku_plush_rotten_girl",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"9985fa4b-38f3-4e28-1cc5-8b50ecacf7b4": {
+					"name": "miku_right_hair3",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"d652a459-b1d4-bc67-15d1-242dea171875": {
+					"name": "miku_right_hair4",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"2759e9d6-f798-f319-6763-03a36279a0c8": {
+					"name": "miku_left_hair3",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"1b8c6a8a-20e9-7f8e-5dd1-e48cbfe632c9": {
+					"name": "miku_left_hair4",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"bb9ea93b-1897-0c4f-c7bc-75a820cf0f82": {
+					"name": "miku_plush_hollow_night",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"69eb307f-e916-5501-cc2d-b672d8c2ea3c": {
+					"name": "miku_plush_digital_stars2",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"83e7e70e-2914-cd30-e47d-00372f2bd931": {
+					"name": "miku_plush_hornet",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"c6cccf31-6cc8-1ec2-bfe8-43a954625fd0": {
+					"name": "miku_plush_hornet_horn",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"c7fd7b1c-25d4-74a2-7188-683fb58335d4": {
+					"name": "miku_plush_hornet_horn2",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"fbe39768-509b-01e5-6b47-fed3adab8321": {
+					"name": "miku_plush_lucario_z",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"684c910f-554f-7c51-a63b-4a61778526ba": {
+					"name": "miku_plush_lucario_z2",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"97e7576e-9e31-c7ab-6d37-8ee777ffa06a": {
+					"name": "miku_plush_lucario_z3",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"53b85f2f-df03-f7a4-23b9-d814dde70826": {
+					"name": "miku_plush_lucario_z4",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
 				}
 			}
 		},
@@ -6750,7 +7595,7 @@
 			"length": 0.9167,
 			"snapping": 24,
 			"selected": false,
-			"saved": false,
+			"saved": true,
 			"path": "../miku-plushie/animations/plush.animation.json",
 			"anim_time_update": "",
 			"blend_weight": "",
@@ -7276,6 +8121,240 @@
 							"interpolation": "linear"
 						}
 					]
+				},
+				"beb4eadc-aff4-3a3c-852d-e674a83c8017": {
+					"name": "hair_offset",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"baec0393-25e5-25c5-176e-8642e0874545": {
+					"name": "hair",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"e839ab4d-3386-6e05-2b3d-8e3a619589cc": {
+					"name": "root_offset",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"59584cfb-9667-07f4-92d2-ed112d70e9d0": {
+					"name": "left_arm_offset",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"f1a73a28-6977-5102-964a-6770e148cdc8": {
+					"name": "right_arm_offset",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"65fbe2a9-f781-ff41-8888-8b61bc285ef9": {
+					"name": "left_hand",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"726c78a1-6120-edbf-93f8-37451125d33d": {
+					"name": "right_hand",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"ffb9d122-0016-0c22-d9fd-0bad7abc9268": {
+					"name": "right_leg_offset",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"2c00b297-061f-cdc2-f166-76d4f2c3dfc4": {
+					"name": "left_leg_offset",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"05125d78-0fb0-b8bc-e0df-ea1668fa31e7": {
+					"name": "head_offset",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"b449f28c-7c98-6afe-6126-d17f643efc81": {
+					"name": "head-ornaments",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"9e397390-52f2-64a8-c8e0-3f1fd549b0fa": {
+					"name": "ahoge",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"44b5e032-1b49-bcd8-4038-ec15c4cd32ca": {
+					"name": "longer_hair",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"450ec773-1ced-f05c-4084-9f650c1dfcf9": {
+					"name": "longer_hair_offset",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"1d9cb158-27da-64e5-cc2b-d22f4e1bc2fe": {
+					"name": "miku_plush_xmass_tree",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"6e1d70f4-4bfe-8a17-1d64-b799ef744efa": {
+					"name": "miku_plush_xmass_tree_body",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"a39e0c6a-a300-1a1c-f03d-77fe6c5540fd": {
+					"name": "miku_plush_sonic",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"8ffa669e-7c16-eeab-1cf6-2da2e45cefb5": {
+					"name": "miku_plush_sonic_left_ear",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"9d0b73c7-fab5-9a91-c538-7d35324236df": {
+					"name": "miku_plush_sonic_right_ear",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"114ced7a-6f9a-12c4-9748-772338b306b2": {
+					"name": "miku_plush_bik_orange",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"868ae997-c504-c291-4da8-938b9affeafe": {
+					"name": "miku_plush_digital_stars",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"d95dc401-a7bc-8d9c-dfaa-3d2d37ba4a3d": {
+					"name": "miku_plush_rotten_girl",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"bb9ea93b-1897-0c4f-c7bc-75a820cf0f82": {
+					"name": "miku_plush_hollow_night",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"69eb307f-e916-5501-cc2d-b672d8c2ea3c": {
+					"name": "miku_plush_digital_stars2",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"83e7e70e-2914-cd30-e47d-00372f2bd931": {
+					"name": "miku_plush_hornet",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"c6cccf31-6cc8-1ec2-bfe8-43a954625fd0": {
+					"name": "miku_plush_hornet_horn",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"c7fd7b1c-25d4-74a2-7188-683fb58335d4": {
+					"name": "miku_plush_hornet_horn2",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"fbe39768-509b-01e5-6b47-fed3adab8321": {
+					"name": "miku_plush_lucario_z",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"684c910f-554f-7c51-a63b-4a61778526ba": {
+					"name": "miku_plush_lucario_z2",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false,
+					"keyframes": [
+						{
+							"channel": "rotation",
+							"data_points": [
+								{
+									"x": "0",
+									"y": "0",
+									"z": "math.sin(query.anim_time * (360 * (128/60)/2) - (45 * 5)) * 20"
+								}
+							],
+							"uuid": "2ab6c170-64f3-0528-6157-ac2b6695faac",
+							"time": 0,
+							"color": -1,
+							"interpolation": "linear"
+						}
+					]
+				},
+				"97e7576e-9e31-c7ab-6d37-8ee777ffa06a": {
+					"name": "miku_plush_lucario_z3",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false,
+					"keyframes": [
+						{
+							"channel": "rotation",
+							"data_points": [
+								{
+									"x": "0",
+									"y": "0",
+									"z": "math.sin(query.anim_time * (360 * (128/60)/2) - (45 * 5)) * 20"
+								}
+							],
+							"uuid": "75e4f06a-fb03-cf47-cace-a31f2ae2c274",
+							"time": 0,
+							"color": -1,
+							"interpolation": "linear"
+						}
+					]
+				},
+				"53b85f2f-df03-f7a4-23b9-d814dde70826": {
+					"name": "miku_plush_lucario_z4",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false,
+					"keyframes": [
+						{
+							"channel": "rotation",
+							"data_points": [
+								{
+									"x": "0",
+									"y": "0",
+									"z": "math.sin(query.anim_time * (360 * (128/60)/2) - (45 * 6)) * 20"
+								}
+							],
+							"uuid": "c78167ed-58e9-284a-6c83-eb90ed6efd94",
+							"time": 0,
+							"color": -1,
+							"interpolation": "linear"
+						}
+					]
 				}
 			}
 		},
@@ -7287,7 +8366,7 @@
 			"length": 0.7083,
 			"snapping": 24,
 			"selected": false,
-			"saved": false,
+			"saved": true,
 			"path": "../miku-plushie/animations/plush.animation.json",
 			"anim_time_update": "",
 			"blend_weight": "",
@@ -7607,6 +8686,252 @@
 							"interpolation": "linear"
 						}
 					]
+				},
+				"beb4eadc-aff4-3a3c-852d-e674a83c8017": {
+					"name": "hair_offset",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"00a8cdcd-2810-ea95-407c-3276a7cc9c3c": {
+					"name": "miku_left_hair2",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"e2bb6e66-5605-5765-76e1-d990ec082328": {
+					"name": "miku_right_hair2",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"e839ab4d-3386-6e05-2b3d-8e3a619589cc": {
+					"name": "root_offset",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"59584cfb-9667-07f4-92d2-ed112d70e9d0": {
+					"name": "left_arm_offset",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"f1a73a28-6977-5102-964a-6770e148cdc8": {
+					"name": "right_arm_offset",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"65fbe2a9-f781-ff41-8888-8b61bc285ef9": {
+					"name": "left_hand",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"726c78a1-6120-edbf-93f8-37451125d33d": {
+					"name": "right_hand",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"ffb9d122-0016-0c22-d9fd-0bad7abc9268": {
+					"name": "right_leg_offset",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"2c00b297-061f-cdc2-f166-76d4f2c3dfc4": {
+					"name": "left_leg_offset",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"05125d78-0fb0-b8bc-e0df-ea1668fa31e7": {
+					"name": "head_offset",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"b449f28c-7c98-6afe-6126-d17f643efc81": {
+					"name": "head-ornaments",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"9e397390-52f2-64a8-c8e0-3f1fd549b0fa": {
+					"name": "ahoge",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"44b5e032-1b49-bcd8-4038-ec15c4cd32ca": {
+					"name": "longer_hair",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"450ec773-1ced-f05c-4084-9f650c1dfcf9": {
+					"name": "longer_hair_offset",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"1d9cb158-27da-64e5-cc2b-d22f4e1bc2fe": {
+					"name": "miku_plush_xmass_tree",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"6e1d70f4-4bfe-8a17-1d64-b799ef744efa": {
+					"name": "miku_plush_xmass_tree_body",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"23242ea4-0c76-a7f8-d4a5-df520043be9c": {
+					"name": "miku_plush_xmass_tree_head",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"ed258d11-2d45-11c8-819f-e6e70e8dfb53": {
+					"name": "miku_plush_xmass_tree_head2",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"a39e0c6a-a300-1a1c-f03d-77fe6c5540fd": {
+					"name": "miku_plush_sonic",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"8ffa669e-7c16-eeab-1cf6-2da2e45cefb5": {
+					"name": "miku_plush_sonic_left_ear",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"9d0b73c7-fab5-9a91-c538-7d35324236df": {
+					"name": "miku_plush_sonic_right_ear",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"60678b3f-6f35-ae63-3a06-766e69683d03": {
+					"name": "miku_plush_sonic2",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"760c517c-38a6-720a-948b-f29dfb48e3c2": {
+					"name": "miku_plush_sonic3",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"806f8725-4da7-a4eb-ce05-258cfca3a865": {
+					"name": "miku_plush_sonic4",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"8a8da0e2-deec-f865-badb-8a3ab98a9919": {
+					"name": "miku_plush_sonic5",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"868ae997-c504-c291-4da8-938b9affeafe": {
+					"name": "miku_plush_digital_stars",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"d95dc401-a7bc-8d9c-dfaa-3d2d37ba4a3d": {
+					"name": "miku_plush_rotten_girl",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"9985fa4b-38f3-4e28-1cc5-8b50ecacf7b4": {
+					"name": "miku_right_hair3",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"d652a459-b1d4-bc67-15d1-242dea171875": {
+					"name": "miku_right_hair4",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"2759e9d6-f798-f319-6763-03a36279a0c8": {
+					"name": "miku_left_hair3",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"1b8c6a8a-20e9-7f8e-5dd1-e48cbfe632c9": {
+					"name": "miku_left_hair4",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"bb9ea93b-1897-0c4f-c7bc-75a820cf0f82": {
+					"name": "miku_plush_hollow_night",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"69eb307f-e916-5501-cc2d-b672d8c2ea3c": {
+					"name": "miku_plush_digital_stars2",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"83e7e70e-2914-cd30-e47d-00372f2bd931": {
+					"name": "miku_plush_hornet",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"c6cccf31-6cc8-1ec2-bfe8-43a954625fd0": {
+					"name": "miku_plush_hornet_horn",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"c7fd7b1c-25d4-74a2-7188-683fb58335d4": {
+					"name": "miku_plush_hornet_horn2",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"fbe39768-509b-01e5-6b47-fed3adab8321": {
+					"name": "miku_plush_lucario_z",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"684c910f-554f-7c51-a63b-4a61778526ba": {
+					"name": "miku_plush_lucario_z2",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"97e7576e-9e31-c7ab-6d37-8ee777ffa06a": {
+					"name": "miku_plush_lucario_z3",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"53b85f2f-df03-f7a4-23b9-d814dde70826": {
+					"name": "miku_plush_lucario_z4",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
 				}
 			}
 		},
@@ -7836,6 +9161,276 @@
 							"interpolation": "linear"
 						}
 					]
+				},
+				"ffa0d495-5a22-294b-c041-0813416457fc": {
+					"name": "root",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"beb4eadc-aff4-3a3c-852d-e674a83c8017": {
+					"name": "hair_offset",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"08135e7f-59ab-e224-751b-05b1dd14dd82": {
+					"name": "miku_left_hair",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"00a8cdcd-2810-ea95-407c-3276a7cc9c3c": {
+					"name": "miku_left_hair2",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"31b979bc-03e8-19f3-343c-de51c3dc4ac2": {
+					"name": "miku_right_hair",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"e2bb6e66-5605-5765-76e1-d990ec082328": {
+					"name": "miku_right_hair2",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"e839ab4d-3386-6e05-2b3d-8e3a619589cc": {
+					"name": "root_offset",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"59584cfb-9667-07f4-92d2-ed112d70e9d0": {
+					"name": "left_arm_offset",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"f1a73a28-6977-5102-964a-6770e148cdc8": {
+					"name": "right_arm_offset",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"65fbe2a9-f781-ff41-8888-8b61bc285ef9": {
+					"name": "left_hand",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"726c78a1-6120-edbf-93f8-37451125d33d": {
+					"name": "right_hand",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"ffb9d122-0016-0c22-d9fd-0bad7abc9268": {
+					"name": "right_leg_offset",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"2c00b297-061f-cdc2-f166-76d4f2c3dfc4": {
+					"name": "left_leg_offset",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"05125d78-0fb0-b8bc-e0df-ea1668fa31e7": {
+					"name": "head_offset",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"b449f28c-7c98-6afe-6126-d17f643efc81": {
+					"name": "head-ornaments",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"9e397390-52f2-64a8-c8e0-3f1fd549b0fa": {
+					"name": "ahoge",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"44b5e032-1b49-bcd8-4038-ec15c4cd32ca": {
+					"name": "longer_hair",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"450ec773-1ced-f05c-4084-9f650c1dfcf9": {
+					"name": "longer_hair_offset",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"1d9cb158-27da-64e5-cc2b-d22f4e1bc2fe": {
+					"name": "miku_plush_xmass_tree",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"6e1d70f4-4bfe-8a17-1d64-b799ef744efa": {
+					"name": "miku_plush_xmass_tree_body",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"23242ea4-0c76-a7f8-d4a5-df520043be9c": {
+					"name": "miku_plush_xmass_tree_head",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"ed258d11-2d45-11c8-819f-e6e70e8dfb53": {
+					"name": "miku_plush_xmass_tree_head2",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"a39e0c6a-a300-1a1c-f03d-77fe6c5540fd": {
+					"name": "miku_plush_sonic",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"8ffa669e-7c16-eeab-1cf6-2da2e45cefb5": {
+					"name": "miku_plush_sonic_left_ear",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"9d0b73c7-fab5-9a91-c538-7d35324236df": {
+					"name": "miku_plush_sonic_right_ear",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"60678b3f-6f35-ae63-3a06-766e69683d03": {
+					"name": "miku_plush_sonic2",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"760c517c-38a6-720a-948b-f29dfb48e3c2": {
+					"name": "miku_plush_sonic3",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"806f8725-4da7-a4eb-ce05-258cfca3a865": {
+					"name": "miku_plush_sonic4",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"8a8da0e2-deec-f865-badb-8a3ab98a9919": {
+					"name": "miku_plush_sonic5",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"114ced7a-6f9a-12c4-9748-772338b306b2": {
+					"name": "miku_plush_bik_orange",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"868ae997-c504-c291-4da8-938b9affeafe": {
+					"name": "miku_plush_digital_stars",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"d95dc401-a7bc-8d9c-dfaa-3d2d37ba4a3d": {
+					"name": "miku_plush_rotten_girl",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"9985fa4b-38f3-4e28-1cc5-8b50ecacf7b4": {
+					"name": "miku_right_hair3",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"d652a459-b1d4-bc67-15d1-242dea171875": {
+					"name": "miku_right_hair4",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"2759e9d6-f798-f319-6763-03a36279a0c8": {
+					"name": "miku_left_hair3",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"1b8c6a8a-20e9-7f8e-5dd1-e48cbfe632c9": {
+					"name": "miku_left_hair4",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"bb9ea93b-1897-0c4f-c7bc-75a820cf0f82": {
+					"name": "miku_plush_hollow_night",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"69eb307f-e916-5501-cc2d-b672d8c2ea3c": {
+					"name": "miku_plush_digital_stars2",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"83e7e70e-2914-cd30-e47d-00372f2bd931": {
+					"name": "miku_plush_hornet",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"c6cccf31-6cc8-1ec2-bfe8-43a954625fd0": {
+					"name": "miku_plush_hornet_horn",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"c7fd7b1c-25d4-74a2-7188-683fb58335d4": {
+					"name": "miku_plush_hornet_horn2",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"fbe39768-509b-01e5-6b47-fed3adab8321": {
+					"name": "miku_plush_lucario_z",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"684c910f-554f-7c51-a63b-4a61778526ba": {
+					"name": "miku_plush_lucario_z2",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"97e7576e-9e31-c7ab-6d37-8ee777ffa06a": {
+					"name": "miku_plush_lucario_z3",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"53b85f2f-df03-f7a4-23b9-d814dde70826": {
+					"name": "miku_plush_lucario_z4",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
 				}
 			}
 		},
@@ -8451,6 +10046,78 @@
 					"type": "bone",
 					"rotation_global": false,
 					"quaternion_interpolation": false
+				},
+				"fbe39768-509b-01e5-6b47-fed3adab8321": {
+					"name": "miku_plush_lucario_z",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"684c910f-554f-7c51-a63b-4a61778526ba": {
+					"name": "miku_plush_lucario_z2",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false,
+					"keyframes": [
+						{
+							"channel": "rotation",
+							"data_points": [
+								{
+									"x": "0",
+									"y": "0",
+									"z": "math.sin(query.anim_time * (360 * (150/60)/2) - (45 * 6)) * 15"
+								}
+							],
+							"uuid": "4fc334be-f146-c843-f31b-a3301c8e0b6e",
+							"time": 0,
+							"color": -1,
+							"interpolation": "linear"
+						}
+					]
+				},
+				"97e7576e-9e31-c7ab-6d37-8ee777ffa06a": {
+					"name": "miku_plush_lucario_z3",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false,
+					"keyframes": [
+						{
+							"channel": "rotation",
+							"data_points": [
+								{
+									"x": "0",
+									"y": "0",
+									"z": "math.sin(query.anim_time * (360 * (150/60)/2) - (45 * 6)) * 15"
+								}
+							],
+							"uuid": "cf78a6ff-878d-b5a6-3b33-26f2595d947a",
+							"time": 0,
+							"color": -1,
+							"interpolation": "linear"
+						}
+					]
+				},
+				"53b85f2f-df03-f7a4-23b9-d814dde70826": {
+					"name": "miku_plush_lucario_z4",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false,
+					"keyframes": [
+						{
+							"channel": "rotation",
+							"data_points": [
+								{
+									"x": "0",
+									"y": "0",
+									"z": "math.sin(query.anim_time * (360 * (150/60)/2) - (45 * 7)) * 15"
+								}
+							],
+							"uuid": "90f314f5-1c2e-937f-ef52-32883123621f",
+							"time": 0,
+							"color": -1,
+							"interpolation": "linear"
+						}
+					]
 				}
 			}
 		},
@@ -8462,7 +10129,7 @@
 			"length": 1.25,
 			"snapping": 24,
 			"selected": false,
-			"saved": false,
+			"saved": true,
 			"path": "../miku-plushie/animations/plush.animation.json",
 			"anim_time_update": "",
 			"blend_weight": "",
@@ -8675,6 +10342,324 @@
 								}
 							],
 							"uuid": "8da2a2e0-aa9a-5d43-ae9e-ea0e605c4a1c",
+							"time": 0,
+							"color": -1,
+							"interpolation": "linear"
+						}
+					]
+				},
+				"ffa0d495-5a22-294b-c041-0813416457fc": {
+					"name": "root",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"beb4eadc-aff4-3a3c-852d-e674a83c8017": {
+					"name": "hair_offset",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"00a8cdcd-2810-ea95-407c-3276a7cc9c3c": {
+					"name": "miku_left_hair2",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"e2bb6e66-5605-5765-76e1-d990ec082328": {
+					"name": "miku_right_hair2",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"baec0393-25e5-25c5-176e-8642e0874545": {
+					"name": "hair",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"e839ab4d-3386-6e05-2b3d-8e3a619589cc": {
+					"name": "root_offset",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"59584cfb-9667-07f4-92d2-ed112d70e9d0": {
+					"name": "left_arm_offset",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"f1a73a28-6977-5102-964a-6770e148cdc8": {
+					"name": "right_arm_offset",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"65fbe2a9-f781-ff41-8888-8b61bc285ef9": {
+					"name": "left_hand",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"726c78a1-6120-edbf-93f8-37451125d33d": {
+					"name": "right_hand",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"ffb9d122-0016-0c22-d9fd-0bad7abc9268": {
+					"name": "right_leg_offset",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"2c00b297-061f-cdc2-f166-76d4f2c3dfc4": {
+					"name": "left_leg_offset",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"05125d78-0fb0-b8bc-e0df-ea1668fa31e7": {
+					"name": "head_offset",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"b449f28c-7c98-6afe-6126-d17f643efc81": {
+					"name": "head-ornaments",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"9e397390-52f2-64a8-c8e0-3f1fd549b0fa": {
+					"name": "ahoge",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"44b5e032-1b49-bcd8-4038-ec15c4cd32ca": {
+					"name": "longer_hair",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"450ec773-1ced-f05c-4084-9f650c1dfcf9": {
+					"name": "longer_hair_offset",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"f48a6bc8-ed98-a7bb-96bf-bd3af4aba717": {
+					"name": "left_sleeve",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"7292a8b5-e1d3-f3df-0db5-6143a09af982": {
+					"name": "right_sleeve",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"1d9cb158-27da-64e5-cc2b-d22f4e1bc2fe": {
+					"name": "miku_plush_xmass_tree",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"6e1d70f4-4bfe-8a17-1d64-b799ef744efa": {
+					"name": "miku_plush_xmass_tree_body",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"23242ea4-0c76-a7f8-d4a5-df520043be9c": {
+					"name": "miku_plush_xmass_tree_head",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"ed258d11-2d45-11c8-819f-e6e70e8dfb53": {
+					"name": "miku_plush_xmass_tree_head2",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"a39e0c6a-a300-1a1c-f03d-77fe6c5540fd": {
+					"name": "miku_plush_sonic",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"8ffa669e-7c16-eeab-1cf6-2da2e45cefb5": {
+					"name": "miku_plush_sonic_left_ear",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"9d0b73c7-fab5-9a91-c538-7d35324236df": {
+					"name": "miku_plush_sonic_right_ear",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"60678b3f-6f35-ae63-3a06-766e69683d03": {
+					"name": "miku_plush_sonic2",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"760c517c-38a6-720a-948b-f29dfb48e3c2": {
+					"name": "miku_plush_sonic3",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"806f8725-4da7-a4eb-ce05-258cfca3a865": {
+					"name": "miku_plush_sonic4",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"8a8da0e2-deec-f865-badb-8a3ab98a9919": {
+					"name": "miku_plush_sonic5",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"868ae997-c504-c291-4da8-938b9affeafe": {
+					"name": "miku_plush_digital_stars",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"d95dc401-a7bc-8d9c-dfaa-3d2d37ba4a3d": {
+					"name": "miku_plush_rotten_girl",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"9985fa4b-38f3-4e28-1cc5-8b50ecacf7b4": {
+					"name": "miku_right_hair3",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"d652a459-b1d4-bc67-15d1-242dea171875": {
+					"name": "miku_right_hair4",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"2759e9d6-f798-f319-6763-03a36279a0c8": {
+					"name": "miku_left_hair3",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"1b8c6a8a-20e9-7f8e-5dd1-e48cbfe632c9": {
+					"name": "miku_left_hair4",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"bb9ea93b-1897-0c4f-c7bc-75a820cf0f82": {
+					"name": "miku_plush_hollow_night",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"69eb307f-e916-5501-cc2d-b672d8c2ea3c": {
+					"name": "miku_plush_digital_stars2",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"83e7e70e-2914-cd30-e47d-00372f2bd931": {
+					"name": "miku_plush_hornet",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"c6cccf31-6cc8-1ec2-bfe8-43a954625fd0": {
+					"name": "miku_plush_hornet_horn",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"c7fd7b1c-25d4-74a2-7188-683fb58335d4": {
+					"name": "miku_plush_hornet_horn2",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"fbe39768-509b-01e5-6b47-fed3adab8321": {
+					"name": "miku_plush_lucario_z",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"684c910f-554f-7c51-a63b-4a61778526ba": {
+					"name": "miku_plush_lucario_z2",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false,
+					"keyframes": [
+						{
+							"channel": "rotation",
+							"data_points": [
+								{
+									"x": "0",
+									"y": "0",
+									"z": "math.sin(query.anim_time * (360 * (95/60)/2) - (45 * 6)) * -10"
+								}
+							],
+							"uuid": "809a88dc-e1e1-e065-a174-e99a43c6154c",
+							"time": 0,
+							"color": -1,
+							"interpolation": "linear"
+						}
+					]
+				},
+				"97e7576e-9e31-c7ab-6d37-8ee777ffa06a": {
+					"name": "miku_plush_lucario_z3",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false,
+					"keyframes": [
+						{
+							"channel": "rotation",
+							"data_points": [
+								{
+									"x": "0",
+									"y": "0",
+									"z": "math.sin(query.anim_time * (360 * (95/60)/2) - (45 * 6)) * -10"
+								}
+							],
+							"uuid": "2891fa2d-2cfc-66ff-5c3a-539d57309252",
+							"time": 0,
+							"color": -1,
+							"interpolation": "linear"
+						}
+					]
+				},
+				"53b85f2f-df03-f7a4-23b9-d814dde70826": {
+					"name": "miku_plush_lucario_z4",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false,
+					"keyframes": [
+						{
+							"channel": "rotation",
+							"data_points": [
+								{
+									"x": "0",
+									"y": "0",
+									"z": "math.sin(query.anim_time * (360 * (95/60)/2) - (45 * 7)) * -10"
+								}
+							],
+							"uuid": "36f722ed-58e8-2ac0-32b7-cfc4d6ff1a86",
 							"time": 0,
 							"color": -1,
 							"interpolation": "linear"
@@ -9004,6 +10989,300 @@
 							"interpolation": "linear"
 						}
 					]
+				},
+				"ffa0d495-5a22-294b-c041-0813416457fc": {
+					"name": "root",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"beb4eadc-aff4-3a3c-852d-e674a83c8017": {
+					"name": "hair_offset",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"08135e7f-59ab-e224-751b-05b1dd14dd82": {
+					"name": "miku_left_hair",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"00a8cdcd-2810-ea95-407c-3276a7cc9c3c": {
+					"name": "miku_left_hair2",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"31b979bc-03e8-19f3-343c-de51c3dc4ac2": {
+					"name": "miku_right_hair",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"e2bb6e66-5605-5765-76e1-d990ec082328": {
+					"name": "miku_right_hair2",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"15a98531-cb7c-91ba-5593-2b9f96239d5a": {
+					"name": "right_leg",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"5acbcb93-687d-38d2-6daf-65b98cbb8ee5": {
+					"name": "left_leg",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"e839ab4d-3386-6e05-2b3d-8e3a619589cc": {
+					"name": "root_offset",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"59584cfb-9667-07f4-92d2-ed112d70e9d0": {
+					"name": "left_arm_offset",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"f1a73a28-6977-5102-964a-6770e148cdc8": {
+					"name": "right_arm_offset",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"65fbe2a9-f781-ff41-8888-8b61bc285ef9": {
+					"name": "left_hand",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"726c78a1-6120-edbf-93f8-37451125d33d": {
+					"name": "right_hand",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"ffb9d122-0016-0c22-d9fd-0bad7abc9268": {
+					"name": "right_leg_offset",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"2c00b297-061f-cdc2-f166-76d4f2c3dfc4": {
+					"name": "left_leg_offset",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"05125d78-0fb0-b8bc-e0df-ea1668fa31e7": {
+					"name": "head_offset",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"b449f28c-7c98-6afe-6126-d17f643efc81": {
+					"name": "head-ornaments",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"9e397390-52f2-64a8-c8e0-3f1fd549b0fa": {
+					"name": "ahoge",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"44b5e032-1b49-bcd8-4038-ec15c4cd32ca": {
+					"name": "longer_hair",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"450ec773-1ced-f05c-4084-9f650c1dfcf9": {
+					"name": "longer_hair_offset",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"f48a6bc8-ed98-a7bb-96bf-bd3af4aba717": {
+					"name": "left_sleeve",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"7292a8b5-e1d3-f3df-0db5-6143a09af982": {
+					"name": "right_sleeve",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"1d9cb158-27da-64e5-cc2b-d22f4e1bc2fe": {
+					"name": "miku_plush_xmass_tree",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"6e1d70f4-4bfe-8a17-1d64-b799ef744efa": {
+					"name": "miku_plush_xmass_tree_body",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"23242ea4-0c76-a7f8-d4a5-df520043be9c": {
+					"name": "miku_plush_xmass_tree_head",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"ed258d11-2d45-11c8-819f-e6e70e8dfb53": {
+					"name": "miku_plush_xmass_tree_head2",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"a39e0c6a-a300-1a1c-f03d-77fe6c5540fd": {
+					"name": "miku_plush_sonic",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"8ffa669e-7c16-eeab-1cf6-2da2e45cefb5": {
+					"name": "miku_plush_sonic_left_ear",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"9d0b73c7-fab5-9a91-c538-7d35324236df": {
+					"name": "miku_plush_sonic_right_ear",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"60678b3f-6f35-ae63-3a06-766e69683d03": {
+					"name": "miku_plush_sonic2",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"760c517c-38a6-720a-948b-f29dfb48e3c2": {
+					"name": "miku_plush_sonic3",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"806f8725-4da7-a4eb-ce05-258cfca3a865": {
+					"name": "miku_plush_sonic4",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"8a8da0e2-deec-f865-badb-8a3ab98a9919": {
+					"name": "miku_plush_sonic5",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"114ced7a-6f9a-12c4-9748-772338b306b2": {
+					"name": "miku_plush_bik_orange",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"868ae997-c504-c291-4da8-938b9affeafe": {
+					"name": "miku_plush_digital_stars",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"d95dc401-a7bc-8d9c-dfaa-3d2d37ba4a3d": {
+					"name": "miku_plush_rotten_girl",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"9985fa4b-38f3-4e28-1cc5-8b50ecacf7b4": {
+					"name": "miku_right_hair3",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"d652a459-b1d4-bc67-15d1-242dea171875": {
+					"name": "miku_right_hair4",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"2759e9d6-f798-f319-6763-03a36279a0c8": {
+					"name": "miku_left_hair3",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"1b8c6a8a-20e9-7f8e-5dd1-e48cbfe632c9": {
+					"name": "miku_left_hair4",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"bb9ea93b-1897-0c4f-c7bc-75a820cf0f82": {
+					"name": "miku_plush_hollow_night",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"69eb307f-e916-5501-cc2d-b672d8c2ea3c": {
+					"name": "miku_plush_digital_stars2",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"83e7e70e-2914-cd30-e47d-00372f2bd931": {
+					"name": "miku_plush_hornet",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"c6cccf31-6cc8-1ec2-bfe8-43a954625fd0": {
+					"name": "miku_plush_hornet_horn",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"c7fd7b1c-25d4-74a2-7188-683fb58335d4": {
+					"name": "miku_plush_hornet_horn2",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"fbe39768-509b-01e5-6b47-fed3adab8321": {
+					"name": "miku_plush_lucario_z",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"684c910f-554f-7c51-a63b-4a61778526ba": {
+					"name": "miku_plush_lucario_z2",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"97e7576e-9e31-c7ab-6d37-8ee777ffa06a": {
+					"name": "miku_plush_lucario_z3",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"53b85f2f-df03-f7a4-23b9-d814dde70826": {
+					"name": "miku_plush_lucario_z4",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
 				}
 			}
 		}
