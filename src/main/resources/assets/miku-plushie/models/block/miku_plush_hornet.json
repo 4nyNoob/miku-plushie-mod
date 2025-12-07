@@ -63,12 +63,12 @@
 			"to": [16, 4.5, 10.75],
 			"rotation": {"angle": 22.5, "axis": "z", "origin": [8, 3, 10]},
 			"faces": {
-				"north": {"uv": [12.25, 13.25, 13, 14], "texture": "#particle"},
-				"east": {"uv": [12, 13.25, 12.25, 14], "texture": "#particle"},
-				"south": {"uv": [13.25, 13.25, 14, 14], "texture": "#particle"},
-				"west": {"uv": [13, 13.25, 13.25, 14], "texture": "#particle"},
-				"up": {"uv": [13, 13.25, 12.25, 13], "texture": "#particle"},
-				"down": {"uv": [13.75, 13, 13, 13.25], "texture": "#particle"}
+				"north": {"uv": [9, 13.25, 9.75, 14], "texture": "#particle"},
+				"east": {"uv": [8.75, 13.25, 9, 14], "texture": "#particle"},
+				"south": {"uv": [10, 13.25, 10.75, 14], "texture": "#particle"},
+				"west": {"uv": [9.75, 13.25, 10, 14], "texture": "#particle"},
+				"up": {"uv": [9.75, 13.25, 9, 13], "texture": "#particle"},
+				"down": {"uv": [10.5, 13, 9.75, 13.25], "texture": "#particle"}
 			}
 		},
 		{
@@ -76,12 +76,12 @@
 			"to": [14, 2.5, 9.75],
 			"rotation": {"angle": 22.5, "axis": "z", "origin": [8, 3, 10]},
 			"faces": {
-				"north": {"uv": [12.5, 13.5, 12.75, 13.75], "rotation": 180, "texture": "#particle"},
-				"east": {"uv": [12.5, 13.75, 12.75, 14], "rotation": 180, "texture": "#particle"},
-				"south": {"uv": [12.5, 13.5, 12.75, 13.75], "rotation": 180, "texture": "#particle"},
-				"west": {"uv": [12.5, 13.75, 12.75, 14], "rotation": 180, "texture": "#particle"},
-				"up": {"uv": [12.75, 13.25, 12.5, 13.5], "rotation": 180, "texture": "#particle"},
-				"down": {"uv": [12.75, 13.25, 12.5, 13.5], "rotation": 180, "texture": "#particle"}
+				"north": {"uv": [9.25, 13.5, 9.5, 13.75], "rotation": 180, "texture": "#particle"},
+				"east": {"uv": [9.25, 13.75, 9.5, 14], "rotation": 180, "texture": "#particle"},
+				"south": {"uv": [9.25, 13.5, 9.5, 13.75], "rotation": 180, "texture": "#particle"},
+				"west": {"uv": [9.25, 13.75, 9.5, 14], "rotation": 180, "texture": "#particle"},
+				"up": {"uv": [9.5, 13.25, 9.25, 13.5], "rotation": 180, "texture": "#particle"},
+				"down": {"uv": [9.5, 13.25, 9.25, 13.5], "rotation": 180, "texture": "#particle"}
 			}
 		},
 		{
