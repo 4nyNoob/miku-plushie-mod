@@ -1,5 +1,6 @@
 package com.any.mikuplushie.datagen;
 
+import com.any.mikuplushie.block.WildLeekCropBlock;
 import com.any.mikuplushie.registry.ModBlocks;
 import com.any.mikuplushie.registry.ModItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
@@ -29,8 +30,10 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
             addDrop(plushBlocks.get(block), plushItems.get(block));
         }
 
-        LootCondition.Builder leekLootCondition =
-            BlockStatePropertyLootCondition.builder(ModBlocks.LEEK_CROP).properties(StatePredicate.Builder.create().exactMatch(CropBlock.AGE, 7));
+        LootCondition.Builder leekLootCondition = BlockStatePropertyLootCondition.builder(ModBlocks.LEEK_CROP)
+            .properties(StatePredicate.Builder.create().exactMatch(CropBlock.AGE, 7));
         addDrop(ModBlocks.LEEK_CROP, cropDrops(ModBlocks.LEEK_CROP, ModItems.LEEK, ModItems.LEEK_SEEDS, leekLootCondition));
+        LootCondition.Builder wildLeekLootCondition = BlockStatePropertyLootCondition.builder(ModBlocks.WILD_LEEK_CROP);
+        addDrop(ModBlocks.WILD_LEEK_CROP, cropDrops(ModBlocks.WILD_LEEK_CROP, ModItems.LEEK, ModItems.LEEK_SEEDS, wildLeekLootCondition));
 	}
 }

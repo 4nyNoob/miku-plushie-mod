@@ -32,6 +32,7 @@ public class MikuPlushieClient implements ClientModInitializer {
 
         //NON PLUSH BLOCKS
 		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.LEEK_CROP, RenderLayer.getCutout());
+		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.WILD_LEEK_CROP, RenderLayer.getCutout());
 
         //GLIB QUERY
         MolangParser.INSTANCE.register(new LazyVariable("q.miku.is_game", 1));

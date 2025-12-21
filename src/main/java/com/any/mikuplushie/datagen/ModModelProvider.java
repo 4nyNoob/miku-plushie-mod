@@ -25,15 +25,14 @@ public class ModModelProvider extends FabricModelProvider {
         }
 
         BlockModels.registerCrop(blockStateModelGenerator, ModBlocks.LEEK_CROP, CropBlock.AGE, 0, 1, 2, 3, 4, 5, 6, 7);
+        BlockModels.registerWildCrop(blockStateModelGenerator, ModBlocks.WILD_LEEK_CROP, ModBlocks.LEEK_CROP);
 	}
 
 	@Override
 	public void generateItemModels(ItemModelGenerator itemModelGenerator) {
 		itemModelGenerator.register(ModItems.CANUDINHO, Models.GENERATED);
         itemModelGenerator.register(ModItems.LEEK_SEEDS, Models.GENERATED);
-//        itemModelGenerator.register(ModItems.AKITA_NERU_PHONE, Models.GENERATED);
         itemModelGenerator.register(ModItems.VOCALOID_HEART, Models.HANDHELD);
         itemModelGenerator.register(ModItems.LEEK, Models.HANDHELD);
-//		itemModelGenerator.register(ModItems.BAGUETTE, Models.GENERATED);
 	}
 }

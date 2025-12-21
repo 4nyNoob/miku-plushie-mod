@@ -3,6 +3,7 @@ package com.any.mikuplushie.registry;
 import com.any.mikuplushie.MikuPlushie;
 import com.any.mikuplushie.block.LeekCropBlock;
 import com.any.mikuplushie.block.MikuPlushieBlock;
+import com.any.mikuplushie.block.WildLeekCropBlock;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
@@ -118,6 +119,12 @@ public class ModBlocks {
         new LeekCropBlock(AbstractBlock.Settings.create()
             .nonOpaque().noCollision().ticksRandomly().breakInstantly().sounds(BlockSoundGroup.CROP)),
         "leek_crop",
+        false
+    );
+    public static final WildLeekCropBlock WILD_LEEK_CROP = (WildLeekCropBlock) register(
+        new WildLeekCropBlock(AbstractBlock.Settings.create()
+            .nonOpaque().noCollision().ticksRandomly().breakInstantly().sounds(BlockSoundGroup.CROP)),
+        "wild_leek_crop",
         false
     );
 

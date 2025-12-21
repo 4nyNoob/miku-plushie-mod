@@ -1,4 +1,4 @@
-// 1.20.1	2025-12-20T17:11:13.803767151	miku plushies/Recipes
+// 1.20.1	2025-12-21T19:59:29.254886436	miku plushies/Recipes
 0c389692570e1bb4502ab41b21673265d98ca853 data/miku-plushie/recipes/miku_plush_rolling_girl.json
 fde9d0c149479567264b038468d0b35d28150cf7 data/miku-plushie/advancements/recipes/decorations/teto_plush_some_more_of_that_song.json
 1cd819617c5d34a1cc69c6f430b0cc130cfc94b2 data/miku-plushie/advancements/recipes/decorations/meiko_plush_v4.json
@@ -198,8 +198,8 @@ de58f8227c4fe939b80a80486c2a0a42d8d52141 data/miku-plushie/advancements/recipes/
 3a374818bca61b457b02c73bac269f6f6e277a2f data/miku-plushie/recipes/teto_pickaxe_some_more_of_that_song.json
 4272a5a1aae3101df15d32d3b7a912a6352d65fc data/miku-plushie/advancements/recipes/decorations/miku_plush_br_fut_crvg.json
 d2c52c492096f9e36f454c418d29e0c2527a59ff data/miku-plushie/advancements/recipes/decorations/akita_neru_phone.json
-d8b7d9ab9fb4b8630bdd9107310bf53056fa56e0 data/miku-plushie/advancements/recipes/decorations/miku_plush_br_electrician.json
 36774a501b47ab29dcec6c06f6f32923f7144220 data/miku-plushie/advancements/recipes/decorations/miku_plush_br_mg.json
+d8b7d9ab9fb4b8630bdd9107310bf53056fa56e0 data/miku-plushie/advancements/recipes/decorations/miku_plush_br_electrician.json
 743b7516b7715ec2f7ddf56bd33bdb87ac7bff85 data/miku-plushie/recipes/luka_plush.json
 dede73f5587f9ba2a9fb43bbd69c641dd8b657d2 data/miku-plushie/recipes/miku_plush_world_is_mine.json
 d0f608c2692bad237ae94071ff3f06ae2b20470f data/miku-plushie/advancements/recipes/decorations/miku_plush_mochimochi.json
