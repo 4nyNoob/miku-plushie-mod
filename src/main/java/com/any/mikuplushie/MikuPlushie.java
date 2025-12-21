@@ -1,5 +1,6 @@
 package com.any.mikuplushie;
 
+import com.any.mikuplushie.registry.*;
 import net.fabricmc.api.ModInitializer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -17,6 +18,8 @@ public class MikuPlushie implements ModInitializer {
         ModCommands.initialize();
         ModEntities.initialize();
         ModResourcePacks.initialize();
+		ModVillagerTrades.initialize();
+		ModParticles.initialize();
         LOGGER.info("Miku: (^v^)/ Hi!!!");
 	}
 }

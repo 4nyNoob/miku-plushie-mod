@@ -1,5 +1,5 @@
 {
-  "canudinho": {
+  "miku_canudinho": {
     "subtitle": "sound.miku-plushie.canudinho",
     "sounds": [
       "miku-plushie:miku/canudinho1",
@@ -9,7 +9,7 @@
       "miku-plushie:miku/canudinho5"
     ]
   },
-  "oie" : {
+  "miku_oie" : {
     "subtitle": "sound.miku-plushie.oie",
     "sounds": [
       "miku-plushie:miku/miku-oie1",
@@ -21,7 +21,7 @@
       "miku-plushie:miku/miku-oie7"
     ]
   },
-  "dor" : {
+  "miku_dor" : {
     "subtitle": "sound.miku-plushie.dor",
     "sounds": [
       "miku-plushie:miku/miku-dor1",
@@ -35,7 +35,7 @@
       "miku-plushie:miku/miku-dor9"
     ]
   },
-  "bye" : {
+  "miku_bye" : {
     "subtitle": "sound.miku-plushie.bye",
     "sounds": [
       "miku-plushie:miku/miku-bye1",
@@ -47,7 +47,7 @@
       "miku-plushie:miku/miku-bye7"
     ]
   },
-  "equip" : {
+  "miku_equip" : {
     "subtitle": "sound.miku-plushie.equip",
     "sounds": [
       "miku-plushie:miku/miku-equip1",
@@ -56,10 +56,10 @@
       "miku-plushie:miku/miku-equip4"
     ]
   },
-  "eat" : {
+  "miku_eat" : {
     "subtitle": "sound.miku-plushie.eat",
     "sounds": [
-      "miku-plushie:miku/miku-eat",
+      "miku-plushie:miku/miku-eat1",
       "miku-plushie:miku/miku-eat2",
       "miku-plushie:miku/miku-eat3",
       "miku-plushie:miku/miku-eat4"
@@ -164,7 +164,7 @@
 
 
 
-  "neru_oie" : {
+  "akita_oie" : {
     "subtitle": "sound.neru-plushie.oie",
     "sounds": [
       "miku-plushie:neru/neru-placing1",
@@ -175,7 +175,7 @@
       "miku-plushie:neru/neru-placing6"
     ]
   },
-  "neru_dor" : {
+  "akita_dor" : {
     "subtitle": "sound.neru-plushie.dor",
     "sounds": [
       "miku-plushie:neru/neru-hurt1",
@@ -189,7 +189,7 @@
       "miku-plushie:neru/neru-hurt9"
     ]
   },
-  "neru_bye" : {
+  "akita_bye" : {
     "subtitle": "sound.neru-plushie.bye",
     "sounds": [
       "miku-plushie:neru/neru-break1",
@@ -201,7 +201,7 @@
       "miku-plushie:neru/neru-break7"
     ]
   },
-  "neru_equip" : {
+  "akita_equip" : {
     "subtitle": "sound.neru-plushie.equip",
     "sounds": [
       "miku-plushie:neru/neru-equip1",

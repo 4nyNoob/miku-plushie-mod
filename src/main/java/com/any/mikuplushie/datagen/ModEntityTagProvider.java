@@ -1,7 +1,7 @@
 package com.any.mikuplushie.datagen;
 
 import com.any.mikuplushie.MikuPlushie;
-import com.any.mikuplushie.ModEntities;
+import com.any.mikuplushie.registry.ModEntities;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.minecraft.entity.EntityType;

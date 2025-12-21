@@ -1,8 +1,8 @@
 package com.any.mikuplushie.entity;
 
-import com.any.mikuplushie.ModItems;
+import com.any.mikuplushie.registry.ModItems;
 import com.any.mikuplushie.entity.goals.MikuDelayedAttackGoal;
-import com.any.mikuplushie.entity.variant.MikuVariant;
+import com.any.mikuplushie.util.ModUtil;
 import net.minecraft.block.Blocks;
 import net.minecraft.entity.*;
 import net.minecraft.entity.ai.goal.*;
@@ -16,18 +16,14 @@ import net.minecraft.entity.passive.PassiveEntity;
 import net.minecraft.entity.passive.TameableEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
-import net.minecraft.nbt.NbtCompound;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.registry.tag.ItemTags;
 import net.minecraft.server.world.ServerWorld;
-import net.minecraft.sound.SoundEvents;
+import net.minecraft.sound.SoundEvent;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
-import net.minecraft.util.Util;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.EntityView;
-import net.minecraft.world.LocalDifficulty;
-import net.minecraft.world.ServerWorldAccess;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 import software.bernie.geckolib.animatable.GeoEntity;
@@ -40,6 +36,8 @@ import software.bernie.geckolib.util.GeckoLibUtil;
 import java.util.List;
 
 public class PlushEntity extends TameableEntity implements GeoEntity {
+
+    private static final TrackedData<Boolean> SITTING = DataTracker.registerData(PlushEntity.class, TrackedDataHandlerRegistry.BOOLEAN);
 
     //DANCE GLOBALS
     boolean songPlaying;
@@ -56,7 +54,7 @@ public class PlushEntity extends TameableEntity implements GeoEntity {
     private static final RawAnimation SWIPE = RawAnimation.begin().thenPlay("attack.swipe");
     private static final RawAnimation SWIPE2 = RawAnimation.begin().thenPlay("attack.swipe2");
     private static final RawAnimation SWIPE3 = RawAnimation.begin().thenPlay("attack.swipe3");
-//    private static final RawAnimation EAT = RawAnimation.begin().thenPlay("misc.eat");
+    private static final RawAnimation SPAWN = RawAnimation.begin().thenPlay("misc.spawn");
 
     private static RawAnimation SELECTED_DANCE = DANCES.get(0);
     private static RawAnimation SELECTED_ATTACK = SWIPE;
@@ -68,12 +66,10 @@ public class PlushEntity extends TameableEntity implements GeoEntity {
     //GOALS
     @Override
     public void initGoals() {
-//        this.eatLeekGoal = new EatLeekGoal(this);
         this.goalSelector.add(0, new SwimGoal(this));
         this.goalSelector.add(1, new SitGoal(this));
         this.goalSelector.add(2, new MikuDelayedAttackGoal(this, 1.5F, true));
         this.goalSelector.add(4, new FollowOwnerGoal(this,1.0F, 5F, 1F, true));
-//        this.goalSelector.add(5, this.eatLeekGoal);
         this.goalSelector.add(6, new TemptGoal(this, 1.5, Ingredient.ofItems(ModItems.CANUDINHO), false));
         this.goalSelector.add(7, new LookAtEntityGoal(this, PlushEntity.class, 8F));
         this.goalSelector.add(8, new LookAtEntityGoal(this, PlayerEntity.class, 8F));
@@ -92,29 +88,37 @@ public class PlushEntity extends TameableEntity implements GeoEntity {
     //ANIMATION CONTROLLER
     @Override
     public void registerControllers(AnimatableManager.ControllerRegistrar controllers) {
-        controllers.add(new AnimationController<>(this, "Miku", 2, state -> {
+        controllers.add(new AnimationController<>(this, "Plush", 2, state -> {
 
-            //MIKU SIT OR DANCE WHEN SONG IS PLAYING NEARBY
-            if (PlushEntity.this.isInSittingPose()){
-                return state.setAndContinue(PlushEntity.this.isSongPlaying() ? SIT_DANCE : SIT);
-            }
-
-            else {
-                //DANCE WHEN SONG IS PLAYING NEARBY
-                if (PlushEntity.this.isSongPlaying()){
-                    return state.setAndContinue(SELECTED_DANCE);
+            //SITTING ANIMATIONS
+            if (this.isInSittingPose()) {
+                //SONG PLAYING NEARBY
+                if (this.isSongPlaying()){
+                    return state.setAndContinue(SIT_DANCE);
                 } else {
-                    //ATTACK
-                    if (PlushEntity.this.handSwinging){
-                        return state.setAndContinue(SELECTED_ATTACK);
-                    }
-                    //IDLE
-                    else {
-                        return state.setAndContinue(IDLE);
-                    }
+                    return state.setAndContinue(SIT);
                 }
             }
 
+            //STANDING UP ANIMATIONS
+            else {
+                //SPAWN ANIMATION
+                if (this.age < 10){
+                    return state.setAndContinue(SPAWN);
+                }
+                //DANCE
+                else if (this.isSongPlaying()){
+                    return state.setAndContinue(SELECTED_DANCE);
+                }
+                //ATTACKING
+                else if (this.handSwinging) {
+                    return state.setAndContinue(SELECTED_ATTACK);
+                }
+                //IDLE
+                else {
+                    return state.setAndContinue(IDLE);
+                }
+            }
         }));
 
     }
@@ -128,9 +132,9 @@ public class PlushEntity extends TameableEntity implements GeoEntity {
     @Override
     protected float getActiveEyeHeight(EntityPose pose, EntityDimensions dimensions) {
         if (pose.equals(EntityPose.STANDING)){
-            return 0.6F;
-        } else {
             return 0.85F;
+        } else {
+            return 0.6F;
         }
     }
 
@@ -146,13 +150,20 @@ public class PlushEntity extends TameableEntity implements GeoEntity {
         return 1F;
     }
 
+    //DEATH SOUND
+    @Override
+    protected @Nullable SoundEvent getDeathSound() {
+        String plushName = this.getType().getTranslationKey().split("[.]")[2];
+        return ModUtil.getPlushSoundEvent(plushName, "bye");
+    }
+
     //ENTITY RIGHT CLICK
     @Override
     public ActionResult interactMob(PlayerEntity player, Hand hand) {
         ItemStack playerItemStack = player.getStackInHand(player.getActiveHand());
         ItemStack entityHandStack = this.getMainHandStack();
 
-        //UNTAMED INTERACTION
+        /*//UNTAMED INTERACTION
         if (!this.isTamed() && player.getStackInHand(hand).isOf(ModItems.CANUDINHO)) {
             if (!player.getAbilities().creativeMode) {
                 playerItemStack.decrement(1);
@@ -178,7 +189,9 @@ public class PlushEntity extends TameableEntity implements GeoEntity {
             return ActionResult.success(this.getWorld().isClient);
         }
         //TAMED INTERACTION
-        else if (this.isOnGround() && this.isTamed() && this.isOwner(player)) {
+        else */
+
+        if (this.isOnGround() && this.isTamed() && this.isOwner(player)) {
             //DO STUFF ON SERVER
             if (!this.getWorld().isClient) {
                 //DROP HELD ITEM
@@ -191,14 +204,15 @@ public class PlushEntity extends TameableEntity implements GeoEntity {
                     this.setSitting(!this.isSitting());
                     this.setInSittingPose(!this.isInSittingPose());
                     if (this.isInSittingPose()) {
-                        this.setPose(EntityPose.STANDING);
-                    } else {
                         this.setPose(EntityPose.SITTING);
+                    } else {
+                        this.setPose(EntityPose.STANDING);
                     }
                 }
             }
             return ActionResult.success(this.getWorld().isClient);
         }
+
         //OTHER PLAYER INTERACTION
         else {
             return super.interactMob(player, hand);
@@ -211,7 +225,6 @@ public class PlushEntity extends TameableEntity implements GeoEntity {
         return stack.isIn(ItemTags.SWORDS);
     }
 
-    //CAN PICK UP ITEMS
     @Override
     public boolean canPickUpLoot() {
         return true;

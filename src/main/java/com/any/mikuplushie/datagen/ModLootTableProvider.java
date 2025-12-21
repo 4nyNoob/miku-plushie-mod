@@ -1,15 +1,11 @@
 package com.any.mikuplushie.datagen;
 
-import com.any.mikuplushie.ModBlocks;
-import com.any.mikuplushie.ModItems;
-import com.any.mikuplushie.block.LeekCropBlock;
-import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
+import com.any.mikuplushie.registry.ModBlocks;
+import com.any.mikuplushie.registry.ModItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
 import net.minecraft.block.Block;
-import net.minecraft.block.Blocks;
 import net.minecraft.block.CropBlock;
-import net.minecraft.client.render.RenderLayer;
 import net.minecraft.item.Item;
 import net.minecraft.loot.condition.BlockStatePropertyLootCondition;
 import net.minecraft.loot.condition.LootCondition;

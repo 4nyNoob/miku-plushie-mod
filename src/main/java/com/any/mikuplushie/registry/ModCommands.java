@@ -1,5 +1,6 @@
-package com.any.mikuplushie;
+package com.any.mikuplushie.registry;
 
+import com.any.mikuplushie.MikuPlushie;
 import com.any.mikuplushie.commands.SpawnMikusCommand;
 import net.fabricmc.fabric.api.command.v2.CommandRegistrationCallback;
 

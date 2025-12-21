@@ -1,24 +1,14 @@
 package com.any.mikuplushie.datagen;
 
-import com.any.mikuplushie.ModBlocks;
-import com.any.mikuplushie.ModItems;
-import com.google.gson.JsonElement;
-import it.unimi.dsi.fastutil.ints.Int2ObjectMap;
-import it.unimi.dsi.fastutil.ints.Int2ObjectOpenHashMap;
+import com.any.mikuplushie.registry.ModBlocks;
+import com.any.mikuplushie.registry.ModItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
 import net.minecraft.block.Block;
 import net.minecraft.block.CropBlock;
 import net.minecraft.data.client.*;
-import net.minecraft.item.Item;
-import net.minecraft.state.property.Property;
-import net.minecraft.util.Identifier;
 
 import java.util.List;
-import java.util.function.BiConsumer;
-import java.util.function.Consumer;
-import java.util.function.Function;
-import java.util.function.Supplier;
 
 public class ModModelProvider extends FabricModelProvider {
 
@@ -41,6 +31,8 @@ public class ModModelProvider extends FabricModelProvider {
 	public void generateItemModels(ItemModelGenerator itemModelGenerator) {
 		itemModelGenerator.register(ModItems.CANUDINHO, Models.GENERATED);
         itemModelGenerator.register(ModItems.LEEK_SEEDS, Models.GENERATED);
+//        itemModelGenerator.register(ModItems.AKITA_NERU_PHONE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.VOCALOID_HEART, Models.HANDHELD);
         itemModelGenerator.register(ModItems.LEEK, Models.HANDHELD);
 //		itemModelGenerator.register(ModItems.BAGUETTE, Models.GENERATED);
 	}

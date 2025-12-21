@@ -1,7 +1,7 @@
 package com.any.mikuplushie.mixin;
 
-import com.any.mikuplushie.ModSoundEvents;
-import com.any.mikuplushie.datagen.ModItemTagProvider;
+import com.any.mikuplushie.registry.ModItems;
+import com.any.mikuplushie.util.ModUtil;
 import net.minecraft.entity.Attackable;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
@@ -22,20 +22,19 @@ public abstract class LivingEntityMixin extends Entity implements Attackable {
 
     @Inject(method = "playEquipmentBreakEffects", at = @At("HEAD"))
     private void handlePickaxeBreakSound(ItemStack stack, CallbackInfo ci){
-        if (stack.isIn(ModItemTagProvider.TETO_PICKAXE)) {
-//            if (!this.isSilent()) {
+        if (ModItems.PICKAXE_ITEMS.contains(stack.getItem())) {
+            if (!this.isSilent()) {
                 this.getWorld().playSound(
-                        this.getX(),
-                        this.getY(),
-                        this.getZ(),
-                        ModSoundEvents.TETO_BYE,
-                        this.getSoundCategory(),
-                        0.8F,
-                        1F,
-                        false
-                    )
-                ;
-//            }
+                    this.getX(),
+                    this.getY(),
+                    this.getZ(),
+                    ModUtil.getPlushSoundEvent("teto_plush", "bye"),
+                    this.getSoundCategory(),
+                    0.8F,
+                    1F,
+                    false
+                );
+            }
         }
     }
 }

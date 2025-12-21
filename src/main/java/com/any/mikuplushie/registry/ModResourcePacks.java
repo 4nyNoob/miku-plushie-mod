@@ -1,5 +1,6 @@
-package com.any.mikuplushie;
+package com.any.mikuplushie.registry;
 
+import com.any.mikuplushie.MikuPlushie;
 import net.fabricmc.fabric.api.resource.ResourceManagerHelper;
 import net.fabricmc.fabric.api.resource.ResourcePackActivationType;
 import net.fabricmc.loader.api.FabricLoader;

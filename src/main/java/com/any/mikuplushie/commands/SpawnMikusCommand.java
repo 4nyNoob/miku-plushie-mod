@@ -1,38 +1,27 @@
 package com.any.mikuplushie.commands;
 
-import com.any.mikuplushie.MikuPlushie;
-import com.any.mikuplushie.ModBlocks;
-import com.any.mikuplushie.ModItems;
-import com.any.mikuplushie.block.MikuPlushieBlock;
-import com.any.mikuplushie.datagen.ModItemTagProvider;
-import com.any.mikuplushie.entity.MikuEntity;
+import com.any.mikuplushie.registry.ModBlocks;
+import com.any.mikuplushie.registry.ModItems;
 import com.any.mikuplushie.entity.PlushEntity;
-import com.any.mikuplushie.item.MikuPlushieBlockItem;
+import com.any.mikuplushie.util.ModUtil;
 import com.mojang.brigadier.CommandDispatcher;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.command.argument.EntityAnchorArgumentType;
 import net.minecraft.command.argument.Vec3ArgumentType;
-import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.EquipmentSlot;
-import net.minecraft.entity.SpawnReason;
 import net.minecraft.entity.decoration.ArmorStandEntity;
 import net.minecraft.entity.passive.TameableEntity;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKeys;
-import net.minecraft.registry.tag.TagKey;
 import net.minecraft.server.command.CommandManager;
 import net.minecraft.server.command.ServerCommandSource;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.text.Text;
-import net.minecraft.util.Identifier;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Vec3d;
-import net.minecraft.world.World;
-import org.apache.commons.compress.compressors.zstandard.ZstdCompressorOutputStream;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
@@ -74,7 +63,7 @@ public class SpawnMikusCommand {
         //CREATE VARIANTS LIST FROM BLOCK LIST NAMES
         List<String> VARIANTS = new ArrayList<>();
         for (Block value : BLOCKS) {
-            String blockName = value.getTranslationKey().split("[.]")[2];
+            String blockName = ModUtil.getBlockIdFromBlock(value);
             VARIANTS.add(blockName);
         }
 
@@ -123,7 +112,7 @@ public class SpawnMikusCommand {
                             Vec3d entitySpawnLocation = getEntitySpawnLocation(spawnPos, column, row, list, spacing);
                             String blockName = (String) currentList.get(plushies);
                             //GET FIRST TWO WORDS
-                            String entityName = blockName.split("_")[0] + "_" + blockName.split("_")[1];
+                            String entityName = ModUtil.getEntityNameFromBlockId(blockName);
                             //ENTITY TYPE REGISTRY
                             Registry<EntityType<?>> entityTypeRegistry = world.getRegistryManager().get(RegistryKeys.ENTITY_TYPE);
 

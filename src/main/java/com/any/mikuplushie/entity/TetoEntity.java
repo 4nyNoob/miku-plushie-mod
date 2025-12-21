@@ -1,14 +1,10 @@
 package com.any.mikuplushie.entity;
 
-import com.any.mikuplushie.ModItems;
-import com.any.mikuplushie.ModSoundEvents;
-import com.any.mikuplushie.entity.goals.EatLeekGoal;
+import com.any.mikuplushie.registry.ModItems;
+import com.any.mikuplushie.registry.ModSoundEvents;
 import com.any.mikuplushie.entity.goals.MikuDelayedAttackGoal;
-import com.any.mikuplushie.entity.variant.MikuVariant;
 import com.any.mikuplushie.entity.variant.TetoVariant;
-import net.minecraft.entity.EntityData;
 import net.minecraft.entity.EntityType;
-import net.minecraft.entity.SpawnReason;
 import net.minecraft.entity.ai.goal.*;
 import net.minecraft.entity.data.DataTracker;
 import net.minecraft.entity.data.TrackedData;
@@ -19,13 +15,9 @@ import net.minecraft.nbt.NbtCompound;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.util.Hand;
-import net.minecraft.util.Util;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.world.LocalDifficulty;
-import net.minecraft.world.ServerWorldAccess;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
-import software.bernie.geckolib.animatable.GeoEntity;
 import software.bernie.geckolib.core.animatable.instance.AnimatableInstanceCache;
 import software.bernie.geckolib.core.animation.AnimatableManager;
 import software.bernie.geckolib.core.animation.AnimationController;
@@ -73,35 +65,6 @@ public class TetoEntity extends PlushEntity {
         this.targetSelector.add(2, new AttackWithOwnerGoal(this));
     }
 
-    //ANIMATION CONTROLLER
-    @Override
-    public void registerControllers(AnimatableManager.ControllerRegistrar controllers) {
-        controllers.add(new AnimationController<>(this, "Miku", 2, state -> {
-
-            //SIT OR DANCE WHEN SONG IS PLAYING NEARBY
-            if (this.isInSittingPose()){
-                return state.setAndContinue(this.isSongPlaying() ? SIT_DANCE : SIT);
-            }
-
-            else {
-                //DANCE WHEN SONG IS PLAYING NEARBY
-                if (this.isSongPlaying()){
-                    return state.setAndContinue(SELECTED_DANCE);
-                } else {
-                    //ATTACK
-                    if (this.handSwinging){
-                        return state.setAndContinue(SELECTED_ATTACK);
-                    }
-                    //IDLE
-                    else {
-                        return state.setAndContinue(IDLE);
-                    }
-                }
-            }
-        }));
-
-    }
-
     @Override
     public AnimatableInstanceCache getAnimatableInstanceCache() {
         return this.cache;
@@ -124,11 +87,6 @@ public class TetoEntity extends PlushEntity {
     protected void initDataTracker() {
         super.initDataTracker();
         this.dataTracker.startTracking(TETO_VARIANT, 0);
-    }
-
-    @Override
-    protected @Nullable SoundEvent getDeathSound() {
-        return ModSoundEvents.TETO_BYE;
     }
 
     //SELECT RANDOM DANCE

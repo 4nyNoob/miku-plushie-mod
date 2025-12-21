@@ -1,7 +1,7 @@
 package com.any.mikuplushie.entity;
 
-import com.any.mikuplushie.ModItems;
-import com.any.mikuplushie.ModSoundEvents;
+import com.any.mikuplushie.registry.ModItems;
+import com.any.mikuplushie.registry.ModSoundEvents;
 import com.any.mikuplushie.entity.goals.MikuDelayedAttackGoal;
 import com.any.mikuplushie.entity.variant.NeruVariant;
 import net.minecraft.entity.EntityType;
@@ -36,10 +36,8 @@ public class NeruEntity extends PlushEntity {
     private static final RawAnimation SIT_DANCE = RawAnimation.begin().thenLoop("misc.sit-dance");
     private static final List<RawAnimation> DANCES = List.of(
         RawAnimation.begin().thenLoop("misc.dance.generic.caramelldansen"),
-        RawAnimation.begin().thenLoop("misc.miku.miku"),
         RawAnimation.begin().thenLoop("misc.miku.ievan-polkka"),
-        RawAnimation.begin().thenLoop("misc.miku.vegetable-juice"),
-        RawAnimation.begin().thenLoop("misc.miku.static")
+        RawAnimation.begin().thenLoop("misc.miku.vegetable-juice")
     );
     private static final RawAnimation SWIPE = RawAnimation.begin().thenPlay("attack.swipe");
     private static final RawAnimation SWIPE2 = RawAnimation.begin().thenPlay("attack.swipe2");
@@ -66,35 +64,6 @@ public class NeruEntity extends PlushEntity {
         this.targetSelector.add(2, new AttackWithOwnerGoal(this));
     }
 
-    //ANIMATION CONTROLLER
-    @Override
-    public void registerControllers(AnimatableManager.ControllerRegistrar controllers) {
-        controllers.add(new AnimationController<>(this, "Miku", 2, state -> {
-
-            //SIT OR DANCE WHEN SONG IS PLAYING NEARBY
-            if (this.isInSittingPose()){
-                return state.setAndContinue(this.isSongPlaying() ? SIT_DANCE : SIT);
-            }
-
-            else {
-                //DANCE WHEN SONG IS PLAYING NEARBY
-                if (this.isSongPlaying()){
-                    return state.setAndContinue(SELECTED_DANCE);
-                } else {
-                    //ATTACK
-                    if (this.handSwinging){
-                        return state.setAndContinue(SELECTED_ATTACK);
-                    }
-                    //IDLE
-                    else {
-                        return state.setAndContinue(IDLE);
-                    }
-                }
-            }
-        }));
-
-    }
-
     @Override
     public AnimatableInstanceCache getAnimatableInstanceCache() {
         return this.cache;
@@ -117,11 +86,6 @@ public class NeruEntity extends PlushEntity {
     protected void initDataTracker() {
         super.initDataTracker();
         this.dataTracker.startTracking(NERU_VARIANT, 0);
-    }
-
-    @Override
-    protected @Nullable SoundEvent getDeathSound() {
-        return ModSoundEvents.NERU_BYE;
     }
 
     //SELECT RANDOM DANCE

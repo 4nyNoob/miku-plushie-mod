@@ -1,7 +1,7 @@
 package com.any.mikuplushie.entity.goals;
 
-import com.any.mikuplushie.ModBlocks;
-import com.any.mikuplushie.ModSoundEvents;
+import com.any.mikuplushie.registry.ModBlocks;
+import com.any.mikuplushie.registry.ModSoundEvents;
 import com.any.mikuplushie.block.LeekCropBlock;
 import com.any.mikuplushie.entity.MikuEntity;
 import net.minecraft.block.Block;
@@ -9,12 +9,9 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.entity.EntityStatuses;
 import net.minecraft.entity.ai.goal.Goal;
-import net.minecraft.particle.ParticleEffect;
-import net.minecraft.particle.ParticleTypes;
 import net.minecraft.predicate.block.BlockStatePredicate;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.GameRules;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldEvents;
@@ -80,7 +77,7 @@ public class EatLeekGoal extends Goal {
 
         if (this.timer % 4 == 1 && this.timer > 4) {
             this.miku.playSound(SoundEvents.ENTITY_GENERIC_EAT, 0.5F, 1);
-            this.miku.playSound(ModSoundEvents.MIKU_EAT, 1, 1);
+            this.miku.playSound(ModSoundEvents.MIKU_PLUSHIES_SOUND_EVENTS.get(4), 1, 1);
         }
 
         if (this.timer == this.getTickCount(4)) {

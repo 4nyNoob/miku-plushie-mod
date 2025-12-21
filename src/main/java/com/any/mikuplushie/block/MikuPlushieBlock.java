@@ -1,32 +1,26 @@
 package com.any.mikuplushie.block;
 
-import com.any.mikuplushie.ModEntities;
-import com.any.mikuplushie.ModItems;
-import com.any.mikuplushie.ModSoundEvents;
-import com.any.mikuplushie.datagen.ModItemTagProvider;
-import com.any.mikuplushie.entity.MikuEntity;
+import com.any.mikuplushie.registry.ModItems;
+import com.any.mikuplushie.registry.ModParticles;
 import com.any.mikuplushie.entity.PlushEntity;
-import com.any.mikuplushie.entity.variant.MikuVariant;
+import com.any.mikuplushie.util.ModUtil;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.HorizontalFacingBlock;
 import net.minecraft.block.ShapeContext;
+import net.minecraft.command.argument.EntityAnchorArgumentType;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.SpawnReason;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.item.ItemStack;
-import net.minecraft.particle.ParticleTypes;
 import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKeys;
-import net.minecraft.registry.tag.ItemTags;
-import net.minecraft.registry.tag.TagKey;
 import net.minecraft.sound.SoundCategory;
+import net.minecraft.sound.SoundEvent;
+import net.minecraft.sound.SoundEvents;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.DirectionProperty;
-import net.minecraft.text.Text;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.BlockRotation;
 import net.minecraft.util.Hand;
@@ -34,7 +28,6 @@ import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.util.math.Vec3d;
-import net.minecraft.util.math.random.Random;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
@@ -52,51 +45,44 @@ public class MikuPlushieBlock extends Block {
 	@Override
 	public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
 
-        String currentPlush = state.getBlock().getTranslationKey().split("[.]")[2];
-
         if (
-            player.getStackInHand(hand).isOf(ModItems.CANUDINHO) &&
-            currentPlush.contains("miku_plush")
+            player.getStackInHand(hand).isOf(ModItems.VOCALOID_HEART)
         ){
             if (!world.isClient) {
 
                 //GET BLOCK NAME
-                String blockName = world.getBlockState(pos).getBlock().getTranslationKey().split("[.]")[2];
-                String entityName = blockName.split("_")[0] + "_" + blockName.split("_")[1];
+                String blockName = ModUtil.getBlockIdFromBlockPos(world, pos);
+                String entityName = ModUtil.getEntityNameFromBlockId(blockName);
 
-                Vec3d entitySpawnLocation = pos.toCenterPos();
+                Vec3d entitySpawnLocation = pos.toCenterPos().subtract(0,0.5,0);
                 //ENTITY TYPE REGISTRY
                 Registry<EntityType<?>> entityTypeRegistry = world.getRegistryManager().get(RegistryKeys.ENTITY_TYPE);
 
                 //ITERATE THROUGH ALL REGISTERED ENTITIES AND FILTER BY NAME
                 for (int entity = 0; entity < entityTypeRegistry.size(); entity++) {
                     if (Objects.requireNonNull(entityTypeRegistry.get(entity)).getTranslationKey().contains(entityName)) {
+
                         //SPAWN ENTITY ACCORDING TO BLOCK NAME
                         PlushEntity spawned = (PlushEntity) Objects.requireNonNull(entityTypeRegistry.get(entity)).create(world);
+
                         //SETUP AND SPAWN ENTITY
-                        world.spawnEntity(spawned);
                         Objects.requireNonNull(spawned).setVariantByBlock(blockName);
+                        spawned.lookAt(EntityAnchorArgumentType.EntityAnchor.EYES, player.getPos().subtract(pos.toCenterPos()));
+                        spawned.setOwner(player);
                         spawned.setPosition(entitySpawnLocation);
-                            //DEBUG STUFF
-//                            spawned.setAiDisabled(true);
-//                            spawned.setCustomName(Text.of("Plush"));
+                        world.spawnEntity(spawned);
                     }
                 }
 
-                world.playSound(null, pos, ModSoundEvents.MIKU_CANUDINHO, SoundCategory.BLOCKS);
+                world.playSound(null, pos, SoundEvents.ITEM_TOTEM_USE, SoundCategory.BLOCKS, 0.5f, 1);
                 world.breakBlock(pos, false, player);
                 return ActionResult.SUCCESS;
             } else {
-                Random random = world.getRandom();
-                for (int particles = 0; particles < 250; particles++) {
+                for (int particles = 0; particles < 100; particles++) {
                     world.addParticle(
-                        ParticleTypes.FIREWORK,
-                        pos.getX() + 0.5D,
-                        pos.getY() + 0.5D,
-                        pos.getZ() + 0.5D,
-                        random.nextGaussian() * 0.05,
-                        random.nextGaussian() * 0.075,
-                        random.nextGaussian() * 0.05
+                        ModParticles.MIKU_SPAWN,
+                        pos.getX() + 0.5D, pos.getY(), pos.getZ() + 0.5D,
+                        0,0,0
                     );
                 }
             }
@@ -106,36 +92,18 @@ public class MikuPlushieBlock extends Block {
 
 	@Override
 	public void onPlaced(World world, BlockPos pos, BlockState state, @Nullable LivingEntity placer, ItemStack itemStack) {
-
-        String currentPlush = state.getBlock().getTranslationKey().split("[.]")[2];
-
-		if(currentPlush.contains("aiko_plush")){
-			world.playSound(null, pos, ModSoundEvents.AIKO_OIE, SoundCategory.BLOCKS, 0.5F, 1);
-		} else if(currentPlush.contains("teto_plush")){
-			world.playSound(null, pos, ModSoundEvents.TETO_OIE, SoundCategory.BLOCKS, 0.5F, 1);
-		} else if(currentPlush.contains("neru_plush")){
-			world.playSound(null, pos, ModSoundEvents.NERU_OIE, SoundCategory.BLOCKS, 0.5F, 1);
-		} else if(currentPlush.contains("rin_plush")){
-			world.playSound(null, pos, ModSoundEvents.RIN_OIE, SoundCategory.BLOCKS, 0.5F, 1);
-		} else if(currentPlush.contains("len_plush")){
-			world.playSound(null, pos, ModSoundEvents.LEN_OIE, SoundCategory.BLOCKS, 0.5F, 1);
-		} else if(currentPlush.contains("luka_plush")){
-			world.playSound(null, pos, ModSoundEvents.LUKA_OIE, SoundCategory.BLOCKS, 0.5F, 1);
-		} else if(currentPlush.contains("meiko_plush")){
-			world.playSound(null, pos, ModSoundEvents.MEIKO_OIE, SoundCategory.BLOCKS, 0.5F, 1);
-		} else if(currentPlush.contains("gumi_plush")){
-			world.playSound(null, pos, ModSoundEvents.GUMI_OIE, SoundCategory.BLOCKS, 0.5F, 1);
-		} else if(currentPlush.contains("miku_plush")){
-			world.playSound(null, pos, ModSoundEvents.MIKU_OIE, SoundCategory.BLOCKS, 0.5F, 1);
-		}
 		super.onPlaced(world, pos, state, placer, itemStack);
+
+        String currentPlush = ModUtil.getBlockIdFromBlockState(state);
+        SoundEvent soundEvent = ModUtil.getPlushSoundEvent(currentPlush, "oie");
+        world.playSound(null, pos, soundEvent, SoundCategory.BLOCKS, 0.5F , 1);
 	}
 
     @Override
     public ItemStack getPickStack(BlockView world, BlockPos pos, BlockState state) {
         for (int plush = 0; plush < ModItems.PLUSH_ITEMS.size(); plush++) {
-            String plushNames = ModItems.PLUSH_ITEMS.get(plush).getTranslationKey().split("[.]")[2];
-            String currentPlush = state.getBlock().getTranslationKey().split("[.]")[2];
+            String plushNames = ModUtil.getBlockIdFromItem(ModItems.PLUSH_ITEMS.get(plush));
+            String currentPlush = ModUtil.getBlockIdFromBlockState(state);
             if (plushNames.equals(currentPlush)){
                 return ModItems.PLUSH_ITEMS.get(plush).getDefaultStack();
             }
@@ -145,28 +113,11 @@ public class MikuPlushieBlock extends Block {
 
     @Override
 	public void onBreak(World world, BlockPos pos, BlockState state, PlayerEntity player) {
-        String currentPlush = state.getBlock().getTranslationKey().split("[.]")[2];
-
-        if(currentPlush.contains("aiko_plush")){
-            world.playSound(null, pos, ModSoundEvents.AIKO_BYE, SoundCategory.BLOCKS, 0.5F, 1);
-        } else if(currentPlush.contains("teto_plush")){
-            world.playSound(null, pos, ModSoundEvents.TETO_BYE, SoundCategory.BLOCKS, 0.5F, 1);
-        } else if(currentPlush.contains("neru_plush")){
-            world.playSound(null, pos, ModSoundEvents.NERU_BYE, SoundCategory.BLOCKS, 0.5F, 1);
-        } else if(currentPlush.contains("rin_plush")){
-            world.playSound(null, pos, ModSoundEvents.RIN_BYE, SoundCategory.BLOCKS, 0.5F, 1);
-        } else if(currentPlush.contains("len_plush")){
-            world.playSound(null, pos, ModSoundEvents.LEN_BYE, SoundCategory.BLOCKS, 0.5F, 1);
-        } else if(currentPlush.contains("luka_plush")){
-            world.playSound(null, pos, ModSoundEvents.LUKA_BYE, SoundCategory.BLOCKS, 0.5F, 1);
-        } else if(currentPlush.contains("meiko_plush")){
-            world.playSound(null, pos, ModSoundEvents.MEIKO_BYE, SoundCategory.BLOCKS, 0.5F, 1);
-        } else if(currentPlush.contains("gumi_plush")){
-            world.playSound(null, pos, ModSoundEvents.GUMI_BYE, SoundCategory.BLOCKS, 0.5F, 1);
-        } else if(currentPlush.contains("miku_plush")){
-            world.playSound(null, pos, ModSoundEvents.MIKU_BYE, SoundCategory.BLOCKS, 0.5F, 1);
-        }
         super.onBreak(world, pos, state, player);
+
+        String currentPlush = ModUtil.getBlockIdFromBlockState(state);
+        SoundEvent soundEvent = ModUtil.getPlushSoundEvent(currentPlush, "bye");
+        world.playSound(null, pos, soundEvent, SoundCategory.BLOCKS, 0.5F , 1);
     }
 
 	@Override

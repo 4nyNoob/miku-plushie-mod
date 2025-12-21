@@ -1,25 +1,19 @@
-package com.any.mikuplushie;
+package com.any.mikuplushie.registry;
 
-import com.any.mikuplushie.commands.SpawnMikusCommand;
+import com.any.mikuplushie.MikuPlushie;
 import com.any.mikuplushie.entity.*;
-import com.any.mikuplushie.entity.variant.MeikoVariant;
-import com.any.mikuplushie.entity.variant.NeruVariant;
-import net.fabricmc.fabric.api.command.v2.CommandRegistrationCallback;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricEntityTypeBuilder;
 import net.minecraft.entity.EntityDimensions;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.SpawnGroup;
-import net.minecraft.entity.attribute.DefaultAttributeContainer;
 import net.minecraft.entity.mob.MobEntity;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
-import software.bernie.example.entity.BatEntity;
-import software.bernie.example.registry.EntityRegistry;
-import software.bernie.geckolib.GeckoLib;
 
-import java.lang.reflect.InvocationTargetException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class ModEntities {
 

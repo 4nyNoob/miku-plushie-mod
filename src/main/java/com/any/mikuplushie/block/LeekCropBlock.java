@@ -1,6 +1,6 @@
 package com.any.mikuplushie.block;
 
-import com.any.mikuplushie.ModItems;
+import com.any.mikuplushie.registry.ModItems;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.CropBlock;

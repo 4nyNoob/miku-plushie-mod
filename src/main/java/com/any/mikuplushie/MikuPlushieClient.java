@@ -1,10 +1,15 @@
 package com.any.mikuplushie;
 
 import com.any.mikuplushie.entity.client.render.*;
+import com.any.mikuplushie.particle.PlushSpawnParticle;
+import com.any.mikuplushie.registry.ModBlocks;
+import com.any.mikuplushie.registry.ModEntities;
+import com.any.mikuplushie.registry.ModParticles;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
+import net.fabricmc.fabric.api.client.particle.v1.ParticleFactoryRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
 import net.minecraft.client.render.RenderLayer;
 import software.bernie.geckolib.core.molang.LazyVariable;
@@ -42,5 +47,8 @@ public class MikuPlushieClient implements ClientModInitializer {
         EntityRendererRegistry.register(ModEntities.LUKA, LukaRender::new);
         EntityRendererRegistry.register(ModEntities.MEIKO, MeikoRender::new);
         EntityRendererRegistry.register(ModEntities.GUMI, GumiRender::new);
+
+        //PARTICLE
+        ParticleFactoryRegistry.getInstance().register(ModParticles.MIKU_SPAWN, PlushSpawnParticle.Factory::new);
 	}
 }

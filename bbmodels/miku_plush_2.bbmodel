@@ -3606,15 +3606,15 @@
 	],
 	"animations": [
 		{
-			"uuid": "68739a29-829d-e042-c25a-36654078e17c",
+			"uuid": "8d9ee39c-e418-6170-a455-1a72d48d4f4e",
 			"name": "misc.idle",
 			"loop": "loop",
 			"override": false,
 			"length": 4,
 			"snapping": 24,
-			"selected": true,
-			"saved": false,
-			"path": "../miku-plushie/animations/plush.animation.json",
+			"selected": false,
+			"saved": true,
+			"path": "../src/main/resources/assets/miku-plushie/animations/plush.animation.json",
 			"anim_time_update": "",
 			"blend_weight": "",
 			"start_delay": "",
@@ -3635,7 +3635,7 @@
 									"z": "math.sin(query.anim_time * 90  - 0) * 3"
 								}
 							],
-							"uuid": "593d270c-7f7e-40d3-90fc-c2c9f64edb66",
+							"uuid": "ddd5bc2d-ae85-23ee-ae75-f41e8baf56ef",
 							"time": 0,
 							"color": -1,
 							"interpolation": "linear"
@@ -3649,7 +3649,7 @@
 									"z": "0"
 								}
 							],
-							"uuid": "38376914-de97-fe91-01fa-0aa23f8182c4",
+							"uuid": "7ccc821a-95e4-966a-edb3-93cca482402e",
 							"time": 0,
 							"color": -1,
 							"interpolation": "linear"
@@ -3671,7 +3671,7 @@
 									"z": "math.sin(query.anim_time * 180 - 270) * 5 - 10"
 								}
 							],
-							"uuid": "28add24a-3733-e264-6786-41e234cefdfc",
+							"uuid": "7c1f35e3-6399-9bbd-d2da-c758c5022e89",
 							"time": 0,
 							"color": -1,
 							"interpolation": "linear"
@@ -3685,7 +3685,7 @@
 									"z": "0"
 								}
 							],
-							"uuid": "4f2e66d7-7d10-1df9-f5f7-464e8d4691ba",
+							"uuid": "19c7db99-7e96-286c-dbc4-4d1ec3595e07",
 							"time": 0,
 							"color": -1,
 							"interpolation": "linear"
@@ -3707,7 +3707,7 @@
 									"z": "math.sin(query.anim_time * 180  - 270) * -5 + 10"
 								}
 							],
-							"uuid": "6c7aadd5-368d-4a8f-cf90-c86cee6e0331",
+							"uuid": "91738d41-2bbf-a25b-a4a3-24c5be3093cb",
 							"time": 0,
 							"color": -1,
 							"interpolation": "linear"
@@ -3721,7 +3721,7 @@
 									"z": "0"
 								}
 							],
-							"uuid": "d6da5bae-401d-c83d-f4f4-73b73de88e69",
+							"uuid": "b9fb29ea-6c75-112c-aec8-3d71aec15505",
 							"time": 0,
 							"color": -1,
 							"interpolation": "linear"
@@ -3743,7 +3743,7 @@
 									"z": "math.sin(query.anim_time * 180  - 45) * -2"
 								}
 							],
-							"uuid": "12721819-a64b-ea19-b5b8-d7ac098a4764",
+							"uuid": "b2ff9655-cae6-e680-7cb8-f4dedbb1be0f",
 							"time": 0,
 							"color": -1,
 							"interpolation": "linear"
@@ -3765,7 +3765,7 @@
 									"z": "math.sin(query.anim_time * 180  - 90) * -4"
 								}
 							],
-							"uuid": "823a4e1c-d03c-64f4-a50d-4b2b5b186312",
+							"uuid": "35d3b274-c99b-4aa5-0c47-6150b9a5f021",
 							"time": 0,
 							"color": -1,
 							"interpolation": "linear"
@@ -3787,7 +3787,7 @@
 									"z": "math.sin(query.anim_time * 180  - 45) * 2"
 								}
 							],
-							"uuid": "4f382a38-1522-a8c9-a653-0e42e1887908",
+							"uuid": "d4b89b8e-1d98-dbcf-e791-a315c27ea908",
 							"time": 0,
 							"color": -1,
 							"interpolation": "linear"
@@ -3809,7 +3809,7 @@
 									"z": "math.sin(query.anim_time * 180  - 90) * 4"
 								}
 							],
-							"uuid": "ea6a1c3f-94eb-935d-6b5f-1c7d7af90b5f",
+							"uuid": "a2b3b756-5c6e-6cae-a708-e783c039da60",
 							"time": 0,
 							"color": -1,
 							"interpolation": "linear"
@@ -3831,7 +3831,7 @@
 									"z": "0"
 								}
 							],
-							"uuid": "67a593b0-8ba9-6794-4859-5ee44f2ccc04",
+							"uuid": "5dff4fa0-f76e-15ea-c0e0-74b1cb4d4e9e",
 							"time": 0,
 							"color": -1,
 							"interpolation": "linear"
@@ -3853,7 +3853,7 @@
 									"z": "0"
 								}
 							],
-							"uuid": "d2839219-de19-a111-ddc2-21cbbfcd9fab",
+							"uuid": "9717e763-405f-8a63-d902-3950e3b17be4",
 							"time": 0,
 							"color": -1,
 							"interpolation": "linear"
@@ -3875,7 +3875,7 @@
 									"z": "0"
 								}
 							],
-							"uuid": "ee36c544-e833-0618-0f4e-c4e3d554a518",
+							"uuid": "0c8a1f9d-2444-0bba-75dd-396b40f16eb4",
 							"time": 0,
 							"color": -1,
 							"interpolation": "linear"
@@ -3897,36 +3897,14 @@
 									"z": "math.sin(query.anim_time * 90  - 0) * -3"
 								}
 							],
-							"uuid": "8dec5505-c1b5-701c-4112-c3cde9b2a280",
+							"uuid": "33514b48-4ba2-127b-7e8b-5639e853deb7",
 							"time": 0,
 							"color": -1,
 							"interpolation": "linear"
 						}
 					]
 				},
-				"beb4eadc-aff4-3a3c-852d-e674a83c8017": {
-					"name": "hair_offset",
-					"type": "bone",
-					"rotation_global": false,
-					"quaternion_interpolation": false,
-					"keyframes": [
-						{
-							"channel": "rotation",
-							"data_points": [
-								{
-									"x": "0",
-									"y": "0",
-									"z": "math.sin(query.anim_time * 90  + (45 * 1)) * 6"
-								}
-							],
-							"uuid": "284b0535-eab2-e05b-b369-2e1c44fb4006",
-							"time": 0,
-							"color": -1,
-							"interpolation": "linear"
-						}
-					]
-				},
-				"18597c74-d98b-32a1-71c2-2b75bf14602d": {
+				"4dc875a2-c205-5a67-efc9-4a3462115957": {
 					"name": "left_sleeve",
 					"type": "bone",
 					"rotation_global": false,
@@ -3941,14 +3919,14 @@
 									"z": "0"
 								}
 							],
-							"uuid": "3e19517c-9f68-c747-e7cc-61419b130551",
+							"uuid": "66123364-50c6-7e71-b92e-024ebd9c84a5",
 							"time": 0,
 							"color": -1,
 							"interpolation": "linear"
 						}
 					]
 				},
-				"5c6bc76e-abe0-1287-c382-79bcb761737d": {
+				"52de636b-5a45-6517-bd60-0bbb344eca83": {
 					"name": "right_sleeve",
 					"type": "bone",
 					"rotation_global": false,
@@ -3963,7 +3941,7 @@
 									"z": "0"
 								}
 							],
-							"uuid": "8b02c355-e2fb-5465-1bba-45e10f91499b",
+							"uuid": "fc97bf39-364c-dc13-9243-dc1dc72bdc71",
 							"time": 0,
 							"color": -1,
 							"interpolation": "linear"
@@ -3972,6 +3950,94 @@
 				},
 				"baec0393-25e5-25c5-176e-8642e0874545": {
 					"name": "hair",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false,
+					"keyframes": [
+						{
+							"channel": "rotation",
+							"data_points": [
+								{
+									"x": "0",
+									"y": "0",
+									"z": "math.sin(query.anim_time * 90  + (45 * 1)) * 6"
+								}
+							],
+							"uuid": "76278f55-6e88-c099-2f2e-cdb07ae2609e",
+							"time": 0,
+							"color": -1,
+							"interpolation": "linear"
+						}
+					]
+				},
+				"26d2a337-c5ea-c2d1-78f0-2ead2eb38adb": {
+					"name": "miku_plush_lucario_z2",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false,
+					"keyframes": [
+						{
+							"channel": "rotation",
+							"data_points": [
+								{
+									"x": "0",
+									"y": "0",
+									"z": "math.sin(query.anim_time * 90  + (45 * 1)) * 6"
+								}
+							],
+							"uuid": "14fc9fcf-6e4a-9455-b301-b93a9fa3798f",
+							"time": 0,
+							"color": -1,
+							"interpolation": "linear"
+						}
+					]
+				},
+				"7e63322d-7208-a4ba-37de-1aa199dbc5f3": {
+					"name": "miku_plush_lucario_z3",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false,
+					"keyframes": [
+						{
+							"channel": "rotation",
+							"data_points": [
+								{
+									"x": "0",
+									"y": "0",
+									"z": "math.sin(query.anim_time * 90  + (45 * 1)) * 6"
+								}
+							],
+							"uuid": "a3c9f5f0-0c89-d098-e970-cb0c1d8248a8",
+							"time": 0,
+							"color": -1,
+							"interpolation": "linear"
+						}
+					]
+				},
+				"7fc446c2-71e0-bed4-1525-28014f1ea061": {
+					"name": "miku_plush_lucario_z4",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false,
+					"keyframes": [
+						{
+							"channel": "rotation",
+							"data_points": [
+								{
+									"x": "0",
+									"y": "0",
+									"z": "math.sin(query.anim_time * 90  + (45 * 2)) * 6"
+								}
+							],
+							"uuid": "d40ea885-293d-7c0d-7eae-8f40dae7251d",
+							"time": 0,
+							"color": -1,
+							"interpolation": "linear"
+						}
+					]
+				},
+				"beb4eadc-aff4-3a3c-852d-e674a83c8017": {
+					"name": "hair_offset",
 					"type": "bone",
 					"rotation_global": false,
 					"quaternion_interpolation": false
@@ -4105,7 +4171,7 @@
 			}
 		},
 		{
-			"uuid": "bdeca143-4cab-145b-dc78-b77b3971b3f2",
+			"uuid": "9d2c1098-4d2c-9609-4079-0136cb249c8f",
 			"name": "misc.sit",
 			"loop": "loop",
 			"override": false,
@@ -4113,7 +4179,7 @@
 			"snapping": 24,
 			"selected": false,
 			"saved": true,
-			"path": "../miku-plushie/animations/plush.animation.json",
+			"path": "../src/main/resources/assets/miku-plushie/animations/plush.animation.json",
 			"anim_time_update": "",
 			"blend_weight": "",
 			"start_delay": "",
@@ -4134,7 +4200,7 @@
 									"z": "0"
 								}
 							],
-							"uuid": "bc20bd24-a0ec-97a9-e5db-054fd1f6d423",
+							"uuid": "8a13e6fd-af1e-a3e9-36d7-1fccf7547635",
 							"time": 0,
 							"color": -1,
 							"interpolation": "linear"
@@ -4156,7 +4222,7 @@
 									"z": "0"
 								}
 							],
-							"uuid": "b75853fa-5e70-a32f-b9ef-43f069b45f3d",
+							"uuid": "68d5a1ab-9be7-499e-3ee8-2d884424e022",
 							"time": 0,
 							"color": -1,
 							"interpolation": "linear"
@@ -4178,7 +4244,7 @@
 									"z": "0"
 								}
 							],
-							"uuid": "af75c1ea-1292-40fc-f59e-380b43266f21",
+							"uuid": "d209e21f-0e74-d0d2-5334-1472b014a416",
 							"time": 0,
 							"color": -1,
 							"interpolation": "linear"
@@ -4200,7 +4266,7 @@
 									"z": "-2.5"
 								}
 							],
-							"uuid": "ce3c5299-dd36-dbaf-2f1e-3cb3a64407b9",
+							"uuid": "856d012f-24e1-af5c-b61f-fcc2288c3a73",
 							"time": 0,
 							"color": -1,
 							"interpolation": "linear"
@@ -4222,7 +4288,7 @@
 									"z": "2.5"
 								}
 							],
-							"uuid": "de0518b0-98bc-f08b-3276-b6ce7af45960",
+							"uuid": "02501ea1-8ae2-3d4e-f829-d64cf52d08ee",
 							"time": 0,
 							"color": -1,
 							"interpolation": "linear"
@@ -4244,7 +4310,7 @@
 									"z": "math.sin(query.anim_time * 180) * 2"
 								}
 							],
-							"uuid": "c8a9869f-8e7c-4d55-3944-d8690dbe2096",
+							"uuid": "1bb4b338-4f4c-21ed-3722-23c308b70e63",
 							"time": 0,
 							"color": -1,
 							"interpolation": "linear"
@@ -4266,7 +4332,7 @@
 									"z": "math.sin(query.anim_time * 180 - 45) * -2"
 								}
 							],
-							"uuid": "3e8afe9f-b478-8b88-27b1-6751beb61b63",
+							"uuid": "1a8c6213-fbeb-3c49-5580-e364be14a95d",
 							"time": 0,
 							"color": -1,
 							"interpolation": "linear"
@@ -4283,12 +4349,12 @@
 							"channel": "rotation",
 							"data_points": [
 								{
-									"x": "0",
+									"x": "math.exp((math.sin(query.anim_time * 720) * 2)) * 0.2",
 									"y": "0",
 									"z": "math.sin(query.anim_time * 180) * -2"
 								}
 							],
-							"uuid": "e886264c-cd37-08b0-38a9-3367514bf1c1",
+							"uuid": "77d51dfd-2223-695b-6f55-9cea8876126d",
 							"time": 0,
 							"color": -1,
 							"interpolation": "linear"
@@ -4310,14 +4376,14 @@
 									"z": "0"
 								}
 							],
-							"uuid": "d8a25fb8-5c18-4ebc-496f-ad71601bacde",
+							"uuid": "fc60227b-0889-cc4e-0545-309b8c3bed4b",
 							"time": 0,
 							"color": -1,
 							"interpolation": "linear"
 						}
 					]
 				},
-				"c45db1dc-4162-0f43-b724-5c937e4ed3b8": {
+				"f5f3bd22-570c-6a80-230e-b8be378ace39": {
 					"name": "left_sleeve",
 					"type": "bone",
 					"rotation_global": false,
@@ -4332,14 +4398,14 @@
 									"z": "math.sin(query.anim_time * 180 - (45 * 0)) * 5 - 10"
 								}
 							],
-							"uuid": "fabf7512-7744-1227-a660-bd4fb2f85442",
+							"uuid": "25eb1b87-9247-c151-6826-479539822852",
 							"time": 0,
 							"color": -1,
 							"interpolation": "linear"
 						}
 					]
 				},
-				"84e8aa29-e99c-d7c5-9c01-81cce58b026e": {
+				"55a660e6-eb52-f281-4222-3da3a6f3915a": {
 					"name": "right_sleeve",
 					"type": "bone",
 					"rotation_global": false,
@@ -4354,7 +4420,7 @@
 									"z": "math.sin(query.anim_time * 180 - (45 * 0)) * 5 + 10"
 								}
 							],
-							"uuid": "5f7a08fd-c2bc-b696-a02e-7370a9f3b88e",
+							"uuid": "c5faf0ad-a0fa-4c8e-25d0-74b79e6e0e08",
 							"time": 0,
 							"color": -1,
 							"interpolation": "linear"
@@ -4364,7 +4430,7 @@
 			}
 		},
 		{
-			"uuid": "aa288e0c-15fe-c799-58c7-deb4d117e587",
+			"uuid": "c6df751f-4cdb-e9a5-e22e-a83abeeb0127",
 			"name": "misc.sit-dance",
 			"loop": "loop",
 			"override": false,
@@ -4372,7 +4438,7 @@
 			"snapping": 24,
 			"selected": false,
 			"saved": true,
-			"path": "../miku-plushie/animations/plush.animation.json",
+			"path": "../src/main/resources/assets/miku-plushie/animations/plush.animation.json",
 			"anim_time_update": "",
 			"blend_weight": "",
 			"start_delay": "",
@@ -4393,7 +4459,7 @@
 									"z": "0"
 								}
 							],
-							"uuid": "2b7d538e-1892-7852-bdfc-441ce52633dc",
+							"uuid": "6e8b6f7e-ca6f-5a0a-eb3d-8b9dca2c03f3",
 							"time": 0,
 							"color": -1,
 							"interpolation": "linear"
@@ -4415,7 +4481,7 @@
 									"z": "math.sin(query.anim_time * 540 - 135) * -10 - 20"
 								}
 							],
-							"uuid": "825d893a-30e1-4374-61ea-40f3d283d1e5",
+							"uuid": "3dd8dfe1-b812-1f5a-0342-2a4dcaeb9de4",
 							"time": 0,
 							"color": -1,
 							"interpolation": "linear"
@@ -4437,7 +4503,7 @@
 									"z": "0"
 								}
 							],
-							"uuid": "13c71b12-2f60-538e-b34b-b1fdaccf41fa",
+							"uuid": "c4efcab9-21cf-c46e-e5bf-ae0d133ab6a4",
 							"time": 0,
 							"color": -1,
 							"interpolation": "linear"
@@ -4459,7 +4525,7 @@
 									"z": "-2.5"
 								}
 							],
-							"uuid": "d877c653-519f-36cc-b024-187a177b79d0",
+							"uuid": "ab58c65f-bdcc-73d0-e244-3248beb2d6fe",
 							"time": 0,
 							"color": -1,
 							"interpolation": "linear"
@@ -4481,7 +4547,7 @@
 									"z": "2.5"
 								}
 							],
-							"uuid": "d25b6fe4-9d1d-3998-e17a-fdb12df3f5f4",
+							"uuid": "df36c232-7c10-01ac-8a4e-0bc7938681ff",
 							"time": 0,
 							"color": -1,
 							"interpolation": "linear"
@@ -4503,7 +4569,7 @@
 									"z": "math.sin(query.anim_time * 540 - 90) * 2"
 								}
 							],
-							"uuid": "3d78276f-0dbd-0a07-408a-dd7ae61c1f64",
+							"uuid": "c9eaa24f-0f90-9774-53ff-5c41a78d2987",
 							"time": 0,
 							"color": -1,
 							"interpolation": "linear"
@@ -4525,7 +4591,7 @@
 									"z": "math.sin(query.anim_time * 540 - 135) * 2"
 								}
 							],
-							"uuid": "9dbb8c7c-586b-0158-296a-dbf8d59b1112",
+							"uuid": "46b20a50-9b13-83fc-0c3f-08cb26fe7f55",
 							"time": 0,
 							"color": -1,
 							"interpolation": "linear"
@@ -4547,14 +4613,14 @@
 									"z": "0"
 								}
 							],
-							"uuid": "e1b38bfa-459b-57d6-7d53-965cabdfb865",
+							"uuid": "8f13f25e-09f5-f5d3-b1cb-452584a6f04c",
 							"time": 0,
 							"color": -1,
 							"interpolation": "linear"
 						}
 					]
 				},
-				"377b8a87-808c-16a3-0ac0-0601874796ff": {
+				"e82ffb1c-dbac-48c1-1a82-339efb0c52b0": {
 					"name": "left_sleeve",
 					"type": "bone",
 					"rotation_global": false,
@@ -4569,14 +4635,14 @@
 									"z": "0"
 								}
 							],
-							"uuid": "9156b3ef-437e-fbdf-3dec-c9cadced3bff",
+							"uuid": "4516a7bd-5bfb-fd22-a8fd-9beb467332e4",
 							"time": 0,
 							"color": -1,
 							"interpolation": "linear"
 						}
 					]
 				},
-				"bc7f296b-0d09-6b5c-4d84-cd154f1db576": {
+				"febcdf44-2f48-d657-bb0a-51a553e58649": {
 					"name": "right_sleeve",
 					"type": "bone",
 					"rotation_global": false,
@@ -4591,14 +4657,14 @@
 									"z": "0"
 								}
 							],
-							"uuid": "a7958c87-5ffb-c902-8831-7a805fde703b",
+							"uuid": "5f8a8712-f024-0094-d3db-f68e413951fc",
 							"time": 0,
 							"color": -1,
 							"interpolation": "linear"
 						}
 					]
 				},
-				"09d99a95-65a4-b444-2fd3-96f49fd85372": {
+				"0af4c9ef-23ce-b5fc-a6e3-936ea8c208ab": {
 					"name": "miku_plush_xmass_tree_head2",
 					"type": "bone",
 					"rotation_global": false,
@@ -4613,14 +4679,14 @@
 									"z": "0"
 								}
 							],
-							"uuid": "4bc21326-44fa-0ff1-7a2d-b944bbec2698",
+							"uuid": "5e4c01b7-486e-b231-be31-77a36d639b58",
 							"time": 0,
 							"color": -1,
 							"interpolation": "linear"
 						}
 					]
 				},
-				"2480eb95-2723-140d-4e39-d9e12da785ed": {
+				"3be9333f-93e1-8497-ef24-dfbbd4686062": {
 					"name": "miku_plush_xmass_tree_head",
 					"type": "bone",
 					"rotation_global": false,
@@ -4635,14 +4701,14 @@
 									"z": "0"
 								}
 							],
-							"uuid": "c7012bc2-ff5c-360a-e6fe-46de6b41156c",
+							"uuid": "82f9da28-015d-70b6-6559-d52b3b5aef20",
 							"time": 0,
 							"color": -1,
 							"interpolation": "linear"
 						}
 					]
 				},
-				"6a0661b0-bf60-8885-8f17-bc2379d38721": {
+				"156a799c-6fe8-a7f0-bcdf-f4844d5a0fe4": {
 					"name": "miku_plush_sonic2",
 					"type": "bone",
 					"rotation_global": false,
@@ -4657,14 +4723,14 @@
 									"z": "0"
 								}
 							],
-							"uuid": "1060731d-8070-0361-9ea1-d1125daa9048",
+							"uuid": "2eb3ba08-3439-b7a9-428d-752d23389f88",
 							"time": 0,
 							"color": -1,
 							"interpolation": "linear"
 						}
 					]
 				},
-				"40eb5dc3-05ce-be54-d027-5f5efe34608d": {
+				"86422d7c-2b3a-8afe-6cfe-d258e3a67c4d": {
 					"name": "miku_plush_sonic3",
 					"type": "bone",
 					"rotation_global": false,
@@ -4679,14 +4745,14 @@
 									"z": "0"
 								}
 							],
-							"uuid": "31b56d30-b379-8f3e-1074-5996edc6a115",
+							"uuid": "d4d408e7-d453-54e9-af4e-5cc6dd5c22eb",
 							"time": 0,
 							"color": -1,
 							"interpolation": "linear"
 						}
 					]
 				},
-				"313525a8-f286-a819-d467-d98c5060b688": {
+				"b9dc0712-ebda-05cb-e66b-6c2062d722f1": {
 					"name": "miku_plush_sonic4",
 					"type": "bone",
 					"rotation_global": false,
@@ -4701,14 +4767,14 @@
 									"z": "0"
 								}
 							],
-							"uuid": "0c5aad8e-b9d8-544c-1517-e6b362dac45f",
+							"uuid": "9939d692-133d-e248-5547-a65553ca82b5",
 							"time": 0,
 							"color": -1,
 							"interpolation": "linear"
 						}
 					]
 				},
-				"f5dfd0cf-41f7-7e93-fd2d-48bdb248526e": {
+				"d175b765-b80f-bc65-369b-ad5aadb099a4": {
 					"name": "miku_plush_sonic5",
 					"type": "bone",
 					"rotation_global": false,
@@ -4723,7 +4789,205 @@
 									"z": "0"
 								}
 							],
-							"uuid": "316e0c91-d939-1b2d-03d8-dba594c4b3d7",
+							"uuid": "5121c1a4-b938-c4fc-93bd-21d7f9e44bbf",
+							"time": 0,
+							"color": -1,
+							"interpolation": "linear"
+						}
+					]
+				},
+				"b0293f97-158b-7233-4e8a-874e665059b2": {
+					"name": "teto_plush_shadow_hair",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false,
+					"keyframes": [
+						{
+							"channel": "rotation",
+							"data_points": [
+								{
+									"x": "math.sin(query.anim_time * 540 - (45 * 2)) * 10",
+									"y": "0",
+									"z": "0"
+								}
+							],
+							"uuid": "3acbedda-ccc8-4569-1485-030f613c52e4",
+							"time": 0,
+							"color": -1,
+							"interpolation": "linear"
+						}
+					]
+				},
+				"d1f260a5-d89e-38ca-c2e1-943bf08dc24f": {
+					"name": "teto_plush_shadow_hair2",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false,
+					"keyframes": [
+						{
+							"channel": "rotation",
+							"data_points": [
+								{
+									"x": "math.sin(query.anim_time * 540 - (45 * 2)) * 10",
+									"y": "0",
+									"z": "0"
+								}
+							],
+							"uuid": "22cb3fd8-c89a-6cb4-e7b5-873433b1c7b0",
+							"time": 0,
+							"color": -1,
+							"interpolation": "linear"
+						}
+					]
+				},
+				"ccb54fff-5f55-561a-6d8f-40f9308c1c0a": {
+					"name": "teto_plush_shadow_hair3",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false,
+					"keyframes": [
+						{
+							"channel": "rotation",
+							"data_points": [
+								{
+									"x": "math.sin(query.anim_time * 540 - (45 * 2)) * 10",
+									"y": "0",
+									"z": "0"
+								}
+							],
+							"uuid": "934221da-9051-8ba7-7618-8358667362d2",
+							"time": 0,
+							"color": -1,
+							"interpolation": "linear"
+						}
+					]
+				},
+				"1a6a160c-fef6-1daf-bcfa-0f2866902bde": {
+					"name": "teto_plush_shadow_hair4",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false,
+					"keyframes": [
+						{
+							"channel": "rotation",
+							"data_points": [
+								{
+									"x": "math.sin(query.anim_time * 540 - (45 * 2)) * 10",
+									"y": "0",
+									"z": "0"
+								}
+							],
+							"uuid": "9b6e0a3c-c1e2-9f18-41d0-1b82aefd2166",
+							"time": 0,
+							"color": -1,
+							"interpolation": "linear"
+						}
+					]
+				},
+				"312e0648-8374-d20f-93da-aba30ef45f50": {
+					"name": "teto_plush_lobster",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false,
+					"keyframes": [
+						{
+							"channel": "rotation",
+							"data_points": [
+								{
+									"x": "math.sin(query.anim_time * 540 - (45 * 3)) * 10",
+									"y": "0",
+									"z": "0"
+								}
+							],
+							"uuid": "1bd39773-24e1-394d-9798-6ac46de17f34",
+							"time": 0,
+							"color": -1,
+							"interpolation": "linear"
+						}
+					]
+				},
+				"8159d016-487e-c487-d5a2-d30cf90762c5": {
+					"name": "teto_plush_lobster_tail",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false,
+					"keyframes": [
+						{
+							"channel": "rotation",
+							"data_points": [
+								{
+									"x": "math.sin(query.anim_time * 540 - (45 * 4)) * 10 + 10",
+									"y": "0",
+									"z": "0"
+								}
+							],
+							"uuid": "0d62f03d-c46c-5471-c09d-88ac75824b2e",
+							"time": 0,
+							"color": -1,
+							"interpolation": "linear"
+						}
+					]
+				},
+				"86c8d334-4b1e-4d9c-8e2e-df4cfbb85d88": {
+					"name": "teto_plush_lobster_tail2",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false,
+					"keyframes": [
+						{
+							"channel": "rotation",
+							"data_points": [
+								{
+									"x": "math.sin(query.anim_time * 540 - (45 * 5)) * 10 + 10",
+									"y": "0",
+									"z": "0"
+								}
+							],
+							"uuid": "493899c6-54cb-8d08-c091-5d6a31129ba3",
+							"time": 0,
+							"color": -1,
+							"interpolation": "linear"
+						}
+					]
+				},
+				"5b79df25-cade-b208-7eec-62064c93dd15": {
+					"name": "teto_plush_lobster_tail3",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false,
+					"keyframes": [
+						{
+							"channel": "rotation",
+							"data_points": [
+								{
+									"x": "math.sin(query.anim_time * 540 - (45 * 4)) * 10 + 10",
+									"y": "0",
+									"z": "0"
+								}
+							],
+							"uuid": "4226e08f-7ed9-6874-0d0f-9b803802470a",
+							"time": 0,
+							"color": -1,
+							"interpolation": "linear"
+						}
+					]
+				},
+				"74891c9f-256d-d389-03af-2682f7e43eae": {
+					"name": "teto_plush_lobster_tail4",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false,
+					"keyframes": [
+						{
+							"channel": "rotation",
+							"data_points": [
+								{
+									"x": "math.sin(query.anim_time * 540 - (45 * 5)) * 10 + 10",
+									"y": "0",
+									"z": "0"
+								}
+							],
+							"uuid": "1f6c0c84-b202-0f3e-ec51-d2e460ccef4e",
 							"time": 0,
 							"color": -1,
 							"interpolation": "linear"
@@ -4733,552 +4997,15 @@
 			}
 		},
 		{
-			"uuid": "e8529226-8f27-cde1-7940-1a2c787e7383",
-			"name": "misc.dance.miku.miku",
-			"loop": "loop",
-			"override": false,
-			"length": 0.9167,
-			"snapping": 24,
-			"selected": false,
-			"saved": false,
-			"path": "../miku-plushie/animations/plush.animation.json",
-			"anim_time_update": "",
-			"blend_weight": "",
-			"start_delay": "",
-			"loop_delay": "",
-			"animators": {
-				"be1c7d16-0d87-1b67-aff0-241184bcc81f": {
-					"name": "body",
-					"type": "bone",
-					"rotation_global": false,
-					"quaternion_interpolation": false,
-					"keyframes": [
-						{
-							"channel": "rotation",
-							"data_points": [
-								{
-									"x": "0",
-									"y": "0",
-									"z": "math.sin(query.anim_time * (360 * (128/60)/2) - (45 * 0)) * 10"
-								}
-							],
-							"uuid": "23e8e81b-613e-3888-a626-88b91e084d1d",
-							"time": 0,
-							"color": -1,
-							"interpolation": "linear"
-						},
-						{
-							"channel": "position",
-							"data_points": [
-								{
-									"x": "0",
-									"y": "math.sin(query.anim_time * (360 * (128/60)/1) - (45 * 6)) * 0.25",
-									"z": "0"
-								}
-							],
-							"uuid": "5ad54556-f890-b27a-f7eb-f1fbf98ca609",
-							"time": 0,
-							"color": -1,
-							"interpolation": "linear"
-						}
-					]
-				},
-				"9532540f-ed1d-5532-992e-971928a45a7b": {
-					"name": "left_arm",
-					"type": "bone",
-					"rotation_global": false,
-					"quaternion_interpolation": false,
-					"keyframes": [
-						{
-							"channel": "rotation",
-							"data_points": [
-								{
-									"x": "-90",
-									"y": "60",
-									"z": "math.sin(query.anim_time * (360 * (128/60)/2) - 45) * -10 - 60"
-								}
-							],
-							"uuid": "1068b76d-1c58-fb7b-da15-46a3037b061e",
-							"time": 0,
-							"color": -1,
-							"interpolation": "linear"
-						}
-					]
-				},
-				"f07bf905-81c2-0574-034d-fb36dd778288": {
-					"name": "right_arm",
-					"type": "bone",
-					"rotation_global": false,
-					"quaternion_interpolation": false,
-					"keyframes": [
-						{
-							"channel": "rotation",
-							"data_points": [
-								{
-									"x": "-90",
-									"y": "-60",
-									"z": "math.sin(query.anim_time * (360 * (128/60)/2) - 45) * -10 + 60"
-								}
-							],
-							"uuid": "2d5f3847-0ddb-2e2c-f575-801bd9a62000",
-							"time": 0,
-							"color": -1,
-							"interpolation": "linear"
-						}
-					]
-				},
-				"4cb3df88-9ff2-1ccd-9173-b70073e76001": {
-					"name": "head",
-					"type": "bone",
-					"rotation_global": false,
-					"quaternion_interpolation": false,
-					"keyframes": [
-						{
-							"channel": "rotation",
-							"data_points": [
-								{
-									"x": "0",
-									"y": "0",
-									"z": "math.sin(query.anim_time * (360 * (128/60)/2) - (45 * 0)) * 10"
-								}
-							],
-							"uuid": "04e020c8-795d-b2a3-b324-a0a5a1a055d9",
-							"time": 0,
-							"color": -1,
-							"interpolation": "linear"
-						}
-					]
-				},
-				"15a98531-cb7c-91ba-5593-2b9f96239d5a": {
-					"name": "right_leg",
-					"type": "bone",
-					"rotation_global": false,
-					"quaternion_interpolation": false,
-					"keyframes": [
-						{
-							"channel": "rotation",
-							"data_points": [
-								{
-									"x": "-2",
-									"y": "0",
-									"z": "0"
-								}
-							],
-							"uuid": "ad0f2b0b-197f-3571-87de-46d570f6ffd0",
-							"time": 0,
-							"color": -1,
-							"interpolation": "linear"
-						}
-					]
-				},
-				"5acbcb93-687d-38d2-6daf-65b98cbb8ee5": {
-					"name": "left_leg",
-					"type": "bone",
-					"rotation_global": false,
-					"quaternion_interpolation": false,
-					"keyframes": [
-						{
-							"channel": "rotation",
-							"data_points": [
-								{
-									"x": "2",
-									"y": "0",
-									"z": "0"
-								}
-							],
-							"uuid": "a8ce476f-166f-3b20-7ab1-b9ad0b722511",
-							"time": 0,
-							"color": -1,
-							"interpolation": "linear"
-						}
-					]
-				},
-				"ffa0d495-5a22-294b-c041-0813416457fc": {
-					"name": "root",
-					"type": "bone",
-					"rotation_global": false,
-					"quaternion_interpolation": false,
-					"keyframes": [
-						{
-							"channel": "rotation",
-							"data_points": [
-								{
-									"x": "0",
-									"y": "0",
-									"z": "math.sin(query.anim_time * (360 * (128/60)/2) - (45 * 0)) * 5"
-								}
-							],
-							"uuid": "ccc07a9d-dc13-480f-95cb-02ffe9e24ea4",
-							"time": 0,
-							"color": -1,
-							"interpolation": "linear"
-						}
-					]
-				},
-				"08135e7f-59ab-e224-751b-05b1dd14dd82": {
-					"name": "miku_left_hair",
-					"type": "bone",
-					"rotation_global": false,
-					"quaternion_interpolation": false,
-					"keyframes": [
-						{
-							"channel": "rotation",
-							"data_points": [
-								{
-									"x": "0",
-									"y": "0",
-									"z": "math.sin(query.anim_time * (360 * (128/60)/2) - (45 * 5)) * 20"
-								}
-							],
-							"uuid": "0892d018-c2b1-0a76-d5c1-c6107746f340",
-							"time": 0,
-							"color": -1,
-							"interpolation": "linear"
-						}
-					]
-				},
-				"00a8cdcd-2810-ea95-407c-3276a7cc9c3c": {
-					"name": "miku_left_hair2",
-					"type": "bone",
-					"rotation_global": false,
-					"quaternion_interpolation": false,
-					"keyframes": [
-						{
-							"channel": "rotation",
-							"data_points": [
-								{
-									"x": "0",
-									"y": "0",
-									"z": "math.sin(query.anim_time * (360 * (128/60)/2) - (45 * 6)) * 20"
-								}
-							],
-							"uuid": "0307a0dd-afd3-e04e-11e9-96963e1fa409",
-							"time": 0,
-							"color": -1,
-							"interpolation": "linear"
-						}
-					]
-				},
-				"31b979bc-03e8-19f3-343c-de51c3dc4ac2": {
-					"name": "miku_right_hair",
-					"type": "bone",
-					"rotation_global": false,
-					"quaternion_interpolation": false,
-					"keyframes": [
-						{
-							"channel": "rotation",
-							"data_points": [
-								{
-									"x": "0",
-									"y": "0",
-									"z": "math.sin(query.anim_time * (360 * (128/60)/2) - (45 * 5)) * 20"
-								}
-							],
-							"uuid": "5e1d6abc-24e0-1c18-8b9e-e7ab49589ab2",
-							"time": 0,
-							"color": -1,
-							"interpolation": "linear"
-						}
-					]
-				},
-				"e2bb6e66-5605-5765-76e1-d990ec082328": {
-					"name": "miku_right_hair2",
-					"type": "bone",
-					"rotation_global": false,
-					"quaternion_interpolation": false,
-					"keyframes": [
-						{
-							"channel": "rotation",
-							"data_points": [
-								{
-									"x": "0",
-									"y": "0",
-									"z": "math.sin(query.anim_time * (360 * (128/60)/2) - (45 * 6)) * 20"
-								}
-							],
-							"uuid": "1ab3419f-d0d3-405b-1548-18f2ad64c0c2",
-							"time": 0,
-							"color": -1,
-							"interpolation": "linear"
-						}
-					]
-				},
-				"edf651e2-5b07-4ddc-01b9-4be36b2c48b0": {
-					"name": "left_sleeve",
-					"type": "bone",
-					"rotation_global": false,
-					"quaternion_interpolation": false,
-					"keyframes": [
-						{
-							"channel": "rotation",
-							"data_points": [
-								{
-									"x": "55",
-									"y": "0",
-									"z": "0"
-								}
-							],
-							"uuid": "303f008f-e616-b06d-6c9f-f28dacfe10f4",
-							"time": 0,
-							"color": -1,
-							"interpolation": "linear"
-						}
-					]
-				},
-				"1cba619c-c120-0ae7-3e8e-f29e53f1e25e": {
-					"name": "right_sleeve",
-					"type": "bone",
-					"rotation_global": false,
-					"quaternion_interpolation": false,
-					"keyframes": [
-						{
-							"channel": "rotation",
-							"data_points": [
-								{
-									"x": "55",
-									"y": "0",
-									"z": "0"
-								}
-							],
-							"uuid": "383616ca-a14c-7c12-7c98-67f1f615aa2e",
-							"time": 0,
-							"color": -1,
-							"interpolation": "linear"
-						}
-					]
-				},
-				"b3210602-dfb5-3021-0f07-eb06fbe42dd2": {
-					"name": "miku_plush_xmass_tree_head",
-					"type": "bone",
-					"rotation_global": false,
-					"quaternion_interpolation": false,
-					"keyframes": [
-						{
-							"channel": "rotation",
-							"data_points": [
-								{
-									"x": "0",
-									"y": "0",
-									"z": "math.sin(query.anim_time * 360 - (45 * 1)) * 10"
-								}
-							],
-							"uuid": "1754010a-a445-7276-065f-38c8ef41e4ac",
-							"time": 0,
-							"color": -1,
-							"interpolation": "linear"
-						}
-					]
-				},
-				"d510c9ac-5934-bae9-d0ed-1397ee771fe6": {
-					"name": "miku_plush_xmass_tree_head2",
-					"type": "bone",
-					"rotation_global": false,
-					"quaternion_interpolation": false,
-					"keyframes": [
-						{
-							"channel": "rotation",
-							"data_points": [
-								{
-									"x": "0",
-									"y": "0",
-									"z": "math.sin(query.anim_time * 360 - (45 * 2)) * 10"
-								}
-							],
-							"uuid": "ab7414e1-1de3-a026-973f-981e50b025cd",
-							"time": 0,
-							"color": -1,
-							"interpolation": "linear"
-						}
-					]
-				},
-				"9a2deea5-fbd8-cf89-53b2-7cd9d97c664b": {
-					"name": "miku_plush_sonic2",
-					"type": "bone",
-					"rotation_global": false,
-					"quaternion_interpolation": false,
-					"keyframes": [
-						{
-							"channel": "rotation",
-							"data_points": [
-								{
-									"x": "0",
-									"y": "math.sin(query.anim_time * 360 - (45 * 1)) * -10",
-									"z": "0"
-								}
-							],
-							"uuid": "cdb0fa2f-9868-ea99-a335-c586ece19690",
-							"time": 0,
-							"color": -1,
-							"interpolation": "linear"
-						}
-					]
-				},
-				"861948d3-d557-7303-7783-20a390fecf61": {
-					"name": "miku_plush_sonic3",
-					"type": "bone",
-					"rotation_global": false,
-					"quaternion_interpolation": false,
-					"keyframes": [
-						{
-							"channel": "rotation",
-							"data_points": [
-								{
-									"x": "0",
-									"y": "math.sin(query.anim_time * 360 - (45 * 1)) * -10",
-									"z": "0"
-								}
-							],
-							"uuid": "adf9f806-1eb8-f24a-e315-9df4a98dbc42",
-							"time": 0,
-							"color": -1,
-							"interpolation": "linear"
-						}
-					]
-				},
-				"dd30c108-6687-4222-5c36-eae439c372d4": {
-					"name": "miku_plush_sonic4",
-					"type": "bone",
-					"rotation_global": false,
-					"quaternion_interpolation": false,
-					"keyframes": [
-						{
-							"channel": "rotation",
-							"data_points": [
-								{
-									"x": "0",
-									"y": "math.sin(query.anim_time * 360 - (45 * 1)) * -10",
-									"z": "0"
-								}
-							],
-							"uuid": "bbe842c6-74ef-2be9-fe76-67702f0a3888",
-							"time": 0,
-							"color": -1,
-							"interpolation": "linear"
-						}
-					]
-				},
-				"ea186cf4-06b5-68a3-f983-c8d056aed1bf": {
-					"name": "miku_plush_sonic5",
-					"type": "bone",
-					"rotation_global": false,
-					"quaternion_interpolation": false,
-					"keyframes": [
-						{
-							"channel": "rotation",
-							"data_points": [
-								{
-									"x": "0",
-									"y": "math.sin(query.anim_time * 360 - (45 * 1)) * -10",
-									"z": "0"
-								}
-							],
-							"uuid": "c7cec344-529f-e35c-2315-6373b5f3cd20",
-							"time": 0,
-							"color": -1,
-							"interpolation": "linear"
-						}
-					]
-				},
-				"e3875867-1f6a-8493-9579-e42b717da005": {
-					"name": "right_hair3",
-					"type": "bone",
-					"rotation_global": false,
-					"quaternion_interpolation": false,
-					"keyframes": [
-						{
-							"channel": "rotation",
-							"data_points": [
-								{
-									"x": "0",
-									"y": "0",
-									"z": "math.sin(query.anim_time * 360 - (45 * 5)) * 20"
-								}
-							],
-							"uuid": "518d34f7-2df1-6839-cf5f-2d4c5164c991",
-							"time": 0,
-							"color": -1,
-							"interpolation": "linear"
-						}
-					]
-				},
-				"308ab8ca-5816-b7ad-f84a-6888fdf19898": {
-					"name": "right_hair4",
-					"type": "bone",
-					"rotation_global": false,
-					"quaternion_interpolation": false,
-					"keyframes": [
-						{
-							"channel": "rotation",
-							"data_points": [
-								{
-									"x": "0",
-									"y": "0",
-									"z": "math.sin(query.anim_time * 360 - (45 * 6)) * 20"
-								}
-							],
-							"uuid": "e6e1f4b0-61dd-c12b-77fa-e558791181ed",
-							"time": 0,
-							"color": -1,
-							"interpolation": "linear"
-						}
-					]
-				},
-				"ed4b077b-8d2f-dab0-b9f5-e589f1c9b4cf": {
-					"name": "left_hair3",
-					"type": "bone",
-					"rotation_global": false,
-					"quaternion_interpolation": false,
-					"keyframes": [
-						{
-							"channel": "rotation",
-							"data_points": [
-								{
-									"x": "0",
-									"y": "0",
-									"z": "math.sin(query.anim_time * 360 - (45 * 5)) * 20"
-								}
-							],
-							"uuid": "e5f7912e-2eed-9188-9307-e89d640a3355",
-							"time": 0,
-							"color": -1,
-							"interpolation": "linear"
-						}
-					]
-				},
-				"a822ddf5-4946-5579-a086-a639e6f70ec7": {
-					"name": "left_hair4",
-					"type": "bone",
-					"rotation_global": false,
-					"quaternion_interpolation": false,
-					"keyframes": [
-						{
-							"channel": "rotation",
-							"data_points": [
-								{
-									"x": "0",
-									"y": "0",
-									"z": "math.sin(query.anim_time * 360 - (45 * 6)) * 20"
-								}
-							],
-							"uuid": "add247e6-bab2-41d8-4092-336d732b181c",
-							"time": 0,
-							"color": -1,
-							"interpolation": "linear"
-						}
-					]
-				}
-			}
-		},
-		{
-			"uuid": "0de7ee30-8c02-467f-c8e4-2b3dc3680013",
+			"uuid": "cba1a28d-8f21-69c4-d573-e41e18c75234",
 			"name": "misc.dance.generic.caramelldansen",
 			"loop": "loop",
 			"override": false,
 			"length": 0.7083,
 			"snapping": 24,
 			"selected": false,
-			"saved": false,
-			"path": "../miku-plushie/animations/plush.animation.json",
+			"saved": true,
+			"path": "../src/main/resources/assets/miku-plushie/animations/plush.animation.json",
 			"anim_time_update": "",
 			"blend_weight": "",
 			"start_delay": "",
@@ -5299,7 +5026,7 @@
 									"z": "math.sin(query.anim_time * (360 * (165/60)/2) - (45 * 0)) * 10"
 								}
 							],
-							"uuid": "17b0d338-6748-8935-8303-4bea673b98a9",
+							"uuid": "1b279c12-4e21-4bfd-0770-0b5c71dae615",
 							"time": 0,
 							"color": -1,
 							"interpolation": "linear"
@@ -5313,7 +5040,7 @@
 									"z": "0"
 								}
 							],
-							"uuid": "b1155e41-9c8f-0d1f-83fc-9296edc596f4",
+							"uuid": "252b9367-a71b-0046-daf7-7fad592c4819",
 							"time": 0,
 							"color": -1,
 							"interpolation": "linear"
@@ -5335,7 +5062,7 @@
 									"z": "math.sin(query.anim_time * (360 * (165/60)/2) - (45 * 0)) * -40 - 130"
 								}
 							],
-							"uuid": "dd03e345-5d81-f1c6-71b4-2d642667062a",
+							"uuid": "0819c6cd-f03b-fabe-8f1d-b983a18d1b26",
 							"time": 0,
 							"color": -1,
 							"interpolation": "linear"
@@ -5357,7 +5084,7 @@
 									"z": "math.sin(query.anim_time * (360 * (165/60)/2) - (45 * 0)) * -40 + 130"
 								}
 							],
-							"uuid": "a1740ad8-aa2f-4725-d6d6-ad3e77473c58",
+							"uuid": "c623d04b-5915-4b80-c3e3-2519f55d3be0",
 							"time": 0,
 							"color": -1,
 							"interpolation": "linear"
@@ -5379,7 +5106,7 @@
 									"z": "math.sin(query.anim_time * (360 * (165/60)/2) - (45 * 6)) * 10"
 								}
 							],
-							"uuid": "29bc8212-b3a7-8e42-8a46-fb33d28e4faa",
+							"uuid": "81f980bb-19fa-7fc9-76c2-7040ef15a802",
 							"time": 0,
 							"color": -1,
 							"interpolation": "linear"
@@ -5393,7 +5120,7 @@
 									"z": "0"
 								}
 							],
-							"uuid": "bbadc9fe-cb08-067a-ad96-74c9bace33c0",
+							"uuid": "2c6cc40a-2d02-786a-152e-bf0870364da5",
 							"time": 0,
 							"color": -1,
 							"interpolation": "linear"
@@ -5415,7 +5142,7 @@
 									"z": "math.sin(query.anim_time * (360 * (165/60)/2) - (45 * 0)) * -10"
 								}
 							],
-							"uuid": "f8b7183a-e838-1469-3d54-0cd6ba339f2a",
+							"uuid": "fcaa55b9-002b-87bf-187f-41edd915aaeb",
 							"time": 0,
 							"color": -1,
 							"interpolation": "linear"
@@ -5437,7 +5164,7 @@
 									"z": "math.sin(query.anim_time * (360 * (165/60)/2) - (45 * 0)) * -10"
 								}
 							],
-							"uuid": "07a6e5cb-d5da-9ce0-fcc4-f5b8229d6c11",
+							"uuid": "37909011-9142-2df0-4f0e-fea5dcae0ca8",
 							"time": 0,
 							"color": -1,
 							"interpolation": "linear"
@@ -5459,7 +5186,7 @@
 									"z": "0"
 								}
 							],
-							"uuid": "5995d95d-b2d5-04e4-291c-291b173f2fa5",
+							"uuid": "0aec0713-91bf-d7d7-125f-924dd03f5da9",
 							"time": 0,
 							"color": -1,
 							"interpolation": "linear"
@@ -5481,7 +5208,7 @@
 									"z": "math.sin(query.anim_time * (360 * (165/60)/2) - (45 * 0)) * -20"
 								}
 							],
-							"uuid": "ae27c417-4ac8-7861-55ed-97577e2b5635",
+							"uuid": "4154087a-3f89-7b94-9412-15808363c1c5",
 							"time": 0,
 							"color": -1,
 							"interpolation": "linear"
@@ -5503,7 +5230,7 @@
 									"z": "0"
 								}
 							],
-							"uuid": "a4e73f30-c2dc-5fa0-362d-4868d1d7eda1",
+							"uuid": "316593b7-caba-4a2d-174a-4bf342ee8df6",
 							"time": 0,
 							"color": -1,
 							"interpolation": "linear"
@@ -5525,14 +5252,14 @@
 									"z": "0"
 								}
 							],
-							"uuid": "52a1dcdd-ccb2-7bfd-d905-4b6e4e4f08df",
+							"uuid": "ef5445d3-2541-4f7a-6fce-d5ffcba60d6d",
 							"time": 0,
 							"color": -1,
 							"interpolation": "linear"
 						}
 					]
 				},
-				"e76d63b5-4879-c169-6039-e98382848cea": {
+				"46c269a6-fe86-36dc-ec01-611c0f082dd5": {
 					"name": "miku_plush_bik_orange",
 					"type": "bone",
 					"rotation_global": false,
@@ -5547,14 +5274,14 @@
 									"z": "math.sin(query.anim_time * (360 * (165/60)/2) - (45 * 2)) * 15 - 15"
 								}
 							],
-							"uuid": "818571da-e41b-5677-1cc0-e522484cc0f7",
+							"uuid": "5b379f66-74f4-4f1b-1742-bb7ee9ea9ca0",
 							"time": 0,
 							"color": -1,
 							"interpolation": "linear"
 						}
 					]
 				},
-				"4b8c6bed-d693-ec53-06b9-483c7be5c520": {
+				"f8a44e32-452c-1ebf-7aa5-3fc415d81132": {
 					"name": "left_sleeve",
 					"type": "bone",
 					"rotation_global": false,
@@ -5569,14 +5296,14 @@
 									"z": "0"
 								}
 							],
-							"uuid": "e042ddc7-e021-919b-5f89-2d1b43bbd00d",
+							"uuid": "b276379b-838d-874d-0716-441ca3d1b17d",
 							"time": 0,
 							"color": -1,
 							"interpolation": "linear"
 						}
 					]
 				},
-				"ca1aa3ce-fe1c-8c07-8b33-3b3897c12739": {
+				"564c1ca0-4adf-78a3-1666-14e5107aa1bc": {
 					"name": "right_sleeve",
 					"type": "bone",
 					"rotation_global": false,
@@ -5591,7 +5318,7 @@
 									"z": "0"
 								}
 							],
-							"uuid": "f9310fbf-28ca-8ea8-ada6-d19fbeb65da7",
+							"uuid": "a88c39ee-779e-4839-7698-a68f786f6cb1",
 							"time": 0,
 							"color": -1,
 							"interpolation": "linear"
@@ -5601,7 +5328,610 @@
 			}
 		},
 		{
-			"uuid": "59ff61ee-f89d-9569-b145-8f53bb4fc660",
+			"uuid": "7353a5c3-9c4d-9644-45d3-f15dd7bbf382",
+			"name": "misc.dance.miku.miku",
+			"loop": "loop",
+			"override": false,
+			"length": 0.9167,
+			"snapping": 24,
+			"selected": false,
+			"saved": true,
+			"path": "../src/main/resources/assets/miku-plushie/animations/plush.animation.json",
+			"anim_time_update": "",
+			"blend_weight": "",
+			"start_delay": "",
+			"loop_delay": "",
+			"animators": {
+				"be1c7d16-0d87-1b67-aff0-241184bcc81f": {
+					"name": "body",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false,
+					"keyframes": [
+						{
+							"channel": "rotation",
+							"data_points": [
+								{
+									"x": "0",
+									"y": "0",
+									"z": "math.sin(query.anim_time * (360 * (128/60)/2) - (45 * 0)) * 10"
+								}
+							],
+							"uuid": "64122811-bf20-1dd1-801d-cd6f1fcf3413",
+							"time": 0,
+							"color": -1,
+							"interpolation": "linear"
+						},
+						{
+							"channel": "position",
+							"data_points": [
+								{
+									"x": "0",
+									"y": "math.sin(query.anim_time * (360 * (128/60)/1) - (45 * 6)) * 0.25",
+									"z": "0"
+								}
+							],
+							"uuid": "11bacd38-bc7f-ab08-ac86-5870299da847",
+							"time": 0,
+							"color": -1,
+							"interpolation": "linear"
+						}
+					]
+				},
+				"9532540f-ed1d-5532-992e-971928a45a7b": {
+					"name": "left_arm",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false,
+					"keyframes": [
+						{
+							"channel": "rotation",
+							"data_points": [
+								{
+									"x": "-90",
+									"y": "60",
+									"z": "math.sin(query.anim_time * (360 * (128/60)/2) - 45) * -10 - 60"
+								}
+							],
+							"uuid": "26857a96-e336-2b9a-c95a-2f23d6266344",
+							"time": 0,
+							"color": -1,
+							"interpolation": "linear"
+						}
+					]
+				},
+				"f07bf905-81c2-0574-034d-fb36dd778288": {
+					"name": "right_arm",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false,
+					"keyframes": [
+						{
+							"channel": "rotation",
+							"data_points": [
+								{
+									"x": "-90",
+									"y": "-60",
+									"z": "math.sin(query.anim_time * (360 * (128/60)/2) - 45) * -10 + 60"
+								}
+							],
+							"uuid": "7c82ad22-2992-00cc-62d7-f255f8ceb601",
+							"time": 0,
+							"color": -1,
+							"interpolation": "linear"
+						}
+					]
+				},
+				"4cb3df88-9ff2-1ccd-9173-b70073e76001": {
+					"name": "head",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false,
+					"keyframes": [
+						{
+							"channel": "rotation",
+							"data_points": [
+								{
+									"x": "0",
+									"y": "0",
+									"z": "math.sin(query.anim_time * (360 * (128/60)/2) - (45 * 0)) * 10"
+								}
+							],
+							"uuid": "68abd4d9-1ac6-f97c-0439-bc74815866ff",
+							"time": 0,
+							"color": -1,
+							"interpolation": "linear"
+						}
+					]
+				},
+				"15a98531-cb7c-91ba-5593-2b9f96239d5a": {
+					"name": "right_leg",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false,
+					"keyframes": [
+						{
+							"channel": "rotation",
+							"data_points": [
+								{
+									"x": "-2",
+									"y": "0",
+									"z": "0"
+								}
+							],
+							"uuid": "5620e403-2fa3-78bb-1c10-b01b42d879e7",
+							"time": 0,
+							"color": -1,
+							"interpolation": "linear"
+						}
+					]
+				},
+				"5acbcb93-687d-38d2-6daf-65b98cbb8ee5": {
+					"name": "left_leg",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false,
+					"keyframes": [
+						{
+							"channel": "rotation",
+							"data_points": [
+								{
+									"x": "2",
+									"y": "0",
+									"z": "0"
+								}
+							],
+							"uuid": "2b4bb448-36f7-e149-242a-d5200dc79d28",
+							"time": 0,
+							"color": -1,
+							"interpolation": "linear"
+						}
+					]
+				},
+				"ffa0d495-5a22-294b-c041-0813416457fc": {
+					"name": "root",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false,
+					"keyframes": [
+						{
+							"channel": "rotation",
+							"data_points": [
+								{
+									"x": "0",
+									"y": "0",
+									"z": "math.sin(query.anim_time * (360 * (128/60)/2) - (45 * 0)) * 5"
+								}
+							],
+							"uuid": "a870e192-e27f-fde2-9ffe-b8d914438284",
+							"time": 0,
+							"color": -1,
+							"interpolation": "linear"
+						}
+					]
+				},
+				"08135e7f-59ab-e224-751b-05b1dd14dd82": {
+					"name": "miku_left_hair",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false,
+					"keyframes": [
+						{
+							"channel": "rotation",
+							"data_points": [
+								{
+									"x": "0",
+									"y": "0",
+									"z": "math.sin(query.anim_time * (360 * (128/60)/2) - (45 * 5)) * 20"
+								}
+							],
+							"uuid": "c4c541c7-4f2c-a6ba-6f34-bdabe8fc51ea",
+							"time": 0,
+							"color": -1,
+							"interpolation": "linear"
+						}
+					]
+				},
+				"00a8cdcd-2810-ea95-407c-3276a7cc9c3c": {
+					"name": "miku_left_hair2",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false,
+					"keyframes": [
+						{
+							"channel": "rotation",
+							"data_points": [
+								{
+									"x": "0",
+									"y": "0",
+									"z": "math.sin(query.anim_time * (360 * (128/60)/2) - (45 * 6)) * 20"
+								}
+							],
+							"uuid": "46194b81-1aa2-e674-05ed-dffa3ff0111e",
+							"time": 0,
+							"color": -1,
+							"interpolation": "linear"
+						}
+					]
+				},
+				"31b979bc-03e8-19f3-343c-de51c3dc4ac2": {
+					"name": "miku_right_hair",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false,
+					"keyframes": [
+						{
+							"channel": "rotation",
+							"data_points": [
+								{
+									"x": "0",
+									"y": "0",
+									"z": "math.sin(query.anim_time * (360 * (128/60)/2) - (45 * 5)) * 20"
+								}
+							],
+							"uuid": "5c966ab9-4f03-6ca0-16c8-84134d3b5104",
+							"time": 0,
+							"color": -1,
+							"interpolation": "linear"
+						}
+					]
+				},
+				"e2bb6e66-5605-5765-76e1-d990ec082328": {
+					"name": "miku_right_hair2",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false,
+					"keyframes": [
+						{
+							"channel": "rotation",
+							"data_points": [
+								{
+									"x": "0",
+									"y": "0",
+									"z": "math.sin(query.anim_time * (360 * (128/60)/2) - (45 * 6)) * 20"
+								}
+							],
+							"uuid": "e8dc9d5b-01a6-7220-b050-b11325485a39",
+							"time": 0,
+							"color": -1,
+							"interpolation": "linear"
+						}
+					]
+				},
+				"4124753a-411c-3fc6-816f-256c14aa4c3c": {
+					"name": "left_sleeve",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false,
+					"keyframes": [
+						{
+							"channel": "rotation",
+							"data_points": [
+								{
+									"x": "55",
+									"y": "0",
+									"z": "0"
+								}
+							],
+							"uuid": "db58a1ac-4e39-27eb-00b0-6a81d46b97ea",
+							"time": 0,
+							"color": -1,
+							"interpolation": "linear"
+						}
+					]
+				},
+				"1f6fe6fc-bd12-3950-935f-cc9f2b1a25db": {
+					"name": "right_sleeve",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false,
+					"keyframes": [
+						{
+							"channel": "rotation",
+							"data_points": [
+								{
+									"x": "55",
+									"y": "0",
+									"z": "0"
+								}
+							],
+							"uuid": "547e2d0f-038a-72f1-3df6-b5383299c2a4",
+							"time": 0,
+							"color": -1,
+							"interpolation": "linear"
+						}
+					]
+				},
+				"e9014920-f230-e79c-41cb-a186127c3c10": {
+					"name": "miku_plush_xmass_tree_head",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false,
+					"keyframes": [
+						{
+							"channel": "rotation",
+							"data_points": [
+								{
+									"x": "0",
+									"y": "0",
+									"z": "math.sin(query.anim_time * 360 - (45 * 1)) * 10"
+								}
+							],
+							"uuid": "a624ed6d-a1f1-d019-749c-93dd41a19fd3",
+							"time": 0,
+							"color": -1,
+							"interpolation": "linear"
+						}
+					]
+				},
+				"aaae4ed7-1084-72fe-954f-e85516e614ef": {
+					"name": "miku_plush_xmass_tree_head2",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false,
+					"keyframes": [
+						{
+							"channel": "rotation",
+							"data_points": [
+								{
+									"x": "0",
+									"y": "0",
+									"z": "math.sin(query.anim_time * 360 - (45 * 2)) * 10"
+								}
+							],
+							"uuid": "e3be1af8-a47d-8508-b1bd-b322e148d767",
+							"time": 0,
+							"color": -1,
+							"interpolation": "linear"
+						}
+					]
+				},
+				"796e13d9-8deb-6e79-9046-6e4ed6e064f7": {
+					"name": "miku_plush_sonic2",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false,
+					"keyframes": [
+						{
+							"channel": "rotation",
+							"data_points": [
+								{
+									"x": "0",
+									"y": "math.sin(query.anim_time * 360 - (45 * 1)) * -10",
+									"z": "0"
+								}
+							],
+							"uuid": "9dcc453b-8e76-a15a-19ff-3ed68a804801",
+							"time": 0,
+							"color": -1,
+							"interpolation": "linear"
+						}
+					]
+				},
+				"0bd63173-8a21-e5db-f65e-bddeeb0030f5": {
+					"name": "miku_plush_sonic3",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false,
+					"keyframes": [
+						{
+							"channel": "rotation",
+							"data_points": [
+								{
+									"x": "0",
+									"y": "math.sin(query.anim_time * 360 - (45 * 1)) * -10",
+									"z": "0"
+								}
+							],
+							"uuid": "b0038428-6291-c925-da17-4c9aadc1821d",
+							"time": 0,
+							"color": -1,
+							"interpolation": "linear"
+						}
+					]
+				},
+				"d009c33f-6062-a1d0-ed0d-089bd6beb37b": {
+					"name": "miku_plush_sonic4",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false,
+					"keyframes": [
+						{
+							"channel": "rotation",
+							"data_points": [
+								{
+									"x": "0",
+									"y": "math.sin(query.anim_time * 360 - (45 * 1)) * -10",
+									"z": "0"
+								}
+							],
+							"uuid": "5d841587-b4a6-c40c-71b2-aa6e53d6f0b2",
+							"time": 0,
+							"color": -1,
+							"interpolation": "linear"
+						}
+					]
+				},
+				"ed9f752a-c263-f533-087e-a05c2e44eb6b": {
+					"name": "miku_plush_sonic5",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false,
+					"keyframes": [
+						{
+							"channel": "rotation",
+							"data_points": [
+								{
+									"x": "0",
+									"y": "math.sin(query.anim_time * 360 - (45 * 1)) * -10",
+									"z": "0"
+								}
+							],
+							"uuid": "3f744732-d409-ead5-03f8-8e9ac780e5d0",
+							"time": 0,
+							"color": -1,
+							"interpolation": "linear"
+						}
+					]
+				},
+				"71feb02b-e1b9-5c57-a4a9-fc28faa728e4": {
+					"name": "miku_right_hair3",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false,
+					"keyframes": [
+						{
+							"channel": "rotation",
+							"data_points": [
+								{
+									"x": "0",
+									"y": "0",
+									"z": "math.sin(query.anim_time * 360 - (45 * 5)) * 20"
+								}
+							],
+							"uuid": "1b99da4c-e458-3c00-98b4-a2aa6f50f32c",
+							"time": 0,
+							"color": -1,
+							"interpolation": "linear"
+						}
+					]
+				},
+				"354146b7-de68-84e2-d951-1c0b6c8c5f57": {
+					"name": "miku_right_hair4",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false,
+					"keyframes": [
+						{
+							"channel": "rotation",
+							"data_points": [
+								{
+									"x": "0",
+									"y": "0",
+									"z": "math.sin(query.anim_time * 360 - (45 * 6)) * 20"
+								}
+							],
+							"uuid": "10c589e2-aabe-9c4a-6da1-da6d22ac255b",
+							"time": 0,
+							"color": -1,
+							"interpolation": "linear"
+						}
+					]
+				},
+				"15eb870e-7f99-338c-361b-96b43e139df2": {
+					"name": "miku_left_hair3",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false,
+					"keyframes": [
+						{
+							"channel": "rotation",
+							"data_points": [
+								{
+									"x": "0",
+									"y": "0",
+									"z": "math.sin(query.anim_time * 360 - (45 * 5)) * 20"
+								}
+							],
+							"uuid": "f47f318a-fd13-da01-17ff-7fee8095e0b1",
+							"time": 0,
+							"color": -1,
+							"interpolation": "linear"
+						}
+					]
+				},
+				"d9f155eb-5efe-5bce-136d-76fe265e6533": {
+					"name": "miku_left_hair4",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false,
+					"keyframes": [
+						{
+							"channel": "rotation",
+							"data_points": [
+								{
+									"x": "0",
+									"y": "0",
+									"z": "math.sin(query.anim_time * 360 - (45 * 6)) * 20"
+								}
+							],
+							"uuid": "42bb58e3-7a04-e48a-e460-c4e954a9142f",
+							"time": 0,
+							"color": -1,
+							"interpolation": "linear"
+						}
+					]
+				},
+				"1ebf5f2d-bd06-03b5-fdf5-cb97f4d6fafd": {
+					"name": "miku_plush_lucario_z2",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false,
+					"keyframes": [
+						{
+							"channel": "rotation",
+							"data_points": [
+								{
+									"x": "0",
+									"y": "0",
+									"z": "math.sin(query.anim_time * (360 * (128/60)/2) - (45 * 5)) * 20"
+								}
+							],
+							"uuid": "2927e3f3-997f-0550-94da-763db02170e0",
+							"time": 0,
+							"color": -1,
+							"interpolation": "linear"
+						}
+					]
+				},
+				"2eb03c0a-651d-32fd-944b-e92bc502de10": {
+					"name": "miku_plush_lucario_z3",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false,
+					"keyframes": [
+						{
+							"channel": "rotation",
+							"data_points": [
+								{
+									"x": "0",
+									"y": "0",
+									"z": "math.sin(query.anim_time * (360 * (128/60)/2) - (45 * 5)) * 20"
+								}
+							],
+							"uuid": "742f0732-0c5a-350b-3e96-dcd948b15a5a",
+							"time": 0,
+							"color": -1,
+							"interpolation": "linear"
+						}
+					]
+				},
+				"b81a11a0-87c3-49f0-5cca-3d9dedce521e": {
+					"name": "miku_plush_lucario_z4",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false,
+					"keyframes": [
+						{
+							"channel": "rotation",
+							"data_points": [
+								{
+									"x": "0",
+									"y": "0",
+									"z": "math.sin(query.anim_time * (360 * (128/60)/2) - (45 * 6)) * 20"
+								}
+							],
+							"uuid": "11add685-3ba3-e97a-51cf-bf22f01991ee",
+							"time": 0,
+							"color": -1,
+							"interpolation": "linear"
+						}
+					]
+				}
+			}
+		},
+		{
+			"uuid": "4fdde789-a975-4a64-eb3a-cb30932a260a",
 			"name": "misc.dance.miku.ievan-polkka",
 			"loop": "loop",
 			"override": false,
@@ -5609,7 +5939,7 @@
 			"snapping": 24,
 			"selected": false,
 			"saved": true,
-			"path": "../miku-plushie/animations/plush.animation.json",
+			"path": "../src/main/resources/assets/miku-plushie/animations/plush.animation.json",
 			"anim_time_update": "",
 			"blend_weight": "",
 			"start_delay": "",
@@ -5630,7 +5960,7 @@
 									"z": "0"
 								}
 							],
-							"uuid": "a12e3fab-4cb4-4782-82a7-8ce90b38d91a",
+							"uuid": "bf7b4ca2-75cf-634a-9204-7c97e22affca",
 							"time": 0,
 							"color": -1,
 							"interpolation": "linear"
@@ -5644,7 +5974,7 @@
 									"z": "0"
 								}
 							],
-							"uuid": "b3ef55fe-bf7f-091a-bde7-bb3c3c044a28",
+							"uuid": "c446d479-9288-eca4-69a7-db36a9b7752d",
 							"time": 0,
 							"color": -1,
 							"interpolation": "linear"
@@ -5666,7 +5996,7 @@
 									"z": "0"
 								}
 							],
-							"uuid": "ddd0f4cf-c4f2-401a-a0ca-34a78952c7b1",
+							"uuid": "f4235377-4180-d1d6-9c5e-581e60b0e22c",
 							"time": 0,
 							"color": -1,
 							"interpolation": "linear"
@@ -5688,7 +6018,7 @@
 									"z": "0"
 								}
 							],
-							"uuid": "b6072acf-eae9-558d-92fc-843710b5421d",
+							"uuid": "5748e04b-d285-437c-ef17-ab9fa7ff2de0",
 							"time": 0,
 							"color": -1,
 							"interpolation": "linear"
@@ -5710,7 +6040,7 @@
 									"z": "0"
 								}
 							],
-							"uuid": "6d05326f-b2b0-4e3a-5613-af0ed17ae36e",
+							"uuid": "2b1e543a-5e2c-abaa-87fd-3cdc5290035f",
 							"time": 0,
 							"color": -1,
 							"interpolation": "linear"
@@ -5732,7 +6062,7 @@
 									"z": "0"
 								}
 							],
-							"uuid": "a3798e2f-0645-02ee-39f4-b04f0cc5fba1",
+							"uuid": "08c9deba-0b8f-6a66-444b-3b8ccf6dd2d6",
 							"time": 0,
 							"color": -1,
 							"interpolation": "linear"
@@ -5754,7 +6084,7 @@
 									"z": "0"
 								}
 							],
-							"uuid": "5ef68559-4a5c-0470-bb3e-e98d0b732779",
+							"uuid": "e45aaf62-119a-8f6d-71f2-e604f8872f2f",
 							"time": 0,
 							"color": -1,
 							"interpolation": "linear"
@@ -5776,14 +6106,14 @@
 									"z": "math.sin(query.anim_time * (360 * (119/60)/2) - 0) * -4"
 								}
 							],
-							"uuid": "55c29542-6ed4-8de0-d732-149fadca37e4",
+							"uuid": "acea7742-3e7e-5683-bce5-2ca5e0b22cf4",
 							"time": 0,
 							"color": -1,
 							"interpolation": "linear"
 						}
 					]
 				},
-				"b811747f-cc0d-c8aa-aeec-bd20fae161e1": {
+				"4303c872-6dbe-ef1a-ae14-c3ed87249b3e": {
 					"name": "left_sleeve",
 					"type": "bone",
 					"rotation_global": false,
@@ -5798,14 +6128,14 @@
 									"z": "0"
 								}
 							],
-							"uuid": "9d9308f9-377e-ea4e-4b98-b5217071ac64",
+							"uuid": "e331a938-0d86-09cf-2dcf-b1cc226f474a",
 							"time": 0,
 							"color": -1,
 							"interpolation": "linear"
 						}
 					]
 				},
-				"59364e0b-ff50-e3a7-b013-1bc0c1ac4dc9": {
+				"7a90cfab-dadd-af9c-6068-811ad952a13b": {
 					"name": "right_sleeve",
 					"type": "bone",
 					"rotation_global": false,
@@ -5820,7 +6150,7 @@
 									"z": "0"
 								}
 							],
-							"uuid": "9e7f730a-9b01-bf98-4371-e0b247683ee1",
+							"uuid": "0aef2a88-807c-3d1f-d839-74345ce3149b",
 							"time": 0,
 							"color": -1,
 							"interpolation": "linear"
@@ -5830,7 +6160,7 @@
 			}
 		},
 		{
-			"uuid": "10ced0d3-9ae5-56d5-07d0-98073dde0d7a",
+			"uuid": "f2e0e29a-6d4b-4441-2f34-8bace03d71b3",
 			"name": "misc.dance.miku.vegetable-juice",
 			"loop": "loop",
 			"override": false,
@@ -5838,7 +6168,7 @@
 			"snapping": 24,
 			"selected": false,
 			"saved": true,
-			"path": "../miku-plushie/animations/plush.animation.json",
+			"path": "../src/main/resources/assets/miku-plushie/animations/plush.animation.json",
 			"anim_time_update": "",
 			"blend_weight": "",
 			"start_delay": "",
@@ -5859,7 +6189,7 @@
 									"z": "math.atan(math.sin(query.anim_time * (360 * (150/60)/2)) * 4) * q.miku.is_game * 10"
 								}
 							],
-							"uuid": "56386a0c-202e-be67-4a88-5c1e70e4dbb3",
+							"uuid": "bb3c11df-b891-ceb2-6127-e3a750a51499",
 							"time": 0,
 							"color": -1,
 							"interpolation": "linear"
@@ -5873,7 +6203,7 @@
 									"z": "0"
 								}
 							],
-							"uuid": "17065bcf-fbfe-8f45-f68a-8e07a23360f6",
+							"uuid": "625122e4-5e5d-4b05-b5b8-c374fa0a4a20",
 							"time": 0,
 							"color": -1,
 							"interpolation": "linear"
@@ -5895,7 +6225,7 @@
 									"z": "0"
 								}
 							],
-							"uuid": "4ea04676-2d03-9217-67af-1f5171f5b503",
+							"uuid": "4ce51d1d-0ea3-ced4-8288-f7925612bf5e",
 							"time": 0,
 							"color": -1,
 							"interpolation": "linear"
@@ -5917,7 +6247,7 @@
 									"z": "0"
 								}
 							],
-							"uuid": "f65e72a8-2720-2e28-a170-3155867b3041",
+							"uuid": "1579b266-93c7-8b09-3c32-c76232312eea",
 							"time": 0,
 							"color": -1,
 							"interpolation": "linear"
@@ -5939,7 +6269,7 @@
 									"z": "math.atan(math.sin(query.anim_time * (360 * (150/60)/2)) * 4) * q.miku.is_game * -10"
 								}
 							],
-							"uuid": "79a20300-5bed-53cf-d88f-e8cd435ccb72",
+							"uuid": "d6dd3c66-3a80-2a3d-6790-09682eb45ddd",
 							"time": 0,
 							"color": -1,
 							"interpolation": "linear"
@@ -5961,7 +6291,7 @@
 									"z": "math.sin(query.anim_time * (360 * (150/60)/2) - (45 * 6)) * 15"
 								}
 							],
-							"uuid": "34fa1ea9-abcf-ce2d-c2fb-6a5828ecf675",
+							"uuid": "38d6255d-857a-6b0f-3687-864989d26fa3",
 							"time": 0,
 							"color": -1,
 							"interpolation": "linear"
@@ -5975,7 +6305,7 @@
 									"z": "0"
 								}
 							],
-							"uuid": "d02eec61-4307-eefb-67e6-4b6112beb8b4",
+							"uuid": "e2a76f32-3b0d-953e-6967-2d6f3055a93b",
 							"time": 0,
 							"color": -1,
 							"interpolation": "linear"
@@ -5997,7 +6327,7 @@
 									"z": "math.atan(math.sin(query.anim_time * (360 * (150/60)/2) - 0) * 4) * q.miku.is_game * 10 + 10"
 								}
 							],
-							"uuid": "3ad7cf45-4837-e157-4d81-699bf3225101",
+							"uuid": "ec98f78f-92c3-123f-624e-f7c15cf51a1f",
 							"time": 0,
 							"color": -1,
 							"interpolation": "linear"
@@ -6019,7 +6349,7 @@
 									"z": "math.atan(math.sin(query.anim_time * (360 * (150/60)/2) - 0) * 4) * q.miku.is_game * 10 - 10"
 								}
 							],
-							"uuid": "ce73c706-d563-7137-104a-e431e4430164",
+							"uuid": "9d8f72f0-7840-4b83-1ac7-30e73a1fdb49",
 							"time": 0,
 							"color": -1,
 							"interpolation": "linear"
@@ -6041,7 +6371,7 @@
 									"z": "0"
 								}
 							],
-							"uuid": "bf757e2b-d18c-1f5e-1d1f-a6045360f800",
+							"uuid": "e00bed0c-e1d7-359d-9ea9-b3d3de95dd57",
 							"time": 0,
 							"color": -1,
 							"interpolation": "linear"
@@ -6055,14 +6385,14 @@
 									"z": "0"
 								}
 							],
-							"uuid": "7e674c85-c343-1795-6e0d-938657be6097",
+							"uuid": "b3a33c80-5fba-544d-bca0-bba01b4dab60",
 							"time": 0,
 							"color": -1,
 							"interpolation": "linear"
 						}
 					]
 				},
-				"be24fc6a-2ace-6e67-bd2a-e5e440034c46": {
+				"bfe03941-2fef-e0f3-f42e-80d940c54c05": {
 					"name": "left_sleeve",
 					"type": "bone",
 					"rotation_global": false,
@@ -6077,14 +6407,14 @@
 									"z": "0"
 								}
 							],
-							"uuid": "6e9cdb5a-b8cd-c514-20de-72f23f31772a",
+							"uuid": "7f31be24-679c-8527-c86b-179410e91919",
 							"time": 0,
 							"color": -1,
 							"interpolation": "linear"
 						}
 					]
 				},
-				"bf17ae31-5007-63e0-e36d-f3664ca1cb7e": {
+				"02cba50e-7802-f6b8-ebdd-c8e28d63af41": {
 					"name": "right_sleeve",
 					"type": "bone",
 					"rotation_global": false,
@@ -6099,14 +6429,14 @@
 									"z": "0"
 								}
 							],
-							"uuid": "cec30219-8192-cb60-5b1c-25cc0c1e358f",
+							"uuid": "964ea53e-2bef-1fac-36a7-4b2790ecf268",
 							"time": 0,
 							"color": -1,
 							"interpolation": "linear"
 						}
 					]
 				},
-				"6e2eb043-4f38-6aa9-a3bf-420d2dd48228": {
+				"916d17ce-9e04-24f7-6d51-be93221a0904": {
 					"name": "miku_plush_xmass_tree_head",
 					"type": "bone",
 					"rotation_global": false,
@@ -6121,14 +6451,14 @@
 									"z": "math.atan(math.sin(query.anim_time * (360 * (150/60)/2) - (45 * 5)) * 4) * q.miku.is_game * -5"
 								}
 							],
-							"uuid": "9e3c0a80-1d8f-de7a-d9f8-53e6653aa65a",
+							"uuid": "cb309448-4a28-c097-8fb8-4ad35836775e",
 							"time": 0,
 							"color": -1,
 							"interpolation": "linear"
 						}
 					]
 				},
-				"afd0303e-d2ef-2cdc-cc3d-8e11e03ad4a5": {
+				"a9678d70-0c3f-0853-6183-536253ee6179": {
 					"name": "miku_plush_xmass_tree_head2",
 					"type": "bone",
 					"rotation_global": false,
@@ -6143,14 +6473,14 @@
 									"z": "math.atan(math.sin(query.anim_time * (360 * (150/60)/2) - (45 * 6)) * 4) * q.miku.is_game * -10"
 								}
 							],
-							"uuid": "1e4f4356-9d5f-dda3-2e83-0b01bac804d3",
+							"uuid": "8a6a501c-04c9-5d80-2514-2f4929068b89",
 							"time": 0,
 							"color": -1,
 							"interpolation": "linear"
 						}
 					]
 				},
-				"f0751df3-15be-2615-ae98-a40ca9fef172": {
+				"14f4fcae-5cea-a984-9e54-69e8d8e030e0": {
 					"name": "miku_plush_sonic2",
 					"type": "bone",
 					"rotation_global": false,
@@ -6165,14 +6495,14 @@
 									"z": "0"
 								}
 							],
-							"uuid": "4332b8f9-14d1-54f0-a28f-0c8f49cabc7e",
+							"uuid": "1a4a4a54-1fd0-8114-e514-b53337fe04e9",
 							"time": 0,
 							"color": -1,
 							"interpolation": "linear"
 						}
 					]
 				},
-				"74519e19-959c-9393-16c8-06d710c7eed1": {
+				"1d51e35a-3b54-d6d5-873a-6eac5b4e5816": {
 					"name": "miku_plush_sonic3",
 					"type": "bone",
 					"rotation_global": false,
@@ -6187,14 +6517,14 @@
 									"z": "0"
 								}
 							],
-							"uuid": "9074baa3-8432-debf-7506-9a14585d6ed8",
+							"uuid": "70cb4ef2-7c14-b36f-7560-19401e50059a",
 							"time": 0,
 							"color": -1,
 							"interpolation": "linear"
 						}
 					]
 				},
-				"2db29be5-931e-1728-2f3c-c63bce259f95": {
+				"d184a818-89b3-c002-0a87-deac6d23746d": {
 					"name": "miku_plush_sonic4",
 					"type": "bone",
 					"rotation_global": false,
@@ -6209,14 +6539,14 @@
 									"z": "0"
 								}
 							],
-							"uuid": "ee832fca-76e5-70ef-692e-b8af399be9d1",
+							"uuid": "ea3ea54b-d31c-2f01-59ce-a0b62f4d8bf7",
 							"time": 0,
 							"color": -1,
 							"interpolation": "linear"
 						}
 					]
 				},
-				"bc153f43-f266-2746-535d-15d3d4990d46": {
+				"862d652b-dc57-35a8-88da-f584a3ee82f0": {
 					"name": "miku_plush_sonic5",
 					"type": "bone",
 					"rotation_global": false,
@@ -6231,7 +6561,73 @@
 									"z": "0"
 								}
 							],
-							"uuid": "94d9e81b-ef44-10d0-c364-8b5c1faa6a73",
+							"uuid": "a662eb40-42e5-da80-5ee1-50fc7baf421b",
+							"time": 0,
+							"color": -1,
+							"interpolation": "linear"
+						}
+					]
+				},
+				"96f685ed-11c5-5db4-54d4-9482f696b295": {
+					"name": "miku_plush_lucario_z2",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false,
+					"keyframes": [
+						{
+							"channel": "rotation",
+							"data_points": [
+								{
+									"x": "0",
+									"y": "0",
+									"z": "math.sin(query.anim_time * (360 * (150/60)/2) - (45 * 6)) * 15"
+								}
+							],
+							"uuid": "dd97a5e4-8ec3-97e1-60eb-254beeb1975f",
+							"time": 0,
+							"color": -1,
+							"interpolation": "linear"
+						}
+					]
+				},
+				"7b76a60b-1357-d56b-e24f-c9f83d2a8d2c": {
+					"name": "miku_plush_lucario_z3",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false,
+					"keyframes": [
+						{
+							"channel": "rotation",
+							"data_points": [
+								{
+									"x": "0",
+									"y": "0",
+									"z": "math.sin(query.anim_time * (360 * (150/60)/2) - (45 * 6)) * 15"
+								}
+							],
+							"uuid": "42f74f53-7435-29f9-50aa-d053a0574538",
+							"time": 0,
+							"color": -1,
+							"interpolation": "linear"
+						}
+					]
+				},
+				"5bd3232c-6bf1-0f40-0c43-8558a700f1fb": {
+					"name": "miku_plush_lucario_z4",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false,
+					"keyframes": [
+						{
+							"channel": "rotation",
+							"data_points": [
+								{
+									"x": "0",
+									"y": "0",
+									"z": "math.sin(query.anim_time * (360 * (150/60)/2) - (45 * 7)) * 15"
+								}
+							],
+							"uuid": "41a9428a-319c-1883-5269-a397e4e8367d",
 							"time": 0,
 							"color": -1,
 							"interpolation": "linear"
@@ -6241,15 +6637,15 @@
 			}
 		},
 		{
-			"uuid": "b1d64339-86df-3cee-11d1-ac944a845666",
+			"uuid": "d63d0d87-a586-eff1-9e74-14468c2838e3",
 			"name": "misc.dance.miku.static",
 			"loop": "loop",
 			"override": false,
 			"length": 1.25,
 			"snapping": 24,
 			"selected": false,
-			"saved": false,
-			"path": "../miku-plushie/animations/plush.animation.json",
+			"saved": true,
+			"path": "../src/main/resources/assets/miku-plushie/animations/plush.animation.json",
 			"anim_time_update": "",
 			"blend_weight": "",
 			"start_delay": "",
@@ -6270,7 +6666,7 @@
 									"z": "math.sin(query.anim_time * (360 * (95/60)/2)) * -10"
 								}
 							],
-							"uuid": "07827acd-fbe7-4523-0c9c-1c53dbffe6c0",
+							"uuid": "d9a838ec-c4ff-fd84-666b-6fe762074a3b",
 							"time": 0,
 							"color": -1,
 							"interpolation": "linear"
@@ -6284,7 +6680,7 @@
 									"z": "0"
 								}
 							],
-							"uuid": "ae25b896-53d5-3ae5-2fd1-8016b96527c7",
+							"uuid": "c0d9f408-8828-90cf-5a53-5b1ef37d0e3c",
 							"time": 0,
 							"color": -1,
 							"interpolation": "linear"
@@ -6306,7 +6702,7 @@
 									"z": "-60"
 								}
 							],
-							"uuid": "337be586-1cb3-06d3-227c-c0cbad6bdf0a",
+							"uuid": "d012841a-4078-d65a-7af0-9a0ffde16ea8",
 							"time": 0,
 							"color": -1,
 							"interpolation": "linear"
@@ -6328,7 +6724,7 @@
 									"z": "60"
 								}
 							],
-							"uuid": "4110a9c0-7345-fbc3-9c5d-9d3e582efa85",
+							"uuid": "8c6f42d2-e909-f378-0e5c-524f6bcfbb6c",
 							"time": 0,
 							"color": -1,
 							"interpolation": "linear"
@@ -6350,7 +6746,7 @@
 									"z": "math.sin(query.anim_time * (360 * (95/60)/2) - (45 * 6)) * -10"
 								}
 							],
-							"uuid": "67d96467-1921-3578-a05c-6d029aede1ef",
+							"uuid": "17989d2a-1e1a-228b-a19e-20291bc5247a",
 							"time": 0,
 							"color": -1,
 							"interpolation": "linear"
@@ -6372,7 +6768,7 @@
 									"z": "math.sin(query.anim_time * (360 * (95/60)/2) - (45 * 6)) * -10"
 								}
 							],
-							"uuid": "4150dcaa-bbdf-a881-c6e7-85a6235b2ce2",
+							"uuid": "839a8840-ed64-7d2b-9545-1c76bcf13cf3",
 							"time": 0,
 							"color": -1,
 							"interpolation": "linear"
@@ -6394,7 +6790,7 @@
 									"z": "0"
 								}
 							],
-							"uuid": "2968468b-0fe8-0b9f-cc17-a3df16fde17f",
+							"uuid": "d9130ede-3638-968d-9545-4afff18ff3b4",
 							"time": 0,
 							"color": -1,
 							"interpolation": "linear"
@@ -6416,7 +6812,7 @@
 									"z": "0"
 								}
 							],
-							"uuid": "454e4ca5-dd5d-04c0-d478-0da0fd393a28",
+							"uuid": "b6e2b92c-9635-7d9c-92d4-58542b3249d3",
 							"time": 0,
 							"color": -1,
 							"interpolation": "linear"
@@ -6438,14 +6834,14 @@
 									"z": "math.sin(query.anim_time * (360 * (95/60)/2)) * -5"
 								}
 							],
-							"uuid": "cf74ade8-e608-202e-6010-95941d190256",
+							"uuid": "66946774-d205-c7f5-f6f0-440b5f3615ad",
 							"time": 0,
 							"color": -1,
 							"interpolation": "linear"
 						}
 					]
 				},
-				"96861264-bc24-ee3d-e329-f563d73d87af": {
+				"91986ac3-082c-2a62-763a-f2109ad7b365": {
 					"name": "miku_plush_bik_orange",
 					"type": "bone",
 					"rotation_global": false,
@@ -6460,7 +6856,73 @@
 									"z": "math.sin(query.anim_time * (360 * (95/60)/2) - (45 * 0)) * 10 - 10"
 								}
 							],
-							"uuid": "bbeeec9b-0f13-4f49-0618-d4300a3b6713",
+							"uuid": "da20376c-7a80-3ff8-bbdb-4f007a2bcae1",
+							"time": 0,
+							"color": -1,
+							"interpolation": "linear"
+						}
+					]
+				},
+				"3c28fd86-404e-22b6-1b51-81ea7a5fb2b2": {
+					"name": "miku_plush_lucario_z2",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false,
+					"keyframes": [
+						{
+							"channel": "rotation",
+							"data_points": [
+								{
+									"x": "0",
+									"y": "0",
+									"z": "math.sin(query.anim_time * (360 * (95/60)/2) - (45 * 6)) * -10"
+								}
+							],
+							"uuid": "5ad971a9-94f2-4118-fde8-6e7277b98548",
+							"time": 0,
+							"color": -1,
+							"interpolation": "linear"
+						}
+					]
+				},
+				"ce32d569-7a9b-724f-045e-eb8c168ae1ea": {
+					"name": "miku_plush_lucario_z3",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false,
+					"keyframes": [
+						{
+							"channel": "rotation",
+							"data_points": [
+								{
+									"x": "0",
+									"y": "0",
+									"z": "math.sin(query.anim_time * (360 * (95/60)/2) - (45 * 6)) * -10"
+								}
+							],
+							"uuid": "825b4225-f7c0-aba4-a54d-4d5cd46a8b47",
+							"time": 0,
+							"color": -1,
+							"interpolation": "linear"
+						}
+					]
+				},
+				"7653b938-62e1-8a14-4343-f3874d244787": {
+					"name": "miku_plush_lucario_z4",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false,
+					"keyframes": [
+						{
+							"channel": "rotation",
+							"data_points": [
+								{
+									"x": "0",
+									"y": "0",
+									"z": "math.sin(query.anim_time * (360 * (95/60)/2) - (45 * 7)) * -10"
+								}
+							],
+							"uuid": "f5f8a0e8-b731-d6a4-792f-a62e66cfa2aa",
 							"time": 0,
 							"color": -1,
 							"interpolation": "linear"
@@ -6470,7 +6932,1438 @@
 			}
 		},
 		{
-			"uuid": "6fc86410-b6b8-33ef-175e-02228fd8fc81",
+			"uuid": "c103f4c2-f064-dd7b-d42a-78be80c5fe5d",
+			"name": "misc.dance.teto.teto-territory",
+			"loop": "loop",
+			"override": false,
+			"length": 0.7083,
+			"snapping": 24,
+			"selected": false,
+			"saved": true,
+			"path": "../src/main/resources/assets/miku-plushie/animations/plush.animation.json",
+			"anim_time_update": "",
+			"blend_weight": "",
+			"start_delay": "",
+			"loop_delay": "",
+			"animators": {
+				"be1c7d16-0d87-1b67-aff0-241184bcc81f": {
+					"name": "body",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false,
+					"keyframes": [
+						{
+							"channel": "rotation",
+							"data_points": [
+								{
+									"x": "-10",
+									"y": "0",
+									"z": "math.sin(query.anim_time * (360 * 1.4) - (45 * 2)) * -30"
+								}
+							],
+							"uuid": "fb12ba2b-23de-8de3-96a1-a30461868a74",
+							"time": 0,
+							"color": -1,
+							"interpolation": "linear"
+						},
+						{
+							"channel": "position",
+							"data_points": [
+								{
+									"x": "0",
+									"y": "math.atan(math.sin(query.anim_time * (360 * 2.8) - (45 * 6)) * 1) * q.miku.is_game * -0.5",
+									"z": "0"
+								}
+							],
+							"uuid": "32a896ae-9cc4-23fb-b992-4f59005957f8",
+							"time": 0,
+							"color": -1,
+							"interpolation": "linear"
+						}
+					]
+				},
+				"9532540f-ed1d-5532-992e-971928a45a7b": {
+					"name": "left_arm",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false,
+					"keyframes": [
+						{
+							"channel": "rotation",
+							"data_points": [
+								{
+									"x": "-50",
+									"y": "50",
+									"z": "0"
+								}
+							],
+							"uuid": "29305c72-5d38-9446-78a7-66522e1377bc",
+							"time": 0,
+							"color": -1,
+							"interpolation": "linear"
+						}
+					]
+				},
+				"f07bf905-81c2-0574-034d-fb36dd778288": {
+					"name": "right_arm",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false,
+					"keyframes": [
+						{
+							"channel": "rotation",
+							"data_points": [
+								{
+									"x": "-50",
+									"y": "-50",
+									"z": "0"
+								}
+							],
+							"uuid": "dcb50b97-1ba1-7590-7ae2-9d6dc8c29fd6",
+							"time": 0,
+							"color": -1,
+							"interpolation": "linear"
+						}
+					]
+				},
+				"4cb3df88-9ff2-1ccd-9173-b70073e76001": {
+					"name": "head",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false,
+					"keyframes": [
+						{
+							"channel": "rotation",
+							"data_points": [
+								{
+									"x": "5",
+									"y": "math.sin(query.anim_time * (360 * 1.4) - (45 * 2)) * 15 * -0.25",
+									"z": "math.sin(query.anim_time * (360 * 1.4) - (45 * 2)) * 15"
+								}
+							],
+							"uuid": "9254e768-c370-9281-25f4-50554055c16c",
+							"time": 0,
+							"color": -1,
+							"interpolation": "linear"
+						}
+					]
+				},
+				"15a98531-cb7c-91ba-5593-2b9f96239d5a": {
+					"name": "right_leg",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false,
+					"keyframes": [
+						{
+							"channel": "rotation",
+							"data_points": [
+								{
+									"x": "2",
+									"y": "0",
+									"z": "0"
+								}
+							],
+							"uuid": "fb88feef-4580-def4-f909-5c385fb794c5",
+							"time": 0,
+							"color": -1,
+							"interpolation": "linear"
+						}
+					]
+				},
+				"5acbcb93-687d-38d2-6daf-65b98cbb8ee5": {
+					"name": "left_leg",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false,
+					"keyframes": [
+						{
+							"channel": "rotation",
+							"data_points": [
+								{
+									"x": "-2",
+									"y": "0",
+									"z": "0"
+								}
+							],
+							"uuid": "17af98bb-0920-0a4c-6cbf-f1cb1dcc1532",
+							"time": 0,
+							"color": -1,
+							"interpolation": "linear"
+						}
+					]
+				},
+				"ffa0d495-5a22-294b-c041-0813416457fc": {
+					"name": "root",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false,
+					"keyframes": [
+						{
+							"channel": "rotation",
+							"data_points": [
+								{
+									"x": "5",
+									"y": "0",
+									"z": "math.sin(query.anim_time * (360 * 1.4) - (45 * 2)) * 15"
+								}
+							],
+							"uuid": "e36f71e4-27cb-2f1d-dfb7-6e3b35c958d7",
+							"time": 0,
+							"color": -1,
+							"interpolation": "linear"
+						}
+					]
+				},
+				"8a5712fd-a6fa-1f67-abb4-d94d2d3eeb66": {
+					"name": "teto_left_hair",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false,
+					"keyframes": [
+						{
+							"channel": "rotation",
+							"data_points": [
+								{
+									"x": "0",
+									"y": "0",
+									"z": "math.sin(query.anim_time * (360 * 1.4) - (45 * 2)) * -10"
+								}
+							],
+							"uuid": "5e23cbdb-6779-3485-9294-e9c35b60651f",
+							"time": 0,
+							"color": -1,
+							"interpolation": "linear"
+						}
+					]
+				},
+				"49922142-5d3e-cf34-ccb9-e3e4eccc9154": {
+					"name": "teto_left_hair2",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false,
+					"keyframes": [
+						{
+							"channel": "rotation",
+							"data_points": [
+								{
+									"x": "0",
+									"y": "0",
+									"z": "math.sin(query.anim_time * (360 * 1.4) - (45 * 3)) * -10"
+								}
+							],
+							"uuid": "4f7180e1-338b-86d4-32e8-eb4696191071",
+							"time": 0,
+							"color": -1,
+							"interpolation": "linear"
+						}
+					]
+				},
+				"a46651af-2985-3adb-76cf-1ce84fe5c992": {
+					"name": "teto_left_hair3",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false,
+					"keyframes": [
+						{
+							"channel": "rotation",
+							"data_points": [
+								{
+									"x": "0",
+									"y": "0",
+									"z": "math.sin(query.anim_time * (360 * 1.4) - (45 * 4)) * -10"
+								}
+							],
+							"uuid": "fba62eaf-ee1c-438c-9678-34d6e87b2883",
+							"time": 0,
+							"color": -1,
+							"interpolation": "linear"
+						}
+					]
+				},
+				"78d364a0-3c5a-5079-ace6-d35aeacc89ef": {
+					"name": "teto_left_hair4",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false,
+					"keyframes": [
+						{
+							"channel": "rotation",
+							"data_points": [
+								{
+									"x": "0",
+									"y": "0",
+									"z": "math.sin(query.anim_time * (360 * 1.4) - (45 * 5)) * -10"
+								}
+							],
+							"uuid": "4a5dcc13-379b-5647-b5b1-c367017db778",
+							"time": 0,
+							"color": -1,
+							"interpolation": "linear"
+						}
+					]
+				},
+				"23cba091-0328-0e05-bcb5-eb257c9b814f": {
+					"name": "teto_right_hair",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false,
+					"keyframes": [
+						{
+							"channel": "rotation",
+							"data_points": [
+								{
+									"x": "0",
+									"y": "0",
+									"z": "math.sin(query.anim_time * (360 * 1.4) - (45 * 2)) * -10"
+								}
+							],
+							"uuid": "4b4b73e1-bd32-1fbb-181a-7ae80edccbdc",
+							"time": 0,
+							"color": -1,
+							"interpolation": "linear"
+						}
+					]
+				},
+				"6477333f-cbdc-5007-16ab-a79d5da826eb": {
+					"name": "teto_right_hair2",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false,
+					"keyframes": [
+						{
+							"channel": "rotation",
+							"data_points": [
+								{
+									"x": "0",
+									"y": "0",
+									"z": "math.sin(query.anim_time * (360 * 1.4) - (45 * 3)) * -10"
+								}
+							],
+							"uuid": "5f437884-7627-93f7-2144-faa385d90841",
+							"time": 0,
+							"color": -1,
+							"interpolation": "linear"
+						}
+					]
+				},
+				"388586be-9f48-af89-80d1-c4886e3e83d6": {
+					"name": "teto_right_hair3",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false,
+					"keyframes": [
+						{
+							"channel": "rotation",
+							"data_points": [
+								{
+									"x": "0",
+									"y": "0",
+									"z": "math.sin(query.anim_time * (360 * 1.4) - (45 * 4)) * -10"
+								}
+							],
+							"uuid": "23ff8fcb-1275-eb18-c5f4-b6964e8b77b0",
+							"time": 0,
+							"color": -1,
+							"interpolation": "linear"
+						}
+					]
+				},
+				"7f94ef0b-0f24-6a9d-b6c3-c5cdd02c557f": {
+					"name": "teto_right_hair4",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false,
+					"keyframes": [
+						{
+							"channel": "rotation",
+							"data_points": [
+								{
+									"x": "0",
+									"y": "0",
+									"z": "math.sin(query.anim_time * (360 * 1.4) - (45 * 5)) * -10"
+								}
+							],
+							"uuid": "02f68ffa-5b6f-f9ef-872e-317d5b3a711b",
+							"time": 0,
+							"color": -1,
+							"interpolation": "linear"
+						}
+					]
+				},
+				"baec0393-25e5-25c5-176e-8642e0874545": {
+					"name": "hair",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false,
+					"keyframes": [
+						{
+							"channel": "rotation",
+							"data_points": [
+								{
+									"x": "0",
+									"y": "0",
+									"z": "math.sin(query.anim_time * (360 * 1.4) - (45 * 2)) * -5"
+								}
+							],
+							"uuid": "41d43505-6642-0574-b408-012c3ddc5bf5",
+							"time": 0,
+							"color": -1,
+							"interpolation": "linear"
+						},
+						{
+							"channel": "position",
+							"data_points": [
+								{
+									"x": "0",
+									"y": "math.sin(query.anim_time * (360 * 2.8) - (45 * 4)) * 0.5",
+									"z": "0"
+								}
+							],
+							"uuid": "304512ff-e0c3-6791-c46d-cfc4a43502e5",
+							"time": 0,
+							"color": -1,
+							"interpolation": "linear"
+						}
+					]
+				},
+				"55c6411e-095f-84fb-0269-c4d680d754ed": {
+					"name": "teto_plush_shadow_hair",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false,
+					"keyframes": [
+						{
+							"channel": "rotation",
+							"data_points": [
+								{
+									"x": "0",
+									"y": "math.sin(query.anim_time * (360 * 1.4) - (45 * 2)) * -5",
+									"z": "0"
+								}
+							],
+							"uuid": "b0615e18-837a-e6a0-996a-13c666db2c7b",
+							"time": 0,
+							"color": -1,
+							"interpolation": "linear"
+						}
+					]
+				},
+				"d3f66aa8-92e2-e7d0-965d-d644c8c8260c": {
+					"name": "teto_plush_shadow_hair2",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false,
+					"keyframes": [
+						{
+							"channel": "rotation",
+							"data_points": [
+								{
+									"x": "0",
+									"y": "math.sin(query.anim_time * (360 * 1.4) - (45 * 2)) * -5",
+									"z": "0"
+								}
+							],
+							"uuid": "930561fd-6b3e-a4de-edb0-f3f5e8596d55",
+							"time": 0,
+							"color": -1,
+							"interpolation": "linear"
+						}
+					]
+				},
+				"dc03bed7-f5aa-0dd0-b44f-c6319ca492db": {
+					"name": "teto_plush_shadow_hair3",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false,
+					"keyframes": [
+						{
+							"channel": "rotation",
+							"data_points": [
+								{
+									"x": "0",
+									"y": "math.sin(query.anim_time * (360 * 1.4) - (45 * 2)) * -5",
+									"z": "0"
+								}
+							],
+							"uuid": "41fbc4a9-8e70-6e2c-78cd-81d62f4c428c",
+							"time": 0,
+							"color": -1,
+							"interpolation": "linear"
+						}
+					]
+				},
+				"7370128d-ae30-1233-071e-7d4e449218c6": {
+					"name": "teto_plush_shadow_hair4",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false,
+					"keyframes": [
+						{
+							"channel": "rotation",
+							"data_points": [
+								{
+									"x": "0",
+									"y": "math.sin(query.anim_time * (360 * 1.4) - (45 * 2)) * -5",
+									"z": "0"
+								}
+							],
+							"uuid": "9791a3b4-6579-d4df-c190-dfba213408be",
+							"time": 0,
+							"color": -1,
+							"interpolation": "linear"
+						}
+					]
+				},
+				"6121a5e3-d924-fc3c-3ea9-cd853651c34a": {
+					"name": "teto_plush_lobster",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false,
+					"keyframes": [
+						{
+							"channel": "rotation",
+							"data_points": [
+								{
+									"x": "0",
+									"y": "0",
+									"z": "math.sin(query.anim_time * (360 * 1.4) - (45 * 2)) * -5"
+								}
+							],
+							"uuid": "29cf0842-4418-7f3f-280c-bf24be637538",
+							"time": 0,
+							"color": -1,
+							"interpolation": "linear"
+						},
+						{
+							"channel": "position",
+							"data_points": [
+								{
+									"x": "0",
+									"y": "math.sin(query.anim_time * (360 * 2.8) - (45 * 4)) * 0.5",
+									"z": "0"
+								}
+							],
+							"uuid": "a5d26c6a-60c4-cdf0-ab30-405d9ab87ce5",
+							"time": 0,
+							"color": -1,
+							"interpolation": "linear"
+						}
+					]
+				},
+				"ec10656a-5091-96a4-51f1-ad7c4007f37b": {
+					"name": "teto_plush_lobster_tail",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false,
+					"keyframes": [
+						{
+							"channel": "rotation",
+							"data_points": [
+								{
+									"x": "0",
+									"y": "0",
+									"z": "math.sin(query.anim_time * (360 * 1.4) - (45 * 0)) * 10"
+								}
+							],
+							"uuid": "6ab5b4ca-811c-8314-54ab-31fa9231b2cc",
+							"time": 0,
+							"color": -1,
+							"interpolation": "linear"
+						}
+					]
+				},
+				"6f856adb-c0cc-a24e-f128-bc05871ba2c0": {
+					"name": "teto_plush_lobster_tail2",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false,
+					"keyframes": [
+						{
+							"channel": "rotation",
+							"data_points": [
+								{
+									"x": "0",
+									"y": "0",
+									"z": "math.sin(query.anim_time * (360 * 1.4) - (45 * 1)) * 10"
+								}
+							],
+							"uuid": "c29e69f0-2d4e-79a1-e4fd-4c09d7b09f0a",
+							"time": 0,
+							"color": -1,
+							"interpolation": "linear"
+						}
+					]
+				},
+				"9b7fd794-a667-e01e-6333-c3e406eee112": {
+					"name": "teto_plush_lobster_tail3",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false,
+					"keyframes": [
+						{
+							"channel": "rotation",
+							"data_points": [
+								{
+									"x": "0",
+									"y": "0",
+									"z": "math.sin(query.anim_time * (360 * 1.4) - (45 * 0)) * 10"
+								}
+							],
+							"uuid": "29cec65f-adff-a61a-0344-92846892a697",
+							"time": 0,
+							"color": -1,
+							"interpolation": "linear"
+						}
+					]
+				},
+				"7995562e-2d31-3fbf-1850-71d733210b79": {
+					"name": "teto_plush_lobster_tail4",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false,
+					"keyframes": [
+						{
+							"channel": "rotation",
+							"data_points": [
+								{
+									"x": "0",
+									"y": "0",
+									"z": "math.sin(query.anim_time * (360 * 1.4) - (45 * 1)) * 10"
+								}
+							],
+							"uuid": "112f4142-f68a-1a30-1554-92dfd0fa8ab1",
+							"time": 0,
+							"color": -1,
+							"interpolation": "linear"
+						}
+					]
+				}
+			}
+		},
+		{
+			"uuid": "b1110999-2fa0-3156-6b32-ca32f2380e48",
+			"name": "misc.dance.teto.birdbrain",
+			"loop": "loop",
+			"override": false,
+			"length": 2,
+			"snapping": 24,
+			"selected": false,
+			"saved": true,
+			"path": "../src/main/resources/assets/miku-plushie/animations/plush.animation.json",
+			"anim_time_update": "",
+			"blend_weight": "",
+			"start_delay": "",
+			"loop_delay": "",
+			"animators": {
+				"be1c7d16-0d87-1b67-aff0-241184bcc81f": {
+					"name": "body",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false,
+					"keyframes": [
+						{
+							"channel": "rotation",
+							"data_points": [
+								{
+									"x": "math.sin(query.anim_time * (360 * 0.5) - (45 * 1)) * -20 - 20",
+									"y": "0",
+									"z": "0"
+								}
+							],
+							"uuid": "8f9b682f-0dee-edca-f351-7684f8af93c5",
+							"time": 0,
+							"color": -1,
+							"interpolation": "linear"
+						},
+						{
+							"channel": "position",
+							"data_points": [
+								{
+									"x": "0",
+									"y": "math.exp((math.sin(query.anim_time * (360 * 3) - (45 * 1)) * 1)) * -0.5 + 0.5",
+									"z": "0"
+								}
+							],
+							"uuid": "9333cc60-87c4-3aa4-4908-0829a84c31ae",
+							"time": 0,
+							"color": -1,
+							"interpolation": "linear"
+						}
+					]
+				},
+				"9532540f-ed1d-5532-992e-971928a45a7b": {
+					"name": "left_arm",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false,
+					"keyframes": [
+						{
+							"channel": "rotation",
+							"data_points": [
+								{
+									"x": "math.sin(query.anim_time * (360 * 0.5) - (45 * 0)) * -30 - 20",
+									"y": "0",
+									"z": "-15"
+								}
+							],
+							"uuid": "716aeabb-b7cd-3dbc-770a-941eb92454c4",
+							"time": 0,
+							"color": -1,
+							"interpolation": "linear"
+						}
+					]
+				},
+				"f07bf905-81c2-0574-034d-fb36dd778288": {
+					"name": "right_arm",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false,
+					"keyframes": [
+						{
+							"channel": "rotation",
+							"data_points": [
+								{
+									"x": "math.sin(query.anim_time * (360 * 0.5) - (45 * 0)) * -60 + 100",
+									"y": "-30",
+									"z": "0"
+								}
+							],
+							"uuid": "2698c364-aa4e-59c4-798e-cd9e16ea5a74",
+							"time": 0,
+							"color": -1,
+							"interpolation": "linear"
+						}
+					]
+				},
+				"ffa0d495-5a22-294b-c041-0813416457fc": {
+					"name": "root",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false,
+					"keyframes": [
+						{
+							"channel": "rotation",
+							"data_points": [
+								{
+									"x": "math.sin(query.anim_time * (360 * 0.5) - (45 * 1)) * 5 + 5",
+									"y": "0",
+									"z": "0"
+								}
+							],
+							"uuid": "376a3ae3-3c33-f9ef-e065-13d487736c42",
+							"time": 0,
+							"color": -1,
+							"interpolation": "linear"
+						},
+						{
+							"channel": "position",
+							"data_points": [
+								{
+									"x": "0",
+									"y": "math.exp((math.sin(query.anim_time * (360 * 3)) * 1)) * -0.5 + 1.25",
+									"z": "math.sin(query.anim_time * (360 * 0.5) - (45 * 1)) * 2 + 2"
+								}
+							],
+							"uuid": "28ab67c4-5f1b-e26e-a48c-dbdb7b24e0d3",
+							"time": 0,
+							"color": -1,
+							"interpolation": "linear"
+						}
+					]
+				},
+				"baec0393-25e5-25c5-176e-8642e0874545": {
+					"name": "hair",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false,
+					"keyframes": [
+						{
+							"channel": "rotation",
+							"data_points": [
+								{
+									"x": "math.sin(query.anim_time * (360 * 0.5) - (45 * 1)) * 30 + 15",
+									"y": "0",
+									"z": "0"
+								}
+							],
+							"uuid": "18e14188-2768-2cf2-9463-942befb81154",
+							"time": 0,
+							"color": -1,
+							"interpolation": "linear"
+						},
+						{
+							"channel": "position",
+							"data_points": [
+								{
+									"x": "0",
+									"y": "math.exp((math.sin(query.anim_time * (360 * 3) - (45 * 2)) * 1)) * -0.25 + 0.5",
+									"z": "0"
+								}
+							],
+							"uuid": "64592f43-aea8-7a6b-2745-e68dab89ff31",
+							"time": 0,
+							"color": -1,
+							"interpolation": "linear"
+						}
+					]
+				},
+				"7164d5d1-5b5a-2efe-552c-0f4218c884b4": {
+					"name": "teto_left_hair",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false,
+					"keyframes": [
+						{
+							"channel": "rotation",
+							"data_points": [
+								{
+									"x": "0",
+									"y": "0",
+									"z": "math.sin(query.anim_time * (360 * 0.5) - (45 * 3)) * 5 - 5"
+								}
+							],
+							"uuid": "371ddbe5-b932-c01b-520b-a8c82b5b9c22",
+							"time": 0,
+							"color": -1,
+							"interpolation": "linear"
+						}
+					]
+				},
+				"bef58244-0f94-49da-b674-a47236cdc4ad": {
+					"name": "teto_left_hair2",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false,
+					"keyframes": [
+						{
+							"channel": "rotation",
+							"data_points": [
+								{
+									"x": "math.sin(query.anim_time * (360 * 0.5) - (45 * 2)) * 5",
+									"y": "0",
+									"z": "0"
+								}
+							],
+							"uuid": "a05f050d-9ef6-8245-7da3-2456720558b2",
+							"time": 0,
+							"color": -1,
+							"interpolation": "linear"
+						}
+					]
+				},
+				"173311da-8cd6-e1e2-9d64-596e98f6b013": {
+					"name": "teto_left_hair3",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false,
+					"keyframes": [
+						{
+							"channel": "rotation",
+							"data_points": [
+								{
+									"x": "math.sin(query.anim_time * (360 * 0.5) - (45 * 3)) * 10",
+									"y": "0",
+									"z": "0"
+								}
+							],
+							"uuid": "bb17883c-2b3d-3546-a548-69a3f9e0c080",
+							"time": 0,
+							"color": -1,
+							"interpolation": "linear"
+						}
+					]
+				},
+				"7a9c0b95-eaec-8522-b12f-5d30d474e436": {
+					"name": "teto_left_hair4",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false,
+					"keyframes": [
+						{
+							"channel": "rotation",
+							"data_points": [
+								{
+									"x": "math.sin(query.anim_time * (360 * 0.5) - (45 * 4)) * 10",
+									"y": "0",
+									"z": "0"
+								}
+							],
+							"uuid": "93319829-539f-f587-36f8-33912d200cc0",
+							"time": 0,
+							"color": -1,
+							"interpolation": "linear"
+						}
+					]
+				},
+				"ddc700ab-03cc-8920-0127-e1e04e6de9b0": {
+					"name": "teto_right_hair",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false,
+					"keyframes": [
+						{
+							"channel": "rotation",
+							"data_points": [
+								{
+									"x": "0",
+									"y": "0",
+									"z": "math.sin(query.anim_time * (360 * 0.5) - (45 * 3)) * -5 + 5"
+								}
+							],
+							"uuid": "998c5683-32af-aa04-ad7c-ed27cbcb970f",
+							"time": 0,
+							"color": -1,
+							"interpolation": "linear"
+						}
+					]
+				},
+				"e0bcbefe-d56b-60d8-52e8-4b3d70b07ff4": {
+					"name": "teto_right_hair2",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false,
+					"keyframes": [
+						{
+							"channel": "rotation",
+							"data_points": [
+								{
+									"x": "math.sin(query.anim_time * (360 * 0.5) - (45 * 2)) * 5",
+									"y": "0",
+									"z": "0"
+								}
+							],
+							"uuid": "df248b83-4869-662e-c7bc-3b95eae22066",
+							"time": 0,
+							"color": -1,
+							"interpolation": "linear"
+						}
+					]
+				},
+				"f0b494e5-5180-87f8-08bf-b609c050701f": {
+					"name": "teto_right_hair3",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false,
+					"keyframes": [
+						{
+							"channel": "rotation",
+							"data_points": [
+								{
+									"x": "math.sin(query.anim_time * (360 * 0.5) - (45 * 3)) * 10",
+									"y": "0",
+									"z": "0"
+								}
+							],
+							"uuid": "ab299234-319d-33e0-dadd-f78589a59375",
+							"time": 0,
+							"color": -1,
+							"interpolation": "linear"
+						}
+					]
+				},
+				"3b1fec31-fade-7d6e-84df-e7aa22a9780b": {
+					"name": "teto_right_hair4",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false,
+					"keyframes": [
+						{
+							"channel": "rotation",
+							"data_points": [
+								{
+									"x": "math.sin(query.anim_time * (360 * 0.5) - (45 * 4)) * 10",
+									"y": "0",
+									"z": "0"
+								}
+							],
+							"uuid": "54cf091d-93e8-0c9e-3295-0a27212102f3",
+							"time": 0,
+							"color": -1,
+							"interpolation": "linear"
+						}
+					]
+				},
+				"4cb3df88-9ff2-1ccd-9173-b70073e76001": {
+					"name": "head",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false,
+					"keyframes": [
+						{
+							"channel": "rotation",
+							"data_points": [
+								{
+									"x": "math.sin(query.anim_time * (360 * 0.5) - (45 * 0)) * -30",
+									"y": "0",
+									"z": "0"
+								}
+							],
+							"uuid": "6d02ec61-692b-4a27-7051-b481f2e977d4",
+							"time": 0,
+							"color": -1,
+							"interpolation": "linear"
+						}
+					]
+				},
+				"81a516fd-7603-7020-04e3-705032196b29": {
+					"name": "teto_plush_shadow_hair",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false,
+					"keyframes": [
+						{
+							"channel": "rotation",
+							"data_points": [
+								{
+									"x": "math.exp((math.sin(query.anim_time * (360 * 3) - (45 * 0)) * 1)) * -10",
+									"y": "0",
+									"z": "0"
+								}
+							],
+							"uuid": "fec3cda9-11da-f597-f78c-53086d8e6ae2",
+							"time": 0,
+							"color": -1,
+							"interpolation": "linear"
+						}
+					]
+				},
+				"6a9c93ef-ba5c-47f7-92bf-10370d99b49e": {
+					"name": "teto_plush_shadow_hair2",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false,
+					"keyframes": [
+						{
+							"channel": "rotation",
+							"data_points": [
+								{
+									"x": "math.exp((math.sin(query.anim_time * (360 * 3) - (45 * 0)) * 1)) * -10",
+									"y": "0",
+									"z": "0"
+								}
+							],
+							"uuid": "80ab2fb4-9749-48f6-2168-a996269e2779",
+							"time": 0,
+							"color": -1,
+							"interpolation": "linear"
+						}
+					]
+				},
+				"3e9329f7-04f4-4bc6-95fc-2cde13d47fb9": {
+					"name": "teto_plush_shadow_hair3",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false,
+					"keyframes": [
+						{
+							"channel": "rotation",
+							"data_points": [
+								{
+									"x": "math.exp((math.sin(query.anim_time * (360 * 3) - (45 * 0)) * 1)) * -10",
+									"y": "0",
+									"z": "0"
+								}
+							],
+							"uuid": "390c4199-9568-01e9-7a87-5d329b3ea507",
+							"time": 0,
+							"color": -1,
+							"interpolation": "linear"
+						}
+					]
+				},
+				"b98372f1-4337-67b6-4c92-57cd573cc32f": {
+					"name": "teto_plush_shadow_hair4",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false,
+					"keyframes": [
+						{
+							"channel": "rotation",
+							"data_points": [
+								{
+									"x": "math.exp((math.sin(query.anim_time * (360 * 3) - (45 * 0)) * 1)) * -10",
+									"y": "0",
+									"z": "0"
+								}
+							],
+							"uuid": "7518f7a0-9262-b1d2-f7b4-885d6fa85c24",
+							"time": 0,
+							"color": -1,
+							"interpolation": "linear"
+						}
+					]
+				},
+				"3b02ab1b-c402-d4a6-1079-06c5beabb02a": {
+					"name": "teto_plush_lobster",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false,
+					"keyframes": [
+						{
+							"channel": "rotation",
+							"data_points": [
+								{
+									"x": "math.sin(query.anim_time * (360 * 0.5) - (45 * 1)) * 30 + 15",
+									"y": "0",
+									"z": "0"
+								}
+							],
+							"uuid": "579eb872-1372-4d6a-5452-0513b42a30c8",
+							"time": 0,
+							"color": -1,
+							"interpolation": "linear"
+						},
+						{
+							"channel": "position",
+							"data_points": [
+								{
+									"x": "0",
+									"y": "math.exp((math.sin(query.anim_time * (360 * 3) - (45 * 2)) * 1)) * -0.25 + 0.5",
+									"z": "0"
+								}
+							],
+							"uuid": "e5dc0684-de1f-8087-46ad-58a8eb1110ca",
+							"time": 0,
+							"color": -1,
+							"interpolation": "linear"
+						}
+					]
+				},
+				"08e6ef44-f48c-4413-0f29-fbcbac59321c": {
+					"name": "teto_plush_lobster_tail",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false,
+					"keyframes": [
+						{
+							"channel": "rotation",
+							"data_points": [
+								{
+									"x": "math.sin(query.anim_time * (360 * 0.5) - (45 * 2)) * 15 + 15",
+									"y": "0",
+									"z": "0"
+								}
+							],
+							"uuid": "f5cf6f53-f3ea-5beb-0686-f323defcebdf",
+							"time": 0,
+							"color": -1,
+							"interpolation": "linear"
+						}
+					]
+				},
+				"f4353290-22df-f973-5fdd-13e9b23c92bf": {
+					"name": "teto_plush_lobster_tail2",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false,
+					"keyframes": [
+						{
+							"channel": "rotation",
+							"data_points": [
+								{
+									"x": "math.sin(query.anim_time * (360 * 0.5) - (45 * 3)) * 15 + 15",
+									"y": "0",
+									"z": "0"
+								}
+							],
+							"uuid": "3d78be81-494f-d1c5-42a0-0f7cca0bb6cd",
+							"time": 0,
+							"color": -1,
+							"interpolation": "linear"
+						}
+					]
+				},
+				"3784e4b4-b8a1-5cb3-a14b-d26075bf7896": {
+					"name": "teto_plush_lobster_tail3",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false,
+					"keyframes": [
+						{
+							"channel": "rotation",
+							"data_points": [
+								{
+									"x": "math.sin(query.anim_time * (360 * 0.5) - (45 * 2)) * 15 + 15",
+									"y": "0",
+									"z": "0"
+								}
+							],
+							"uuid": "1b8754f0-e4d8-4f60-5411-d8f203f1e427",
+							"time": 0,
+							"color": -1,
+							"interpolation": "linear"
+						}
+					]
+				},
+				"bd81ab65-f788-d3a2-c26f-ee9e01483673": {
+					"name": "teto_plush_lobster_tail4",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false,
+					"keyframes": [
+						{
+							"channel": "rotation",
+							"data_points": [
+								{
+									"x": "math.sin(query.anim_time * (360 * 0.5) - (45 * 3)) * 15 + 15",
+									"y": "0",
+									"z": "0"
+								}
+							],
+							"uuid": "52980a21-f426-feee-5447-18ffd7e0b767",
+							"time": 0,
+							"color": -1,
+							"interpolation": "linear"
+						}
+					]
+				}
+			}
+		},
+		{
+			"uuid": "44da280e-d131-c541-0234-c03bbefa4311",
+			"name": "misc.dance.teto.liar-dancer",
+			"loop": "loop",
+			"override": false,
+			"length": 2.8333,
+			"snapping": 24,
+			"selected": false,
+			"saved": true,
+			"path": "../src/main/resources/assets/miku-plushie/animations/plush.animation.json",
+			"anim_time_update": "",
+			"blend_weight": "",
+			"start_delay": "",
+			"loop_delay": "",
+			"animators": {
+				"be1c7d16-0d87-1b67-aff0-241184bcc81f": {
+					"name": "body",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false,
+					"keyframes": [
+						{
+							"channel": "rotation",
+							"data_points": [
+								{
+									"x": "math.sin(query.anim_time * (360 * 1.41)) * 5 - 10",
+									"y": "0",
+									"z": "0"
+								}
+							],
+							"uuid": "ba4e4b4a-bb48-c422-38e9-62e722dead97",
+							"time": 0,
+							"color": -1,
+							"interpolation": "linear"
+						},
+						{
+							"channel": "position",
+							"data_points": [
+								{
+									"x": "0",
+									"y": "math.atan(math.sin(query.anim_time * (360 * (1.41 * 2)) - (45 * 1)) * 2) * q.miku.is_game * -0.25 + 0.25",
+									"z": "0"
+								}
+							],
+							"uuid": "a6f90927-bcac-e3b6-7dd3-1aa0f4cf2681",
+							"time": 0,
+							"color": -1,
+							"interpolation": "linear"
+						}
+					]
+				},
+				"9532540f-ed1d-5532-992e-971928a45a7b": {
+					"name": "left_arm",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false,
+					"keyframes": [
+						{
+							"channel": "rotation",
+							"data_points": [
+								{
+									"x": "math.sin(query.anim_time * (360 * 1.41)) * -40 + 90",
+									"y": "20",
+									"z": "0"
+								}
+							],
+							"uuid": "3b745a92-af62-2deb-968d-77e09fa3f08d",
+							"time": 0,
+							"color": -1,
+							"interpolation": "linear"
+						}
+					]
+				},
+				"f07bf905-81c2-0574-034d-fb36dd778288": {
+					"name": "right_arm",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false,
+					"keyframes": [
+						{
+							"channel": "rotation",
+							"data_points": [
+								{
+									"x": "math.sin(query.anim_time * (360 * 1.41)) * 40 + 90",
+									"y": "-20",
+									"z": "0"
+								}
+							],
+							"uuid": "6237152d-05e4-928d-8a95-64712f6cfb30",
+							"time": 0,
+							"color": -1,
+							"interpolation": "linear"
+						}
+					]
+				},
+				"baec0393-25e5-25c5-176e-8642e0874545": {
+					"name": "hair",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false,
+					"keyframes": [
+						{
+							"channel": "position",
+							"data_points": [
+								{
+									"x": "0",
+									"y": "math.atan(math.sin(query.anim_time * (360 * (1.41 * 2)) - (45 * 2)) * 2) * q.miku.is_game * -0.25",
+									"z": "0"
+								}
+							],
+							"uuid": "12f9211e-8761-90ec-4f9b-c042d1e52741",
+							"time": 0,
+							"color": -1,
+							"interpolation": "linear"
+						}
+					]
+				},
+				"4cb3df88-9ff2-1ccd-9173-b70073e76001": {
+					"name": "head",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false,
+					"keyframes": [
+						{
+							"channel": "rotation",
+							"data_points": [
+								{
+									"x": "math.sin(query.anim_time * (360 * 1.41)) * -5 + 5",
+									"y": "0",
+									"z": "0"
+								}
+							],
+							"uuid": "a52c7e55-1f31-f671-e090-63cabfd0c9b5",
+							"time": 0,
+							"color": -1,
+							"interpolation": "linear"
+						}
+					]
+				},
+				"ffa0d495-5a22-294b-c041-0813416457fc": {
+					"name": "root",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false,
+					"keyframes": [
+						{
+							"channel": "rotation",
+							"data_points": [
+								{
+									"x": "5",
+									"y": "math.atan(math.sin(query.anim_time * (360 * (1.41 / 4)) - (45 * 0)) * 16) * q.miku.is_game * 40",
+									"z": "0"
+								}
+							],
+							"uuid": "df0c99fd-a8e3-4b8e-4454-9e4e83297c7e",
+							"time": 0,
+							"color": -1,
+							"interpolation": "linear"
+						},
+						{
+							"channel": "position",
+							"data_points": [
+								{
+									"x": "0",
+									"y": "math.atan(math.sin(query.anim_time * (360 * (1.41 * 2)) - (45 * 0)) * 2) * q.miku.is_game * -0.25 + 0.25",
+									"z": "0"
+								}
+							],
+							"uuid": "76491f7a-da18-86b3-e931-399ae46d572c",
+							"time": 0,
+							"color": -1,
+							"interpolation": "linear"
+						}
+					]
+				},
+				"15a98531-cb7c-91ba-5593-2b9f96239d5a": {
+					"name": "right_leg",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false,
+					"keyframes": [
+						{
+							"channel": "rotation",
+							"data_points": [
+								{
+									"x": "math.sin(query.anim_time * (360 * 1.41)) * -10",
+									"y": "0",
+									"z": "0"
+								}
+							],
+							"uuid": "972245d4-e50a-4acd-fc05-7e38c1149953",
+							"time": 0,
+							"color": -1,
+							"interpolation": "linear"
+						}
+					]
+				},
+				"5acbcb93-687d-38d2-6daf-65b98cbb8ee5": {
+					"name": "left_leg",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false,
+					"keyframes": [
+						{
+							"channel": "rotation",
+							"data_points": [
+								{
+									"x": "math.sin(query.anim_time * (360 * 1.41)) * 10",
+									"y": "0",
+									"z": "0"
+								}
+							],
+							"uuid": "1ed429ae-b7b2-0439-2136-853fc11026ed",
+							"time": 0,
+							"color": -1,
+							"interpolation": "linear"
+						}
+					]
+				},
+				"1555154b-ba4e-ead8-0699-673a68108826": {
+					"name": "teto_plush_lobster",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false,
+					"keyframes": [
+						{
+							"channel": "position",
+							"data_points": [
+								{
+									"x": "0",
+									"y": "math.atan(math.sin(query.anim_time * (360 * (1.41 * 2)) - (45 * 2)) * 2) * q.miku.is_game * -0.25",
+									"z": "0"
+								}
+							],
+							"uuid": "941105f1-2349-e03a-9d40-098923c9efd1",
+							"time": 0,
+							"color": -1,
+							"interpolation": "linear"
+						}
+					]
+				}
+			}
+		},
+		{
+			"uuid": "91f63458-a51f-51c9-53ea-aee7e7ec4894",
 			"name": "attack.swipe",
 			"loop": "once",
 			"override": false,
@@ -6478,7 +8371,7 @@
 			"snapping": 24,
 			"selected": false,
 			"saved": true,
-			"path": "../miku-plushie/animations/plush.animation.json",
+			"path": "../src/main/resources/assets/miku-plushie/animations/plush.animation.json",
 			"anim_time_update": "",
 			"blend_weight": "",
 			"start_delay": "",
@@ -6499,7 +8392,7 @@
 									"z": "0"
 								}
 							],
-							"uuid": "c6d75868-4e8c-1d81-0b12-b8403fab872d",
+							"uuid": "69962e3d-dd23-b3f2-16a2-1d4e65c60f1c",
 							"time": 0,
 							"color": -1,
 							"interpolation": "linear"
@@ -6521,7 +8414,7 @@
 									"z": "math.atan(math.sin(query.anim_time * (360 * 2) - (45 * 2)) * 3) * q.miku.is_game * 22.5 - 45"
 								}
 							],
-							"uuid": "deccff5d-889f-d534-074b-167d7fe9fb78",
+							"uuid": "67ddeb40-61b1-6a26-a1b4-e62da8bb8f66",
 							"time": 0,
 							"color": -1,
 							"interpolation": "linear"
@@ -6531,7 +8424,7 @@
 			}
 		},
 		{
-			"uuid": "b7c79f16-b952-8be9-9232-aa85e075bfdc",
+			"uuid": "cbf707ab-14a5-7ce6-68bb-c37f2a0813c4",
 			"name": "attack.swipe2",
 			"loop": "once",
 			"override": false,
@@ -6539,7 +8432,7 @@
 			"snapping": 24,
 			"selected": false,
 			"saved": true,
-			"path": "../miku-plushie/animations/plush.animation.json",
+			"path": "../src/main/resources/assets/miku-plushie/animations/plush.animation.json",
 			"anim_time_update": "",
 			"blend_weight": "",
 			"start_delay": "",
@@ -6560,7 +8453,7 @@
 									"z": "0"
 								}
 							],
-							"uuid": "8ad48694-3912-939e-0cf1-d615222eb080",
+							"uuid": "8f1fb2ea-2a66-598a-5174-ead30d24fe56",
 							"time": 0,
 							"color": -1,
 							"interpolation": "linear"
@@ -6582,7 +8475,7 @@
 									"z": "90"
 								}
 							],
-							"uuid": "193f1aa4-9878-7e38-27f7-b30820ba4ca2",
+							"uuid": "944a9bd5-95e6-7b72-8935-0cac01cd1ec6",
 							"time": 0,
 							"color": -1,
 							"interpolation": "linear"
@@ -6592,7 +8485,7 @@
 			}
 		},
 		{
-			"uuid": "d95f5da4-31e3-e1f6-e562-e8fbd218530f",
+			"uuid": "d3c3299c-022a-2e03-f073-b135c593d7bc",
 			"name": "attack.swipe3",
 			"loop": "once",
 			"override": false,
@@ -6600,7 +8493,7 @@
 			"snapping": 24,
 			"selected": false,
 			"saved": true,
-			"path": "../miku-plushie/animations/plush.animation.json",
+			"path": "../src/main/resources/assets/miku-plushie/animations/plush.animation.json",
 			"anim_time_update": "",
 			"blend_weight": "",
 			"start_delay": "",
@@ -6621,7 +8514,7 @@
 									"z": "0"
 								}
 							],
-							"uuid": "86314d4b-3bf5-7c1a-e839-7bdce87d2e2e",
+							"uuid": "2271b7d8-cdd2-b06a-35ff-9d713f82fbb5",
 							"time": 0,
 							"color": -1,
 							"interpolation": "linear"
@@ -6643,7 +8536,7 @@
 									"z": "0"
 								}
 							],
-							"uuid": "929e91fb-d238-5ccd-11f7-317236b29be4",
+							"uuid": "d3d60c99-008f-0724-4e93-3fa49a2ec11f",
 							"time": 0,
 							"color": -1,
 							"interpolation": "linear"
@@ -6653,7 +8546,7 @@
 			}
 		},
 		{
-			"uuid": "778a1282-9fb4-bbc5-8e86-bc90c36ebbf0",
+			"uuid": "7c5a9d21-14f1-ed08-529e-ca6ed0268b4a",
 			"name": "misc.eat",
 			"loop": "loop",
 			"override": false,
@@ -6661,7 +8554,7 @@
 			"snapping": 24,
 			"selected": false,
 			"saved": true,
-			"path": "../miku-plushie/animations/plush.animation.json",
+			"path": "../src/main/resources/assets/miku-plushie/animations/plush.animation.json",
 			"anim_time_update": "",
 			"blend_weight": "",
 			"start_delay": "",
@@ -6682,7 +8575,7 @@
 									"z": "math.sin(query.anim_time * (360 * 3/2) - (45 * 1)) * 5"
 								}
 							],
-							"uuid": "f93f517c-023f-c680-475f-4dac30904797",
+							"uuid": "66809116-e630-e762-b7b2-af77d012a2c0",
 							"time": 0,
 							"color": -1,
 							"interpolation": "linear"
@@ -6696,7 +8589,7 @@
 									"z": "0"
 								}
 							],
-							"uuid": "062ba253-100f-6ec9-29e4-82b052fc12fd",
+							"uuid": "113ed694-7932-1529-0d4b-4d651303e5aa",
 							"time": 0,
 							"color": -1,
 							"interpolation": "linear"
@@ -6718,7 +8611,7 @@
 									"z": "0"
 								}
 							],
-							"uuid": "a92ae3c2-a737-beb0-8ddd-988ab06ccd38",
+							"uuid": "14f09b6d-317c-a416-c609-efd0890aac7c",
 							"time": 0,
 							"color": -1,
 							"interpolation": "linear"
@@ -6740,7 +8633,7 @@
 									"z": "0"
 								}
 							],
-							"uuid": "8ee63c97-f551-31c8-8a23-f4ad1e86ffd8",
+							"uuid": "1b6224f6-efc8-2e7c-94af-faf7d9194cc7",
 							"time": 0,
 							"color": -1,
 							"interpolation": "linear"
@@ -6762,7 +8655,7 @@
 									"z": "0"
 								}
 							],
-							"uuid": "f0f6d592-98a3-ff8f-f0a9-079473aed998",
+							"uuid": "5a5c5f71-dbdc-c74f-c5cb-cfb04e263adb",
 							"time": 0,
 							"color": -1,
 							"interpolation": "linear"
@@ -6784,12 +8677,456 @@
 									"z": "math.sin(query.anim_time * (360 * 3/2) - (45 * 1)) * 5"
 								}
 							],
-							"uuid": "1680dceb-c2aa-2053-6239-be8d6fc9c807",
+							"uuid": "0b52e974-18ee-3deb-fa35-29fea224f5b4",
 							"time": 0,
 							"color": -1,
 							"interpolation": "linear"
 						}
 					]
+				},
+				"7a9c4ac0-13c6-0cfc-0ced-dc0d816c6d63": {
+					"name": "teto_plush_lobster",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false,
+					"keyframes": [
+						{
+							"channel": "rotation",
+							"data_points": [
+								{
+									"x": "math.sin(query.anim_time * (360 * 3) - (45 * 0)) * 10",
+									"y": "0",
+									"z": "math.sin(query.anim_time * (360 * 3/2) - (45 * 1)) * 5"
+								}
+							],
+							"uuid": "0038b1de-e3b5-5f8d-5ea8-9dd743ca4650",
+							"time": 0,
+							"color": -1,
+							"interpolation": "linear"
+						}
+					]
+				}
+			}
+		},
+		{
+			"uuid": "b09383c8-2c60-ea4d-e416-a27f98dec0eb",
+			"name": "misc.spawn",
+			"loop": "loop",
+			"override": false,
+			"length": 0.5,
+			"snapping": 24,
+			"selected": true,
+			"saved": true,
+			"path": "../src/main/resources/assets/miku-plushie/animations/plush.animation.json",
+			"anim_time_update": "",
+			"blend_weight": "",
+			"start_delay": "",
+			"loop_delay": "",
+			"animators": {
+				"ffa0d495-5a22-294b-c041-0813416457fc": {
+					"name": "root",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false,
+					"keyframes": [
+						{
+							"channel": "rotation",
+							"data_points": [
+								{
+									"x": "0",
+									"y": "math.sin(query.anim_time * (360 * 0.5) - (45 * 0)) * 360 - 360",
+									"z": "0"
+								}
+							],
+							"uuid": "3c2fae5a-80a8-cefd-fe9e-4a6a4e58c181",
+							"time": 0,
+							"color": -1,
+							"interpolation": "linear"
+						},
+						{
+							"channel": "position",
+							"data_points": [
+								{
+									"x": "0",
+									"y": "math.sin(query.anim_time * (360 * 1) - (45 * 0)) * 8",
+									"z": "0"
+								}
+							],
+							"uuid": "b03e102e-c5b3-c4f2-41f4-9e4d73c882c1",
+							"time": 0,
+							"color": -1,
+							"interpolation": "linear"
+						},
+						{
+							"channel": "scale",
+							"data_points": [
+								{
+									"x": "1",
+									"y": "math.sin(query.anim_time * (360 * 2) - (45 * 0)) * -0.15 + 1",
+									"z": "1"
+								}
+							],
+							"uuid": "b7ca881d-a4e9-f9aa-5243-aba82486de90",
+							"time": 0,
+							"color": -1,
+							"uniform": true,
+							"interpolation": "linear"
+						}
+					]
+				},
+				"be1c7d16-0d87-1b67-aff0-241184bcc81f": {
+					"name": "body",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false,
+					"keyframes": [
+						{
+							"channel": "rotation",
+							"data_points": [
+								{
+									"x": "0",
+									"y": "math.sin(query.anim_time * (360 * 1) - (45 * 0)) * -30",
+									"z": "0"
+								}
+							],
+							"uuid": "f825ea1f-3317-3b08-ec9d-c29377344814",
+							"time": 0,
+							"color": -1,
+							"interpolation": "linear"
+						}
+					]
+				},
+				"9532540f-ed1d-5532-992e-971928a45a7b": {
+					"name": "left_arm",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false,
+					"keyframes": [
+						{
+							"channel": "rotation",
+							"data_points": [
+								{
+									"x": "math.sin(query.anim_time * (360 * 1)) * 60",
+									"y": "0",
+									"z": "math.sin(query.anim_time * (360 * 1)) * -30"
+								}
+							],
+							"uuid": "c416e2f1-4265-0e2d-8e20-2c3acded74bb",
+							"time": 0,
+							"color": -1,
+							"interpolation": "linear"
+						}
+					]
+				},
+				"f07bf905-81c2-0574-034d-fb36dd778288": {
+					"name": "right_arm",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false,
+					"keyframes": [
+						{
+							"channel": "rotation",
+							"data_points": [
+								{
+									"x": "math.sin(query.anim_time * (360 * 1)) * -60",
+									"y": "0",
+									"z": "math.sin(query.anim_time * (360 * 1)) * 30"
+								}
+							],
+							"uuid": "d750ba02-d7b9-11fd-e20f-8a20c7eac02f",
+							"time": 0,
+							"color": -1,
+							"interpolation": "linear"
+						}
+					]
+				},
+				"08135e7f-59ab-e224-751b-05b1dd14dd82": {
+					"name": "miku_left_hair",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false,
+					"keyframes": [
+						{
+							"channel": "rotation",
+							"data_points": [
+								{
+									"x": "math.sin(query.anim_time * (360 * 1) - (45 * 0)) * -60",
+									"y": "0",
+									"z": "math.sin(query.anim_time * (360 * 1) - (45 * 0)) * 20"
+								}
+							],
+							"uuid": "447ee2dd-8a53-10fc-402a-4841c1eb2bf0",
+							"time": 0,
+							"color": -1,
+							"interpolation": "linear"
+						}
+					]
+				},
+				"31b979bc-03e8-19f3-343c-de51c3dc4ac2": {
+					"name": "miku_right_hair",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false,
+					"keyframes": [
+						{
+							"channel": "rotation",
+							"data_points": [
+								{
+									"x": "math.sin(query.anim_time * (360 * 1) - (45 * 0)) * 60",
+									"y": "0",
+									"z": "math.sin(query.anim_time * (360 * 1) - (45 * 0)) * -20"
+								}
+							],
+							"uuid": "10bc6017-b649-5acd-e758-e4351f29ff6f",
+							"time": 0,
+							"color": -1,
+							"interpolation": "linear"
+						}
+					]
+				},
+				"15a98531-cb7c-91ba-5593-2b9f96239d5a": {
+					"name": "right_leg",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false,
+					"keyframes": [
+						{
+							"channel": "rotation",
+							"data_points": [
+								{
+									"x": "math.sin(query.anim_time * (360 * 1) - (45 * 0)) * -45",
+									"y": "0",
+									"z": "math.sin(query.anim_time * (360 * 1) - (45 * 0)) * 15"
+								}
+							],
+							"uuid": "2418b998-0b54-8c2a-1f1b-0f1abc02b24c",
+							"time": 0,
+							"color": -1,
+							"interpolation": "linear"
+						}
+					]
+				},
+				"5acbcb93-687d-38d2-6daf-65b98cbb8ee5": {
+					"name": "left_leg",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false,
+					"keyframes": [
+						{
+							"channel": "rotation",
+							"data_points": [
+								{
+									"x": "math.sin(query.anim_time * (360 * 1) - (45 * 0)) * 45",
+									"y": "0",
+									"z": "math.sin(query.anim_time * (360 * 1) - (45 * 0)) * -15"
+								}
+							],
+							"uuid": "ab0ebc30-9483-b6eb-b2fb-26c623428403",
+							"time": 0,
+							"color": -1,
+							"interpolation": "linear"
+						}
+					]
+				},
+				"b4f8afd9-5647-728a-b83b-871684efd516": {
+					"name": "miku_right_hair3",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false,
+					"keyframes": [
+						{
+							"channel": "rotation",
+							"data_points": [
+								{
+									"x": "math.sin(query.anim_time * (360 * 1) - (45 * 0)) * 60",
+									"y": "0",
+									"z": "math.sin(query.anim_time * (360 * 1) - (45 * 0)) * -20"
+								}
+							],
+							"uuid": "e7f41597-82cb-5a39-6f31-e47564411a91",
+							"time": 0,
+							"color": -1,
+							"interpolation": "linear"
+						}
+					]
+				},
+				"96e82e3b-bd69-0d40-6989-e95395054fcd": {
+					"name": "miku_left_hair3",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false,
+					"keyframes": [
+						{
+							"channel": "rotation",
+							"data_points": [
+								{
+									"x": "math.sin(query.anim_time * (360 * 1) - (45 * 0)) * -60",
+									"y": "0",
+									"z": "math.sin(query.anim_time * (360 * 1) - (45 * 0)) * 20"
+								}
+							],
+							"uuid": "e2f6b4f7-88a4-d54d-1b91-4aedfbc80e54",
+							"time": 0,
+							"color": -1,
+							"interpolation": "linear"
+						}
+					]
+				},
+				"4cb3df88-9ff2-1ccd-9173-b70073e76001": {
+					"name": "head",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"beb4eadc-aff4-3a3c-852d-e674a83c8017": {
+					"name": "hair_offset",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"00a8cdcd-2810-ea95-407c-3276a7cc9c3c": {
+					"name": "miku_left_hair2",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"e2bb6e66-5605-5765-76e1-d990ec082328": {
+					"name": "miku_right_hair2",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"baec0393-25e5-25c5-176e-8642e0874545": {
+					"name": "hair",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"e839ab4d-3386-6e05-2b3d-8e3a619589cc": {
+					"name": "root_offset",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"59584cfb-9667-07f4-92d2-ed112d70e9d0": {
+					"name": "left_arm_offset",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"f1a73a28-6977-5102-964a-6770e148cdc8": {
+					"name": "right_arm_offset",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"65fbe2a9-f781-ff41-8888-8b61bc285ef9": {
+					"name": "left_hand",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"726c78a1-6120-edbf-93f8-37451125d33d": {
+					"name": "right_hand",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"ffb9d122-0016-0c22-d9fd-0bad7abc9268": {
+					"name": "right_leg_offset",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"2c00b297-061f-cdc2-f166-76d4f2c3dfc4": {
+					"name": "left_leg_offset",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"05125d78-0fb0-b8bc-e0df-ea1668fa31e7": {
+					"name": "head_offset",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"b449f28c-7c98-6afe-6126-d17f643efc81": {
+					"name": "head-ornaments",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"44b5e032-1b49-bcd8-4038-ec15c4cd32ca": {
+					"name": "longer_hair",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"450ec773-1ced-f05c-4084-9f650c1dfcf9": {
+					"name": "longer_hair_offset",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"64898896-5740-a082-32de-469c712b8c5a": {
+					"name": "miku_mushroom",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"fbbae2e9-3664-03da-95f3-7e74e9c8199a": {
+					"name": "miku_mushroom2",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"90993553-6440-6a04-eeab-7db1143de8e1": {
+					"name": "mouth",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"5c5e49a1-52e2-34a5-1206-b2a4a7d1a244": {
+					"name": "jaw",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"4981eb1c-4afc-7f37-8973-7dff2072b15b": {
+					"name": "miku_plush_mushroom",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"f3eebf5d-1dde-8229-c867-94dca0fdbcd6": {
+					"name": "miku_plush_patati",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"9e12c24c-0474-f8c4-a91d-3cfb9362b6f2": {
+					"name": "miku_plush_devil",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"c151211c-09ef-0a87-a3b7-b340ffda80da": {
+					"name": "miku_plush_devil_tail",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"06975df8-28f3-5700-d239-41ea7a3026df": {
+					"name": "miku_plush_devil_tail2",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"bceae1c2-1f30-b4f1-ce42-6191adfbb617": {
+					"name": "miku_plush_witch",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
 				}
 			}
 		}

@@ -1,4 +1,4 @@
-// 1.20.1	2025-12-07T11:55:19.053259732	miku plushies/Recipes
+// 1.20.1	2025-12-20T17:11:13.803767151	miku plushies/Recipes
 0c389692570e1bb4502ab41b21673265d98ca853 data/miku-plushie/recipes/miku_plush_rolling_girl.json
 fde9d0c149479567264b038468d0b35d28150cf7 data/miku-plushie/advancements/recipes/decorations/teto_plush_some_more_of_that_song.json
 1cd819617c5d34a1cc69c6f430b0cc130cfc94b2 data/miku-plushie/advancements/recipes/decorations/meiko_plush_v4.json
@@ -100,6 +100,7 @@ c35f72da21804ac511298467ba3f722510daede7 data/miku-plushie/advancements/recipes/
 ca757db9dcf95deaea8700cd500da73be7313791 data/miku-plushie/recipes/miku_plush_devil.json
 3ff9f0701e0fd5a88092a811897048a4e68ed631 data/miku-plushie/recipes/miku_plush_senbonzakura.json
 2920111d24e0450a215da3f764427eda4b9c91bf data/miku-plushie/advancements/recipes/decorations/miku_plush_werewoman.json
+5dbde9668a650aa64e3b84cd3245da4b80311d67 data/miku-plushie/recipes/vocaloid_heart.json
 020e171290513add5ebd7fe9199c838981efa01f data/miku-plushie/recipes/miku_plush_br_electrician.json
 480bf244e6ecefafda372e83472422338520f814 data/miku-plushie/advancements/recipes/decorations/miku_plush.json
 cad6d2c25fdb8a11213325148452081da9764b9a data/miku-plushie/recipes/miku_plush_vampire.json
@@ -143,6 +144,7 @@ ea8c69d3789d0a4bf114d542449b3e575d7c4255 data/miku-plushie/advancements/recipes/
 651715e894bda27b1141c60fd214f6085ddddec2 data/miku-plushie/advancements/recipes/decorations/miku_plush_devil.json
 1b9f1d40624c52af284839169976d5760daeafa9 data/miku-plushie/recipes/miku_plush_ghostface.json
 d441c2cdc4d4c0f82a1fdcf2eec8fe6bb55414b0 data/miku-plushie/advancements/recipes/decorations/gumi_plush_v3.json
+3f429a4841d37fcc95edfdef9a9a1572ec673199 data/miku-plushie/advancements/recipes/food/vocaloid_heart.json
 3d1e120b46c4751e5b4a6d1a79f21264372242f4 data/miku-plushie/advancements/recipes/decorations/teto_plush_mesmerizer.json
 5914f3b42fc3d831c2ac1939e4d67968657ffbe5 data/miku-plushie/advancements/recipes/decorations/miku_plush_br.json
 2bd844bd90484a6b0cfc4a97a7232a108aa371c8 data/miku-plushie/advancements/recipes/decorations/teto_plush_whatchacallitsname.json
@@ -178,6 +180,7 @@ c8fe44ab52e3609d0ffa9d74b5b36b0777df6e0e data/miku-plushie/recipes/miku_plush_in
 a4ee1f6fbc752a848b5d9ea61de1e12bb572594e data/miku-plushie/advancements/recipes/decorations/miku_plush_mushroom.json
 8c5e031f84ddd9a5df3ca5b97b31fc787ce06060 data/miku-plushie/recipes/miku_plush_static.json
 f102dab6eb3ea11703115eda74fc24e3c52e0940 data/miku-plushie/recipes/miku_plush_mesmerizer.json
+6d942fa7b2751c7df020d2ca0e9f7a8241f9492d data/miku-plushie/recipes/akita_neru_phone.json
 1c90301742fa6248e729ba80fe5542e929d4ec66 data/miku-plushie/advancements/recipes/decorations/miku_plush_deep_sea_girl.json
 bfd0caaf1c91959724d40fa67427e351e48952e7 data/miku-plushie/advancements/recipes/decorations/miku_plush_hachune.json
 47207e88dac10c3151d2b2252e7bf68986b0ab70 data/miku-plushie/recipes/miku_plush_zatsune.json
@@ -194,6 +197,7 @@ de58f8227c4fe939b80a80486c2a0a42d8d52141 data/miku-plushie/advancements/recipes/
 71ce8f71b20c6ed8df786021a96a054654cd84ed data/miku-plushie/recipes/miku_plush_deep_sea_girl.json
 3a374818bca61b457b02c73bac269f6f6e277a2f data/miku-plushie/recipes/teto_pickaxe_some_more_of_that_song.json
 4272a5a1aae3101df15d32d3b7a912a6352d65fc data/miku-plushie/advancements/recipes/decorations/miku_plush_br_fut_crvg.json
+d2c52c492096f9e36f454c418d29e0c2527a59ff data/miku-plushie/advancements/recipes/decorations/akita_neru_phone.json
 d8b7d9ab9fb4b8630bdd9107310bf53056fa56e0 data/miku-plushie/advancements/recipes/decorations/miku_plush_br_electrician.json
 36774a501b47ab29dcec6c06f6f32923f7144220 data/miku-plushie/advancements/recipes/decorations/miku_plush_br_mg.json
 743b7516b7715ec2f7ddf56bd33bdb87ac7bff85 data/miku-plushie/recipes/luka_plush.json

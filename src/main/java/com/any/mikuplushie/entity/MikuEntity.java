@@ -1,8 +1,8 @@
 package com.any.mikuplushie.entity;
 
-import com.any.mikuplushie.ModBlocks;
-import com.any.mikuplushie.ModItems;
-import com.any.mikuplushie.ModSoundEvents;
+import com.any.mikuplushie.registry.ModBlocks;
+import com.any.mikuplushie.registry.ModItems;
+import com.any.mikuplushie.registry.ModSoundEvents;
 import com.any.mikuplushie.entity.goals.EatLeekGoal;
 import com.any.mikuplushie.entity.goals.MikuDelayedAttackGoal;
 import com.any.mikuplushie.entity.variant.MikuVariant;
@@ -18,7 +18,6 @@ import net.minecraft.particle.*;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.util.Hand;
-import net.minecraft.util.Util;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.*;
@@ -42,8 +41,8 @@ public class MikuEntity extends PlushEntity implements GeoEntity {
     public boolean eatingLeek;
 
     private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
-    private static final RawAnimation IDLE = RawAnimation.begin().thenLoop("misc.idle");
     private static final RawAnimation SIT = RawAnimation.begin().thenLoop("misc.sit");
+    private static final RawAnimation IDLE = RawAnimation.begin().thenLoop("misc.idle");
     private static final RawAnimation SIT_DANCE = RawAnimation.begin().thenLoop("misc.sit-dance");
     private static final List<RawAnimation> DANCES = List.of(
         RawAnimation.begin().thenLoop("misc.dance.generic.caramelldansen"),
@@ -56,6 +55,7 @@ public class MikuEntity extends PlushEntity implements GeoEntity {
     private static final RawAnimation SWIPE2 = RawAnimation.begin().thenPlay("attack.swipe2");
     private static final RawAnimation SWIPE3 = RawAnimation.begin().thenPlay("attack.swipe3");
     private static final RawAnimation EAT = RawAnimation.begin().thenPlay("misc.eat");
+    private static final RawAnimation SPAWN = RawAnimation.begin().thenPlay("misc.spawn");
 
     private static RawAnimation SELECTED_DANCE = DANCES.get(0);
     private static RawAnimation SELECTED_ATTACK = SWIPE;
@@ -86,29 +86,37 @@ public class MikuEntity extends PlushEntity implements GeoEntity {
     public void registerControllers(AnimatableManager.ControllerRegistrar controllers) {
         controllers.add(new AnimationController<>(this, "Miku", 2, state -> {
 
-            //MIKU SIT OR DANCE WHEN SONG IS PLAYING NEARBY
-            if (MikuEntity.this.isInSittingPose()){
-                return state.setAndContinue(MikuEntity.this.isSongPlaying() ? SIT_DANCE : SIT);
-            }
-
-            //EATING ANIMATION
-            else if (MikuEntity.this.isEatingLeek()) {
-                return state.setAndContinue(EAT);
-            }
-
-            else {
-                //DANCE WHEN SONG IS PLAYING NEARBY
-                if (MikuEntity.this.isSongPlaying()){
-                    return state.setAndContinue(SELECTED_DANCE);
+            //SITTING ANIMATIONS
+            if (this.isInSittingPose()) {
+                //SONG PLAYING NEARBY
+                if (this.isSongPlaying()){
+                    return state.setAndContinue(SIT_DANCE);
                 } else {
-                    //ATTACK
-                    if (MikuEntity.this.handSwinging){
-                        return state.setAndContinue(SELECTED_ATTACK);
-                    }
-                    //IDLE
-                    else {
-                        return state.setAndContinue(IDLE);
-                    }
+                    return state.setAndContinue(SIT);
+                }
+            }
+
+            //STANDING UP ANIMATIONS
+            else {
+                //SPAWN ANIMATION
+                if (MikuEntity.this.age < 10){
+                    return state.setAndContinue(SPAWN);
+                }
+                //EATING LEEK
+                else if (this.isEatingLeek()) {
+                    return state.setAndContinue(EAT);
+                }
+                //DANCE
+                else if (this.isSongPlaying()){
+                    return state.setAndContinue(SELECTED_DANCE);
+                }
+                //ATTACKING
+                else if (this.handSwinging) {
+                    return state.setAndContinue(SELECTED_ATTACK);
+                }
+                //IDLE
+                else {
+                    return state.setAndContinue(IDLE);
                 }
             }
         }));
@@ -137,12 +145,6 @@ public class MikuEntity extends PlushEntity implements GeoEntity {
     protected void initDataTracker() {
         super.initDataTracker();
         this.dataTracker.startTracking(MIKU_VARIANT, 0);
-    }
-
-    //DEATH SOUND
-    @Override
-    protected @Nullable SoundEvent getDeathSound() {
-        return ModSoundEvents.MIKU_BYE;
     }
 
     //UPDATE EAT LEEK GOAL

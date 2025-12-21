@@ -1,13 +1,11 @@
-package com.any.mikuplushie;
+package com.any.mikuplushie.registry;
 
+import com.any.mikuplushie.MikuPlushie;
 import com.any.mikuplushie.block.LeekCropBlock;
 import com.any.mikuplushie.block.MikuPlushieBlock;
-import com.any.mikuplushie.datagen.ModItemTagProvider;
-import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
-import net.minecraft.client.render.RenderLayer;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
