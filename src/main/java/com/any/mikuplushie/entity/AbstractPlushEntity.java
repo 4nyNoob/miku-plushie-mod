@@ -35,9 +35,9 @@ import software.bernie.geckolib.util.GeckoLibUtil;
 
 import java.util.List;
 
-public class PlushEntity extends TameableEntity implements GeoEntity {
+public class AbstractPlushEntity extends TameableEntity implements GeoEntity {
 
-    private static final TrackedData<Boolean> SITTING = DataTracker.registerData(PlushEntity.class, TrackedDataHandlerRegistry.BOOLEAN);
+    private static final TrackedData<Boolean> SITTING = DataTracker.registerData(AbstractPlushEntity.class, TrackedDataHandlerRegistry.BOOLEAN);
 
     //DANCE GLOBALS
     boolean songPlaying;
@@ -45,21 +45,21 @@ public class PlushEntity extends TameableEntity implements GeoEntity {
 
     //GLIB VARIABLES
     private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
-    private static final RawAnimation IDLE = RawAnimation.begin().thenLoop("misc.idle");
-    private static final RawAnimation SIT = RawAnimation.begin().thenLoop("misc.sit");
-    private static final RawAnimation SIT_DANCE = RawAnimation.begin().thenLoop("misc.sit-dance");
+    public static final RawAnimation IDLE = RawAnimation.begin().thenLoop("misc.idle");
+    public static final RawAnimation SIT = RawAnimation.begin().thenLoop("misc.sit");
+    public static final RawAnimation SIT_DANCE = RawAnimation.begin().thenLoop("misc.sit-dance");
     private static final List<RawAnimation> DANCES = List.of(
         RawAnimation.begin().thenLoop("misc.dance.generic.caramelldansen")
     );
     private static final RawAnimation SWIPE = RawAnimation.begin().thenPlay("attack.swipe");
     private static final RawAnimation SWIPE2 = RawAnimation.begin().thenPlay("attack.swipe2");
     private static final RawAnimation SWIPE3 = RawAnimation.begin().thenPlay("attack.swipe3");
-    private static final RawAnimation SPAWN = RawAnimation.begin().thenPlay("misc.spawn");
+    public static final RawAnimation SPAWN = RawAnimation.begin().thenPlay("misc.spawn");
 
     private static RawAnimation SELECTED_DANCE = DANCES.get(0);
     private static RawAnimation SELECTED_ATTACK = SWIPE;
 
-    protected PlushEntity(EntityType<? extends TameableEntity> entityType, World world) {
+    protected AbstractPlushEntity(EntityType<? extends TameableEntity> entityType, World world) {
         super(entityType, world);
     }
 
@@ -71,7 +71,7 @@ public class PlushEntity extends TameableEntity implements GeoEntity {
         this.goalSelector.add(2, new MikuDelayedAttackGoal(this, 1.5F, true));
         this.goalSelector.add(4, new FollowOwnerGoal(this,1.0F, 5F, 1F, true));
         this.goalSelector.add(6, new TemptGoal(this, 1.5, Ingredient.ofItems(ModItems.CANUDINHO), false));
-        this.goalSelector.add(7, new LookAtEntityGoal(this, PlushEntity.class, 8F));
+        this.goalSelector.add(7, new LookAtEntityGoal(this, AbstractPlushEntity.class, 8F));
         this.goalSelector.add(8, new LookAtEntityGoal(this, PlayerEntity.class, 8F));
         this.goalSelector.add(9, new LookAroundGoal(this));
         this.targetSelector.add(1, new TrackOwnerAttackerGoal(this));

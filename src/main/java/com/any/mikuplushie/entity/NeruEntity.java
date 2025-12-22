@@ -1,7 +1,6 @@
 package com.any.mikuplushie.entity;
 
 import com.any.mikuplushie.registry.ModItems;
-import com.any.mikuplushie.registry.ModSoundEvents;
 import com.any.mikuplushie.entity.goals.MikuDelayedAttackGoal;
 import com.any.mikuplushie.entity.variant.NeruVariant;
 import net.minecraft.entity.EntityType;
@@ -13,11 +12,9 @@ import net.minecraft.entity.passive.TameableEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.recipe.Ingredient;
-import net.minecraft.sound.SoundEvent;
 import net.minecraft.util.Hand;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
-import org.jetbrains.annotations.Nullable;
 import software.bernie.geckolib.core.animatable.instance.AnimatableInstanceCache;
 import software.bernie.geckolib.core.animation.AnimatableManager;
 import software.bernie.geckolib.core.animation.AnimationController;
@@ -26,14 +23,11 @@ import software.bernie.geckolib.util.GeckoLibUtil;
 
 import java.util.List;
 
-public class NeruEntity extends PlushEntity {
+public class NeruEntity extends AbstractPlushEntity {
 
     private static final TrackedData<Integer> NERU_VARIANT = DataTracker.registerData(NeruEntity.class, TrackedDataHandlerRegistry.INTEGER);
 
     private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
-    private static final RawAnimation IDLE = RawAnimation.begin().thenLoop("misc.idle");
-    private static final RawAnimation SIT = RawAnimation.begin().thenLoop("misc.sit");
-    private static final RawAnimation SIT_DANCE = RawAnimation.begin().thenLoop("misc.sit-dance");
     private static final List<RawAnimation> DANCES = List.of(
         RawAnimation.begin().thenLoop("misc.dance.generic.caramelldansen"),
         RawAnimation.begin().thenLoop("misc.miku.ievan-polkka"),
@@ -67,6 +61,44 @@ public class NeruEntity extends PlushEntity {
     @Override
     public AnimatableInstanceCache getAnimatableInstanceCache() {
         return this.cache;
+    }
+
+    //ANIMATION CONTROLLER
+    @Override
+    public void registerControllers(AnimatableManager.ControllerRegistrar controllers) {
+        controllers.add(new AnimationController<>(this, "Plush", 2, state -> {
+
+            //SITTING ANIMATIONS
+            if (this.isInSittingPose()) {
+                //SONG PLAYING NEARBY
+                if (this.isSongPlaying()){
+                    return state.setAndContinue(AbstractPlushEntity.SIT_DANCE);
+                } else {
+                    return state.setAndContinue(AbstractPlushEntity.SIT);
+                }
+            }
+
+            //STANDING UP ANIMATIONS
+            else {
+                //SPAWN ANIMATION
+                if (this.age < 10){
+                    return state.setAndContinue(AbstractPlushEntity.SPAWN);
+                }
+                //DANCE
+                else if (this.isSongPlaying()){
+                    return state.setAndContinue(SELECTED_DANCE);
+                }
+                //ATTACKING
+                else if (this.handSwinging) {
+                    return state.setAndContinue(SELECTED_ATTACK);
+                }
+                //IDLE
+                else {
+                    return state.setAndContinue(AbstractPlushEntity.IDLE);
+                }
+            }
+        }));
+
     }
 
     //RANDOM ATTACK ANIM

@@ -1,7 +1,6 @@
 package com.any.mikuplushie.entity;
 
 import com.any.mikuplushie.registry.ModItems;
-import com.any.mikuplushie.registry.ModSoundEvents;
 import com.any.mikuplushie.entity.goals.MikuDelayedAttackGoal;
 import com.any.mikuplushie.entity.variant.AikoVariant;
 import net.minecraft.entity.EntityType;
@@ -13,15 +12,13 @@ import net.minecraft.entity.passive.TameableEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.recipe.Ingredient;
-import net.minecraft.sound.SoundEvent;
 import net.minecraft.util.Hand;
 import net.minecraft.world.World;
-import org.jetbrains.annotations.Nullable;
 import software.bernie.geckolib.core.animatable.instance.AnimatableInstanceCache;
 import software.bernie.geckolib.core.animation.RawAnimation;
 import software.bernie.geckolib.util.GeckoLibUtil;
 
-public class AikoEntity extends PlushEntity {
+public class AikoEntity extends AbstractPlushEntity {
 
     private static final TrackedData<Integer> AIKO_VARIANT = DataTracker.registerData(AikoEntity.class, TrackedDataHandlerRegistry.INTEGER);
 

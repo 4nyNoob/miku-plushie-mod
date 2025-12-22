@@ -2,7 +2,6 @@ package com.any.mikuplushie.entity;
 
 import com.any.mikuplushie.registry.ModBlocks;
 import com.any.mikuplushie.registry.ModItems;
-import com.any.mikuplushie.registry.ModSoundEvents;
 import com.any.mikuplushie.entity.goals.EatLeekGoal;
 import com.any.mikuplushie.entity.goals.MikuDelayedAttackGoal;
 import com.any.mikuplushie.entity.variant.MikuVariant;
@@ -16,12 +15,10 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.particle.*;
 import net.minecraft.recipe.Ingredient;
-import net.minecraft.sound.SoundEvent;
 import net.minecraft.util.Hand;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.*;
-import org.jetbrains.annotations.Nullable;
 import software.bernie.geckolib.animatable.GeoEntity;
 import software.bernie.geckolib.core.animatable.instance.AnimatableInstanceCache;
 import software.bernie.geckolib.core.animation.AnimatableManager;
@@ -31,7 +28,7 @@ import software.bernie.geckolib.util.GeckoLibUtil;
 
 import java.util.List;
 
-public class MikuEntity extends PlushEntity implements GeoEntity {
+public class MikuEntity extends AbstractPlushEntity {
 
     private static final TrackedData<Integer> MIKU_VARIANT = DataTracker.registerData(MikuEntity.class, TrackedDataHandlerRegistry.INTEGER);
 
@@ -41,9 +38,6 @@ public class MikuEntity extends PlushEntity implements GeoEntity {
     public boolean eatingLeek;
 
     private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
-    private static final RawAnimation SIT = RawAnimation.begin().thenLoop("misc.sit");
-    private static final RawAnimation IDLE = RawAnimation.begin().thenLoop("misc.idle");
-    private static final RawAnimation SIT_DANCE = RawAnimation.begin().thenLoop("misc.sit-dance");
     private static final List<RawAnimation> DANCES = List.of(
         RawAnimation.begin().thenLoop("misc.dance.generic.caramelldansen"),
         RawAnimation.begin().thenLoop("misc.dance.miku.miku"),
@@ -55,7 +49,6 @@ public class MikuEntity extends PlushEntity implements GeoEntity {
     private static final RawAnimation SWIPE2 = RawAnimation.begin().thenPlay("attack.swipe2");
     private static final RawAnimation SWIPE3 = RawAnimation.begin().thenPlay("attack.swipe3");
     private static final RawAnimation EAT = RawAnimation.begin().thenPlay("misc.eat");
-    private static final RawAnimation SPAWN = RawAnimation.begin().thenPlay("misc.spawn");
 
     private static RawAnimation SELECTED_DANCE = DANCES.get(0);
     private static RawAnimation SELECTED_ATTACK = SWIPE;
@@ -90,9 +83,9 @@ public class MikuEntity extends PlushEntity implements GeoEntity {
             if (this.isInSittingPose()) {
                 //SONG PLAYING NEARBY
                 if (this.isSongPlaying()){
-                    return state.setAndContinue(SIT_DANCE);
+                    return state.setAndContinue(AbstractPlushEntity.SIT_DANCE);
                 } else {
-                    return state.setAndContinue(SIT);
+                    return state.setAndContinue(AbstractPlushEntity.SIT);
                 }
             }
 
@@ -100,7 +93,7 @@ public class MikuEntity extends PlushEntity implements GeoEntity {
             else {
                 //SPAWN ANIMATION
                 if (MikuEntity.this.age < 10){
-                    return state.setAndContinue(SPAWN);
+                    return state.setAndContinue(AbstractPlushEntity.SPAWN);
                 }
                 //EATING LEEK
                 else if (this.isEatingLeek()) {
@@ -116,7 +109,7 @@ public class MikuEntity extends PlushEntity implements GeoEntity {
                 }
                 //IDLE
                 else {
-                    return state.setAndContinue(IDLE);
+                    return state.setAndContinue(AbstractPlushEntity.IDLE);
                 }
             }
         }));

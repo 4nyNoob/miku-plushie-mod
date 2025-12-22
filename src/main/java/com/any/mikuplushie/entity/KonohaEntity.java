@@ -20,7 +20,7 @@ import software.bernie.geckolib.core.animatable.instance.AnimatableInstanceCache
 import software.bernie.geckolib.core.animation.RawAnimation;
 import software.bernie.geckolib.util.GeckoLibUtil;
 
-public class KonohaEntity extends PlushEntity {
+public class KonohaEntity extends AbstractPlushEntity {
 
     private static final TrackedData<Integer> KONOHA_VARIANT = DataTracker.registerData(KonohaEntity.class, TrackedDataHandlerRegistry.INTEGER);
 

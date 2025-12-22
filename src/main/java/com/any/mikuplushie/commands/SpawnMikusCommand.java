@@ -1,8 +1,8 @@
 package com.any.mikuplushie.commands;
 
+import com.any.mikuplushie.entity.AbstractPlushEntity;
 import com.any.mikuplushie.registry.ModBlocks;
 import com.any.mikuplushie.registry.ModItems;
-import com.any.mikuplushie.entity.PlushEntity;
 import com.any.mikuplushie.util.ModUtil;
 import com.mojang.brigadier.CommandDispatcher;
 import net.minecraft.block.Block;
@@ -120,7 +120,7 @@ public class SpawnMikusCommand {
                             for (int entity = 0; entity < entityTypeRegistry.size(); entity++) {
                                 if (Objects.requireNonNull(entityTypeRegistry.get(entity)).getTranslationKey().contains(entityName)){
                                     //SPAWN ENTITY ACCORDING TO BLOCK NAME
-                                    PlushEntity spawned = (PlushEntity) Objects.requireNonNull(entityTypeRegistry.get(entity)).create(world);
+                                    AbstractPlushEntity spawned = (AbstractPlushEntity) Objects.requireNonNull(entityTypeRegistry.get(entity)).create(world);
                                     //SETUP AND SPAWN ENTITY
                                     setupEntity(Objects.requireNonNull(spawned), entitySpawnLocation);
                                     spawned.setVariantByBlock(blockName);
