@@ -122,7 +122,7 @@
   "block.miku-plushie.akita_neru_plush_tails": "Tails Neru Plush",
   "item.miku-plushie.akita_neru_plush_tails.tooltip": "§b§n@4ny.bsky.social",
   "block.miku-plushie.teto_plush_birdbrain": "Teto Birdbrain Plush",
-  "item.miku-plushie.teto_plush_birdbrain.tooltip": "§b§n@ricedeity",
+  "item.miku-plushie.teto_plush_birdbrain.tooltip": "§b§n@sidoopa.bsky.social",
   "item.miku-plushie.teto_pickaxe_birdbrain": "Teto Birdbrain Pickaxe",
 
   "block.miku-plushie.miku_plush_digital_stars_2025": "Digital Stars 2025 Miku Plush",
@@ -140,9 +140,11 @@
   "block.miku-plushie.teto_plush_dont_believe_in_t": "Don't Believe In T Teto Plush",
   "item.miku-plushie.teto_plush_dont_believe_in_t.tooltip": "§b§n@pinocchiop",
   "item.miku-plushie.teto_pickaxe_dont_believe_in_t": "Don't Believe In T Teto Pickaxe",
+
   "block.miku-plushie.teto_plush_liar_dancer": "Liar Dancer Teto Plush",
   "item.miku-plushie.teto_plush_liar_dancer.tooltip": "§b§n@sisterofoira",
   "item.miku-plushie.teto_pickaxe_liar_dancer": "Liar Dancer Teto Pickaxe",
+
   "block.miku-plushie.miku_plush_static": "Static Miku Plush",
   "item.miku-plushie.miku_plush_static.tooltip": "§b§n@ricedeity",
   "block.miku-plushie.miku_plush_mochimochi": "Mochimochi Miku Plush",
@@ -158,8 +160,9 @@
   "block.miku-plushie.konoha_plush": "Konoha Plush",
   "item.miku-plushie.konoha_plush.tooltip": "§b§n@Dsd_kgn",
   "block.miku-plushie.teto_plush_some_more_of_that_song": "Some More Of That Song Teto Plush",
-  "item.miku-plushie.teto_plush_some_more_of_that_song.tooltip": "§b§n@decoyman1200",
+  "item.miku-plushie.teto_plush_some_more_of_that_song.tooltip": "§b§n@anneawh",
   "item.miku-plushie.teto_pickaxe_some_more_of_that_song": "Some More Of That Song Teto Pickaxe",
+
   "block.miku-plushie.teto_plush_lobster": "Lobster Teto Plush",
   "item.miku-plushie.teto_plush_lobster.tooltip": "§b§nskadikaos",
   "block.miku-plushie.miku_plush_hollow_knight": "Hollow Knight Miku Plush",
@@ -177,6 +180,7 @@
   "block.miku-plushie.teto_plush_spoken_for": "Spoken For Teto Plush",
   "item.miku-plushie.teto_plush_spoken_for.tooltip": "§b§n@hoshizoralone.bsky.social",
   "item.miku-plushie.teto_pickaxe_spoken_for": "Spoken For Teto Pickaxe",
+
   "block.miku-plushie.meiko_plush": "Meiko Plush",
   "item.miku-plushie.meiko_plush.tooltip": "§b§n@wassy_m",
   "block.miku-plushie.meiko_plush_v3": "Meiko Plush V3",
