@@ -23,16 +23,9 @@ public class ModEntityTagProvider extends FabricTagProvider.EntityTypeTagProvide
 
     @Override
     protected void configure(RegistryWrapper.WrapperLookup wrapperLookup) {
-        getOrCreateTagBuilder(PLUSH_ENTITY)
-            .add(ModEntities.MIKU)
-            .add(ModEntities.TETO)
-            .add(ModEntities.AIKO)
-            .add(ModEntities.NERU)
-            .add(ModEntities.RIN)
-            .add(ModEntities.LEN)
-            .add(ModEntities.KONOHA)
-            .add(ModEntities.LUKA)
-            .add(ModEntities.MEIKO)
-        ;
+        //REGISTER PLUSH ENTITY TYPE TAG AUTOMATICALLY
+        for (EntityType<?> plush : ModEntities.PLUSH_ENTITIES){
+            getOrCreateTagBuilder(PLUSH_ENTITY).add(plush);
+        }
     }
 }
