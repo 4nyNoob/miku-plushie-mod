@@ -1,16 +1,16 @@
 package com.any.mikuplushie.entity;
 
-import com.any.mikuplushie.registry.ModItems;
 import com.any.mikuplushie.entity.goals.MikuDelayedAttackGoal;
+import com.any.mikuplushie.registry.ModItems;
 import com.any.mikuplushie.util.ModUtil;
 import net.minecraft.block.Blocks;
-import net.minecraft.entity.*;
+import net.minecraft.entity.EntityDimensions;
+import net.minecraft.entity.EntityPose;
+import net.minecraft.entity.EntityType;
+import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.ai.goal.*;
 import net.minecraft.entity.attribute.DefaultAttributeContainer;
 import net.minecraft.entity.attribute.EntityAttributes;
-import net.minecraft.entity.data.DataTracker;
-import net.minecraft.entity.data.TrackedData;
-import net.minecraft.entity.data.TrackedDataHandlerRegistry;
 import net.minecraft.entity.mob.MobEntity;
 import net.minecraft.entity.passive.PassiveEntity;
 import net.minecraft.entity.passive.TameableEntity;
@@ -37,8 +37,6 @@ import java.util.List;
 
 public class AbstractPlushEntity extends TameableEntity implements GeoEntity {
 
-    private static final TrackedData<Boolean> SITTING = DataTracker.registerData(AbstractPlushEntity.class, TrackedDataHandlerRegistry.BOOLEAN);
-
     //DANCE GLOBALS
     boolean songPlaying;
     @Nullable BlockPos songSource;
@@ -51,13 +49,12 @@ public class AbstractPlushEntity extends TameableEntity implements GeoEntity {
     private static final List<RawAnimation> DANCES = List.of(
         RawAnimation.begin().thenLoop("misc.dance.generic.caramelldansen")
     );
-    private static final RawAnimation SWIPE = RawAnimation.begin().thenPlay("attack.swipe");
-    private static final RawAnimation SWIPE2 = RawAnimation.begin().thenPlay("attack.swipe2");
-    private static final RawAnimation SWIPE3 = RawAnimation.begin().thenPlay("attack.swipe3");
+    protected static final List<RawAnimation> ATTACK_ANIMATIONS = List.of(
+        RawAnimation.begin().thenPlay("attack.swipe"),
+        RawAnimation.begin().thenPlay("attack.swipe2"),
+        RawAnimation.begin().thenPlay("attack.swipe3")
+    );
     public static final RawAnimation SPAWN = RawAnimation.begin().thenPlay("misc.spawn");
-
-    private static RawAnimation SELECTED_DANCE = DANCES.get(0);
-    private static RawAnimation SELECTED_ATTACK = SWIPE;
 
     protected AbstractPlushEntity(EntityType<? extends TameableEntity> entityType, World world) {
         super(entityType, world);
@@ -109,11 +106,27 @@ public class AbstractPlushEntity extends TameableEntity implements GeoEntity {
                 }
                 //DANCE
                 else if (this.isSongPlaying()){
-                    return state.setAndContinue(SELECTED_DANCE);
+                    RawAnimation currentAnimation = state.getController().getCurrentRawAnimation();
+                    for (RawAnimation animation : DANCES){
+                        if (currentAnimation.equals(animation)){
+                            return state.setAndContinue(animation);
+                        }
+                    }
+                    return state.setAndContinue(DANCES.get(this.random.nextBetweenExclusive(
+                        0, DANCES.size()-1)
+                    ));
                 }
                 //ATTACKING
                 else if (this.handSwinging) {
-                    return state.setAndContinue(SELECTED_ATTACK);
+                    RawAnimation currentAnimation = state.getController().getCurrentRawAnimation();
+                    for (RawAnimation animation : ATTACK_ANIMATIONS){
+                        if (currentAnimation.equals(animation)){
+                            return state.setAndContinue(animation);
+                        }
+                    }
+                    return state.setAndContinue(ATTACK_ANIMATIONS.get(this.random.nextBetweenExclusive(
+                        0, ATTACK_ANIMATIONS.size()-1)
+                    ));
                 }
                 //IDLE
                 else {
@@ -259,8 +272,6 @@ public class AbstractPlushEntity extends TameableEntity implements GeoEntity {
     public void setNearbySongPlaying(BlockPos songPosition, boolean playing) {
         this.songSource = songPosition;
         this.songPlaying = playing;
-        int randomDance = this.random.nextInt(DANCES.size());
-        SELECTED_DANCE = DANCES.get(randomDance);
     }
 
     //NO CHILD

@@ -1,19 +1,12 @@
 package com.any.mikuplushie.entity;
 
-import com.any.mikuplushie.registry.ModItems;
-import com.any.mikuplushie.entity.goals.MikuDelayedAttackGoal;
 import com.any.mikuplushie.entity.variant.TetoVariant;
 import net.minecraft.entity.EntityType;
-import net.minecraft.entity.ai.goal.*;
 import net.minecraft.entity.data.DataTracker;
 import net.minecraft.entity.data.TrackedData;
 import net.minecraft.entity.data.TrackedDataHandlerRegistry;
 import net.minecraft.entity.passive.TameableEntity;
-import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.nbt.NbtCompound;
-import net.minecraft.recipe.Ingredient;
-import net.minecraft.util.Hand;
-import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import software.bernie.geckolib.core.animatable.instance.AnimatableInstanceCache;
 import software.bernie.geckolib.core.animation.AnimatableManager;
@@ -34,12 +27,6 @@ public class TetoEntity extends AbstractPlushEntity {
         RawAnimation.begin().thenLoop("misc.dance.teto.birdbrain"),
         RawAnimation.begin().thenLoop("misc.dance.teto.liar-dancer")
     );
-    private static final RawAnimation SWIPE = RawAnimation.begin().thenPlay("attack.swipe");
-    private static final RawAnimation SWIPE2 = RawAnimation.begin().thenPlay("attack.swipe2");
-    private static final RawAnimation SWIPE3 = RawAnimation.begin().thenPlay("attack.swipe3");
-
-    private static RawAnimation SELECTED_DANCE = DANCES.get(0);
-    private static RawAnimation SELECTED_ATTACK = SWIPE;
 
     public TetoEntity(EntityType<? extends TameableEntity> entityType, World world) {
         super(entityType, world);
@@ -73,11 +60,27 @@ public class TetoEntity extends AbstractPlushEntity {
                 }
                 //DANCE
                 else if (this.isSongPlaying()){
-                    return state.setAndContinue(SELECTED_DANCE);
+                    RawAnimation currentAnimation = state.getController().getCurrentRawAnimation();
+                    for (RawAnimation animation : DANCES){
+                        if (currentAnimation.equals(animation)){
+                            return state.setAndContinue(animation);
+                        }
+                    }
+                    return state.setAndContinue(DANCES.get(this.random.nextBetweenExclusive(
+                        0, DANCES.size()-1)
+                    ));
                 }
                 //ATTACKING
                 else if (this.handSwinging) {
-                    return state.setAndContinue(SELECTED_ATTACK);
+                    RawAnimation currentAnimation = state.getController().getCurrentRawAnimation();
+                    for (RawAnimation animation : ATTACK_ANIMATIONS){
+                        if (currentAnimation.equals(animation)){
+                            return state.setAndContinue(animation);
+                        }
+                    }
+                    return state.setAndContinue(ATTACK_ANIMATIONS.get(this.random.nextBetweenExclusive(
+                        0, ATTACK_ANIMATIONS.size()-1)
+                    ));
                 }
                 //IDLE
                 else {
@@ -88,32 +91,11 @@ public class TetoEntity extends AbstractPlushEntity {
 
     }
 
-    //RANDOM ATTACK ANIM
-    @Override
-    public void swingHand(Hand hand) {
-        super.swingHand(hand);
-        int randomAttack = this.random.nextBetween(1, 3);
-        switch (randomAttack) {
-            case 1: SELECTED_ATTACK = SWIPE; break;
-            case 2: SELECTED_ATTACK = SWIPE2; break;
-            case 3: SELECTED_ATTACK = SWIPE3; break;
-        }
-    }
-
     //TRACK VARIANT
     @Override
     protected void initDataTracker() {
         super.initDataTracker();
         this.dataTracker.startTracking(TETO_VARIANT, 0);
-    }
-
-    //SELECT RANDOM DANCE
-    @Override
-    public void setNearbySongPlaying(BlockPos songPosition, boolean playing) {
-        this.songSource = songPosition;
-        this.songPlaying = playing;
-        int randomDance = this.random.nextInt(DANCES.size());
-        SELECTED_DANCE = DANCES.get(randomDance);
     }
 
     //TETO VARIANTS

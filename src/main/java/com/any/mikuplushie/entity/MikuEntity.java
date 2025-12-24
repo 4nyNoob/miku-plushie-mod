@@ -1,25 +1,18 @@
 package com.any.mikuplushie.entity;
 
-import com.any.mikuplushie.registry.ModBlocks;
-import com.any.mikuplushie.registry.ModItems;
 import com.any.mikuplushie.entity.goals.EatLeekGoal;
-import com.any.mikuplushie.entity.goals.MikuDelayedAttackGoal;
 import com.any.mikuplushie.entity.variant.MikuVariant;
-import net.minecraft.entity.*;
-import net.minecraft.entity.ai.goal.*;
+import com.any.mikuplushie.registry.ModBlocks;
+import net.minecraft.entity.EntityType;
 import net.minecraft.entity.data.DataTracker;
 import net.minecraft.entity.data.TrackedData;
 import net.minecraft.entity.data.TrackedDataHandlerRegistry;
 import net.minecraft.entity.passive.TameableEntity;
-import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.nbt.NbtCompound;
-import net.minecraft.particle.*;
-import net.minecraft.recipe.Ingredient;
-import net.minecraft.util.Hand;
-import net.minecraft.util.math.BlockPos;
+import net.minecraft.particle.BlockStateParticleEffect;
+import net.minecraft.particle.ParticleTypes;
 import net.minecraft.util.math.Vec3d;
-import net.minecraft.world.*;
-import software.bernie.geckolib.animatable.GeoEntity;
+import net.minecraft.world.World;
 import software.bernie.geckolib.core.animatable.instance.AnimatableInstanceCache;
 import software.bernie.geckolib.core.animation.AnimatableManager;
 import software.bernie.geckolib.core.animation.AnimationController;
@@ -34,7 +27,6 @@ public class MikuEntity extends AbstractPlushEntity {
 
     private static final int MAX_LEEK_TIMER = 40;
     private int eatLeekTimer;
-    private EatLeekGoal eatLeekGoal;
     public boolean eatingLeek;
 
     private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
@@ -45,13 +37,12 @@ public class MikuEntity extends AbstractPlushEntity {
         RawAnimation.begin().thenLoop("misc.dance.miku.vegetable-juice"),
         RawAnimation.begin().thenLoop("misc.dance.miku.static")
     );
-    private static final RawAnimation SWIPE = RawAnimation.begin().thenPlay("attack.swipe");
-    private static final RawAnimation SWIPE2 = RawAnimation.begin().thenPlay("attack.swipe2");
-    private static final RawAnimation SWIPE3 = RawAnimation.begin().thenPlay("attack.swipe3");
+    protected static final List<RawAnimation> ATTACK_ANIMATIONS = List.of(
+        RawAnimation.begin().thenPlay("attack.swipe"),
+        RawAnimation.begin().thenPlay("attack.swipe2"),
+        RawAnimation.begin().thenPlay("attack.swipe3")
+    );
     private static final RawAnimation EAT = RawAnimation.begin().thenPlay("misc.eat");
-
-    private static RawAnimation SELECTED_DANCE = DANCES.get(0);
-    private static RawAnimation SELECTED_ATTACK = SWIPE;
 
     public MikuEntity(EntityType<? extends TameableEntity> entityType, World world) {
         super(entityType, world);
@@ -61,8 +52,8 @@ public class MikuEntity extends AbstractPlushEntity {
     @Override
     public void initGoals() {
         super.initGoals();
-        this.eatLeekGoal = new EatLeekGoal(this);
-        this.goalSelector.add(5, this.eatLeekGoal);
+        EatLeekGoal eatLeekGoal = new EatLeekGoal(this);
+        this.goalSelector.add(5, eatLeekGoal);
     }
 
     //ANIMATION CONTROLLER
@@ -92,11 +83,27 @@ public class MikuEntity extends AbstractPlushEntity {
                 }
                 //DANCE
                 else if (this.isSongPlaying()){
-                    return state.setAndContinue(SELECTED_DANCE);
+                    RawAnimation currentAnimation = state.getController().getCurrentRawAnimation();
+                    for (RawAnimation animation : DANCES){
+                        if (currentAnimation.equals(animation)){
+                            return state.setAndContinue(animation);
+                        }
+                    }
+                    return state.setAndContinue(DANCES.get(this.random.nextBetweenExclusive(
+                        0, DANCES.size()-1)
+                    ));
                 }
                 //ATTACKING
                 else if (this.handSwinging) {
-                    return state.setAndContinue(SELECTED_ATTACK);
+                    RawAnimation currentAnimation = state.getController().getCurrentRawAnimation();
+                    for (RawAnimation animation : ATTACK_ANIMATIONS){
+                        if (currentAnimation.equals(animation)){
+                            return state.setAndContinue(animation);
+                        }
+                    }
+                    return state.setAndContinue(ATTACK_ANIMATIONS.get(this.random.nextBetweenExclusive(
+                        0, ATTACK_ANIMATIONS.size()-1)
+                    ));
                 }
                 //IDLE
                 else {
@@ -110,18 +117,6 @@ public class MikuEntity extends AbstractPlushEntity {
     @Override
     public AnimatableInstanceCache getAnimatableInstanceCache() {
         return this.cache;
-    }
-
-    //RANDOM ATTACK ANIM
-    @Override
-    public void swingHand(Hand hand) {
-        super.swingHand(hand);
-        int randomAttack = this.random.nextBetween(1, 3);
-        switch (randomAttack) {
-            case 1: SELECTED_ATTACK = SWIPE; break;
-            case 2: SELECTED_ATTACK = SWIPE2; break;
-            case 3: SELECTED_ATTACK = SWIPE3; break;
-        }
     }
 
     //TRACK VARIANT
@@ -177,15 +172,6 @@ public class MikuEntity extends AbstractPlushEntity {
 
     public void setEatingLeek(boolean eatingLeek){
         this.eatingLeek = eatingLeek;
-    }
-
-    //SELECT RANDOM DANCE
-    @Override
-    public void setNearbySongPlaying(BlockPos songPosition, boolean playing) {
-        this.songSource = songPosition;
-        this.songPlaying = playing;
-        int randomDance = this.random.nextInt(DANCES.size());
-        SELECTED_DANCE = DANCES.get(randomDance);
     }
 
     //MIKU VARIANTS
