@@ -75,7 +75,8 @@ public class AbstractPlushEntity extends TameableEntity implements GeoEntity {
         this.goalSelector.add(8, new LookAtEntityGoal(this, PlayerEntity.class, 8F));
         this.goalSelector.add(9, new LookAroundGoal(this));
         this.targetSelector.add(1, new TrackOwnerAttackerGoal(this));
-        this.targetSelector.add(2, new AttackWithOwnerGoal(this));
+        this.targetSelector.add(2, new RevengeGoal(this));
+        this.targetSelector.add(3, new AttackWithOwnerGoal(this));
     }
     //ATTRIBUTES
     public static DefaultAttributeContainer.Builder createAttributes() {

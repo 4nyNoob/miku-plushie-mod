@@ -46,20 +46,6 @@ public class TetoEntity extends AbstractPlushEntity {
     }
 
     @Override
-    public void initGoals() {
-        this.goalSelector.add(0, new SwimGoal(this));
-        this.goalSelector.add(1, new SitGoal(this));
-        this.goalSelector.add(2, new MikuDelayedAttackGoal(this, 1.5F, true));
-        this.goalSelector.add(4, new FollowOwnerGoal(this,1.0F, 5F, 1F, true));
-        this.goalSelector.add(6, new TemptGoal(this, 1.5, Ingredient.ofItems(ModItems.CANUDINHO), false));
-        this.goalSelector.add(7, new LookAtEntityGoal(this, MikuEntity.class, 8F));
-        this.goalSelector.add(8, new LookAtEntityGoal(this, PlayerEntity.class, 8F));
-        this.goalSelector.add(9, new LookAroundGoal(this));
-        this.targetSelector.add(1, new TrackOwnerAttackerGoal(this));
-        this.targetSelector.add(2, new AttackWithOwnerGoal(this));
-    }
-
-    @Override
     public AnimatableInstanceCache getAnimatableInstanceCache() {
         return this.cache;
     }
