@@ -30,8 +30,8 @@ public class NeruEntity extends AbstractPlushEntity {
     private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
     private static final List<RawAnimation> DANCES = List.of(
         RawAnimation.begin().thenLoop("misc.dance.generic.caramelldansen"),
-        RawAnimation.begin().thenLoop("misc.miku.ievan-polkka"),
-        RawAnimation.begin().thenLoop("misc.miku.vegetable-juice")
+        RawAnimation.begin().thenLoop("misc.dance.miku.ievan-polkka"),
+        RawAnimation.begin().thenLoop("misc.dance.miku.vegetable-juice")
     );
     private static final RawAnimation SWIPE = RawAnimation.begin().thenPlay("attack.swipe");
     private static final RawAnimation SWIPE2 = RawAnimation.begin().thenPlay("attack.swipe2");
