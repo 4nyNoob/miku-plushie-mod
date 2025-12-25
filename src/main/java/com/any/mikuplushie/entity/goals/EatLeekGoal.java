@@ -42,9 +42,6 @@ public class EatLeekGoal extends Goal {
 
     @Override
     public boolean canStart() {
-//            if (this.mob.getRandom().nextInt(this.mob.isBaby() ? 50 : 1000) != 0) {
-//                return false;
-//            } else {
         BlockPos blockPos = this.miku.getBlockPos();
         return !locateFullyGrownLeek(blockPos).equals(blockPos);
     }
@@ -100,8 +97,6 @@ public class EatLeekGoal extends Goal {
                     if (this.world.getGameRules().getBoolean(GameRules.DO_MOB_GRIEFING)) {
                         this.world.syncWorldEvent(WorldEvents.BLOCK_BROKEN, blockPos2, Block.getRawIdFromState(ModBlocks.LEEK_CROP.getDefaultState()));
                         this.world.setBlockState(blockPos2, Blocks.AIR.getDefaultState(), Block.NOTIFY_LISTENERS);
-//                        this.miku.playSound(ModSoundEvents.MIKU_EAT, 1, 1);
-//                        this.miku.playSound(SoundEvents.ENTITY_PLAYER_BURP, 1, 1);
                         this.miku.setEatingLeek(false);
                     }
 
