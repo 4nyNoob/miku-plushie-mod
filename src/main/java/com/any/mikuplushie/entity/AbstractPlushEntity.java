@@ -107,23 +107,36 @@ public class AbstractPlushEntity extends TameableEntity implements GeoEntity {
                 //DANCE
                 else if (this.isSongPlaying()){
                     RawAnimation currentAnimation = state.getController().getCurrentRawAnimation();
+
                     for (RawAnimation animation : DANCES){
+                        //IF ALREADY DANCING THEN CONTINUE
                         if (currentAnimation.equals(animation)){
                             return state.setAndContinue(animation);
                         }
                     }
-                    return state.setAndContinue(DANCES.get(this.random.nextBetweenExclusive(
-                        0, DANCES.size()-1)
-                    ));
+                    //IF LIST IS TOO SMALL THEN GET 1ST ENTRY
+                    if (DANCES.size() == 1){
+                        return state .setAndContinue(DANCES.get(0));
+                    }
+                    //RANDOMLY SELECT DANCE ANIMATION FROM LIST
+                    else {
+                        return state.setAndContinue(DANCES.get(this.random.nextBetweenExclusive(
+                            0, DANCES.size()-1)
+                        ));
+                    }
+
                 }
                 //ATTACKING
                 else if (this.handSwinging) {
                     RawAnimation currentAnimation = state.getController().getCurrentRawAnimation();
+
                     for (RawAnimation animation : ATTACK_ANIMATIONS){
+                        //IF ALREADY ATTACKING THE CONTINUE
                         if (currentAnimation.equals(animation)){
                             return state.setAndContinue(animation);
                         }
                     }
+                    //RANDOMLY SELECT ATTACK ANIMATION FROM LIST
                     return state.setAndContinue(ATTACK_ANIMATIONS.get(this.random.nextBetweenExclusive(
                         0, ATTACK_ANIMATIONS.size()-1)
                     ));
