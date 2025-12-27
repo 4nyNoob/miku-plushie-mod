@@ -35,7 +35,6 @@ public class LenModel extends GeoModel<LenEntity> {
     @Override
     public void setCustomAnimations(LenEntity animatable, long instanceId, AnimationState<LenEntity> state) {
         super.setCustomAnimations(animatable, instanceId, state);
-        PlushAnimations.headLook(this, animatable, state);
         PlushAnimations.limbAnimations(this, animatable, state);
     }
 

@@ -32,7 +32,6 @@ public class AikoModel extends GeoModel<AikoEntity> {
     @Override
     public void setCustomAnimations(AikoEntity animatable, long instanceId, AnimationState<AikoEntity> state) {
         super.setCustomAnimations(animatable, instanceId, state);
-        PlushAnimations.headLook(this, animatable, state);
         PlushAnimations.limbAnimations(this, animatable, state);
     }
 

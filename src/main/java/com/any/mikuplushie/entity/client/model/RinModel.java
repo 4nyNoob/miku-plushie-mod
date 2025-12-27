@@ -35,9 +35,7 @@ public class RinModel extends GeoModel<RinEntity> {
     @Override
     public void setCustomAnimations(RinEntity animatable, long instanceId, AnimationState<RinEntity> state) {
         super.setCustomAnimations(animatable, instanceId, state);
-        PlushAnimations.headLook(this, animatable, state);
         PlushAnimations.limbAnimations(this, animatable, state);
-
     }
 
     private String variantToBlockTextureName (RinEntity animatable) {

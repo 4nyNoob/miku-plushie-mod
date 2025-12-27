@@ -34,7 +34,6 @@ public class TetoModel extends GeoModel<TetoEntity> {
     @Override
     public void setCustomAnimations(TetoEntity animatable, long instanceId, AnimationState<TetoEntity> state) {
         super.setCustomAnimations(animatable, instanceId, state);
-        PlushAnimations.headLook(this, animatable, state);
         PlushAnimations.hairMovement(this, animatable, state);
         PlushAnimations.limbAnimations(this, animatable, state);
     }

@@ -5090,6 +5090,23 @@
 			"visibility": true,
 			"autouv": 0,
 			"isOpen": true
+		},
+		{
+			"uuid": "6abafea7-e231-3d5b-22ca-a5cff671d0ee",
+			"export": true,
+			"locked": false,
+			"origin": [0, 5.5, 0],
+			"rotation": [0, 0, 0],
+			"color": 0,
+			"name": "body_offset",
+			"children": [],
+			"reset": false,
+			"shade": true,
+			"mirror_uv": false,
+			"selected": false,
+			"visibility": true,
+			"autouv": 0,
+			"isOpen": true
 		}
 	],
 	"outliner": [
@@ -5102,319 +5119,325 @@
 					"isOpen": true,
 					"children": [
 						{
-							"uuid": "be1c7d16-0d87-1b67-aff0-241184bcc81f",
+							"uuid": "6abafea7-e231-3d5b-22ca-a5cff671d0ee",
 							"isOpen": true,
 							"children": [
-								"419b26dd-87f2-2d68-4acb-c86e5f3c6d5e",
-								"0e8cc75e-1dfd-92ee-cd4d-06cef962edd1",
 								{
-									"uuid": "59584cfb-9667-07f4-92d2-ed112d70e9d0",
-									"isOpen": false,
-									"children": [
-										{
-											"uuid": "9532540f-ed1d-5532-992e-971928a45a7b",
-											"isOpen": true,
-											"children": [
-												"bb0b3022-8661-371a-8c73-3cb14dace453",
-												"8deeeef5-491d-b6f5-a68e-0b5e2874e53c",
-												{
-													"uuid": "f48a6bc8-ed98-a7bb-96bf-bd3af4aba717",
-													"isOpen": true,
-													"children": ["be3b7e9b-8b3c-73ab-53a6-f1ae687e2ad2"]
-												},
-												{
-													"uuid": "65fbe2a9-f781-ff41-8888-8b61bc285ef9",
-													"isOpen": true,
-													"children": []
-												}
-											]
-										}
-									]
-								},
-								{
-									"uuid": "f1a73a28-6977-5102-964a-6770e148cdc8",
-									"isOpen": false,
-									"children": [
-										{
-											"uuid": "f07bf905-81c2-0574-034d-fb36dd778288",
-											"isOpen": true,
-											"children": [
-												"3e5f1e21-50c7-c7d5-66c6-087886e5a3a0",
-												"282b005c-81bd-0cb1-c962-944f491308f3",
-												{
-													"uuid": "7292a8b5-e1d3-f3df-0db5-6143a09af982",
-													"isOpen": true,
-													"children": ["3a1d6db0-13cc-6861-cd3c-2ba26a94efb1"]
-												},
-												{
-													"uuid": "726c78a1-6120-edbf-93f8-37451125d33d",
-													"isOpen": true,
-													"children": []
-												}
-											]
-										}
-									]
-								},
-								{
-									"uuid": "05125d78-0fb0-b8bc-e0df-ea1668fa31e7",
+									"uuid": "be1c7d16-0d87-1b67-aff0-241184bcc81f",
 									"isOpen": true,
 									"children": [
+										"419b26dd-87f2-2d68-4acb-c86e5f3c6d5e",
+										"0e8cc75e-1dfd-92ee-cd4d-06cef962edd1",
 										{
-											"uuid": "4cb3df88-9ff2-1ccd-9173-b70073e76001",
-											"isOpen": true,
+											"uuid": "59584cfb-9667-07f4-92d2-ed112d70e9d0",
+											"isOpen": false,
 											"children": [
-												"132ea9bc-0a6e-e48d-a76e-7822ed65fc88",
-												"4d8e2717-48f1-15a7-03e0-7af3c617d165",
 												{
-													"uuid": "baec0393-25e5-25c5-176e-8642e0874545",
+													"uuid": "9532540f-ed1d-5532-992e-971928a45a7b",
 													"isOpen": true,
 													"children": [
+														"bb0b3022-8661-371a-8c73-3cb14dace453",
+														"8deeeef5-491d-b6f5-a68e-0b5e2874e53c",
 														{
-															"uuid": "beb4eadc-aff4-3a3c-852d-e674a83c8017",
+															"uuid": "f48a6bc8-ed98-a7bb-96bf-bd3af4aba717",
+															"isOpen": true,
+															"children": ["be3b7e9b-8b3c-73ab-53a6-f1ae687e2ad2"]
+														},
+														{
+															"uuid": "65fbe2a9-f781-ff41-8888-8b61bc285ef9",
+															"isOpen": true,
+															"children": []
+														}
+													]
+												}
+											]
+										},
+										{
+											"uuid": "f1a73a28-6977-5102-964a-6770e148cdc8",
+											"isOpen": false,
+											"children": [
+												{
+													"uuid": "f07bf905-81c2-0574-034d-fb36dd778288",
+													"isOpen": true,
+													"children": [
+														"3e5f1e21-50c7-c7d5-66c6-087886e5a3a0",
+														"282b005c-81bd-0cb1-c962-944f491308f3",
+														{
+															"uuid": "7292a8b5-e1d3-f3df-0db5-6143a09af982",
+															"isOpen": true,
+															"children": ["3a1d6db0-13cc-6861-cd3c-2ba26a94efb1"]
+														},
+														{
+															"uuid": "726c78a1-6120-edbf-93f8-37451125d33d",
+															"isOpen": true,
+															"children": []
+														}
+													]
+												}
+											]
+										},
+										{
+											"uuid": "05125d78-0fb0-b8bc-e0df-ea1668fa31e7",
+											"isOpen": true,
+											"children": [
+												{
+													"uuid": "4cb3df88-9ff2-1ccd-9173-b70073e76001",
+													"isOpen": true,
+													"children": [
+														"132ea9bc-0a6e-e48d-a76e-7822ed65fc88",
+														"4d8e2717-48f1-15a7-03e0-7af3c617d165",
+														{
+															"uuid": "baec0393-25e5-25c5-176e-8642e0874545",
 															"isOpen": true,
 															"children": [
 																{
-																	"uuid": "08135e7f-59ab-e224-751b-05b1dd14dd82",
+																	"uuid": "beb4eadc-aff4-3a3c-852d-e674a83c8017",
 																	"isOpen": true,
 																	"children": [
-																		"d2bf3dcc-88da-ebc7-4b4c-7bbc20b72458",
-																		"ba2509e6-34bd-c685-acca-bfa6f019fbd6",
-																		"e5fe6f21-3c9b-4da2-d976-32420a285769",
-																		"2344f7bb-c417-2fb1-4fbd-6b545f6d857a",
 																		{
-																			"uuid": "00a8cdcd-2810-ea95-407c-3276a7cc9c3c",
-																			"isOpen": true,
-																			"children": ["94cdaf86-b089-6608-8a4d-c252bc251cc9", "9aa254d5-a751-97e2-af6e-7c202e29db45", "c684bcd2-6e6b-02bb-25a2-fa889b94d4fb"]
-																		}
-																	]
-																},
-																{
-																	"uuid": "2759e9d6-f798-f319-6763-03a36279a0c8",
-																	"isOpen": true,
-																	"children": [
-																		"4b6e6170-b68c-fecb-aa5b-7760237aa579",
-																		{
-																			"uuid": "1b8c6a8a-20e9-7f8e-5dd1-e48cbfe632c9",
-																			"isOpen": true,
-																			"children": ["b33a8bd9-0d92-b4ba-a24c-b87013eaaf64"]
-																		}
-																	]
-																},
-																{
-																	"uuid": "31b979bc-03e8-19f3-343c-de51c3dc4ac2",
-																	"isOpen": true,
-																	"children": [
-																		"f95908b2-5aa3-b60e-0a2c-6b02bc70482e",
-																		"0810b537-d9b4-cbba-2fdc-54039f447ab6",
-																		{
-																			"uuid": "e2bb6e66-5605-5765-76e1-d990ec082328",
-																			"isOpen": true,
-																			"children": ["bc285c55-bc28-fe6d-2e42-6a5d3c311904", "983aa200-1f9f-3f51-bfa7-92c699c2d0e5", "57a42fb1-6e04-5808-dbfd-204120bbcdea"]
-																		},
-																		"908b95f8-7e90-7e8f-1f40-edf2be074e58",
-																		"6dfb471c-5675-c61c-6eef-66326198bcf0"
-																	]
-																},
-																{
-																	"uuid": "9985fa4b-38f3-4e28-1cc5-8b50ecacf7b4",
-																	"isOpen": true,
-																	"children": [
-																		"627e3aa7-6899-f136-9229-6a7612e2bbda",
-																		{
-																			"uuid": "d652a459-b1d4-bc67-15d1-242dea171875",
-																			"isOpen": true,
-																			"children": ["84614b66-5d60-1cd6-3547-b0c7216a9392"]
-																		}
-																	]
-																},
-																"f1b6f25d-2c2f-980a-c71a-b97b180c99cf",
-																"1bf26500-fbae-074f-3004-e8d37009dfd5",
-																"6610a11c-8e9e-5e58-a55e-3f556fbd9903",
-																"a2b7a3cd-0ae4-c2d5-c245-a5643e6e4984"
-															]
-														}
-													]
-												},
-												{
-													"uuid": "b449f28c-7c98-6afe-6126-d17f643efc81",
-													"isOpen": true,
-													"children": [
-														"6336e197-eb02-5d29-6980-b21d88918681",
-														"b7c06e42-8ae7-2c25-4269-9d2a755dc429",
-														"00533019-a10e-39c6-38d7-ea2f5a1a7cf3",
-														{
-															"uuid": "1d9cb158-27da-64e5-cc2b-d22f4e1bc2fe",
-															"isOpen": false,
-															"children": [
-																"67aa7e66-1311-731d-ea47-aab24c497afe",
-																"3e24531a-b82c-6e54-3c88-ed6bb6664563",
-																"56122788-3f53-95ca-1f13-11a0a941d596",
-																"537a5da4-5068-fa54-d6ca-849de37c5609",
-																{
-																	"uuid": "23242ea4-0c76-a7f8-d4a5-df520043be9c",
-																	"isOpen": true,
-																	"children": [
-																		"2e8613bf-c54a-efd2-f110-a5c92f8cc655",
-																		"5868ec66-d3a5-4927-9c5f-74ffe387df5b",
-																		"78d50d20-5791-ac5c-8d0d-a61a885d7b93",
-																		{
-																			"uuid": "ed258d11-2d45-11c8-819f-e6e70e8dfb53",
+																			"uuid": "08135e7f-59ab-e224-751b-05b1dd14dd82",
 																			"isOpen": true,
 																			"children": [
-																				"0f7234a6-8def-a3df-191d-2a961fa4460d",
-																				"b64aa869-a1bc-620c-4df8-eb9db2f0f0e3",
-																				"8f8c68d6-844e-e014-7159-76238db041d9",
-																				"aeecf197-c914-50c1-6232-fccda17e4c02",
-																				"4f88b4a3-5dd1-f5e1-1bed-3fa7a8ce0e91",
-																				"f72fe817-b2d0-177f-8f6e-7bc0a7a06125"
+																				"d2bf3dcc-88da-ebc7-4b4c-7bbc20b72458",
+																				"ba2509e6-34bd-c685-acca-bfa6f019fbd6",
+																				"e5fe6f21-3c9b-4da2-d976-32420a285769",
+																				"2344f7bb-c417-2fb1-4fbd-6b545f6d857a",
+																				{
+																					"uuid": "00a8cdcd-2810-ea95-407c-3276a7cc9c3c",
+																					"isOpen": true,
+																					"children": ["94cdaf86-b089-6608-8a4d-c252bc251cc9", "9aa254d5-a751-97e2-af6e-7c202e29db45", "c684bcd2-6e6b-02bb-25a2-fa889b94d4fb"]
+																				}
+																			]
+																		},
+																		{
+																			"uuid": "2759e9d6-f798-f319-6763-03a36279a0c8",
+																			"isOpen": true,
+																			"children": [
+																				"4b6e6170-b68c-fecb-aa5b-7760237aa579",
+																				{
+																					"uuid": "1b8c6a8a-20e9-7f8e-5dd1-e48cbfe632c9",
+																					"isOpen": true,
+																					"children": ["b33a8bd9-0d92-b4ba-a24c-b87013eaaf64"]
+																				}
+																			]
+																		},
+																		{
+																			"uuid": "31b979bc-03e8-19f3-343c-de51c3dc4ac2",
+																			"isOpen": true,
+																			"children": [
+																				"f95908b2-5aa3-b60e-0a2c-6b02bc70482e",
+																				"0810b537-d9b4-cbba-2fdc-54039f447ab6",
+																				{
+																					"uuid": "e2bb6e66-5605-5765-76e1-d990ec082328",
+																					"isOpen": true,
+																					"children": ["bc285c55-bc28-fe6d-2e42-6a5d3c311904", "983aa200-1f9f-3f51-bfa7-92c699c2d0e5", "57a42fb1-6e04-5808-dbfd-204120bbcdea"]
+																				},
+																				"908b95f8-7e90-7e8f-1f40-edf2be074e58",
+																				"6dfb471c-5675-c61c-6eef-66326198bcf0"
+																			]
+																		},
+																		{
+																			"uuid": "9985fa4b-38f3-4e28-1cc5-8b50ecacf7b4",
+																			"isOpen": true,
+																			"children": [
+																				"627e3aa7-6899-f136-9229-6a7612e2bbda",
+																				{
+																					"uuid": "d652a459-b1d4-bc67-15d1-242dea171875",
+																					"isOpen": true,
+																					"children": ["84614b66-5d60-1cd6-3547-b0c7216a9392"]
+																				}
+																			]
+																		},
+																		"f1b6f25d-2c2f-980a-c71a-b97b180c99cf",
+																		"1bf26500-fbae-074f-3004-e8d37009dfd5",
+																		"6610a11c-8e9e-5e58-a55e-3f556fbd9903",
+																		"a2b7a3cd-0ae4-c2d5-c245-a5643e6e4984"
+																	]
+																}
+															]
+														},
+														{
+															"uuid": "b449f28c-7c98-6afe-6126-d17f643efc81",
+															"isOpen": true,
+															"children": [
+																"6336e197-eb02-5d29-6980-b21d88918681",
+																"b7c06e42-8ae7-2c25-4269-9d2a755dc429",
+																"00533019-a10e-39c6-38d7-ea2f5a1a7cf3",
+																{
+																	"uuid": "1d9cb158-27da-64e5-cc2b-d22f4e1bc2fe",
+																	"isOpen": false,
+																	"children": [
+																		"67aa7e66-1311-731d-ea47-aab24c497afe",
+																		"3e24531a-b82c-6e54-3c88-ed6bb6664563",
+																		"56122788-3f53-95ca-1f13-11a0a941d596",
+																		"537a5da4-5068-fa54-d6ca-849de37c5609",
+																		{
+																			"uuid": "23242ea4-0c76-a7f8-d4a5-df520043be9c",
+																			"isOpen": true,
+																			"children": [
+																				"2e8613bf-c54a-efd2-f110-a5c92f8cc655",
+																				"5868ec66-d3a5-4927-9c5f-74ffe387df5b",
+																				"78d50d20-5791-ac5c-8d0d-a61a885d7b93",
+																				{
+																					"uuid": "ed258d11-2d45-11c8-819f-e6e70e8dfb53",
+																					"isOpen": true,
+																					"children": [
+																						"0f7234a6-8def-a3df-191d-2a961fa4460d",
+																						"b64aa869-a1bc-620c-4df8-eb9db2f0f0e3",
+																						"8f8c68d6-844e-e014-7159-76238db041d9",
+																						"aeecf197-c914-50c1-6232-fccda17e4c02",
+																						"4f88b4a3-5dd1-f5e1-1bed-3fa7a8ce0e91",
+																						"f72fe817-b2d0-177f-8f6e-7bc0a7a06125"
+																					]
+																				}
 																			]
 																		}
 																	]
-																}
-															]
-														},
-														{
-															"uuid": "a39e0c6a-a300-1a1c-f03d-77fe6c5540fd",
-															"isOpen": false,
-															"children": [
-																{
-																	"uuid": "8ffa669e-7c16-eeab-1cf6-2da2e45cefb5",
-																	"isOpen": false,
-																	"children": ["ed75e7f9-7993-46df-a66a-94283513b05b", "28ac4fc7-539f-5717-3338-8a49319a2bab", "65928ce2-51b6-8f89-afa4-f871eae6b55e"]
 																},
 																{
-																	"uuid": "9d0b73c7-fab5-9a91-c538-7d35324236df",
+																	"uuid": "a39e0c6a-a300-1a1c-f03d-77fe6c5540fd",
 																	"isOpen": false,
-																	"children": ["45b8e51b-e721-c769-35d2-8a8b611fdade", "58e705af-26fb-6fe1-02fe-5d544c446445", "2ed2b6dd-1860-309c-7d0c-833475be6d5a"]
-																},
-																{
-																	"uuid": "60678b3f-6f35-ae63-3a06-766e69683d03",
-																	"isOpen": false,
-																	"children": ["0851fb88-905e-801f-6cce-1f25c92f4e6c"]
-																},
-																{
-																	"uuid": "760c517c-38a6-720a-948b-f29dfb48e3c2",
-																	"isOpen": false,
-																	"children": ["ff235c3d-db0d-2ad5-ff75-8709b5c8d8ae"]
-																},
-																{
-																	"uuid": "806f8725-4da7-a4eb-ce05-258cfca3a865",
-																	"isOpen": false,
-																	"children": ["fe0496d7-4631-e66d-92db-013945a13805"]
-																},
-																{
-																	"uuid": "8a8da0e2-deec-f865-badb-8a3ab98a9919",
-																	"isOpen": false,
-																	"children": ["ed9c1db8-aff3-20df-a43f-0ad3ce47a7ed"]
-																}
-															]
-														},
-														{
-															"uuid": "d95dc401-a7bc-8d9c-dfaa-3d2d37ba4a3d",
-															"isOpen": false,
-															"children": ["8ba3f202-dbc2-90f9-48dd-f9c26450254d", "3717c7b8-77ae-b799-425b-3b5f2fff831e"]
-														},
-														{
-															"uuid": "69eb307f-e916-5501-cc2d-b672d8c2ea3c",
-															"isOpen": false,
-															"children": ["008dba44-5f26-6639-4f98-30fe0ea74d9b", "4c0810d6-5b8e-6a07-3045-60f00ce766a6"]
-														},
-														{
-															"uuid": "bb9ea93b-1897-0c4f-c7bc-75a820cf0f82",
-															"isOpen": false,
-															"children": [
-																"a56dc9f4-4ff9-d102-b29e-0ab792cb35fb",
-																"3f1b644f-a149-6883-2ff5-4a94f7d86dc3",
-																"43fcb7f3-3172-7ff8-aed4-345983648406",
-																"3f769530-0e66-5773-5074-808f00ed22ba",
-																"f0392a8f-137e-595b-6b73-3de139dc1fb5",
-																"ba15f44d-b59d-8e24-4479-749db6510a5d",
-																"a874340c-a33b-4053-e639-248d3db4145a",
-																"66cb7d30-3447-6a57-5270-f3bed245c574",
-																"454548c7-b438-2492-6654-b7ea825e6edb",
-																"8d18c070-e1c0-afcb-9cfb-8f47b2e8e5ea"
-															]
-														},
-														{
-															"uuid": "83e7e70e-2914-cd30-e47d-00372f2bd931",
-															"isOpen": false,
-															"children": [
-																{
-																	"uuid": "c6cccf31-6cc8-1ec2-bfe8-43a954625fd0",
-																	"isOpen": true,
-																	"children": ["d8605d8d-9b9d-12d2-4545-bf31d2af62f9", "da4d1dbb-bc66-dcae-8c40-360af3160c4b"]
-																},
-																{
-																	"uuid": "c7fd7b1c-25d4-74a2-7188-683fb58335d4",
-																	"isOpen": false,
-																	"children": ["aa67d915-120f-4580-cf23-58bbcd12da14", "a604c3f6-3dd0-4a34-1ab8-660054c691b9"]
-																},
-																"2c7ca208-07dd-2acd-e273-08fc364e832a",
-																"7ca50467-e485-e939-b85b-2ad892bc7b1c"
-															]
-														},
-														{
-															"uuid": "fbe39768-509b-01e5-6b47-fed3adab8321",
-															"isOpen": true,
-															"children": [
-																{
-																	"uuid": "97e7576e-9e31-c7ab-6d37-8ee777ffa06a",
-																	"isOpen": true,
 																	"children": [
-																		"1e8842d5-3b37-f0bd-c421-0d7b0233256d",
 																		{
-																			"uuid": "53b85f2f-df03-f7a4-23b9-d814dde70826",
-																			"isOpen": true,
-																			"children": ["6b5fd5d7-a1c4-c957-44de-34b511b89d27"]
+																			"uuid": "8ffa669e-7c16-eeab-1cf6-2da2e45cefb5",
+																			"isOpen": false,
+																			"children": ["ed75e7f9-7993-46df-a66a-94283513b05b", "28ac4fc7-539f-5717-3338-8a49319a2bab", "65928ce2-51b6-8f89-afa4-f871eae6b55e"]
+																		},
+																		{
+																			"uuid": "9d0b73c7-fab5-9a91-c538-7d35324236df",
+																			"isOpen": false,
+																			"children": ["45b8e51b-e721-c769-35d2-8a8b611fdade", "58e705af-26fb-6fe1-02fe-5d544c446445", "2ed2b6dd-1860-309c-7d0c-833475be6d5a"]
+																		},
+																		{
+																			"uuid": "60678b3f-6f35-ae63-3a06-766e69683d03",
+																			"isOpen": false,
+																			"children": ["0851fb88-905e-801f-6cce-1f25c92f4e6c"]
+																		},
+																		{
+																			"uuid": "760c517c-38a6-720a-948b-f29dfb48e3c2",
+																			"isOpen": false,
+																			"children": ["ff235c3d-db0d-2ad5-ff75-8709b5c8d8ae"]
+																		},
+																		{
+																			"uuid": "806f8725-4da7-a4eb-ce05-258cfca3a865",
+																			"isOpen": false,
+																			"children": ["fe0496d7-4631-e66d-92db-013945a13805"]
+																		},
+																		{
+																			"uuid": "8a8da0e2-deec-f865-badb-8a3ab98a9919",
+																			"isOpen": false,
+																			"children": ["ed9c1db8-aff3-20df-a43f-0ad3ce47a7ed"]
 																		}
 																	]
 																},
 																{
-																	"uuid": "684c910f-554f-7c51-a63b-4a61778526ba",
+																	"uuid": "d95dc401-a7bc-8d9c-dfaa-3d2d37ba4a3d",
+																	"isOpen": false,
+																	"children": ["8ba3f202-dbc2-90f9-48dd-f9c26450254d", "3717c7b8-77ae-b799-425b-3b5f2fff831e"]
+																},
+																{
+																	"uuid": "69eb307f-e916-5501-cc2d-b672d8c2ea3c",
+																	"isOpen": false,
+																	"children": ["008dba44-5f26-6639-4f98-30fe0ea74d9b", "4c0810d6-5b8e-6a07-3045-60f00ce766a6"]
+																},
+																{
+																	"uuid": "bb9ea93b-1897-0c4f-c7bc-75a820cf0f82",
+																	"isOpen": false,
+																	"children": [
+																		"a56dc9f4-4ff9-d102-b29e-0ab792cb35fb",
+																		"3f1b644f-a149-6883-2ff5-4a94f7d86dc3",
+																		"43fcb7f3-3172-7ff8-aed4-345983648406",
+																		"3f769530-0e66-5773-5074-808f00ed22ba",
+																		"f0392a8f-137e-595b-6b73-3de139dc1fb5",
+																		"ba15f44d-b59d-8e24-4479-749db6510a5d",
+																		"a874340c-a33b-4053-e639-248d3db4145a",
+																		"66cb7d30-3447-6a57-5270-f3bed245c574",
+																		"454548c7-b438-2492-6654-b7ea825e6edb",
+																		"8d18c070-e1c0-afcb-9cfb-8f47b2e8e5ea"
+																	]
+																},
+																{
+																	"uuid": "83e7e70e-2914-cd30-e47d-00372f2bd931",
+																	"isOpen": false,
+																	"children": [
+																		{
+																			"uuid": "c6cccf31-6cc8-1ec2-bfe8-43a954625fd0",
+																			"isOpen": true,
+																			"children": ["d8605d8d-9b9d-12d2-4545-bf31d2af62f9", "da4d1dbb-bc66-dcae-8c40-360af3160c4b"]
+																		},
+																		{
+																			"uuid": "c7fd7b1c-25d4-74a2-7188-683fb58335d4",
+																			"isOpen": false,
+																			"children": ["aa67d915-120f-4580-cf23-58bbcd12da14", "a604c3f6-3dd0-4a34-1ab8-660054c691b9"]
+																		},
+																		"2c7ca208-07dd-2acd-e273-08fc364e832a",
+																		"7ca50467-e485-e939-b85b-2ad892bc7b1c"
+																	]
+																},
+																{
+																	"uuid": "fbe39768-509b-01e5-6b47-fed3adab8321",
 																	"isOpen": true,
-																	"children": ["4c8667e9-abdc-aefa-ac42-778b5d5e8011"]
+																	"children": [
+																		{
+																			"uuid": "97e7576e-9e31-c7ab-6d37-8ee777ffa06a",
+																			"isOpen": true,
+																			"children": [
+																				"1e8842d5-3b37-f0bd-c421-0d7b0233256d",
+																				{
+																					"uuid": "53b85f2f-df03-f7a4-23b9-d814dde70826",
+																					"isOpen": true,
+																					"children": ["6b5fd5d7-a1c4-c957-44de-34b511b89d27"]
+																				}
+																			]
+																		},
+																		{
+																			"uuid": "684c910f-554f-7c51-a63b-4a61778526ba",
+																			"isOpen": true,
+																			"children": ["4c8667e9-abdc-aefa-ac42-778b5d5e8011"]
+																		}
+																	]
 																}
 															]
-														}
-													]
-												},
-												{
-													"uuid": "9e397390-52f2-64a8-c8e0-3f1fd549b0fa",
-													"isOpen": false,
-													"children": ["4584c16f-974d-c59f-8a32-7d70789a5212"]
-												},
-												{
-													"uuid": "450ec773-1ced-f05c-4084-9f650c1dfcf9",
-													"isOpen": true,
-													"children": [
+														},
 														{
-															"uuid": "44b5e032-1b49-bcd8-4038-ec15c4cd32ca",
+															"uuid": "9e397390-52f2-64a8-c8e0-3f1fd549b0fa",
+															"isOpen": false,
+															"children": ["4584c16f-974d-c59f-8a32-7d70789a5212"]
+														},
+														{
+															"uuid": "450ec773-1ced-f05c-4084-9f650c1dfcf9",
 															"isOpen": true,
-															"children": ["c50890fd-3010-d4df-0a16-cc2cc2f18a94"]
-														}
+															"children": [
+																{
+																	"uuid": "44b5e032-1b49-bcd8-4038-ec15c4cd32ca",
+																	"isOpen": true,
+																	"children": ["c50890fd-3010-d4df-0a16-cc2cc2f18a94"]
+																}
+															]
+														},
+														"028c2846-d70b-0b64-9c72-731c06c27aaa"
 													]
-												},
-												"028c2846-d70b-0b64-9c72-731c06c27aaa"
+												}
 											]
-										}
+										},
+										{
+											"uuid": "6e1d70f4-4bfe-8a17-1d64-b799ef744efa",
+											"isOpen": false,
+											"children": ["f172a0fd-b8cf-2862-abc6-2c0afd6bfc08", "22dbc5c8-5395-f3ac-ea06-07c66656c30c", "c1c29aa3-8a4e-b392-d958-c0764f75e3ba"]
+										},
+										{
+											"uuid": "114ced7a-6f9a-12c4-9748-772338b306b2",
+											"isOpen": false,
+											"children": ["3672f163-ea67-fc42-6585-2e6c1ab2d878"]
+										},
+										{
+											"uuid": "868ae997-c504-c291-4da8-938b9affeafe",
+											"isOpen": false,
+											"children": ["94ef02cc-0e67-7b1b-93bf-37b0bb1f8b38", "a521b6b5-25d2-38c1-95d8-01bffda3b124"]
+										},
+										"a176e4ac-adae-0388-ae19-de601ab7d84f"
 									]
-								},
-								{
-									"uuid": "6e1d70f4-4bfe-8a17-1d64-b799ef744efa",
-									"isOpen": false,
-									"children": ["f172a0fd-b8cf-2862-abc6-2c0afd6bfc08", "22dbc5c8-5395-f3ac-ea06-07c66656c30c", "c1c29aa3-8a4e-b392-d958-c0764f75e3ba"]
-								},
-								{
-									"uuid": "114ced7a-6f9a-12c4-9748-772338b306b2",
-									"isOpen": false,
-									"children": ["3672f163-ea67-fc42-6585-2e6c1ab2d878"]
-								},
-								{
-									"uuid": "868ae997-c504-c291-4da8-938b9affeafe",
-									"isOpen": false,
-									"children": ["94ef02cc-0e67-7b1b-93bf-37b0bb1f8b38", "a521b6b5-25d2-38c1-95d8-01bffda3b124"]
-								},
-								"a176e4ac-adae-0388-ae19-de601ab7d84f"
+								}
 							]
 						},
 						{
@@ -5825,7 +5848,7 @@
 			"override": false,
 			"length": 4,
 			"snapping": 24,
-			"selected": false,
+			"selected": true,
 			"saved": true,
 			"path": "../src/main/resources/assets/miku-plushie/animations/plush.animation.json",
 			"anim_time_update": "",
@@ -6467,6 +6490,12 @@
 				},
 				"fbe39768-509b-01e5-6b47-fed3adab8321": {
 					"name": "miku_plush_lucario_z",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false
+				},
+				"6abafea7-e231-3d5b-22ca-a5cff671d0ee": {
+					"name": "body_offset",
 					"type": "bone",
 					"rotation_global": false,
 					"quaternion_interpolation": false
@@ -11018,7 +11047,7 @@
 			"override": false,
 			"length": 0.5,
 			"snapping": 24,
-			"selected": true,
+			"selected": false,
 			"saved": true,
 			"path": "../src/main/resources/assets/miku-plushie/animations/plush.animation.json",
 			"anim_time_update": "",

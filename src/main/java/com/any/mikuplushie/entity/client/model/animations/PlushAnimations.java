@@ -9,7 +9,6 @@ import software.bernie.geckolib.model.GeoModel;
 public class PlushAnimations {
 
     public static void limbAnimations(GeoModel<?> plush, AbstractPlushEntity animatable, AnimationState<?> state){
-
         //LIMB ANIM VARIABLES
         float limbSwing = state.getLimbSwing();
         float swingAmm = state.getLimbSwingAmount();
@@ -22,8 +21,16 @@ public class PlushAnimations {
         CoreGeoBone right_leg = plush.getAnimationProcessor().getBone("right_leg_offset");
         CoreGeoBone left_arm = plush.getAnimationProcessor().getBone("left_arm_offset");
         CoreGeoBone right_arm = plush.getAnimationProcessor().getBone("right_arm_offset");
+        CoreGeoBone body = plush.getAnimationProcessor().getBone("body_offset");
 
-        //ANIM CODE
+        //HEALTH DISPLAY
+        float maxHealth = animatable.getMaxHealth();
+        float health = animatable.getHealth();
+        float healthFactor = health / maxHealth;
+        int bendAmount = 25;
+        float healthBend = ((healthFactor) - 1) * bendAmount;
+
+        //ROOT ANIMATION
         root.setRotZ((float) Math.sin(limbSwing * swingSpeed) * (swingAmm * 5 * toRad));
         root.setPosY((float) Math.sin(limbSwing * swingSpeed * 2) * (swingAmm * 1) + (swingAmm * 1));
 
@@ -32,20 +39,21 @@ public class PlushAnimations {
             left_arm.setRotX(0);
             right_arm.setRotX(0);
         } else {
-            left_arm.setRotX((float) Math.sin(limbSwing * swingSpeed) * (swingAmm * 50 * toRad));
-            right_arm.setRotX((float) Math.sin(limbSwing * swingSpeed) * (swingAmm * -50 * toRad));
+            left_arm.setRotX((float) Math.sin(limbSwing * swingSpeed) * (swingAmm * 50 * toRad) - (healthBend * toRad));
+            right_arm.setRotX((float) Math.sin(limbSwing * swingSpeed) * (swingAmm * -50 * toRad) - (healthBend * toRad));
         }
-
+        //LEGS ANIMATION
         left_leg.setRotX((float) Math.sin(limbSwing * swingSpeed) * (swingAmm * -50 * toRad));
         right_leg.setRotX((float) Math.sin(limbSwing * swingSpeed) * (swingAmm * 50 * toRad));
-    }
+        //BODY ANIMATION
+        body.setRotX(healthBend * toRad);
 
-    public static void headLook(GeoModel<?> plush, AbstractPlushEntity animatable, AnimationState<?> state){
+        //HEAD ANIM
         CoreGeoBone head = plush.getAnimationProcessor().getBone("head_offset");
         float headPitch = state.getData(DataTickets.ENTITY_MODEL_DATA).headPitch();
         float headYaw = state.getData(DataTickets.ENTITY_MODEL_DATA).netHeadYaw();
-        head.setRotX(headPitch * ((float) Math.PI / 180F));
-        head.setRotY(headYaw * ((float) Math.PI / 180F));
+        head.setRotX((headPitch - healthBend) * toRad);
+        head.setRotY(headYaw * toRad);
     }
 
     public static void hairMovement(GeoModel<?> plush, AbstractPlushEntity animatable, AnimationState<?> state){

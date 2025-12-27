@@ -1,8 +1,11 @@
 package com.any.mikuplushie.entity;
 
 import com.any.mikuplushie.entity.goals.MikuDelayedAttackGoal;
+import com.any.mikuplushie.registry.ModBlocks;
 import com.any.mikuplushie.registry.ModItems;
 import com.any.mikuplushie.util.ModUtil;
+import com.sun.jna.platform.win32.OaIdl;
+import com.sun.net.httpserver.Authenticator;
 import net.minecraft.block.Blocks;
 import net.minecraft.entity.EntityDimensions;
 import net.minecraft.entity.EntityPose;
@@ -21,10 +24,13 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NbtCompound;
+import net.minecraft.particle.BlockStateParticleEffect;
+import net.minecraft.particle.ParticleTypes;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.registry.tag.ItemTags;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundEvent;
+import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
 import net.minecraft.util.math.BlockPos;
@@ -114,10 +120,12 @@ public class AbstractPlushEntity extends TameableEntity implements GeoEntity {
 
             //STANDING UP ANIMATIONS
             else {
+
                 //SPAWN ANIMATION
                 if (this.dataTracker.get(SPAWN_AGE) < 10){
                     return state.setAndContinue(SPAWN);
                 }
+
                 //DANCE
                 else if (this.isSongPlaying()){
                     RawAnimation currentAnimation = state.getController().getCurrentRawAnimation();
@@ -140,6 +148,7 @@ public class AbstractPlushEntity extends TameableEntity implements GeoEntity {
                     }
 
                 }
+
                 //ATTACKING
                 else if (this.handSwinging) {
                     RawAnimation currentAnimation = state.getController().getCurrentRawAnimation();
@@ -155,6 +164,7 @@ public class AbstractPlushEntity extends TameableEntity implements GeoEntity {
                         0, ATTACK_ANIMATIONS.size()-1)
                     ));
                 }
+
                 //IDLE
                 else {
                     return state.setAndContinue(IDLE);
@@ -205,49 +215,30 @@ public class AbstractPlushEntity extends TameableEntity implements GeoEntity {
         Item playerItem = playerItemStack.getItem();
         ItemStack entityHandStack = this.getMainHandStack();
 
-        /*//UNTAMED INTERACTION
-        if (!this.isTamed() && player.getStackInHand(hand).isOf(ModItems.CANUDINHO)) {
-            if (!player.getAbilities().creativeMode) {
-                playerItemStack.decrement(1);
-            }
-
-            if (!this.isSilent()) {
-                this.getWorld()
-                    .playSound(null, this.getX(), this.getY(), this.getZ(),
-                        SoundEvents.ENTITY_GENERIC_EAT, this.getSoundCategory(),
-                        1.0F, 1.0F + (this.random.nextFloat() - this.random.nextFloat()) * 0.2F
-                    );
-            }
-
-            if (!this.getWorld().isClient) {
-                if (this.random.nextInt(10) == 0) {
-                    this.setOwner(player);
-                    this.getWorld().sendEntityStatus(this, EntityStatuses.ADD_POSITIVE_PLAYER_REACTION_PARTICLES);
-                } else {
-                    this.getWorld().sendEntityStatus(this, EntityStatuses.ADD_NEGATIVE_PLAYER_REACTION_PARTICLES);
-                }
-            }
-
-            return ActionResult.success(this.getWorld().isClient);
-        }
-        else */
 
         //TAMED INTERACTION
         if (this.isOnGround() && this.isTamed() && this.isOwner(player)) {
             //DO STUFF ON SERVER
             if (!this.getWorld().isClient) {
-                //LEEK HEAL
-                if (this.getHealth() < this.getMaxHealth() && playerItemStack.isOf(ModItems.LEEK)){
-                    if (!player.getAbilities().creativeMode){
-                        playerItemStack.decrement(1);
-                    }
-                    this.heal(Objects.requireNonNull(playerItem.getFoodComponent()).getHunger());
-                }
                 //DROP HELD ITEM
                 if (player.isSneaking() && playerItemStack.isEmpty()) {
                     this.dropStack(entityHandStack);
                     this.equipStack(EquipmentSlot.MAINHAND, ItemStack.EMPTY);
+                    return ActionResult.SUCCESS;
                 }
+
+                //LEEK HEAL
+                else if (this.getHealth() < this.getMaxHealth() && playerItemStack.isOf(ModItems.LEEK)) {
+                    if (!this.getWorld().isClient()){
+                        if (!player.getAbilities().creativeMode){
+                            playerItemStack.decrement(1);
+                        }
+                        this.heal(Objects.requireNonNull(playerItem.getFoodComponent()).getHunger());
+                        this.playSound(SoundEvents.ENTITY_GENERIC_EAT, 1, 1);
+                    }
+                    return ActionResult.SUCCESS;
+                }
+
                 //TOGGLE SITTING POSE
                 else {
                     this.setSitting(!this.isSitting());
@@ -257,9 +248,24 @@ public class AbstractPlushEntity extends TameableEntity implements GeoEntity {
                     } else {
                         this.setPose(EntityPose.STANDING);
                     }
+                    return ActionResult.SUCCESS;
+                }
+
+            } else if (this.getHealth() < this.getMaxHealth() && playerItemStack.isOf(ModItems.LEEK)) {
+                for (int particle = 0; particle < 20; particle++) {
+                    this.getWorld().addParticle(
+                        new BlockStateParticleEffect(ParticleTypes.BLOCK, ModBlocks.LEEK_CROP.withAge(7)),
+                        this.getPos().getX(),
+                        this.getPos().getY() + 0.5D,
+                        this.getPos().getZ(),
+                        this.random.nextGaussian() * 0.1,
+                        this.random.nextGaussian() * 0.1,
+                        this.random.nextGaussian() * 0.1
+                    );
                 }
             }
-            return ActionResult.success(this.getWorld().isClient);
+
+            return ActionResult.SUCCESS;
         }
 
         //OTHER PLAYER INTERACTION

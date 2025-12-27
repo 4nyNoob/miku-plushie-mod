@@ -36,7 +36,6 @@ public class NeruModel extends GeoModel<NeruEntity> {
     @Override
     public void setCustomAnimations(NeruEntity animatable, long instanceId, AnimationState<NeruEntity> state) {
         super.setCustomAnimations(animatable, instanceId, state);
-        PlushAnimations.headLook(this, animatable, state);
         PlushAnimations.hairMovement(this, animatable, state);
         PlushAnimations.limbAnimations(this, animatable, state);
     }

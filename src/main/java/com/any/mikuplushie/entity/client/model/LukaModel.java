@@ -35,7 +35,6 @@ public class LukaModel extends GeoModel<LukaEntity> {
     @Override
     public void setCustomAnimations(LukaEntity animatable, long instanceId, AnimationState<LukaEntity> state) {
         super.setCustomAnimations(animatable, instanceId, state);
-        PlushAnimations.headLook(this, animatable, state);
         PlushAnimations.limbAnimations(this, animatable, state);
     }
 

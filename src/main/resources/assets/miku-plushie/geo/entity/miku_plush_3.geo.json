@@ -21,8 +21,13 @@
 					"pivot": [0, 0, 0]
 				},
 				{
-					"name": "body",
+					"name": "body_offset",
 					"parent": "root",
+					"pivot": [0, 5.5, 0]
+				},
+				{
+					"name": "body",
+					"parent": "body_offset",
 					"pivot": [0, 5.5, 0],
 					"cubes": [
 						{

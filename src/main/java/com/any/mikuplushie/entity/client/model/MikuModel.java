@@ -66,7 +66,6 @@ public class MikuModel extends GeoModel<MikuEntity> {
     @Override
     public void setCustomAnimations(MikuEntity animatable, long instanceId, AnimationState<MikuEntity> state) {
         super.setCustomAnimations(animatable, instanceId, state);
-        PlushAnimations.headLook(this, animatable, state);
         PlushAnimations.hairMovement(this, animatable, state);
         PlushAnimations.limbAnimations(this, animatable, state);
     }

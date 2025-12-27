@@ -1,6 +1,7 @@
 package com.any.mikuplushie.entity.goals;
 
 import com.any.mikuplushie.registry.ModBlocks;
+import com.any.mikuplushie.registry.ModItems;
 import com.any.mikuplushie.registry.ModSoundEvents;
 import com.any.mikuplushie.block.LeekCropBlock;
 import com.any.mikuplushie.entity.MikuEntity;
@@ -20,6 +21,7 @@ import org.spongepowered.include.com.google.common.base.Predicates;
 
 import java.util.EnumSet;
 import java.util.List;
+import java.util.Objects;
 import java.util.function.Predicate;
 
 //EAT LEEK GOAL
@@ -43,7 +45,9 @@ public class EatLeekGoal extends Goal {
     @Override
     public boolean canStart() {
         BlockPos blockPos = this.miku.getBlockPos();
-        return !locateFullyGrownLeek(blockPos).equals(blockPos);
+        boolean adjacentToLeek = !locateFullyGrownLeek(blockPos).equals(blockPos);
+        boolean healthNotMaxed = this.miku.getHealth() > this.miku.getMaxHealth();
+        return adjacentToLeek && healthNotMaxed;
     }
 
     @Override
@@ -97,6 +101,7 @@ public class EatLeekGoal extends Goal {
                     if (this.world.getGameRules().getBoolean(GameRules.DO_MOB_GRIEFING)) {
                         this.world.syncWorldEvent(WorldEvents.BLOCK_BROKEN, blockPos2, Block.getRawIdFromState(ModBlocks.LEEK_CROP.getDefaultState()));
                         this.world.setBlockState(blockPos2, Blocks.AIR.getDefaultState(), Block.NOTIFY_LISTENERS);
+                        this.miku.heal(Objects.requireNonNull(ModItems.LEEK.getFoodComponent()).getHunger());
                         this.miku.setEatingLeek(false);
                     }
 
@@ -109,10 +114,12 @@ public class EatLeekGoal extends Goal {
 
     public BlockPos locateFullyGrownLeek(BlockPos mobPos) {
         List<BlockPos> POSITION_CHECKS = List.of(
+            //ALL CARDINAL DIRECTIONS ON SAME LEVEL
             mobPos.east(),
             mobPos.west(),
             mobPos.north(),
             mobPos.south(),
+            //SAME AS BEFORE BUT ONE BLOCK UP
             mobPos.up(),
             mobPos.up().east(),
             mobPos.up().west(),

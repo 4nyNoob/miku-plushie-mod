@@ -34,7 +34,6 @@ public class GumiModel extends GeoModel<GumiEntity> {
     @Override
     public void setCustomAnimations(GumiEntity animatable, long instanceId, AnimationState<GumiEntity> state) {
         super.setCustomAnimations(animatable, instanceId, state);
-        PlushAnimations.headLook(this, animatable, state);
         PlushAnimations.limbAnimations(this, animatable, state);
     }
 

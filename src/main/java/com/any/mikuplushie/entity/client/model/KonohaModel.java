@@ -34,7 +34,6 @@ public class KonohaModel extends GeoModel<KonohaEntity> {
     @Override
     public void setCustomAnimations(KonohaEntity animatable, long instanceId, AnimationState<KonohaEntity> state) {
         super.setCustomAnimations(animatable, instanceId, state);
-        PlushAnimations.headLook(this, animatable, state);
         PlushAnimations.limbAnimations(this, animatable, state);
     }
 
