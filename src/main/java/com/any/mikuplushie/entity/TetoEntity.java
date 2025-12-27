@@ -21,12 +21,6 @@ public class TetoEntity extends AbstractPlushEntity {
     private static final TrackedData<Integer> TETO_VARIANT = DataTracker.registerData(TetoEntity.class, TrackedDataHandlerRegistry.INTEGER);
 
     private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
-    private static final List<RawAnimation> DANCES = List.of(
-        RawAnimation.begin().thenLoop("misc.dance.generic.caramelldansen"),
-        RawAnimation.begin().thenLoop("misc.dance.teto.teto-territory"),
-        RawAnimation.begin().thenLoop("misc.dance.teto.birdbrain"),
-        RawAnimation.begin().thenLoop("misc.dance.teto.liar-dancer")
-    );
 
     public TetoEntity(EntityType<? extends TameableEntity> entityType, World world) {
         super(entityType, world);
@@ -37,58 +31,15 @@ public class TetoEntity extends AbstractPlushEntity {
         return this.cache;
     }
 
-    //ANIMATION CONTROLLER
+    //DANCE ANIMATIONS
     @Override
-    public void registerControllers(AnimatableManager.ControllerRegistrar controllers) {
-        controllers.add(new AnimationController<>(this, "Plush", 2, state -> {
-
-            //SITTING ANIMATIONS
-            if (this.isInSittingPose()) {
-                //SONG PLAYING NEARBY
-                if (this.isSongPlaying()){
-                    return state.setAndContinue(AbstractPlushEntity.SIT_DANCE);
-                } else {
-                    return state.setAndContinue(AbstractPlushEntity.SIT);
-                }
-            }
-
-            //STANDING UP ANIMATIONS
-            else {
-                //SPAWN ANIMATION
-                if (this.age < 10){
-                    return state.setAndContinue(AbstractPlushEntity.SPAWN);
-                }
-                //DANCE
-                else if (this.isSongPlaying()){
-                    RawAnimation currentAnimation = state.getController().getCurrentRawAnimation();
-                    for (RawAnimation animation : DANCES){
-                        if (currentAnimation.equals(animation)){
-                            return state.setAndContinue(animation);
-                        }
-                    }
-                    return state.setAndContinue(DANCES.get(this.random.nextBetweenExclusive(
-                        0, DANCES.size()-1)
-                    ));
-                }
-                //ATTACKING
-                else if (this.handSwinging) {
-                    RawAnimation currentAnimation = state.getController().getCurrentRawAnimation();
-                    for (RawAnimation animation : ATTACK_ANIMATIONS){
-                        if (currentAnimation.equals(animation)){
-                            return state.setAndContinue(animation);
-                        }
-                    }
-                    return state.setAndContinue(ATTACK_ANIMATIONS.get(this.random.nextBetweenExclusive(
-                        0, ATTACK_ANIMATIONS.size()-1)
-                    ));
-                }
-                //IDLE
-                else {
-                    return state.setAndContinue(AbstractPlushEntity.IDLE);
-                }
-            }
-        }));
-
+    public List<RawAnimation> getDances(){
+        return  List.of(
+            RawAnimation.begin().thenLoop("misc.dance.generic.caramelldansen"),
+            RawAnimation.begin().thenLoop("misc.dance.teto.teto-territory"),
+            RawAnimation.begin().thenLoop("misc.dance.teto.birdbrain"),
+            RawAnimation.begin().thenLoop("misc.dance.teto.liar-dancer")
+        );
     }
 
     //TRACK VARIANT

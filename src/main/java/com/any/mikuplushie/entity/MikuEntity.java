@@ -13,10 +13,12 @@ import net.minecraft.particle.BlockStateParticleEffect;
 import net.minecraft.particle.ParticleTypes;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
+import software.bernie.geckolib.core.animatable.GeoAnimatable;
 import software.bernie.geckolib.core.animatable.instance.AnimatableInstanceCache;
 import software.bernie.geckolib.core.animation.AnimatableManager;
 import software.bernie.geckolib.core.animation.AnimationController;
 import software.bernie.geckolib.core.animation.RawAnimation;
+import software.bernie.geckolib.core.object.PlayState;
 import software.bernie.geckolib.util.GeckoLibUtil;
 
 import java.util.List;
@@ -30,18 +32,6 @@ public class MikuEntity extends AbstractPlushEntity {
     public boolean eatingLeek;
 
     private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
-    private static final List<RawAnimation> DANCES = List.of(
-        RawAnimation.begin().thenLoop("misc.dance.generic.caramelldansen"),
-        RawAnimation.begin().thenLoop("misc.dance.miku.miku"),
-        RawAnimation.begin().thenLoop("misc.dance.miku.ievan-polkka"),
-        RawAnimation.begin().thenLoop("misc.dance.miku.vegetable-juice"),
-        RawAnimation.begin().thenLoop("misc.dance.miku.static")
-    );
-    protected static final List<RawAnimation> ATTACK_ANIMATIONS = List.of(
-        RawAnimation.begin().thenPlay("attack.swipe"),
-        RawAnimation.begin().thenPlay("attack.swipe2"),
-        RawAnimation.begin().thenPlay("attack.swipe3")
-    );
     private static final RawAnimation EAT = RawAnimation.begin().thenPlay("misc.eat");
 
     public MikuEntity(EntityType<? extends TameableEntity> entityType, World world) {
@@ -56,61 +46,80 @@ public class MikuEntity extends AbstractPlushEntity {
         this.goalSelector.add(5, eatLeekGoal);
     }
 
+    //DANCE ANIMATIONS
+    @Override
+    public List<RawAnimation> getDances() {
+        return List.of(
+            RawAnimation.begin().thenLoop("misc.dance.generic.caramelldansen"),
+            RawAnimation.begin().thenLoop("misc.dance.miku.miku"),
+            RawAnimation.begin().thenLoop("misc.dance.miku.ievan-polkka"),
+            RawAnimation.begin().thenLoop("misc.dance.miku.vegetable-juice"),
+            RawAnimation.begin().thenLoop("misc.dance.miku.static")
+        );
+    }
+
     //ANIMATION CONTROLLER
     @Override
     public void registerControllers(AnimatableManager.ControllerRegistrar controllers) {
-        controllers.add(new AnimationController<>(this, "Miku", 2, state -> {
-
-            //SITTING ANIMATIONS
-            if (this.isInSittingPose()) {
-                //SONG PLAYING NEARBY
-                if (this.isSongPlaying()){
-                    return state.setAndContinue(AbstractPlushEntity.SIT_DANCE);
-                } else {
-                    return state.setAndContinue(AbstractPlushEntity.SIT);
-                }
+        super.registerControllers(controllers);
+        controllers.add(new AnimationController<>(this, "miku_eat", 2, state -> {
+            if (!this.isInSittingPose() && this.isEatingLeek()){
+                return state.setAndContinue(EAT);
             }
-
-            //STANDING UP ANIMATIONS
-            else {
-                //SPAWN ANIMATION
-                if (MikuEntity.this.age < 10){
-                    return state.setAndContinue(AbstractPlushEntity.SPAWN);
-                }
-                //EATING LEEK
-                else if (this.isEatingLeek()) {
-                    return state.setAndContinue(EAT);
-                }
-                //DANCE
-                else if (this.isSongPlaying()){
-                    RawAnimation currentAnimation = state.getController().getCurrentRawAnimation();
-                    for (RawAnimation animation : DANCES){
-                        if (currentAnimation.equals(animation)){
-                            return state.setAndContinue(animation);
-                        }
-                    }
-                    return state.setAndContinue(DANCES.get(this.random.nextBetweenExclusive(
-                        0, DANCES.size()-1)
-                    ));
-                }
-                //ATTACKING
-                else if (this.handSwinging) {
-                    RawAnimation currentAnimation = state.getController().getCurrentRawAnimation();
-                    for (RawAnimation animation : ATTACK_ANIMATIONS){
-                        if (currentAnimation.equals(animation)){
-                            return state.setAndContinue(animation);
-                        }
-                    }
-                    return state.setAndContinue(ATTACK_ANIMATIONS.get(this.random.nextBetweenExclusive(
-                        0, ATTACK_ANIMATIONS.size()-1)
-                    ));
-                }
-                //IDLE
-                else {
-                    return state.setAndContinue(AbstractPlushEntity.IDLE);
-                }
-            }
+            return PlayState.STOP;
         }));
+//        controllers.add(new AnimationController<>(this, "Miku", 2, state -> {
+//
+//            //SITTING ANIMATIONS
+//            if (this.isInSittingPose()) {
+//                //SONG PLAYING NEARBY
+//                if (this.isSongPlaying()){
+//                    return state.setAndContinue(AbstractPlushEntity.SIT_DANCE);
+//                } else {
+//                    return state.setAndContinue(AbstractPlushEntity.SIT);
+//                }
+//            }
+//
+//            //STANDING UP ANIMATIONS
+//            else {
+//                //SPAWN ANIMATION
+//                if (MikuEntity.this.age < 10){
+//                    return state.setAndContinue(AbstractPlushEntity.SPAWN);
+//                }
+//                //EATING LEEK
+//                else if (this.isEatingLeek()) {
+//                    return state.setAndContinue(EAT);
+//                }
+//                //DANCE
+//                else if (this.isSongPlaying()){
+//                    RawAnimation currentAnimation = state.getController().getCurrentRawAnimation();
+//                    for (RawAnimation animation : DANCES){
+//                        if (currentAnimation.equals(animation)){
+//                            return state.setAndContinue(animation);
+//                        }
+//                    }
+//                    return state.setAndContinue(DANCES.get(this.random.nextBetweenExclusive(
+//                        0, DANCES.size()-1)
+//                    ));
+//                }
+//                //ATTACKING
+//                else if (this.handSwinging) {
+//                    RawAnimation currentAnimation = state.getController().getCurrentRawAnimation();
+//                    for (RawAnimation animation : ATTACK_ANIMATIONS){
+//                        if (currentAnimation.equals(animation)){
+//                            return state.setAndContinue(animation);
+//                        }
+//                    }
+//                    return state.setAndContinue(ATTACK_ANIMATIONS.get(this.random.nextBetweenExclusive(
+//                        0, ATTACK_ANIMATIONS.size()-1)
+//                    ));
+//                }
+//                //IDLE
+//                else {
+//                    return state.setAndContinue(AbstractPlushEntity.IDLE);
+//                }
+//            }
+//        }));
 
     }
 

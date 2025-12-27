@@ -11,11 +11,16 @@ import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.ai.goal.*;
 import net.minecraft.entity.attribute.DefaultAttributeContainer;
 import net.minecraft.entity.attribute.EntityAttributes;
+import net.minecraft.entity.data.DataTracker;
+import net.minecraft.entity.data.TrackedData;
+import net.minecraft.entity.data.TrackedDataHandlerRegistry;
 import net.minecraft.entity.mob.MobEntity;
 import net.minecraft.entity.passive.PassiveEntity;
 import net.minecraft.entity.passive.TameableEntity;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.nbt.NbtCompound;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.registry.tag.ItemTags;
 import net.minecraft.server.world.ServerWorld;
@@ -33,9 +38,13 @@ import software.bernie.geckolib.core.animation.AnimationController;
 import software.bernie.geckolib.core.animation.RawAnimation;
 import software.bernie.geckolib.util.GeckoLibUtil;
 
+import java.awt.font.TextHitInfo;
 import java.util.List;
+import java.util.Objects;
 
 public class AbstractPlushEntity extends TameableEntity implements GeoEntity {
+
+    private static final TrackedData<Integer> SPAWN_AGE = DataTracker.registerData(AbstractPlushEntity.class, TrackedDataHandlerRegistry.INTEGER);
 
     //DANCE GLOBALS
     boolean songPlaying;
@@ -46,9 +55,6 @@ public class AbstractPlushEntity extends TameableEntity implements GeoEntity {
     public static final RawAnimation IDLE = RawAnimation.begin().thenLoop("misc.idle");
     public static final RawAnimation SIT = RawAnimation.begin().thenLoop("misc.sit");
     public static final RawAnimation SIT_DANCE = RawAnimation.begin().thenLoop("misc.sit-dance");
-    private static final List<RawAnimation> DANCES = List.of(
-        RawAnimation.begin().thenLoop("misc.dance.generic.caramelldansen")
-    );
     protected static final List<RawAnimation> ATTACK_ANIMATIONS = List.of(
         RawAnimation.begin().thenPlay("attack.swipe"),
         RawAnimation.begin().thenPlay("attack.swipe2"),
@@ -75,6 +81,7 @@ public class AbstractPlushEntity extends TameableEntity implements GeoEntity {
         this.targetSelector.add(2, new RevengeGoal(this));
         this.targetSelector.add(3, new AttackWithOwnerGoal(this));
     }
+
     //ATTRIBUTES
     public static DefaultAttributeContainer.Builder createAttributes() {
         return MobEntity.createMobAttributes()
@@ -83,10 +90,17 @@ public class AbstractPlushEntity extends TameableEntity implements GeoEntity {
             .add(EntityAttributes.GENERIC_ATTACK_DAMAGE, 2.0F);
     }
 
+    public List<RawAnimation> getDances(){
+        return  List.of(
+            RawAnimation.begin().thenLoop("misc.dance.generic.caramelldansen")
+        );
+    }
+
     //ANIMATION CONTROLLER
     @Override
     public void registerControllers(AnimatableManager.ControllerRegistrar controllers) {
         controllers.add(new AnimationController<>(this, "Plush", 2, state -> {
+            List<RawAnimation> DANCES = getDances();
 
             //SITTING ANIMATIONS
             if (this.isInSittingPose()) {
@@ -101,7 +115,7 @@ public class AbstractPlushEntity extends TameableEntity implements GeoEntity {
             //STANDING UP ANIMATIONS
             else {
                 //SPAWN ANIMATION
-                if (this.age < 10){
+                if (this.dataTracker.get(SPAWN_AGE) < 10){
                     return state.setAndContinue(SPAWN);
                 }
                 //DANCE
@@ -188,6 +202,7 @@ public class AbstractPlushEntity extends TameableEntity implements GeoEntity {
     @Override
     public ActionResult interactMob(PlayerEntity player, Hand hand) {
         ItemStack playerItemStack = player.getStackInHand(player.getActiveHand());
+        Item playerItem = playerItemStack.getItem();
         ItemStack entityHandStack = this.getMainHandStack();
 
         /*//UNTAMED INTERACTION
@@ -215,12 +230,19 @@ public class AbstractPlushEntity extends TameableEntity implements GeoEntity {
 
             return ActionResult.success(this.getWorld().isClient);
         }
-        //TAMED INTERACTION
         else */
 
+        //TAMED INTERACTION
         if (this.isOnGround() && this.isTamed() && this.isOwner(player)) {
             //DO STUFF ON SERVER
             if (!this.getWorld().isClient) {
+                //LEEK HEAL
+                if (this.getHealth() < this.getMaxHealth() && playerItemStack.isOf(ModItems.LEEK)){
+                    if (!player.getAbilities().creativeMode){
+                        playerItemStack.decrement(1);
+                    }
+                    this.heal(Objects.requireNonNull(playerItem.getFoodComponent()).getHunger());
+                }
                 //DROP HELD ITEM
                 if (player.isSneaking() && playerItemStack.isEmpty()) {
                     this.dropStack(entityHandStack);
@@ -273,6 +295,12 @@ public class AbstractPlushEntity extends TameableEntity implements GeoEntity {
             this.songPlaying = false;
             this.songSource = null;
         }
+
+        //INCREMENT SPAWN TIMER IF IT'S LESS THAN 10
+        if (this.dataTracker.get(SPAWN_AGE) < 10){
+            this.dataTracker.set(SPAWN_AGE, Math.min(this.age, 10));
+        }
+
     }
 
     //IS SONG PLAYING FUNCTION
@@ -285,6 +313,25 @@ public class AbstractPlushEntity extends TameableEntity implements GeoEntity {
     public void setNearbySongPlaying(BlockPos songPosition, boolean playing) {
         this.songSource = songPosition;
         this.songPlaying = playing;
+    }
+
+    //DATA TRACKER
+    @Override
+    protected void initDataTracker() {
+        super.initDataTracker();
+        this.dataTracker.startTracking(SPAWN_AGE, 0);
+    }
+
+    @Override
+    public void readCustomDataFromNbt(NbtCompound nbt) {
+        super.readCustomDataFromNbt(nbt);
+        this.dataTracker.set(SPAWN_AGE, nbt.getInt("SpawnAge"));
+    }
+
+    @Override
+    public void writeCustomDataToNbt(NbtCompound nbt) {
+        super.writeCustomDataToNbt(nbt);
+        nbt.putInt("SpawnAge", Math.min(this.age, 11));
     }
 
     //NO CHILD
