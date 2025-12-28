@@ -101,10 +101,9 @@ public class EatLeekGoal extends Goal {
                     if (this.world.getGameRules().getBoolean(GameRules.DO_MOB_GRIEFING)) {
                         this.world.syncWorldEvent(WorldEvents.BLOCK_BROKEN, blockPos2, Block.getRawIdFromState(ModBlocks.LEEK_CROP.getDefaultState()));
                         this.world.setBlockState(blockPos2, Blocks.AIR.getDefaultState(), Block.NOTIFY_LISTENERS);
-                        this.miku.heal(Objects.requireNonNull(ModItems.LEEK.getFoodComponent()).getHunger());
                         this.miku.setEatingLeek(false);
+                        this.miku.heal(4);
                     }
-
                     this.miku.onEatingGrass();
                 }
             }
