@@ -46,7 +46,7 @@ public class EatLeekGoal extends Goal {
     public boolean canStart() {
         BlockPos blockPos = this.miku.getBlockPos();
         boolean adjacentToLeek = !locateFullyGrownLeek(blockPos).equals(blockPos);
-        boolean healthNotMaxed = this.miku.getHealth() > this.miku.getMaxHealth();
+        boolean healthNotMaxed = this.miku.getHealth() < this.miku.getMaxHealth();
         return adjacentToLeek && healthNotMaxed;
     }
 

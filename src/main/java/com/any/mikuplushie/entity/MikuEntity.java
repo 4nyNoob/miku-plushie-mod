@@ -68,59 +68,6 @@ public class MikuEntity extends AbstractPlushEntity {
             }
             return PlayState.STOP;
         }));
-//        controllers.add(new AnimationController<>(this, "Miku", 2, state -> {
-//
-//            //SITTING ANIMATIONS
-//            if (this.isInSittingPose()) {
-//                //SONG PLAYING NEARBY
-//                if (this.isSongPlaying()){
-//                    return state.setAndContinue(AbstractPlushEntity.SIT_DANCE);
-//                } else {
-//                    return state.setAndContinue(AbstractPlushEntity.SIT);
-//                }
-//            }
-//
-//            //STANDING UP ANIMATIONS
-//            else {
-//                //SPAWN ANIMATION
-//                if (MikuEntity.this.age < 10){
-//                    return state.setAndContinue(AbstractPlushEntity.SPAWN);
-//                }
-//                //EATING LEEK
-//                else if (this.isEatingLeek()) {
-//                    return state.setAndContinue(EAT);
-//                }
-//                //DANCE
-//                else if (this.isSongPlaying()){
-//                    RawAnimation currentAnimation = state.getController().getCurrentRawAnimation();
-//                    for (RawAnimation animation : DANCES){
-//                        if (currentAnimation.equals(animation)){
-//                            return state.setAndContinue(animation);
-//                        }
-//                    }
-//                    return state.setAndContinue(DANCES.get(this.random.nextBetweenExclusive(
-//                        0, DANCES.size()-1)
-//                    ));
-//                }
-//                //ATTACKING
-//                else if (this.handSwinging) {
-//                    RawAnimation currentAnimation = state.getController().getCurrentRawAnimation();
-//                    for (RawAnimation animation : ATTACK_ANIMATIONS){
-//                        if (currentAnimation.equals(animation)){
-//                            return state.setAndContinue(animation);
-//                        }
-//                    }
-//                    return state.setAndContinue(ATTACK_ANIMATIONS.get(this.random.nextBetweenExclusive(
-//                        0, ATTACK_ANIMATIONS.size()-1)
-//                    ));
-//                }
-//                //IDLE
-//                else {
-//                    return state.setAndContinue(AbstractPlushEntity.IDLE);
-//                }
-//            }
-//        }));
-
     }
 
     @Override
