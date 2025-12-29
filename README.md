@@ -31,7 +31,7 @@ You can suggest new plushies via <a href="https://github.com/4nyNoob/miku-plushi
 </h3>
 
 <a href="https://github.com/4nyNoob/miku-plushie-mod/wiki/Crafting-Recipes#plushies">
-    <img alt="Plushies Atlas" src="assets/plushies-atlas/plushies-atlas.webp"/>
+    <img alt="Plushies Atlas" src="https://raw.githubusercontent.com/4nyNoob/miku-plushie-mod/refs/heads/fabric-1.20.1/assets/plushies-atlas/plushies-atlas.webp?raw=true"/>
 </a>
 
 ## Features:
@@ -42,9 +42,9 @@ You can suggest new plushies via <a href="https://github.com/4nyNoob/miku-plushi
  - ### Plushies can be your pets now
 
    - ### They Can Dance!!!
-     ![Plushies dancing](assets/gameplay/dance.gif)
+     ![Plushies dancing](https://raw.githubusercontent.com/4nyNoob/miku-plushie-mod/refs/heads/fabric-1.20.1/assets/gameplay/dance.gif)
    - ### They Can Hunt With You
-     ![A couple of Hatsune Mikus v4 Hunting a cow](assets/gameplay/hunting.gif)
+     ![A couple of Hatsune Mikus v4 Hunting a cow](https://raw.githubusercontent.com/4nyNoob/miku-plushie-mod/refs/heads/fabric-1.20.1/assets/gameplay/hunting.gif)
    - ### And much More
 
 If you enjoy what I do, consider supporting me on Ko-fi! https://ko-fi.com/4nynoob
