@@ -79,7 +79,7 @@ public class AbstractPlushEntity extends TameableEntity implements GeoEntity {
         this.goalSelector.add(1, new SitGoal(this));
         this.goalSelector.add(2, new MikuDelayedAttackGoal(this, 1.5F, true));
         this.goalSelector.add(4, new FollowOwnerGoal(this,1.0F, 5F, 1F, true));
-        this.goalSelector.add(6, new TemptGoal(this, 1.5, Ingredient.ofItems(ModItems.CANUDINHO), false));
+        this.goalSelector.add(6, new TemptGoal(this, 1.5, Ingredient.ofItems(ModItems.LEEK), false));
         this.goalSelector.add(7, new LookAtEntityGoal(this, AbstractPlushEntity.class, 8F));
         this.goalSelector.add(8, new LookAtEntityGoal(this, PlayerEntity.class, 8F));
         this.goalSelector.add(9, new LookAroundGoal(this));
@@ -91,7 +91,7 @@ public class AbstractPlushEntity extends TameableEntity implements GeoEntity {
     //ATTRIBUTES
     public static DefaultAttributeContainer.Builder createAttributes() {
         return MobEntity.createMobAttributes()
-            .add(EntityAttributes.GENERIC_MAX_HEALTH, 10.0F)
+            .add(EntityAttributes.GENERIC_MAX_HEALTH, 20.0F)
             .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.3F)
             .add(EntityAttributes.GENERIC_ATTACK_DAMAGE, 2.0F);
     }
