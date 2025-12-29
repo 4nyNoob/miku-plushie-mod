@@ -1,1 +1,49 @@
-name:
+name: New Plush
+description: Submit a new plush to be added.
+title: "[Plush]: "
+labels: ["New Plush"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this Plush Form!
+  - type: input
+    id: contact
+    attributes:
+      label: Contact Details
+      description: How can we get in touch with you if we need more info?
+      placeholder: ex. email@example.com, @4ny.bsky.social
+    validations:
+      required: false
+  - type: input
+    id: plush-name
+    attributes:
+      label: Vocaloid Name and Design
+      description: What is the name of the design or vocaloid?
+      placeholder: Hatsune Miku Design from Rolling Girl Project Diva Module, Gumi V4
+    validations:
+      required: true
+  - type: input
+    id: plush-designer
+    attributes:
+      label: Original Character Designer
+      description: Social media profiles are preffered, but even a name helps
+      placeholder: https://bsky.app/profile/4ny.bsky.social
+    validations:
+      required: false
+  - type: textarea
+    id: plush-refs
+    attributes:
+      label: Reference Images
+      description: Actual refsheets are preferred, but anything that showcases the design in question is enough
+      placeholder: Paste images or links to a MV showcasing the design in question here
+    validations:
+      required: true
+  - type: textarea
+    id: voice-settings
+    attributes:
+      label: "Voice Settings"
+      description: If the character does not have their own voice, how can i achieve it?
+      placeholder: "Akita Neru: Hatsune Miku v2, BRE: -30, BRI: 30, CLE: 30, GEN 15, OPE: -15"
+    validations:
+      required: false
