@@ -52,7 +52,7 @@ public class MikuPlushieBlockItem extends BlockItem implements Equipment {
 
 		if (stack.isIn(ModItemTagProvider.PLUSHIES)){
 			String currentPlush = ModUtil.getBlockIdFromItem(stack.getItem());
-			return ModUtil.getPlushSoundEvent(currentPlush, "dor");
+			return ModUtil.getPlushSoundEvent(currentPlush, "equip");
 		}
         return ModSoundEvents.MIKU_PLUSHIES_SOUND_EVENTS.get(0);
     }
