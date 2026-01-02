@@ -78,8 +78,8 @@ public class SpawnMikusCommand {
         for (int list = 0; list < LISTS.size(); list++) {
             //HANDLE PLUSHIES SPAWNING
             List<?> currentList = LISTS.get(list);
-            int plushiesRows = (int) Math.ceil(Math.sqrt(currentList.size()));
             int plushiesColumns = 9;
+            int plushiesRows = (int) Math.ceil((double) currentList.size() / plushiesColumns);
             int plushies = 0;
 
             //ROWS SPAWN
