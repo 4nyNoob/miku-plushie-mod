@@ -43,7 +43,8 @@ public class MikuModel extends GeoModel<MikuEntity> {
             variant.equals(MikuVariant.MIKU_PLUSH_MONITORING.getBlock()) ||
             variant.equals(MikuVariant.MIKU_PLUSH_HOLLOW_KNIGHT.getBlock()) ||
             variant.equals(MikuVariant.MIKU_PLUSH_HORNET.getBlock()) ||
-            variant.equals(MikuVariant.MIKU_PLUSH_LUCARIO_Z.getBlock())
+            variant.equals(MikuVariant.MIKU_PLUSH_LUCARIO_Z.getBlock())||
+            variant.equals(MikuVariant.MIKU_PLUSH_PPPP.getBlock())
         ) {
             return Identifier.of(MikuPlushie.MOD_ID, "geo/entity/" + entity + "_3" + ".geo.json");
         }

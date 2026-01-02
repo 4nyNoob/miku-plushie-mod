@@ -199,6 +199,12 @@
   "item.miku-plushie.miku_plush_deep_sea_girl.tooltip": "§b§n@haruyo_",
   "block.miku-plushie.miku_plush_lucario_z": "Lucario Z Miku Plush",
   "item.miku-plushie.miku_plush_lucario_z.tooltip": "§b§n@kaatokunart.bsky.social",
+  "block.miku-plushie.teto_plush_pppp": "PPPP Teto Plush",
+  "item.miku-plushie.teto_plush_pppp.tooltip": "§b§n@maco_mag",
+  "item.miku-plushie.teto_pickaxe_pppp": "PPPP Teto Pickaxe",
+
+  "block.miku-plushie.miku_plush_pppp": "PPPP Miku Plush",
+  "item.miku-plushie.miku_plush_pppp.tooltip": "§b§n@maco_mag",
 
 
   "item.group.miku_plushies": "Mikus!!",

@@ -17,6 +17,7 @@ public enum TetoVariant {
     TETO_PLUSH_LOBSTER(9, "teto_plush_lobster"),
     TETO_PLUSH_SYNTHV(10, "teto_plush_synthv"),
     TETO_PLUSH_SPOKEN_FOR(11, "teto_plush_spoken_for"),
+    TETO_PLUSH_PPPP(11, "teto_plush_pppp"),
 
     ;
 

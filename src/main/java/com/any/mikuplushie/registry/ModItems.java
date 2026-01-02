@@ -62,6 +62,7 @@ public class ModItems {
     public static final Item TETO_PICKAXE_SOME_MORE_OF_THAT_SONG = registerPickaxe("teto_pickaxe_some_more_of_that_song");
     public static final Item TETO_PICKAXE_SYNTHV = registerPickaxe("teto_pickaxe_synthv");
     public static final Item TETO_PICKAXE_SPOKEN_FOR = registerPickaxe("teto_pickaxe_spoken_for");
+    public static final Item TETO_PICKAXE_PPPP = registerPickaxe("teto_pickaxe_pppp");
 
     //REGISTER PLUSH ITEMS
     public static Item registerPlush(String name) {

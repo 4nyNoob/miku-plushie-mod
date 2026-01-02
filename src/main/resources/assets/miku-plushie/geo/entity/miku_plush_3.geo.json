@@ -1391,6 +1391,43 @@
 					]
 				},
 				{
+					"name": "miku_plush_pppp",
+					"parent": "head-ornaments",
+					"pivot": [0, 17.75, -2.75],
+					"cubes": [
+						{
+							"origin": [-3, 17.75, -2.75],
+							"size": [3, 5, 4],
+							"inflate": -0.25,
+							"pivot": [0, 17.75, -2.75],
+							"rotation": [-45, 0, 0],
+							"uv": {
+								"north": {"uv": [49, 52], "uv_size": [3, -5], "uv_rotation": 180},
+								"east": {"uv": [24, 54], "uv_size": [5, -4], "uv_rotation": 270},
+								"south": {"uv": [49, 47], "uv_size": [3, 5]},
+								"west": {"uv": [35, 52], "uv_size": [5, -4], "uv_rotation": 90},
+								"up": {"uv": [53, 40], "uv_size": [3, -4]},
+								"down": {"uv": [53, 40], "uv_size": [3, -4], "uv_rotation": 180}
+							}
+						},
+						{
+							"origin": [0, 17.75, -2.75],
+							"size": [3, 5, 4],
+							"inflate": -0.25,
+							"pivot": [0, 17.75, -2.75],
+							"rotation": [-45, 0, 0],
+							"uv": {
+								"north": {"uv": [52, 52], "uv_size": [-3, -5], "uv_rotation": 180},
+								"east": {"uv": [35, 48], "uv_size": [5, 4], "uv_rotation": 90},
+								"south": {"uv": [52, 47], "uv_size": [-3, 5]},
+								"west": {"uv": [24, 50], "uv_size": [5, 4], "uv_rotation": 270},
+								"up": {"uv": [56, 40], "uv_size": [-3, -4]},
+								"down": {"uv": [56, 40], "uv_size": [-3, -4], "uv_rotation": 180}
+							}
+						}
+					]
+				},
+				{
 					"name": "ahoge",
 					"parent": "head",
 					"pivot": [0.5, 17.75, 0],

@@ -224,6 +224,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
             plushShapeless(exporter, ModBlocks.MIKU_PLUSH_ROLLING_GIRL, ModBlocks.MIKU_PLUSH, Items.WHITE_WOOL, Items.BROWN_WOOL);
             plushShapeless(exporter, ModBlocks.MIKU_PLUSH_DEEP_SEA_GIRL, ModBlocks.MIKU_PLUSH, Items.TUBE_CORAL, Items.BUBBLE_CORAL);
             plushShapeless(exporter, ModBlocks.MIKU_PLUSH_LUCARIO_Z, ModBlocks.MIKU_PLUSH, Items.IRON_BARS, Items.WHITE_WOOL, Items.REDSTONE);
+            plushShapeless(exporter, ModBlocks.MIKU_PLUSH_PPPP, ModBlocks.MIKU_PLUSH, Items.CYAN_WOOL, Items.WHITE_WOOL);
         }
 
         //TETO
@@ -270,6 +271,9 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 
             plushShapeless(exporter, ModBlocks.TETO_PLUSH_SPOKEN_FOR, ModBlocks.TETO_PLUSH, Items.PINK_DYE, Items.GLOWSTONE_DUST);
             pickaxeRecipe(exporter, ModItems.TETO_PICKAXE_SPOKEN_FOR, ModBlocks.TETO_PLUSH_SPOKEN_FOR);
+
+            plushShapeless(exporter, ModBlocks.TETO_PLUSH_PPPP, ModBlocks.TETO_PLUSH, Items.RED_WOOL, Items.WHITE_WOOL);
+            pickaxeRecipe(exporter, ModItems.TETO_PICKAXE_PPPP, ModBlocks.TETO_PLUSH_PPPP);
 
         }
 

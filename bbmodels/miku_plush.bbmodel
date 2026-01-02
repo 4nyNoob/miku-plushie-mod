@@ -6393,7 +6393,7 @@
 			"selected": false,
 			"visibility": true,
 			"autouv": 0,
-			"isOpen": true
+			"isOpen": false
 		},
 		{
 			"uuid": "e839ab4d-3386-6e05-2b3d-8e3a619589cc",
@@ -6750,7 +6750,7 @@
 			"selected": false,
 			"visibility": true,
 			"autouv": 0,
-			"isOpen": true
+			"isOpen": false
 		},
 		{
 			"uuid": "b48b0fea-99d7-85ef-8718-51422a480d48",
@@ -6767,7 +6767,7 @@
 			"selected": false,
 			"visibility": true,
 			"autouv": 0,
-			"isOpen": true
+			"isOpen": false
 		},
 		{
 			"uuid": "5daa3d19-5295-5a35-71f4-58cbade4b75a",
@@ -6835,7 +6835,7 @@
 			"selected": false,
 			"visibility": true,
 			"autouv": 0,
-			"isOpen": false
+			"isOpen": true
 		},
 		{
 			"uuid": "248da8a9-232b-da8d-805e-891232bc6c15",
@@ -6903,7 +6903,7 @@
 			"selected": false,
 			"visibility": true,
 			"autouv": 0,
-			"isOpen": true
+			"isOpen": false
 		},
 		{
 			"uuid": "2462539c-804b-3e51-3fcd-0691326bab4a",
@@ -6971,7 +6971,7 @@
 			"selected": false,
 			"visibility": true,
 			"autouv": 0,
-			"isOpen": true
+			"isOpen": false
 		},
 		{
 			"uuid": "04b4b955-0105-9308-9b0d-de8ebb0a43e1",
@@ -7087,7 +7087,7 @@
 														},
 														{
 															"uuid": "baec0393-25e5-25c5-176e-8642e0874545",
-															"isOpen": true,
+															"isOpen": false,
 															"children": [
 																{
 																	"uuid": "beb4eadc-aff4-3a3c-852d-e674a83c8017",
@@ -7198,12 +7198,12 @@
 																},
 																{
 																	"uuid": "6f12a3b8-f954-55a5-fa51-71b69c123677",
-																	"isOpen": true,
+																	"isOpen": false,
 																	"children": ["41a44fb1-3146-0df6-7062-cc9c4c528a0e", "bbe8c7ac-78a3-3489-8118-e1c7d1cf87dd"]
 																},
 																{
 																	"uuid": "b48b0fea-99d7-85ef-8718-51422a480d48",
-																	"isOpen": true,
+																	"isOpen": false,
 																	"children": [
 																		"2226823e-b65b-3fc9-cb35-e4e2e7971fdf",
 																		"57b764c9-4f67-4e9f-20aa-4ddd8e571c17",
@@ -7229,7 +7229,7 @@
 																},
 																{
 																	"uuid": "2574956b-53a7-487c-ab78-97212bf26a0f",
-																	"isOpen": false,
+																	"isOpen": true,
 																	"children": ["f689e675-6d7f-408a-91af-33a119f2167c", "df26b966-cdde-4016-fb3d-4c2b4bffdb99"]
 																},
 																{
@@ -7259,7 +7259,7 @@
 																},
 																{
 																	"uuid": "c28438f1-69b5-2fbe-71c0-53209afd5cb2",
-																	"isOpen": true,
+																	"isOpen": false,
 																	"children": [
 																		"3670729a-673d-b69d-f6c6-2146590d8913",
 																		"fb729d19-2bd8-2fee-abc2-8e2a39a0470c",
@@ -7293,7 +7293,7 @@
 																},
 																{
 																	"uuid": "9b2a2282-539f-fc3c-ba7b-9d3757383980",
-																	"isOpen": true,
+																	"isOpen": false,
 																	"children": ["04ca8a5a-9a2d-4bd6-6159-f2341b945ec6", "5ba7c6c6-8934-e382-79fb-52f88b9e457b"]
 																},
 																"b81e74bf-1cfe-67a0-1260-c6f182988dae",
@@ -14748,7 +14748,7 @@
 			"override": false,
 			"length": 0.5,
 			"snapping": 24,
-			"selected": true,
+			"selected": false,
 			"saved": true,
 			"path": "../miku-plushie/animations/plush.animation.json",
 			"anim_time_update": "",
