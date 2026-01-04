@@ -1,4 +1,4 @@
-// 1.20.1	2026-01-02T12:23:06.012992903	miku plushies/Tags for minecraft:item
+// 1.20.1	2026-01-04T20:42:16.933265806	miku plushies/Tags for minecraft:item
 253105353f4876e51f9653c9f31a3080d59cdf7b data/miku-plushie/tags/items/plushies.json
 870f74bfe05963c91923791cd3c29ae80c8340e1 data/miku-plushie/tags/items/aiko_plush.json
 c0dfe8366d058e445f33058b736561790671ce2f data/miku-plushie/tags/items/gumi_plush.json
@@ -6,8 +6,8 @@ b99dad7e400afaefd1b41b58508826d907fb7f9a data/miku-plushie/tags/items/len_plush.
 29bb7c8e16ce05d19255836cb43b91448bd75190 data/miku-plushie/tags/items/rin_plush.json
 dd00693b406a98ecd9c80e64f918342c38884a2b data/miku-plushie/tags/items/teto_pickaxe.json
 8700858f9be49ad49d2ccba5614dd0d7eeafff0b data/miku-plushie/tags/items/konoha_plush.json
-021224ef09705f654c6a9a76505f44fa055ce558 data/miku-plushie/tags/items/teto_plush.json
 7aea5bc9f6afaa819a118cbb433cee32803cf046 data/miku-plushie/tags/items/luka_plush.json
+75cefda1dc7ecad80c7d7e987e3c35032d6ce925 data/miku-plushie/tags/items/teto_plush.json
 bbbf6dc8efdf446252b93bb60af7120cc64a00b8 data/miku-plushie/tags/items/miku_plush.json
 d8913ddf39c62d421c48027b1204a9c34d72cf9b data/miku-plushie/tags/items/neru_plush.json
 1efad6f6feb74a853c0190587a808bee913aef42 data/miku-plushie/tags/items/meiko_plush.json

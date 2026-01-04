@@ -465,6 +465,166 @@
 					]
 				},
 				{
+					"name": "teto_shrimp_left_hair",
+					"parent": "hair",
+					"pivot": [3.8358, 17.9142, 3],
+					"cubes": [
+						{
+							"origin": [3.83579, 15.91421, 2],
+							"size": [2, 2, 2],
+							"pivot": [3.83579, 17.91421, 3],
+							"rotation": [0, 0, 45],
+							"uv": {
+								"north": {"uv": [9, 54], "uv_size": [2, 2], "uv_rotation": 270},
+								"east": {"uv": [13, 54], "uv_size": [-2, -2]},
+								"south": {"uv": [13, 54], "uv_size": [2, 2], "uv_rotation": 90},
+								"west": {"uv": [15, 52], "uv_size": [-2, 2], "uv_rotation": 180},
+								"up": {"uv": [13, 56], "uv_size": [-2, -2], "uv_rotation": 90},
+								"down": {"uv": [17, 56], "uv_size": [-2, -2], "uv_rotation": 90}
+							}
+						}
+					]
+				},
+				{
+					"name": "teto_shrimp_left_hair2",
+					"parent": "teto_shrimp_left_hair",
+					"pivot": [5.25, 16.5, 3],
+					"cubes": [
+						{
+							"origin": [2.75, 12.5, 1.5],
+							"size": [3, 4, 3],
+							"pivot": [5.25, 16.5, 3],
+							"rotation": [0, 0, -22.5],
+							"uv": {
+								"north": {"uv": [15, 42], "uv_size": [3, 4]},
+								"east": {"uv": [24, 42], "uv_size": [3, 4]},
+								"south": {"uv": [21, 42], "uv_size": [3, 4]},
+								"west": {"uv": [18, 42], "uv_size": [3, 4]},
+								"up": {"uv": [18, 39], "uv_size": [3, 3], "uv_rotation": 270},
+								"down": {"uv": [21, 42], "uv_size": [3, -3], "uv_rotation": 90}
+							}
+						}
+					]
+				},
+				{
+					"name": "teto_shrimp_left_hair3",
+					"parent": "teto_shrimp_left_hair2",
+					"pivot": [6.7807, 12.8045, 3],
+					"cubes": [
+						{
+							"origin": [4.78073, 9.80448, 2],
+							"size": [2, 3, 2],
+							"uv": {
+								"north": {"uv": [9, 49], "uv_size": [2, 3]},
+								"east": {"uv": [15, 49], "uv_size": [2, 3]},
+								"south": {"uv": [13, 49], "uv_size": [2, 3]},
+								"west": {"uv": [11, 49], "uv_size": [2, 3]},
+								"up": {"uv": [11, 47], "uv_size": [2, 2], "uv_rotation": 270},
+								"down": {"uv": [13, 49], "uv_size": [2, -2], "uv_rotation": 90}
+							}
+						}
+					]
+				},
+				{
+					"name": "teto_shrimp_left_hair4",
+					"parent": "teto_shrimp_left_hair3",
+					"pivot": [5.7807, 9.8045, 3],
+					"cubes": [
+						{
+							"origin": [5.78073, 7.80448, 1.5],
+							"size": [0, 2, 3],
+							"uv": {
+								"north": {"uv": [15, 47], "uv_size": [0, 2]},
+								"east": {"uv": [1, 0], "uv_size": [-1, 1]},
+								"south": {"uv": [18, 39], "uv_size": [0, 2]},
+								"west": {"uv": [15, 39], "uv_size": [3, 2]},
+								"up": {"uv": [21, 46], "uv_size": [3, 0], "uv_rotation": 270},
+								"down": {"uv": [21, 46], "uv_size": [3, 0], "uv_rotation": 90}
+							}
+						}
+					]
+				},
+				{
+					"name": "teto_shrimp_right_hair",
+					"parent": "hair",
+					"pivot": [-3.8358, 17.9142, 3],
+					"cubes": [
+						{
+							"origin": [-5.83579, 15.91421, 2],
+							"size": [2, 2, 2],
+							"pivot": [-3.83579, 17.91421, 3],
+							"rotation": [0, 0, -45],
+							"uv": {
+								"north": {"uv": [9, 56], "uv_size": [2, -2], "uv_rotation": 270},
+								"east": {"uv": [13, 52], "uv_size": [2, 2], "uv_rotation": 180},
+								"south": {"uv": [13, 56], "uv_size": [2, -2], "uv_rotation": 90},
+								"west": {"uv": [11, 54], "uv_size": [2, -2]},
+								"up": {"uv": [13, 54], "uv_size": [-2, 2], "uv_rotation": 90},
+								"down": {"uv": [17, 54], "uv_size": [-2, 2], "uv_rotation": 90}
+							}
+						}
+					]
+				},
+				{
+					"name": "teto_shrimp_right_hair2",
+					"parent": "teto_shrimp_right_hair",
+					"pivot": [-5.25, 16.5, 3],
+					"cubes": [
+						{
+							"origin": [-5.75, 12.5, 1.5],
+							"size": [3, 4, 3],
+							"pivot": [-5.25, 16.5, 3],
+							"rotation": [0, 0, 22.5],
+							"uv": {
+								"north": {"uv": [18, 42], "uv_size": [-3, 4]},
+								"east": {"uv": [21, 42], "uv_size": [-3, 4]},
+								"south": {"uv": [24, 42], "uv_size": [-3, 4]},
+								"west": {"uv": [27, 42], "uv_size": [-3, 4]},
+								"up": {"uv": [18, 42], "uv_size": [3, -3], "uv_rotation": 270},
+								"down": {"uv": [21, 39], "uv_size": [3, 3], "uv_rotation": 90}
+							}
+						}
+					]
+				},
+				{
+					"name": "teto_shrimp_right_hair3",
+					"parent": "teto_shrimp_right_hair2",
+					"pivot": [-6.7807, 12.8045, 3],
+					"cubes": [
+						{
+							"origin": [-6.78073, 9.80448, 2],
+							"size": [2, 3, 2],
+							"uv": {
+								"north": {"uv": [11, 49], "uv_size": [-2, 3]},
+								"east": {"uv": [13, 49], "uv_size": [-2, 3]},
+								"south": {"uv": [15, 49], "uv_size": [-2, 3]},
+								"west": {"uv": [17, 49], "uv_size": [-2, 3]},
+								"up": {"uv": [11, 49], "uv_size": [2, -2], "uv_rotation": 270},
+								"down": {"uv": [13, 47], "uv_size": [2, 2], "uv_rotation": 90}
+							}
+						}
+					]
+				},
+				{
+					"name": "teto_shrimp_right_hair4",
+					"parent": "teto_shrimp_right_hair3",
+					"pivot": [-5.7807, 9.8045, 3],
+					"cubes": [
+						{
+							"origin": [-5.78073, 7.80448, 1.5],
+							"size": [0, 2, 3],
+							"uv": {
+								"north": {"uv": [15, 47], "uv_size": [0, 2]},
+								"east": {"uv": [18, 39], "uv_size": [-3, 2]},
+								"south": {"uv": [18, 39], "uv_size": [0, 2]},
+								"west": {"uv": [0, 0], "uv_size": [1, 1]},
+								"up": {"uv": [21, 46], "uv_size": [3, 0], "uv_rotation": 270},
+								"down": {"uv": [21, 46], "uv_size": [3, 0], "uv_rotation": 90}
+							}
+						}
+					]
+				},
+				{
 					"name": "head-ornaments",
 					"parent": "head_offset",
 					"pivot": [-3.35, 17, -0.85],
@@ -1402,6 +1562,104 @@
 					]
 				},
 				{
+					"name": "teto_shrimp_ahoge",
+					"parent": "head_offset",
+					"pivot": [0, 19, -1],
+					"cubes": [
+						{
+							"origin": [-1.25, 17.5, -1],
+							"size": [1, 2, 0],
+							"pivot": [-0.25, 19, -1],
+							"rotation": [0, -45, 0],
+							"uv": {
+								"north": {"uv": [41, 30], "uv_size": [1, 2]},
+								"east": {"uv": [39, 30], "uv_size": [0, 2]},
+								"south": {"uv": [1, 0], "uv_size": [-1, 1]},
+								"west": {"uv": [39, 30], "uv_size": [0, 2]},
+								"up": {"uv": [42, 30], "uv_size": [-1, 0]},
+								"down": {"uv": [42, 30], "uv_size": [-1, 0]}
+							}
+						},
+						{
+							"origin": [-5.25, 19.5, -1],
+							"size": [4, 1, 0],
+							"pivot": [-0.25, 19, -1],
+							"rotation": [0, -45, 0],
+							"uv": {
+								"north": {"uv": [39, 29], "uv_size": [4, 1]},
+								"east": {"uv": [41, 30], "uv_size": [0, 1]},
+								"south": {"uv": [1, 0], "uv_size": [-1, 1]},
+								"west": {"uv": [41, 30], "uv_size": [0, 1]},
+								"up": {"uv": [13, 56], "uv_size": [-4, 0]},
+								"down": {"uv": [13, 56], "uv_size": [-4, 0]}
+							}
+						},
+						{
+							"origin": [-7.25, 7.5, -1],
+							"size": [2, 12, 0],
+							"pivot": [-0.25, 19, -1],
+							"rotation": [0, -45, 0],
+							"uv": {
+								"north": {"uv": [39, 30], "uv_size": [2, 12]},
+								"east": {"uv": [39, 30], "uv_size": [0, 12]},
+								"south": {"uv": [1, 0], "uv_size": [-1, 1]},
+								"west": {"uv": [39, 30], "uv_size": [0, 12]},
+								"up": {"uv": [41, 30], "uv_size": [-2, 0]},
+								"down": {"uv": [41, 30], "uv_size": [-2, 0]}
+							}
+						}
+					]
+				},
+				{
+					"name": "teto_shrimp_ahoge2",
+					"parent": "head_offset",
+					"pivot": [0, 19, -1],
+					"cubes": [
+						{
+							"origin": [0.25, 17.5, -1],
+							"size": [1, 2, 0],
+							"pivot": [0.25, 19, -1],
+							"rotation": [0, 45, 0],
+							"uv": {
+								"north": {"uv": [42, 30], "uv_size": [-1, 2]},
+								"east": {"uv": [39, 30], "uv_size": [0, 2]},
+								"south": {"uv": [0, 0], "uv_size": [1, 1]},
+								"west": {"uv": [39, 30], "uv_size": [0, 2]},
+								"up": {"uv": [41, 30], "uv_size": [1, 0]},
+								"down": {"uv": [41, 30], "uv_size": [1, 0]}
+							}
+						},
+						{
+							"origin": [1.25, 19.5, -1],
+							"size": [4, 1, 0],
+							"pivot": [0.25, 19, -1],
+							"rotation": [0, 45, 0],
+							"uv": {
+								"north": {"uv": [43, 29], "uv_size": [-4, 1]},
+								"east": {"uv": [41, 30], "uv_size": [0, 1]},
+								"south": {"uv": [0, 0], "uv_size": [1, 1]},
+								"west": {"uv": [41, 30], "uv_size": [0, 1]},
+								"up": {"uv": [9, 56], "uv_size": [4, 0]},
+								"down": {"uv": [9, 56], "uv_size": [4, 0]}
+							}
+						},
+						{
+							"origin": [5.25, 7.5, -1],
+							"size": [2, 12, 0],
+							"pivot": [0.25, 19, -1],
+							"rotation": [0, 45, 0],
+							"uv": {
+								"north": {"uv": [41, 30], "uv_size": [-2, 12]},
+								"east": {"uv": [39, 30], "uv_size": [0, 12]},
+								"south": {"uv": [0, 0], "uv_size": [1, 1]},
+								"west": {"uv": [39, 30], "uv_size": [0, 12]},
+								"up": {"uv": [39, 30], "uv_size": [2, 0]},
+								"down": {"uv": [39, 30], "uv_size": [2, 0]}
+							}
+						}
+					]
+				},
+				{
 					"name": "tail",
 					"parent": "body",
 					"pivot": [0, 6.5, 1.5],
@@ -1430,6 +1688,28 @@
 								"west": {"uv": [30, 16], "uv_size": [0, 3], "uv_rotation": 90},
 								"up": {"uv": [1, 1], "uv_size": [-1, -1], "uv_rotation": 180},
 								"down": {"uv": [34, 19], "uv_size": [-4, -3]}
+							}
+						}
+					]
+				},
+				{
+					"name": "teto_shrimp_tail",
+					"parent": "tail",
+					"pivot": [0, 5.5, 1.5],
+					"rotation": [22.5, 0, 0],
+					"cubes": [
+						{
+							"origin": [-2, 5.5, 1.5],
+							"size": [4, 0, 2],
+							"pivot": [0, 5.5, 1.5],
+							"rotation": [-90, 0, 0],
+							"uv": {
+								"north": {"uv": [18, 21], "uv_size": [-4, 0], "uv_rotation": 180},
+								"east": {"uv": [14, 21], "uv_size": [0, 2], "uv_rotation": 90},
+								"south": {"uv": [18, 21], "uv_size": [-4, 0]},
+								"west": {"uv": [18, 21], "uv_size": [0, 2], "uv_rotation": 270},
+								"up": {"uv": [18, 23], "uv_size": [-4, -2]},
+								"down": {"uv": [1, 1], "uv_size": [-1, -1], "uv_rotation": 180}
 							}
 						}
 					]

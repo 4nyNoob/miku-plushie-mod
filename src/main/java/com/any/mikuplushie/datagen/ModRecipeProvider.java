@@ -275,6 +275,8 @@ public class ModRecipeProvider extends FabricRecipeProvider {
             plushShapeless(exporter, ModBlocks.TETO_PLUSH_PPPP, ModBlocks.TETO_PLUSH, Items.RED_WOOL, Items.WHITE_WOOL);
             pickaxeRecipe(exporter, ModItems.TETO_PICKAXE_PPPP, ModBlocks.TETO_PLUSH_PPPP);
 
+            plushShapeless(exporter, ModBlocks.TETO_PLUSH_SHRIMP, ModBlocks.TETO_PLUSH, Items.KELP, Items.KELP);
+
         }
 
         //MEIKO

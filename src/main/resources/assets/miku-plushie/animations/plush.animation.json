@@ -975,6 +975,46 @@
 					"rotation": {
 						"vector": [0, 0, "math.sin(query.anim_time * (360 * 1.4) - (45 * 1)) * 10"]
 					}
+				},
+				"teto_shrimp_left_hair": {
+					"rotation": {
+						"vector": [0, 0, "math.sin(query.anim_time * (360 * 1.4) - (45 * 2)) * -10"]
+					}
+				},
+				"teto_shrimp_left_hair2": {
+					"rotation": {
+						"vector": [0, 0, "math.sin(query.anim_time * (360 * 1.4) - (45 * 3)) * -10"]
+					}
+				},
+				"teto_shrimp_left_hair3": {
+					"rotation": {
+						"vector": [0, 0, "math.sin(query.anim_time * (360 * 1.4) - (45 * 4)) * -10"]
+					}
+				},
+				"teto_shrimp_left_hair4": {
+					"rotation": {
+						"vector": [0, 0, "math.sin(query.anim_time * (360 * 1.4) - (45 * 5)) * -10"]
+					}
+				},
+				"teto_shrimp_right_hair": {
+					"rotation": {
+						"vector": [0, 0, "math.sin(query.anim_time * (360 * 1.4) - (45 * 2)) * -10"]
+					}
+				},
+				"teto_shrimp_right_hair2": {
+					"rotation": {
+						"vector": [0, 0, "math.sin(query.anim_time * (360 * 1.4) - (45 * 3)) * -10"]
+					}
+				},
+				"teto_shrimp_right_hair3": {
+					"rotation": {
+						"vector": [0, 0, "math.sin(query.anim_time * (360 * 1.4) - (45 * 4)) * -10"]
+					}
+				},
+				"teto_shrimp_right_hair4": {
+					"rotation": {
+						"vector": [0, 0, "math.sin(query.anim_time * (360 * 1.4) - (45 * 5)) * -10"]
+					}
 				}
 			}
 		},
@@ -1107,6 +1147,46 @@
 				"teto_plush_lobster_tail4": {
 					"rotation": {
 						"vector": ["-math.sin(query.anim_time * (360 * 0.5) - (45 * 3)) * 15 - 15", 0, 0]
+					}
+				},
+				"teto_shrimp_left_hair": {
+					"rotation": {
+						"vector": [0, 0, "math.sin(query.anim_time * (360 * 0.5) - (45 * 3)) * 5 - 5"]
+					}
+				},
+				"teto_shrimp_left_hair2": {
+					"rotation": {
+						"vector": ["-math.sin(query.anim_time * (360 * 0.5) - (45 * 2)) * 5", 0, 0]
+					}
+				},
+				"teto_shrimp_left_hair3": {
+					"rotation": {
+						"vector": ["-math.sin(query.anim_time * (360 * 0.5) - (45 * 3)) * 10", 0, 0]
+					}
+				},
+				"teto_shrimp_left_hair4": {
+					"rotation": {
+						"vector": ["-math.sin(query.anim_time * (360 * 0.5) - (45 * 4)) * 10", 0, 0]
+					}
+				},
+				"teto_shrimp_right_hair": {
+					"rotation": {
+						"vector": [0, 0, "math.sin(query.anim_time * (360 * 0.5) - (45 * 3)) * -5 + 5"]
+					}
+				},
+				"teto_shrimp_right_hair2": {
+					"rotation": {
+						"vector": ["-math.sin(query.anim_time * (360 * 0.5) - (45 * 2)) * 5", 0, 0]
+					}
+				},
+				"teto_shrimp_right_hair3": {
+					"rotation": {
+						"vector": ["-math.sin(query.anim_time * (360 * 0.5) - (45 * 3)) * 10", 0, 0]
+					}
+				},
+				"teto_shrimp_right_hair4": {
+					"rotation": {
+						"vector": ["-math.sin(query.anim_time * (360 * 0.5) - (45 * 4)) * 10", 0, 0]
 					}
 				}
 			}
@@ -1354,6 +1434,24 @@
 					"rotation": {
 						"vector": [
 							"-math.sin(query.anim_time * (360 * 1) - (45 * 0)) * -60",
+							"-math.sin(query.anim_time * (360 * 1) - (45 * 0)) * 45",
+							"math.sin(query.anim_time * (360 * 1) - (45 * 0)) * -20"
+						]
+					}
+				},
+				"teto_shrimp_left_hair": {
+					"rotation": {
+						"vector": [
+							"-math.sin(query.anim_time * (360 * 1) - (45 * 0)) * 45",
+							"-math.sin(query.anim_time * (360 * 1) - (45 * 0)) * 45",
+							"math.sin(query.anim_time * (360 * 1) - (45 * 0)) * -20"
+						]
+					}
+				},
+				"teto_shrimp_right_hair": {
+					"rotation": {
+						"vector": [
+							"-math.sin(query.anim_time * (360 * 1) - (45 * 0)) * -45",
 							"-math.sin(query.anim_time * (360 * 1) - (45 * 0)) * 45",
 							"math.sin(query.anim_time * (360 * 1) - (45 * 0)) * -20"
 						]
