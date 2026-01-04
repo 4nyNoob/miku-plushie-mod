@@ -69,8 +69,9 @@ public class ModItems {
         Block plushBlock = null;
         for (int block = 0; block < ModBlocks.PLUSH_BLOCKS.size(); block++) {
             //MATCH ITEM TO THE RIGHT BLOCK
-            if (ModBlocks.PLUSH_BLOCKS.get(block).getTranslationKey().split("[.]")[2].matches(name)){
-                plushBlock = ModBlocks.PLUSH_BLOCKS.get(block);
+            Block registeredPlushBlock = ModBlocks.PLUSH_BLOCKS.get(block);
+            if (ModUtil.getBlockIdFromBlock(registeredPlushBlock).matches(name)){
+                plushBlock = registeredPlushBlock;
             }
         }
         return register(new MikuPlushieBlockItem(plushBlock, new Item.Settings()), name);
