@@ -225,6 +225,8 @@ public class ModRecipeProvider extends FabricRecipeProvider {
             plushShapeless(exporter, ModBlocks.MIKU_PLUSH_DEEP_SEA_GIRL, ModBlocks.MIKU_PLUSH, Items.TUBE_CORAL, Items.BUBBLE_CORAL);
             plushShapeless(exporter, ModBlocks.MIKU_PLUSH_LUCARIO_Z, ModBlocks.MIKU_PLUSH, Items.IRON_BARS, Items.WHITE_WOOL, Items.REDSTONE);
             plushShapeless(exporter, ModBlocks.MIKU_PLUSH_PPPP, ModBlocks.MIKU_PLUSH, Items.CYAN_WOOL, Items.WHITE_WOOL);
+            plushShapeless(exporter, ModBlocks.MIKU_PLUSH_LINK, ModBlocks.MIKU_PLUSH, Items.GREEN_WOOL, Items.EMERALD);
+            plushShapeless(exporter, ModBlocks.MIKU_PLUSH_RENAISSANCE, ModBlocks.MIKU_PLUSH, Items.WHITE_WOOL, Items.WRITABLE_BOOK);
         }
 
         //TETO

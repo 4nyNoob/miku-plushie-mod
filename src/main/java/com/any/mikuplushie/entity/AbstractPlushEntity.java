@@ -182,7 +182,7 @@ public class AbstractPlushEntity extends TameableEntity implements GeoEntity {
     //EYE HEIGHT DEPENDING ON POSE
     @Override
     protected float getActiveEyeHeight(EntityPose pose, EntityDimensions dimensions) {
-        if (pose.equals(EntityPose.STANDING)){
+        if (this.isInSittingPose()){
             return 0.85F;
         } else {
             return 0.6F;

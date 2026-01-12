@@ -70,6 +70,8 @@ public enum MikuVariant {
     MIKU_PLUSH_DEEP_SEA_GIRL (62, "miku_plush_deep_sea_girl"),
     MIKU_PLUSH_LUCARIO_Z (63, "miku_plush_lucario_z"),
     MIKU_PLUSH_PPPP (64, "miku_plush_pppp"),
+    MIKU_PLUSH_LINK (64, "miku_plush_link"),
+    MIKU_PLUSH_RENAISSANCE (64, "miku_plush_renaissance"),
     ;
 
     private static final MikuVariant[] BY_ID = Arrays.stream(values()).sorted(Comparator.comparingInt(MikuVariant::getId)).toArray(MikuVariant[]::new);

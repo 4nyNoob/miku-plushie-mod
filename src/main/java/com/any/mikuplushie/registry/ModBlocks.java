@@ -116,6 +116,8 @@ public class ModBlocks {
     public static final Block TETO_PLUSH_PPPP = registerPlush("teto_plush_pppp", null);
     public static final Block MIKU_PLUSH_PPPP = registerPlush("miku_plush_pppp", null);
     public static final Block TETO_PLUSH_SHRIMP = registerPlush("teto_plush_shrimp", null);
+	public static final Block MIKU_PLUSH_LINK = registerPlush("miku_plush_link", null);
+	public static final Block MIKU_PLUSH_RENAISSANCE = registerPlush("miku_plush_renaissance", null);
 
     //NON PLUSH STUFF
     public static final LeekCropBlock LEEK_CROP = (LeekCropBlock) register(

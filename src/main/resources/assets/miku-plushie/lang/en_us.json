@@ -209,6 +209,11 @@
   "item.miku-plushie.teto_plush_shrimp.tooltip": "§b§n@zambiie.bsky.social",
   "item.miku-plushie.teto_pickaxe_shrimp": "Shrimp Teto Pickaxe",
 
+  "block.miku-plushie.miku_plush_link": "Miku Link Plush",
+  "item.miku-plushie.miku_plush_link.tooltip": "§b§n@lokyu.bsky.social",
+  "block.miku-plushie.miku_plush_renaissance": "Renaissance Miku Plush",
+  "item.miku-plushie.miku_plush_renaissance.tooltip": "§b§n@aidenr0.bsky.social",
+
 
   "item.group.miku_plushies": "Mikus!!",
 
