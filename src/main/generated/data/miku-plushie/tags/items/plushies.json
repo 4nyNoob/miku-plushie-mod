@@ -6,11 +6,11 @@
       "required": false
     },
     {
-      "id": "#miku-plushie:aiko_plush",
+      "id": "#miku-plushie:teto_plush",
       "required": false
     },
     {
-      "id": "#miku-plushie:teto_plush",
+      "id": "#miku-plushie:aiko_plush",
       "required": false
     },
     {
@@ -26,11 +26,11 @@
       "required": false
     },
     {
-      "id": "#miku-plushie:luka_plush",
+      "id": "#miku-plushie:konoha_plush",
       "required": false
     },
     {
-      "id": "#miku-plushie:konoha_plush",
+      "id": "#miku-plushie:luka_plush",
       "required": false
     },
     {
