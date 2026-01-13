@@ -28,7 +28,7 @@ public class ModEntities {
     public static final EntityType<MikuEntity> MIKU = registerMob("miku_plush", MikuEntity::new);
     public static final EntityType<TetoEntity> TETO = registerMob("teto_plush", TetoEntity::new);
     public static final EntityType<AikoEntity> AIKO = registerMob("aiko_plush", AikoEntity::new);
-    public static final EntityType<NeruEntity> NERU = registerMob("neru_plush", NeruEntity::new);
+    public static final EntityType<NeruEntity> NERU = registerMob("akita_neru_plush", NeruEntity::new);
     public static final EntityType<RinEntity> RIN = registerMob("rin_plush", RinEntity::new);
     public static final EntityType<LenEntity> LEN = registerMob("len_plush", LenEntity::new);
     public static final EntityType<KonohaEntity> KONOHA = registerMob("konoha_plush", KonohaEntity::new);

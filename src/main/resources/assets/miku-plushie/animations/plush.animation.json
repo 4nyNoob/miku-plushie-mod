@@ -98,6 +98,11 @@
 					"rotation": {
 						"vector": [0, 0, "math.sin(query.anim_time * 90  + (45 * 2)) * 6"]
 					}
+				},
+				"scarf": {
+					"rotation": {
+						"vector": [0, 0, "math.sin(query.anim_time * 90  - (45 * 5)) * 3"]
+					}
 				}
 			}
 		},
@@ -290,6 +295,11 @@
 					"rotation": {
 						"vector": ["-math.sin(query.anim_time * 540 - (45 * 5)) * 10 - 10", 0, 0]
 					}
+				},
+				"scarf": {
+					"rotation": {
+						"vector": ["-math.sin(query.anim_time * 540 - (45 * 6)) * 5 + 5", 0, "math.sin(query.anim_time * 540 - (45 * 0)) * 2"]
+					}
 				}
 			}
 		},
@@ -414,6 +424,15 @@
 				"teto_right_hair4": {
 					"rotation": {
 						"vector": [0, 0, "math.sin(query.anim_time * (360 * (165/60)/2) - (45 * 1)) * 5"]
+					}
+				},
+				"scarf": {
+					"rotation": {
+						"vector": [
+							"-math.sin(query.anim_time * (360 * (165/60)/2) - (45 * 2)) * 5 + 15",
+							"-math.sin(query.anim_time * (360 * (165/60)/2) - (45 * 0)) * 15",
+							"math.sin(query.anim_time * (360 * (165/60)/2) - (45 * 0)) * 10"
+						]
 					}
 				}
 			}
@@ -1455,6 +1474,11 @@
 							"-math.sin(query.anim_time * (360 * 1) - (45 * 0)) * 45",
 							"math.sin(query.anim_time * (360 * 1) - (45 * 0)) * -20"
 						]
+					}
+				},
+				"scarf": {
+					"rotation": {
+						"vector": ["-math.sin(query.anim_time * (360 * 1) - (45 * 0)) * -60", 0, 0]
 					}
 				}
 			}

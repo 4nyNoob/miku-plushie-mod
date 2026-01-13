@@ -215,6 +215,10 @@
   "item.miku-plushie.miku_plush_renaissance.tooltip": "§b§n@aidenr0.bsky.social",
   "block.miku-plushie.kaito_plush": "Kaito Plush",
   "item.miku-plushie.kaito_plush.tooltip": "§b§n@dorakue_",
+  "block.miku-plushie.kaito_plush_v3": "Kaito Plush V3",
+  "item.miku-plushie.kaito_plush_v3.tooltip": "§b§n@iximaxima",
+  "block.miku-plushie.kaito_plush_v4": "Kaito Plush V4",
+  "item.miku-plushie.kaito_plush_v4.tooltip": "§b§n@iximaxima",
 
 
   "item.group.miku_plushies": "Mikus!!",
@@ -240,6 +244,7 @@
   "entity.miku-plushie.luka_plush": "Megurine Luka",
   "entity.miku-plushie.meiko_plush": "Meiko",
   "entity.miku-plushie.gumi_plush": "Gumi",
+  "entity.miku-plushie.kaito_plush": "Kaito",
 
 
   "sound.miku-plushie.canudinho": "Miku: Canudinho",

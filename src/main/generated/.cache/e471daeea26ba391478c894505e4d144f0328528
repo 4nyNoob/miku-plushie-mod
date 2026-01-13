@@ -1,4 +1,4 @@
-// 1.20.1	2026-01-12T22:44:03.751056036	miku plushies/Block Loot Tables
+// 1.20.1	2026-01-13T15:39:52.721746555	miku plushies/Block Loot Tables
 af68195ac8c10224169e0ac3c60fab2ecb875557 data/miku-plushie/loot_tables/blocks/miku_plush_frankenstein.json
 93b11cd16ce81b4c9455e9703970fa1c1ca6a2bd data/miku-plushie/loot_tables/blocks/miku_plush_michael_myers.json
 d36adccb87a5ac543b64c2b85553704fab2d7d07 data/miku-plushie/loot_tables/blocks/teto_plush_birdbrain.json
@@ -73,6 +73,7 @@ da2dcc7caf5078f3b17da6942ecea62035e6b676 data/miku-plushie/loot_tables/blocks/mi
 25ade9f37f7ee10d41250eabfc34597264c996ce data/miku-plushie/loot_tables/blocks/miku_plush_br_braid.json
 2116f7b5134dd379b9dd6fb3190f24abb1dc7f5d data/miku-plushie/loot_tables/blocks/miku_plush_santa.json
 54d8d9369b03274b6b02d9c0645886bf3d14d2e2 data/miku-plushie/loot_tables/blocks/miku_plush_br_am.json
+9ff4ee74454cfa4be6d7d30ec084c9ac8227d200 data/miku-plushie/loot_tables/blocks/kaito_plush_v4.json
 a5043fa29be2869b0742b670a266dbc1bda5e44c data/miku-plushie/loot_tables/blocks/miku_plush_dont_believe_in_t.json
 f0bfa240059f2c1854efab047060e68c4ccc1b47 data/miku-plushie/loot_tables/blocks/miku_plush_digital_stars_2025.json
 c8a0509df1543d36ec3c19a7d905b00a8e88fc20 data/miku-plushie/loot_tables/blocks/miku_plush_br_go.json
@@ -94,6 +95,7 @@ dcd9c2497b3df29a750fa506567f3f4b9d26aac8 data/miku-plushie/loot_tables/blocks/mi
 fea1e73ff23da4cece4243f797325750b6a06d33 data/miku-plushie/loot_tables/blocks/kaito_plush.json
 c3c9081777252a88fb69c21c0a80a70369ccda3d data/miku-plushie/loot_tables/blocks/miku_plush_santa_elf.json
 08e7f7f945ce10f86c6e4180187f997bd87918b7 data/miku-plushie/loot_tables/blocks/meiko_plush_v4.json
+0264f1e6f04884af6273085b5ee812f7b9f58382 data/miku-plushie/loot_tables/blocks/kaito_plush_v3.json
 f97a600e3b555cef570cb1a63851780a0f892816 data/miku-plushie/loot_tables/blocks/miku_plush_pumpkin.json
 dfb7ab7d39b252f1f8401b6de7110d8b3cacff2c data/miku-plushie/loot_tables/blocks/leek_crop.json
 585fa49ba7f5d053094f1f0f23dde478473dc180 data/miku-plushie/loot_tables/blocks/miku_plush_monitoring.json
