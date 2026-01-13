@@ -1,6 +1,7 @@
 package com.any.mikuplushie.datagen;
 
 import com.any.mikuplushie.MikuPlushie;
+import com.any.mikuplushie.registry.ModEntities;
 import com.any.mikuplushie.registry.ModItems;
 import com.any.mikuplushie.util.ModUtil;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
@@ -34,7 +35,8 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
         TagKey.of(RegistryKeys.ITEM, Identifier.of(MikuPlushie.MOD_ID, "luka_plush")),
         TagKey.of(RegistryKeys.ITEM, Identifier.of(MikuPlushie.MOD_ID, "konoha_plush")),
         TagKey.of(RegistryKeys.ITEM, Identifier.of(MikuPlushie.MOD_ID, "meiko_plush")),
-        TagKey.of(RegistryKeys.ITEM, Identifier.of(MikuPlushie.MOD_ID, "gumi_plush"))
+        TagKey.of(RegistryKeys.ITEM, Identifier.of(MikuPlushie.MOD_ID, "gumi_plush")),
+        TagKey.of(RegistryKeys.ITEM, Identifier.of(MikuPlushie.MOD_ID, "kaito_plush"))
     );
 
     @Override

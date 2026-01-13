@@ -454,5 +454,54 @@
       "miku-plushie:gumi/gumi-equip3",
       "miku-plushie:gumi/gumi-equip4"
     ]
+  },
+
+
+
+  "kaito_oie" : {
+    "subtitle": "sound.kaito-plushie.oie",
+    "sounds": [
+      "miku-plushie:kaito/kaito-oie1",
+      "miku-plushie:kaito/kaito-oie2",
+      "miku-plushie:kaito/kaito-oie3",
+      "miku-plushie:kaito/kaito-oie4",
+      "miku-plushie:kaito/kaito-oie5",
+      "miku-plushie:kaito/kaito-oie6"
+    ]
+  },
+  "kaito_dor" : {
+    "subtitle": "sound.kaito-plushie.dor",
+    "sounds": [
+      "miku-plushie:kaito/kaito-dor1",
+      "miku-plushie:kaito/kaito-dor2",
+      "miku-plushie:kaito/kaito-dor3",
+      "miku-plushie:kaito/kaito-dor4",
+      "miku-plushie:kaito/kaito-dor5",
+      "miku-plushie:kaito/kaito-dor6",
+      "miku-plushie:kaito/kaito-dor7",
+      "miku-plushie:kaito/kaito-dor8",
+      "miku-plushie:kaito/kaito-dor9"
+    ]
+  },
+  "kaito_bye" : {
+    "subtitle": "sound.kaito-plushie.bye",
+    "sounds": [
+      "miku-plushie:kaito/kaito-bye1",
+      "miku-plushie:kaito/kaito-bye2",
+      "miku-plushie:kaito/kaito-bye3",
+      "miku-plushie:kaito/kaito-bye4",
+      "miku-plushie:kaito/kaito-bye5",
+      "miku-plushie:kaito/kaito-bye6",
+      "miku-plushie:kaito/kaito-bye7"
+    ]
+  },
+  "kaito_equip" : {
+    "subtitle": "sound.kaito-plushie.equip",
+    "sounds": [
+      "miku-plushie:kaito/kaito-equip1",
+      "miku-plushie:kaito/kaito-equip2",
+      "miku-plushie:kaito/kaito-equip3",
+      "miku-plushie:kaito/kaito-equip4"
+    ]
   }
 }

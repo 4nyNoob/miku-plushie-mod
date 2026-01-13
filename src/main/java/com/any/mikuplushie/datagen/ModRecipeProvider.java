@@ -316,6 +316,20 @@ public class ModRecipeProvider extends FabricRecipeProvider {
             plushShapeless(exporter, ModBlocks.GUMI_PLUSH_V6, ModBlocks.GUMI_PLUSH, Items.IRON_INGOT, Items.IRON_INGOT, Items.REDSTONE);
         }
 
+        //KAITO
+        {
+            ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ModBlocks.KAITO_PLUSH)
+                .pattern("121")
+                .pattern(" 3 ")
+                .input('1', Items.BLUE_WOOL)
+                .input('2', Items.WHITE_WOOL)
+                .input('3', Items.ORANGE_WOOL)
+                .criterion(FabricRecipeProvider.hasItem(Items.BLUE_WOOL), FabricRecipeProvider.conditionsFromItem(Items.BLUE_WOOL))
+                .criterion(FabricRecipeProvider.hasItem(Items.WHITE_WOOL), FabricRecipeProvider.conditionsFromItem(Items.WHITE_WOOL))
+                .criterion(FabricRecipeProvider.hasItem(Items.ORANGE_WOOL), FabricRecipeProvider.conditionsFromItem(Items.ORANGE_WOOL))
+                .offerTo(exporter);
+        }
+
     }
 
     public static void pickaxeRecipe (Consumer<RecipeJsonProvider> exporter, ItemConvertible result, ItemConvertible ingredient) {

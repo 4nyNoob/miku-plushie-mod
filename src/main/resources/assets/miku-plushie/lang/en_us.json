@@ -213,6 +213,8 @@
   "item.miku-plushie.miku_plush_link.tooltip": "§b§n@lokyu.bsky.social",
   "block.miku-plushie.miku_plush_renaissance": "Renaissance Miku Plush",
   "item.miku-plushie.miku_plush_renaissance.tooltip": "§b§n@aidenr0.bsky.social",
+  "block.miku-plushie.kaito_plush": "Kaito Plush",
+  "item.miku-plushie.kaito_plush.tooltip": "§b§n@dorakue_",
 
 
   "item.group.miku_plushies": "Mikus!!",
@@ -285,5 +287,10 @@
   "sound.gumi-plushie.oie": "Gumi: Hi",
   "sound.gumi-plushie.dor": "Gumi: Pain",
   "sound.gumi-plushie.bye": "Gumi: Bye",
-  "sound.gumi-plushie.equip": "Gumi: Equip"
+  "sound.gumi-plushie.equip": "Gumi: Equip",
+
+  "sound.kaito-plushie.oie": "Kaito: Hi",
+  "sound.kaito-plushie.dor": "Kaito: Pain",
+  "sound.kaito-plushie.bye": "Kaito: Bye",
+  "sound.kaito-plushie.equip": "Kaito: Equip"
 }

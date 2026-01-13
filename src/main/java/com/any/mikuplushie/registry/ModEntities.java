@@ -35,6 +35,7 @@ public class ModEntities {
     public static final EntityType<LukaEntity> LUKA = registerMob("luka_plush", LukaEntity::new);
     public static final EntityType<MeikoEntity> MEIKO = registerMob("meiko_plush", MeikoEntity::new);
     public static final EntityType<GumiEntity> GUMI = registerMob("gumi_plush", GumiEntity::new);
+    public static final EntityType<KaitoEntity> KAITO = registerMob("kaito_plush", KaitoEntity::new);
 
 
     public static <T extends MobEntity> EntityType<T> registerMob(String name, EntityType.EntityFactory<T> entity) {

@@ -40,6 +40,10 @@
     {
       "id": "#miku-plushie:gumi_plush",
       "required": false
+    },
+    {
+      "id": "#miku-plushie:kaito_plush",
+      "required": false
     }
   ]
 }

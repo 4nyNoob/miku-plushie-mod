@@ -68,7 +68,13 @@ public class ModSoundEvents {
 		registerSound("gumi_oie"),
 		registerSound("gumi_dor"),
 		registerSound("gumi_bye"),
-		registerSound("gumi_equip")
+		registerSound("gumi_equip"),
+
+		//KAITO
+		registerSound("kaito_oie"),
+		registerSound("kaito_dor"),
+		registerSound("kaito_bye"),
+		registerSound("kaito_equip")
 	);
 
 	private static SoundEvent registerSound(String id) {

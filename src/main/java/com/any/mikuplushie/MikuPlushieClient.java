@@ -48,6 +48,7 @@ public class MikuPlushieClient implements ClientModInitializer {
         EntityRendererRegistry.register(ModEntities.LUKA, LukaRender::new);
         EntityRendererRegistry.register(ModEntities.MEIKO, MeikoRender::new);
         EntityRendererRegistry.register(ModEntities.GUMI, GumiRender::new);
+        EntityRendererRegistry.register(ModEntities.KAITO, KaitoRender::new);
 
         //PARTICLE
         ParticleFactoryRegistry.getInstance().register(ModParticles.MIKU_SPAWN, PlushSpawnParticle.Factory::new);

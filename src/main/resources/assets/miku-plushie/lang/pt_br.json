@@ -213,6 +213,8 @@
   "item.miku-plushie.miku_plush_link.tooltip": "§b§n@lokyu.bsky.social",
   "block.miku-plushie.miku_plush_renaissance": "Pelúcia Da Miku Renascentista",
   "item.miku-plushie.miku_plush_renaissance.tooltip": "§b§n@aidenr0.bsky.social",
+  "block.miku-plushie.kaito_plush": "Pelúcia Do Kaito",
+  "item.miku-plushie.kaito_plush.tooltip": "§b§n@dorakue_",
 
 
   "item.group.miku_plushies": "Mikus!!",
@@ -285,5 +287,10 @@
   "sound.gumi-plushie.oie": "Gumi: Oie",
   "sound.gumi-plushie.dor": "Gumi: Dor",
   "sound.gumi-plushie.bye": "Gumi: Tchau",
-  "sound.gumi-plushie.equip": "Gumi: Equipada"
+  "sound.gumi-plushie.equip": "Gumi: Equipada",
+
+  "sound.kaito-plushie.oie": "Kaito: Oie",
+  "sound.kaito-plushie.dor": "Kaito: Dor",
+  "sound.kaito-plushie.bye": "Kaito: Tchau",
+  "sound.kaito-plushie.equip": "Kaito: Equipado"
 }
