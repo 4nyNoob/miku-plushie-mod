@@ -9,6 +9,15 @@
       "miku-plushie:miku/canudinho5"
     ]
   },
+  "miku_eat" : {
+    "subtitle": "sound.miku-plushie.eat",
+    "sounds": [
+      "miku-plushie:miku/miku-eat1",
+      "miku-plushie:miku/miku-eat2",
+      "miku-plushie:miku/miku-eat3",
+      "miku-plushie:miku/miku-eat4"
+    ]
+  },
   "miku_oie" : {
     "subtitle": "sound.miku-plushie.oie",
     "sounds": [
@@ -56,15 +65,7 @@
       "miku-plushie:miku/miku-equip4"
     ]
   },
-  "miku_eat" : {
-    "subtitle": "sound.miku-plushie.eat",
-    "sounds": [
-      "miku-plushie:miku/miku-eat1",
-      "miku-plushie:miku/miku-eat2",
-      "miku-plushie:miku/miku-eat3",
-      "miku-plushie:miku/miku-eat4"
-    ]
-  },
+
 
 
 
@@ -164,7 +165,7 @@
 
 
 
-  "akita_oie" : {
+  "akita_neru_oie" : {
     "subtitle": "sound.neru-plushie.oie",
     "sounds": [
       "miku-plushie:neru/neru-placing1",
@@ -175,7 +176,7 @@
       "miku-plushie:neru/neru-placing6"
     ]
   },
-  "akita_dor" : {
+  "akita_neru_dor" : {
     "subtitle": "sound.neru-plushie.dor",
     "sounds": [
       "miku-plushie:neru/neru-hurt1",
@@ -189,7 +190,7 @@
       "miku-plushie:neru/neru-hurt9"
     ]
   },
-  "akita_bye" : {
+  "akita_neru_bye" : {
     "subtitle": "sound.neru-plushie.bye",
     "sounds": [
       "miku-plushie:neru/neru-break1",
@@ -201,7 +202,7 @@
       "miku-plushie:neru/neru-break7"
     ]
   },
-  "akita_equip" : {
+  "akita_neru_equip" : {
     "subtitle": "sound.neru-plushie.equip",
     "sounds": [
       "miku-plushie:neru/neru-equip1",
