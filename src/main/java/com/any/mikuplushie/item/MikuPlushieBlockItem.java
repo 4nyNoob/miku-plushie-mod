@@ -3,7 +3,6 @@ package com.any.mikuplushie.item;
 import com.any.mikuplushie.MikuPlushie;
 import com.any.mikuplushie.datagen.ModItemTagProvider;
 import com.any.mikuplushie.registry.ModBlocks;
-import com.any.mikuplushie.registry.ModSoundEvents;
 import com.any.mikuplushie.util.ModUtil;
 import net.minecraft.block.Block;
 import net.minecraft.entity.EquipmentSlot;

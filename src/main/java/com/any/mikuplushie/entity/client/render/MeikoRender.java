@@ -1,6 +1,5 @@
 package com.any.mikuplushie.entity.client.render;
 
-import com.any.mikuplushie.entity.AikoEntity;
 import com.any.mikuplushie.entity.MeikoEntity;
 import com.any.mikuplushie.entity.client.model.MeikoModel;
 import net.minecraft.client.render.RenderLayer;

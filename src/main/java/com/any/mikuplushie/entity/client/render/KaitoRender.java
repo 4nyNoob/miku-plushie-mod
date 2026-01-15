@@ -1,7 +1,5 @@
 package com.any.mikuplushie.entity.client.render;
 
-import com.any.mikuplushie.entity.AikoEntity;
-import com.any.mikuplushie.entity.GumiEntity;
 import com.any.mikuplushie.entity.KaitoEntity;
 import com.any.mikuplushie.entity.client.model.KaitoModel;
 import net.minecraft.client.render.VertexConsumer;

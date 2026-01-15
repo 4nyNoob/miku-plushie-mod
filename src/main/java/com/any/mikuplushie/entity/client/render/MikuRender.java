@@ -1,6 +1,5 @@
 package com.any.mikuplushie.entity.client.render;
 
-import com.any.mikuplushie.entity.AikoEntity;
 import com.any.mikuplushie.entity.MikuEntity;
 import com.any.mikuplushie.entity.client.model.MikuModel;
 import com.any.mikuplushie.entity.variant.MikuVariant;

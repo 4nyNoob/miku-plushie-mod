@@ -1,6 +1,5 @@
 package com.any.mikuplushie.entity.client.render;
 
-import com.any.mikuplushie.entity.AikoEntity;
 import com.any.mikuplushie.entity.TetoEntity;
 import com.any.mikuplushie.entity.client.model.TetoModel;
 import com.any.mikuplushie.entity.variant.TetoVariant;

@@ -1,11 +1,9 @@
 package com.any.mikuplushie.block;
 
 import com.any.mikuplushie.entity.AbstractPlushEntity;
-import com.any.mikuplushie.registry.ModBlocks;
 import com.any.mikuplushie.registry.ModItems;
 import com.any.mikuplushie.registry.ModParticles;
 import com.any.mikuplushie.util.ModUtil;
-import com.mojang.datafixers.kinds.IdF;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.HorizontalFacingBlock;
@@ -19,7 +17,6 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.sound.SoundCategory;
-import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.DirectionProperty;
