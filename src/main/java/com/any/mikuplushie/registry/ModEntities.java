@@ -2,12 +2,10 @@ package com.any.mikuplushie.registry;
 
 import com.any.mikuplushie.MikuPlushie;
 import com.any.mikuplushie.entity.*;
-import net.fabricmc.fabric.api.datagen.v1.provider.FabricDynamicRegistryProvider;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricEntityTypeBuilder;
 import net.minecraft.entity.EntityDimensions;
 import net.minecraft.entity.EntityType;
-import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.SpawnGroup;
 import net.minecraft.entity.mob.MobEntity;
 import net.minecraft.registry.Registries;
@@ -22,8 +20,8 @@ public class ModEntities {
 
     public static List<EntityType<?>> PLUSH_ENTITIES = new ArrayList<>();
 
-    private static final float PLUSH_WIDTH = 0.6F;
-    private static final float PLUSH_HEIGHT = 0.8F;
+    public static final float PLUSH_WIDTH = 0.6F;
+    public static final float PLUSH_HEIGHT = 1F;
 
     public static final EntityType<MikuEntity> MIKU = registerMob("miku_plush", MikuEntity::new);
     public static final EntityType<TetoEntity> TETO = registerMob("teto_plush", TetoEntity::new);
