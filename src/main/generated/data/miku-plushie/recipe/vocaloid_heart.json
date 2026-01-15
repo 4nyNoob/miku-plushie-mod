@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "miku-plushie:baguette"
+    },
+    "L": {
+      "item": "miku-plushie:leek"
+    },
+    "N": {
+      "item": "minecraft:note_block"
+    },
+    "P": {
+      "item": "miku-plushie:akita_neru_phone"
+    }
+  },
+  "pattern": [
+    "LN",
+    "BP"
+  ],
+  "result": {
+    "count": 1,
+    "id": "miku-plushie:vocaloid_heart"
+  }
+}

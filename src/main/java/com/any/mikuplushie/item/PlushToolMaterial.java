@@ -8,10 +8,18 @@ import net.minecraft.recipe.Ingredient;
 import net.minecraft.registry.tag.BlockTags;
 import net.minecraft.registry.tag.TagKey;
 
+import java.util.Objects;
 import java.util.function.Supplier;
 
 public enum PlushToolMaterial implements ToolMaterial {
-    PLUSH_TOOL_MATERIAL(BlockTags.INCORRECT_FOR_STONE_TOOL, 500, 15.0F, 0.0F, 25, () -> Ingredient.ofItems(Items.DIAMOND));
+
+    PLUSH_TOOL_MATERIAL(
+        BlockTags.INCORRECT_FOR_WOODEN_TOOL,
+        500,
+        15,
+        0,
+        25,
+        () -> Ingredient.ofItems(Items.DIAMOND));
 
     private final TagKey<Block> inverseTag;
     private final int itemDurability;
@@ -20,7 +28,7 @@ public enum PlushToolMaterial implements ToolMaterial {
     private final int enchantability;
     private final Supplier<Ingredient> repairIngredient;
 
-    PlushToolMaterial(
+    private PlushToolMaterial(
         final TagKey<Block> inverseTag,
         final int itemDurability,
         final float miningSpeed,
@@ -33,36 +41,31 @@ public enum PlushToolMaterial implements ToolMaterial {
         this.miningSpeed = miningSpeed;
         this.attackDamage = attackDamage;
         this.enchantability = enchantability;
+        Objects.requireNonNull(repairIngredient);
         this.repairIngredient = Suppliers.memoize(repairIngredient::get);
     }
 
-    @Override
     public int getDurability() {
         return this.itemDurability;
     }
 
-    @Override
     public float getMiningSpeedMultiplier() {
         return this.miningSpeed;
     }
 
-    @Override
     public float getAttackDamage() {
         return this.attackDamage;
     }
 
-    @Override
     public TagKey<Block> getInverseTag() {
         return this.inverseTag;
     }
 
-    @Override
     public int getEnchantability() {
         return this.enchantability;
     }
 
-    @Override
     public Ingredient getRepairIngredient() {
-        return this.repairIngredient.get();
+        return (Ingredient)this.repairIngredient.get();
     }
 }

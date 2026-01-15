@@ -1,7 +1,10 @@
 package com.any.mikuplushie.item;
 
-import com.any.mikuplushie.ModSoundEvents;
-import com.any.mikuplushie.datagen.ModTagProvider;
+import com.any.mikuplushie.MikuPlushie;
+import com.any.mikuplushie.datagen.ModItemTagProvider;
+import com.any.mikuplushie.registry.ModBlocks;
+import com.any.mikuplushie.registry.ModSoundEvents;
+import com.any.mikuplushie.util.ModUtil;
 import net.minecraft.block.Block;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.LivingEntity;
@@ -24,33 +27,16 @@ public class MikuPlushieBlockItem extends BlockItem implements Equipment {
 
 	@Override
 	public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type) {
-		tooltip.add(Text.translatable("item." + stack.getItem().toString().replace(":", ".") + ".tooltip"));
+		tooltip.add(Text.translatable("item." + MikuPlushie.MOD_ID + "." + stack.getItem().toString() + ".tooltip"));
 		super.appendTooltip(stack, context, tooltip, type);
 	}
 
-	public static void PlayMikuSound(LivingEntity entity) {
+	public static void PlayMikuSound(LivingEntity entity){
 		ItemStack stack = entity.getStackInHand(entity.getActiveHand());
 
-		if (stack.isIn(ModTagProvider.BR_MIKU_ITEMS)) {
-			entity.playSound(ModSoundEvents.MIKU_DOR, 1f, 1);
-		}
-		if (stack.isIn(ModTagProvider.AIKO_PLUSH)) {
-			entity.playSound(ModSoundEvents.AIKO_DOR, 1f, 1);
-		}
-		if (stack.isIn(ModTagProvider.TETO_PLUSH)) {
-			entity.playSound(ModSoundEvents.TETO_DOR, 1f, 1);
-		}
-		if (stack.isIn(ModTagProvider.AKITA_NERU_PLUSH)) {
-			entity.playSound(ModSoundEvents.AKITA_NERU_DOR, 1f, 1);
-		}
-		if (stack.isIn(ModTagProvider.RIN_PLUSH)) {
-			entity.playSound(ModSoundEvents.RIN_DOR, 1f, 1);
-		}
-		if (stack.isIn(ModTagProvider.LEN_PLUSH)) {
-			entity.playSound(ModSoundEvents.LEN_DOR, 1f, 1);
-		}
-		if (stack.isIn(ModTagProvider.LUKA_PLUSH)) {
-			entity.playSound(ModSoundEvents.LUKA_DOR, 1f, 1);
+		if (stack.isIn(ModItemTagProvider.PLUSHIES)){
+			String currentPlush = ModUtil.getBlockIdFromItem(stack.getItem());
+			ModUtil.playPlushSound(entity.getWorld(), entity.getBlockPos(), currentPlush, "dor");
 		}
 
 	}
@@ -64,27 +50,12 @@ public class MikuPlushieBlockItem extends BlockItem implements Equipment {
 	public RegistryEntry<SoundEvent> getEquipSound() {
 		ItemStack stack = this.getDefaultStack();
 
-		if (stack.isIn(ModTagProvider.AIKO_PLUSH)) {
-			return RegistryEntry.of(ModSoundEvents.AIKO_EQUIP);
-		}
-		if (stack.isIn(ModTagProvider.TETO_PLUSH)) {
-			return RegistryEntry.of(ModSoundEvents.TETO_EQUIP);
-		}
-		if (stack.isIn(ModTagProvider.AKITA_NERU_PLUSH)) {
-			return RegistryEntry.of(ModSoundEvents.AKITA_NERU_EQUIP);
-		}
-		if (stack.isIn(ModTagProvider.RIN_PLUSH)) {
-			return RegistryEntry.of(ModSoundEvents.RIN_EQUIP);
-		}
-		if (stack.isIn(ModTagProvider.LEN_PLUSH)) {
-			return RegistryEntry.of(ModSoundEvents.LEN_EQUIP);
-		}
-		if (stack.isIn(ModTagProvider.LUKA_PLUSH)) {
-			return RegistryEntry.of(ModSoundEvents.LUKA_EQUIP);
-		}
-		if (stack.isIn(ModTagProvider.BR_MIKU_ITEMS)) {
-            return RegistryEntry.of(ModSoundEvents.MIKU_EQUIP);
+		if (stack.isIn(ModItemTagProvider.PLUSHIES)){
+			if (!stack.isOf(ModBlocks.KONOHA_PLUSH.asItem())){
+				String currentPlush = ModUtil.getBlockIdFromItem(stack.getItem());
+				return RegistryEntry.of(ModUtil.getPlushSoundEvent(currentPlush, "equip"));
+			}
 		}
         return RegistryEntry.of(SoundEvents.BLOCK_WOOL_PLACE);
-	}
+    }
 }

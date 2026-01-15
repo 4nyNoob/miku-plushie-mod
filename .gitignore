@@ -42,4 +42,4 @@ replay_*.log
 # 4ny stuff
 
 *.kra
-/src/main/generated/.cache/
+/resourcepacks/

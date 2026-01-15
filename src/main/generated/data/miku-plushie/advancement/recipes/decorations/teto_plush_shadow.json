@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_miku_plush": {
+    "has_teto_plush": {
       "conditions": {
         "items": [
           {
-            "items": "miku-plushie:miku_plush"
+            "items": "miku-plushie:teto_plush"
           }
         ]
       },
@@ -21,7 +21,7 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_miku_plush"
+      "has_teto_plush"
     ]
   ],
   "rewards": {
