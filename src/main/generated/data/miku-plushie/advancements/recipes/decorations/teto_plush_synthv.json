@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_teto_plush": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "miku-plushie:teto_plush"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "miku-plushie:teto_plush_synthv"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_teto_plush",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "miku-plushie:teto_plush_synthv"
+    ]
+  },
+  "sends_telemetry_event": false
+}

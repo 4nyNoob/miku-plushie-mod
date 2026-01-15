@@ -8,7 +8,7 @@ import net.minecraft.entity.data.TrackedDataHandlerRegistry;
 import net.minecraft.entity.passive.TameableEntity;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.world.World;
-import software.bernie.geckolib.animatable.instance.AnimatableInstanceCache;
+import software.bernie.geckolib.core.animatable.instance.AnimatableInstanceCache;
 import software.bernie.geckolib.util.GeckoLibUtil;
 
 public class KaitoEntity extends AbstractPlushEntity {
@@ -28,9 +28,9 @@ public class KaitoEntity extends AbstractPlushEntity {
 
     //TRACK VARIANT
     @Override
-    protected void initDataTracker(DataTracker.Builder builder) {
-        super.initDataTracker(builder);
-        builder.add(KAITO_VARIANT, 0);
+    protected void initDataTracker() {
+        super.initDataTracker();
+        this.dataTracker.startTracking(KAITO_VARIANT, 0);
     }
 
     //KAITO VARIANTS

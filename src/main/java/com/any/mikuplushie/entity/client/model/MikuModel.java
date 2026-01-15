@@ -5,6 +5,9 @@ import com.any.mikuplushie.entity.MikuEntity;
 import com.any.mikuplushie.entity.client.model.animations.PlushAnimations;
 import com.any.mikuplushie.entity.variant.MikuVariant;
 import net.minecraft.util.Identifier;
+import software.bernie.geckolib.constant.DataTickets;
+import software.bernie.geckolib.core.animatable.model.CoreGeoBone;
+import software.bernie.geckolib.core.animation.AnimationState;
 import software.bernie.geckolib.model.GeoModel;
 
 public class MikuModel extends GeoModel<MikuEntity> {
@@ -62,10 +65,10 @@ public class MikuModel extends GeoModel<MikuEntity> {
     }
 
     @Override
-    public void setCustomAnimations(MikuEntity animatable, long instanceId, software.bernie.geckolib.animation.AnimationState<MikuEntity> animationState) {
-        super.setCustomAnimations(animatable, instanceId, animationState);
-        PlushAnimations.limbAnimations(this, animatable, animationState);
-        PlushAnimations.hairMovement(this, animatable, animationState);
+    public void setCustomAnimations(MikuEntity animatable, long instanceId, AnimationState<MikuEntity> state) {
+        super.setCustomAnimations(animatable, instanceId, state);
+        PlushAnimations.hairMovement(this, animatable, state);
+        PlushAnimations.limbAnimations(this, animatable, state);
     }
 
     private String variantToBlockTextureName (MikuEntity animatable) {

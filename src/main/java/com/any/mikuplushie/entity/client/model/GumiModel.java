@@ -4,6 +4,9 @@ import com.any.mikuplushie.MikuPlushie;
 import com.any.mikuplushie.entity.GumiEntity;
 import com.any.mikuplushie.entity.client.model.animations.PlushAnimations;
 import net.minecraft.util.Identifier;
+import software.bernie.geckolib.constant.DataTickets;
+import software.bernie.geckolib.core.animatable.model.CoreGeoBone;
+import software.bernie.geckolib.core.animation.AnimationState;
 import software.bernie.geckolib.model.GeoModel;
 
 public class GumiModel extends GeoModel<GumiEntity> {
@@ -29,9 +32,9 @@ public class GumiModel extends GeoModel<GumiEntity> {
     }
 
     @Override
-    public void setCustomAnimations(GumiEntity animatable, long instanceId, software.bernie.geckolib.animation.AnimationState<GumiEntity> animationState) {
-        super.setCustomAnimations(animatable, instanceId, animationState);
-        PlushAnimations.limbAnimations(this, animatable, animationState);
+    public void setCustomAnimations(GumiEntity animatable, long instanceId, AnimationState<GumiEntity> state) {
+        super.setCustomAnimations(animatable, instanceId, state);
+        PlushAnimations.limbAnimations(this, animatable, state);
     }
 
     private String variantToBlockTextureName (GumiEntity animatable) {

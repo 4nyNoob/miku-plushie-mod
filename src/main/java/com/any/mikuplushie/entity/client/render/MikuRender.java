@@ -1,6 +1,5 @@
 package com.any.mikuplushie.entity.client.render;
 
-import com.any.mikuplushie.entity.AikoEntity;
 import com.any.mikuplushie.entity.MikuEntity;
 import com.any.mikuplushie.entity.client.model.MikuModel;
 import com.any.mikuplushie.entity.variant.MikuVariant;
@@ -87,8 +86,8 @@ public class MikuRender extends GeoEntityRenderer<MikuEntity> {
     }
 
     @Override
-    public void preRender(MatrixStack poseStack, MikuEntity animatable, BakedGeoModel model, @Nullable VertexConsumerProvider bufferSource, @Nullable VertexConsumer buffer, boolean isReRender, float partialTick, int packedLight, int packedOverlay, int colour) {
-        super.preRender(poseStack, animatable, model, bufferSource, buffer, isReRender, partialTick, packedLight, packedOverlay, colour);
+    public void preRender(MatrixStack poseStack, MikuEntity animatable, BakedGeoModel model, VertexConsumerProvider bufferSource, VertexConsumer buffer, boolean isReRender, float partialTick, int packedLight, int packedOverlay, float red, float green, float blue, float alpha) {
+        super.preRender(poseStack, animatable, model, bufferSource, buffer, isReRender, partialTick, packedLight, packedOverlay, red, green, blue, alpha);
         this.mainHandItem = animatable.getMainHandStack();
         this.offHandItem = animatable.getOffHandStack();
     }

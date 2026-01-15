@@ -8,7 +8,7 @@ import net.minecraft.entity.data.TrackedDataHandlerRegistry;
 import net.minecraft.entity.passive.TameableEntity;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.world.World;
-import software.bernie.geckolib.animatable.instance.AnimatableInstanceCache;
+import software.bernie.geckolib.core.animatable.instance.AnimatableInstanceCache;
 import software.bernie.geckolib.util.GeckoLibUtil;
 
 public class RinEntity extends AbstractPlushEntity {
@@ -28,10 +28,11 @@ public class RinEntity extends AbstractPlushEntity {
 
     //TRACK VARIANT
     @Override
-    protected void initDataTracker(DataTracker.Builder builder) {
-        super.initDataTracker(builder);
-        builder.add(RIN_VARIANT, 0);
+    protected void initDataTracker() {
+        super.initDataTracker();
+        this.dataTracker.startTracking(RIN_VARIANT, 0);
     }
+
     //RIN VARIANTS
     public String getVariant() {
         return RinVariant.byId(this.getTypeVariant()).getBlock();

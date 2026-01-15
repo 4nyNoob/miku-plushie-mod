@@ -4,6 +4,9 @@ import com.any.mikuplushie.MikuPlushie;
 import com.any.mikuplushie.entity.TetoEntity;
 import com.any.mikuplushie.entity.client.model.animations.PlushAnimations;
 import net.minecraft.util.Identifier;
+import software.bernie.geckolib.constant.DataTickets;
+import software.bernie.geckolib.core.animatable.model.CoreGeoBone;
+import software.bernie.geckolib.core.animation.AnimationState;
 import software.bernie.geckolib.model.GeoModel;
 
 public class TetoModel extends GeoModel<TetoEntity> {
@@ -29,10 +32,10 @@ public class TetoModel extends GeoModel<TetoEntity> {
     }
 
     @Override
-    public void setCustomAnimations(TetoEntity animatable, long instanceId, software.bernie.geckolib.animation.AnimationState<TetoEntity> animationState) {
-        super.setCustomAnimations(animatable, instanceId, animationState);
-        PlushAnimations.limbAnimations(this, animatable, animationState);
-        PlushAnimations.hairMovement(this, animatable, animationState);
+    public void setCustomAnimations(TetoEntity animatable, long instanceId, AnimationState<TetoEntity> state) {
+        super.setCustomAnimations(animatable, instanceId, state);
+        PlushAnimations.hairMovement(this, animatable, state);
+        PlushAnimations.limbAnimations(this, animatable, state);
     }
 
     private String variantToBlockTextureName (TetoEntity animatable) {

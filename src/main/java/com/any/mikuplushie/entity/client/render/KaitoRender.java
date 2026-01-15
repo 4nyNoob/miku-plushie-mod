@@ -1,7 +1,5 @@
 package com.any.mikuplushie.entity.client.render;
 
-import com.any.mikuplushie.entity.AikoEntity;
-import com.any.mikuplushie.entity.GumiEntity;
 import com.any.mikuplushie.entity.KaitoEntity;
 import com.any.mikuplushie.entity.client.model.KaitoModel;
 import net.minecraft.client.render.VertexConsumer;
@@ -75,8 +73,8 @@ public class KaitoRender extends GeoEntityRenderer<KaitoEntity> {
     }
 
     @Override
-    public void preRender(MatrixStack poseStack, KaitoEntity animatable, BakedGeoModel model, @Nullable VertexConsumerProvider bufferSource, @Nullable VertexConsumer buffer, boolean isReRender, float partialTick, int packedLight, int packedOverlay, int colour) {
-        super.preRender(poseStack, animatable, model, bufferSource, buffer, isReRender, partialTick, packedLight, packedOverlay, colour);
+    public void preRender(MatrixStack poseStack, KaitoEntity animatable, BakedGeoModel model, VertexConsumerProvider bufferSource, VertexConsumer buffer, boolean isReRender, float partialTick, int packedLight, int packedOverlay, float red, float green, float blue, float alpha) {
+        super.preRender(poseStack, animatable, model, bufferSource, buffer, isReRender, partialTick, packedLight, packedOverlay, red, green, blue, alpha);
         this.mainHandItem = animatable.getMainHandStack();
         this.offHandItem = animatable.getOffHandStack();
     }

@@ -4,9 +4,10 @@ import com.any.mikuplushie.entity.goals.MikuDelayedAttackGoal;
 import com.any.mikuplushie.registry.ModBlocks;
 import com.any.mikuplushie.registry.ModItems;
 import com.any.mikuplushie.util.ModUtil;
+import com.sun.jna.platform.win32.OaIdl;
+import com.sun.net.httpserver.Authenticator;
 import net.minecraft.block.Blocks;
-import net.minecraft.component.DataComponentTypes;
-import net.minecraft.component.type.FoodComponent;
+import net.minecraft.entity.EntityDimensions;
 import net.minecraft.entity.EntityPose;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.EquipmentSlot;
@@ -20,6 +21,7 @@ import net.minecraft.entity.mob.MobEntity;
 import net.minecraft.entity.passive.PassiveEntity;
 import net.minecraft.entity.passive.TameableEntity;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.particle.BlockStateParticleEffect;
@@ -32,16 +34,19 @@ import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.world.EntityView;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 import software.bernie.geckolib.animatable.GeoEntity;
-import software.bernie.geckolib.animatable.instance.AnimatableInstanceCache;
-import software.bernie.geckolib.animation.AnimatableManager;
-import software.bernie.geckolib.animation.AnimationController;
-import software.bernie.geckolib.animation.RawAnimation;
+import software.bernie.geckolib.core.animatable.instance.AnimatableInstanceCache;
+import software.bernie.geckolib.core.animation.AnimatableManager;
+import software.bernie.geckolib.core.animation.AnimationController;
+import software.bernie.geckolib.core.animation.RawAnimation;
 import software.bernie.geckolib.util.GeckoLibUtil;
 
+import java.awt.font.TextHitInfo;
 import java.util.List;
+import java.util.Objects;
 
 public class AbstractPlushEntity extends TameableEntity implements GeoEntity {
 
@@ -73,7 +78,7 @@ public class AbstractPlushEntity extends TameableEntity implements GeoEntity {
         this.goalSelector.add(0, new SwimGoal(this));
         this.goalSelector.add(1, new SitGoal(this));
         this.goalSelector.add(2, new MikuDelayedAttackGoal(this, 1.5F, true));
-        this.goalSelector.add(4, new FollowOwnerGoal(this,1.0F, 5F, 1F));
+        this.goalSelector.add(4, new FollowOwnerGoal(this,1.0F, 5F, 1F, true));
         this.goalSelector.add(6, new TemptGoal(this, 1.5, Ingredient.ofItems(ModItems.LEEK), false));
         this.goalSelector.add(7, new LookAtEntityGoal(this, AbstractPlushEntity.class, 8F));
         this.goalSelector.add(8, new LookAtEntityGoal(this, PlayerEntity.class, 8F));
@@ -176,7 +181,7 @@ public class AbstractPlushEntity extends TameableEntity implements GeoEntity {
 
     //EYE HEIGHT DEPENDING ON POSE
     @Override
-    public double getEyeY() {
+    protected float getActiveEyeHeight(EntityPose pose, EntityDimensions dimensions) {
         if (this.isInSittingPose()){
             return 0.85F;
         } else {
@@ -207,7 +212,7 @@ public class AbstractPlushEntity extends TameableEntity implements GeoEntity {
     @Override
     public ActionResult interactMob(PlayerEntity player, Hand hand) {
         ItemStack playerItemStack = player.getStackInHand(player.getActiveHand());
-        FoodComponent foodComponent = playerItemStack.get(DataComponentTypes.FOOD);
+        Item playerItem = playerItemStack.getItem();
         ItemStack entityHandStack = this.getMainHandStack();
 
 
@@ -228,8 +233,7 @@ public class AbstractPlushEntity extends TameableEntity implements GeoEntity {
                         if (!player.getAbilities().creativeMode){
                             playerItemStack.decrement(1);
                         }
-                        float nutrition = foodComponent != null ? (float)foodComponent.nutrition() : 1.0F;
-                        this.heal(nutrition);
+                        this.heal(Objects.requireNonNull(playerItem.getFoodComponent()).getHunger());
                         this.playSound(SoundEvents.ENTITY_GENERIC_EAT, 1, 1);
                     }
                     return ActionResult.SUCCESS;
@@ -310,10 +314,6 @@ public class AbstractPlushEntity extends TameableEntity implements GeoEntity {
         return this.songPlaying;
     }
 
-    public int isIngame(){
-        return 1;
-    }
-
     //SELECT RANDOM DANCE
     @Override
     public void setNearbySongPlaying(BlockPos songPosition, boolean playing) {
@@ -323,20 +323,15 @@ public class AbstractPlushEntity extends TameableEntity implements GeoEntity {
 
     //DATA TRACKER
     @Override
-    protected void initDataTracker(DataTracker.Builder builder) {
-        super.initDataTracker(builder);
-        builder.add(SPAWN_AGE, 0);
+    protected void initDataTracker() {
+        super.initDataTracker();
+        this.dataTracker.startTracking(SPAWN_AGE, 0);
     }
 
     @Override
     public void readCustomDataFromNbt(NbtCompound nbt) {
         super.readCustomDataFromNbt(nbt);
         this.dataTracker.set(SPAWN_AGE, nbt.getInt("SpawnAge"));
-    }
-
-    @Override
-    public boolean isBreedingItem(ItemStack stack) {
-        return false;
     }
 
     @Override
@@ -354,4 +349,9 @@ public class AbstractPlushEntity extends TameableEntity implements GeoEntity {
     public void setVariantByBlock(String variant) {
     }
 
+    //GET WORLD
+    @Override
+    public EntityView method_48926() {
+        return this.getWorld();
+    }
 }

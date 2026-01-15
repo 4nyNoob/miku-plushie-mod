@@ -1,8 +1,9 @@
 package com.any.mikuplushie.entity.client.render;
 
-import com.any.mikuplushie.entity.AikoEntity;
 import com.any.mikuplushie.entity.NeruEntity;
+import com.any.mikuplushie.entity.TetoEntity;
 import com.any.mikuplushie.entity.client.model.NeruModel;
+import com.any.mikuplushie.entity.client.model.TetoModel;
 import net.minecraft.client.render.VertexConsumer;
 import net.minecraft.client.render.VertexConsumerProvider;
 import net.minecraft.client.render.entity.EntityRendererFactory;
@@ -74,8 +75,8 @@ public class NeruRender extends GeoEntityRenderer<NeruEntity> {
     }
 
     @Override
-    public void preRender(MatrixStack poseStack, NeruEntity animatable, BakedGeoModel model, @Nullable VertexConsumerProvider bufferSource, @Nullable VertexConsumer buffer, boolean isReRender, float partialTick, int packedLight, int packedOverlay, int colour) {
-        super.preRender(poseStack, animatable, model, bufferSource, buffer, isReRender, partialTick, packedLight, packedOverlay, colour);
+    public void preRender(MatrixStack poseStack, NeruEntity animatable, BakedGeoModel model, VertexConsumerProvider bufferSource, VertexConsumer buffer, boolean isReRender, float partialTick, int packedLight, int packedOverlay, float red, float green, float blue, float alpha) {
+        super.preRender(poseStack, animatable, model, bufferSource, buffer, isReRender, partialTick, packedLight, packedOverlay, red, green, blue, alpha);
         this.mainHandItem = animatable.getMainHandStack();
         this.offHandItem = animatable.getOffHandStack();
     }

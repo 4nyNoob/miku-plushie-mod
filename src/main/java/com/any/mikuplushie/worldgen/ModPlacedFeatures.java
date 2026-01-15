@@ -30,7 +30,7 @@ public class ModPlacedFeatures {
     }
 
     public static RegistryKey<PlacedFeature> registerKey (String name) {
-        return RegistryKey.of(RegistryKeys.PLACED_FEATURE, Identifier.of(MikuPlushie.MOD_ID, name));
+        return RegistryKey.of(RegistryKeys.PLACED_FEATURE, new Identifier(MikuPlushie.MOD_ID, name));
     }
 
     private static void register(

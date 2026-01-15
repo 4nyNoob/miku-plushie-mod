@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "1": {
+      "item": "minecraft:pink_wool"
+    },
+    "2": {
+      "item": "minecraft:yellow_wool"
+    },
+    "3": {
+      "item": "minecraft:brown_wool"
+    }
+  },
+  "pattern": [
+    "121",
+    "131"
+  ],
+  "result": {
+    "item": "miku-plushie:luka_plush"
+  },
+  "show_notification": true
+}

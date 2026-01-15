@@ -2,12 +2,17 @@ package com.any.mikuplushie.worldgen;
 
 import com.any.mikuplushie.MikuPlushie;
 import com.any.mikuplushie.registry.ModBlocks;
+import net.fabricmc.fabric.api.event.registry.RegistryIdRemapCallback;
+import net.minecraft.block.Blocks;
 import net.minecraft.registry.Registerable;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.util.Identifier;
 import net.minecraft.world.gen.feature.*;
+import net.minecraft.world.gen.placementmodifier.PlacementModifier;
 import net.minecraft.world.gen.stateprovider.BlockStateProvider;
+
+import java.util.List;
 
 public class ModConfiguredFeatures {
 
@@ -29,7 +34,7 @@ public class ModConfiguredFeatures {
     }
 
     public static RegistryKey<ConfiguredFeature<?, ?>> registerKey (String name) {
-        return RegistryKey.of(RegistryKeys.CONFIGURED_FEATURE, Identifier.of(MikuPlushie.MOD_ID, name));
+        return RegistryKey.of(RegistryKeys.CONFIGURED_FEATURE, new Identifier(MikuPlushie.MOD_ID, name));
     }
 
     private static <FC extends FeatureConfig, F extends Feature<FC>> void register (
