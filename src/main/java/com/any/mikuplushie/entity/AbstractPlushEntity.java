@@ -2,17 +2,19 @@ package com.any.mikuplushie.entity;
 
 import com.any.mikuplushie.entity.goals.MikuDelayedAttackGoal;
 import com.any.mikuplushie.registry.ModBlocks;
+import com.any.mikuplushie.registry.ModEntities;
 import com.any.mikuplushie.registry.ModItems;
 import com.any.mikuplushie.util.ModUtil;
+import com.google.common.collect.ImmutableList;
+import com.google.common.collect.ImmutableMap;
 import net.minecraft.block.Blocks;
 import net.minecraft.component.DataComponentTypes;
 import net.minecraft.component.type.FoodComponent;
-import net.minecraft.entity.EntityPose;
-import net.minecraft.entity.EntityType;
-import net.minecraft.entity.EquipmentSlot;
+import net.minecraft.entity.*;
 import net.minecraft.entity.ai.goal.*;
 import net.minecraft.entity.attribute.DefaultAttributeContainer;
 import net.minecraft.entity.attribute.EntityAttributes;
+import net.minecraft.entity.damage.DamageSources;
 import net.minecraft.entity.data.DataTracker;
 import net.minecraft.entity.data.TrackedData;
 import net.minecraft.entity.data.TrackedDataHandlerRegistry;
@@ -32,6 +34,8 @@ import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.world.LocalDifficulty;
+import net.minecraft.world.ServerWorldAccess;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 import software.bernie.geckolib.animatable.GeoEntity;
@@ -42,6 +46,7 @@ import software.bernie.geckolib.animation.RawAnimation;
 import software.bernie.geckolib.util.GeckoLibUtil;
 
 import java.util.List;
+import java.util.Map;
 
 public class AbstractPlushEntity extends TameableEntity implements GeoEntity {
 
@@ -89,6 +94,48 @@ public class AbstractPlushEntity extends TameableEntity implements GeoEntity {
             .add(EntityAttributes.GENERIC_MAX_HEALTH, 20.0F)
             .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.3F)
             .add(EntityAttributes.GENERIC_ATTACK_DAMAGE, 2.0F);
+    }
+
+    //ENTITY POSES
+    public static final EntityDimensions STANDING_DIMENSIONS = EntityDimensions
+        .changing(ModEntities.PLUSH_WIDTH, 1F)
+        .withEyeHeight(0.85F);
+    public static final EntityDimensions SITTING_DIMENSIONS = EntityDimensions
+        .changing(ModEntities.PLUSH_WIDTH, 0.8F)
+        .withEyeHeight(0.6F);
+
+    //HASH MAP OF ENTITY POSES
+    private static final Map<EntityPose, EntityDimensions> POSE_DIMENSIONS = ImmutableMap.<EntityPose, EntityDimensions>builder()
+        .put(EntityPose.STANDING, STANDING_DIMENSIONS)
+        .put(EntityPose.SITTING, SITTING_DIMENSIONS)
+        .build();
+
+    //SET BASE DIMENSIONS
+    @Override
+    protected EntityDimensions getBaseDimensions(EntityPose pose) {
+        return POSE_DIMENSIONS.getOrDefault(pose, STANDING_DIMENSIONS);
+    }
+
+    //LIST OF AVAILABLE POSES
+    @Override
+    public ImmutableList<EntityPose> getPoses() {
+        return ImmutableList.of(EntityPose.STANDING, EntityPose.SITTING);
+    }
+
+    //UPDATE POSE
+    protected void updatePose() {
+        if (this.isInSittingPose()) {
+            this.setPose(EntityPose.SITTING);
+        } else {
+            this.setPose(EntityPose.STANDING);
+        }
+    }
+
+    //UPDATE ENTITY POSE ON TICK METHOD
+    @Override
+    public void tick() {
+        super.tick();
+        this.updatePose();
     }
 
     public List<RawAnimation> getDances(){
@@ -172,16 +219,6 @@ public class AbstractPlushEntity extends TameableEntity implements GeoEntity {
     @Override
     public AnimatableInstanceCache getAnimatableInstanceCache() {
         return this.cache;
-    }
-
-    //EYE HEIGHT DEPENDING ON POSE
-    @Override
-    public double getEyeY() {
-        if (this.isInSittingPose()){
-            return 0.85F;
-        } else {
-            return 0.6F;
-        }
     }
 
     //HAND SWING DURATION
