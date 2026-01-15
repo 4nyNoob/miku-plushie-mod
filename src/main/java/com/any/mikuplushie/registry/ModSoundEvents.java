@@ -49,9 +49,9 @@ public class ModSoundEvents {
 			}
 		}
 
-		//PRINT SOUND EVENTS
-		for (SoundEvent soundEvent : MIKU_PLUSHIES_SOUND_EVENTS){
-			System.out.println(soundEvent.getId());
-		}
+//		//PRINT SOUND EVENTS
+//		for (SoundEvent soundEvent : MIKU_PLUSHIES_SOUND_EVENTS){
+//			System.out.println(soundEvent.getId());
+//		}
 	}
 }
