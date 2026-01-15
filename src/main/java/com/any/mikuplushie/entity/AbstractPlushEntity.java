@@ -2,8 +2,11 @@ package com.any.mikuplushie.entity;
 
 import com.any.mikuplushie.entity.goals.MikuDelayedAttackGoal;
 import com.any.mikuplushie.registry.ModBlocks;
+import com.any.mikuplushie.registry.ModEntities;
 import com.any.mikuplushie.registry.ModItems;
 import com.any.mikuplushie.util.ModUtil;
+import com.google.common.collect.ImmutableList;
+import com.google.common.collect.ImmutableMap;
 import com.sun.jna.platform.win32.OaIdl;
 import com.sun.net.httpserver.Authenticator;
 import net.minecraft.block.Blocks;
@@ -46,6 +49,7 @@ import software.bernie.geckolib.util.GeckoLibUtil;
 
 import java.awt.font.TextHitInfo;
 import java.util.List;
+import java.util.Map;
 import java.util.Objects;
 
 public class AbstractPlushEntity extends TameableEntity implements GeoEntity {
@@ -94,6 +98,46 @@ public class AbstractPlushEntity extends TameableEntity implements GeoEntity {
             .add(EntityAttributes.GENERIC_MAX_HEALTH, 20.0F)
             .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.3F)
             .add(EntityAttributes.GENERIC_ATTACK_DAMAGE, 2.0F);
+    }
+
+    //ENTITY POSES
+    public static final EntityDimensions STANDING_DIMENSIONS = EntityDimensions
+        .changing(ModEntities.PLUSH_WIDTH, 1F);
+    public static final EntityDimensions SITTING_DIMENSIONS = EntityDimensions
+        .changing(ModEntities.PLUSH_WIDTH, 0.8F);
+
+    //HASH MAP OF ENTITY POSES
+    private static final Map<EntityPose, EntityDimensions> POSE_DIMENSIONS = ImmutableMap.<EntityPose, EntityDimensions>builder()
+        .put(EntityPose.STANDING, STANDING_DIMENSIONS)
+        .put(EntityPose.SITTING, SITTING_DIMENSIONS)
+        .build();
+
+    //SET BASE DIMENSIONS
+    @Override
+    public EntityDimensions getDimensions(EntityPose pose) {
+        return POSE_DIMENSIONS.getOrDefault(pose, STANDING_DIMENSIONS);
+    }
+
+    //LIST OF AVAILABLE POSES
+    @Override
+    public ImmutableList<EntityPose> getPoses() {
+        return ImmutableList.of(EntityPose.STANDING, EntityPose.SITTING);
+    }
+
+    //UPDATE POSE
+    protected void updatePose() {
+        if (this.isInSittingPose()) {
+            this.setPose(EntityPose.SITTING);
+        } else {
+            this.setPose(EntityPose.STANDING);
+        }
+    }
+
+    //UPDATE ENTITY POSE ON TICK METHOD
+    @Override
+    public void tick() {
+        super.tick();
+        this.updatePose();
     }
 
     public List<RawAnimation> getDances(){
@@ -182,7 +226,7 @@ public class AbstractPlushEntity extends TameableEntity implements GeoEntity {
     //EYE HEIGHT DEPENDING ON POSE
     @Override
     protected float getActiveEyeHeight(EntityPose pose, EntityDimensions dimensions) {
-        if (this.isInSittingPose()){
+        if (pose.equals(EntityPose.STANDING)){
             return 0.85F;
         } else {
             return 0.6F;
