@@ -4,7 +4,6 @@ import com.any.mikuplushie.MikuPlushie;
 import com.any.mikuplushie.entity.AikoEntity;
 import com.any.mikuplushie.entity.client.model.animations.PlushAnimations;
 import net.minecraft.util.Identifier;
-import software.bernie.geckolib.core.animation.AnimationState;
 import software.bernie.geckolib.model.GeoModel;
 
 public class AikoModel extends GeoModel<AikoEntity> {
@@ -30,9 +29,9 @@ public class AikoModel extends GeoModel<AikoEntity> {
     }
 
     @Override
-    public void setCustomAnimations(AikoEntity animatable, long instanceId, AnimationState<AikoEntity> state) {
-        super.setCustomAnimations(animatable, instanceId, state);
-        PlushAnimations.limbAnimations(this, animatable, state);
+    public void setCustomAnimations(AikoEntity animatable, long instanceId, software.bernie.geckolib.animation.AnimationState<AikoEntity> animationState) {
+        super.setCustomAnimations(animatable, instanceId, animationState);
+        PlushAnimations.limbAnimations(this, animatable, animationState);
     }
 
     private String variantToBlockTextureName (AikoEntity animatable) {

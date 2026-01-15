@@ -4,12 +4,7 @@ import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.minecraft.client.particle.*;
 import net.minecraft.client.world.ClientWorld;
-import net.minecraft.particle.DefaultParticleType;
-import org.apache.commons.compress.harmony.unpack200.IMatcher;
-import org.joml.Vector3f;
-
-import java.util.ArrayList;
-import java.util.List;
+import net.minecraft.particle.SimpleParticleType;
 
 public class PlushSpawnParticle extends SpriteBillboardParticle {
     private final SpriteProvider spriteProvider;
@@ -53,7 +48,7 @@ public class PlushSpawnParticle extends SpriteBillboardParticle {
     }
 
     @Environment(EnvType.CLIENT)
-    public static class Factory implements ParticleFactory<DefaultParticleType> {
+    public static class Factory implements ParticleFactory<SimpleParticleType> {
         private final SpriteProvider spriteProvider;
 
         public Factory(SpriteProvider spriteProvider) {
@@ -61,7 +56,7 @@ public class PlushSpawnParticle extends SpriteBillboardParticle {
         }
 
         public Particle createParticle(
-            DefaultParticleType defaultParticleType,
+            SimpleParticleType defaultParticleType,
             ClientWorld clientWorld,
             double x, double y, double z,
             double velocityX, double velocityY, double velocityZ

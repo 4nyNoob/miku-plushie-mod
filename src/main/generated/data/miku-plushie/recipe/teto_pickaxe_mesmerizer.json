@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "1": {
+      "item": "minecraft:diamond"
+    },
+    "2": {
+      "item": "miku-plushie:teto_plush_mesmerizer"
+    }
+  },
+  "pattern": [
+    "121"
+  ],
+  "result": {
+    "count": 1,
+    "id": "miku-plushie:teto_pickaxe_mesmerizer"
+  }
+}

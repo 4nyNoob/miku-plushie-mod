@@ -8,7 +8,6 @@ import it.unimi.dsi.fastutil.ints.Int2ObjectOpenHashMap;
 import net.minecraft.block.Block;
 import net.minecraft.block.CropBlock;
 import net.minecraft.data.client.*;
-import net.minecraft.state.property.IntProperty;
 import net.minecraft.state.property.Property;
 import net.minecraft.util.Identifier;
 
@@ -27,7 +26,7 @@ public class BlockModels {
     }
 
     private static Model block(String parent, TextureKey... requiredTextureKeys) {
-        return new Model(Optional.of(new Identifier(MikuPlushie.MOD_ID, "block/" + parent)), Optional.empty(), requiredTextureKeys);
+        return new Model(Optional.of(Identifier.of(MikuPlushie.MOD_ID, "block/" + parent)), Optional.empty(), requiredTextureKeys);
     }
 
     //PARENT MODELS

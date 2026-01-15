@@ -1,6 +1,5 @@
 package com.any.mikuplushie.datagen;
 
-import com.any.mikuplushie.block.WildLeekCropBlock;
 import com.any.mikuplushie.registry.ModBlocks;
 import com.any.mikuplushie.registry.ModItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
@@ -17,11 +16,12 @@ import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
 public class ModLootTableProvider extends FabricBlockLootTableProvider {
-	public ModLootTableProvider(FabricDataOutput dataOutput, CompletableFuture<RegistryWrapper.WrapperLookup> registryLookup) {
-		super(dataOutput);
-	}
 
-	@Override
+    protected ModLootTableProvider(FabricDataOutput dataOutput, CompletableFuture<RegistryWrapper.WrapperLookup> registryLookup) {
+        super(dataOutput, registryLookup);
+    }
+
+    @Override
 	public void generate() {
         //GENERATE PLUSH LOOT TABLES ENTRIES AUTOMATICALLY
         List<Block> plushBlocks = ModBlocks.PLUSH_BLOCKS;

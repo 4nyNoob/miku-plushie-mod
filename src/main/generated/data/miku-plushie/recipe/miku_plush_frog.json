@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "miku-plushie:miku_plush"
+    },
+    {
+      "item": "minecraft:light_blue_wool"
+    },
+    {
+      "item": "minecraft:tadpole_bucket"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "miku-plushie:miku_plush_frog"
+  }
+}

@@ -23,6 +23,6 @@ public class ModResourcePacks {
     }
 
     public static Identifier asId(String path) {
-        return new Identifier(MikuPlushie.MOD_ID, path);
+        return Identifier.of(MikuPlushie.MOD_ID, path);
     }
 }

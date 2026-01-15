@@ -2,7 +2,6 @@ package com.any.mikuplushie.datagen;
 
 import com.any.mikuplushie.worldgen.ModConfiguredFeatures;
 import com.any.mikuplushie.worldgen.ModPlacedFeatures;
-import com.any.mikuplushie.worldgen.generators.ModWorldGeneration;
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
 import net.minecraft.registry.RegistryBuilder;

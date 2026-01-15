@@ -2,13 +2,8 @@ package com.any.mikuplushie.entity.client.model;
 
 import com.any.mikuplushie.MikuPlushie;
 import com.any.mikuplushie.entity.NeruEntity;
-import com.any.mikuplushie.entity.TetoEntity;
 import com.any.mikuplushie.entity.client.model.animations.PlushAnimations;
-import com.any.mikuplushie.entity.variant.NeruVariant;
 import net.minecraft.util.Identifier;
-import software.bernie.geckolib.constant.DataTickets;
-import software.bernie.geckolib.core.animatable.model.CoreGeoBone;
-import software.bernie.geckolib.core.animation.AnimationState;
 import software.bernie.geckolib.model.GeoModel;
 
 public class NeruModel extends GeoModel<NeruEntity> {
@@ -34,10 +29,10 @@ public class NeruModel extends GeoModel<NeruEntity> {
     }
 
     @Override
-    public void setCustomAnimations(NeruEntity animatable, long instanceId, AnimationState<NeruEntity> state) {
-        super.setCustomAnimations(animatable, instanceId, state);
-        PlushAnimations.hairMovement(this, animatable, state);
-        PlushAnimations.limbAnimations(this, animatable, state);
+    public void setCustomAnimations(NeruEntity animatable, long instanceId, software.bernie.geckolib.animation.AnimationState<NeruEntity> animationState) {
+        super.setCustomAnimations(animatable, instanceId, animationState);
+        PlushAnimations.limbAnimations(this, animatable, animationState);
+        PlushAnimations.hairMovement(this, animatable, animationState);
     }
 
     private String variantToBlockTextureName (NeruEntity animatable) {

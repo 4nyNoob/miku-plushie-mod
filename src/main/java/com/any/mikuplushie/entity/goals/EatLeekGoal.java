@@ -1,10 +1,8 @@
 package com.any.mikuplushie.entity.goals;
 
-import com.any.mikuplushie.registry.ModBlocks;
-import com.any.mikuplushie.registry.ModItems;
-import com.any.mikuplushie.registry.ModSoundEvents;
 import com.any.mikuplushie.block.LeekCropBlock;
 import com.any.mikuplushie.entity.MikuEntity;
+import com.any.mikuplushie.registry.ModBlocks;
 import com.any.mikuplushie.util.ModUtil;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -21,7 +19,6 @@ import org.spongepowered.include.com.google.common.base.Predicates;
 
 import java.util.EnumSet;
 import java.util.List;
-import java.util.Objects;
 import java.util.function.Predicate;
 
 //EAT LEEK GOAL

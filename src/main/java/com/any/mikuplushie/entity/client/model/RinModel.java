@@ -1,13 +1,9 @@
 package com.any.mikuplushie.entity.client.model;
 
 import com.any.mikuplushie.MikuPlushie;
-import com.any.mikuplushie.entity.AikoEntity;
 import com.any.mikuplushie.entity.RinEntity;
 import com.any.mikuplushie.entity.client.model.animations.PlushAnimations;
 import net.minecraft.util.Identifier;
-import software.bernie.geckolib.constant.DataTickets;
-import software.bernie.geckolib.core.animatable.model.CoreGeoBone;
-import software.bernie.geckolib.core.animation.AnimationState;
 import software.bernie.geckolib.model.GeoModel;
 
 public class RinModel extends GeoModel<RinEntity> {
@@ -33,9 +29,9 @@ public class RinModel extends GeoModel<RinEntity> {
     }
 
     @Override
-    public void setCustomAnimations(RinEntity animatable, long instanceId, AnimationState<RinEntity> state) {
-        super.setCustomAnimations(animatable, instanceId, state);
-        PlushAnimations.limbAnimations(this, animatable, state);
+    public void setCustomAnimations(RinEntity animatable, long instanceId, software.bernie.geckolib.animation.AnimationState<RinEntity> animationState) {
+        super.setCustomAnimations(animatable, instanceId, animationState);
+        PlushAnimations.limbAnimations(this, animatable, animationState);
     }
 
     private String variantToBlockTextureName (RinEntity animatable) {

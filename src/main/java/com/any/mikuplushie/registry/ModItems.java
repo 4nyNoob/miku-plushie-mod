@@ -26,13 +26,14 @@ public class ModItems {
     public static List<Item> PICKAXE_ITEMS = new ArrayList<>();
 
     //CREATE ITEM GROUP
-	public static final RegistryKey<ItemGroup> MIKU_GROUP_KEY = RegistryKey.of(Registries.ITEM_GROUP.getKey(),
-		new Identifier(MikuPlushie.MOD_ID, "item_group")
+	public static final RegistryKey<ItemGroup> MIKU_GROUP_KEY =
+        RegistryKey.of(Registries.ITEM_GROUP.getKey(),Identifier.of(MikuPlushie.MOD_ID, "item_group")
 	);
 	public static final ItemGroup MIKU_GROUP = FabricItemGroup.builder()
 		.icon(() -> new ItemStack(ModBlocks.MIKU_PLUSH))
 		.displayName(Text.translatable("item.group.miku_plushies"))
 		.build();
+
 
     //REGISTER REGULAR ITEMS
 	public static final Item CANUDINHO =
@@ -79,7 +80,7 @@ public class ModItems {
 
     //REGISTER PICKAXES HELPER
     public static Item registerPickaxe(String name) {
-        return register(new PickaxeItem(PlushToolMaterial.PLUSH_TOOL_MATERIAL, 1, -2.8F, new Item.Settings()), name);
+        return register(new PickaxeItem(PlushToolMaterial.PLUSH_TOOL_MATERIAL, new Item.Settings()), name);
     }
 
     //REGISTER NORMAL ITEM

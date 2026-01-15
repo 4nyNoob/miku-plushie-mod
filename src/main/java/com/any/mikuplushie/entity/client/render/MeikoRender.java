@@ -1,8 +1,8 @@
 package com.any.mikuplushie.entity.client.render;
 
+import com.any.mikuplushie.entity.AikoEntity;
 import com.any.mikuplushie.entity.MeikoEntity;
 import com.any.mikuplushie.entity.client.model.MeikoModel;
-import com.any.mikuplushie.entity.variant.MeikoVariant;
 import net.minecraft.client.render.RenderLayer;
 import net.minecraft.client.render.VertexConsumer;
 import net.minecraft.client.render.VertexConsumerProvider;
@@ -86,8 +86,8 @@ public class MeikoRender extends GeoEntityRenderer<MeikoEntity> {
     }
 
     @Override
-    public void preRender(MatrixStack poseStack, MeikoEntity animatable, BakedGeoModel model, VertexConsumerProvider bufferSource, VertexConsumer buffer, boolean isReRender, float partialTick, int packedLight, int packedOverlay, float red, float green, float blue, float alpha) {
-        super.preRender(poseStack, animatable, model, bufferSource, buffer, isReRender, partialTick, packedLight, packedOverlay, red, green, blue, alpha);
+    public void preRender(MatrixStack poseStack, MeikoEntity animatable, BakedGeoModel model, @Nullable VertexConsumerProvider bufferSource, @Nullable VertexConsumer buffer, boolean isReRender, float partialTick, int packedLight, int packedOverlay, int colour) {
+        super.preRender(poseStack, animatable, model, bufferSource, buffer, isReRender, partialTick, packedLight, packedOverlay, colour);
         this.mainHandItem = animatable.getMainHandStack();
         this.offHandItem = animatable.getOffHandStack();
     }

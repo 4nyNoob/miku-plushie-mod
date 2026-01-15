@@ -4,7 +4,6 @@ import com.any.mikuplushie.MikuPlushie;
 import com.any.mikuplushie.entity.KaitoEntity;
 import com.any.mikuplushie.entity.client.model.animations.PlushAnimations;
 import net.minecraft.util.Identifier;
-import software.bernie.geckolib.core.animation.AnimationState;
 import software.bernie.geckolib.model.GeoModel;
 
 public class KaitoModel extends GeoModel<KaitoEntity> {
@@ -30,9 +29,9 @@ public class KaitoModel extends GeoModel<KaitoEntity> {
     }
 
     @Override
-    public void setCustomAnimations(KaitoEntity animatable, long instanceId, AnimationState<KaitoEntity> state) {
-        super.setCustomAnimations(animatable, instanceId, state);
-        PlushAnimations.limbAnimations(this, animatable, state);
+    public void setCustomAnimations(KaitoEntity animatable, long instanceId, software.bernie.geckolib.animation.AnimationState<KaitoEntity> animationState) {
+        super.setCustomAnimations(animatable, instanceId, animationState);
+        PlushAnimations.limbAnimations(this, animatable, animationState);
     }
 
     private String variantToBlockTextureName (KaitoEntity animatable) {

@@ -1,14 +1,13 @@
 package com.any.mikuplushie.entity.client.model.animations;
 
 import com.any.mikuplushie.entity.AbstractPlushEntity;
+import software.bernie.geckolib.cache.object.GeoBone;
 import software.bernie.geckolib.constant.DataTickets;
-import software.bernie.geckolib.core.animatable.model.CoreGeoBone;
-import software.bernie.geckolib.core.animation.AnimationState;
 import software.bernie.geckolib.model.GeoModel;
 
 public class PlushAnimations {
 
-    public static void limbAnimations(GeoModel<?> plush, AbstractPlushEntity animatable, AnimationState<?> state){
+    public static void limbAnimations(GeoModel<?> plush, AbstractPlushEntity animatable, software.bernie.geckolib.animation.AnimationState<?> state){
         //LIMB ANIM VARIABLES
         float limbSwing = state.getLimbSwing();
         float swingAmm = state.getLimbSwingAmount();
@@ -16,12 +15,12 @@ public class PlushAnimations {
         float swingSpeed = 1F;
 
         //GET BONES
-        CoreGeoBone root = plush.getAnimationProcessor().getBone("root_offset");
-        CoreGeoBone left_leg = plush.getAnimationProcessor().getBone("left_leg_offset");
-        CoreGeoBone right_leg = plush.getAnimationProcessor().getBone("right_leg_offset");
-        CoreGeoBone left_arm = plush.getAnimationProcessor().getBone("left_arm_offset");
-        CoreGeoBone right_arm = plush.getAnimationProcessor().getBone("right_arm_offset");
-        CoreGeoBone body = plush.getAnimationProcessor().getBone("body_offset");
+        GeoBone root = plush.getAnimationProcessor().getBone("root_offset");
+        GeoBone left_leg = plush.getAnimationProcessor().getBone("left_leg_offset");
+        GeoBone right_leg = plush.getAnimationProcessor().getBone("right_leg_offset");
+        GeoBone left_arm = plush.getAnimationProcessor().getBone("left_arm_offset");
+        GeoBone right_arm = plush.getAnimationProcessor().getBone("right_arm_offset");
+        GeoBone body = plush.getAnimationProcessor().getBone("body_offset");
 
         //HEALTH DISPLAY
         float maxHealth = animatable.getMaxHealth();
@@ -49,21 +48,21 @@ public class PlushAnimations {
         body.setRotX(healthBend * toRad);
 
         //HEAD ANIM
-        CoreGeoBone head = plush.getAnimationProcessor().getBone("head_offset");
+        GeoBone head = plush.getAnimationProcessor().getBone("head_offset");
         float headPitch = state.getData(DataTickets.ENTITY_MODEL_DATA).headPitch();
         float headYaw = state.getData(DataTickets.ENTITY_MODEL_DATA).netHeadYaw();
         head.setRotX((headPitch - healthBend) * toRad);
         head.setRotY(headYaw * toRad);
     }
 
-    public static void hairMovement(GeoModel<?> plush, AbstractPlushEntity animatable, AnimationState<?> state){
+    public static void hairMovement(GeoModel<?> plush, AbstractPlushEntity animatable, software.bernie.geckolib.animation.AnimationState<?> state){
         //ANIM VARIABLES
         float limbSwing = state.getLimbSwing();
         float swingAmm = state.getLimbSwingAmount();
         float toRad = (float) (Math.PI / 180);
         float swingSpeed = 1F;
 
-        CoreGeoBone hair = plush.getAnimationProcessor().getBone("hair_offset");
+        GeoBone hair = plush.getAnimationProcessor().getBone("hair_offset");
         float headPitch = state.getData(DataTickets.ENTITY_MODEL_DATA).headPitch();
 
         hair.setRotX(-headPitch * ((float) Math.PI / 180F));

@@ -17,8 +17,7 @@ public class MikuDelayedAttackGoal extends MeleeAttackGoal {
      *   Swing the entity hand but handle the actual attack on the {@link #tick()} method
      */
     protected void attack(LivingEntity target, double squaredDistance) {
-        double d = this.getSquaredMaxAttackDistance(target);
-        if (squaredDistance <= d && this.isCooledDown()) {
+        if (this.canAttack(target)) {
             this.resetCooldown();
             this.mob.swingHand(Hand.MAIN_HAND);
             this.target = target;

@@ -2,12 +2,8 @@ package com.any.mikuplushie.entity.client.model;
 
 import com.any.mikuplushie.MikuPlushie;
 import com.any.mikuplushie.entity.KonohaEntity;
-import com.any.mikuplushie.entity.LenEntity;
 import com.any.mikuplushie.entity.client.model.animations.PlushAnimations;
 import net.minecraft.util.Identifier;
-import software.bernie.geckolib.constant.DataTickets;
-import software.bernie.geckolib.core.animatable.model.CoreGeoBone;
-import software.bernie.geckolib.core.animation.AnimationState;
 import software.bernie.geckolib.model.GeoModel;
 
 public class KonohaModel extends GeoModel<KonohaEntity> {
@@ -32,9 +28,9 @@ public class KonohaModel extends GeoModel<KonohaEntity> {
     }
 
     @Override
-    public void setCustomAnimations(KonohaEntity animatable, long instanceId, AnimationState<KonohaEntity> state) {
-        super.setCustomAnimations(animatable, instanceId, state);
-        PlushAnimations.limbAnimations(this, animatable, state);
+    public void setCustomAnimations(KonohaEntity animatable, long instanceId, software.bernie.geckolib.animation.AnimationState<KonohaEntity> animationState) {
+        super.setCustomAnimations(animatable, instanceId, animationState);
+        PlushAnimations.limbAnimations(this, animatable, animationState);
     }
 
     private String variantToBlockTextureName (KonohaEntity animatable) {

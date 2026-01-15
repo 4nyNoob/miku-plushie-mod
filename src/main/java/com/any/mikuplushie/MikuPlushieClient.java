@@ -1,5 +1,6 @@
 package com.any.mikuplushie;
 
+import com.any.mikuplushie.entity.AbstractPlushEntity;
 import com.any.mikuplushie.entity.client.render.*;
 import com.any.mikuplushie.particle.PlushSpawnParticle;
 import com.any.mikuplushie.registry.ModBlocks;
@@ -12,8 +13,7 @@ import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.client.particle.v1.ParticleFactoryRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
 import net.minecraft.client.render.RenderLayer;
-import software.bernie.geckolib.core.molang.LazyVariable;
-import software.bernie.geckolib.core.molang.MolangParser;
+import software.bernie.geckolib.loading.math.MolangQueries;
 
 @Environment(EnvType.CLIENT)
 public class MikuPlushieClient implements ClientModInitializer {
@@ -35,7 +35,8 @@ public class MikuPlushieClient implements ClientModInitializer {
 		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.WILD_LEEK_CROP, RenderLayer.getCutout());
 
         //GLIB QUERY
-        MolangParser.INSTANCE.register(new LazyVariable("q.miku.is_game", 1));
+//        MolangParser.INSTANCE.register(new LazyVariable("q.miku.is_game", 1));
+        MolangQueries.<AbstractPlushEntity>setActorVariable("q.miku.is_game", actor -> actor.animatable().isIngame());
 
         //ENTITIES RENDERERS
         EntityRendererRegistry.register(ModEntities.MIKU, MikuRender::new);

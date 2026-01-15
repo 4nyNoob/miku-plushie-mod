@@ -1,7 +1,6 @@
 package com.any.mikuplushie.registry;
 
 import com.any.mikuplushie.MikuPlushie;
-import com.any.mikuplushie.entity.KonohaEntity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
@@ -48,10 +47,9 @@ public class ModSoundEvents {
 				}
 			}
 		}
-
-		//PRINT SOUND EVENTS
-		for (SoundEvent soundEvent : MIKU_PLUSHIES_SOUND_EVENTS){
-			System.out.println(soundEvent.getId());
-		}
+//		//PRINT SOUND EVENTS
+//		for (SoundEvent soundEvent : MIKU_PLUSHIES_SOUND_EVENTS){
+//			System.out.println(soundEvent.getId());
+//		}
 	}
 }

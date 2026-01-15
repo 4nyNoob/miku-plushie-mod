@@ -1,9 +1,11 @@
 package com.any.mikuplushie.block;
 
 import com.any.mikuplushie.entity.AbstractPlushEntity;
+import com.any.mikuplushie.registry.ModBlocks;
 import com.any.mikuplushie.registry.ModItems;
 import com.any.mikuplushie.registry.ModParticles;
 import com.any.mikuplushie.util.ModUtil;
+import com.mojang.datafixers.kinds.IdF;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.HorizontalFacingBlock;
@@ -21,9 +23,9 @@ import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.DirectionProperty;
-import net.minecraft.util.ActionResult;
 import net.minecraft.util.BlockRotation;
 import net.minecraft.util.Hand;
+import net.minecraft.util.ItemActionResult;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
@@ -31,6 +33,7 @@ import net.minecraft.util.math.Vec3d;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
+import net.minecraft.world.WorldView;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.Objects;
@@ -42,8 +45,8 @@ public class MikuPlushieBlock extends Block {
 		this.setDefaultState(this.stateManager.getDefaultState().with(FACING, Direction.NORTH));
 	}
 
-	@Override
-	public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
+    @Override
+	public ItemActionResult onUseWithItem(ItemStack stack, BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
 
         if (
             player.getStackInHand(hand).isOf(ModItems.VOCALOID_HEART)
@@ -76,7 +79,7 @@ public class MikuPlushieBlock extends Block {
 
                 world.playSound(null, pos, SoundEvents.ITEM_TOTEM_USE, SoundCategory.BLOCKS, 0.5f, 1);
                 world.breakBlock(pos, false, player);
-                return ActionResult.SUCCESS;
+                return ItemActionResult.SUCCESS;
             } else {
                 for (int particles = 0; particles < 100; particles++) {
                     world.addParticle(
@@ -87,7 +90,7 @@ public class MikuPlushieBlock extends Block {
                 }
             }
         }
-		return super.onUse(state, world, pos, player, hand, hit);
+        return super.onUseWithItem(stack, state, world, pos, player, hand, hit);
 	}
 
 	@Override
@@ -95,12 +98,11 @@ public class MikuPlushieBlock extends Block {
 		super.onPlaced(world, pos, state, placer, itemStack);
 
         String currentPlush = ModUtil.getBlockIdFromBlockState(state);
-        SoundEvent soundEvent = ModUtil.getPlushSoundEvent(currentPlush, "oie");
-        world.playSound(null, pos, soundEvent, SoundCategory.BLOCKS, 0.5F , 1);
+        ModUtil.playPlushSound(world, pos, currentPlush, "oie");
 	}
 
     @Override
-    public ItemStack getPickStack(BlockView world, BlockPos pos, BlockState state) {
+    public ItemStack getPickStack(WorldView world, BlockPos pos, BlockState state) {
         for (int plush = 0; plush < ModItems.PLUSH_ITEMS.size(); plush++) {
             String plushNames = ModUtil.getBlockIdFromItem(ModItems.PLUSH_ITEMS.get(plush));
             String currentPlush = ModUtil.getBlockIdFromBlockState(state);
@@ -112,12 +114,11 @@ public class MikuPlushieBlock extends Block {
     }
 
     @Override
-	public void onBreak(World world, BlockPos pos, BlockState state, PlayerEntity player) {
-        super.onBreak(world, pos, state, player);
-
+	public BlockState onBreak(World world, BlockPos pos, BlockState state, PlayerEntity player) {
         String currentPlush = ModUtil.getBlockIdFromBlockState(state);
-        SoundEvent soundEvent = ModUtil.getPlushSoundEvent(currentPlush, "bye");
-        world.playSound(null, pos, soundEvent, SoundCategory.BLOCKS, 0.5F , 1);
+        ModUtil.playPlushSound(world, pos, currentPlush, "bye");
+
+        return super.onBreak(world, pos, state, player);
     }
 
 	@Override

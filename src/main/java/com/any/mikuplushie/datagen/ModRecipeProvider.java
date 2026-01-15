@@ -4,7 +4,8 @@ import com.any.mikuplushie.registry.ModBlocks;
 import com.any.mikuplushie.registry.ModItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
-import net.minecraft.data.server.recipe.RecipeJsonProvider;
+import net.minecraft.data.server.recipe.RecipeExporter;
+import net.minecraft.data.server.recipe.RecipeProvider;
 import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
 import net.minecraft.data.server.recipe.ShapelessRecipeJsonBuilder;
 import net.minecraft.item.ItemConvertible;
@@ -17,12 +18,12 @@ import java.util.function.Consumer;
 
 public class ModRecipeProvider extends FabricRecipeProvider {
 
-	public ModRecipeProvider(FabricDataOutput output, CompletableFuture<RegistryWrapper.WrapperLookup> registriesFuture) {
-		super(output);
-	}
+    public ModRecipeProvider(FabricDataOutput output, CompletableFuture<RegistryWrapper.WrapperLookup> registriesFuture) {
+        super(output, registriesFuture);
+    }
 
-	@Override
-	public void generate(Consumer<RecipeJsonProvider> exporter) {
+    @Override
+	public void generate(RecipeExporter exporter) {
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.FOOD, ModItems.CANUDINHO)
             .pattern("p")
@@ -334,7 +335,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 
     }
 
-    public static void pickaxeRecipe (Consumer<RecipeJsonProvider> exporter, ItemConvertible result, ItemConvertible ingredient) {
+    public static void pickaxeRecipe (RecipeExporter exporter, ItemConvertible result, ItemConvertible ingredient) {
         ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, result)
             .pattern("121")
             .input('1', Items.DIAMOND)
@@ -343,7 +344,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
             .offerTo(exporter);
     }
 
-    public static void plushShapeless(Consumer<RecipeJsonProvider> exporter, ItemConvertible result, ItemConvertible plush, ItemConvertible... ingredients) {
+    public static void plushShapeless(RecipeExporter exporter, ItemConvertible result, ItemConvertible plush, ItemConvertible... ingredients) {
         //CREATE SHAPELESS RECIPE WITH A PLUSH
         ShapelessRecipeJsonBuilder shapeless =
             ShapelessRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, result)
@@ -359,7 +360,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
         .offerTo(exporter);
     }
 
-    public static void simpleShapeless(Consumer<RecipeJsonProvider> exporter, ItemConvertible result, ItemConvertible... ingredients) {
+    public static void simpleShapeless(RecipeExporter exporter, ItemConvertible result, ItemConvertible... ingredients) {
         //CREATE SHAPELESS RECIPE WITH A PLUSH
         ShapelessRecipeJsonBuilder shapeless =
             ShapelessRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, result);
