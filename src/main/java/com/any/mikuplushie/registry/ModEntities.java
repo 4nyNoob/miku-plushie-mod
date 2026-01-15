@@ -3,11 +3,9 @@ package com.any.mikuplushie.registry;
 import com.any.mikuplushie.MikuPlushie;
 import com.any.mikuplushie.entity.*;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
-import net.fabricmc.fabric.api.object.builder.v1.entity.FabricEntityTypeBuilder;
-import net.minecraft.entity.EntityDimensions;
+import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.SpawnGroup;
-import net.minecraft.entity.mob.MobEntity;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
@@ -20,8 +18,8 @@ public class ModEntities {
 
     public static List<EntityType<?>> PLUSH_ENTITIES = new ArrayList<>();
 
-    private static final float PLUSH_WIDTH = 0.6F;
-    private static final float PLUSH_HEIGHT = 0.8F;
+    public static final float PLUSH_WIDTH = 0.6F;
+    public static final float PLUSH_HEIGHT = 1F;
 
     public static final EntityType<MikuEntity> MIKU = registerMob("miku_plush", MikuEntity::new);
     public static final EntityType<TetoEntity> TETO = registerMob("teto_plush", TetoEntity::new);
@@ -36,10 +34,14 @@ public class ModEntities {
     public static final EntityType<KaitoEntity> KAITO = registerMob("kaito_plush", KaitoEntity::new);
 
 
-    public static <T extends MobEntity> EntityType<T> registerMob(String name, EntityType.EntityFactory<T> entity) {
+    private static <T extends Entity> EntityType<T> registerMob(String name, EntityType.EntityFactory<T> entity) {
         EntityType<T> entityType = Registry.register(Registries.ENTITY_TYPE,
-            Identifier.of(MikuPlushie.MOD_ID, name), FabricEntityTypeBuilder.create(SpawnGroup.CREATURE, entity)
-                .dimensions(EntityDimensions.fixed(PLUSH_WIDTH, PLUSH_HEIGHT)).build());
+            Identifier.of(MikuPlushie.MOD_ID, name),
+            EntityType.Builder.create(entity, SpawnGroup.CREATURE)
+                .dimensions(PLUSH_WIDTH, PLUSH_HEIGHT)
+                .eyeHeight(0.85F)
+                .build(name)
+        );
         PLUSH_ENTITIES.add(entityType);
         return entityType;
     }
