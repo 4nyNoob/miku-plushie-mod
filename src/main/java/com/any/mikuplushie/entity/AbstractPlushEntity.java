@@ -360,10 +360,6 @@ public class AbstractPlushEntity extends TameableEntity implements GeoEntity {
         return this.songPlaying;
     }
 
-    public int isIngame(){
-        return 1;
-    }
-
     //SELECT RANDOM DANCE
     @Override
     public void setNearbySongPlaying(BlockPos songPosition, boolean playing) {
