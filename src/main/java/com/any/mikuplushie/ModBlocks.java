@@ -101,18 +101,18 @@ public class ModBlocks {
 			()->new MikuPlushieBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.FLOWER_POT).noOcclusion().sound(SoundType.WOOL)));
 	public static final DeferredBlock<MikuPlushieBlock> MIKU_PLUSH_XMAS_TREE = BLOCKS.register("miku_plush_xmas_tree",
 			()->new MikuPlushieBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.FLOWER_POT).noOcclusion().sound(SoundType.WOOL)));
-	public static final DeferredBlock<AikoPlushieBlock> AIKO_PLUSH = BLOCKS.register("aiko_plush",
-			()->new AikoPlushieBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.FLOWER_POT).noOcclusion().sound(SoundType.WOOL)));
-	public static final DeferredBlock<TetoPlushieBlock> TETO_PLUSH = BLOCKS.register("teto_plush",
-			()->new TetoPlushieBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.FLOWER_POT).noOcclusion().sound(SoundType.WOOL)));
-	public static final DeferredBlock<NeruPlushieBlock> AKITA_NERU_PLUSH = BLOCKS.register("akita_neru_plush",
-			()->new NeruPlushieBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.FLOWER_POT).noOcclusion().sound(SoundType.WOOL)));
+	public static final DeferredBlock<MikuPlushieBlock> AIKO_PLUSH = BLOCKS.register("aiko_plush",
+			()->new MikuPlushieBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.FLOWER_POT).noOcclusion().sound(SoundType.WOOL)));
+	public static final DeferredBlock<MikuPlushieBlock> TETO_PLUSH = BLOCKS.register("teto_plush",
+			()->new MikuPlushieBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.FLOWER_POT).noOcclusion().sound(SoundType.WOOL)));
+	public static final DeferredBlock<MikuPlushieBlock> AKITA_NERU_PLUSH = BLOCKS.register("akita_neru_plush",
+			()->new MikuPlushieBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.FLOWER_POT).noOcclusion().sound(SoundType.WOOL)));
 	public static final DeferredBlock<MikuPlushieBlock> MIKU_PLUSH = BLOCKS.register("miku_plush",
 			()->new MikuPlushieBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.FLOWER_POT).noOcclusion().sound(SoundType.WOOL)));
-	public static final DeferredBlock<RinPlushieBlock> RIN_PLUSH = BLOCKS.register("rin_plush",
-			()->new RinPlushieBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.FLOWER_POT).noOcclusion().sound(SoundType.WOOL)));
-	public static final DeferredBlock<LenPlushieBlock> LEN_PLUSH = BLOCKS.register("len_plush",
-			()->new LenPlushieBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.FLOWER_POT).noOcclusion().sound(SoundType.WOOL)));
+	public static final DeferredBlock<MikuPlushieBlock> RIN_PLUSH = BLOCKS.register("rin_plush",
+			()->new MikuPlushieBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.FLOWER_POT).noOcclusion().sound(SoundType.WOOL)));
+	public static final DeferredBlock<MikuPlushieBlock> LEN_PLUSH = BLOCKS.register("len_plush",
+			()->new MikuPlushieBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.FLOWER_POT).noOcclusion().sound(SoundType.WOOL)));
 	public static final DeferredBlock<MikuPlushieBlock> MIKU_PLUSH_SONIC_CROSSWORLDS = BLOCKS.register("miku_plush_sonic_crossworlds",
 			()->new MikuPlushieBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.FLOWER_POT).noOcclusion().sound(SoundType.WOOL)));
 	public static final DeferredBlock<MikuPlushieBlock> MIKU_PLUSH_FORTNITE_NEKO = BLOCKS.register("miku_plush_fortnite_neko",
@@ -121,44 +121,92 @@ public class ModBlocks {
 			()->new MikuPlushieBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.FLOWER_POT).noOcclusion().sound(SoundType.WOOL)));
 	public static final DeferredBlock<MikuPlushieBlock> MIKU_PLUSH_MESMERIZER = BLOCKS.register("miku_plush_mesmerizer",
 			()->new MikuPlushieBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.FLOWER_POT).noOcclusion().sound(SoundType.WOOL)));
-	public static final DeferredBlock<TetoPlushieBlock> TETO_PLUSH_MESMERIZER = BLOCKS.register("teto_plush_mesmerizer",
-			()->new TetoPlushieBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.FLOWER_POT).noOcclusion().sound(SoundType.WOOL)));
+	public static final DeferredBlock<MikuPlushieBlock> TETO_PLUSH_MESMERIZER = BLOCKS.register("teto_plush_mesmerizer",
+			()->new MikuPlushieBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.FLOWER_POT).noOcclusion().sound(SoundType.WOOL)));
 	public static final DeferredBlock<MikuPlushieBlock> MIKU_PLUSH_SONIC = BLOCKS.register("miku_plush_sonic",
 			()->new MikuPlushieBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.FLOWER_POT).noOcclusion().sound(SoundType.WOOL)));
-	public static final DeferredBlock<TetoPlushieBlock> TETO_PLUSH_SHADOW = BLOCKS.register("teto_plush_shadow",
-			()->new TetoPlushieBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.FLOWER_POT).noOcclusion().sound(SoundType.WOOL)));
+	public static final DeferredBlock<MikuPlushieBlock> TETO_PLUSH_SHADOW = BLOCKS.register("teto_plush_shadow",
+			()->new MikuPlushieBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.FLOWER_POT).noOcclusion().sound(SoundType.WOOL)));
 	public static final DeferredBlock<MikuPlushieBlock> AKITA_NERU_PLUSH_TAILS = BLOCKS.register("akita_neru_plush_tails",
 			()->new MikuPlushieBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.FLOWER_POT).noOcclusion().sound(SoundType.WOOL)));
-	public static final DeferredBlock<TetoPlushieBlock> TETO_PLUSH_BIRDBRAIN = BLOCKS.register("teto_plush_birdbrain",
-			()->new TetoPlushieBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.FLOWER_POT).noOcclusion().sound(SoundType.WOOL)));
+	public static final DeferredBlock<MikuPlushieBlock> TETO_PLUSH_BIRDBRAIN = BLOCKS.register("teto_plush_birdbrain",
+			()->new MikuPlushieBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.FLOWER_POT).noOcclusion().sound(SoundType.WOOL)));
 	public static final DeferredBlock<MikuPlushieBlock> MIKU_PLUSH_DIGITAL_STARS_2025 = BLOCKS.register("miku_plush_digital_stars_2025",
 			()->new MikuPlushieBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.FLOWER_POT).noOcclusion().sound(SoundType.WOOL)));
 	public static final DeferredBlock<MikuPlushieBlock> MIKU_PLUSH_ROTTEN_GIRL = BLOCKS.register("miku_plush_rotten_girl",
 			()->new MikuPlushieBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.FLOWER_POT).noOcclusion().sound(SoundType.WOOL)));
-	public static final DeferredBlock<TetoPlushieBlock> TETO_PLUSH_REGRET_ROCK = BLOCKS.register("teto_plush_regret_rock",
-			()->new TetoPlushieBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.FLOWER_POT).noOcclusion().sound(SoundType.WOOL)));
+	public static final DeferredBlock<MikuPlushieBlock> TETO_PLUSH_REGRET_ROCK = BLOCKS.register("teto_plush_regret_rock",
+			()->new MikuPlushieBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.FLOWER_POT).noOcclusion().sound(SoundType.WOOL)));
 	public static final DeferredBlock<MikuPlushieBlock> MIKU_PLUSH_PSYCHO_MODE = BLOCKS.register("miku_plush_psycho_mode",
 			()->new MikuPlushieBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.FLOWER_POT).noOcclusion().sound(SoundType.WOOL)));
 	public static final DeferredBlock<MikuPlushieBlock> MIKU_PLUSH_DONT_BELIEVE_IN_T = BLOCKS.register("miku_plush_dont_believe_in_t",
 			()->new MikuPlushieBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.FLOWER_POT).noOcclusion().sound(SoundType.WOOL)));
-	public static final DeferredBlock<TetoPlushieBlock> TETO_PLUSH_DONT_BELIEVE_IN_T = BLOCKS.register("teto_plush_dont_believe_in_t",
-			()->new TetoPlushieBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.FLOWER_POT).noOcclusion().sound(SoundType.WOOL)));
-	public static final DeferredBlock<TetoPlushieBlock> TETO_PLUSH_LIAR_DANCER = BLOCKS.register("teto_plush_liar_dancer",
-			()->new TetoPlushieBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.FLOWER_POT).noOcclusion().sound(SoundType.WOOL)));
+	public static final DeferredBlock<MikuPlushieBlock> TETO_PLUSH_DONT_BELIEVE_IN_T = BLOCKS.register("teto_plush_dont_believe_in_t",
+			()->new MikuPlushieBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.FLOWER_POT).noOcclusion().sound(SoundType.WOOL)));
+	public static final DeferredBlock<MikuPlushieBlock> TETO_PLUSH_LIAR_DANCER = BLOCKS.register("teto_plush_liar_dancer",
+			()->new MikuPlushieBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.FLOWER_POT).noOcclusion().sound(SoundType.WOOL)));
 	public static final DeferredBlock<MikuPlushieBlock> MIKU_PLUSH_STATIC = BLOCKS.register("miku_plush_static",
 			()->new MikuPlushieBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.FLOWER_POT).noOcclusion().sound(SoundType.WOOL)));
 	public static final DeferredBlock<MikuPlushieBlock> MIKU_PLUSH_MOCHIMOCHI = BLOCKS.register("miku_plush_mochimochi",
 			()->new MikuPlushieBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.FLOWER_POT).noOcclusion().sound(SoundType.WOOL)));
-	public static final DeferredBlock<TetoPlushieBlock> TETO_PLUSH_WHATCHACALLITSNAME = BLOCKS.register("teto_plush_whatchacallitsname",
-			()->new TetoPlushieBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.FLOWER_POT).noOcclusion().sound(SoundType.WOOL)));
+	public static final DeferredBlock<MikuPlushieBlock> TETO_PLUSH_WHATCHACALLITSNAME = BLOCKS.register("teto_plush_whatchacallitsname",
+			()->new MikuPlushieBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.FLOWER_POT).noOcclusion().sound(SoundType.WOOL)));
 	public static final DeferredBlock<MikuPlushieBlock> MIKU_PLUSH_MONITORING = BLOCKS.register("miku_plush_monitoring",
 			()->new MikuPlushieBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.FLOWER_POT).noOcclusion().sound(SoundType.WOOL)));
-    public static final DeferredBlock<PlushieBlock> KONOHA_PLUSH = BLOCKS.register("konoha_plush",
-            ()->new PlushieBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.FLOWER_POT).noOcclusion().sound(SoundType.WOOL)));
-    public static final DeferredBlock<LukaPlushieBlock> LUKA_PLUSH = BLOCKS.register("luka_plush",
-            ()->new LukaPlushieBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.FLOWER_POT).noOcclusion().sound(SoundType.WOOL)));
-    public static final DeferredBlock<TetoPlushieBlock> TETO_PLUSH_SOME_MORE_OF_THAT_SONG = BLOCKS.register("teto_plush_some_more_of_that_song",
-            ()->new TetoPlushieBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.FLOWER_POT).noOcclusion().sound(SoundType.WOOL)));
+    public static final DeferredBlock<MikuPlushieBlock> KONOHA_PLUSH = BLOCKS.register("konoha_plush",
+            ()->new MikuPlushieBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.FLOWER_POT).noOcclusion().sound(SoundType.WOOL)));
+    public static final DeferredBlock<MikuPlushieBlock> LUKA_PLUSH = BLOCKS.register("luka_plush",
+            ()->new MikuPlushieBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.FLOWER_POT).noOcclusion().sound(SoundType.WOOL)));
+    public static final DeferredBlock<MikuPlushieBlock> TETO_PLUSH_SOME_MORE_OF_THAT_SONG = BLOCKS.register("teto_plush_some_more_of_that_song",
+            ()->new MikuPlushieBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.FLOWER_POT).noOcclusion().sound(SoundType.WOOL)));
+    public static final DeferredBlock<MikuPlushieBlock> TETO_PLUSH_LOBSTER = BLOCKS.register("teto_plush_lobster",
+            ()->new MikuPlushieBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.FLOWER_POT).noOcclusion().sound(SoundType.WOOL)));
+    public static final DeferredBlock<MikuPlushieBlock> MIKU_PLUSH_HOLLOW_KNIGHT = BLOCKS.register("miku_plush_hollow_knight",
+            ()->new MikuPlushieBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.FLOWER_POT).noOcclusion().sound(SoundType.WOOL)));
+    public static final DeferredBlock<MikuPlushieBlock> MIKU_PLUSH_HORNET = BLOCKS.register("miku_plush_hornet",
+            ()->new MikuPlushieBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.FLOWER_POT).noOcclusion().sound(SoundType.WOOL)));
+    public static final DeferredBlock<MikuPlushieBlock> TETO_PLUSH_SYNTHV = BLOCKS.register("teto_plush_synthv",
+            ()->new MikuPlushieBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.FLOWER_POT).noOcclusion().sound(SoundType.WOOL)));
+    public static final DeferredBlock<MikuPlushieBlock> MIKU_PLUSH_WORLD_IS_MINE = BLOCKS.register("miku_plush_world_is_mine",
+            ()->new MikuPlushieBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.FLOWER_POT).noOcclusion().sound(SoundType.WOOL)));
+    public static final DeferredBlock<MikuPlushieBlock> MIKU_PLUSH_ROLLING_GIRL = BLOCKS.register("miku_plush_rolling_girl",
+            ()->new MikuPlushieBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.FLOWER_POT).noOcclusion().sound(SoundType.WOOL)));
+    public static final DeferredBlock<MikuPlushieBlock> TETO_PLUSH_SPOKEN_FOR = BLOCKS.register("teto_plush_spoken_for",
+            ()->new MikuPlushieBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.FLOWER_POT).noOcclusion().sound(SoundType.WOOL)));
+    public static final DeferredBlock<MikuPlushieBlock> MEIKO_PLUSH = BLOCKS.register("meiko_plush",
+            ()->new MikuPlushieBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.FLOWER_POT).noOcclusion().sound(SoundType.WOOL)));
+    public static final DeferredBlock<MikuPlushieBlock> MEIKO_PLUSH_V3 = BLOCKS.register("meiko_plush_v3",
+            ()->new MikuPlushieBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.FLOWER_POT).noOcclusion().sound(SoundType.WOOL)));
+    public static final DeferredBlock<MikuPlushieBlock> MEIKO_PLUSH_V4 = BLOCKS.register("meiko_plush_v4",
+            ()->new MikuPlushieBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.FLOWER_POT).noOcclusion().sound(SoundType.WOOL)));
+    public static final DeferredBlock<MikuPlushieBlock> GUMI_PLUSH = BLOCKS.register("gumi_plush",
+            ()->new MikuPlushieBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.FLOWER_POT).noOcclusion().sound(SoundType.WOOL)));
+    public static final DeferredBlock<MikuPlushieBlock> GUMI_PLUSH_V3 = BLOCKS.register("gumi_plush_v3",
+            ()->new MikuPlushieBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.FLOWER_POT).noOcclusion().sound(SoundType.WOOL)));
+    public static final DeferredBlock<MikuPlushieBlock> GUMI_PLUSH_V4 = BLOCKS.register("gumi_plush_v4",
+            ()->new MikuPlushieBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.FLOWER_POT).noOcclusion().sound(SoundType.WOOL)));
+    public static final DeferredBlock<MikuPlushieBlock> GUMI_PLUSH_V6 = BLOCKS.register("gumi_plush_v6",
+            ()->new MikuPlushieBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.FLOWER_POT).noOcclusion().sound(SoundType.WOOL)));
+    public static final DeferredBlock<MikuPlushieBlock> MIKU_PLUSH_DEEP_SEA_GIRL = BLOCKS.register("miku_plush_deep_sea_girl",
+            ()->new MikuPlushieBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.FLOWER_POT).noOcclusion().sound(SoundType.WOOL)));
+    public static final DeferredBlock<MikuPlushieBlock> MIKU_PLUSH_LUCARIO_Z = BLOCKS.register("miku_plush_lucario_z",
+            ()->new MikuPlushieBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.FLOWER_POT).noOcclusion().sound(SoundType.WOOL)));
+    public static final DeferredBlock<MikuPlushieBlock> TETO_PLUSH_PPPP = BLOCKS.register("teto_plush_pppp",
+            ()->new MikuPlushieBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.FLOWER_POT).noOcclusion().sound(SoundType.WOOL)));
+    public static final DeferredBlock<MikuPlushieBlock> MIKU_PLUSH_PPPP = BLOCKS.register("miku_plush_pppp",
+            ()->new MikuPlushieBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.FLOWER_POT).noOcclusion().sound(SoundType.WOOL)));
+    public static final DeferredBlock<MikuPlushieBlock> TETO_PLUSH_SHRIMP = BLOCKS.register("teto_plush_shrimp",
+            ()->new MikuPlushieBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.FLOWER_POT).noOcclusion().sound(SoundType.WOOL)));
+    public static final DeferredBlock<MikuPlushieBlock> MIKU_PLUSH_LINK = BLOCKS.register("miku_plush_link",
+            ()->new MikuPlushieBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.FLOWER_POT).noOcclusion().sound(SoundType.WOOL)));
+    public static final DeferredBlock<MikuPlushieBlock> MIKU_PLUSH_RENAISSANCE = BLOCKS.register("miku_plush_renaissance",
+            ()->new MikuPlushieBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.FLOWER_POT).noOcclusion().sound(SoundType.WOOL)));
+    public static final DeferredBlock<MikuPlushieBlock> KAITO_PLUSH = BLOCKS.register("kaito_plush",
+            ()->new MikuPlushieBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.FLOWER_POT).noOcclusion().sound(SoundType.WOOL)));
+    public static final DeferredBlock<MikuPlushieBlock> KAITO_PLUSH_V3 = BLOCKS.register("kaito_plush_v3",
+            ()->new MikuPlushieBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.FLOWER_POT).noOcclusion().sound(SoundType.WOOL)));
+    public static final DeferredBlock<MikuPlushieBlock> KAITO_PLUSH_V4 = BLOCKS.register("kaito_plush_v4",
+            ()->new MikuPlushieBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.FLOWER_POT).noOcclusion().sound(SoundType.WOOL)));
 
 
 }

@@ -19,7 +19,7 @@ public class MikuPlushieBlock extends PlushieBlock {
 
 	@Override
 	protected ItemInteractionResult useItemOn(ItemStack stack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hitResult) {
-		if(stack.getItem()== ModItems.CANUDINHO.get()){
+		if(stack.getItem()== ModItems.CANUDINHO.get() && this.getDescriptionId().split("[.]")[2].startsWith("miku")){
 			level.playSound(player,pos, ModSoundEvents.MIKU_CANUDINHO.value(), SoundSource.BLOCKS, 0.5F,1F);
 			return ItemInteractionResult.SUCCESS;
 		}
@@ -28,13 +28,55 @@ public class MikuPlushieBlock extends PlushieBlock {
 
 	@Override
 	protected void onPlace(BlockState state, Level level, BlockPos pos, BlockState oldState, boolean movedByPiston) {
-			level.playSound(null,pos,ModSoundEvents.MIKU_OIE.value(), SoundSource.BLOCKS, 0.5F,1F);
-		super.onPlace(state, level, pos, oldState, movedByPiston);
+        String name=this.getDescriptionId().split("[.]")[2];
+        if(name.startsWith("miku")) {
+            level.playSound(null, pos, ModSoundEvents.MIKU_OIE.value(), SoundSource.BLOCKS, 0.5F, 1F);
+        }else if(name.startsWith("aiko")){
+            level.playSound(null, pos, ModSoundEvents.AIKO_OIE.value(), SoundSource.BLOCKS, 0.5F, 1F);
+        }else if(name.startsWith("teto")){
+            level.playSound(null, pos, ModSoundEvents.TETO_OIE.value(), SoundSource.BLOCKS, 0.5F, 1F);
+        }else if(name.startsWith("akita_neru")){
+            level.playSound(null, pos, ModSoundEvents.NERU_OIE.value(), SoundSource.BLOCKS, 0.5F, 1F);
+        }else if(name.startsWith("rin")){
+            level.playSound(null, pos, ModSoundEvents.RIN_OIE.value(), SoundSource.BLOCKS, 0.5F, 1F);
+        }else if(name.startsWith("len")){
+            level.playSound(null, pos, ModSoundEvents.LEN_OIE.value(), SoundSource.BLOCKS, 0.5F, 1F);
+        }else if(name.startsWith("luka")){
+            level.playSound(null, pos, ModSoundEvents.LUKA_OIE.value(), SoundSource.BLOCKS, 0.5F, 1F);
+        }else if(name.startsWith("meiko")){
+            level.playSound(null, pos, ModSoundEvents.MEIKO_OIE.value(), SoundSource.BLOCKS, 0.5F, 1F);
+        }else if(name.startsWith("kaito")){
+            level.playSound(null, pos, ModSoundEvents.KAITO_OIE.value(), SoundSource.BLOCKS, 0.5F, 1F);
+        }else if(name.startsWith("gumi")) {
+            level.playSound(null, pos, ModSoundEvents.GUMI_OIE.value(), SoundSource.BLOCKS, 0.5F, 1F);
+        }
+        super.onPlace(state, level, pos, oldState, movedByPiston);
 	}
 
 	@Override
 	protected void onRemove(BlockState state, Level level, BlockPos pos, BlockState newState, boolean movedByPiston) {
-			level.playSound(null,pos,ModSoundEvents.MIKU_BYE.value(), SoundSource.BLOCKS, 0.5F,1F);
+        String name=this.getDescriptionId().split("[.]")[2];
+        if(name.startsWith("miku")) {
+            level.playSound(null, pos, ModSoundEvents.MIKU_BYE.value(), SoundSource.BLOCKS, 0.5F, 1F);
+        }else if(name.startsWith("aiko")){
+            level.playSound(null, pos, ModSoundEvents.AIKO_BYE.value(), SoundSource.BLOCKS, 0.5F, 1F);
+        }else if(name.startsWith("teto")){
+            level.playSound(null, pos, ModSoundEvents.TETO_BYE.value(), SoundSource.BLOCKS, 0.5F, 1F);
+        }else if(name.startsWith("akita_neru")){
+            level.playSound(null, pos, ModSoundEvents.NERU_BYE.value(), SoundSource.BLOCKS, 0.5F, 1F);
+        }else if(name.startsWith("rin")){
+            level.playSound(null, pos, ModSoundEvents.RIN_BYE.value(), SoundSource.BLOCKS, 0.5F, 1F);
+        }else if(name.startsWith("len")){
+            level.playSound(null, pos, ModSoundEvents.LEN_BYE.value(), SoundSource.BLOCKS, 0.5F, 1F);
+        }else if(name.startsWith("luka")){
+            level.playSound(null, pos, ModSoundEvents.LUKA_BYE.value(), SoundSource.BLOCKS, 0.5F, 1F);
+        }else if(name.startsWith("meiko")){
+            level.playSound(null, pos, ModSoundEvents.MEIKO_BYE.value(), SoundSource.BLOCKS, 0.5F, 1F);
+        }else if(name.startsWith("kaito")){
+            level.playSound(null, pos, ModSoundEvents.KAITO_BYE.value(), SoundSource.BLOCKS, 0.5F, 1F);
+        }else if(name.startsWith("gumi")) {
+            level.playSound(null, pos, ModSoundEvents.GUMI_BYE.value(), SoundSource.BLOCKS, 0.5F, 1F);
+        }
 		super.onRemove(state, level, pos, newState, movedByPiston);
 	}
 

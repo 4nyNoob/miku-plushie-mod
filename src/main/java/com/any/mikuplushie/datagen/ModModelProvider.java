@@ -93,6 +93,30 @@ public class ModModelProvider extends BlockStateProvider {
         horizontalBlockState(ModBlocks.KONOHA_PLUSH);
         horizontalBlockState(ModBlocks.LUKA_PLUSH);
         horizontalBlockState(ModBlocks.TETO_PLUSH_SOME_MORE_OF_THAT_SONG);
+        horizontalBlockState(ModBlocks.TETO_PLUSH_LOBSTER);
+        horizontalBlockState(ModBlocks.MIKU_PLUSH_HOLLOW_KNIGHT);
+        horizontalBlockState(ModBlocks.MIKU_PLUSH_HORNET);
+        horizontalBlockState(ModBlocks.TETO_PLUSH_SYNTHV);
+        horizontalBlockState(ModBlocks.MIKU_PLUSH_WORLD_IS_MINE);
+        horizontalBlockState(ModBlocks.MIKU_PLUSH_ROLLING_GIRL);
+        horizontalBlockState(ModBlocks.TETO_PLUSH_SPOKEN_FOR);
+        horizontalBlockState(ModBlocks.MEIKO_PLUSH);
+        horizontalBlockState(ModBlocks.MEIKO_PLUSH_V3);
+        horizontalBlockState(ModBlocks.MEIKO_PLUSH_V4);
+        horizontalBlockState(ModBlocks.GUMI_PLUSH);
+        horizontalBlockState(ModBlocks.GUMI_PLUSH_V3);
+        horizontalBlockState(ModBlocks.GUMI_PLUSH_V4);
+        horizontalBlockState(ModBlocks.GUMI_PLUSH_V6);
+        horizontalBlockState(ModBlocks.MIKU_PLUSH_DEEP_SEA_GIRL);
+        horizontalBlockState(ModBlocks.MIKU_PLUSH_LUCARIO_Z);
+        horizontalBlockState(ModBlocks.TETO_PLUSH_PPPP);
+        horizontalBlockState(ModBlocks.MIKU_PLUSH_PPPP);
+        horizontalBlockState(ModBlocks.TETO_PLUSH_SHRIMP);
+        horizontalBlockState(ModBlocks.MIKU_PLUSH_LINK);
+        horizontalBlockState(ModBlocks.MIKU_PLUSH_RENAISSANCE);
+        horizontalBlockState(ModBlocks.KAITO_PLUSH);
+        horizontalBlockState(ModBlocks.KAITO_PLUSH_V3);
+        horizontalBlockState(ModBlocks.KAITO_PLUSH_V4);
 	}
 
 	public void horizontalBlockState(DeferredBlock<? extends Block> block){

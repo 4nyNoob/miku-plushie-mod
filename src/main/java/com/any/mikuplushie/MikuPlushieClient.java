@@ -93,6 +93,31 @@ public class MikuPlushieClient{
 
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.LUKA_PLUSH.get(), RenderType.CUTOUT);
 
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.TETO_PLUSH_LOBSTER.get(), RenderType.CUTOUT);
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.MIKU_PLUSH_HOLLOW_KNIGHT.get(), RenderType.CUTOUT);
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.MIKU_PLUSH_HORNET.get(), RenderType.CUTOUT);
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.TETO_PLUSH_SYNTHV.get(), RenderType.CUTOUT);
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.MIKU_PLUSH_WORLD_IS_MINE.get(), RenderType.CUTOUT);
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.MIKU_PLUSH_ROLLING_GIRL.get(), RenderType.CUTOUT);
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.TETO_PLUSH_SPOKEN_FOR.get(), RenderType.CUTOUT);
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.MEIKO_PLUSH.get(), RenderType.CUTOUT);
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.MEIKO_PLUSH_V3.get(), RenderType.CUTOUT);
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.MEIKO_PLUSH_V4.get(), RenderType.CUTOUT);
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.GUMI_PLUSH.get(), RenderType.CUTOUT);
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.GUMI_PLUSH_V3.get(), RenderType.CUTOUT);
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.GUMI_PLUSH_V4.get(), RenderType.CUTOUT);
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.GUMI_PLUSH_V6.get(), RenderType.CUTOUT);
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.MIKU_PLUSH_DEEP_SEA_GIRL.get(), RenderType.CUTOUT);
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.MIKU_PLUSH_LUCARIO_Z.get(), RenderType.CUTOUT);
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.TETO_PLUSH_PPPP.get(), RenderType.CUTOUT);
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.MIKU_PLUSH_PPPP.get(), RenderType.CUTOUT);
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.TETO_PLUSH_SHRIMP.get(), RenderType.CUTOUT);
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.MIKU_PLUSH_LINK.get(), RenderType.CUTOUT);
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.MIKU_PLUSH_RENAISSANCE.get(), RenderType.CUTOUT);
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.KAITO_PLUSH.get(), RenderType.CUTOUT);
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.KAITO_PLUSH_V3.get(), RenderType.CUTOUT);
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.KAITO_PLUSH_V4.get(), RenderType.CUTOUT);
+
 		//TRANSLUCENT
 		ItemBlockRenderTypes.setRenderLayer(ModBlocks.MIKU_PLUSH_GHOST.get(), RenderType.TRANSLUCENT);
 	}

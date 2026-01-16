@@ -1,6 +1,6 @@
 {
   "block.miku_plushie.miku_plush_br": "Brazilian Miku Plush",
-  "item.miku_plushie.miku_plush_br.tooltip": "§b§n@4ny.bsky.social",
+  "item.miku_plushie.miku_plush_br.tooltip": "§b§n@erinartista.bsky.social",
   "block.miku_plushie.miku_plush_br_ba": "Bahia Miku Plush",
   "item.miku_plushie.miku_plush_br_ba.tooltip": "§b§n@taynfoxbadger.bsky.social",
   "block.miku_plushie.miku_plush_bik": "Bikini Miku Plush",
@@ -105,7 +105,7 @@
   "item.miku_plushie.len_plush.tooltip": "§b§n@iximaxima",
   "block.miku_plushie.miku_plush_sonic_crossworlds": "Sonic Crossworlds Miku Plush",
   "item.miku_plushie.miku_plush_sonic_crossworlds.tooltip": "§b§nSEGA",
-  "block.miku_plushie.miku_plush_fortnite_neko": "Forknife Neko Miku Plush",
+  "block.miku_plushie.miku_plush_fortnite_neko": "Fortnite Neko Miku Plush",
   "item.miku_plushie.miku_plush_fortnite_neko.tooltip": "§b§nEpic Games",
   "block.miku_plushie.miku_plush_v4": "Miku Plush V4",
   "item.miku_plushie.miku_plush_v4.tooltip": "§b§n@iximaxima",
@@ -122,7 +122,7 @@
   "block.miku_plushie.akita_neru_plush_tails": "Tails Neru Plush",
   "item.miku_plushie.akita_neru_plush_tails.tooltip": "§b§n@4ny.bsky.social",
   "block.miku_plushie.teto_plush_birdbrain": "Teto Birdbrain Plush",
-  "item.miku_plushie.teto_plush_birdbrain.tooltip": "§b§n@ricedeity",
+  "item.miku_plushie.teto_plush_birdbrain.tooltip": "§b§n@sidoopa.bsky.social",
   "item.miku_plushie.teto_pickaxe_birdbrain": "Teto Birdbrain Pickaxe",
 
   "block.miku_plushie.miku_plush_digital_stars_2025": "Digital Stars 2025 Miku Plush",
@@ -140,9 +140,11 @@
   "block.miku_plushie.teto_plush_dont_believe_in_t": "Don't Believe In T Teto Plush",
   "item.miku_plushie.teto_plush_dont_believe_in_t.tooltip": "§b§n@pinocchiop",
   "item.miku_plushie.teto_pickaxe_dont_believe_in_t": "Don't Believe In T Teto Pickaxe",
+
   "block.miku_plushie.teto_plush_liar_dancer": "Liar Dancer Teto Plush",
   "item.miku_plushie.teto_plush_liar_dancer.tooltip": "§b§n@sisterofoira",
   "item.miku_plushie.teto_pickaxe_liar_dancer": "Liar Dancer Teto Pickaxe",
+
   "block.miku_plushie.miku_plush_static": "Static Miku Plush",
   "item.miku_plushie.miku_plush_static.tooltip": "§b§n@ricedeity",
   "block.miku_plushie.miku_plush_mochimochi": "Mochimochi Miku Plush",
@@ -161,15 +163,88 @@
   "item.miku_plushie.teto_plush_some_more_of_that_song.tooltip": "§b§n@anneawh",
   "item.miku_plushie.teto_pickaxe_some_more_of_that_song": "Some More Of That Song Teto Pickaxe",
 
+  "block.miku_plushie.teto_plush_lobster": "Lobster Teto Plush",
+  "item.miku_plushie.teto_plush_lobster.tooltip": "§b§nskadikaos",
+  "block.miku_plushie.miku_plush_hollow_knight": "Hollow Knight Miku Plush",
+  "item.miku_plushie.miku_plush_hollow_knight.tooltip": "§b§nAri Gibson",
+  "block.miku_plushie.miku_plush_hornet": "Hornet Miku Plush",
+  "item.miku_plushie.miku_plush_hornet.tooltip": "§b§nAri Gibson",
+  "block.miku_plushie.teto_plush_synthv": "SynthV Teto Plush",
+  "item.miku_plushie.teto_plush_synthv.tooltip": "§b§n@sakauchi0",
+  "item.miku_plushie.teto_pickaxe_synthv": "SynthV Teto Pickaxe",
+
+  "block.miku_plushie.miku_plush_world_is_mine": "World Is Mine Miku Plush",
+  "item.miku_plushie.miku_plush_world_is_mine.tooltip": "§b§n@shiru",
+  "block.miku_plushie.miku_plush_rolling_girl": "Rolling Girl Miku Plush",
+  "item.miku_plushie.miku_plush_rolling_girl.tooltip": "§b§nMinakata Laboratory",
+  "block.miku_plushie.teto_plush_spoken_for": "Spoken For Teto Plush",
+  "item.miku_plushie.teto_plush_spoken_for.tooltip": "§b§n@hoshizoralone.bsky.social",
+  "item.miku_plushie.teto_pickaxe_spoken_for": "Spoken For Teto Pickaxe",
+
+  "block.miku_plushie.meiko_plush": "Meiko Plush",
+  "item.miku_plushie.meiko_plush.tooltip": "§b§n@wassy_m",
+  "block.miku_plushie.meiko_plush_v3": "Meiko Plush V3",
+  "item.miku_plushie.meiko_plush_v3.tooltip": "§b§n@iximaxima",
+  "block.miku_plushie.meiko_plush_v4": "Meiko Plush V4",
+  "item.miku_plushie.meiko_plush_v4.tooltip": "§b§n@iximaxima",
+  "block.miku_plushie.gumi_plush": "Gumi Plush",
+  "item.miku_plushie.gumi_plush.tooltip": "§b§n@masyuuki",
+  "block.miku_plushie.gumi_plush_v3": "Gumi Plush V3",
+  "item.miku_plushie.gumi_plush_v3.tooltip": "§b§n@masyuuki",
+  "block.miku_plushie.gumi_plush_v4": "Gumi Plush V4",
+  "item.miku_plushie.gumi_plush_v4.tooltip": "§b§n@masyuuki",
+  "block.miku_plushie.gumi_plush_v6": "Gumi Plush V6",
+  "item.miku_plushie.gumi_plush_v6.tooltip": "§b§n@nounoknown",
+  "block.miku_plushie.miku_plush_deep_sea_girl": "Deep Sea Girl Miku Plush",
+  "item.miku_plushie.miku_plush_deep_sea_girl.tooltip": "§b§n@haruyo_",
+  "block.miku_plushie.miku_plush_lucario_z": "Lucario Z Miku Plush",
+  "item.miku_plushie.miku_plush_lucario_z.tooltip": "§b§n@kaatokunart.bsky.social",
+  "block.miku_plushie.teto_plush_pppp": "PPPP Teto Plush",
+  "item.miku_plushie.teto_plush_pppp.tooltip": "§b§n@maco_mag",
+  "item.miku_plushie.teto_pickaxe_pppp": "PPPP Teto Pickaxe",
+
+  "block.miku_plushie.miku_plush_pppp": "PPPP Miku Plush",
+  "item.miku_plushie.miku_plush_pppp.tooltip": "§b§n@maco_mag",
+  "block.miku_plushie.teto_plush_shrimp": "Shrimp Teto Plush",
+  "item.miku_plushie.teto_plush_shrimp.tooltip": "§b§n@zambiie.bsky.social",
+  "item.miku_plushie.teto_pickaxe_shrimp": "Shrimp Teto Pickaxe",
+
+  "block.miku_plushie.miku_plush_link": "Miku Link Plush",
+  "item.miku_plushie.miku_plush_link.tooltip": "§b§n@lokyu.bsky.social",
+  "block.miku_plushie.miku_plush_renaissance": "Renaissance Miku Plush",
+  "item.miku_plushie.miku_plush_renaissance.tooltip": "§b§n@aidenr0.bsky.social",
+  "block.miku_plushie.kaito_plush": "Kaito Plush",
+  "item.miku_plushie.kaito_plush.tooltip": "§b§n@dorakue_",
+  "block.miku_plushie.kaito_plush_v3": "Kaito Plush V3",
+  "item.miku_plushie.kaito_plush_v3.tooltip": "§b§n@iximaxima",
+  "block.miku_plushie.kaito_plush_v4": "Kaito Plush V4",
+  "item.miku_plushie.kaito_plush_v4.tooltip": "§b§n@iximaxima",
 
 
   "item.group.miku_plushies": "Mikus!!",
 
 
 
-  "item.miku_plushie.canudinho": "Canudinho",
+  "item.miku_plushie.canudinho": "Little Straw",
   "item.miku_plushie.baguette": "Baguette",
+  "item.miku_plushie.leek": "Leek",
+  "block.miku_plushie.leek_crop": "Leek Crop",
+  "block.miku_plushie.wild_leek_crop": "Wild Leek Crop",
+  "item.miku_plushie.leek_seeds": "Leek Seeds",
+  "item.miku_plushie.akita_neru_phone": "Neru's Phone",
+  "item.miku_plushie.vocaloid_heart": "Vocaloid Heart",
 
+  "entity.miku_plushie.miku_plush": "Hatsune Miku",
+  "entity.miku_plushie.teto_plush": "Kasane Teto",
+  "entity.miku_plushie.aiko_plush": "Kikyuune Aiko",
+  "entity.miku_plushie.akita_neru_plush": "Akita Neru",
+  "entity.miku_plushie.rin_plush": "Kagamine Rin",
+  "entity.miku_plushie.len_plush": "Kagamine Len",
+  "entity.miku_plushie.konoha_plush": "Konoha",
+  "entity.miku_plushie.luka_plush": "Megurine Luka",
+  "entity.miku_plushie.meiko_plush": "Meiko",
+  "entity.miku_plushie.gumi_plush": "Gumi",
+  "entity.miku_plushie.kaito_plush": "Kaito",
 
 
   "sound.miku_plushie.canudinho": "Miku: Canudinho",
@@ -177,6 +252,7 @@
   "sound.miku_plushie.dor": "Miku: Pain",
   "sound.miku_plushie.bye": "Miku: Bye",
   "sound.miku_plushie.equip": "Miku: Equip",
+  "sound.miku_plushie.eat": "Miku: Eat",
 
   "sound.aiko_plushie.oie": "Aiko: Hi",
   "sound.aiko_plushie.dor": "Aiko: Pain",
@@ -186,7 +262,7 @@
   "sound.teto_plushie.oie": "Teto: Hi",
   "sound.teto_plushie.dor": "Teto: Pain",
   "sound.teto_plushie.bye": "Teto: Bye",
-  "sound.teto_plushie.equip": "Aiko: Equip",
+  "sound.teto_plushie.equip": "Teto: Equip",
 
   "sound.neru_plushie.oie": "Akita Neru: Hi",
   "sound.neru_plushie.dor": "Akita Neru: Pain",
@@ -206,5 +282,20 @@
   "sound.luka_plushie.oie": "Luka: Hi",
   "sound.luka_plushie.dor": "Luka: Pain",
   "sound.luka_plushie.bye": "Luka: Bye",
-  "sound.luka_plushie.equip": "Luka: Equip"
+  "sound.luka_plushie.equip": "Luka: Equip",
+
+  "sound.meiko_plushie.oie": "Meiko: Hi",
+  "sound.meiko_plushie.dor": "Meiko: Pain",
+  "sound.meiko_plushie.bye": "Meiko: Bye",
+  "sound.meiko_plushie.equip": "Meiko: Equip",
+
+  "sound.gumi_plushie.oie": "Gumi: Hi",
+  "sound.gumi_plushie.dor": "Gumi: Pain",
+  "sound.gumi_plushie.bye": "Gumi: Bye",
+  "sound.gumi_plushie.equip": "Gumi: Equip",
+
+  "sound.kaito_plushie.oie": "Kaito: Hi",
+  "sound.kaito_plushie.dor": "Kaito: Pain",
+  "sound.kaito_plushie.bye": "Kaito: Bye",
+  "sound.kaito_plushie.equip": "Kaito: Equip"
 }

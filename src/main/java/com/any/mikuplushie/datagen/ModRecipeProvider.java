@@ -417,6 +417,64 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .requires(Items.RED_WOOL)
                 .unlockedBy(getHasName(ModBlocks.MIKU_PLUSH), has(ModBlocks.MIKU_PLUSH))
                 .save(recipeOutput);
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ModBlocks.MIKU_PLUSH_HOLLOW_KNIGHT)
+                .requires(ModBlocks.MIKU_PLUSH)
+                .requires(Items.BLACK_WOOL)
+                .requires(Items.IRON_SWORD)
+                .requires(Items.BONE_BLOCK)
+                .unlockedBy(getHasName(ModBlocks.MIKU_PLUSH), has(ModBlocks.MIKU_PLUSH))
+                .save(recipeOutput);
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ModBlocks.MIKU_PLUSH_HORNET)
+                .requires(ModBlocks.MIKU_PLUSH)
+                .requires(Items.RED_WOOL)
+                .requires(Items.IRON_SWORD)
+                .requires(Items.BONE_BLOCK)
+                .unlockedBy(getHasName(ModBlocks.MIKU_PLUSH), has(ModBlocks.MIKU_PLUSH))
+                .save(recipeOutput);
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ModBlocks.MIKU_PLUSH_WORLD_IS_MINE)
+                .requires(ModBlocks.MIKU_PLUSH)
+                .requires(Items.WHITE_WOOL)
+                .requires(Items.GOLD_INGOT)
+                .requires(Items.CAKE)
+                .unlockedBy(getHasName(ModBlocks.MIKU_PLUSH), has(ModBlocks.MIKU_PLUSH))
+                .save(recipeOutput);
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ModBlocks.MIKU_PLUSH_ROLLING_GIRL)
+                .requires(ModBlocks.MIKU_PLUSH)
+                .requires(Items.WHITE_WOOL)
+                .requires(Items.BROWN_WOOL)
+                .unlockedBy(getHasName(ModBlocks.MIKU_PLUSH), has(ModBlocks.MIKU_PLUSH))
+                .save(recipeOutput);
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ModBlocks.MIKU_PLUSH_DEEP_SEA_GIRL)
+                .requires(ModBlocks.MIKU_PLUSH)
+                .requires(Items.TUBE_CORAL)
+                .requires(Items.BUBBLE_CORAL)
+                .unlockedBy(getHasName(ModBlocks.MIKU_PLUSH), has(ModBlocks.MIKU_PLUSH))
+                .save(recipeOutput);
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ModBlocks.MIKU_PLUSH_LUCARIO_Z)
+                .requires(ModBlocks.MIKU_PLUSH)
+                .requires(Items.IRON_BARS)
+                .requires(Items.WHITE_WOOL)
+                .requires(Items.REDSTONE)
+                .unlockedBy(getHasName(ModBlocks.MIKU_PLUSH), has(ModBlocks.MIKU_PLUSH))
+                .save(recipeOutput);
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ModBlocks.MIKU_PLUSH_PPPP)
+                .requires(ModBlocks.MIKU_PLUSH)
+                .requires(Items.CYAN_WOOL)
+                .requires(Items.WHITE_WOOL)
+                .unlockedBy(getHasName(ModBlocks.MIKU_PLUSH), has(ModBlocks.MIKU_PLUSH))
+                .save(recipeOutput);
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ModBlocks.MIKU_PLUSH_LINK)
+                .requires(ModBlocks.MIKU_PLUSH)
+                .requires(Items.GREEN_WOOL)
+                .requires(Items.EMERALD)
+                .unlockedBy(getHasName(ModBlocks.MIKU_PLUSH), has(ModBlocks.MIKU_PLUSH))
+                .save(recipeOutput);
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ModBlocks.MIKU_PLUSH_RENAISSANCE)
+                .requires(ModBlocks.MIKU_PLUSH)
+                .requires(Items.WHITE_WOOL)
+                .requires(Items.WRITABLE_BOOK)
+                .unlockedBy(getHasName(ModBlocks.MIKU_PLUSH), has(ModBlocks.MIKU_PLUSH))
+                .save(recipeOutput);
 
 
         //AIKO
@@ -486,6 +544,35 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .requires(Items.LIGHT_BLUE_WOOL)
                 .unlockedBy(getHasName(ModBlocks.TETO_PLUSH), has(ModBlocks.TETO_PLUSH))
                 .save(recipeOutput);
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ModBlocks.TETO_PLUSH_LOBSTER)
+                .requires(ModBlocks.TETO_PLUSH)
+                .requires(Items.SEAGRASS)
+                .requires(Items.SEAGRASS)
+                .unlockedBy(getHasName(ModBlocks.TETO_PLUSH), has(ModBlocks.TETO_PLUSH))
+                .save(recipeOutput);
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ModBlocks.TETO_PLUSH_SYNTHV)
+                .requires(ModBlocks.TETO_PLUSH)
+                .requires(Items.IRON_INGOT)
+                .unlockedBy(getHasName(ModBlocks.TETO_PLUSH), has(ModBlocks.TETO_PLUSH))
+                .save(recipeOutput);
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ModBlocks.TETO_PLUSH_SPOKEN_FOR)
+                .requires(ModBlocks.TETO_PLUSH)
+                .requires(Items.PINK_DYE)
+                .requires(Items.GLOWSTONE_DUST)
+                .unlockedBy(getHasName(ModBlocks.TETO_PLUSH), has(ModBlocks.TETO_PLUSH))
+                .save(recipeOutput);
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ModBlocks.TETO_PLUSH_PPPP)
+                .requires(ModBlocks.TETO_PLUSH)
+                .requires(Items.RED_WOOL)
+                .requires(Items.WHITE_WOOL)
+                .unlockedBy(getHasName(ModBlocks.TETO_PLUSH), has(ModBlocks.TETO_PLUSH))
+                .save(recipeOutput);
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ModBlocks.TETO_PLUSH_SHRIMP)
+                .requires(ModBlocks.TETO_PLUSH)
+                .requires(Items.KELP)
+                .requires(Items.KELP)
+                .unlockedBy(getHasName(ModBlocks.TETO_PLUSH), has(ModBlocks.TETO_PLUSH))
+                .save(recipeOutput);
         //TETO PICKAXE
         ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModItems.TETO_PICKAXE)
                 .pattern("121")
@@ -542,6 +629,27 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('2', ModBlocks.TETO_PLUSH_SOME_MORE_OF_THAT_SONG)
                 .group("")
                 .unlockedBy("has_wool", has(ModBlocks.TETO_PLUSH_SOME_MORE_OF_THAT_SONG))
+                .save(recipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModItems.TETO_PICKAXE_SPOKEN_FOR)
+                .pattern("121")
+                .define('1', Items.DIAMOND)
+                .define('2', ModBlocks.TETO_PLUSH_SPOKEN_FOR)
+                .group("")
+                .unlockedBy("has_wool", has(ModBlocks.TETO_PLUSH_SPOKEN_FOR))
+                .save(recipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModItems.TETO_PICKAXE_SYNTHV)
+                .pattern("121")
+                .define('1', Items.DIAMOND)
+                .define('2', ModBlocks.TETO_PLUSH_SYNTHV)
+                .group("")
+                .unlockedBy("has_wool", has(ModBlocks.TETO_PLUSH_SYNTHV))
+                .save(recipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModItems.TETO_PICKAXE_PPPP)
+                .pattern("121")
+                .define('1', Items.DIAMOND)
+                .define('2', ModBlocks.TETO_PLUSH_PPPP)
+                .group("")
+                .unlockedBy("has_wool", has(ModBlocks.TETO_PLUSH_PPPP))
                 .save(recipeOutput);
         //NERU
         ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.AKITA_NERU_PLUSH)
@@ -600,6 +708,82 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_blue_wool", has(Blocks.LIME_WOOL))
                 .unlockedBy("has_white_wool", has(Blocks.WHITE_WOOL))
                 .unlockedBy("has_green_wool", has(Blocks.BLACK_WOOL))
+                .save(recipeOutput);
+        //MEIKO
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.MEIKO_PLUSH)
+                .pattern("121")
+                .pattern(" 3 ")
+                .define('1', Blocks.BROWN_WOOL)
+                .define('2', Blocks.WHITE_WOOL)
+                .define('3', Blocks.RED_WOOL)
+                .group("")
+                .unlockedBy("has_blue_wool", has(Blocks.BROWN_WOOL))
+                .unlockedBy("has_white_wool", has(Blocks.WHITE_WOOL))
+                .unlockedBy("has_green_wool", has(Blocks.RED_WOOL))
+                .save(recipeOutput);
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ModBlocks.MEIKO_PLUSH_V3)
+                .requires(ModBlocks.MEIKO_PLUSH)
+                .requires(Items.IRON_INGOT)
+                .unlockedBy(getHasName(ModBlocks.MEIKO_PLUSH), has(ModBlocks.MEIKO_PLUSH))
+                .save(recipeOutput);
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ModBlocks.MEIKO_PLUSH_V4)
+                .requires(ModBlocks.MEIKO_PLUSH)
+                .requires(Items.IRON_INGOT)
+                .requires(Items.IRON_INGOT)
+                .unlockedBy(getHasName(ModBlocks.MEIKO_PLUSH), has(ModBlocks.MEIKO_PLUSH))
+                .save(recipeOutput);
+        //GUMI
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.GUMI_PLUSH)
+                .pattern("121")
+                .pattern(" 3 ")
+                .define('1', Blocks.LIME_WOOL)
+                .define('2', Blocks.WHITE_WOOL)
+                .define('3', Blocks.ORANGE_WOOL)
+                .group("")
+                .unlockedBy("has_blue_wool", has(Blocks.LIME_WOOL))
+                .unlockedBy("has_white_wool", has(Blocks.WHITE_WOOL))
+                .unlockedBy("has_green_wool", has(Blocks.ORANGE_WOOL))
+                .save(recipeOutput);
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ModBlocks.GUMI_PLUSH_V3)
+                .requires(ModBlocks.GUMI_PLUSH)
+                .requires(Items.IRON_INGOT)
+                .unlockedBy(getHasName(ModBlocks.GUMI_PLUSH), has(ModBlocks.GUMI_PLUSH))
+                .save(recipeOutput);
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ModBlocks.GUMI_PLUSH_V4)
+                .requires(ModBlocks.GUMI_PLUSH)
+                .requires(Items.IRON_INGOT)
+                .requires(Items.IRON_INGOT)
+                .unlockedBy(getHasName(ModBlocks.GUMI_PLUSH), has(ModBlocks.GUMI_PLUSH))
+                .save(recipeOutput);
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ModBlocks.GUMI_PLUSH_V6)
+                .requires(ModBlocks.GUMI_PLUSH)
+                .requires(Items.IRON_INGOT)
+                .requires(Items.IRON_INGOT)
+                .requires(Items.REDSTONE)
+                .unlockedBy(getHasName(ModBlocks.GUMI_PLUSH), has(ModBlocks.GUMI_PLUSH))
+                .save(recipeOutput);
+        //KAITO
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.KAITO_PLUSH)
+                .pattern("121")
+                .pattern(" 3 ")
+                .define('1', Blocks.BLUE_WOOL)
+                .define('2', Blocks.WHITE_WOOL)
+                .define('3', Blocks.ORANGE_WOOL)
+                .group("")
+                .unlockedBy("has_blue_wool", has(Blocks.BLUE_WOOL))
+                .unlockedBy("has_white_wool", has(Blocks.WHITE_WOOL))
+                .unlockedBy("has_green_wool", has(Blocks.ORANGE_WOOL))
+                .save(recipeOutput);
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ModBlocks.KAITO_PLUSH_V3)
+                .requires(ModBlocks.KAITO_PLUSH)
+                .requires(Items.IRON_INGOT)
+                .unlockedBy(getHasName(ModBlocks.KAITO_PLUSH), has(ModBlocks.KAITO_PLUSH))
+                .save(recipeOutput);
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ModBlocks.KAITO_PLUSH_V4)
+                .requires(ModBlocks.KAITO_PLUSH)
+                .requires(Items.IRON_INGOT)
+                .requires(Items.IRON_INGOT)
+                .unlockedBy(getHasName(ModBlocks.KAITO_PLUSH), has(ModBlocks.KAITO_PLUSH))
                 .save(recipeOutput);
 /*
 		ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.AIKO_PLUSH)

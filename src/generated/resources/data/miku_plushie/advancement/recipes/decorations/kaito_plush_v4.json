@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_kaito_plush": {
+      "conditions": {
+        "items": [
+          {
+            "items": "miku_plushie:kaito_plush"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "miku_plushie:kaito_plush_v4"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_kaito_plush"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "miku_plushie:kaito_plush_v4"
+    ]
+  }
+}

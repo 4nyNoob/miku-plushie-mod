@@ -91,6 +91,30 @@ public class ModLootTableProvider extends BlockLootSubProvider {
         dropOther(ModBlocks.KONOHA_PLUSH.get(), ModItems.KONOHA_PLUSH.get());
         dropOther(ModBlocks.LUKA_PLUSH.get(), ModItems.LUKA_PLUSH.get());
         dropOther(ModBlocks.TETO_PLUSH_SOME_MORE_OF_THAT_SONG.get(), ModItems.TETO_PICKAXE_SOME_MORE_OF_THAT_SONG.get());
+        dropOther(ModBlocks.TETO_PLUSH_LOBSTER.get(), ModItems.TETO_PLUSH_LOBSTER.get());
+        dropOther(ModBlocks.MIKU_PLUSH_HOLLOW_KNIGHT.get(), ModItems.MIKU_PLUSH_HOLLOW_KNIGHT.get());
+        dropOther(ModBlocks.MIKU_PLUSH_HORNET.get(), ModItems.MIKU_PLUSH_HORNET.get());
+        dropOther(ModBlocks.TETO_PLUSH_SYNTHV.get(), ModItems.TETO_PLUSH_SYNTHV.get());
+        dropOther(ModBlocks.MIKU_PLUSH_WORLD_IS_MINE.get(), ModItems.MIKU_PLUSH_WORLD_IS_MINE.get());
+        dropOther(ModBlocks.MIKU_PLUSH_ROLLING_GIRL.get(), ModItems.MIKU_PLUSH_ROLLING_GIRL.get());
+        dropOther(ModBlocks.TETO_PLUSH_SPOKEN_FOR.get(), ModItems.TETO_PLUSH_SPOKEN_FOR.get());
+        dropOther(ModBlocks.MEIKO_PLUSH.get(), ModItems.MEIKO_PLUSH.get());
+        dropOther(ModBlocks.MEIKO_PLUSH_V3.get(), ModItems.MEIKO_PLUSH_V3.get());
+        dropOther(ModBlocks.MEIKO_PLUSH_V4.get(), ModItems.MEIKO_PLUSH_V4.get());
+        dropOther(ModBlocks.GUMI_PLUSH.get(), ModItems.GUMI_PLUSH.get());
+        dropOther(ModBlocks.GUMI_PLUSH_V3.get(), ModItems.GUMI_PLUSH_V3.get());
+        dropOther(ModBlocks.GUMI_PLUSH_V4.get(), ModItems.GUMI_PLUSH_V4.get());
+        dropOther(ModBlocks.GUMI_PLUSH_V6.get(), ModItems.GUMI_PLUSH_V6.get());
+        dropOther(ModBlocks.MIKU_PLUSH_DEEP_SEA_GIRL.get(), ModItems.MIKU_PLUSH_DEEP_SEA_GIRL.get());
+        dropOther(ModBlocks.MIKU_PLUSH_LUCARIO_Z.get(), ModItems.MIKU_PLUSH_LUCARIO_Z.get());
+        dropOther(ModBlocks.TETO_PLUSH_PPPP.get(), ModItems.TETO_PLUSH_PPPP.get());
+        dropOther(ModBlocks.MIKU_PLUSH_PPPP.get(), ModItems.MIKU_PLUSH_PPPP.get());
+        dropOther(ModBlocks.TETO_PLUSH_SHRIMP.get(), ModItems.TETO_PLUSH_SHRIMP.get());
+        dropOther(ModBlocks.MIKU_PLUSH_LINK.get(), ModItems.MIKU_PLUSH_LINK.get());
+        dropOther(ModBlocks.MIKU_PLUSH_RENAISSANCE.get(), ModItems.MIKU_PLUSH_RENAISSANCE.get());
+        dropOther(ModBlocks.KAITO_PLUSH.get(), ModItems.KAITO_PLUSH.get());
+        dropOther(ModBlocks.KAITO_PLUSH_V3.get(), ModItems.KAITO_PLUSH_V3.get());
+        dropOther(ModBlocks.KAITO_PLUSH_V4.get(), ModItems.KAITO_PLUSH_V4.get());
 		//use dropSelf() for further entries
 	}
 
