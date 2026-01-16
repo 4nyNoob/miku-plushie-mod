@@ -10,17 +10,17 @@ import com.google.common.collect.ImmutableMap;
 import com.sun.jna.platform.win32.OaIdl;
 import com.sun.net.httpserver.Authenticator;
 import net.minecraft.block.Blocks;
-import net.minecraft.entity.EntityDimensions;
-import net.minecraft.entity.EntityPose;
-import net.minecraft.entity.EntityType;
-import net.minecraft.entity.EquipmentSlot;
+import net.minecraft.entity.*;
 import net.minecraft.entity.ai.goal.*;
 import net.minecraft.entity.attribute.DefaultAttributeContainer;
 import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.entity.data.DataTracker;
 import net.minecraft.entity.data.TrackedData;
 import net.minecraft.entity.data.TrackedDataHandlerRegistry;
+import net.minecraft.entity.mob.CreeperEntity;
+import net.minecraft.entity.mob.GhastEntity;
 import net.minecraft.entity.mob.MobEntity;
+import net.minecraft.entity.mob.WaterCreatureEntity;
 import net.minecraft.entity.passive.PassiveEntity;
 import net.minecraft.entity.passive.TameableEntity;
 import net.minecraft.entity.player.PlayerEntity;
@@ -51,6 +51,7 @@ import java.awt.font.TextHitInfo;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.function.Predicate;
 
 public class AbstractPlushEntity extends TameableEntity implements GeoEntity {
 
@@ -88,8 +89,17 @@ public class AbstractPlushEntity extends TameableEntity implements GeoEntity {
         this.goalSelector.add(8, new LookAtEntityGoal(this, PlayerEntity.class, 8F));
         this.goalSelector.add(9, new LookAroundGoal(this));
         this.targetSelector.add(1, new TrackOwnerAttackerGoal(this));
-        this.targetSelector.add(2, new RevengeGoal(this));
-        this.targetSelector.add(3, new AttackWithOwnerGoal(this));
+        this.targetSelector.add(2, new AttackWithOwnerGoal(this));
+        this.targetSelector.add(3, new RevengeGoal(this).setGroupRevenge());
+    }
+
+    //DO NOT ATTACK SOME ENTITIES
+    @Override
+    public boolean canAttackWithOwner(LivingEntity target, LivingEntity owner) {
+        return !(target instanceof AbstractPlushEntity)
+            && !(target instanceof CreeperEntity)
+            && !(target instanceof GhastEntity)
+            ;
     }
 
     //ATTRIBUTES
