@@ -13,10 +13,8 @@ import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.client.particle.v1.ParticleFactoryRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
 import net.minecraft.client.render.RenderLayer;
-import software.bernie.geckolib.loading.math.MathParser;
-import software.bernie.geckolib.loading.math.MolangQueries;
-
-import java.util.function.DoubleSupplier;
+import software.bernie.geckolib.core.molang.LazyVariable;
+import software.bernie.geckolib.core.molang.MolangParser;
 
 @Environment(EnvType.CLIENT)
 public class MikuPlushieClient implements ClientModInitializer {
@@ -41,17 +39,9 @@ public class MikuPlushieClient implements ClientModInitializer {
         MathParser.setVariable("query.miku.is_game", () -> 90 / Math.PI);
 
         //ENTITIES RENDERERS
-        EntityRendererRegistry.register(ModEntities.MIKU, MikuRender::new);
-        EntityRendererRegistry.register(ModEntities.TETO, TetoRender::new);
-        EntityRendererRegistry.register(ModEntities.AIKO, AikoRender::new);
-        EntityRendererRegistry.register(ModEntities.NERU, NeruRender::new);
-        EntityRendererRegistry.register(ModEntities.RIN, RinRender::new);
-        EntityRendererRegistry.register(ModEntities.LEN, LenRender::new);
-        EntityRendererRegistry.register(ModEntities.KONOHA, KonohaRender::new);
-        EntityRendererRegistry.register(ModEntities.LUKA, LukaRender::new);
-        EntityRendererRegistry.register(ModEntities.MEIKO, MeikoRender::new);
-        EntityRendererRegistry.register(ModEntities.GUMI, GumiRender::new);
-        EntityRendererRegistry.register(ModEntities.KAITO, KaitoRender::new);
+        for (EntityType<? extends AbstractPlushEntity> plushEntity : ModEntities.PLUSH_ENTITIES) {
+            EntityRendererRegistry.register(plushEntity, AbstractPlushRender::new);
+        }
 
         //PARTICLE
         ParticleFactoryRegistry.getInstance().register(ModParticles.MIKU_SPAWN, PlushSpawnParticle.Factory::new);

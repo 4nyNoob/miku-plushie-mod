@@ -1,6 +1,7 @@
 package com.any.mikuplushie.datagen;
 
 import com.any.mikuplushie.MikuPlushie;
+import com.any.mikuplushie.entity.AbstractPlushEntity;
 import com.any.mikuplushie.registry.ModEntities;
 import com.any.mikuplushie.registry.ModItems;
 import com.any.mikuplushie.util.ModUtil;
@@ -32,7 +33,7 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
     @Override
     protected void configure(RegistryWrapper.WrapperLookup wrapperLookup) {
 
-        List<EntityType<?>> plushEntities = ModEntities.PLUSH_ENTITIES;
+        List<EntityType<? extends AbstractPlushEntity>> plushEntities = ModEntities.PLUSH_ENTITIES;
 
         for (EntityType<?> plushEntity : plushEntities){
             String plushName = plushEntity.getUntranslatedName();

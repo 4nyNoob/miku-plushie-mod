@@ -3,9 +3,11 @@ package com.any.mikuplushie.registry;
 import com.any.mikuplushie.MikuPlushie;
 import com.any.mikuplushie.entity.*;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
-import net.minecraft.entity.Entity;
+import net.fabricmc.fabric.api.object.builder.v1.entity.FabricEntityTypeBuilder;
+import net.minecraft.entity.EntityDimensions;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.SpawnGroup;
+import net.minecraft.entity.mob.MobEntity;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
@@ -16,7 +18,7 @@ import java.util.List;
 public class ModEntities {
 
 
-    public static List<EntityType<?>> PLUSH_ENTITIES = new ArrayList<>();
+    public static List<EntityType<? extends AbstractPlushEntity>> PLUSH_ENTITIES = new ArrayList<>();
 
     public static final float PLUSH_WIDTH = 0.6F;
     public static final float PLUSH_HEIGHT = 1F;
@@ -48,9 +50,8 @@ public class ModEntities {
 
     public static void initialize(){
         MikuPlushie.LOGGER.info("Registering " + MikuPlushie.MOD_ID + " Entities");
-        for (EntityType<?> entity : PLUSH_ENTITIES) {
-            //noinspection unchecked
-            FabricDefaultAttributeRegistry.register((EntityType<? extends AbstractPlushEntity>) entity, AbstractPlushEntity.createAttributes());
+        for (EntityType<? extends AbstractPlushEntity> entity : PLUSH_ENTITIES) {
+            FabricDefaultAttributeRegistry.register(entity, AbstractPlushEntity.createAttributes());
         }
     }
 }
