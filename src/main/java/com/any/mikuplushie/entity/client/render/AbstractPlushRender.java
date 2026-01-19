@@ -1,7 +1,7 @@
 package com.any.mikuplushie.entity.client.render;
 
-import com.any.mikuplushie.entity.TetoEntity;
-import com.any.mikuplushie.entity.client.model.TetoModel;
+import com.any.mikuplushie.entity.AbstractPlushEntity;
+import com.any.mikuplushie.entity.client.model.AbstractPlushModel;
 import com.any.mikuplushie.registry.ModBlocks;
 import com.any.mikuplushie.util.ModUtil;
 import net.minecraft.client.render.RenderLayer;
@@ -20,7 +20,7 @@ import software.bernie.geckolib.cache.object.GeoBone;
 import software.bernie.geckolib.renderer.GeoEntityRenderer;
 import software.bernie.geckolib.renderer.layer.BlockAndItemGeoLayer;
 
-public class TetoRender extends GeoEntityRenderer<TetoEntity> {
+public class AbstractPlushRender extends GeoEntityRenderer<AbstractPlushEntity> {
 
     public static final String LEFT_HAND = "left_hand";
     public static final String RIGHT_HAND = "right_hand";
@@ -28,24 +28,24 @@ public class TetoRender extends GeoEntityRenderer<TetoEntity> {
     protected ItemStack mainHandItem;
     protected ItemStack offHandItem;
 
-    public TetoRender(EntityRendererFactory.Context renderManager) {
-        super(renderManager, new TetoModel());
+    public AbstractPlushRender(EntityRendererFactory.Context renderManager) {
+        super(renderManager, new AbstractPlushModel());
 
         // Add some held item rendering
         addRenderLayer(new BlockAndItemGeoLayer<>(this) {
             @Nullable
-            public ItemStack getStackForBone(GeoBone bone, TetoEntity animatable) {
+            public ItemStack getStackForBone(GeoBone bone, AbstractPlushEntity animatable) {
                 // Retrieve the items in the entity's hands for the relevant bone
                 return switch (bone.getName()) {
                     case LEFT_HAND -> animatable.isLeftHanded() ?
-                        TetoRender.this.mainHandItem : TetoRender.this.offHandItem;
+                        AbstractPlushRender.this.mainHandItem : AbstractPlushRender.this.offHandItem;
                     case RIGHT_HAND -> animatable.isLeftHanded() ?
-                        TetoRender.this.offHandItem : TetoRender.this.mainHandItem;
+                        AbstractPlushRender.this.offHandItem : AbstractPlushRender.this.mainHandItem;
                     default -> null;
                 };
             }
 
-            public ModelTransformationMode getTransformTypeForStack(GeoBone bone, ItemStack stack, TetoEntity animatable) {
+            public ModelTransformationMode getTransformTypeForStack(GeoBone bone, ItemStack stack, AbstractPlushEntity animatable) {
                 // Apply the camera transform for the given hand
                 return switch (bone.getName()) {
                     case LEFT_HAND, RIGHT_HAND -> ModelTransformationMode.THIRD_PERSON_RIGHT_HAND;
@@ -54,15 +54,15 @@ public class TetoRender extends GeoEntityRenderer<TetoEntity> {
             }
 
             // Do some quick render modifications depending on what the item is
-            public void renderStackForBone(MatrixStack poseStack, GeoBone bone, ItemStack stack, TetoEntity animatable,
+            public void renderStackForBone(MatrixStack poseStack, GeoBone bone, ItemStack stack, AbstractPlushEntity animatable,
                                             VertexConsumerProvider bufferSource, float partialTick, int packedLight, int packedOverlay) {
-                if (stack == TetoRender.this.mainHandItem) {
+                if (stack == AbstractPlushRender.this.mainHandItem) {
                     poseStack.multiply(RotationAxis.POSITIVE_X.rotationDegrees(-90f));
 
                     if (stack.getItem() instanceof ShieldItem)
                         poseStack.translate(0, 0.125, -0.25);
                 }
-                else if (stack == TetoRender.this.offHandItem) {
+                else if (stack == AbstractPlushRender.this.offHandItem) {
                     poseStack.multiply(RotationAxis.POSITIVE_X.rotationDegrees(-90f));
 
                     if (stack.getItem() instanceof ShieldItem) {
@@ -77,9 +77,12 @@ public class TetoRender extends GeoEntityRenderer<TetoEntity> {
     }
 
     @Override
-    public RenderLayer getRenderType(TetoEntity animatable, Identifier texture, VertexConsumerProvider bufferSource, float partialTick) {
+    public RenderLayer getRenderType(AbstractPlushEntity animatable, Identifier texture, VertexConsumerProvider bufferSource, float partialTick) {
         //USE TRANSLUCENT RENDER ON SPECIFIC VARIATION
-        if (animatable.getVariant().equals(ModUtil.getBlockIdFromBlock(ModBlocks.TETO_PLUSH_WHATCHACALLITSNAME))){
+        if (
+            animatable.getVariant().equals(ModUtil.getBlockIdFromBlock(ModBlocks.MIKU_PLUSH_GHOST)) ||
+            animatable.getVariant().equals(ModUtil.getBlockIdFromBlock(ModBlocks.TETO_PLUSH_WHATCHACALLITSNAME))
+        ){
             return RenderLayer.getEntityTranslucent(texture);
         } else {
             return super.getRenderType(animatable, texture, bufferSource, partialTick);
@@ -87,7 +90,10 @@ public class TetoRender extends GeoEntityRenderer<TetoEntity> {
     }
 
     @Override
-    public void preRender(MatrixStack poseStack, TetoEntity animatable, BakedGeoModel model, VertexConsumerProvider bufferSource, VertexConsumer buffer, boolean isReRender, float partialTick, int packedLight, int packedOverlay, float red, float green, float blue, float alpha) {
+    public void preRender(
+        MatrixStack poseStack, AbstractPlushEntity animatable, BakedGeoModel model, VertexConsumerProvider bufferSource, VertexConsumer buffer,
+        boolean isReRender, float partialTick, int packedLight, int packedOverlay, float red, float green, float blue, float alpha
+    ) {
         super.preRender(poseStack, animatable, model, bufferSource, buffer, isReRender, partialTick, packedLight, packedOverlay, red, green, blue, alpha);
         this.mainHandItem = animatable.getMainHandStack();
         this.offHandItem = animatable.getOffHandStack();

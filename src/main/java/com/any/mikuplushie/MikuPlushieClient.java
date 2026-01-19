@@ -1,5 +1,6 @@
 package com.any.mikuplushie;
 
+import com.any.mikuplushie.entity.AbstractPlushEntity;
 import com.any.mikuplushie.entity.client.render.*;
 import com.any.mikuplushie.particle.PlushSpawnParticle;
 import com.any.mikuplushie.registry.ModBlocks;
@@ -12,6 +13,7 @@ import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.client.particle.v1.ParticleFactoryRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
 import net.minecraft.client.render.RenderLayer;
+import net.minecraft.entity.EntityType;
 import software.bernie.geckolib.core.molang.LazyVariable;
 import software.bernie.geckolib.core.molang.MolangParser;
 
@@ -38,17 +40,9 @@ public class MikuPlushieClient implements ClientModInitializer {
         MolangParser.INSTANCE.register(new LazyVariable("q.miku.is_game", 1));
 
         //ENTITIES RENDERERS
-        EntityRendererRegistry.register(ModEntities.MIKU, MikuRender::new);
-        EntityRendererRegistry.register(ModEntities.TETO, TetoRender::new);
-        EntityRendererRegistry.register(ModEntities.AIKO, AikoRender::new);
-        EntityRendererRegistry.register(ModEntities.NERU, NeruRender::new);
-        EntityRendererRegistry.register(ModEntities.RIN, RinRender::new);
-        EntityRendererRegistry.register(ModEntities.LEN, LenRender::new);
-        EntityRendererRegistry.register(ModEntities.KONOHA, KonohaRender::new);
-        EntityRendererRegistry.register(ModEntities.LUKA, LukaRender::new);
-        EntityRendererRegistry.register(ModEntities.MEIKO, MeikoRender::new);
-        EntityRendererRegistry.register(ModEntities.GUMI, GumiRender::new);
-        EntityRendererRegistry.register(ModEntities.KAITO, KaitoRender::new);
+        for (EntityType<? extends AbstractPlushEntity> plushEntity : ModEntities.PLUSH_ENTITIES) {
+            EntityRendererRegistry.register(plushEntity, AbstractPlushRender::new);
+        }
 
         //PARTICLE
         ParticleFactoryRegistry.getInstance().register(ModParticles.MIKU_SPAWN, PlushSpawnParticle.Factory::new);
