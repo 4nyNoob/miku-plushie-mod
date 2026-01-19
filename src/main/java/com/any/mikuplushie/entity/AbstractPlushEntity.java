@@ -22,6 +22,7 @@ import net.minecraft.entity.data.TrackedDataHandlerRegistry;
 import net.minecraft.entity.mob.CreeperEntity;
 import net.minecraft.entity.mob.GhastEntity;
 import net.minecraft.entity.mob.MobEntity;
+import net.minecraft.entity.mob.WaterCreatureEntity;
 import net.minecraft.entity.passive.PassiveEntity;
 import net.minecraft.entity.passive.TameableEntity;
 import net.minecraft.entity.player.PlayerEntity;
@@ -49,12 +50,16 @@ import software.bernie.geckolib.animation.AnimationController;
 import software.bernie.geckolib.animation.RawAnimation;
 import software.bernie.geckolib.util.GeckoLibUtil;
 
+import java.awt.font.TextHitInfo;
 import java.util.List;
 import java.util.Map;
+import java.util.Objects;
+import java.util.function.Predicate;
 
 public class AbstractPlushEntity extends TameableEntity implements GeoEntity {
 
     private static final TrackedData<Integer> SPAWN_AGE = DataTracker.registerData(AbstractPlushEntity.class, TrackedDataHandlerRegistry.INTEGER);
+    private static final TrackedData<Integer> VARIANT = DataTracker.registerData(AbstractPlushEntity.class, TrackedDataHandlerRegistry.INTEGER);
 
     //DANCE GLOBALS
     boolean songPlaying;
@@ -360,35 +365,59 @@ public class AbstractPlushEntity extends TameableEntity implements GeoEntity {
         return this.songPlaying;
     }
 
-    //SELECT RANDOM DANCE
+    //NEARBY SONG PLAYING
     @Override
     public void setNearbySongPlaying(BlockPos songPosition, boolean playing) {
         this.songSource = songPosition;
         this.songPlaying = playing;
     }
 
-    //DATA TRACKER
+    //LIST OF VARIANTS
+    protected List<String> getVariantList(){
+        return null;
+    }
+
+    //GET THE VARIANT DATA TRACKER
+    protected TrackedData<Integer> getVariantDataTracker(){
+        return VARIANT;
+    }
+
+    //GET DATA TRACKER VALUE
+    private int getTrackedVariant() {
+        return this.dataTracker.get(this.getVariantDataTracker());
+    }
+
+    //GET VARIANT NAME
+    public String getVariant() {
+        return this.getVariantList().get(this.dataTracker.get(this.getVariantDataTracker()));
+    }
+
+    //SET VARIANT BY ID
+    public void setVariant(Integer variant) {
+        this.dataTracker.set(this.getVariantDataTracker(), variant/* & 255*/);
+    }
+
+    //SET UP DATA TRACKER
     @Override
     protected void initDataTracker(DataTracker.Builder builder) {
         super.initDataTracker(builder);
         builder.add(SPAWN_AGE, 0);
+        builder.add(this.getVariantDataTracker(), 0);
     }
 
+    //LOAD AND SAVE NBT DATA
     @Override
     public void readCustomDataFromNbt(NbtCompound nbt) {
         super.readCustomDataFromNbt(nbt);
         this.dataTracker.set(SPAWN_AGE, nbt.getInt("SpawnAge"));
-    }
-
-    @Override
-    public boolean isBreedingItem(ItemStack stack) {
-        return false;
+        this.dataTracker.set(this.getVariantDataTracker(), nbt.getInt("Variant"));
     }
 
     @Override
     public void writeCustomDataToNbt(NbtCompound nbt) {
         super.writeCustomDataToNbt(nbt);
         nbt.putInt("SpawnAge", Math.min(this.age, 11));
+        nbt.putInt("Variant", this.getTrackedVariant());
     }
 
     //NO CHILD
@@ -398,6 +427,10 @@ public class AbstractPlushEntity extends TameableEntity implements GeoEntity {
     }
 
     public void setVariantByBlock(String variant) {
+        for (int variation = 0; variation < this.getVariantList().size(); variation++) {
+            if (this.getVariantList().get(variation).equals(variant))
+                this.dataTracker.set(this.getVariantDataTracker(), variation);
+        }
     }
 
 }
