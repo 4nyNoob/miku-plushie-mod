@@ -1,7 +1,7 @@
 package com.any.mikuplushie.entity;
 
 import com.any.mikuplushie.entity.goals.MikuDelayedAttackGoal;
-import com.any.mikuplushie.entity.variant.TetoVariants;
+import com.any.mikuplushie.entity.variant.PlushVariants;
 import com.any.mikuplushie.registry.ModBlocks;
 import com.any.mikuplushie.registry.ModEntities;
 import com.any.mikuplushie.registry.ModItems;
@@ -372,9 +372,19 @@ public class AbstractPlushEntity extends TameableEntity implements GeoEntity {
         this.songPlaying = playing;
     }
 
+    public String getPlushName(){
+        return this.getDefaultName().toString().split("[.]")[2].split("'")[0];
+    }
+
     //LIST OF VARIANTS
     protected List<String> getVariantList(){
-        return null;
+        List<String> variantList = null;
+        for (List<String> variants : PlushVariants.ALL_PLUSH_VARIANTS) {
+            if (variants.contains(this.getPlushName())) {
+                variantList = variants;
+            }
+        }
+        return variantList;
     }
 
     //GET THE VARIANT DATA TRACKER

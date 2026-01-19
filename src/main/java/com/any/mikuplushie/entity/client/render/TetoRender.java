@@ -1,10 +1,9 @@
 package com.any.mikuplushie.entity.client.render;
 
-import com.any.mikuplushie.entity.MikuEntity;
 import com.any.mikuplushie.entity.TetoEntity;
 import com.any.mikuplushie.entity.client.model.TetoModel;
-import com.any.mikuplushie.entity.variant.MikuVariant;
-import com.any.mikuplushie.entity.variant.TetoVariant;
+import com.any.mikuplushie.registry.ModBlocks;
+import com.any.mikuplushie.util.ModUtil;
 import net.minecraft.client.render.RenderLayer;
 import net.minecraft.client.render.VertexConsumer;
 import net.minecraft.client.render.VertexConsumerProvider;
@@ -80,7 +79,7 @@ public class TetoRender extends GeoEntityRenderer<TetoEntity> {
     @Override
     public RenderLayer getRenderType(TetoEntity animatable, Identifier texture, VertexConsumerProvider bufferSource, float partialTick) {
         //USE TRANSLUCENT RENDER ON SPECIFIC VARIATION
-        if (animatable.getVariant().equals(TetoVariant.TETO_PLUSH_WHATCHACALLITSNAME.getBlock())){
+        if (animatable.getVariant().equals(ModUtil.getBlockIdFromBlock(ModBlocks.TETO_PLUSH_WHATCHACALLITSNAME))){
             return RenderLayer.getEntityTranslucent(texture);
         } else {
             return super.getRenderType(animatable, texture, bufferSource, partialTick);

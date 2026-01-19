@@ -2,7 +2,8 @@ package com.any.mikuplushie.entity.client.render;
 
 import com.any.mikuplushie.entity.MikuEntity;
 import com.any.mikuplushie.entity.client.model.MikuModel;
-import com.any.mikuplushie.entity.variant.MikuVariant;
+import com.any.mikuplushie.registry.ModBlocks;
+import com.any.mikuplushie.util.ModUtil;
 import net.minecraft.client.render.RenderLayer;
 import net.minecraft.client.render.VertexConsumer;
 import net.minecraft.client.render.VertexConsumerProvider;
@@ -78,7 +79,7 @@ public class MikuRender extends GeoEntityRenderer<MikuEntity> {
     @Override
     public RenderLayer getRenderType(MikuEntity animatable, Identifier texture, VertexConsumerProvider bufferSource, float partialTick) {
         //USE TRANSLUCENT RENDER ON SPECIFIC VARIATION
-        if (animatable.getVariant().equals(MikuVariant.MIKU_PLUSH_GHOST.getBlock())){
+        if (animatable.getVariant().equals(ModUtil.getBlockIdFromBlock(ModBlocks.MIKU_PLUSH_GHOST))){
             return RenderLayer.getEntityTranslucent(texture);
         } else {
             return super.getRenderType(animatable, texture, bufferSource, partialTick);

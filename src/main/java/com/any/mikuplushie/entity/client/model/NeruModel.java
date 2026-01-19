@@ -2,12 +2,8 @@ package com.any.mikuplushie.entity.client.model;
 
 import com.any.mikuplushie.MikuPlushie;
 import com.any.mikuplushie.entity.NeruEntity;
-import com.any.mikuplushie.entity.TetoEntity;
 import com.any.mikuplushie.entity.client.model.animations.PlushAnimations;
-import com.any.mikuplushie.entity.variant.NeruVariant;
 import net.minecraft.util.Identifier;
-import software.bernie.geckolib.constant.DataTickets;
-import software.bernie.geckolib.core.animatable.model.CoreGeoBone;
 import software.bernie.geckolib.core.animation.AnimationState;
 import software.bernie.geckolib.model.GeoModel;
 

@@ -2,7 +2,6 @@ package com.any.mikuplushie.entity.client.render;
 
 import com.any.mikuplushie.entity.MeikoEntity;
 import com.any.mikuplushie.entity.client.model.MeikoModel;
-import com.any.mikuplushie.entity.variant.MeikoVariant;
 import net.minecraft.client.render.RenderLayer;
 import net.minecraft.client.render.VertexConsumer;
 import net.minecraft.client.render.VertexConsumerProvider;
@@ -77,12 +76,7 @@ public class MeikoRender extends GeoEntityRenderer<MeikoEntity> {
 
     @Override
     public RenderLayer getRenderType(MeikoEntity animatable, Identifier texture, VertexConsumerProvider bufferSource, float partialTick) {
-        //USE TRANSLUCENT RENDER ON SPECIFIC VARIATION
-//        if (animatable.getMeikoVariant().equals(MeikoVariant.MEIKO_PLUSH_WHATCHACALLITSNAME)){
-//            return RenderLayer.getEntityTranslucent(texture);
-//        } else {
             return super.getRenderType(animatable, texture, bufferSource, partialTick);
-//        }
     }
 
     @Override
