@@ -1,6 +1,7 @@
 package com.any.mikuplushie.entity;
 
 import com.any.mikuplushie.entity.variant.TetoVariant;
+import com.any.mikuplushie.entity.variant.TetoVariants;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.data.DataTracker;
 import net.minecraft.entity.data.TrackedData;
@@ -15,21 +16,22 @@ import software.bernie.geckolib.core.animation.RawAnimation;
 import software.bernie.geckolib.util.GeckoLibUtil;
 
 import java.util.List;
+import java.util.function.Predicate;
 
 public class TetoEntity extends AbstractPlushEntity {
 
-    private static final TrackedData<Integer> TETO_VARIANT = DataTracker.registerData(TetoEntity.class, TrackedDataHandlerRegistry.INTEGER);
+//    private static final TrackedData<Integer> TETO_VARIANT = DataTracker.registerData(TetoEntity.class, TrackedDataHandlerRegistry.INTEGER);
 
-    private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
+//    private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
 
     public TetoEntity(EntityType<? extends TameableEntity> entityType, World world) {
         super(entityType, world);
     }
 
-    @Override
-    public AnimatableInstanceCache getAnimatableInstanceCache() {
-        return this.cache;
-    }
+//    @Override
+//    public AnimatableInstanceCache getAnimatableInstanceCache() {
+//        return this.cache;
+//    }
 
     //DANCE ANIMATIONS
     @Override
@@ -42,42 +44,49 @@ public class TetoEntity extends AbstractPlushEntity {
         );
     }
 
-    //TRACK VARIANT
+//    //TRACK VARIANT
+//    @Override
+//    protected void initDataTracker() {
+//        super.initDataTracker();
+//        this.dataTracker.startTracking(TETO_VARIANT, 0);
+//    }
+
     @Override
-    protected void initDataTracker() {
-        super.initDataTracker();
-        this.dataTracker.startTracking(TETO_VARIANT, 0);
+    protected List<String> getVariantList() {
+        return TetoVariants.VARIANTS;
     }
+
+//    @Override
+//    protected TrackedData<Integer> getVariantDataTracker() {
+//        return TETO_VARIANT;
+//    }
 
     //TETO VARIANTS
-    public String getVariant() {
-        return TetoVariant.byId(this.getTypeVariant()).getBlock();
-    }
 
-    private int getTypeVariant() {
-        return this.dataTracker.get(TETO_VARIANT);
-    }
+//    private int getTypeVariant() {
+//        return this.dataTracker.get(TETO_VARIANT);
+//    }
 
-    public void setVariant(TetoVariant variant) {
-        this.dataTracker.set(TETO_VARIANT, variant.getId()/* & 255*/);
-    }
+//    public void setVariant(Integer variant) {
+//        this.dataTracker.set(TETO_VARIANT, variant/* & 255*/);
+//    }
 
-    public void setVariantByBlock(String variant) {
-        for (int variation = 0; variation < TetoVariant.values().length; variation++) {
-            if (TetoVariant.byId(variation).getBlock().equals(variant))
-                this.dataTracker.set(TETO_VARIANT, variation);
-        }
-    }
+//    public void setVariantByBlock(String variant) {
+//        for (int variation = 0; variation < TetoVariants.VARIANTS.size(); variation++) {
+//            if (TetoVariants.VARIANTS.get(variation).equals(variant))
+//                this.dataTracker.set(this.getVariantDataTracker(), variation);
+//        }
+//    }
 
-    @Override
-    public void readCustomDataFromNbt(NbtCompound nbt) {
-        super.readCustomDataFromNbt(nbt);
-        this.dataTracker.set(TETO_VARIANT, nbt.getInt("Variant"));
-    }
-
-    @Override
-    public void writeCustomDataToNbt(NbtCompound nbt) {
-        super.writeCustomDataToNbt(nbt);
-        nbt.putInt("Variant", this.getTypeVariant());
-    }
+//    @Override
+//    public void readCustomDataFromNbt(NbtCompound nbt) {
+//        super.readCustomDataFromNbt(nbt);
+//        this.dataTracker.set(TETO_VARIANT, nbt.getInt("Variant"));
+//    }
+//
+//    @Override
+//    public void writeCustomDataToNbt(NbtCompound nbt) {
+//        super.writeCustomDataToNbt(nbt);
+//        nbt.putInt("Variant", this.getTypeVariant());
+//    }
 }
