@@ -1,30 +1,23 @@
 package com.any.mikuplushie.entity;
 
 import com.any.mikuplushie.entity.goals.EatLeekGoal;
-import com.any.mikuplushie.entity.variant.MikuVariant;
 import com.any.mikuplushie.registry.ModBlocks;
 import net.minecraft.entity.EntityType;
-import net.minecraft.entity.data.DataTracker;
-import net.minecraft.entity.data.TrackedData;
-import net.minecraft.entity.data.TrackedDataHandlerRegistry;
 import net.minecraft.entity.passive.TameableEntity;
-import net.minecraft.nbt.NbtCompound;
 import net.minecraft.particle.BlockStateParticleEffect;
 import net.minecraft.particle.ParticleTypes;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
-import software.bernie.geckolib.animatable.instance.AnimatableInstanceCache;
-import software.bernie.geckolib.animation.AnimatableManager;
-import software.bernie.geckolib.animation.AnimationController;
-import software.bernie.geckolib.animation.PlayState;
-import software.bernie.geckolib.animation.RawAnimation;
+import software.bernie.geckolib.core.animatable.instance.AnimatableInstanceCache;
+import software.bernie.geckolib.core.animation.AnimatableManager;
+import software.bernie.geckolib.core.animation.AnimationController;
+import software.bernie.geckolib.core.animation.RawAnimation;
+import software.bernie.geckolib.core.object.PlayState;
 import software.bernie.geckolib.util.GeckoLibUtil;
 
 import java.util.List;
 
 public class MikuEntity extends AbstractPlushEntity {
-
-    private static final TrackedData<Integer> MIKU_VARIANT = DataTracker.registerData(MikuEntity.class, TrackedDataHandlerRegistry.INTEGER);
 
     private static final int MAX_LEEK_TIMER = 40;
     private int eatLeekTimer;
@@ -72,13 +65,6 @@ public class MikuEntity extends AbstractPlushEntity {
     @Override
     public AnimatableInstanceCache getAnimatableInstanceCache() {
         return this.cache;
-    }
-
-    //TRACK VARIANT
-    @Override
-    protected void initDataTracker(DataTracker.Builder builder) {
-        super.initDataTracker(builder);
-        builder.add(MIKU_VARIANT, 0);
     }
 
     //UPDATE EAT LEEK GOAL
@@ -129,35 +115,4 @@ public class MikuEntity extends AbstractPlushEntity {
         this.eatingLeek = eatingLeek;
     }
 
-    //MIKU VARIANTS
-    public String getVariant() {
-        return MikuVariant.byId(this.getTypeVariant()).getBlock();
-    }
-
-    private int getTypeVariant() {
-        return this.dataTracker.get(MIKU_VARIANT);
-    }
-
-    public void setVariant(MikuVariant variant) {
-        this.dataTracker.set(MIKU_VARIANT, variant.getId()/* & 255*/);
-    }
-
-    public void setVariantByBlock(String variant) {
-        for (int variation = 0; variation < MikuVariant.values().length; variation++) {
-            if (MikuVariant.byId(variation).getBlock().equals(variant))
-                this.dataTracker.set(MIKU_VARIANT, variation);
-        }
-    }
-
-    @Override
-    public void readCustomDataFromNbt(NbtCompound nbt) {
-        super.readCustomDataFromNbt(nbt);
-        this.dataTracker.set(MIKU_VARIANT, nbt.getInt("Variant"));
-    }
-
-    @Override
-    public void writeCustomDataToNbt(NbtCompound nbt) {
-        super.writeCustomDataToNbt(nbt);
-        nbt.putInt("Variant", this.getTypeVariant());
-    }
 }

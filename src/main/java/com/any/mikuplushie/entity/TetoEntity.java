@@ -3,7 +3,7 @@ package com.any.mikuplushie.entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.passive.TameableEntity;
 import net.minecraft.world.World;
-import software.bernie.geckolib.animation.RawAnimation;
+import software.bernie.geckolib.core.animation.RawAnimation;
 
 import java.util.List;
 

@@ -76,12 +76,7 @@ public class MeikoRender extends GeoEntityRenderer<MeikoEntity> {
 
     @Override
     public RenderLayer getRenderType(MeikoEntity animatable, Identifier texture, VertexConsumerProvider bufferSource, float partialTick) {
-        //USE TRANSLUCENT RENDER ON SPECIFIC VARIATION
-//        if (animatable.getMeikoVariant().equals(MeikoVariant.MEIKO_PLUSH_WHATCHACALLITSNAME)){
-//            return RenderLayer.getEntityTranslucent(texture);
-//        } else {
             return super.getRenderType(animatable, texture, bufferSource, partialTick);
-//        }
     }
 
     @Override

@@ -1,5 +1,6 @@
 package com.any.mikuplushie;
 
+import com.any.mikuplushie.entity.variant.PlushVariants;
 import com.any.mikuplushie.registry.*;
 import com.any.mikuplushie.worldgen.generators.ModWorldGeneration;
 import net.fabricmc.api.ModInitializer;
@@ -22,6 +23,7 @@ public class MikuPlushie implements ModInitializer {
 		ModVillagerTrades.initialize();
 		ModParticles.initialize();
 		ModWorldGeneration.generateModWorldGeneration();
+		PlushVariants.initialize();
         LOGGER.info("Miku: (^v^)/ Hi!!!");
 	}
 }
