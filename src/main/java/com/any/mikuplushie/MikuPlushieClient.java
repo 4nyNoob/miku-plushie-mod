@@ -13,8 +13,8 @@ import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.client.particle.v1.ParticleFactoryRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
 import net.minecraft.client.render.RenderLayer;
-import software.bernie.geckolib.core.molang.LazyVariable;
-import software.bernie.geckolib.core.molang.MolangParser;
+import net.minecraft.entity.EntityType;
+import software.bernie.geckolib.loading.math.MathParser;
 
 @Environment(EnvType.CLIENT)
 public class MikuPlushieClient implements ClientModInitializer {

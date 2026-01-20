@@ -4,6 +4,7 @@ import com.any.mikuplushie.MikuPlushie;
 import com.any.mikuplushie.entity.*;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricEntityTypeBuilder;
+import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityDimensions;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.SpawnGroup;
@@ -44,7 +45,8 @@ public class ModEntities {
                 .eyeHeight(0.85F)
                 .build(name)
         );
-        PLUSH_ENTITIES.add(entityType);
+        //noinspection unchecked
+        PLUSH_ENTITIES.add((EntityType<? extends AbstractPlushEntity>) entityType);
         return entityType;
     }
 

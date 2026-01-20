@@ -2,12 +2,11 @@ package com.any.mikuplushie.entity.client.model;
 
 import com.any.mikuplushie.MikuPlushie;
 import com.any.mikuplushie.entity.AbstractPlushEntity;
-import com.any.mikuplushie.entity.MikuEntity;
 import com.any.mikuplushie.entity.client.model.animations.PlushAnimations;
 import com.any.mikuplushie.registry.ModBlocks;
 import com.any.mikuplushie.util.ModUtil;
 import net.minecraft.util.Identifier;
-import software.bernie.geckolib.core.animation.AnimationState;
+import software.bernie.geckolib.animation.AnimationState;
 import software.bernie.geckolib.model.GeoModel;
 
 public class AbstractPlushModel extends GeoModel<AbstractPlushEntity> {
@@ -67,19 +66,19 @@ public class AbstractPlushModel extends GeoModel<AbstractPlushEntity> {
     }
 
     @Override
-    public void setCustomAnimations(MikuEntity animatable, long instanceId, software.bernie.geckolib.animation.AnimationState<MikuEntity> animationState) {
+    public void setCustomAnimations(AbstractPlushEntity animatable, long instanceId, AnimationState<AbstractPlushEntity> animationState) {
         super.setCustomAnimations(animatable, instanceId, animationState);
         if (
             animatable.getPlushName().contains("miku") ||
-                animatable.getPlushName().contains("teto") ||
-                animatable.getPlushName().contains("neru")
+            animatable.getPlushName().contains("teto") ||
+            animatable.getPlushName().contains("neru")
         ) {
-            PlushAnimations.hairMovement(this, animatable, state);
+            PlushAnimations.hairMovement(this, animatable, animationState);
         }
-        PlushAnimations.hairMovement(this, animatable, animationState);
+        PlushAnimations.limbAnimations(this, animatable, animationState);
     }
 
-    private String variantToBlockTextureName (MikuEntity animatable) {
+    private String variantToBlockTextureName (AbstractPlushEntity animatable) {
         return "textures/block/" + animatable.getVariant().replace('_', '-') + ".png";
     }
 }

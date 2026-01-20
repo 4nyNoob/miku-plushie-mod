@@ -1,7 +1,8 @@
 package com.any.mikuplushie.entity.client.render;
 
+import com.any.mikuplushie.entity.AbstractPlushEntity;
 import com.any.mikuplushie.entity.TetoEntity;
-import com.any.mikuplushie.entity.client.model.TetoModel;
+import com.any.mikuplushie.entity.client.model.AbstractPlushModel;
 import com.any.mikuplushie.registry.ModBlocks;
 import com.any.mikuplushie.util.ModUtil;
 import net.minecraft.client.render.RenderLayer;
@@ -90,10 +91,7 @@ public class AbstractPlushRender extends GeoEntityRenderer<AbstractPlushEntity> 
     }
 
     @Override
-    public void preRender(
-        MatrixStack poseStack, TetoEntity animatable, BakedGeoModel model, @Nullable VertexConsumerProvider bufferSource, @Nullable VertexConsumer buffer,
-        boolean isReRender, float partialTick, int packedLight, int packedOverlay, int colour
-    ) {
+    public void preRender(MatrixStack poseStack, AbstractPlushEntity animatable, BakedGeoModel model, @Nullable VertexConsumerProvider bufferSource, @Nullable VertexConsumer buffer, boolean isReRender, float partialTick, int packedLight, int packedOverlay, int colour) {
         super.preRender(poseStack, animatable, model, bufferSource, buffer, isReRender, partialTick, packedLight, packedOverlay, colour);
         this.mainHandItem = animatable.getMainHandStack();
         this.offHandItem = animatable.getOffHandStack();
