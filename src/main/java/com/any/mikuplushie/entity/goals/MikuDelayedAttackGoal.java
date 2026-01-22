@@ -16,7 +16,8 @@ public class MikuDelayedAttackGoal extends MeleeAttackGoal {
     /**
      *   Swing the entity hand but handle the actual attack on the {@link #tick()} method
      */
-    protected void attack(LivingEntity target, double squaredDistance) {
+    @Override
+    protected void attack(LivingEntity target) {
         if (this.canAttack(target)) {
             this.resetCooldown();
             this.mob.swingHand(Hand.MAIN_HAND);
@@ -31,7 +32,7 @@ public class MikuDelayedAttackGoal extends MeleeAttackGoal {
     public void tick() {
         if (this.mikuAttacking){
             --this.attackDelay;
-            if (this.attackDelay < 0){
+            if (this.attackDelay <= 0){
                 this.mob.tryAttack(this.target);
                 this.mikuAttacking = false;
             }
