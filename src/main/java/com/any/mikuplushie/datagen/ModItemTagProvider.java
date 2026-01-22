@@ -11,6 +11,7 @@ import net.minecraft.entity.EntityType;
 import net.minecraft.item.Item;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.RegistryWrapper;
+import net.minecraft.registry.tag.ItemTags;
 import net.minecraft.registry.tag.TagKey;
 import net.minecraft.util.Identifier;
 
@@ -57,6 +58,8 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
         //ADD PICKAXES TO THEIR OWN TAG
         for (Item pickaxe : ModItems.PICKAXE_ITEMS){
             getOrCreateTagBuilder(TETO_PICKAXE).add(pickaxe);
+            getOrCreateTagBuilder(ItemTags.CLUSTER_MAX_HARVESTABLES).add(pickaxe);
+            getOrCreateTagBuilder(ItemTags.PICKAXES).add(pickaxe);
         }
 
         for (TagKey<Item> tag : PLUSH_TAGS){

@@ -80,7 +80,9 @@ public class ModItems {
 
     //REGISTER PICKAXES HELPER
     public static Item registerPickaxe(String name) {
-        return register(new PickaxeItem(PlushToolMaterial.PLUSH_TOOL_MATERIAL, new Item.Settings()), name);
+        return register(new PickaxeItem(PlushToolMaterial.PLUSH_TOOL_MATERIAL, new Item.Settings().attributeModifiers(
+                PickaxeItem.createAttributeModifiers(
+                    PlushToolMaterial.PLUSH_TOOL_MATERIAL, 1f, -2.8F))), name);
     }
 
     //REGISTER NORMAL ITEM
