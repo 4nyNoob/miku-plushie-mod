@@ -26,5 +26,14 @@ public class ModVillagerTrades {
             ));
         });
 
+        TradeOfferHelper.registerWanderingTraderOffers(1, factories -> {
+            //RANDOM PLUSH TRADE
+            factories.add((entity, random) -> new TradeOffer(
+                new TradedItem(Items.EMERALD, 1),
+                new ItemStack(ModItems.PLUSH_ITEMS.get(random.nextInt(ModItems.PLUSH_ITEMS.size())), 1),
+                6, 2, 0.02f
+            ));
+        });
+
     }
 }
