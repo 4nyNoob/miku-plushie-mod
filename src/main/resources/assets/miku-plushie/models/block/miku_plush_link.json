@@ -323,6 +323,9 @@
 		"head": {
 			"translation": [0, 14.25, 0]
 		},
+		"fixed": {
+			"translation": [0, 0, -3]
+		},
 		"on_shelf": {
 			"rotation": [0, 180, 0]
 		}
