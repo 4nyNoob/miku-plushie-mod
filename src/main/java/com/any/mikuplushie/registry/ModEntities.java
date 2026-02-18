@@ -4,15 +4,12 @@ import com.any.mikuplushie.MikuPlushie;
 import com.any.mikuplushie.entity.*;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricEntityTypeBuilder;
-import net.minecraft.entity.Entity;
-import net.minecraft.entity.EntityDimensions;
-import net.minecraft.entity.EntityType;
-import net.minecraft.entity.SpawnGroup;
-import net.minecraft.entity.mob.MobEntity;
-import net.minecraft.registry.Registries;
-import net.minecraft.registry.Registry;
-import net.minecraft.util.Identifier;
-
+import net.minecraft.core.Registry;
+import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.MobCategory;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -38,10 +35,10 @@ public class ModEntities {
 
 
     private static <T extends Entity> EntityType<T> registerMob(String name, EntityType.EntityFactory<T> entity) {
-        EntityType<T> entityType = Registry.register(Registries.ENTITY_TYPE,
-            Identifier.of(MikuPlushie.MOD_ID, name),
-            EntityType.Builder.create(entity, SpawnGroup.CREATURE)
-                .dimensions(PLUSH_WIDTH, PLUSH_HEIGHT)
+        EntityType<T> entityType = Registry.register(BuiltInRegistries.ENTITY_TYPE,
+            ResourceLocation.fromNamespaceAndPath(MikuPlushie.MOD_ID, name),
+            EntityType.Builder.of(entity, MobCategory.CREATURE)
+                .sized(PLUSH_WIDTH, PLUSH_HEIGHT)
                 .eyeHeight(0.85F)
                 .build(name)
         );

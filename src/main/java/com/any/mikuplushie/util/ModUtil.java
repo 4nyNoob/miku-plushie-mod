@@ -2,30 +2,30 @@ package com.any.mikuplushie.util;
 
 import com.any.mikuplushie.registry.ModBlocks;
 import com.any.mikuplushie.registry.ModSoundEvents;
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockState;
-import net.minecraft.item.Item;
-import net.minecraft.sound.SoundCategory;
-import net.minecraft.sound.SoundEvent;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.world.World;
+import net.minecraft.core.BlockPos;
+import net.minecraft.sounds.SoundEvent;
+import net.minecraft.sounds.SoundSource;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.state.BlockState;
 
 public class ModUtil {
 
-    public static String getBlockIdFromBlockPos(World world, BlockPos pos){
-        return world.getBlockState(pos).getBlock().getTranslationKey().split("[.]")[2];
+    public static String getBlockIdFromBlockPos(Level world, BlockPos pos){
+        return world.getBlockState(pos).getBlock().getDescriptionId().split("[.]")[2];
     }
 
     public static String getBlockIdFromBlockState(BlockState state){
-        return state.getBlock().getTranslationKey().split("[.]")[2];
+        return state.getBlock().getDescriptionId().split("[.]")[2];
     }
 
     public static String getBlockIdFromItem(Item itemConvertible){
-        return itemConvertible.getTranslationKey().split("[.]")[2];
+        return itemConvertible.getDescriptionId().split("[.]")[2];
     }
 
     public static String getBlockIdFromBlock(Block block){
-        return block.getTranslationKey().split("[.]")[2];
+        return block.getDescriptionId().split("[.]")[2];
     }
 
     public static String getEntityNameFromBlockId(String blockId){
@@ -43,7 +43,7 @@ public class ModUtil {
 
         for (SoundEvent soundEvent : ModSoundEvents.MIKU_PLUSHIES_SOUND_EVENTS){
             //GET SOUND EVENT
-            String soundEventId = soundEvent.getId().toString().split(":")[1];
+            String soundEventId = soundEvent.getLocation().toString().split(":")[1];
             if (soundEventId.contains(firstName) && soundEventId.contains("_" + action)){
                 return soundEvent;
             }
@@ -52,11 +52,11 @@ public class ModUtil {
         return ModSoundEvents.MIKU_PLUSHIES_SOUND_EVENTS.getFirst();
     }
 
-    public static void playPlushSound(World world, BlockPos position, String plushName, String action){
+    public static void playPlushSound(Level world, BlockPos position, String plushName, String action){
         if (!plushName.equals(ModUtil.getBlockIdFromBlock(ModBlocks.KONOHA_PLUSH))){
             SoundEvent soundEvent = getPlushSoundEvent(plushName, action);
-            world.playSound(position.getX(), position.getY(), position.getZ(),
-                soundEvent, SoundCategory.BLOCKS, 0.5F, 1, true);
+            world.playLocalSound(position.getX(), position.getY(), position.getZ(),
+                soundEvent, SoundSource.BLOCKS, 0.5F, 1, true);
         }
     }
 }

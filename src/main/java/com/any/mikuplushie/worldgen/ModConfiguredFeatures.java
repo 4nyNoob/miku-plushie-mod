@@ -2,39 +2,44 @@ package com.any.mikuplushie.worldgen;
 
 import com.any.mikuplushie.MikuPlushie;
 import com.any.mikuplushie.registry.ModBlocks;
-import net.minecraft.registry.Registerable;
-import net.minecraft.registry.RegistryKey;
-import net.minecraft.registry.RegistryKeys;
-import net.minecraft.util.Identifier;
-import net.minecraft.world.gen.feature.*;
-import net.minecraft.world.gen.stateprovider.BlockStateProvider;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.data.worldgen.BootstrapContext;
+import net.minecraft.data.worldgen.placement.PlacementUtils;
+import net.minecraft.resources.ResourceKey;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
+import net.minecraft.world.level.levelgen.feature.Feature;
+import net.minecraft.world.level.levelgen.feature.configurations.FeatureConfiguration;
+import net.minecraft.world.level.levelgen.feature.configurations.RandomPatchConfiguration;
+import net.minecraft.world.level.levelgen.feature.configurations.SimpleBlockConfiguration;
+import net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider;
 
 public class ModConfiguredFeatures {
 
     //FEATURE KEYS
-    public static final RegistryKey<ConfiguredFeature<?, ?>> LEEK_KEY =  registerKey("leek");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> LEEK_KEY =  registerKey("leek");
 
-    public static void bootstrap (Registerable<ConfiguredFeature<?, ?>> context){
+    public static void bootstrap (BootstrapContext<ConfiguredFeature<?, ?>> context){
         register(context,
             LEEK_KEY,
             Feature.RANDOM_PATCH,
-            new RandomPatchFeatureConfig(
+            new RandomPatchConfiguration(
                 8,2,1,
-                PlacedFeatures.createEntry(
+                PlacementUtils.onlyWhenEmpty(
                     Feature.SIMPLE_BLOCK,
-                    new SimpleBlockFeatureConfig(BlockStateProvider.of(ModBlocks.WILD_LEEK_CROP))
+                    new SimpleBlockConfiguration(BlockStateProvider.simple(ModBlocks.WILD_LEEK_CROP))
                 )
             )
         );
     }
 
-    public static RegistryKey<ConfiguredFeature<?, ?>> registerKey (String name) {
-        return RegistryKey.of(RegistryKeys.CONFIGURED_FEATURE, Identifier.of(MikuPlushie.MOD_ID, name));
+    public static ResourceKey<ConfiguredFeature<?, ?>> registerKey (String name) {
+        return ResourceKey.create(Registries.CONFIGURED_FEATURE, ResourceLocation.fromNamespaceAndPath(MikuPlushie.MOD_ID, name));
     }
 
-    private static <FC extends FeatureConfig, F extends Feature<FC>> void register (
-        Registerable<ConfiguredFeature<?, ?>> context,
-        RegistryKey<ConfiguredFeature<?, ?>> key,
+    private static <FC extends FeatureConfiguration, F extends Feature<FC>> void register (
+        BootstrapContext<ConfiguredFeature<?, ?>> context,
+        ResourceKey<ConfiguredFeature<?, ?>> key,
         F feature,
         FC configuration
     ){

@@ -34,7 +34,7 @@ public class PlushAnimations {
         root.setPosY((float) Math.sin(limbSwing * swingSpeed * 2) * (swingAmm * 1) + (swingAmm * 1));
 
         //DISABLE ARM ANIMATIONS WHEN DANCING AND ATTACKING
-        if (animatable.isSongPlaying() || animatable.handSwinging){
+        if (animatable.isSongPlaying() || animatable.swinging){
             left_arm.setRotX(0);
             right_arm.setRotX(0);
         } else {

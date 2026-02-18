@@ -1,3 +1,3 @@
 accessWidener v2 named
 
-extendable method net/minecraft/entity/LivingEntity getHandSwingDuration ()I
+extendable method net/minecraft/world/entity/LivingEntity getCurrentSwingDuration ()I

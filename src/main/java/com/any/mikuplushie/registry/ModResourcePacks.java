@@ -4,8 +4,8 @@ import com.any.mikuplushie.MikuPlushie;
 import net.fabricmc.fabric.api.resource.ResourceManagerHelper;
 import net.fabricmc.fabric.api.resource.ResourcePackActivationType;
 import net.fabricmc.loader.api.FabricLoader;
-import net.minecraft.text.Text;
-import net.minecraft.util.Identifier;
+import net.minecraft.network.chat.Component;
+import net.minecraft.resources.ResourceLocation;
 
 public class ModResourcePacks {
 
@@ -14,15 +14,15 @@ public class ModResourcePacks {
 
         FabricLoader.getInstance().getModContainer(MikuPlushie.MOD_ID).ifPresent(modContainer ->
             ResourceManagerHelper.registerBuiltinResourcePack(asId("en_us_dub"), modContainer,
-                Text.literal("EN_US-DUB"), ResourcePackActivationType.NORMAL)
+                Component.literal("EN_US-DUB"), ResourcePackActivationType.NORMAL)
         );
         FabricLoader.getInstance().getModContainer(MikuPlushie.MOD_ID).ifPresent(modContainer ->
             ResourceManagerHelper.registerBuiltinResourcePack(asId("legacy_textures"), modContainer,
-                Text.literal("Legacy Textures"), ResourcePackActivationType.NORMAL)
+                Component.literal("Legacy Textures"), ResourcePackActivationType.NORMAL)
         );
     }
 
-    public static Identifier asId(String path) {
-        return Identifier.of(MikuPlushie.MOD_ID, path);
+    public static ResourceLocation asId(String path) {
+        return ResourceLocation.fromNamespaceAndPath(MikuPlushie.MOD_ID, path);
     }
 }

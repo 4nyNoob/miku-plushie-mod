@@ -5,55 +5,55 @@ import com.any.mikuplushie.registry.ModBlocks;
 import com.any.mikuplushie.registry.ModItems;
 import com.any.mikuplushie.util.ModUtil;
 import com.mojang.brigadier.CommandDispatcher;
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockState;
-import net.minecraft.command.argument.EntityAnchorArgumentType;
-import net.minecraft.command.argument.Vec3ArgumentType;
-import net.minecraft.entity.EntityType;
-import net.minecraft.entity.EquipmentSlot;
-import net.minecraft.entity.decoration.ArmorStandEntity;
-import net.minecraft.entity.passive.TameableEntity;
-import net.minecraft.item.ItemStack;
-import net.minecraft.registry.Registry;
-import net.minecraft.registry.RegistryKeys;
-import net.minecraft.server.command.CommandManager;
-import net.minecraft.server.command.ServerCommandSource;
-import net.minecraft.server.world.ServerWorld;
-import net.minecraft.text.Text;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.Vec3d;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
+import net.minecraft.commands.CommandSourceStack;
+import net.minecraft.commands.Commands;
+import net.minecraft.commands.arguments.EntityAnchorArgument;
+import net.minecraft.commands.arguments.coordinates.Vec3Argument;
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.Registry;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.network.chat.Component;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.EquipmentSlot;
+import net.minecraft.world.entity.TamableAnimal;
+import net.minecraft.world.entity.decoration.ArmorStand;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.phys.Vec3;
 
 public class SpawnMikusCommand {
 
-    public static void register (CommandDispatcher<ServerCommandSource> dispatcher) {
-        dispatcher.register(CommandManager.literal("spawn_mikus")
-            .then(CommandManager.argument("pos", Vec3ArgumentType.vec3())
+    public static void register (CommandDispatcher<CommandSourceStack> dispatcher) {
+        dispatcher.register(Commands.literal("spawn_mikus")
+            .then(Commands.argument("pos", Vec3Argument.vec3())
                 .executes(commandContext ->
                     spawnMikus(commandContext.getSource(),
-                        Vec3ArgumentType.getVec3(commandContext, "pos"))))
+                        Vec3Argument.getVec3(commandContext, "pos"))))
         );
     }
 
-    public static int spawnMikus(ServerCommandSource source, Vec3d posArgument) {
+    public static int spawnMikus(CommandSourceStack source, Vec3 posArgument) {
         //GLOBAL VARIABLES
-        ServerWorld world = source.getWorld();
-        BlockPos spawnPos = BlockPos.ofFloored(posArgument);
+        ServerLevel world = source.getLevel();
+        BlockPos spawnPos = BlockPos.containing(posArgument);
         int spacing = 3;
 
         //CREATE ITEM STACK LISTS
         List<ItemStack> PICKAXES = new ArrayList<>();
         for (int pickaxe = 0; pickaxe < ModItems.PICKAXE_ITEMS.size(); pickaxe++) {
-            ItemStack pickaxeStack = ModItems.PICKAXE_ITEMS.get(pickaxe).getDefaultStack();
+            ItemStack pickaxeStack = ModItems.PICKAXE_ITEMS.get(pickaxe).getDefaultInstance();
             PICKAXES.add(pickaxeStack);
         }
         List<ItemStack> PLUSHIES = new ArrayList<>();
         for (int plush = 0; plush < ModItems.PLUSH_ITEMS.size(); plush++) {
-            ItemStack plushStack = ModItems.PLUSH_ITEMS.get(plush).getDefaultStack();
+            ItemStack plushStack = ModItems.PLUSH_ITEMS.get(plush).getDefaultInstance();
             PLUSHIES.add(plushStack);
         }
 
@@ -95,36 +95,36 @@ public class SpawnMikusCommand {
                             currentList.contains(PLUSHIES.get(0))
                         ){
                             ItemStack itemStack = (ItemStack) currentList.get(plushies);
-                            Vec3d entitySpawnLocation = getEntitySpawnLocation(spawnPos, column, row, list, spacing);
-                            ArmorStandEntity armorStandEntity = getArmorStandEntity(world, entitySpawnLocation, itemStack);
-                            world.spawnEntity(armorStandEntity);
+                            Vec3 entitySpawnLocation = getEntitySpawnLocation(spawnPos, column, row, list, spacing);
+                            ArmorStand armorStandEntity = getArmorStandEntity(world, entitySpawnLocation, itemStack);
+                            world.addFreshEntity(armorStandEntity);
                         }
 
                         //PLACE PLUSHIE BLOCKS
                         if (currentList.contains(BLOCKS.get(0))){
-                            BlockPos blockPos = spawnPos.add(column * spacing, list * spacing + 1, row * spacing);
-                            BlockState blockState = ((Block) currentList.get(plushies)).getDefaultState();
-                            world.setBlockState(blockPos, blockState);
+                            BlockPos blockPos = spawnPos.offset(column * spacing, list * spacing + 1, row * spacing);
+                            BlockState blockState = ((Block) currentList.get(plushies)).defaultBlockState();
+                            world.setBlockAndUpdate(blockPos, blockState);
                         }
 
                         //SPAWN ENTITIES
                         if (currentList.contains(VARIANTS.get(0))){
-                            Vec3d entitySpawnLocation = getEntitySpawnLocation(spawnPos, column, row, list, spacing);
+                            Vec3 entitySpawnLocation = getEntitySpawnLocation(spawnPos, column, row, list, spacing);
                             String blockName = (String) currentList.get(plushies);
                             //GET FIRST TWO WORDS
                             String entityName = ModUtil.getEntityNameFromBlockId(blockName);
                             //ENTITY TYPE REGISTRY
-                            Registry<EntityType<?>> entityTypeRegistry = world.getRegistryManager().get(RegistryKeys.ENTITY_TYPE);
+                            Registry<EntityType<?>> entityTypeRegistry = world.registryAccess().registryOrThrow(Registries.ENTITY_TYPE);
 
                             //ITERATE THROUGH ALL REGISTERED ENTITIES AND FILTER BY NAME
                             for (int entity = 0; entity < entityTypeRegistry.size(); entity++) {
-                                if (Objects.requireNonNull(entityTypeRegistry.get(entity)).getTranslationKey().contains(entityName)){
+                                if (Objects.requireNonNull(entityTypeRegistry.byId(entity)).getDescriptionId().contains(entityName)){
                                     //SPAWN ENTITY ACCORDING TO BLOCK NAME
-                                    AbstractPlushEntity spawned = (AbstractPlushEntity) Objects.requireNonNull(entityTypeRegistry.get(entity)).create(world);
+                                    AbstractPlushEntity spawned = (AbstractPlushEntity) Objects.requireNonNull(entityTypeRegistry.byId(entity)).create(world);
                                     //SETUP AND SPAWN ENTITY
                                     setupEntity(Objects.requireNonNull(spawned), entitySpawnLocation);
                                     spawned.setVariantByBlock(blockName);
-                                    world.spawnEntity(spawned);
+                                    world.addFreshEntity(spawned);
                                 }
                             }
                             
@@ -138,31 +138,31 @@ public class SpawnMikusCommand {
         return 1;
     }
 
-    private static Vec3d getEntitySpawnLocation (BlockPos spawnPos, int column, int row, int list, int spacing){
-        return new Vec3d(
+    private static Vec3 getEntitySpawnLocation (BlockPos spawnPos, int column, int row, int list, int spacing){
+        return new Vec3(
             spawnPos.getX() + column * spacing + 0.5,
             spawnPos.getY() + list * spacing,
             spawnPos.getZ() + row * spacing + 0.5
         );
     }
 
-    private static void setupEntity(TameableEntity entity, Vec3d entitySpawn) {
-        entity.setPosition(entitySpawn);
-        entity.lookAt(EntityAnchorArgumentType.EntityAnchor.FEET, entitySpawn.add(0, 0 ,-1));
-        entity.setAiDisabled(true);
-        entity.setCustomName(Text.of("Plush"));
+    private static void setupEntity(TamableAnimal entity, Vec3 entitySpawn) {
+        entity.setPos(entitySpawn);
+        entity.lookAt(EntityAnchorArgument.Anchor.FEET, entitySpawn.add(0, 0 ,-1));
+        entity.setNoAi(true);
+        entity.setCustomName(Component.nullToEmpty("Plush"));
         entity.setSilent(true);
     }
 
-    private static @NotNull ArmorStandEntity getArmorStandEntity(ServerWorld world, Vec3d entitySpawn, ItemStack plushItem) {
-        ArmorStandEntity armorStandEntity = new ArmorStandEntity(EntityType.ARMOR_STAND, world);
-        armorStandEntity.setPosition(entitySpawn);
-        armorStandEntity.equipStack(EquipmentSlot.HEAD, plushItem);
-        armorStandEntity.equipStack(EquipmentSlot.MAINHAND, plushItem);
-        armorStandEntity.equipStack(EquipmentSlot.OFFHAND, plushItem);
+    private static @NotNull ArmorStand getArmorStandEntity(ServerLevel world, Vec3 entitySpawn, ItemStack plushItem) {
+        ArmorStand armorStandEntity = new ArmorStand(EntityType.ARMOR_STAND, world);
+        armorStandEntity.setPos(entitySpawn);
+        armorStandEntity.setItemSlot(EquipmentSlot.HEAD, plushItem);
+        armorStandEntity.setItemSlot(EquipmentSlot.MAINHAND, plushItem);
+        armorStandEntity.setItemSlot(EquipmentSlot.OFFHAND, plushItem);
         armorStandEntity.setShowArms(true);
-        armorStandEntity.setYaw(180F);
-        armorStandEntity.setCustomName(Text.of("Plush"));
+        armorStandEntity.setYRot(180F);
+        armorStandEntity.setCustomName(Component.nullToEmpty("Plush"));
         armorStandEntity.setNoGravity(true);
         return armorStandEntity;
     }

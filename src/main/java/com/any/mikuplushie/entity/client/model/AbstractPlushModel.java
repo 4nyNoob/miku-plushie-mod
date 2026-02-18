@@ -5,24 +5,24 @@ import com.any.mikuplushie.entity.AbstractPlushEntity;
 import com.any.mikuplushie.entity.client.model.animations.PlushAnimations;
 import com.any.mikuplushie.registry.ModBlocks;
 import com.any.mikuplushie.util.ModUtil;
-import net.minecraft.util.Identifier;
+import net.minecraft.resources.ResourceLocation;
 import software.bernie.geckolib.animation.AnimationState;
 import software.bernie.geckolib.model.GeoModel;
 
 public class AbstractPlushModel extends GeoModel<AbstractPlushEntity> {
 
     //    private final Identifier model = Identifier.of(MikuPlushie.MOD_ID, "geo/entity/" + entity + ".geo.json");
-    private final Identifier animations = Identifier.of(MikuPlushie.MOD_ID, "animations/plush.animation.json");
+    private final ResourceLocation animations = ResourceLocation.fromNamespaceAndPath(MikuPlushie.MOD_ID, "animations/plush.animation.json");
 
 
     @Override
-    public Identifier getModelResource(AbstractPlushEntity animatable) {
+    public ResourceLocation getModelResource(AbstractPlushEntity animatable) {
 
         String entity = animatable.getPlushName();
         String variant = animatable.getVariant();
 
         if (variant.equals(animatable.getPlushName())){
-            return Identifier.of(MikuPlushie.MOD_ID, "geo/entity/" + entity + ".geo.json");
+            return ResourceLocation.fromNamespaceAndPath(MikuPlushie.MOD_ID, "geo/entity/" + entity + ".geo.json");
         }
         //VARIANTS THAT USE THE 2ND MODEL
         else if (
@@ -32,7 +32,7 @@ public class AbstractPlushModel extends GeoModel<AbstractPlushEntity> {
             variant.equals(ModUtil.getBlockIdFromBlock(ModBlocks.MIKU_PLUSH_PATATA)) ||
             variant.equals(ModUtil.getBlockIdFromBlock(ModBlocks.MIKU_PLUSH_DEVIL)) ||
             variant.equals(ModUtil.getBlockIdFromBlock(ModBlocks.MIKU_PLUSH_WITCH))) {
-            return Identifier.of(MikuPlushie.MOD_ID, "geo/entity/" + entity + "_2" + ".geo.json");
+            return ResourceLocation.fromNamespaceAndPath(MikuPlushie.MOD_ID, "geo/entity/" + entity + "_2" + ".geo.json");
         }
         //VARIANTS THAT USE THE 3RD MODEL
         else if (
@@ -50,18 +50,18 @@ public class AbstractPlushModel extends GeoModel<AbstractPlushEntity> {
             variant.equals(ModUtil.getBlockIdFromBlock(ModBlocks.MIKU_PLUSH_LUCARIO_Z))||
             variant.equals(ModUtil.getBlockIdFromBlock(ModBlocks.MIKU_PLUSH_PPPP))
         ) {
-            return Identifier.of(MikuPlushie.MOD_ID, "geo/entity/" + entity + "_3" + ".geo.json");
+            return ResourceLocation.fromNamespaceAndPath(MikuPlushie.MOD_ID, "geo/entity/" + entity + "_3" + ".geo.json");
         }
-        return Identifier.of(MikuPlushie.MOD_ID, "geo/entity/" + entity + ".geo.json");
+        return ResourceLocation.fromNamespaceAndPath(MikuPlushie.MOD_ID, "geo/entity/" + entity + ".geo.json");
     }
 
     @Override
-    public Identifier getTextureResource(AbstractPlushEntity animatable) {
-        return Identifier.of(MikuPlushie.MOD_ID, variantToBlockTextureName(animatable));
+    public ResourceLocation getTextureResource(AbstractPlushEntity animatable) {
+        return ResourceLocation.fromNamespaceAndPath(MikuPlushie.MOD_ID, variantToBlockTextureName(animatable));
     }
 
     @Override
-    public Identifier getAnimationResource(AbstractPlushEntity animatable) {
+    public ResourceLocation getAnimationResource(AbstractPlushEntity animatable) {
         return animations;
     }
 
