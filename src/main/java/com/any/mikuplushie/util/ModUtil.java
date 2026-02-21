@@ -43,7 +43,7 @@ public class ModUtil {
 
         for (SoundEvent soundEvent : ModSoundEvents.MIKU_PLUSHIES_SOUND_EVENTS){
             //GET SOUND EVENT
-            String soundEventId = soundEvent.getLocation().toString().split(":")[1];
+            String soundEventId = soundEvent.location().toString().split(":")[1];
             if (soundEventId.contains(firstName) && soundEventId.contains("_" + action)){
                 return soundEvent;
             }

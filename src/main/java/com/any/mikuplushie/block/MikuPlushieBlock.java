@@ -4,6 +4,10 @@ import com.any.mikuplushie.entity.AbstractPlushEntity;
 import com.any.mikuplushie.registry.ModItems;
 import com.any.mikuplushie.registry.ModParticles;
 import com.any.mikuplushie.util.ModUtil;
+import net.minecraft.world.InteractionResult;
+import net.minecraft.world.entity.EntitySpawnReason;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
+import net.minecraft.world.level.block.state.properties.EnumProperty;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.Objects;
@@ -15,7 +19,6 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionHand;
-import net.minecraft.world.ItemInteractionResult;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
@@ -29,26 +32,25 @@ import net.minecraft.world.level.block.HorizontalDirectionalBlock;
 import net.minecraft.world.level.block.Rotation;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
-import net.minecraft.world.level.block.state.properties.DirectionProperty;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
 public class MikuPlushieBlock extends Block {
-	public static final DirectionProperty FACING = HorizontalDirectionalBlock.FACING;
+    public static final EnumProperty<Direction> FACING = BlockStateProperties.HORIZONTAL_FACING;
 	public MikuPlushieBlock(Properties settings) {
 		super(settings);
 		this.registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.NORTH));
 	}
 
     @Override
-	public ItemInteractionResult useItemOn(ItemStack stack, BlockState state, Level world, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
+	public InteractionResult useItemOn(ItemStack stack, BlockState state, Level world, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
 
         if (
             player.getItemInHand(hand).is(ModItems.VOCALOID_HEART)
         ){
-            if (!world.isClientSide) {
+            if (!world.isClientSide()) {
 
                 //GET BLOCK NAME
                 String blockName = ModUtil.getBlockIdFromBlockPos(world, pos);
@@ -56,14 +58,14 @@ public class MikuPlushieBlock extends Block {
 
                 Vec3 entitySpawnLocation = pos.getCenter().subtract(0,0.5,0);
                 //ENTITY TYPE REGISTRY
-                Registry<EntityType<?>> entityTypeRegistry = world.registryAccess().registryOrThrow(Registries.ENTITY_TYPE);
+                Registry<EntityType<?>> entityTypeRegistry = (Registry<EntityType<?>>) world.registryAccess().getOrThrow(Registries.ENTITY_TYPE);
 
                 //ITERATE THROUGH ALL REGISTERED ENTITIES AND FILTER BY NAME
                 for (int entity = 0; entity < entityTypeRegistry.size(); entity++) {
                     if (Objects.requireNonNull(entityTypeRegistry.byId(entity)).getDescriptionId().contains(entityName)) {
 
                         //SPAWN ENTITY ACCORDING TO BLOCK NAME
-                        AbstractPlushEntity spawned = (AbstractPlushEntity) Objects.requireNonNull(entityTypeRegistry.byId(entity)).create(world);
+                        AbstractPlushEntity spawned = (AbstractPlushEntity) Objects.requireNonNull(entityTypeRegistry.byId(entity)).create(world, EntitySpawnReason.COMMAND);
 
                         //SETUP AND SPAWN ENTITY
                         Objects.requireNonNull(spawned).setVariantByBlock(blockName);
@@ -76,7 +78,7 @@ public class MikuPlushieBlock extends Block {
 
                 world.playSound(null, pos, SoundEvents.TOTEM_USE, SoundSource.BLOCKS, 0.5f, 1);
                 world.destroyBlock(pos, false, player);
-                return ItemInteractionResult.SUCCESS;
+                return InteractionResult.SUCCESS;
             } else {
                 for (int particles = 0; particles < 100; particles++) {
                     world.addParticle(
@@ -99,7 +101,7 @@ public class MikuPlushieBlock extends Block {
 	}
 
     @Override
-    public ItemStack getCloneItemStack(LevelReader world, BlockPos pos, BlockState state) {
+    public ItemStack getCloneItemStack(LevelReader world, BlockPos pos, BlockState state, boolean bl) {
         for (int plush = 0; plush < ModItems.PLUSH_ITEMS.size(); plush++) {
             String plushNames = ModUtil.getBlockIdFromItem(ModItems.PLUSH_ITEMS.get(plush));
             String currentPlush = ModUtil.getBlockIdFromBlockState(state);

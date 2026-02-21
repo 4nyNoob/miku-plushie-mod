@@ -6,7 +6,9 @@ import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRe
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricEntityTypeBuilder;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.resources.Identifier;
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.MobCategory;
@@ -36,12 +38,14 @@ public class ModEntities {
 
     private static <T extends Entity> EntityType<T> registerMob(String name, EntityType.EntityFactory<T> entity) {
         EntityType<T> entityType = Registry.register(BuiltInRegistries.ENTITY_TYPE,
-            ResourceLocation.fromNamespaceAndPath(MikuPlushie.MOD_ID, name),
+            Identifier.fromNamespaceAndPath(MikuPlushie.MOD_ID, name),
             EntityType.Builder.of(entity, MobCategory.CREATURE)
                 .sized(PLUSH_WIDTH, PLUSH_HEIGHT)
                 .eyeHeight(0.85F)
-                .build(name)
-        );
+                .build(ResourceKey.create(
+                    Registries.ENTITY_TYPE,
+                    Identifier.fromNamespaceAndPath(MikuPlushie.MOD_ID, name))));
+
         //noinspection unchecked
         PLUSH_ENTITIES.add((EntityType<? extends AbstractPlushEntity>) entityType);
         return entityType;

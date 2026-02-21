@@ -3,26 +3,25 @@ package com.any.mikuplushie.registry;
 import com.any.mikuplushie.MikuPlushie;
 import com.any.mikuplushie.item.MikuPlushieBlockItem;
 import com.any.mikuplushie.item.ModFoodComponents;
-import com.any.mikuplushie.item.PlushToolMaterial;
 import com.any.mikuplushie.util.ModUtil;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
+import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.item.CreativeModeTab;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ItemNameBlockItem;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.PickaxeItem;
-import net.minecraft.world.item.Rarity;
+import net.minecraft.tags.BlockTags;
+import net.minecraft.tags.ItemTags;
+import net.minecraft.world.food.FoodProperties;
+import net.minecraft.world.item.*;
 import net.minecraft.world.level.block.Block;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.Function;
 
-public class ModItems {
+public class ModItems{
 
     public static List<Item> REGULAR_ITEMS = new ArrayList<>();
     public static List<Item> PLUSH_ITEMS = new ArrayList<>();
@@ -30,7 +29,7 @@ public class ModItems {
 
     //CREATE ITEM GROUP
 	public static final ResourceKey<CreativeModeTab> MIKU_GROUP_KEY =
-        ResourceKey.create(BuiltInRegistries.CREATIVE_MODE_TAB.key(),ResourceLocation.fromNamespaceAndPath(MikuPlushie.MOD_ID, "item_group")
+        ResourceKey.create(BuiltInRegistries.CREATIVE_MODE_TAB.key(), Identifier.fromNamespaceAndPath(MikuPlushie.MOD_ID, "item_group")
 	);
 	public static final CreativeModeTab MIKU_GROUP = FabricItemGroup.builder()
 		.icon(() -> new ItemStack(ModBlocks.MIKU_PLUSH))
@@ -40,20 +39,29 @@ public class ModItems {
 
     //REGISTER REGULAR ITEMS
 	public static final Item CANUDINHO =
-        register(new Item(new Item.Properties().rarity(Rarity.RARE)), "canudinho");
+        register("canudinho", Item::new, new Item.Properties().rarity(Rarity.RARE));
 	public static final Item BAGUETTE =
-        register(new Item(new Item.Properties().food(ModFoodComponents.BAGUETTE)), "baguette");
+        register("baguette", Item::new, new Item.Properties().food(ModFoodComponents.BAGUETTE));
 
     public static final Item LEEK_SEEDS =
-        register(new ItemNameBlockItem(ModBlocks.LEEK_CROP, new Item.Properties()), "leek_seeds");
+        registerItem("leek_seeds", createBlockItemWithCustomItemName(ModBlocks.LEEK_CROP));
     public static final Item LEEK =
-        register(new Item(new Item.Properties().food(ModFoodComponents.LEEK)), "leek");
+        register("leek", Item::new, new Item.Properties().food(ModFoodComponents.LEEK));
 
     public static final Item AKITA_NERU_PHONE =
-        register(new Item(new Item.Properties()), "akita_neru_phone");
+        register("akita_neru_phone", Item::new, new Item.Properties());
 
     public static final Item VOCALOID_HEART =
-        register(new Item(new Item.Properties()), "vocaloid_heart");
+        register("vocaloid_heart", Item::new, new Item.Properties());
+
+    public static final ToolMaterial PLUSH_TOOL_MATERIAL = new ToolMaterial(
+        BlockTags.INCORRECT_FOR_WOODEN_TOOL,
+        500,
+        15,
+        0,
+        25,
+        ItemTags.NETHERITE_TOOL_MATERIALS
+    );
 
     //REGISTER TETO PICKAXE ITEMS
     public static final Item TETO_PICKAXE = registerPickaxe("teto_pickaxe");
@@ -78,35 +86,54 @@ public class ModItems {
                 plushBlock = registeredPlushBlock;
             }
         }
-        return register(new MikuPlushieBlockItem(plushBlock, new Item.Properties()), name);
+        return registerItem(name, createBlockItemWithCustomItemName(plushBlock));
     }
 
     //REGISTER PICKAXES HELPER
     public static Item registerPickaxe(String name) {
-        return register(new PickaxeItem(PlushToolMaterial.PLUSH_TOOL_MATERIAL, new Item.Properties().attributes(
-                PickaxeItem.createAttributes(
-                    PlushToolMaterial.PLUSH_TOOL_MATERIAL, 1f, -2.8F))), name);
+        return register(name,
+            Item::new,
+            new Item.Properties().pickaxe(PLUSH_TOOL_MATERIAL, 1F, -2.8F)
+        );
     }
 
-    //REGISTER NORMAL ITEM
-	public static Item register(Item item, String id) {
-		ResourceLocation itemID = ResourceLocation.fromNamespaceAndPath(MikuPlushie.MOD_ID, id);
-        Item register = Registry.register(BuiltInRegistries.ITEM, itemID, item);
-        String itemName = ModUtil.getBlockIdFromItem(item);
+    //REGISTER REGULAR ITEM
+    public static <GenericItem extends Item> GenericItem register(String name, Function<Item.Properties, GenericItem> itemFactory, Item.Properties settings) {
+        // Create the item key.
+        ResourceKey<Item> itemKey = ResourceKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath(MikuPlushie.MOD_ID, name));
 
-        //ADD TETO PICKAXES TO THE PICKAXES LIST
-        if (itemName.contains("pickaxe")){
-            PICKAXE_ITEMS.add(item);
+        // Create the item instance.
+        GenericItem item = itemFactory.apply(settings.setId(itemKey));
+
+        // Register the item.
+        Registry.register(BuiltInRegistries.ITEM, itemKey, item);
+
+        return item;
+    }
+
+    //REGISTER HELPERS
+    private static Function<Item.Properties, Item> createBlockItemWithCustomItemName(Block block) {
+        return properties -> new BlockItem(block, properties.useItemDescriptionPrefix());
+    }
+
+    public static Item registerItem(String string, Function<Item.Properties, Item> function) {
+        return registerItem(vanillaItemId(string), function, new Item.Properties());
+    }
+
+    public static Item registerItem(ResourceKey<Item> resourceKey, Function<Item.Properties, Item> function, Item.Properties properties) {
+        Item item = function.apply(properties.setId(resourceKey));
+        if (item instanceof BlockItem blockItem) {
+            blockItem.registerBlocks(Item.BY_BLOCK, item);
         }
-        //ADD REGULAR ITEMS TOO
-        else if (!itemName.contains("plush")){
-            REGULAR_ITEMS.add(item);
-        }
 
-        return register;
-	}
+        return Registry.register(BuiltInRegistries.ITEM, resourceKey, item);
+    }
 
+    private static ResourceKey<Item> vanillaItemId(String string) {
+        return ResourceKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath(MikuPlushie.MOD_ID, string));
+    }
 
+    //INITIALIZATION
 	public static void initialize() {
         MikuPlushie.LOGGER.info("Registering " + MikuPlushie.MOD_ID + " Items");
 

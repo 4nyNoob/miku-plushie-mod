@@ -5,7 +5,7 @@ import net.fabricmc.fabric.api.resource.ResourceManagerHelper;
 import net.fabricmc.fabric.api.resource.ResourcePackActivationType;
 import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.network.chat.Component;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 
 public class ModResourcePacks {
 
@@ -22,7 +22,7 @@ public class ModResourcePacks {
         );
     }
 
-    public static ResourceLocation asId(String path) {
-        return ResourceLocation.fromNamespaceAndPath(MikuPlushie.MOD_ID, path);
+    public static Identifier asId(String path) {
+        return Identifier.fromNamespaceAndPath(MikuPlushie.MOD_ID, path);
     }
 }

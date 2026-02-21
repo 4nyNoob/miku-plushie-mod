@@ -4,18 +4,22 @@ import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.minecraft.client.multiplayer.ClientLevel;
 import net.minecraft.client.particle.*;
+import net.minecraft.client.renderer.entity.layers.RenderLayer;
+import net.minecraft.client.renderer.texture.TextureAtlasSprite;
 import net.minecraft.core.particles.SimpleParticleType;
+import net.minecraft.util.RandomSource;
+import org.jspecify.annotations.Nullable;
 
-public class PlushSpawnParticle extends TextureSheetParticle {
-    private final SpriteSet spriteProvider;
+public class PlushSpawnParticle extends SingleQuadParticle {
+    private final TextureAtlasSprite spriteProvider;
 
     protected PlushSpawnParticle(
         ClientLevel world,
         double x, double y, double z,
         double velocityX, double velocityY, double velocityZ,
-        SpriteSet spriteProvider
+        TextureAtlasSprite spriteProvider
     ) {
-        super(world, x, y, z);
+        super(world, x, y, z, spriteProvider);
 
         this.gravity = -0.1F;
         this.friction = 0.9F;
@@ -27,7 +31,7 @@ public class PlushSpawnParticle extends TextureSheetParticle {
 
         this.quadSize = 0.1F * (this.random.nextFloat() * this.random.nextFloat() * 2.0F + 1.0F);
         this.lifetime = (int) (16.0 / (this.random.nextFloat() * 0.8 + 0.2)) + 2;
-        this.setSpriteFromAge(spriteProvider);
+        this.setSpriteFromAge((SpriteSet) spriteProvider);
 
         this.setPos(
             this.x + (Math.sin(this.lifetime) * 0.5),
@@ -36,15 +40,20 @@ public class PlushSpawnParticle extends TextureSheetParticle {
         );
     }
 
-    @Override
-    public ParticleRenderType getRenderType() {
-        return ParticleRenderType.PARTICLE_SHEET_TRANSLUCENT;
-    }
+//    @Override
+//    public ParticleRenderType getRenderType() {
+//        return ParticleRenderType.PARTICLE_SHEET_TRANSLUCENT;
+//    }
 
     @Override
     public void tick() {
         super.tick();
-        this.setSpriteFromAge(this.spriteProvider);
+        this.setSpriteFromAge((SpriteSet) this.spriteProvider);
+    }
+
+    @Override
+    protected Layer getLayer() {
+        return Layer.TRANSLUCENT;
     }
 
     @Environment(EnvType.CLIENT)
@@ -59,9 +68,9 @@ public class PlushSpawnParticle extends TextureSheetParticle {
             SimpleParticleType defaultParticleType,
             ClientLevel clientWorld,
             double x, double y, double z,
-            double velocityX, double velocityY, double velocityZ
+            double velocityX, double velocityY, double velocityZ, RandomSource randomSource
         ) {
-            return new PlushSpawnParticle(clientWorld, x, y, z, velocityX, velocityY, velocityZ, this.spriteProvider);
+            return new PlushSpawnParticle(clientWorld, x, y, z, velocityX, velocityY, velocityZ, (TextureAtlasSprite) this.spriteProvider);
         }
     }
 }

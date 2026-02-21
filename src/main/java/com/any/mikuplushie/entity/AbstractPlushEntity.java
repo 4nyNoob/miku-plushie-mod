@@ -51,12 +51,15 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.storage.ValueInput;
+import net.minecraft.world.level.storage.ValueOutput;
 import org.jetbrains.annotations.Nullable;
 import software.bernie.geckolib.animatable.GeoEntity;
 import software.bernie.geckolib.animatable.instance.AnimatableInstanceCache;
-import software.bernie.geckolib.animation.AnimatableManager;
+import software.bernie.geckolib.animatable.manager.AnimatableManager;
 import software.bernie.geckolib.animation.AnimationController;
 import software.bernie.geckolib.animation.RawAnimation;
+import software.bernie.geckolib.renderer.base.GeoRenderState;
 import software.bernie.geckolib.util.GeckoLibUtil;
 
 import java.awt.font.TextHitInfo;
@@ -174,7 +177,7 @@ public class AbstractPlushEntity extends TamableAnimal implements GeoEntity {
     //ANIMATION CONTROLLER
     @Override
     public void registerControllers(AnimatableManager.ControllerRegistrar controllers) {
-        controllers.add(new AnimationController<>(this, "Plush", 2, state -> {
+        controllers.add(new AnimationController<>("Plush", 2, state -> {
             List<RawAnimation> DANCES = getDances();
 
             //SITTING ANIMATIONS
@@ -197,7 +200,7 @@ public class AbstractPlushEntity extends TamableAnimal implements GeoEntity {
 
                 //DANCE
                 else if (this.isSongPlaying()){
-                    RawAnimation currentAnimation = state.getController().getCurrentRawAnimation();
+                    RawAnimation currentAnimation = state.controller().getCurrentRawAnimation();
 
                     for (RawAnimation animation : DANCES){
                         //IF ALREADY DANCING THEN CONTINUE
@@ -220,7 +223,7 @@ public class AbstractPlushEntity extends TamableAnimal implements GeoEntity {
 
                 //ATTACKING
                 else if (this.swinging) {
-                    RawAnimation currentAnimation = state.getController().getCurrentRawAnimation();
+                    RawAnimation currentAnimation = state.controller().getCurrentRawAnimation();
 
                     for (RawAnimation animation : ATTACK_ANIMATIONS){
                         //IF ALREADY ATTACKING THE CONTINUE
@@ -278,10 +281,10 @@ public class AbstractPlushEntity extends TamableAnimal implements GeoEntity {
         //TAMED INTERACTION
         if (this.onGround() && this.isTame() && this.isOwnedBy(player)) {
             //DO STUFF ON SERVER
-            if (!this.level().isClientSide) {
+            if (!this.level().isClientSide()) {
                 //DROP HELD ITEM
                 if (player.isShiftKeyDown() && playerItemStack.isEmpty()) {
-                    this.spawnAtLocation(entityHandStack);
+                    this.dropEquipment((ServerLevel) this.level());
                     this.setItemSlot(EquipmentSlot.MAINHAND, ItemStack.EMPTY);
                     return InteractionResult.SUCCESS;
                 }
@@ -294,7 +297,7 @@ public class AbstractPlushEntity extends TamableAnimal implements GeoEntity {
                         }
                         float nutrition = foodComponent != null ? (float)foodComponent.nutrition() : 1.0F;
                         this.heal(nutrition);
-                        this.playSound(SoundEvents.GENERIC_EAT, 1, 1);
+                        this.playSound(SoundEvents.GENERIC_EAT.value(), 1, 1);
                     }
                     return InteractionResult.SUCCESS;
                 }
@@ -426,10 +429,12 @@ public class AbstractPlushEntity extends TamableAnimal implements GeoEntity {
 
     //LOAD AND SAVE NBT DATA
     @Override
-    public void readAdditionalSaveData(CompoundTag nbt) {
+    public void readAdditionalSaveData(ValueInput nbt) {
         super.readAdditionalSaveData(nbt);
-        this.entityData.set(SPAWN_AGE, nbt.getInt("SpawnAge"));
-        this.entityData.set(this.getVariantDataTracker(), nbt.getInt("Variant"));
+//        this.entityData.set(SPAWN_AGE, nbt.getInt("SpawnAge"));
+//        this.entityData.set(this.getVariantDataTracker(), nbt.getInt("Variant"));
+        nbt.getInt("SpawnAge");
+        nbt.getInt("Variant");
     }
 
     @Override
@@ -438,7 +443,7 @@ public class AbstractPlushEntity extends TamableAnimal implements GeoEntity {
     }
 
     @Override
-    public void addAdditionalSaveData(CompoundTag nbt) {
+    public void addAdditionalSaveData(ValueOutput nbt) {
         super.addAdditionalSaveData(nbt);
         nbt.putInt("SpawnAge", Math.min(this.tickCount, 11));
         nbt.putInt("Variant", this.getTrackedVariant());

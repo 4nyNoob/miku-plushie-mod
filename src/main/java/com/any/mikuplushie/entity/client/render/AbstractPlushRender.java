@@ -9,91 +9,101 @@ import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
 import com.mojang.math.Axis;
 import net.minecraft.client.renderer.MultiBufferSource;
-import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.client.renderer.entity.state.EntityRenderState;
+import net.minecraft.client.renderer.rendertype.RenderType;
+import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.item.ItemDisplayContext;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.ShieldItem;
-import org.jetbrains.annotations.Nullable;
-import software.bernie.geckolib.cache.object.BakedGeoModel;
-import software.bernie.geckolib.cache.object.GeoBone;
+import net.minecraft.world.phys.Vec3;
+import org.jspecify.annotations.Nullable;
+import software.bernie.geckolib.animation.state.BoneSnapshot;
+import software.bernie.geckolib.cache.model.BakedGeoModel;
+import software.bernie.geckolib.cache.model.GeoBone;
+import software.bernie.geckolib.constant.DataTickets;
+import software.bernie.geckolib.constant.dataticket.DataTicket;
 import software.bernie.geckolib.renderer.GeoEntityRenderer;
-import software.bernie.geckolib.renderer.layer.BlockAndItemGeoLayer;
+import software.bernie.geckolib.renderer.base.BoneSnapshots;
+import software.bernie.geckolib.renderer.base.GeoRenderState;
+import software.bernie.geckolib.renderer.base.RenderPassInfo;
+import software.bernie.geckolib.renderer.layer.builtin.BlockAndItemGeoLayer;
+import software.bernie.geckolib.renderer.layer.builtin.CustomBoneTextureGeoLayer;
+import software.bernie.geckolib.renderer.layer.builtin.ItemInHandGeoLayer;
 
-public class AbstractPlushRender extends GeoEntityRenderer<AbstractPlushEntity> {
+import java.util.Optional;
+
+public class AbstractPlushRender<R extends EntityRenderState & GeoRenderState> extends GeoEntityRenderer<AbstractPlushEntity, R> {
 
     public static final String LEFT_HAND = "left_hand";
     public static final String RIGHT_HAND = "right_hand";
 
-    protected ItemStack mainHandItem;
-    protected ItemStack offHandItem;
+    public AbstractPlushRender(EntityRendererProvider.Context context) {
+        super(context, new AbstractPlushModel());
 
-    public AbstractPlushRender(EntityRendererProvider.Context renderManager) {
-        super(renderManager, new AbstractPlushModel());
-
-        // Add some held item rendering
-        addRenderLayer(new BlockAndItemGeoLayer<>(this) {
-            @Nullable
-            public ItemStack getStackForBone(GeoBone bone, AbstractPlushEntity animatable) {
-                // Retrieve the items in the entity's hands for the relevant bone
-                return switch (bone.getName()) {
-                    case LEFT_HAND -> animatable.isLeftHanded() ?
-                        AbstractPlushRender.this.mainHandItem : AbstractPlushRender.this.offHandItem;
-                    case RIGHT_HAND -> animatable.isLeftHanded() ?
-                        AbstractPlushRender.this.offHandItem : AbstractPlushRender.this.mainHandItem;
-                    default -> null;
-                };
-            }
-
-            public ItemDisplayContext getTransformTypeForStack(GeoBone bone, ItemStack stack, AbstractPlushEntity animatable) {
-                // Apply the camera transform for the given hand
-                return switch (bone.getName()) {
-                    case LEFT_HAND, RIGHT_HAND -> ItemDisplayContext.THIRD_PERSON_RIGHT_HAND;
-                    default -> ItemDisplayContext.NONE;
-                };
-            }
-
-            // Do some quick render modifications depending on what the item is
-            public void renderStackForBone(PoseStack poseStack, GeoBone bone, ItemStack stack, AbstractPlushEntity animatable,
-                                            MultiBufferSource bufferSource, float partialTick, int packedLight, int packedOverlay) {
-                if (stack == AbstractPlushRender.this.mainHandItem) {
-                    poseStack.mulPose(Axis.XP.rotationDegrees(-90f));
-
-                    if (stack.getItem() instanceof ShieldItem)
-                        poseStack.translate(0, 0.125, -0.25);
-                }
-                else if (stack == AbstractPlushRender.this.offHandItem) {
-                    poseStack.mulPose(Axis.XP.rotationDegrees(-90f));
-
-                    if (stack.getItem() instanceof ShieldItem) {
-                        poseStack.translate(0, 0.125, 0.25);
-                        poseStack.mulPose(Axis.YP.rotationDegrees(180));
-                    }
-                }
-
-                super.renderStackForBone(poseStack, bone, stack, animatable, bufferSource, partialTick, packedLight, packedOverlay);
-            }
-        });
+        withRenderLayer(new ItemInHandGeoLayer<>(this, LEFT_HAND, RIGHT_HAND));
     }
 
     @Override
-    public RenderType getRenderType(AbstractPlushEntity animatable, ResourceLocation texture, MultiBufferSource bufferSource, float partialTick) {
-        //USE TRANSLUCENT RENDER ON SPECIFIC VARIATION
-        if (
-            animatable.getVariant().equals(ModUtil.getBlockIdFromBlock(ModBlocks.MIKU_PLUSH_GHOST)) ||
-            animatable.getVariant().equals(ModUtil.getBlockIdFromBlock(ModBlocks.TETO_PLUSH_WHATCHACALLITSNAME))
-        ){
-            return RenderType.entityTranslucent(texture);
+    public void adjustModelBonesForRender(RenderPassInfo<R> renderPassInfo, BoneSnapshots snapshots) {
+        super.adjustModelBonesForRender(renderPassInfo, snapshots);
+
+        Float limbSwing = renderPassInfo.getGeckolibData(AbstractPlushModel.LIMB_SWING);
+        Float swingAmm = renderPassInfo.getGeckolibData(AbstractPlushModel.LIMB_SWING_AMOUNT);
+
+        Optional<BoneSnapshot> root = snapshots.get("root_offset");
+        Optional<BoneSnapshot> left_leg = snapshots.get("left_leg_offset");
+        Optional<BoneSnapshot> right_leg = snapshots.get("right_leg_offset");
+        Optional<BoneSnapshot> left_arm = snapshots.get("left_arm_offset");
+        Optional<BoneSnapshot> right_arm = snapshots.get("right_arm_offset");
+        Optional<BoneSnapshot> body = snapshots.get("body_offset");
+
+        Boolean busy = renderPassInfo.getGeckolibData(AbstractPlushModel.BUSY);
+
+//        float limbSwing = state.getLimbSwing();
+//        float swingAmm = state.getLimbSwingAmount();
+        float toRad = (float) (Math.PI / 180);
+        float swingSpeed = 1F;
+
+        //GET BONES
+//        GeoBone root = plush.getAnimationProcessor().getBone("root_offset");
+//        GeoBone left_leg = plush.getAnimationProcessor().getBone("left_leg_offset");
+//        GeoBone right_leg = plush.getAnimationProcessor().getBone("right_leg_offset");
+//        GeoBone left_arm = plush.getAnimationProcessor().getBone("left_arm_offset");
+//        GeoBone right_arm = plush.getAnimationProcessor().getBone("right_arm_offset");
+//        GeoBone body = plush.getAnimationProcessor().getBone("body_offset");
+
+        //HEALTH DISPLAY
+/*        float maxHealth = animatable.getMaxHealth();
+        float health = animatable.getHealth();*/
+        Float healthFactor = renderPassInfo.getGeckolibData(AbstractPlushModel.HEALTH);
+        int bendAmount = 25;
+        float healthBend = ((healthFactor) - 1) * bendAmount;
+
+        //ROOT ANIMATION
+        root.get().setRotZ((float) Math.sin(limbSwing * swingSpeed) * (swingAmm * 5 * toRad));
+        root.get().setTranslateY((float) Math.sin(limbSwing * swingSpeed * 2) * (swingAmm * 1) + (swingAmm * 1));
+
+        //DISABLE ARM ANIMATIONS WHEN DANCING AND ATTACKING
+        if (busy){
+            left_arm.get().setRotX(0);
+            right_arm.get().setRotX(0);
         } else {
-            return super.getRenderType(animatable, texture, bufferSource, partialTick);
+            left_arm.get().setRotX((float) Math.sin(limbSwing * swingSpeed) * (swingAmm * 50 * toRad) - (healthBend * toRad));
+            right_arm.get().setRotX((float) Math.sin(limbSwing * swingSpeed) * (swingAmm * -50 * toRad) - (healthBend * toRad));
         }
-    }
+        //LEGS ANIMATION
+        left_leg.get().setRotX((float) Math.sin(limbSwing * swingSpeed) * (swingAmm * -50 * toRad));
+        right_leg.get().setRotX((float) Math.sin(limbSwing * swingSpeed) * (swingAmm * 50 * toRad));
+        //BODY ANIMATION
+        body.get().setRotX(healthBend * toRad);
 
-    @Override
-    public void preRender(PoseStack poseStack, AbstractPlushEntity animatable, BakedGeoModel model, @Nullable MultiBufferSource bufferSource, @Nullable VertexConsumer buffer, boolean isReRender, float partialTick, int packedLight, int packedOverlay, int colour) {
-        super.preRender(poseStack, animatable, model, bufferSource, buffer, isReRender, partialTick, packedLight, packedOverlay, colour);
-        this.mainHandItem = animatable.getMainHandItem();
-        this.offHandItem = animatable.getOffhandItem();
+        //HEAD ANIM
+        Optional<BoneSnapshot> head = snapshots.get("head_offset");
+//        GeoBone head = plush.getAnimationProcessor().getBone("head_offset");
+        float headPitch = renderPassInfo.getGeckolibData(DataTickets.ENTITY_PITCH);
+        float headYaw = renderPassInfo.getGeckolibData(DataTickets.ENTITY_YAW);
+        head.get().setRotX((headPitch - healthBend) * toRad);
+        head.get().setRotY(headYaw * toRad);
     }
 }

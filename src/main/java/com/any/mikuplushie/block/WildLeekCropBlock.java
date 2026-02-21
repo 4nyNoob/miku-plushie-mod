@@ -3,11 +3,9 @@ package com.any.mikuplushie.block;
 import com.any.mikuplushie.registry.ModItems;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.util.RandomSource;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.level.BlockGetter;
-import net.minecraft.world.level.ItemLike;
-import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.level.LevelReader;
+import net.minecraft.world.level.*;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
@@ -29,7 +27,7 @@ public class WildLeekCropBlock extends Block {
     }
 
     @Override
-    public ItemStack getCloneItemStack(LevelReader world, BlockPos pos, BlockState state) {
+    public ItemStack getCloneItemStack(LevelReader world, BlockPos pos, BlockState state, boolean bl) {
         return new ItemStack(this.getSeedsItem());
     }
 
@@ -39,12 +37,10 @@ public class WildLeekCropBlock extends Block {
     }
 
     @Override
-    public BlockState updateShape(
-        BlockState state, Direction direction, BlockState neighborState, LevelAccessor world, BlockPos pos, BlockPos neighborPos
-    ) {
+    protected BlockState updateShape(BlockState state, LevelReader world, ScheduledTickAccess scheduledTickAccess, BlockPos pos, Direction direction, BlockPos blockPos2, BlockState blockState2, RandomSource randomSource) {
         return !state.canSurvive(world, pos)
             ? Blocks.AIR.defaultBlockState()
-            : super.updateShape(state, direction, neighborState, world, pos, neighborPos);
+            : super.updateShape(state, world, scheduledTickAccess, pos, direction, blockPos2, blockState2, randomSource);
     }
 
     @Override
@@ -54,7 +50,7 @@ public class WildLeekCropBlock extends Block {
     }
 
     @Override
-    public boolean propagatesSkylightDown(BlockState state, BlockGetter world, BlockPos pos) {
+    public boolean propagatesSkylightDown(BlockState state) {
         return state.getFluidState().isEmpty();
     }
 

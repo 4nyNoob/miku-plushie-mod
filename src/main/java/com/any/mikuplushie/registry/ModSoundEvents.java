@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.world.entity.EntityType;
 
@@ -19,7 +19,7 @@ public class ModSoundEvents {
 	protected static List<String> MIKU_SOUND_EVENT = List.of("canudinho", "eat");
 
 	private static SoundEvent registerSound(String id) {
-		ResourceLocation identifier = ResourceLocation.fromNamespaceAndPath(MikuPlushie.MOD_ID, id);
+		Identifier identifier = Identifier.fromNamespaceAndPath(MikuPlushie.MOD_ID, id);
 		return Registry.register(BuiltInRegistries.SOUND_EVENT, identifier, SoundEvent.createVariableRangeEvent(identifier));
 	}
 

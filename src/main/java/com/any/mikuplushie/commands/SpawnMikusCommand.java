@@ -5,6 +5,7 @@ import com.any.mikuplushie.registry.ModBlocks;
 import com.any.mikuplushie.registry.ModItems;
 import com.any.mikuplushie.util.ModUtil;
 import com.mojang.brigadier.CommandDispatcher;
+import net.minecraft.world.entity.EntitySpawnReason;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
@@ -114,13 +115,13 @@ public class SpawnMikusCommand {
                             //GET FIRST TWO WORDS
                             String entityName = ModUtil.getEntityNameFromBlockId(blockName);
                             //ENTITY TYPE REGISTRY
-                            Registry<EntityType<?>> entityTypeRegistry = world.registryAccess().registryOrThrow(Registries.ENTITY_TYPE);
+                            Registry<EntityType<?>> entityTypeRegistry = (Registry<EntityType<?>>) world.registryAccess().getOrThrow(Registries.ENTITY_TYPE);
 
                             //ITERATE THROUGH ALL REGISTERED ENTITIES AND FILTER BY NAME
                             for (int entity = 0; entity < entityTypeRegistry.size(); entity++) {
                                 if (Objects.requireNonNull(entityTypeRegistry.byId(entity)).getDescriptionId().contains(entityName)){
                                     //SPAWN ENTITY ACCORDING TO BLOCK NAME
-                                    AbstractPlushEntity spawned = (AbstractPlushEntity) Objects.requireNonNull(entityTypeRegistry.byId(entity)).create(world);
+                                    AbstractPlushEntity spawned = (AbstractPlushEntity) Objects.requireNonNull(entityTypeRegistry.byId(entity)).create(world, EntitySpawnReason.COMMAND);
                                     //SETUP AND SPAWN ENTITY
                                     setupEntity(Objects.requireNonNull(spawned), entitySpawnLocation);
                                     spawned.setVariantByBlock(blockName);

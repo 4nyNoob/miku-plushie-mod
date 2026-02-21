@@ -9,7 +9,7 @@ import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.Registries;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.entity.EntityType;
@@ -18,15 +18,18 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
+import static net.minecraft.tags.TagEntry.tag;
+
 public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
 
     public ModItemTagProvider(FabricDataOutput output,
-                              CompletableFuture<HolderLookup.Provider> completableFuture) {
+                              CompletableFuture<HolderLookup.Provider> completableFuture
+    ) {
         super(output, completableFuture);
     }
 
-    public static final TagKey<Item> PLUSHIES = TagKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(MikuPlushie.MOD_ID, "plushies"));
-    public static final TagKey<Item> TETO_PICKAXE = TagKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(MikuPlushie.MOD_ID, "teto_pickaxe"));
+    public static final TagKey<Item> PLUSHIES = TagKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath(MikuPlushie.MOD_ID, "plushies"));
+    public static final TagKey<Item> TETO_PICKAXE = TagKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath(MikuPlushie.MOD_ID, "teto_pickaxe"));
 
     public static List<TagKey<Item>> PLUSH_TAGS = new ArrayList<>();
 
@@ -38,7 +41,7 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
         for (EntityType<?> plushEntity : plushEntities){
             String plushName = plushEntity.toShortString();
             PLUSH_TAGS.add(
-                TagKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(MikuPlushie.MOD_ID, plushName))
+                TagKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath(MikuPlushie.MOD_ID, plushName))
             );
         }
 
@@ -49,20 +52,20 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
             for (TagKey<Item> tag : PLUSH_TAGS) {
                 plushTagName = tag.location().toString().split(":")[1];
                 if (plushName.contains(plushTagName)){
-                    tag(tag).add();
+                    valueLookupBuilder(tag).add(ModItems.PLUSH_ITEMS.get(plush));
                 }
             }
         }
 
         //ADD PICKAXES TO THEIR OWN TAG
         for (Item pickaxe : ModItems.PICKAXE_ITEMS){
-            tag(TETO_PICKAXE).add();
-            tag(ItemTags.CLUSTER_MAX_HARVESTABLES).add();
-            tag(ItemTags.PICKAXES).add();
+            valueLookupBuilder(TETO_PICKAXE).add(pickaxe);
+            valueLookupBuilder(ItemTags.CLUSTER_MAX_HARVESTABLES).add(pickaxe);
+            valueLookupBuilder(ItemTags.PICKAXES).add(pickaxe);
         }
 
         for (TagKey<Item> tag : PLUSH_TAGS){
-            tag(PLUSHIES).addOptionalTag(tag.location());
+            valueLookupBuilder(PLUSHIES).addTag(tag);
         }
 
     }

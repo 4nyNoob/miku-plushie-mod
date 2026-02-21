@@ -4,6 +4,7 @@ import com.any.mikuplushie.MikuPlushie;
 import com.any.mikuplushie.block.LeekCropBlock;
 import com.any.mikuplushie.block.MikuPlushieBlock;
 import com.any.mikuplushie.block.WildLeekCropBlock;
+import net.minecraft.resources.Identifier;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.ArrayList;
@@ -11,7 +12,6 @@ import java.util.List;
 import java.util.Objects;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
@@ -125,13 +125,13 @@ public class ModBlocks {
     //NON PLUSH STUFF
     public static final LeekCropBlock LEEK_CROP = (LeekCropBlock) register(
         new LeekCropBlock(BlockBehaviour.Properties.of()
-            .noOcclusion().noCollission().randomTicks().instabreak().sound(SoundType.CROP)),
+            .noOcclusion().noCollision().randomTicks().instabreak().sound(SoundType.CROP)),
         "leek_crop",
         false
     );
     public static final WildLeekCropBlock WILD_LEEK_CROP = (WildLeekCropBlock) register(
         new WildLeekCropBlock(BlockBehaviour.Properties.of()
-            .noOcclusion().noCollission().randomTicks().instabreak().sound(SoundType.CROP)),
+            .noOcclusion().noCollision().randomTicks().instabreak().sound(SoundType.CROP)),
         "wild_leek_crop",
         false
     );
@@ -150,7 +150,7 @@ public class ModBlocks {
     //REGISTER REGULAR BLOCKS
 	public static Block register(Block block, String name, boolean shouldRegisterItem) {
         //CREATE IDENTIFIER
-        ResourceLocation id = ResourceLocation.fromNamespaceAndPath(MikuPlushie.MOD_ID, name);
+        Identifier id = Identifier.fromNamespaceAndPath(MikuPlushie.MOD_ID, name);
 
         //REGISTER ITEM IF REQUESTED
         if (shouldRegisterItem) {
