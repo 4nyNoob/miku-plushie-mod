@@ -5,6 +5,7 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.level.*;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
@@ -23,7 +24,8 @@ public class WildLeekCropBlock extends Block {
     }
 
     protected ItemLike getSeedsItem() {
-        return ModItems.LEEK_SEEDS;
+        return Items.DEEPSLATE;
+//        return ModItems.LEEK_SEEDS;
     }
 
     @Override

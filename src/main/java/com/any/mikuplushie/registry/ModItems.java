@@ -14,11 +14,11 @@ import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.ItemTags;
-import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.*;
 import net.minecraft.world.level.block.Block;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.BiFunction;
 import java.util.function.Function;
 
 public class ModItems{
@@ -43,8 +43,8 @@ public class ModItems{
 	public static final Item BAGUETTE =
         register("baguette", Item::new, new Item.Properties().food(ModFoodComponents.BAGUETTE));
 
-    public static final Item LEEK_SEEDS =
-        registerItem("leek_seeds", createBlockItemWithCustomItemName(ModBlocks.LEEK_CROP));
+//    public static final Item LEEK_SEEDS =
+//        registerItem("leek_seeds", createBlockItemWithCustomItemName(ModBlocks.LEEK_CROP));
     public static final Item LEEK =
         register("leek", Item::new, new Item.Properties().food(ModFoodComponents.LEEK));
 
@@ -86,7 +86,8 @@ public class ModItems{
                 plushBlock = registeredPlushBlock;
             }
         }
-        return registerItem(name, createBlockItemWithCustomItemName(plushBlock));
+//        return registerItem(name, createBlockItemWithCustomItemName(plushBlock));
+        return registerBlock(plushBlock, MikuPlushieBlockItem::new);
     }
 
     //REGISTER PICKAXES HELPER
@@ -108,16 +109,43 @@ public class ModItems{
         // Register the item.
         Registry.register(BuiltInRegistries.ITEM, itemKey, item);
 
+        if (item.getName().toString().contains("plush")){
+            PLUSH_ITEMS.add(item);
+        } else if (item.getName().toString().contains("pickaxe")) {
+            PICKAXE_ITEMS.add(item);
+        } else {
+            REGULAR_ITEMS.add(item);
+        }
+
         return item;
     }
 
     //REGISTER HELPERS
+    public static Item registerBlock(Block block) {
+        return registerBlock(block, BlockItem::new);
+    }
+
+    public static Item registerBlock(Block block, BiFunction<Block, Item.Properties, Item> biFunction) {
+        return registerBlock(block, biFunction, new Item.Properties());
+    }
+
+    public static Item registerBlock(Block block, BiFunction<Block, Item.Properties, Item> biFunction, Item.Properties properties) {
+        return registerItem(
+            blockIdToItemId(block.builtInRegistryHolder().key()), propertiesx -> biFunction.apply(block, propertiesx), properties.useBlockDescriptionPrefix()
+        );
+    }
+
+
+    private static ResourceKey<Item> blockIdToItemId(ResourceKey<Block> resourceKey) {
+        return ResourceKey.create(Registries.ITEM, resourceKey.identifier());
+    }
+
     private static Function<Item.Properties, Item> createBlockItemWithCustomItemName(Block block) {
         return properties -> new BlockItem(block, properties.useItemDescriptionPrefix());
     }
 
     public static Item registerItem(String string, Function<Item.Properties, Item> function) {
-        return registerItem(vanillaItemId(string), function, new Item.Properties());
+        return registerItem(mikuItemId(string), function, new Item.Properties());
     }
 
     public static Item registerItem(ResourceKey<Item> resourceKey, Function<Item.Properties, Item> function, Item.Properties properties) {
@@ -129,7 +157,7 @@ public class ModItems{
         return Registry.register(BuiltInRegistries.ITEM, resourceKey, item);
     }
 
-    private static ResourceKey<Item> vanillaItemId(String string) {
+    private static ResourceKey<Item> mikuItemId(String string) {
         return ResourceKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath(MikuPlushie.MOD_ID, string));
     }
 

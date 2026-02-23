@@ -119,11 +119,15 @@ public class AbstractPlushEntity extends TamableAnimal implements GeoEntity {
     }
 
     //ATTRIBUTES
+
+
     public static AttributeSupplier.Builder createAttributes() {
         return Mob.createMobAttributes()
             .add(Attributes.MAX_HEALTH, 20.0F)
             .add(Attributes.MOVEMENT_SPEED, 0.3F)
-            .add(Attributes.ATTACK_DAMAGE, 2.0F);
+            .add(Attributes.ATTACK_DAMAGE, 2.0F)
+            .add(Attributes.TEMPT_RANGE, 8.0F)
+            ;
     }
 
     //ENTITY POSES
@@ -161,12 +165,12 @@ public class AbstractPlushEntity extends TamableAnimal implements GeoEntity {
         }
     }
 
-    //UPDATE ENTITY POSE ON TICK METHOD
-    @Override
-    public void tick() {
-        super.tick();
-        this.updatePose();
-    }
+//    //UPDATE ENTITY POSE ON TICK METHOD
+//    @Override
+//    public void tick() {
+//        super.tick();
+////        this.updatePose();
+//    }
 
     public List<RawAnimation> getDances(){
         return  List.of(
@@ -348,29 +352,29 @@ public class AbstractPlushEntity extends TamableAnimal implements GeoEntity {
         return true;
     }
 
-    //HANDLE NEARBY SONG PLAYING
-    @Override
-    public void aiStep() {
-        super.aiStep();
-        this.updateSwingTime();
-
-        //GET NEARBY SONG PLAYING
-        if (
-            this.songSource == null
-                || !this.songSource.closerToCenterThan(this.position(), 8D)
-                || !this.level().getBlockState(this.songSource).is(Blocks.JUKEBOX)
-        )
-        {
-            this.songPlaying = false;
-            this.songSource = null;
-        }
-
-        //INCREMENT SPAWN TIMER IF IT'S LESS THAN 10
-        if (this.entityData.get(SPAWN_AGE) < 10){
-            this.entityData.set(SPAWN_AGE, Math.min(this.tickCount, 10));
-        }
-
-    }
+//    //HANDLE NEARBY SONG PLAYING
+//    @Override
+//    public void aiStep() {
+//        super.aiStep();
+//        this.updateSwingTime();
+//
+////        //GET NEARBY SONG PLAYING
+////        if (
+////            this.songSource == null
+////                || !this.songSource.closerToCenterThan(this.position(), 8D)
+////                || !this.level().getBlockState(this.songSource).is(Blocks.JUKEBOX)
+////        )
+////        {
+////            this.songPlaying = false;
+////            this.songSource = null;
+////        }
+////
+////        //INCREMENT SPAWN TIMER IF IT'S LESS THAN 10
+////        if (this.entityData.get(SPAWN_AGE) < 10){
+////            this.entityData.set(SPAWN_AGE, Math.min(this.tickCount, 10));
+////        }
+//
+//    }
 
     //IS SONG PLAYING FUNCTION
     public boolean isSongPlaying() {

@@ -9,6 +9,7 @@ import net.minecraft.resources.Identifier;
 import org.jspecify.annotations.NonNull;
 import org.jspecify.annotations.Nullable;
 import software.bernie.geckolib.constant.dataticket.DataTicket;
+import software.bernie.geckolib.model.DefaultedGeoModel;
 import software.bernie.geckolib.model.GeoModel;
 import software.bernie.geckolib.renderer.base.GeoRenderState;
 
@@ -17,7 +18,7 @@ import java.util.Objects;
 public class AbstractPlushModel extends GeoModel<AbstractPlushEntity> {
 
     //    private final Identifier model = Identifier.of(MikuPlushie.MOD_ID, "geo/entity/" + entity + ".geo.json");
-    private final Identifier animations = Identifier.fromNamespaceAndPath(MikuPlushie.MOD_ID, "animations/plush.animation.json");
+
 
     public static final DataTicket<String> NAME = DataTicket.create("name", String.class, new TypeToken<>(){});
     public static final DataTicket<String> VARIATION = DataTicket.create("variation", String.class, new TypeToken<>(){});
@@ -33,7 +34,7 @@ public class AbstractPlushModel extends GeoModel<AbstractPlushEntity> {
         String variant = renderState.getGeckolibData(VARIATION);
 
         if (variant.equals(entity)){
-            return Identifier.fromNamespaceAndPath(MikuPlushie.MOD_ID, "geo/entity/" + entity + ".geo.json");
+            return Identifier.fromNamespaceAndPath(MikuPlushie.MOD_ID, entity);
         }
         //VARIANTS THAT USE THE 2ND MODEL
         else if (
@@ -43,7 +44,7 @@ public class AbstractPlushModel extends GeoModel<AbstractPlushEntity> {
             variant.equals(ModUtil.getBlockIdFromBlock(ModBlocks.MIKU_PLUSH_PATATA)) ||
             variant.equals(ModUtil.getBlockIdFromBlock(ModBlocks.MIKU_PLUSH_DEVIL)) ||
             variant.equals(ModUtil.getBlockIdFromBlock(ModBlocks.MIKU_PLUSH_WITCH))) {
-            return Identifier.fromNamespaceAndPath(MikuPlushie.MOD_ID, "geo/entity/" + entity + "_2" + ".geo.json");
+            return Identifier.fromNamespaceAndPath(MikuPlushie.MOD_ID, entity + "_2");
         }
         //VARIANTS THAT USE THE 3RD MODEL
         else if (
@@ -61,19 +62,19 @@ public class AbstractPlushModel extends GeoModel<AbstractPlushEntity> {
             variant.equals(ModUtil.getBlockIdFromBlock(ModBlocks.MIKU_PLUSH_LUCARIO_Z))||
             variant.equals(ModUtil.getBlockIdFromBlock(ModBlocks.MIKU_PLUSH_PPPP))
         ) {
-            return Identifier.fromNamespaceAndPath(MikuPlushie.MOD_ID, "geo/entity/" + entity + "_3" + ".geo.json");
+            return Identifier.fromNamespaceAndPath(MikuPlushie.MOD_ID, entity + "_3");
         }
-        return Identifier.fromNamespaceAndPath(MikuPlushie.MOD_ID, "geo/entity/" + entity + ".geo.json");
+        return Identifier.fromNamespaceAndPath(MikuPlushie.MOD_ID, entity);
     }
 
     @Override
-    public Identifier getTextureResource(GeoRenderState renderState) {
+    public @NonNull Identifier getTextureResource(GeoRenderState renderState) {
         return Identifier.fromNamespaceAndPath(MikuPlushie.MOD_ID, variantToBlockTextureName(Objects.requireNonNull(renderState.getGeckolibData(VARIATION))));
     }
 
     @Override
-    public Identifier getAnimationResource(AbstractPlushEntity animatable) {
-        return animations;
+    public @NonNull Identifier getAnimationResource(AbstractPlushEntity animatable) {
+        return Identifier.fromNamespaceAndPath(MikuPlushie.MOD_ID, "plush");
     }
 
     private String variantToBlockTextureName (String variant) {

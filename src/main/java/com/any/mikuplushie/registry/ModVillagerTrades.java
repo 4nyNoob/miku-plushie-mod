@@ -15,10 +15,10 @@ public class ModVillagerTrades {
 
         TradeOfferHelper.registerVillagerOffers(VillagerProfession.FARMER, 1, factories -> {
             //BUY LEEK SEEDS
-            factories.add(((serverLevel, entity, randomSource) ->  new MerchantOffer(
-                new ItemCost(Items.EMERALD, 1),
-                new ItemStack(ModItems.LEEK_SEEDS, 3), 6, 2, 0.02f
-            )));
+//            factories.add(((serverLevel, entity, randomSource) ->  new MerchantOffer(
+//                new ItemCost(Items.EMERALD, 1),
+//                new ItemStack(ModItems.LEEK_SEEDS, 3), 6, 2, 0.02f
+//            )));
             //SELL LEEK
             factories.add(((serverLevel, entity, randomSource) ->  new MerchantOffer(
                 new ItemCost(ModItems.LEEK, 16),

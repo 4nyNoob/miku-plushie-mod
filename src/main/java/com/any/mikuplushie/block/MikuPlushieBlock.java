@@ -1,6 +1,7 @@
 package com.any.mikuplushie.block;
 
 import com.any.mikuplushie.entity.AbstractPlushEntity;
+import com.any.mikuplushie.registry.ModEntities;
 import com.any.mikuplushie.registry.ModItems;
 import com.any.mikuplushie.registry.ModParticles;
 import com.any.mikuplushie.util.ModUtil;
@@ -10,6 +11,7 @@ import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.EnumProperty;
 import org.jetbrains.annotations.Nullable;
 
+import java.util.List;
 import java.util.Objects;
 import net.minecraft.commands.arguments.EntityAnchorArgument;
 import net.minecraft.core.BlockPos;
@@ -57,15 +59,17 @@ public class MikuPlushieBlock extends Block {
                 String entityName = ModUtil.getEntityNameFromBlockId(blockName);
 
                 Vec3 entitySpawnLocation = pos.getCenter().subtract(0,0.5,0);
+
                 //ENTITY TYPE REGISTRY
-                Registry<EntityType<?>> entityTypeRegistry = (Registry<EntityType<?>>) world.registryAccess().getOrThrow(Registries.ENTITY_TYPE);
+                List<EntityType<? extends AbstractPlushEntity>> entityTypeRegistry = ModEntities.PLUSH_ENTITIES;
 
                 //ITERATE THROUGH ALL REGISTERED ENTITIES AND FILTER BY NAME
                 for (int entity = 0; entity < entityTypeRegistry.size(); entity++) {
-                    if (Objects.requireNonNull(entityTypeRegistry.byId(entity)).getDescriptionId().contains(entityName)) {
+                    if (Objects.requireNonNull(entityTypeRegistry.get(entity)).getDescriptionId().contains(entityName)) {
 
                         //SPAWN ENTITY ACCORDING TO BLOCK NAME
-                        AbstractPlushEntity spawned = (AbstractPlushEntity) Objects.requireNonNull(entityTypeRegistry.byId(entity)).create(world, EntitySpawnReason.COMMAND);
+//                        AbstractPlushEntity spawned = (AbstractPlushEntity) Objects.requireNonNull(entityTypeRegistry.byId(entity)).create(world, EntitySpawnReason.COMMAND);
+                        AbstractPlushEntity spawned = entityTypeRegistry.get(entity).create(world, EntitySpawnReason.COMMAND);
 
                         //SETUP AND SPAWN ENTITY
                         Objects.requireNonNull(spawned).setVariantByBlock(blockName);
@@ -80,13 +84,13 @@ public class MikuPlushieBlock extends Block {
                 world.destroyBlock(pos, false, player);
                 return InteractionResult.SUCCESS;
             } else {
-                for (int particles = 0; particles < 100; particles++) {
-                    world.addParticle(
-                        ModParticles.MIKU_SPAWN,
-                        pos.getX() + 0.5D, pos.getY(), pos.getZ() + 0.5D,
-                        0,0,0
-                    );
-                }
+//                for (int particles = 0; particles < 100; particles++) {
+//                    world.addParticle(
+//                        ModParticles.MIKU_SPAWN,
+//                        pos.getX() + 0.5D, pos.getY(), pos.getZ() + 0.5D,
+//                        0,0,0
+//                    );
+//                }
             }
         }
         return super.useItemOn(stack, state, world, pos, player, hand, hit);

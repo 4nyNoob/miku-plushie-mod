@@ -4,12 +4,17 @@ import com.any.mikuplushie.MikuPlushie;
 import com.any.mikuplushie.block.LeekCropBlock;
 import com.any.mikuplushie.block.MikuPlushieBlock;
 import com.any.mikuplushie.block.WildLeekCropBlock;
+import net.jpountz.lz4.LZ4FrameOutputStream;
+import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.Identifier;
+import net.minecraft.resources.ResourceKey;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
+import java.util.function.Function;
+
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.item.BlockItem;
@@ -123,17 +128,23 @@ public class ModBlocks {
 	public static final Block KAITO_PLUSH_V4 = registerPlush("kaito_plush_v4", null);
 
     //NON PLUSH STUFF
+//    public static final LeekCropBlock LEEK_CROP = (LeekCropBlock) register(
+//        new LeekCropBlock(BlockBehaviour.Properties.of()
+//            .noOcclusion().noCollision().randomTicks().instabreak().sound(SoundType.CROP)),
+//        "leek_crop",
+//        false
+//    );
+//    public static final WildLeekCropBlock WILD_LEEK_CROP = (WildLeekCropBlock) register(
+//        new WildLeekCropBlock(BlockBehaviour.Properties.of()
+//            .noOcclusion().noCollision().randomTicks().instabreak().sound(SoundType.CROP)),
+//        "wild_leek_crop",
+//        false
+//    );
     public static final LeekCropBlock LEEK_CROP = (LeekCropBlock) register(
-        new LeekCropBlock(BlockBehaviour.Properties.of()
-            .noOcclusion().noCollision().randomTicks().instabreak().sound(SoundType.CROP)),
-        "leek_crop",
-        false
+        "leek_crop", LeekCropBlock::new, BlockBehaviour.Properties.ofFullCopy(Blocks.WHEAT), false
     );
     public static final WildLeekCropBlock WILD_LEEK_CROP = (WildLeekCropBlock) register(
-        new WildLeekCropBlock(BlockBehaviour.Properties.of()
-            .noOcclusion().noCollision().randomTicks().instabreak().sound(SoundType.CROP)),
-        "wild_leek_crop",
-        false
+       "wild_leek_crop", WildLeekCropBlock::new, BlockBehaviour.Properties.ofFullCopy(Blocks.GRASS_BLOCK), false
     );
 
     //REGISTER PLUSHIES
@@ -142,31 +153,69 @@ public class ModBlocks {
         SoundType blockSoundGroup = null;
         blockSoundGroup = Objects.requireNonNullElse(blockSound, SoundType.WOOL);
         //REGISTER BLOCK NORMALLY
-        return register(
-            new MikuPlushieBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.FLOWER_POT)
-                .sound(blockSoundGroup).noOcclusion()), name, false);
+//        return register(
+//            new MikuPlushieBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.FLOWER_POT)
+//                .sound(blockSoundGroup).noOcclusion()), name, false);
+		return register(name,
+			MikuPlushieBlock::new,
+			BlockBehaviour.Properties.of().sound(blockSoundGroup),
+			false
+		);
     }
 
-    //REGISTER REGULAR BLOCKS
-	public static Block register(Block block, String name, boolean shouldRegisterItem) {
-        //CREATE IDENTIFIER
-        Identifier id = Identifier.fromNamespaceAndPath(MikuPlushie.MOD_ID, name);
+//    //REGISTER REGULAR BLOCKS
+//	public static Block register(Block block, String name, boolean shouldRegisterItem) {
+//        //CREATE IDENTIFIER
+//        Identifier id = Identifier.fromNamespaceAndPath(MikuPlushie.MOD_ID, name);
+//
+//        //REGISTER ITEM IF REQUESTED
+//        if (shouldRegisterItem) {
+//            BlockItem blockItem = new BlockItem(block, new Item.Properties());
+//            Registry.register(BuiltInRegistries.ITEM, id, blockItem);
+//        }
+//
+//        Block blockRegister = Registry.register(BuiltInRegistries.BLOCK, id, block);
+//
+//        //IF BLOCK IS A PLUSH ADD IT TO THE LIST
+//        if (block instanceof MikuPlushieBlock){
+//            PLUSH_BLOCKS.add(block);
+//        }
+//
+//        return blockRegister;
+//	}
 
-        //REGISTER ITEM IF REQUESTED
-        if (shouldRegisterItem) {
-            BlockItem blockItem = new BlockItem(block, new Item.Properties());
-            Registry.register(BuiltInRegistries.ITEM, id, blockItem);
-        }
+	private static Block register(String name, Function<BlockBehaviour.Properties, Block> blockFactory, BlockBehaviour.Properties settings, boolean shouldRegisterItem) {
+		// Create a registry key for the block
+		ResourceKey<Block> blockKey = keyOfBlock(name);
+		// Create the block instance
+		Block block = blockFactory.apply(settings.setId(blockKey));
 
-        Block blockRegister = Registry.register(BuiltInRegistries.BLOCK, id, block);
+		// Sometimes, you may not want to register an item for the block.
+		// Eg: if it's a technical block like `minecraft:moving_piston` or `minecraft:end_gateway`
+		if (shouldRegisterItem) {
+			// Items need to be registered with a different type of registry key, but the ID
+			// can be the same.
+			ResourceKey<Item> itemKey = keyOfItem(name);
 
-        //IF BLOCK IS A PLUSH ADD IT TO THE LIST
-        if (block instanceof MikuPlushieBlock){
-            PLUSH_BLOCKS.add(block);
-        }
+			BlockItem blockItem = new BlockItem(block, new Item.Properties().setId(itemKey).useBlockDescriptionPrefix());
+			Registry.register(BuiltInRegistries.ITEM, itemKey, blockItem);
+		}
 
-        return blockRegister;
+		if (block instanceof MikuPlushieBlock){
+			PLUSH_BLOCKS.add(block);
+		}
+
+		return Registry.register(BuiltInRegistries.BLOCK, blockKey, block);
 	}
+
+	private static ResourceKey<Block> keyOfBlock(String name) {
+		return ResourceKey.create(Registries.BLOCK, Identifier.fromNamespaceAndPath(MikuPlushie.MOD_ID, name));
+	}
+
+	private static ResourceKey<Item> keyOfItem(String name) {
+		return ResourceKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath(MikuPlushie.MOD_ID, name));
+	}
+
 
 	public static void initialize() {
         MikuPlushie.LOGGER.info("Registering " + MikuPlushie.MOD_ID + " Blocks");

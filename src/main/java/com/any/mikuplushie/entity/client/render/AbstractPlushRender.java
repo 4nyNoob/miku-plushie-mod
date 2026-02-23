@@ -101,8 +101,8 @@ public class AbstractPlushRender<R extends EntityRenderState & GeoRenderState> e
         //HEAD ANIM
         Optional<BoneSnapshot> head = snapshots.get("head_offset");
 //        GeoBone head = plush.getAnimationProcessor().getBone("head_offset");
-        float headPitch = renderPassInfo.getGeckolibData(DataTickets.ENTITY_PITCH);
-        float headYaw = renderPassInfo.getGeckolibData(DataTickets.ENTITY_YAW);
+        float headPitch = - renderPassInfo.getGeckolibData(DataTickets.ENTITY_PITCH);
+        float headYaw = - renderPassInfo.getGeckolibData(DataTickets.ENTITY_YAW);
         head.get().setRotX((headPitch - healthBend) * toRad);
         head.get().setRotY(headYaw * toRad);
     }

@@ -67,34 +67,34 @@ public class MikuEntity extends AbstractPlushEntity {
         return this.cache;
     }
 
-    //UPDATE EAT LEEK GOAL
-    @Override
-    public void aiStep() {
-        super.aiStep();
-
-        //CLIENT LEEK EATING TIMER
-        if (this.level().isClientSide()){
-            //DECREASE LEEK TIMER UNTIL 0
-            this.eatLeekTimer = Math.max(0, this.eatLeekTimer -1);
-            //SET EATING LEEK TRUE IF THE COUNTER IS RUNNING
-            this.setEatingLeek(eatLeekTimer > 0);
-
-            //SPAWN EATING PARTICLES
-            if (eatLeekTimer > 0 && !this.isInSittingPose()) {
-                Vec3 mikuPos = this.position();
-                this.level().addParticle(
-                    new BlockParticleOption(ParticleTypes.BLOCK, ModBlocks.LEEK_CROP.getStateForAge(7)),
-                    mikuPos.x(),
-                    mikuPos.y() + 0.5D,
-                    mikuPos.z(),
-                    this.random.nextGaussian() * 0.5,
-                    this.random.nextGaussian() * 0.5,
-                    this.random.nextGaussian() * 0.5
-                );
-            }
-
-        }
-    }
+//    //UPDATE EAT LEEK GOAL
+//    @Override
+//    public void aiStep() {
+//        super.aiStep();
+//
+////        //CLIENT LEEK EATING TIMER
+////        if (this.level().isClientSide()){
+////            //DECREASE LEEK TIMER UNTIL 0
+////            this.eatLeekTimer = Math.max(0, this.eatLeekTimer -1);
+////            //SET EATING LEEK TRUE IF THE COUNTER IS RUNNING
+////            this.setEatingLeek(eatLeekTimer > 0);
+////
+////            //SPAWN EATING PARTICLES
+////            if (eatLeekTimer > 0 && !this.isInSittingPose()) {
+////                Vec3 mikuPos = this.position();
+////                this.level().addParticle(
+////                    new BlockParticleOption(ParticleTypes.BLOCK, ModBlocks.LEEK_CROP.getStateForAge(7)),
+////                    mikuPos.x(),
+////                    mikuPos.y() + 0.5D,
+////                    mikuPos.z(),
+////                    this.random.nextGaussian() * 0.5,
+////                    this.random.nextGaussian() * 0.5,
+////                    this.random.nextGaussian() * 0.5
+////                );
+////            }
+////
+////        }
+//    }
 
     //SET LEEK TIMER 40 TICKS WHEN LEEK EATING STATUS IS TRUE
     @Override
