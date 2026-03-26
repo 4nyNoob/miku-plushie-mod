@@ -32,6 +32,7 @@ public class SpawnMikusCommand {
 
     public static void register (CommandDispatcher<ServerCommandSource> dispatcher) {
         dispatcher.register(CommandManager.literal("spawn_mikus")
+            .requires(source -> source.hasPermissionLevel(2))
             .then(CommandManager.argument("pos", Vec3ArgumentType.vec3())
                 .executes(commandContext ->
                     spawnMikus(commandContext.getSource(),
