@@ -1,6 +1,8 @@
 package com.any.mikuplushie;
 
 import net.fabricmc.api.ModInitializer;
+import software.bernie.geckolib.GeckoLib;
+import software.bernie.geckolib.model.GeoModel;
 
 public class ExampleMod implements ModInitializer {
     
