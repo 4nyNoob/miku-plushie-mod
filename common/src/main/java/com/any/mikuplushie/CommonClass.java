@@ -1,6 +1,11 @@
 package com.any.mikuplushie;
 
 import com.any.mikuplushie.platform.Services;
+import com.any.mikuplushie.registry.ModBlocks;
+import com.mojang.authlib.Environment;
+import net.minecraft.client.renderer.ItemBlockRenderTypes;
+import net.minecraft.client.renderer.RenderType;
+import net.minecraft.client.renderer.block.BlockRenderDispatcher;
 
 // This class is part of the common project meaning it is shared between all supported loaders. Code written here can only
 // import and access the vanilla codebase, libraries used by vanilla, and optionally third party libraries that provide
@@ -25,5 +30,11 @@ public class CommonClass {
 
             Constants.LOG.info("Hello to miku_plushie");
         }
+        ModBlocks.initialize();
     }
+//
+//    @OnlyIn(Dist.CLIENT)
+//    public static void doClientStuff (){
+//
+//    }
 }
