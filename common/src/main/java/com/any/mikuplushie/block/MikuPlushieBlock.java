@@ -24,19 +24,19 @@ public class MikuPlushieBlock extends HorizontalDirectionalBlock {
         this.registerDefaultState(this.getStateDefinition().any().setValue(FACING, Direction.NORTH));
     }
 
-    @Override
-    protected void onPlace(BlockState state, Level level, BlockPos pos, BlockState oldState, boolean movedByPiston) {
-        super.onPlace(state, level, pos, oldState, movedByPiston);
-
-        level.playSound(null, pos, SoundEvents.AMETHYST_CLUSTER_BREAK, SoundSource.BLOCKS, 1, 1);
-    }
-
-    @Override
-    protected void onRemove(BlockState state, Level level, BlockPos pos, BlockState newState, boolean movedByPiston) {
-        super.onRemove(state, level, pos, newState, movedByPiston);
-
-        level.playSound(null, pos, SoundEvents.PIG_DEATH, SoundSource.BLOCKS, 1, 1);
-    }
+//    @Override
+//    protected void onPlace(BlockState state, Level level, BlockPos pos, BlockState oldState, boolean movedByPiston) {
+//        super.onPlace(state, level, pos, oldState, movedByPiston);
+//
+//        level.playSound(null, pos, SoundEvents.AMETHYST_CLUSTER_BREAK, SoundSource.BLOCKS, 1, 1);
+//    }
+//
+//    @Override
+//    protected void onRemove(BlockState state, Level level, BlockPos pos, BlockState newState, boolean movedByPiston) {
+//        super.onRemove(state, level, pos, newState, movedByPiston);
+//
+//        level.playSound(null, pos, SoundEvents.PIG_DEATH, SoundSource.BLOCKS, 1, 1);
+//    }
 
     @Override
     public @Nullable BlockState getStateForPlacement(BlockPlaceContext context) {

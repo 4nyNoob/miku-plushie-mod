@@ -23,20 +23,21 @@ import java.util.Objects;
 public class ModBlocks {
     public static List<Block> PLUSH_BLOCKS = new ArrayList<>();
 
-    public static final Block MIKU_PLUSH_BR = registerPlush("miku_plush_br", null);
+    public static final Block MIKU_PLUSH_BR = registerPlush("miku_plush_br");
 
     //REGISTER PLUSHIES
-    public static Block registerPlush(String name, @Nullable SoundType blockSound) {
+    public static Block registerPlush(String name) {
         //IF THE BLOCK SOUND IS NULL SET TO WOOL
-        SoundType blockSoundGroup = null;
-        blockSoundGroup = Objects.requireNonNullElse(blockSound, SoundType.WOOL);
+//        SoundType blockSoundGroup = null;
+//        blockSoundGroup = Objects.requireNonNullElse(blockSound, SoundType.WOOL);
         //REGISTER BLOCK NORMALLY
 //        return register(
 //            new MikuPlushieBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.FLOWER_POT)
 //                .sound(blockSoundGroup).noOcclusion()), name, false);
         return register(
-            new MikuPlushieBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.FLOWER_POT)
-                .sound(blockSoundGroup).noOcclusion()), name, true);
+            new MikuPlushieBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.FLOWER_POT)),
+            name,
+            true);
     }
 
     //REGISTER REGULAR BLOCKS
@@ -53,9 +54,9 @@ public class ModBlocks {
         Block blockRegister = Registry.register(BuiltInRegistries.BLOCK, id, block);
 
         //IF BLOCK IS A PLUSH ADD IT TO THE LIST
-//        if (block instanceof MikuPlushieBlock){
-//            PLUSH_BLOCKS.add(block);
-//        }
+        if (block instanceof MikuPlushieBlock){
+            PLUSH_BLOCKS.add(block);
+        }
 
         return blockRegister;
     }

@@ -18,6 +18,9 @@
         "main": [
             "com.any.mikuplushie.ExampleMod"
         ],
+        "client": [
+            "com.any.mikuplushie.FabricMikuPlushieClient"
+        ],
         "fabric-datagen": [
             "com.any.mikuplushie.ModDataGenerator"
         ]

@@ -1,6 +1,7 @@
 package com.any.mikuplushie;
 
 import com.any.mikuplushie.datagen.FabricModLootTableProvider;
+import com.any.mikuplushie.datagen.FabricModModelProvider;
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
 
@@ -9,5 +10,6 @@ public class ModDataGenerator implements DataGeneratorEntrypoint {
     public void onInitializeDataGenerator(FabricDataGenerator fabricDataGenerator) {
         FabricDataGenerator.Pack pack = fabricDataGenerator.createPack();
         pack.addProvider(FabricModLootTableProvider::new);
+        pack.addProvider(FabricModModelProvider::new);
     }
 }
