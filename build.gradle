@@ -3,4 +3,14 @@ plugins {
     id 'fabric-loom' version '1.8-SNAPSHOT' apply false
     // see https://projects.neoforged.net/neoforged/moddevgradle for new versions
     id 'net.neoforged.moddev' version '2.0.49-beta' apply false
+    id 'com.matyrobbrt.mc.registrationutils' version "1.21.0-0.2.2"
+}
+
+registrationUtils {
+    group 'com.any.mikuplushie.registration'
+    projects {
+        fabric { type 'fabric' } // The fabric project
+        neoforge { type 'neoforge' } // The neoforge project
+        common { type 'common' } // The common project
+    }
 }
