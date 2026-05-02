@@ -1,5 +1,7 @@
 package com.any.mikuplushie;
 
+import com.any.mikuplushie.block.MikuPlushieBlock;
+import com.any.mikuplushie.registration.RegistryObject;
 import com.any.mikuplushie.registry.ModBlocks;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.api.EnvType;
@@ -13,8 +15,8 @@ public class FabricMikuPlushieClient implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
 
-        for (Block block : ModBlocks.PLUSH_BLOCKS){
-            BlockRenderLayerMap.INSTANCE.putBlock(block, RenderType.cutout());
+        for (RegistryObject<Block, MikuPlushieBlock> block : ModBlocks.PLUSH_BLOCKS){
+            BlockRenderLayerMap.INSTANCE.putBlock(block.get(), RenderType.cutout());
         }
 
     }

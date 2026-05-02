@@ -15,6 +15,6 @@ public class FabricModLootTableProvider extends FabricBlockLootTableProvider {
 
     @Override
     public void generate() {
-        dropSelf((Block) ModBlocks.MIKU_PLUSH_BR);
+//        dropSelf((Block) ModBlocks.MIKU_PLUSH_BR);
     }
 }

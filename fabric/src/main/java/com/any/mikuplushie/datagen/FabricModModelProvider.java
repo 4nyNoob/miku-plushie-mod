@@ -1,5 +1,7 @@
 package com.any.mikuplushie.datagen;
 
+import com.any.mikuplushie.block.MikuPlushieBlock;
+import com.any.mikuplushie.registration.RegistryObject;
 import com.any.mikuplushie.registry.ModBlocks;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
@@ -19,8 +21,8 @@ public class FabricModModelProvider extends FabricModelProvider {
 
     @Override
     public void generateBlockStateModels(BlockModelGenerators blockStateModelGenerator) {
-        for (Block plushBlock : ModBlocks.PLUSH_BLOCKS) {
-            blockStateModelGenerator.createNonTemplateHorizontalBlock(plushBlock);
+        for (RegistryObject<Block, MikuPlushieBlock> plushBlock : ModBlocks.PLUSH_BLOCKS) {
+            blockStateModelGenerator.createNonTemplateHorizontalBlock(plushBlock.get());
         }
     }
 
