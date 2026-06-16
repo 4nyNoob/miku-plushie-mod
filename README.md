@@ -1,3 +1,5 @@
+## Looking for volunteers on porting the mod to version 26.1/NeoForge, please feeel free to open a PR
+
 [//]: # (<!--suppress HtmlDeprecatedAttribute -->)
 <h1 style="text-align:center">
 Hatsune Miku Just Arrived in Minecraft
