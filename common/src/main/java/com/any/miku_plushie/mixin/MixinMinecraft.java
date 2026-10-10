@@ -1,6 +1,6 @@
-package com.example.examplemod.mixin;
+package com.any.miku_plushie.mixin;
 
-import com.example.examplemod.Constants;
+import com.any.miku_plushie.Constants;
 import net.minecraft.client.Minecraft;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;

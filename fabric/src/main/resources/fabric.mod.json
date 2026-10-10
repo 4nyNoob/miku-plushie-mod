@@ -17,7 +17,7 @@
     "environment": "*",
     "entrypoints": {
         "main": [
-            "com.example.examplemod.ExampleMod"
+          "com.any.miku_plushie.MikuPlushieFabric"
         ]
     },
     "mixins": [
