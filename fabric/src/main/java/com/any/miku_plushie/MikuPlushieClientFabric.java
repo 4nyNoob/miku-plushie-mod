@@ -17,10 +17,13 @@ import net.minecraft.world.entity.EntityType;
 import software.bernie.geckolib.loading.math.MathParser;
 
 @Environment(EnvType.CLIENT)
-public class MikuPlushieClient implements ClientModInitializer {
+public class MikuPlushieClientFabric implements ClientModInitializer {
 
   @Override
   public void onInitializeClient() {
+
+    MikuPlushieClient.init();
+
     MikuPlushieFabric.LOGGER.info("Registering " + Constants.MOD_ID + " Block Render Layer Maps");
 
     //PLUSH CUTOUT

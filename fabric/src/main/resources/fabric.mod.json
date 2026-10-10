@@ -20,7 +20,7 @@
       "com.any.miku_plushie.MikuPlushieFabric"
     ],
     "client": [
-      "com.any.miku_plushie.MikuPlushieClient"
+      "com.any.miku_plushie.MikuPlushieClientFabric"
     ],
     "fabric-datagen": [
       "com.any.miku_plushie.datagen.MikuPlushieDataGenerator"
