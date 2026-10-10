@@ -2,8 +2,8 @@ package com.any.miku_plushie;
 
 import com.any.miku_plushie.entity.AbstractPlushEntity;
 import com.any.miku_plushie.entity.client.render.AbstractPlushRender;
+import com.any.miku_plushie.impl.common.registry.ModBlocks;
 import com.any.miku_plushie.particle.PlushSpawnParticle;
-import com.any.miku_plushie.registry.ModBlocks;
 import com.any.miku_plushie.registry.ModEntities;
 import com.any.miku_plushie.registry.ModParticles;
 import net.fabricmc.api.ClientModInitializer;

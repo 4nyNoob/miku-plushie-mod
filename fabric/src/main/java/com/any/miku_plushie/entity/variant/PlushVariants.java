@@ -1,6 +1,6 @@
 package com.any.miku_plushie.entity.variant;
 
-import com.any.miku_plushie.registry.ModBlocks;
+import com.any.miku_plushie.impl.common.registry.ModBlocks;
 import com.any.miku_plushie.registry.ModEntities;
 import com.any.miku_plushie.util.ModUtil;
 import java.util.ArrayList;

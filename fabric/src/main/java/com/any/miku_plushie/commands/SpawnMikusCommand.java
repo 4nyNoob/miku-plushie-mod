@@ -1,7 +1,7 @@
 package com.any.miku_plushie.commands;
 
 import com.any.miku_plushie.entity.AbstractPlushEntity;
-import com.any.miku_plushie.registry.ModBlocks;
+import com.any.miku_plushie.impl.common.registry.ModBlocks;
 import com.any.miku_plushie.registry.ModItems;
 import com.any.miku_plushie.util.ModUtil;
 import com.mojang.brigadier.CommandDispatcher;

@@ -1,6 +1,6 @@
 package com.any.miku_plushie.util;
 
-import com.any.miku_plushie.registry.ModBlocks;
+import com.any.miku_plushie.impl.common.registry.ModBlocks;
 import com.any.miku_plushie.registry.ModSoundEvents;
 import net.minecraft.core.BlockPos;
 import net.minecraft.sounds.SoundEvent;

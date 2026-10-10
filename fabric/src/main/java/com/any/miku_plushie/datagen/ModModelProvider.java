@@ -1,6 +1,6 @@
 package com.any.miku_plushie.datagen;
 
-import com.any.miku_plushie.registry.ModBlocks;
+import com.any.miku_plushie.impl.common.registry.ModBlocks;
 import com.any.miku_plushie.registry.ModItems;
 import java.util.List;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
