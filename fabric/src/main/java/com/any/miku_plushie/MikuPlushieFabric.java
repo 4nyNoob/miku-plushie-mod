@@ -1,7 +1,7 @@
 package com.any.miku_plushie;
 
 import com.any.miku_plushie.entity.variant.PlushVariants;
-import com.any.miku_plushie.registry.ModBlocks;
+import com.any.miku_plushie.registry.ModBlocksFabric;
 import com.any.miku_plushie.registry.ModCommands;
 import com.any.miku_plushie.registry.ModEntities;
 import com.any.miku_plushie.registry.ModItems;
@@ -24,7 +24,7 @@ public class MikuPlushieFabric implements ModInitializer {
     MikuPlushie.init();
 
     LOGGER.info("Miku is now Joining Fabric!!!");
-    ModBlocks.initialize();
+    ModBlocksFabric.initialize();
     ModItems.initialize();
     ModSoundEvents.initialize();
     ModCommands.initialize();

@@ -2,6 +2,7 @@ package com.any.miku_plushie.registry;
 
 import com.any.miku_plushie.Constants;
 import com.any.miku_plushie.MikuPlushieFabric;
+import com.any.miku_plushie.impl.common.registry.ModBlocks;
 import com.any.miku_plushie.item.MikuPlushieBlockItem;
 import com.any.miku_plushie.item.ModFoodComponents;
 import com.any.miku_plushie.item.PlushToolMaterial;

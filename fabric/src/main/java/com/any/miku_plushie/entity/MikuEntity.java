@@ -1,7 +1,7 @@
 package com.any.miku_plushie.entity;
 
 import com.any.miku_plushie.entity.goals.EatLeekGoal;
-import com.any.miku_plushie.registry.ModBlocks;
+import com.any.miku_plushie.impl.common.registry.ModBlocks;
 import java.util.List;
 import net.minecraft.core.particles.BlockParticleOption;
 import net.minecraft.core.particles.ParticleTypes;

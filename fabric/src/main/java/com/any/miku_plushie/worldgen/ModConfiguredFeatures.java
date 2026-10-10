@@ -1,7 +1,7 @@
 package com.any.miku_plushie.worldgen;
 
 import com.any.miku_plushie.Constants;
-import com.any.miku_plushie.registry.ModBlocks;
+import com.any.miku_plushie.impl.common.registry.ModBlocks;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstrapContext;
 import net.minecraft.data.worldgen.placement.PlacementUtils;

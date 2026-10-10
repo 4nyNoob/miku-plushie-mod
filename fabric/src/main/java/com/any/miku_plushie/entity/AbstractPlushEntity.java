@@ -1,9 +1,8 @@
 package com.any.miku_plushie.entity;
 
-import com.any.miku_plushie.block.LeekCropBlock;
 import com.any.miku_plushie.entity.goals.MikuDelayedAttackGoal;
 import com.any.miku_plushie.entity.variant.PlushVariants;
-import com.any.miku_plushie.registry.ModBlocks;
+import com.any.miku_plushie.impl.common.registry.ModBlocks;
 import com.any.miku_plushie.registry.ModEntities;
 import com.any.miku_plushie.registry.ModItems;
 import com.any.miku_plushie.util.ModUtil;
