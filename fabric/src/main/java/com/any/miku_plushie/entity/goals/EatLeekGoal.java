@@ -1,6 +1,6 @@
 package com.any.miku_plushie.entity.goals;
 
-import com.any.miku_plushie.block.LeekCropBlock;
+import com.any.miku_plushie.impl.common.block.LeekCropBlock;
 import com.any.miku_plushie.entity.MikuEntity;
 import com.any.miku_plushie.impl.common.registry.ModBlocks;
 import com.any.miku_plushie.impl.common.util.ModUtil;

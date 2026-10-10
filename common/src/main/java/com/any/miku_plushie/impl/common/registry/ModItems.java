@@ -2,7 +2,12 @@ package com.any.miku_plushie.impl.common.registry;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.BiConsumer;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.level.block.Block;
+import oshi.util.tuples.Pair;
 
 public class ModItems {
 
@@ -28,4 +33,12 @@ public class ModItems {
   public static Item TETO_PICKAXE_SYNTHV;
   public static Item TETO_PICKAXE_SPOKEN_FOR;
   public static Item TETO_PICKAXE_PPPP;
+
+  public static void register(BiConsumer<Item, ResourceLocation> consumer) {
+
+    // TODO still need to register all items here lol
+    for (Pair<Block, ResourceLocation> blockIdPair : ModBlocks.NEEDS_BLOCK_ITEM) {
+      consumer.accept(new BlockItem(blockIdPair.getA(), new Item.Properties()), blockIdPair.getB());
+    }
+  }
 }

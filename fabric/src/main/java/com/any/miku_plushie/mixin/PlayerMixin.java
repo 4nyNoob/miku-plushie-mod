@@ -1,6 +1,6 @@
 package com.any.miku_plushie.mixin;
 
-import com.any.miku_plushie.item.MikuPlushieBlockItem;
+import com.any.miku_plushie.impl.common.item.MikuPlushieBlockItem;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.LivingEntity;

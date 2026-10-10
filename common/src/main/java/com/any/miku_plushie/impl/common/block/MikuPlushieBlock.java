@@ -1,6 +1,5 @@
-package com.any.miku_plushie.block;
+package com.any.miku_plushie.impl.common.block;
 
-import com.any.miku_plushie.entity.AbstractPlushEntity;
 import com.any.miku_plushie.impl.common.registry.ModItems;
 import com.any.miku_plushie.impl.common.registry.ModParticles;
 import com.any.miku_plushie.impl.common.util.ModUtil;
@@ -16,6 +15,7 @@ import net.minecraft.world.InteractionHand;
 import net.minecraft.world.ItemInteractionResult;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.TamableAnimal;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.context.BlockPlaceContext;
@@ -64,10 +64,13 @@ public class MikuPlushieBlock extends Block {
           if (Objects.requireNonNull(entityTypeRegistry.byId(entity)).getDescriptionId().contains(entityName)) {
 
             //SPAWN ENTITY ACCORDING TO BLOCK NAME
-            AbstractPlushEntity spawned = (AbstractPlushEntity) Objects.requireNonNull(entityTypeRegistry.byId(entity)).create(world);
+            // TODO PORT FIX AFTER MOVING
+            // AbstractPlushEntity spawned = (AbstractPlushEntity) Objects.requireNonNull(entityTypeRegistry.byId(entity)).create(world);
+            TamableAnimal spawned = (TamableAnimal) Objects.requireNonNull(entityTypeRegistry.byId(entity)).create(world);
 
             //SETUP AND SPAWN ENTITY
-            Objects.requireNonNull(spawned).setVariantByBlock(blockName);
+            // TODO PORT FIX AFTER MOVING
+            // Objects.requireNonNull(spawned).setVariantByBlock(blockName);
             spawned.lookAt(EntityAnchorArgument.Anchor.EYES, player.position().subtract(pos.getCenter()));
             spawned.tame(player);
             spawned.setPos(entitySpawnLocation);
