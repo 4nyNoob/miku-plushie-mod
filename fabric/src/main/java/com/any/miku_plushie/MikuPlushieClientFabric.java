@@ -3,9 +3,9 @@ package com.any.miku_plushie;
 import com.any.miku_plushie.entity.AbstractPlushEntity;
 import com.any.miku_plushie.entity.client.render.AbstractPlushRender;
 import com.any.miku_plushie.impl.common.registry.ModBlocks;
+import com.any.miku_plushie.impl.common.registry.ModParticles;
 import com.any.miku_plushie.particle.PlushSpawnParticle;
-import com.any.miku_plushie.registry.ModEntities;
-import com.any.miku_plushie.registry.ModParticles;
+import com.any.miku_plushie.registry.ModEntitiesFabric;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
@@ -44,7 +44,7 @@ public class MikuPlushieClientFabric implements ClientModInitializer {
     MathParser.setVariable("query.miku.is_game", () -> 90 / Math.PI);
 
     //ENTITIES RENDERERS
-    for (EntityType<? extends AbstractPlushEntity> plushEntity : ModEntities.PLUSH_ENTITIES) {
+    for (EntityType<? extends AbstractPlushEntity> plushEntity : ModEntitiesFabric.PLUSH_ENTITIES) {
       EntityRendererRegistry.register(plushEntity, AbstractPlushRender::new);
     }
 

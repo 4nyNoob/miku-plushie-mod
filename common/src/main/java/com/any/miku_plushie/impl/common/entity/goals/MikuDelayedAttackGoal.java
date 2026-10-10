@@ -1,4 +1,4 @@
-package com.any.miku_plushie.entity.goals;
+package com.any.miku_plushie.impl.common.entity.goals;
 
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.entity.LivingEntity;

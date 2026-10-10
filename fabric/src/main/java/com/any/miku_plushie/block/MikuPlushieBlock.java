@@ -2,7 +2,7 @@ package com.any.miku_plushie.block;
 
 import com.any.miku_plushie.entity.AbstractPlushEntity;
 import com.any.miku_plushie.impl.common.registry.ModItems;
-import com.any.miku_plushie.registry.ModParticles;
+import com.any.miku_plushie.impl.common.registry.ModParticles;
 import com.any.miku_plushie.impl.common.util.ModUtil;
 import java.util.Objects;
 import net.minecraft.commands.arguments.EntityAnchorArgument;

@@ -1,7 +1,7 @@
 package com.any.miku_plushie.entity.variant;
 
 import com.any.miku_plushie.impl.common.registry.ModBlocks;
-import com.any.miku_plushie.registry.ModEntities;
+import com.any.miku_plushie.registry.ModEntitiesFabric;
 import com.any.miku_plushie.impl.common.util.ModUtil;
 import java.util.ArrayList;
 import java.util.List;
@@ -15,7 +15,7 @@ public class PlushVariants {
   public static void initialize() {
 
     //FOR EACH PLUSH ENTITY
-    for (EntityType<?> entityType : ModEntities.PLUSH_ENTITIES) {
+    for (EntityType<?> entityType : ModEntitiesFabric.PLUSH_ENTITIES) {
 
       //GET ENTITY REGISTRY NAME
       String plushName = entityType.toShortString();
