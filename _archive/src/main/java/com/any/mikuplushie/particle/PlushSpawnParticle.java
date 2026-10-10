@@ -2,62 +2,62 @@ package com.any.mikuplushie.particle;
 
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
+import net.minecraft.client.multiplayer.ClientLevel;
 import net.minecraft.client.particle.*;
-import net.minecraft.client.world.ClientWorld;
-import net.minecraft.particle.SimpleParticleType;
+import net.minecraft.core.particles.SimpleParticleType;
 
-public class PlushSpawnParticle extends SpriteBillboardParticle {
-    private final SpriteProvider spriteProvider;
+public class PlushSpawnParticle extends TextureSheetParticle {
+    private final SpriteSet spriteProvider;
 
     protected PlushSpawnParticle(
-        ClientWorld world,
+        ClientLevel world,
         double x, double y, double z,
         double velocityX, double velocityY, double velocityZ,
-        SpriteProvider spriteProvider
+        SpriteSet spriteProvider
     ) {
         super(world, x, y, z);
 
-        this.gravityStrength = -0.1F;
-        this.velocityMultiplier = 0.9F;
+        this.gravity = -0.1F;
+        this.friction = 0.9F;
         this.spriteProvider = spriteProvider;
 
-        this.velocityX = velocityX + Math.random() * 0.2 - 0.1;
-        this.velocityY = velocityY + Math.random() * 0.3;
-        this.velocityZ = velocityZ + Math.random() * 0.2 - 0.1;
+        this.xd = velocityX + Math.random() * 0.2 - 0.1;
+        this.yd = velocityY + Math.random() * 0.3;
+        this.zd = velocityZ + Math.random() * 0.2 - 0.1;
 
-        this.scale = 0.1F * (this.random.nextFloat() * this.random.nextFloat() * 2.0F + 1.0F);
-        this.maxAge = (int) (16.0 / (this.random.nextFloat() * 0.8 + 0.2)) + 2;
-        this.setSpriteForAge(spriteProvider);
+        this.quadSize = 0.1F * (this.random.nextFloat() * this.random.nextFloat() * 2.0F + 1.0F);
+        this.lifetime = (int) (16.0 / (this.random.nextFloat() * 0.8 + 0.2)) + 2;
+        this.setSpriteFromAge(spriteProvider);
 
         this.setPos(
-            this.x + (Math.sin(this.maxAge) * 0.5),
-            this.y + ((this.maxAge) * 0.015 - 0.5),
-            this.z + (Math.cos(this.maxAge) * 0.5)
+            this.x + (Math.sin(this.lifetime) * 0.5),
+            this.y + ((this.lifetime) * 0.015 - 0.5),
+            this.z + (Math.cos(this.lifetime) * 0.5)
         );
     }
 
     @Override
-    public ParticleTextureSheet getType() {
-        return ParticleTextureSheet.PARTICLE_SHEET_TRANSLUCENT;
+    public ParticleRenderType getRenderType() {
+        return ParticleRenderType.PARTICLE_SHEET_TRANSLUCENT;
     }
 
     @Override
     public void tick() {
         super.tick();
-        this.setSpriteForAge(this.spriteProvider);
+        this.setSpriteFromAge(this.spriteProvider);
     }
 
     @Environment(EnvType.CLIENT)
-    public static class Factory implements ParticleFactory<SimpleParticleType> {
-        private final SpriteProvider spriteProvider;
+    public static class Factory implements ParticleProvider<SimpleParticleType> {
+        private final SpriteSet spriteProvider;
 
-        public Factory(SpriteProvider spriteProvider) {
+        public Factory(SpriteSet spriteProvider) {
             this.spriteProvider = spriteProvider;
         }
 
         public Particle createParticle(
             SimpleParticleType defaultParticleType,
-            ClientWorld clientWorld,
+            ClientLevel clientWorld,
             double x, double y, double z,
             double velocityX, double velocityY, double velocityZ
         ) {

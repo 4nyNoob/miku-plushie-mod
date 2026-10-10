@@ -12,8 +12,8 @@ import net.fabricmc.api.Environment;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.client.particle.v1.ParticleFactoryRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
-import net.minecraft.client.render.RenderLayer;
-import net.minecraft.entity.EntityType;
+import net.minecraft.client.renderer.RenderType;
+import net.minecraft.world.entity.EntityType;
 import software.bernie.geckolib.loading.math.MathParser;
 
 @Environment(EnvType.CLIENT)
@@ -25,15 +25,15 @@ public class MikuPlushieClient implements ClientModInitializer {
         //PLUSH CUTOUT
         for (int block = 0; block < ModBlocks.PLUSH_BLOCKS.size(); block++) {
             if (!ModBlocks.PLUSH_BLOCKS.get(block).equals(ModBlocks.MIKU_PLUSH_GHOST))
-                BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.PLUSH_BLOCKS.get(block), RenderLayer.getCutout());
+                BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.PLUSH_BLOCKS.get(block), RenderType.cutout());
         }
 
         //PLUSH TRANSLUCENT
-        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MIKU_PLUSH_GHOST, RenderLayer.getTranslucent());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MIKU_PLUSH_GHOST, RenderType.translucent());
 
         //NON PLUSH BLOCKS
-		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.LEEK_CROP, RenderLayer.getCutout());
-		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.WILD_LEEK_CROP, RenderLayer.getCutout());
+		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.LEEK_CROP, RenderType.cutout());
+		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.WILD_LEEK_CROP, RenderType.cutout());
 
         //GLIB QUERY
         MathParser.setVariable("query.miku.is_game", () -> 90 / Math.PI);
