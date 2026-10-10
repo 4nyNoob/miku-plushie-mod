@@ -9,6 +9,8 @@ import com.any.miku_plushie.impl.common.registry.ModItems;
 import com.any.miku_plushie.impl.common.registry.ModParticles;
 import com.any.miku_plushie.impl.common.registry.ModSounds;
 import com.any.miku_plushie.impl.common.registry.ModTabs;
+import com.any.miku_plushie.registry.ModResourcePacks;
+import com.any.miku_plushie.registry.ModVillagerTrades;
 import java.util.function.BiConsumer;
 import java.util.function.Consumer;
 import net.minecraft.core.Registry;
@@ -53,6 +55,9 @@ public class MikuPlushieNeoForge {
 
     NeoForge.EVENT_BUS.addListener((RegisterCommandsEvent event) ->
         ModCommands.register(event.getDispatcher(), event.getBuildContext(), event.getCommandSelection()));
+
+    ModResourcePacks.initialize(modEventBus);
+    ModVillagerTrades.initialize();
 
     // must occur after entities are registered, so we do it during common setup, after RegisterEvent is fired
     modEventBus.addListener((FMLCommonSetupEvent event) -> event.enqueueWork(PlushVariants::initialize));
