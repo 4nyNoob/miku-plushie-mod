@@ -1,4 +1,4 @@
-package com.any.miku_plushie.datagen;
+package com.any.miku_plushie.impl.common.datagen;
 
 import com.any.miku_plushie.impl.common.registry.ModBlocks;
 import com.any.miku_plushie.impl.common.registry.ModItems;

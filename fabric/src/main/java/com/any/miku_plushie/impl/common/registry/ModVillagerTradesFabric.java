@@ -1,4 +1,4 @@
-package com.any.miku_plushie.registry;
+package com.any.miku_plushie.impl.common.registry;
 
 import com.any.miku_plushie.Constants;
 import com.any.miku_plushie.MikuPlushieFabric;
