@@ -1,5 +1,5 @@
 {
-  "parent": "minecraft:block/cross",
+  "parent": "miku_plushie:block/cross_cutout",
   "textures": {
     "cross": "miku_plushie:block/leek_crop_stage7"
   }
