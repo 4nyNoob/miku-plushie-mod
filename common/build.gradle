@@ -21,6 +21,11 @@ dependencies {
     // fabric and neoforge both bundle mixinextras, so it is safe to use it in common
     compileOnly group: 'io.github.llamalad7', name: 'mixinextras-common', version: '0.3.5'
     annotationProcessor group: 'io.github.llamalad7', name: 'mixinextras-common', version: '0.3.5'
+
+  // https://github.com/bernie-g/geckolib/wiki/Installation-(Geckolib4)
+  implementation("software.bernie.geckolib:geckolib-common-${minecraft_version}:${geckolib_version}")
+  // https://mvnrepository.com/artifact/com.eliotlash.mclib/mclib
+  implementation("com.eliotlash.mclib:mclib:20")
 }
 
 configurations {
