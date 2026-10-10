@@ -5,9 +5,9 @@ import com.any.miku_plushie.impl.common.entity.variant.PlushVariants;
 import com.any.miku_plushie.impl.common.registry.ModBlocks;
 import com.any.miku_plushie.impl.common.registry.ModEntities;
 import com.any.miku_plushie.impl.common.registry.ModItems;
+import com.any.miku_plushie.impl.common.registry.ModParticles;
 import com.any.miku_plushie.impl.common.registry.ModTabs;
 import com.any.miku_plushie.registry.ModCommands;
-import com.any.miku_plushie.registry.ModParticlesFabric;
 import com.any.miku_plushie.registry.ModResourcePacks;
 import com.any.miku_plushie.registry.ModSoundEventsFabric;
 import com.any.miku_plushie.registry.ModVillagerTrades;
@@ -40,8 +40,7 @@ public class MikuPlushieFabric implements ModInitializer {
     bind(BuiltInRegistries.BLOCK, ModBlocks::register);
 //    bind(BuiltInRegistries.ENTITY_TYPE, ModEntities::register);
     bind(BuiltInRegistries.ITEM, ModItems::register);
-    ModParticlesFabric.initialize();
-//    bind(BuiltInRegistries.PARTICLE_TYPE, ModParticles::register);
+    bind(BuiltInRegistries.PARTICLE_TYPE, ModParticles::register);
     bind(BuiltInRegistries.CREATIVE_MODE_TAB, ModTabs::register);
 
     ModCommands.initialize();
