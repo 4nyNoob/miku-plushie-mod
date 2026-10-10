@@ -1,7 +1,7 @@
-package com.any.miku_plushie.entity;
+package com.any.miku_plushie.impl.common.entity;
 
 import com.any.miku_plushie.impl.common.entity.goals.MikuDelayedAttackGoal;
-import com.any.miku_plushie.entity.variant.PlushVariants;
+import com.any.miku_plushie.impl.common.entity.variant.PlushVariants;
 import com.any.miku_plushie.impl.common.registry.ModBlocks;
 import com.any.miku_plushie.impl.common.registry.ModEntities;
 import com.any.miku_plushie.impl.common.registry.ModItems;

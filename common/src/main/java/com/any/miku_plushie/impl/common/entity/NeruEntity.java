@@ -1,4 +1,4 @@
-package com.any.miku_plushie.entity;
+package com.any.miku_plushie.impl.common.entity;
 
 import java.util.List;
 import net.minecraft.world.entity.EntityType;

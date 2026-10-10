@@ -1,7 +1,7 @@
 package com.any.miku_plushie.datagen;
 
 import com.any.miku_plushie.Constants;
-import com.any.miku_plushie.registry.ModEntitiesFabric;
+import com.any.miku_plushie.impl.common.registry.ModEntities;
 import java.util.concurrent.CompletableFuture;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
@@ -23,7 +23,7 @@ public class ModEntityTagProvider extends FabricTagProvider.EntityTypeTagProvide
   @Override
   protected void addTags(HolderLookup.Provider wrapperLookup) {
     //REGISTER PLUSH ENTITY TYPE TAG AUTOMATICALLY
-    for (EntityType<?> plush : ModEntitiesFabric.PLUSH_ENTITIES) {
+    for (EntityType<?> plush : ModEntities.PLUSH_ENTITIES) {
       tag(PLUSH_ENTITY).add(reverseLookup(plush));
     }
   }

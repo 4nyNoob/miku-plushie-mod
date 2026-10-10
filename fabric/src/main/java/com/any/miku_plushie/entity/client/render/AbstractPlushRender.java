@@ -1,6 +1,6 @@
 package com.any.miku_plushie.entity.client.render;
 
-import com.any.miku_plushie.entity.AbstractPlushEntity;
+import com.any.miku_plushie.impl.common.entity.AbstractPlushEntity;
 import com.any.miku_plushie.entity.client.model.AbstractPlushModel;
 import com.any.miku_plushie.impl.common.registry.ModBlocks;
 import com.any.miku_plushie.impl.common.util.ModUtil;

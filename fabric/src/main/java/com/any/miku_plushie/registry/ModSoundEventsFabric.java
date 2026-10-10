@@ -2,6 +2,7 @@ package com.any.miku_plushie.registry;
 
 import com.any.miku_plushie.Constants;
 import com.any.miku_plushie.MikuPlushieFabric;
+import com.any.miku_plushie.impl.common.registry.ModEntities;
 import com.any.miku_plushie.impl.common.registry.ModSounds;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -20,13 +21,13 @@ public class ModSoundEventsFabric {
     MikuPlushieFabric.LOGGER.info("Registering " + Constants.MOD_ID + " Sounds");
 
     //DYNAMICALLY REGISTER SOUND EVENTS
-    for (EntityType<?> plush : ModEntitiesFabric.PLUSH_ENTITIES) {
+    for (EntityType<?> plush : ModEntities.PLUSH_ENTITIES) {
 
       //SKIP KONOHA PLUSH
-      if (!plush.equals(ModEntitiesFabric.KONOHA)) {
+      if (!plush.equals(ModEntities.KONOHA)) {
 
         //ADD MIKU SOUND EVENTS
-        if (plush.equals(ModEntitiesFabric.MIKU)) {
+        if (plush.equals(ModEntities.MIKU)) {
           for (String mikuSoundEvent : ModSounds.MIKU_SOUND_EVENT) {
             SoundEvent soundEvent = registerSound(plush.toShortString().replace("_plush", "") + "_" + mikuSoundEvent);
             ModSounds.MIKU_PLUSHIES_SOUND_EVENTS.add(soundEvent);
