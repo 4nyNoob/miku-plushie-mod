@@ -3,7 +3,7 @@ package com.any.miku_plushie.item;
 import com.any.miku_plushie.Constants;
 import com.any.miku_plushie.datagen.ModItemTagProvider;
 import com.any.miku_plushie.impl.common.registry.ModBlocks;
-import com.any.miku_plushie.util.ModUtil;
+import com.any.miku_plushie.impl.common.util.ModUtil;
 import java.util.List;
 import net.minecraft.core.Holder;
 import net.minecraft.network.chat.Component;

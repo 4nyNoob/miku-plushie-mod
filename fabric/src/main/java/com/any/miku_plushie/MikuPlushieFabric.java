@@ -8,7 +8,7 @@ import com.any.miku_plushie.registry.ModEntities;
 import com.any.miku_plushie.registry.ModItemsFabric;
 import com.any.miku_plushie.registry.ModParticles;
 import com.any.miku_plushie.registry.ModResourcePacks;
-import com.any.miku_plushie.registry.ModSoundEvents;
+import com.any.miku_plushie.registry.ModSoundEventsFabric;
 import com.any.miku_plushie.registry.ModTabsFabric;
 import com.any.miku_plushie.registry.ModVillagerTrades;
 import com.any.miku_plushie.worldgen.generators.ModWorldGeneration;
@@ -52,7 +52,7 @@ public class MikuPlushieFabric implements ModInitializer {
 //    bind(BuiltInRegistries.DATA_COMPONENT_TYPE, ModComponents::register);
 
     ModItemsFabric.initialize();
-    ModSoundEvents.initialize();
+    ModSoundEventsFabric.initialize();
     ModCommands.initialize();
     ModEntities.initialize();
     ModResourcePacks.initialize();

@@ -3,7 +3,7 @@ package com.any.miku_plushie.commands;
 import com.any.miku_plushie.entity.AbstractPlushEntity;
 import com.any.miku_plushie.impl.common.registry.ModBlocks;
 import com.any.miku_plushie.impl.common.registry.ModItems;
-import com.any.miku_plushie.util.ModUtil;
+import com.any.miku_plushie.impl.common.util.ModUtil;
 import com.mojang.brigadier.CommandDispatcher;
 import java.util.ArrayList;
 import java.util.List;
