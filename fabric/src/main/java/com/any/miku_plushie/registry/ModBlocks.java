@@ -122,8 +122,8 @@ public class ModBlocks {
   public static Block KAITO_PLUSH_V3;
   public static Block KAITO_PLUSH_V4;
 
-  public static LeekCropBlock LEEK_CROP;
-  public static WildLeekCropBlock WILD_LEEK_CROP;
+  public static Block LEEK_CROP;
+  public static Block WILD_LEEK_CROP;
 
   public static void initialize() {
 
@@ -228,13 +228,13 @@ public class ModBlocks {
     KAITO_PLUSH_V3 = registerPlush("kaito_plush_v3", null);
     KAITO_PLUSH_V4 = registerPlush("kaito_plush_v4", null);
 
-    LEEK_CROP = (LeekCropBlock) register(
+    LEEK_CROP = register(
         new LeekCropBlock(BlockBehaviour.Properties.of()
             .noOcclusion().noCollission().randomTicks().instabreak().sound(SoundType.CROP)),
         "leek_crop",
         false
     );
-    WILD_LEEK_CROP = (WildLeekCropBlock) register(
+    WILD_LEEK_CROP = register(
         new WildLeekCropBlock(BlockBehaviour.Properties.of()
             .noOcclusion().noCollission().randomTicks().instabreak().sound(SoundType.CROP)),
         "wild_leek_crop",

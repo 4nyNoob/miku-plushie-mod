@@ -15,6 +15,7 @@ import net.minecraft.world.level.GameRules;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.CropBlock;
 import net.minecraft.world.level.block.LevelEvent;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.predicate.BlockStatePredicate;
@@ -27,7 +28,7 @@ public class EatLeekGoal extends Goal {
   private static final Predicate<BlockState> LEEK_PREDICATE = BlockStatePredicate.forBlock(ModBlocks.LEEK_CROP).where(LeekCropBlock.AGE, Predicates.equalTo(7));
   private final MikuEntity miku;
   private final Level world;
-  BlockState fullyGrownLeekCrop = ModBlocks.LEEK_CROP.getStateForAge(7);
+  BlockState fullyGrownLeekCrop = ((CropBlock) ModBlocks.LEEK_CROP).getStateForAge(7);
   private int timer;
 
 
@@ -94,7 +95,7 @@ public class EatLeekGoal extends Goal {
           blockPos2 = locateFullyGrownLeek(mobPos);
         }
 
-        if (this.world.getBlockState(blockPos2).equals(ModBlocks.LEEK_CROP.getStateForAge(7))) {
+        if (this.world.getBlockState(blockPos2).equals(((CropBlock) ModBlocks.LEEK_CROP).getStateForAge(7))) {
           if (this.world.getGameRules().getBoolean(GameRules.RULE_MOBGRIEFING)) {
             this.world.levelEvent(LevelEvent.PARTICLES_DESTROY_BLOCK, blockPos2, Block.getId(ModBlocks.LEEK_CROP.defaultBlockState()));
             this.world.setBlock(blockPos2, Blocks.AIR.defaultBlockState(), Block.UPDATE_CLIENTS);
