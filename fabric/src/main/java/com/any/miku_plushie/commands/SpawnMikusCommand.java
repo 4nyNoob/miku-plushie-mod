@@ -2,7 +2,7 @@ package com.any.miku_plushie.commands;
 
 import com.any.miku_plushie.entity.AbstractPlushEntity;
 import com.any.miku_plushie.impl.common.registry.ModBlocks;
-import com.any.miku_plushie.registry.ModItems;
+import com.any.miku_plushie.registry.ModItemsFabric;
 import com.any.miku_plushie.util.ModUtil;
 import com.mojang.brigadier.CommandDispatcher;
 import java.util.ArrayList;
@@ -47,13 +47,13 @@ public class SpawnMikusCommand {
 
     //CREATE ITEM STACK LISTS
     List<ItemStack> PICKAXES = new ArrayList<>();
-    for (int pickaxe = 0; pickaxe < ModItems.PICKAXE_ITEMS.size(); pickaxe++) {
-      ItemStack pickaxeStack = ModItems.PICKAXE_ITEMS.get(pickaxe).getDefaultInstance();
+    for (int pickaxe = 0; pickaxe < ModItemsFabric.PICKAXE_ITEMS.size(); pickaxe++) {
+      ItemStack pickaxeStack = ModItemsFabric.PICKAXE_ITEMS.get(pickaxe).getDefaultInstance();
       PICKAXES.add(pickaxeStack);
     }
     List<ItemStack> PLUSHIES = new ArrayList<>();
-    for (int plush = 0; plush < ModItems.PLUSH_ITEMS.size(); plush++) {
-      ItemStack plushStack = ModItems.PLUSH_ITEMS.get(plush).getDefaultInstance();
+    for (int plush = 0; plush < ModItemsFabric.PLUSH_ITEMS.size(); plush++) {
+      ItemStack plushStack = ModItemsFabric.PLUSH_ITEMS.get(plush).getDefaultInstance();
       PLUSHIES.add(plushStack);
     }
 

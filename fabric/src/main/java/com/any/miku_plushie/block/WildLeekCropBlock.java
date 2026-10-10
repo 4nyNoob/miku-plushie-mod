@@ -1,6 +1,6 @@
 package com.any.miku_plushie.block;
 
-import com.any.miku_plushie.registry.ModItems;
+import com.any.miku_plushie.registry.ModItemsFabric;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.item.ItemStack;
@@ -26,7 +26,7 @@ public class WildLeekCropBlock extends Block {
   }
 
   protected ItemLike getSeedsItem() {
-    return ModItems.LEEK_SEEDS;
+    return ModItemsFabric.LEEK_SEEDS;
   }
 
   @Override
