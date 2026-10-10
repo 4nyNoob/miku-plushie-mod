@@ -1,6 +1,6 @@
 package com.any.miku_plushie.mixin;
 
-import com.any.miku_plushie.registry.ModItems;
+import com.any.miku_plushie.registry.ModItemsFabric;
 import com.any.miku_plushie.util.ModUtil;
 import net.minecraft.world.entity.Attackable;
 import net.minecraft.world.entity.Entity;
@@ -22,7 +22,7 @@ public abstract class LivingEntityMixin extends Entity implements Attackable {
 
   @Inject(method = "breakItem", at = @At("HEAD"))
   private void handlePickaxeBreakSound(ItemStack stack, CallbackInfo ci) {
-    if (ModItems.PICKAXE_ITEMS.contains(stack.getItem())) {
+    if (ModItemsFabric.PICKAXE_ITEMS.contains(stack.getItem())) {
       if (!this.isSilent()) {
         this.level().playLocalSound(
             this.getX(),

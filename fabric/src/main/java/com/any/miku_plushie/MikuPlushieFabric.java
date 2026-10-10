@@ -5,10 +5,11 @@ import com.any.miku_plushie.impl.common.registry.ModBlocks;
 import com.any.miku_plushie.registry.ModBlocksFabric;
 import com.any.miku_plushie.registry.ModCommands;
 import com.any.miku_plushie.registry.ModEntities;
-import com.any.miku_plushie.registry.ModItems;
+import com.any.miku_plushie.registry.ModItemsFabric;
 import com.any.miku_plushie.registry.ModParticles;
 import com.any.miku_plushie.registry.ModResourcePacks;
 import com.any.miku_plushie.registry.ModSoundEvents;
+import com.any.miku_plushie.registry.ModTabsFabric;
 import com.any.miku_plushie.registry.ModVillagerTrades;
 import com.any.miku_plushie.worldgen.generators.ModWorldGeneration;
 import java.util.function.BiConsumer;
@@ -31,10 +32,26 @@ public class MikuPlushieFabric implements ModInitializer {
 
     LOGGER.info("Miku is now Joining Fabric!!!");
 
-    ModBlocksFabric.initialize(); // will remove
+    // will remove lol
+//    bind(BuiltInRegistries.SOUND_EVENT, ModSounds::register);
+//    bind(BuiltInRegistries.FLUID, ModFluids::register);
+//    bind(BuiltInRegistries.MOB_EFFECT, ModEffects::register);
+    ModBlocksFabric.initialize();
     bind(BuiltInRegistries.BLOCK, ModBlocks::register);
+//    bind(BuiltInRegistries.ENTITY_TYPE, ModEntities::register);
+//    bind(BuiltInRegistries.ITEM, ModItems::register);
+//    bind(BuiltInRegistries.POTION, ModPotions::register);
+//    bind(BuiltInRegistries.PARTICLE_TYPE, ModParticles::register);
+//    bind(BuiltInRegistries.BLOCK_ENTITY_TYPE, ModTiles::register);
+//    bind(BuiltInRegistries.MENU, ModMenus::register);
+//    bind(BuiltInRegistries.RECIPE_TYPE, ModRecipeTypes::register);
+//    bind(BuiltInRegistries.RECIPE_SERIALIZER, ModRecipeSerializers::register);
+//    bind(BuiltInRegistries.FEATURE, ModFeatures::register);
+    ModTabsFabric.initialize();
+//    bind(BuiltInRegistries.CREATIVE_MODE_TAB, ModTabs::register);
+//    bind(BuiltInRegistries.DATA_COMPONENT_TYPE, ModComponents::register);
 
-    ModItems.initialize();
+    ModItemsFabric.initialize();
     ModSoundEvents.initialize();
     ModCommands.initialize();
     ModEntities.initialize();

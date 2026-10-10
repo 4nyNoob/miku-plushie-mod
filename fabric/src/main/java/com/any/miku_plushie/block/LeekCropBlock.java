@@ -1,6 +1,6 @@
 package com.any.miku_plushie.block;
 
-import com.any.miku_plushie.registry.ModItems;
+import com.any.miku_plushie.registry.ModItemsFabric;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.ItemLike;
@@ -29,7 +29,7 @@ public class LeekCropBlock extends CropBlock {
 
   @Override
   protected ItemLike getBaseSeedId() {
-    return ModItems.LEEK_SEEDS;
+    return ModItemsFabric.LEEK_SEEDS;
   }
 
   @Override

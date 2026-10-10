@@ -3,7 +3,7 @@ package com.any.miku_plushie.datagen;
 import com.any.miku_plushie.Constants;
 import com.any.miku_plushie.entity.AbstractPlushEntity;
 import com.any.miku_plushie.registry.ModEntities;
-import com.any.miku_plushie.registry.ModItems;
+import com.any.miku_plushie.registry.ModItemsFabric;
 import com.any.miku_plushie.util.ModUtil;
 import java.util.ArrayList;
 import java.util.List;
@@ -42,19 +42,19 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
     }
 
     //ADD PLUSHIES TO RESPECTIVE TAGS
-    for (int plush = 0; plush < ModItems.PLUSH_ITEMS.size(); plush++) {
-      String plushName = ModUtil.getBlockIdFromItem(ModItems.PLUSH_ITEMS.get(plush));
+    for (int plush = 0; plush < ModItemsFabric.PLUSH_ITEMS.size(); plush++) {
+      String plushName = ModUtil.getBlockIdFromItem(ModItemsFabric.PLUSH_ITEMS.get(plush));
       String plushTagName;
       for (TagKey<Item> tag : PLUSH_TAGS) {
         plushTagName = tag.location().toString().split(":")[1];
         if (plushName.contains(plushTagName)) {
-          tag(tag).add(reverseLookup(ModItems.PLUSH_ITEMS.get(plush)));
+          tag(tag).add(reverseLookup(ModItemsFabric.PLUSH_ITEMS.get(plush)));
         }
       }
     }
 
     //ADD PICKAXES TO THEIR OWN TAG
-    for (Item pickaxe : ModItems.PICKAXE_ITEMS) {
+    for (Item pickaxe : ModItemsFabric.PICKAXE_ITEMS) {
       tag(TETO_PICKAXE).add(reverseLookup(pickaxe));
       tag(ItemTags.CLUSTER_MAX_HARVESTABLES).add(reverseLookup(pickaxe));
       tag(ItemTags.PICKAXES).add(reverseLookup(pickaxe));

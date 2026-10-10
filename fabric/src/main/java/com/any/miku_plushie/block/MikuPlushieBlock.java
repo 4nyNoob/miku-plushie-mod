@@ -1,7 +1,7 @@
 package com.any.miku_plushie.block;
 
 import com.any.miku_plushie.entity.AbstractPlushEntity;
-import com.any.miku_plushie.registry.ModItems;
+import com.any.miku_plushie.registry.ModItemsFabric;
 import com.any.miku_plushie.registry.ModParticles;
 import com.any.miku_plushie.util.ModUtil;
 import java.util.Objects;
@@ -47,7 +47,7 @@ public class MikuPlushieBlock extends Block {
   public ItemInteractionResult useItemOn(ItemStack stack, BlockState state, Level world, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
 
     if (
-        player.getItemInHand(hand).is(ModItems.VOCALOID_HEART)
+        player.getItemInHand(hand).is(ModItemsFabric.VOCALOID_HEART)
     ) {
       if (!world.isClientSide) {
 
@@ -101,11 +101,11 @@ public class MikuPlushieBlock extends Block {
 
   @Override
   public ItemStack getCloneItemStack(LevelReader world, BlockPos pos, BlockState state) {
-    for (int plush = 0; plush < ModItems.PLUSH_ITEMS.size(); plush++) {
-      String plushNames = ModUtil.getBlockIdFromItem(ModItems.PLUSH_ITEMS.get(plush));
+    for (int plush = 0; plush < ModItemsFabric.PLUSH_ITEMS.size(); plush++) {
+      String plushNames = ModUtil.getBlockIdFromItem(ModItemsFabric.PLUSH_ITEMS.get(plush));
       String currentPlush = ModUtil.getBlockIdFromBlockState(state);
       if (plushNames.equals(currentPlush)) {
-        return ModItems.PLUSH_ITEMS.get(plush).getDefaultInstance();
+        return ModItemsFabric.PLUSH_ITEMS.get(plush).getDefaultInstance();
       }
     }
     return ItemStack.EMPTY;

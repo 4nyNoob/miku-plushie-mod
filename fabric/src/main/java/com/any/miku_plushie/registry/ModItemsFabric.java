@@ -9,31 +9,18 @@ import com.any.miku_plushie.item.PlushToolMaterial;
 import com.any.miku_plushie.util.ModUtil;
 import java.util.ArrayList;
 import java.util.List;
-import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.network.chat.Component;
-import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemNameBlockItem;
-import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.PickaxeItem;
 import net.minecraft.world.item.Rarity;
 import net.minecraft.world.level.block.Block;
 
-public class ModItems {
+public class ModItemsFabric {
 
-  //CREATE ITEM GROUP
-  public static final ResourceKey<CreativeModeTab> MIKU_GROUP_KEY =
-      ResourceKey.create(BuiltInRegistries.CREATIVE_MODE_TAB.key(), ResourceLocation.fromNamespaceAndPath(Constants.MOD_ID, "item_group")
-      );
-  public static final CreativeModeTab MIKU_GROUP = FabricItemGroup.builder()
-      .icon(() -> new ItemStack(ModBlocks.MIKU_PLUSH))
-      .title(Component.translatable("item.group.miku_plushies"))
-      .build();
   public static List<Item> REGULAR_ITEMS = new ArrayList<>();
   public static List<Item> PLUSH_ITEMS = new ArrayList<>();
   public static List<Item> PICKAXE_ITEMS = new ArrayList<>();
@@ -109,22 +96,10 @@ public class ModItems {
   public static void initialize() {
     MikuPlushieFabric.LOGGER.info("Registering " + Constants.MOD_ID + " Items");
 
-    //REGISTER ITEM GROUP
-    Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB, MIKU_GROUP_KEY, MIKU_GROUP);
-
     //CREATE A ITEM FOR EVERY PLUSH BLOCK
     for (Block plushblock : ModBlocks.PLUSH_BLOCKS) {
       Item plushItem = registerPlush(ModUtil.getBlockIdFromBlock(plushblock));
       PLUSH_ITEMS.add(plushItem);
     }
-
-    //POPULATE ITEM GROUP
-    ItemGroupEvents.modifyEntriesEvent(MIKU_GROUP_KEY).register(itemGroup -> {
-
-      REGULAR_ITEMS.forEach(itemGroup::accept);
-      PLUSH_ITEMS.forEach(itemGroup::accept);
-      PICKAXE_ITEMS.forEach(itemGroup::accept);
-
-    });
   }
 }
