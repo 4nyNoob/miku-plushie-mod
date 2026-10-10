@@ -1,7 +1,7 @@
 package com.any.miku_plushie.datagen;
 
-import com.any.miku_plushie.worldgen.ModConfiguredFeatures;
-import com.any.miku_plushie.worldgen.ModPlacedFeatures;
+import com.any.miku_plushie.impl.common.worldgen.ModConfiguredFeatures;
+import com.any.miku_plushie.impl.common.worldgen.ModPlacedFeatures;
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
 import net.minecraft.core.RegistrySetBuilder;
