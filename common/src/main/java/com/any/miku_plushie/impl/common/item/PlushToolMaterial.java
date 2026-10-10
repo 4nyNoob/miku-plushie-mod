@@ -1,4 +1,4 @@
-package com.any.miku_plushie.item;
+package com.any.miku_plushie.impl.common.item;
 
 import com.google.common.base.Suppliers;
 import java.util.Objects;

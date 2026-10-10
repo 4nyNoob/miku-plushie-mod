@@ -1,8 +1,8 @@
-package com.any.miku_plushie.item;
+package com.any.miku_plushie.impl.common.item;
 
 import com.any.miku_plushie.Constants;
-import com.any.miku_plushie.datagen.ModItemTagProvider;
 import com.any.miku_plushie.impl.common.registry.ModBlocks;
+import com.any.miku_plushie.impl.common.util.ModItemTags;
 import com.any.miku_plushie.impl.common.util.ModUtil;
 import java.util.List;
 import net.minecraft.core.Holder;
@@ -26,7 +26,7 @@ public class MikuPlushieBlockItem extends BlockItem implements Equipable {
   public static void PlayMikuSound(LivingEntity entity) {
     ItemStack stack = entity.getItemInHand(entity.getUsedItemHand());
 
-    if (stack.is(ModItemTagProvider.PLUSHIES)) {
+    if (stack.is(ModItemTags.PLUSHIES)) {
       String currentPlush = ModUtil.getBlockIdFromItem(stack.getItem());
       ModUtil.playPlushSound(entity.level(), entity.blockPosition(), currentPlush, "dor");
     }
@@ -48,7 +48,7 @@ public class MikuPlushieBlockItem extends BlockItem implements Equipable {
   public Holder<SoundEvent> getEquipSound() {
     ItemStack stack = this.getDefaultInstance();
 
-    if (stack.is(ModItemTagProvider.PLUSHIES)) {
+    if (stack.is(ModItemTags.PLUSHIES)) {
       if (!stack.is(ModBlocks.KONOHA_PLUSH.asItem())) {
         String currentPlush = ModUtil.getBlockIdFromItem(stack.getItem());
         return Holder.direct(ModUtil.getPlushSoundEvent(currentPlush, "equip"));

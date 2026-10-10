@@ -3,6 +3,7 @@ package com.any.miku_plushie.datagen;
 import com.any.miku_plushie.Constants;
 import com.any.miku_plushie.entity.AbstractPlushEntity;
 import com.any.miku_plushie.impl.common.registry.ModItems;
+import com.any.miku_plushie.impl.common.util.ModItemTags;
 import com.any.miku_plushie.registry.ModEntitiesFabric;
 import com.any.miku_plushie.impl.common.util.ModUtil;
 import java.util.ArrayList;
@@ -20,8 +21,6 @@ import net.minecraft.world.item.Item;
 
 public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
 
-  public static final TagKey<Item> PLUSHIES = TagKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(Constants.MOD_ID, "plushies"));
-  public static final TagKey<Item> TETO_PICKAXE = TagKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(Constants.MOD_ID, "teto_pickaxe"));
   public static List<TagKey<Item>> PLUSH_TAGS = new ArrayList<>();
 
   public ModItemTagProvider(FabricDataOutput output,
@@ -55,13 +54,13 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
 
     //ADD PICKAXES TO THEIR OWN TAG
     for (Item pickaxe : ModItems.PICKAXE_ITEMS) {
-      tag(TETO_PICKAXE).add(reverseLookup(pickaxe));
+      tag(ModItemTags.TETO_PICKAXE).add(reverseLookup(pickaxe));
       tag(ItemTags.CLUSTER_MAX_HARVESTABLES).add(reverseLookup(pickaxe));
       tag(ItemTags.PICKAXES).add(reverseLookup(pickaxe));
     }
 
     for (TagKey<Item> tag : PLUSH_TAGS) {
-      tag(PLUSHIES).addOptionalTag(tag.location());
+      tag(ModItemTags.PLUSHIES).addOptionalTag(tag.location());
     }
 
   }

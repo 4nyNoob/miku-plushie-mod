@@ -1,4 +1,4 @@
-package com.any.miku_plushie.block;
+package com.any.miku_plushie.impl.common.block;
 
 import com.any.miku_plushie.impl.common.registry.ModItems;
 import net.minecraft.core.BlockPos;

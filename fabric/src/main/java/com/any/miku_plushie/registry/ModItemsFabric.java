@@ -4,9 +4,8 @@ import com.any.miku_plushie.Constants;
 import com.any.miku_plushie.MikuPlushieFabric;
 import com.any.miku_plushie.impl.common.registry.ModBlocks;
 import com.any.miku_plushie.impl.common.registry.ModItems;
-import com.any.miku_plushie.item.MikuPlushieBlockItem;
-import com.any.miku_plushie.item.ModFoodComponents;
-import com.any.miku_plushie.item.PlushToolMaterial;
+import com.any.miku_plushie.impl.common.item.MikuPlushieBlockItem;
+import com.any.miku_plushie.impl.common.item.PlushToolMaterial;
 import com.any.miku_plushie.impl.common.util.ModUtil;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -59,9 +58,9 @@ public class ModItemsFabric {
     MikuPlushieFabric.LOGGER.info("Registering " + Constants.MOD_ID + " Items");
 
     ModItems.CANUDINHO = register(new Item(new Item.Properties().rarity(Rarity.RARE)), "canudinho");
-    ModItems.BAGUETTE = register(new Item(new Item.Properties().food(ModFoodComponents.BAGUETTE)), "baguette");
+    ModItems.BAGUETTE = register(new Item(new Item.Properties().food(com.any.miku_plushie.impl.common.registry.ModFoods.BAGUETTE)), "baguette");
     ModItems.LEEK_SEEDS = register(new ItemNameBlockItem(ModBlocks.LEEK_CROP, new Item.Properties()), "leek_seeds");
-    ModItems.LEEK = register(new Item(new Item.Properties().food(ModFoodComponents.LEEK)), "leek");
+    ModItems.LEEK = register(new Item(new Item.Properties().food(com.any.miku_plushie.impl.common.registry.ModFoods.LEEK)), "leek");
     ModItems.AKITA_NERU_PHONE = register(new Item(new Item.Properties()), "akita_neru_phone");
     ModItems.VOCALOID_HEART = register(new Item(new Item.Properties()), "vocaloid_heart");
 

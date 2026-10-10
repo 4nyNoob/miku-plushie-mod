@@ -1,7 +1,5 @@
-package com.any.miku_plushie.particle;
+package com.any.miku_plushie.impl.common.particle;
 
-import net.fabricmc.api.EnvType;
-import net.fabricmc.api.Environment;
 import net.minecraft.client.multiplayer.ClientLevel;
 import net.minecraft.client.particle.Particle;
 import net.minecraft.client.particle.ParticleProvider;
@@ -52,7 +50,7 @@ public class PlushSpawnParticle extends TextureSheetParticle {
     this.setSpriteFromAge(this.spriteProvider);
   }
 
-  @Environment(EnvType.CLIENT)
+
   public static class Factory implements ParticleProvider<SimpleParticleType> {
 
     private final SpriteSet spriteProvider;

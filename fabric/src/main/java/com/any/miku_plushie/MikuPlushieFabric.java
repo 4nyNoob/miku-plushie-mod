@@ -3,7 +3,7 @@ package com.any.miku_plushie;
 import com.any.miku_plushie.entity.AbstractPlushEntity;
 import com.any.miku_plushie.entity.variant.PlushVariants;
 import com.any.miku_plushie.impl.common.registry.ModBlocks;
-import com.any.miku_plushie.registry.ModBlocksFabric;
+import com.any.miku_plushie.impl.common.registry.ModItems;
 import com.any.miku_plushie.registry.ModCommands;
 import com.any.miku_plushie.registry.ModEntitiesFabric;
 import com.any.miku_plushie.registry.ModItemsFabric;
@@ -38,12 +38,11 @@ public class MikuPlushieFabric implements ModInitializer {
     // will remove lol
     ModSoundEventsFabric.initialize();
 //    bind(BuiltInRegistries.SOUND_EVENT, ModSounds::register);
-    ModBlocksFabric.initialize();
     bind(BuiltInRegistries.BLOCK, ModBlocks::register);
     ModEntitiesFabric.initialize();
 //    bind(BuiltInRegistries.ENTITY_TYPE, ModEntities::register);
     ModItemsFabric.initialize();
-//    bind(BuiltInRegistries.ITEM, ModItems::register);
+    bind(BuiltInRegistries.ITEM, ModItems::register);
     ModParticlesFabric.initialize();
 //    bind(BuiltInRegistries.PARTICLE_TYPE, ModParticles::register);
     ModTabsFabric.initialize();
