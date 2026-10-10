@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "miku_plushie:block/teto_plush_birdbrain",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "miku_plushie:block/teto_plush_birdbrain"
+    },
+    "facing=south": {
+      "model": "miku_plushie:block/teto_plush_birdbrain",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "miku_plushie:block/teto_plush_birdbrain",
+      "y": 270
+    }
+  }
+}

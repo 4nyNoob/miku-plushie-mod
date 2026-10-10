@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "miku_plushie:miku_plush"
+    },
+    {
+      "item": "minecraft:black_wool"
+    },
+    {
+      "item": "minecraft:iron_sword"
+    },
+    {
+      "item": "minecraft:bone_block"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "miku_plushie:miku_plush_hollow_knight"
+  }
+}
