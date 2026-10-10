@@ -10,7 +10,6 @@ import java.util.function.BiConsumer;
 import java.util.function.Consumer;
 import java.util.function.Supplier;
 import net.minecraft.data.models.BlockModelGenerators;
-import net.minecraft.data.models.BlockModelGenerators.TintState;
 import net.minecraft.data.models.blockstates.BlockStateGenerator;
 import net.minecraft.data.models.blockstates.MultiVariantGenerator;
 import net.minecraft.data.models.blockstates.PropertyDispatch;
@@ -28,6 +27,7 @@ public record BlockModels(Consumer<BlockStateGenerator> blockStateCollector, BiC
 
   //PARENT MODELS
   public static final ModelTemplate LEEK_MODEL = block("leek", TextureSlot.CROSS);
+  public static final ModelTemplate CROSS_CUTOUT = block("cross_cutout", TextureSlot.CROSS);
 
   private static ModelTemplate block(String parent, TextureSlot... requiredTextureKeys) {
     return new ModelTemplate(Optional.of(ResourceLocation.fromNamespaceAndPath(Constants.MOD_ID, "block/" + parent)), Optional.empty(), requiredTextureKeys);
@@ -55,7 +55,8 @@ public record BlockModels(Consumer<BlockStateGenerator> blockStateCollector, BiC
     TextureMapping textureMap = TextureMapping.cross(
         ResourceLocation.fromNamespaceAndPath(Constants.MOD_ID, "block/" + ModUtil.getBlockIdFromBlock(tamedBlock) + "_stage" + maxAge)
     );
-    blockstateModelGenerator.createCrossBlock(block, TintState.NOT_TINTED, textureMap);
+    ResourceLocation model = CROSS_CUTOUT.create(block, textureMap, blockstateModelGenerator.modelOutput);
+    blockstateModelGenerator.blockStateOutput.accept(BlockModelGenerators.createSimpleBlock(block, model));
   }
 
 }
