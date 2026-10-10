@@ -31,9 +31,7 @@ public class MikuPlushieFabric implements ModInitializer {
   @Override
   public void onInitialize() {
 
-    MikuPlushie.init();
-
-    LOGGER.info("Miku is now Joining Fabric!!!");
+    MikuPlushie.preModInitialization();
 
     // game object registration
     bind(BuiltInRegistries.SOUND_EVENT, ModSounds::register);
@@ -57,7 +55,9 @@ public class MikuPlushieFabric implements ModInitializer {
 
     PlushVariants.initialize();
 
-    LOGGER.info("Miku: (^v^)/ Hi!!!");
+    MikuPlushie.postModInitialization();
+
+    // on to client init
   }
 
   public <T> void bind(Registry<T> registry, Consumer<BiConsumer<T, ResourceLocation>> source) {
