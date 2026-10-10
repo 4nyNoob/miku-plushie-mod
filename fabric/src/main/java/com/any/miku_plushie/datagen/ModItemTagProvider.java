@@ -4,7 +4,7 @@ import com.any.miku_plushie.Constants;
 import com.any.miku_plushie.entity.AbstractPlushEntity;
 import com.any.miku_plushie.impl.common.registry.ModItems;
 import com.any.miku_plushie.registry.ModEntities;
-import com.any.miku_plushie.util.ModUtil;
+import com.any.miku_plushie.impl.common.util.ModUtil;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;

@@ -1,7 +1,7 @@
 package com.any.miku_plushie.datagen;
 
 import com.any.miku_plushie.Constants;
-import com.any.miku_plushie.util.ModUtil;
+import com.any.miku_plushie.impl.common.util.ModUtil;
 import com.google.gson.JsonElement;
 import it.unimi.dsi.fastutil.ints.Int2ObjectMap;
 import it.unimi.dsi.fastutil.ints.Int2ObjectOpenHashMap;

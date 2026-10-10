@@ -2,21 +2,14 @@ package com.any.miku_plushie.registry;
 
 import com.any.miku_plushie.Constants;
 import com.any.miku_plushie.MikuPlushieFabric;
-import java.util.ArrayList;
-import java.util.List;
+import com.any.miku_plushie.impl.common.registry.ModSounds;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.world.entity.EntityType;
 
-public class ModSoundEvents {
-
-  public static List<SoundEvent> MIKU_PLUSHIES_SOUND_EVENTS = new ArrayList<>();
-  protected static List<String> SOUND_EVENT = List.of("oie", "dor", "bye", "equip");
-  protected static List<String> MIKU_SOUND_EVENT = List.of("canudinho", "eat");
-  private ModSoundEvents() {
-  }
+public class ModSoundEventsFabric {
 
   private static SoundEvent registerSound(String id) {
     ResourceLocation identifier = ResourceLocation.fromNamespaceAndPath(Constants.MOD_ID, id);
@@ -34,16 +27,16 @@ public class ModSoundEvents {
 
         //ADD MIKU SOUND EVENTS
         if (plush.equals(ModEntities.MIKU)) {
-          for (String mikuSoundEvent : MIKU_SOUND_EVENT) {
+          for (String mikuSoundEvent : ModSounds.MIKU_SOUND_EVENT) {
             SoundEvent soundEvent = registerSound(plush.toShortString().replace("_plush", "") + "_" + mikuSoundEvent);
-            MIKU_PLUSHIES_SOUND_EVENTS.add(soundEvent);
+            ModSounds.MIKU_PLUSHIES_SOUND_EVENTS.add(soundEvent);
           }
         }
 
         //ADD REGULAR SOUND EVENTS
-        for (String event : SOUND_EVENT) {
+        for (String event : ModSounds.SOUND_EVENT) {
           SoundEvent soundEvent = registerSound(plush.toShortString().replace("_plush", "") + "_" + event);
-          MIKU_PLUSHIES_SOUND_EVENTS.add(soundEvent);
+          ModSounds.MIKU_PLUSHIES_SOUND_EVENTS.add(soundEvent);
         }
       }
     }

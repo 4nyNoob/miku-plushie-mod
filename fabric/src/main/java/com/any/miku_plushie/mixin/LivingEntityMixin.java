@@ -1,7 +1,7 @@
 package com.any.miku_plushie.mixin;
 
 import com.any.miku_plushie.impl.common.registry.ModItems;
-import com.any.miku_plushie.util.ModUtil;
+import com.any.miku_plushie.impl.common.util.ModUtil;
 import net.minecraft.world.entity.Attackable;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;

@@ -1,7 +1,7 @@
-package com.any.miku_plushie.util;
+package com.any.miku_plushie.impl.common.util;
 
 import com.any.miku_plushie.impl.common.registry.ModBlocks;
-import com.any.miku_plushie.registry.ModSoundEvents;
+import com.any.miku_plushie.impl.common.registry.ModSounds;
 import net.minecraft.core.BlockPos;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundSource;
@@ -41,7 +41,7 @@ public class ModUtil {
   public static SoundEvent getPlushSoundEvent(String plushName, String action) {
     String firstName = getFirstNameFromBlockId(plushName);
 
-    for (SoundEvent soundEvent : ModSoundEvents.MIKU_PLUSHIES_SOUND_EVENTS) {
+    for (SoundEvent soundEvent : ModSounds.MIKU_PLUSHIES_SOUND_EVENTS) {
       //GET SOUND EVENT
       String soundEventId = soundEvent.getLocation().toString().split(":")[1];
       if (soundEventId.contains(firstName) && soundEventId.contains("_" + action)) {
@@ -49,7 +49,7 @@ public class ModUtil {
       }
     }
 
-    return ModSoundEvents.MIKU_PLUSHIES_SOUND_EVENTS.getFirst();
+    return ModSounds.MIKU_PLUSHIES_SOUND_EVENTS.getFirst();
   }
 
   public static void playPlushSound(Level world, BlockPos position, String plushName, String action) {

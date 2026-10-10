@@ -9,13 +9,14 @@ public class ModItems {
   public static final List<Item> REGULAR_ITEMS = new ArrayList<>();
   public static final List<Item> PLUSH_ITEMS = new ArrayList<>();
   public static final List<Item> PICKAXE_ITEMS = new ArrayList<>();
-  //REGISTER REGULAR ITEMS
+
   public static Item CANUDINHO;
   public static Item BAGUETTE;
   public static Item LEEK_SEEDS;
   public static Item LEEK;
   public static Item AKITA_NERU_PHONE;
   public static Item VOCALOID_HEART;
+
   public static Item TETO_PICKAXE;
   public static Item TETO_PICKAXE_MESMERIZER;
   public static Item TETO_PICKAXE_BIRDBRAIN;

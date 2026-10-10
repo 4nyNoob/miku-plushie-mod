@@ -7,7 +7,7 @@ import com.any.miku_plushie.impl.common.registry.ModItems;
 import com.any.miku_plushie.item.MikuPlushieBlockItem;
 import com.any.miku_plushie.item.ModFoodComponents;
 import com.any.miku_plushie.item.PlushToolMaterial;
-import com.any.miku_plushie.util.ModUtil;
+import com.any.miku_plushie.impl.common.util.ModUtil;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
