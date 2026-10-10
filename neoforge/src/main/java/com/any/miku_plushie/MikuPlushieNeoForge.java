@@ -1,5 +1,6 @@
 package com.any.miku_plushie;
 
+import com.any.miku_plushie.impl.common.entity.AbstractPlushEntity;
 import com.any.miku_plushie.impl.common.registry.ModBlocks;
 import com.any.miku_plushie.impl.common.registry.ModEntities;
 import com.any.miku_plushie.impl.common.registry.ModItems;
@@ -12,10 +13,12 @@ import net.minecraft.core.Registry;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.entity.EntityType;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.loading.FMLLoader;
+import net.neoforged.neoforge.event.entity.EntityAttributeCreationEvent;
 import net.neoforged.neoforge.registries.RegisterEvent;
 
 @Mod(Constants.MOD_ID)
@@ -36,6 +39,12 @@ public class MikuPlushieNeoForge {
     bind(Registries.ITEM, ModItems::register);
     bind(Registries.PARTICLE_TYPE, ModParticles::register);
     bind(Registries.CREATIVE_MODE_TAB, ModTabs::register);
+
+    modEventBus.addListener((EntityAttributeCreationEvent event) -> {
+      for (EntityType<? extends AbstractPlushEntity> entity : ModEntities.PLUSH_ENTITIES) {
+        event.put(entity, AbstractPlushEntity.createAttributes().build());
+      }
+    });
 
     MikuPlushie.postModInitialization();
 
