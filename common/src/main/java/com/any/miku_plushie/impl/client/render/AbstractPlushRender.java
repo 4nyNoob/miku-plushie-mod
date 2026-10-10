@@ -1,7 +1,7 @@
-package com.any.miku_plushie.entity.client.render;
+package com.any.miku_plushie.impl.client.render;
 
 import com.any.miku_plushie.impl.common.entity.AbstractPlushEntity;
-import com.any.miku_plushie.entity.client.model.AbstractPlushModel;
+import com.any.miku_plushie.impl.client.model.AbstractPlushModel;
 import com.any.miku_plushie.impl.common.registry.ModBlocks;
 import com.any.miku_plushie.impl.common.util.ModUtil;
 import com.mojang.blaze3d.vertex.PoseStack;

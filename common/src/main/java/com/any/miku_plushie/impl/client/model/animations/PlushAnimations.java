@@ -1,4 +1,4 @@
-package com.any.miku_plushie.entity.client.model.animations;
+package com.any.miku_plushie.impl.client.model.animations;
 
 import com.any.miku_plushie.impl.common.entity.AbstractPlushEntity;
 import software.bernie.geckolib.cache.object.GeoBone;
