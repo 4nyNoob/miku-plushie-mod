@@ -1,7 +1,7 @@
 package com.any.miku_plushie.datagen;
 
 import com.any.miku_plushie.impl.common.registry.ModBlocks;
-import com.any.miku_plushie.registry.ModItemsFabric;
+import com.any.miku_plushie.impl.common.registry.ModItems;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
@@ -24,15 +24,15 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
   public void generate() {
     //GENERATE PLUSH LOOT TABLES ENTRIES AUTOMATICALLY
     List<Block> plushBlocks = ModBlocks.PLUSH_BLOCKS;
-    List<Item> plushItems = ModItemsFabric.PLUSH_ITEMS;
+    List<Item> plushItems = ModItems.PLUSH_ITEMS;
     for (int block = 0; block < plushBlocks.size(); block++) {
       dropOther(plushBlocks.get(block), plushItems.get(block));
     }
 
     LootItemCondition.Builder leekLootCondition = LootItemBlockStatePropertyCondition.hasBlockStateProperties(ModBlocks.LEEK_CROP)
         .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(CropBlock.AGE, 7));
-    add(ModBlocks.LEEK_CROP, createCropDrops(ModBlocks.LEEK_CROP, ModItemsFabric.LEEK, ModItemsFabric.LEEK_SEEDS, leekLootCondition));
+    add(ModBlocks.LEEK_CROP, createCropDrops(ModBlocks.LEEK_CROP, ModItems.LEEK, ModItems.LEEK_SEEDS, leekLootCondition));
     LootItemCondition.Builder wildLeekLootCondition = LootItemBlockStatePropertyCondition.hasBlockStateProperties(ModBlocks.WILD_LEEK_CROP);
-    add(ModBlocks.WILD_LEEK_CROP, createCropDrops(ModBlocks.WILD_LEEK_CROP, ModItemsFabric.LEEK, ModItemsFabric.LEEK_SEEDS, wildLeekLootCondition));
+    add(ModBlocks.WILD_LEEK_CROP, createCropDrops(ModBlocks.WILD_LEEK_CROP, ModItems.LEEK, ModItems.LEEK_SEEDS, wildLeekLootCondition));
   }
 }

@@ -3,8 +3,8 @@ package com.any.miku_plushie.entity;
 import com.any.miku_plushie.entity.goals.MikuDelayedAttackGoal;
 import com.any.miku_plushie.entity.variant.PlushVariants;
 import com.any.miku_plushie.impl.common.registry.ModBlocks;
+import com.any.miku_plushie.impl.common.registry.ModItems;
 import com.any.miku_plushie.registry.ModEntities;
-import com.any.miku_plushie.registry.ModItemsFabric;
 import com.any.miku_plushie.util.ModUtil;
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableMap;
@@ -110,7 +110,7 @@ public class AbstractPlushEntity extends TamableAnimal implements GeoEntity {
     this.goalSelector.addGoal(1, new SitWhenOrderedToGoal(this));
     this.goalSelector.addGoal(2, new MikuDelayedAttackGoal(this, 1.5F, true));
     this.goalSelector.addGoal(4, new FollowOwnerGoal(this, 1.0F, 5F, 1F));
-    this.goalSelector.addGoal(6, new TemptGoal(this, 1.5, Ingredient.of(ModItemsFabric.LEEK), false));
+    this.goalSelector.addGoal(6, new TemptGoal(this, 1.5, Ingredient.of(ModItems.LEEK), false));
     this.goalSelector.addGoal(7, new LookAtPlayerGoal(this, AbstractPlushEntity.class, 8F));
     this.goalSelector.addGoal(8, new LookAtPlayerGoal(this, Player.class, 8F));
     this.goalSelector.addGoal(9, new RandomLookAroundGoal(this));
@@ -277,7 +277,7 @@ public class AbstractPlushEntity extends TamableAnimal implements GeoEntity {
         }
 
         //LEEK HEAL
-        else if (this.getHealth() < this.getMaxHealth() && playerItemStack.is(ModItemsFabric.LEEK)) {
+        else if (this.getHealth() < this.getMaxHealth() && playerItemStack.is(ModItems.LEEK)) {
           if (!this.level().isClientSide()) {
             if (!player.getAbilities().instabuild) {
               playerItemStack.shrink(1);
@@ -301,7 +301,7 @@ public class AbstractPlushEntity extends TamableAnimal implements GeoEntity {
           return InteractionResult.SUCCESS;
         }
 
-      } else if (this.getHealth() < this.getMaxHealth() && playerItemStack.is(ModItemsFabric.LEEK)) {
+      } else if (this.getHealth() < this.getMaxHealth() && playerItemStack.is(ModItems.LEEK)) {
         for (int particle = 0; particle < 20; particle++) {
           this.level().addParticle(
               new BlockParticleOption(ParticleTypes.BLOCK, ((CropBlock) ModBlocks.LEEK_CROP).getStateForAge(7)),

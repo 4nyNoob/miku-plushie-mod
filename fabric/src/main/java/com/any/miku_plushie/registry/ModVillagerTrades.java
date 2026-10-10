@@ -2,6 +2,7 @@ package com.any.miku_plushie.registry;
 
 import com.any.miku_plushie.Constants;
 import com.any.miku_plushie.MikuPlushieFabric;
+import com.any.miku_plushie.impl.common.registry.ModItems;
 import net.fabricmc.fabric.api.object.builder.v1.trade.TradeOfferHelper;
 import net.minecraft.world.entity.npc.VillagerProfession;
 import net.minecraft.world.item.ItemStack;
@@ -19,11 +20,11 @@ public class ModVillagerTrades {
       //BUY LEEK SEEDS
       factories.add((entity, random) -> new MerchantOffer(
           new ItemCost(Items.EMERALD, 1),
-          new ItemStack(ModItemsFabric.LEEK_SEEDS, 3), 6, 2, 0.02f
+          new ItemStack(ModItems.LEEK_SEEDS, 3), 6, 2, 0.02f
       ));
       //SELL LEEK
       factories.add((entity, random) -> new MerchantOffer(
-          new ItemCost(ModItemsFabric.LEEK, 16),
+          new ItemCost(ModItems.LEEK, 16),
           new ItemStack(Items.EMERALD, 1), 6, 2, 0.02f
       ));
     });
@@ -32,7 +33,7 @@ public class ModVillagerTrades {
       //RANDOM PLUSH TRADE
       factories.add((entity, random) -> new MerchantOffer(
           new ItemCost(Items.EMERALD, 1),
-          new ItemStack(ModItemsFabric.PLUSH_ITEMS.get(random.nextInt(ModItemsFabric.PLUSH_ITEMS.size())), 1),
+          new ItemStack(ModItems.PLUSH_ITEMS.get(random.nextInt(ModItems.PLUSH_ITEMS.size())), 1),
           6, 2, 0.02f
       ));
     });

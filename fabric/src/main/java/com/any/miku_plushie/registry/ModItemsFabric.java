@@ -3,13 +3,11 @@ package com.any.miku_plushie.registry;
 import com.any.miku_plushie.Constants;
 import com.any.miku_plushie.MikuPlushieFabric;
 import com.any.miku_plushie.impl.common.registry.ModBlocks;
+import com.any.miku_plushie.impl.common.registry.ModItems;
 import com.any.miku_plushie.item.MikuPlushieBlockItem;
 import com.any.miku_plushie.item.ModFoodComponents;
 import com.any.miku_plushie.item.PlushToolMaterial;
 import com.any.miku_plushie.util.ModUtil;
-import java.util.ArrayList;
-import java.util.List;
-import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
@@ -20,39 +18,6 @@ import net.minecraft.world.item.Rarity;
 import net.minecraft.world.level.block.Block;
 
 public class ModItemsFabric {
-
-  public static List<Item> REGULAR_ITEMS = new ArrayList<>();
-  public static List<Item> PLUSH_ITEMS = new ArrayList<>();
-  public static List<Item> PICKAXE_ITEMS = new ArrayList<>();
-  //REGISTER REGULAR ITEMS
-  public static final Item CANUDINHO =
-      register(new Item(new Item.Properties().rarity(Rarity.RARE)), "canudinho");
-  public static final Item BAGUETTE =
-      register(new Item(new Item.Properties().food(ModFoodComponents.BAGUETTE)), "baguette");
-
-  public static final Item LEEK_SEEDS =
-      register(new ItemNameBlockItem(ModBlocks.LEEK_CROP, new Item.Properties()), "leek_seeds");
-  public static final Item LEEK =
-      register(new Item(new Item.Properties().food(ModFoodComponents.LEEK)), "leek");
-
-  public static final Item AKITA_NERU_PHONE =
-      register(new Item(new Item.Properties()), "akita_neru_phone");
-
-  public static final Item VOCALOID_HEART =
-      register(new Item(new Item.Properties()), "vocaloid_heart");
-
-  //REGISTER TETO PICKAXE ITEMS
-  public static final Item TETO_PICKAXE = registerPickaxe("teto_pickaxe");
-  public static final Item TETO_PICKAXE_MESMERIZER = registerPickaxe("teto_pickaxe_mesmerizer");
-  public static final Item TETO_PICKAXE_BIRDBRAIN = registerPickaxe("teto_pickaxe_birdbrain");
-  public static final Item TETO_PICKAXE_REGRET_ROCK = registerPickaxe("teto_pickaxe_regret_rock");
-  public static final Item TETO_PICKAXE_DONT_BELIEVE_IN_T = registerPickaxe("teto_pickaxe_dont_believe_in_t");
-  public static final Item TETO_PICKAXE_LIAR_DANCER = registerPickaxe("teto_pickaxe_liar_dancer");
-  public static final Item TETO_PICKAXE_WHATCHACALLITSNAME = registerPickaxe("teto_pickaxe_whatchacallitsname");
-  public static final Item TETO_PICKAXE_SOME_MORE_OF_THAT_SONG = registerPickaxe("teto_pickaxe_some_more_of_that_song");
-  public static final Item TETO_PICKAXE_SYNTHV = registerPickaxe("teto_pickaxe_synthv");
-  public static final Item TETO_PICKAXE_SPOKEN_FOR = registerPickaxe("teto_pickaxe_spoken_for");
-  public static final Item TETO_PICKAXE_PPPP = registerPickaxe("teto_pickaxe_pppp");
 
   //REGISTER PLUSH ITEMS
   public static Item registerPlush(String name) {
@@ -69,9 +34,7 @@ public class ModItemsFabric {
 
   //REGISTER PICKAXES HELPER
   public static Item registerPickaxe(String name) {
-    return register(new PickaxeItem(PlushToolMaterial.PLUSH_TOOL_MATERIAL, new Item.Properties().attributes(
-        PickaxeItem.createAttributes(
-            PlushToolMaterial.PLUSH_TOOL_MATERIAL, 1f, -2.8F))), name);
+    return register(new PickaxeItem(PlushToolMaterial.PLUSH_TOOL_MATERIAL, new Item.Properties().attributes(PickaxeItem.createAttributes(PlushToolMaterial.PLUSH_TOOL_MATERIAL, 1f, -2.8F))), name);
   }
 
   //REGISTER NORMAL ITEM
@@ -82,24 +45,42 @@ public class ModItemsFabric {
 
     //ADD TETO PICKAXES TO THE PICKAXES LIST
     if (itemName.contains("pickaxe")) {
-      PICKAXE_ITEMS.add(item);
+      ModItems.PICKAXE_ITEMS.add(item);
     }
     //ADD REGULAR ITEMS TOO
     else if (!itemName.contains("plush")) {
-      REGULAR_ITEMS.add(item);
+      ModItems.REGULAR_ITEMS.add(item);
     }
 
     return register;
   }
 
-
   public static void initialize() {
     MikuPlushieFabric.LOGGER.info("Registering " + Constants.MOD_ID + " Items");
+
+    ModItems.CANUDINHO = register(new Item(new Item.Properties().rarity(Rarity.RARE)), "canudinho");
+    ModItems.BAGUETTE = register(new Item(new Item.Properties().food(ModFoodComponents.BAGUETTE)), "baguette");
+    ModItems.LEEK_SEEDS = register(new ItemNameBlockItem(ModBlocks.LEEK_CROP, new Item.Properties()), "leek_seeds");
+    ModItems.LEEK = register(new Item(new Item.Properties().food(ModFoodComponents.LEEK)), "leek");
+    ModItems.AKITA_NERU_PHONE = register(new Item(new Item.Properties()), "akita_neru_phone");
+    ModItems.VOCALOID_HEART = register(new Item(new Item.Properties()), "vocaloid_heart");
+
+    ModItems.TETO_PICKAXE = registerPickaxe("teto_pickaxe");
+    ModItems.TETO_PICKAXE_MESMERIZER = registerPickaxe("teto_pickaxe_mesmerizer");
+    ModItems.TETO_PICKAXE_BIRDBRAIN = registerPickaxe("teto_pickaxe_birdbrain");
+    ModItems.TETO_PICKAXE_REGRET_ROCK = registerPickaxe("teto_pickaxe_regret_rock");
+    ModItems.TETO_PICKAXE_DONT_BELIEVE_IN_T = registerPickaxe("teto_pickaxe_dont_believe_in_t");
+    ModItems.TETO_PICKAXE_LIAR_DANCER = registerPickaxe("teto_pickaxe_liar_dancer");
+    ModItems.TETO_PICKAXE_WHATCHACALLITSNAME = registerPickaxe("teto_pickaxe_whatchacallitsname");
+    ModItems.TETO_PICKAXE_SOME_MORE_OF_THAT_SONG = registerPickaxe("teto_pickaxe_some_more_of_that_song");
+    ModItems.TETO_PICKAXE_SYNTHV = registerPickaxe("teto_pickaxe_synthv");
+    ModItems.TETO_PICKAXE_SPOKEN_FOR = registerPickaxe("teto_pickaxe_spoken_for");
+    ModItems.TETO_PICKAXE_PPPP = registerPickaxe("teto_pickaxe_pppp");
 
     //CREATE A ITEM FOR EVERY PLUSH BLOCK
     for (Block plushblock : ModBlocks.PLUSH_BLOCKS) {
       Item plushItem = registerPlush(ModUtil.getBlockIdFromBlock(plushblock));
-      PLUSH_ITEMS.add(plushItem);
+      ModItems.PLUSH_ITEMS.add(plushItem);
     }
   }
 }

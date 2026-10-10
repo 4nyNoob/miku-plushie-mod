@@ -1,7 +1,7 @@
 package com.any.miku_plushie.datagen;
 
 import com.any.miku_plushie.impl.common.registry.ModBlocks;
-import com.any.miku_plushie.registry.ModItemsFabric;
+import com.any.miku_plushie.impl.common.registry.ModItems;
 import java.util.List;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
@@ -31,9 +31,9 @@ public class ModModelProvider extends FabricModelProvider {
 
   @Override
   public void generateItemModels(ItemModelGenerators itemModelGenerator) {
-    itemModelGenerator.generateFlatItem(ModItemsFabric.CANUDINHO, ModelTemplates.FLAT_ITEM);
-    itemModelGenerator.generateFlatItem(ModItemsFabric.LEEK_SEEDS, ModelTemplates.FLAT_ITEM);
-    itemModelGenerator.generateFlatItem(ModItemsFabric.VOCALOID_HEART, ModelTemplates.FLAT_HANDHELD_ITEM);
-    itemModelGenerator.generateFlatItem(ModItemsFabric.LEEK, ModelTemplates.FLAT_HANDHELD_ITEM);
+    itemModelGenerator.generateFlatItem(ModItems.CANUDINHO, ModelTemplates.FLAT_ITEM);
+    itemModelGenerator.generateFlatItem(ModItems.LEEK_SEEDS, ModelTemplates.FLAT_ITEM);
+    itemModelGenerator.generateFlatItem(ModItems.VOCALOID_HEART, ModelTemplates.FLAT_HANDHELD_ITEM);
+    itemModelGenerator.generateFlatItem(ModItems.LEEK, ModelTemplates.FLAT_HANDHELD_ITEM);
   }
 }
