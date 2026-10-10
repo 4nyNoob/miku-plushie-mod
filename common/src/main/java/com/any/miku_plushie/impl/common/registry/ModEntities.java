@@ -58,15 +58,6 @@ public class ModEntities {
   }
 
   private static <T extends AbstractPlushEntity> EntityType<T> registerPlushieMob(String name, EntityType.EntityFactory<T> entity, BiConsumer<EntityType<?>, ResourceLocation> consumer) {
-//    EntityType<T> entityType = Registry.register(BuiltInRegistries.ENTITY_TYPE,
-//        ResourceLocation.fromNamespaceAndPath(Constants.MOD_ID, name),
-//        EntityType.Builder.of(entity, MobCategory.CREATURE)
-//            .sized(ModEntities.PLUSH_WIDTH, ModEntities.PLUSH_HEIGHT)
-//            .eyeHeight(0.85F)
-//            .build(name)
-//    );
-//    //noinspection unchecked
-//    ModEntities.PLUSH_ENTITIES.add((EntityType<? extends AbstractPlushEntity>) entityType);
 
     ResourceLocation id = MikuPlushie.id(name);
     EntityType<T> entityType = EntityType.Builder.<T>of(entity, MobCategory.CREATURE)
