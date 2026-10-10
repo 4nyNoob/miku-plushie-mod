@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "miku_plushie:block/teto_plush_synthv",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "miku_plushie:block/teto_plush_synthv"
+    },
+    "facing=south": {
+      "model": "miku_plushie:block/teto_plush_synthv",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "miku_plushie:block/teto_plush_synthv",
+      "y": 270
+    }
+  }
+}

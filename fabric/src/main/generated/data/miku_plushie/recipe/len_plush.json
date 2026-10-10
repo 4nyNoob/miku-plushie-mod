@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "1": {
+      "item": "minecraft:yellow_wool"
+    },
+    "2": {
+      "item": "minecraft:white_wool"
+    },
+    "3": {
+      "item": "minecraft:gray_wool"
+    }
+  },
+  "pattern": [
+    "121",
+    "131"
+  ],
+  "result": {
+    "count": 1,
+    "id": "miku_plushie:len_plush"
+  }
+}

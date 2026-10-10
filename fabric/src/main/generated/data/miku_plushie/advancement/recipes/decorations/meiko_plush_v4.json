@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_meiko_plush": {
+      "conditions": {
+        "items": [
+          {
+            "items": "miku_plushie:meiko_plush"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "miku_plushie:meiko_plush_v4"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_meiko_plush"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "miku_plushie:meiko_plush_v4"
+    ]
+  }
+}
