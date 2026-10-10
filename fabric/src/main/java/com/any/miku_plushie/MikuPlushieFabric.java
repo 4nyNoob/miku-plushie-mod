@@ -3,18 +3,19 @@ package com.any.miku_plushie;
 import com.any.miku_plushie.impl.common.entity.AbstractPlushEntity;
 import com.any.miku_plushie.impl.common.entity.variant.PlushVariants;
 import com.any.miku_plushie.impl.common.registry.ModBlocks;
+import com.any.miku_plushie.impl.common.registry.ModCommands;
 import com.any.miku_plushie.impl.common.registry.ModEntities;
 import com.any.miku_plushie.impl.common.registry.ModItems;
 import com.any.miku_plushie.impl.common.registry.ModParticles;
 import com.any.miku_plushie.impl.common.registry.ModSounds;
 import com.any.miku_plushie.impl.common.registry.ModTabs;
-import com.any.miku_plushie.registry.ModCommands;
 import com.any.miku_plushie.registry.ModResourcePacks;
 import com.any.miku_plushie.registry.ModVillagerTrades;
 import com.any.miku_plushie.worldgen.generators.ModWorldGeneration;
 import java.util.function.BiConsumer;
 import java.util.function.Consumer;
 import net.fabricmc.api.ModInitializer;
+import net.fabricmc.fabric.api.command.v2.CommandRegistrationCallback;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -34,7 +35,7 @@ public class MikuPlushieFabric implements ModInitializer {
 
     LOGGER.info("Miku is now Joining Fabric!!!");
 
-    // will remove lol
+    // game object registration
     bind(BuiltInRegistries.SOUND_EVENT, ModSounds::register);
     bind(BuiltInRegistries.BLOCK, ModBlocks::register);
     bind(BuiltInRegistries.ENTITY_TYPE, ModEntities::register);
@@ -42,7 +43,9 @@ public class MikuPlushieFabric implements ModInitializer {
     bind(BuiltInRegistries.PARTICLE_TYPE, ModParticles::register);
     bind(BuiltInRegistries.CREATIVE_MODE_TAB, ModTabs::register);
 
-    ModCommands.initialize();
+    // misc registration
+    CommandRegistrationCallback.EVENT.register(ModCommands::register);
+
     ModResourcePacks.initialize();
     ModVillagerTrades.initialize();
     ModWorldGeneration.generateModWorldGeneration();
