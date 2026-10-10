@@ -1,8 +1,9 @@
 package com.any.miku_plushie;
 
-import com.any.miku_plushie.entity.AbstractPlushEntity;
-import com.any.miku_plushie.entity.variant.PlushVariants;
+import com.any.miku_plushie.impl.common.entity.AbstractPlushEntity;
+import com.any.miku_plushie.impl.common.entity.variant.PlushVariants;
 import com.any.miku_plushie.impl.common.registry.ModBlocks;
+import com.any.miku_plushie.impl.common.registry.ModEntities;
 import com.any.miku_plushie.impl.common.registry.ModItems;
 import com.any.miku_plushie.registry.ModCommands;
 import com.any.miku_plushie.registry.ModEntitiesFabric;
@@ -52,7 +53,7 @@ public class MikuPlushieFabric implements ModInitializer {
     ModWorldGeneration.generateModWorldGeneration();
 
     // technically occurred at the end of ModEntitiesFabric#initialize, putting it before PlushVariants#initialize
-    for (EntityType<? extends AbstractPlushEntity> entity : ModEntitiesFabric.PLUSH_ENTITIES) {
+    for (EntityType<? extends AbstractPlushEntity> entity : ModEntities.PLUSH_ENTITIES) {
       FabricDefaultAttributeRegistry.register(entity, AbstractPlushEntity.createAttributes());
     }
 

@@ -1,9 +1,10 @@
-package com.any.miku_plushie.entity.goals;
+package com.any.miku_plushie.impl.common.entity.goals;
 
 import com.any.miku_plushie.impl.common.block.LeekCropBlock;
-import com.any.miku_plushie.entity.MikuEntity;
+import com.any.miku_plushie.impl.common.entity.MikuEntity;
 import com.any.miku_plushie.impl.common.registry.ModBlocks;
 import com.any.miku_plushie.impl.common.util.ModUtil;
+import com.google.common.base.Predicates;
 import java.util.EnumSet;
 import java.util.List;
 import java.util.function.Predicate;
@@ -19,7 +20,6 @@ import net.minecraft.world.level.block.CropBlock;
 import net.minecraft.world.level.block.LevelEvent;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.predicate.BlockStatePredicate;
-import org.spongepowered.include.com.google.common.base.Predicates;
 
 //EAT LEEK GOAL
 public class EatLeekGoal extends Goal {

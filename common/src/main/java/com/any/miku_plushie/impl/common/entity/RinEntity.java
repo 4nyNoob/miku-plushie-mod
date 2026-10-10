@@ -1,4 +1,4 @@
-package com.any.miku_plushie.entity;
+package com.any.miku_plushie.impl.common.entity;
 
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.TamableAnimal;

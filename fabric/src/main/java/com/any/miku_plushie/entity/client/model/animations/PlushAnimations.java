@@ -1,6 +1,6 @@
 package com.any.miku_plushie.entity.client.model.animations;
 
-import com.any.miku_plushie.entity.AbstractPlushEntity;
+import com.any.miku_plushie.impl.common.entity.AbstractPlushEntity;
 import software.bernie.geckolib.cache.object.GeoBone;
 import software.bernie.geckolib.constant.DataTickets;
 import software.bernie.geckolib.model.GeoModel;
