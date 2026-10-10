@@ -3,6 +3,7 @@ package com.any.miku_plushie.registry;
 import com.any.miku_plushie.Constants;
 import com.any.miku_plushie.MikuPlushieFabric;
 import com.any.miku_plushie.impl.common.registry.ModBlocks;
+import com.any.miku_plushie.impl.common.registry.ModItems;
 import com.any.miku_plushie.impl.common.registry.ModTabs;
 import com.any.miku_plushie.platform.Services;
 import net.minecraft.core.Registry;
@@ -20,9 +21,9 @@ public class ModTabsFabric {
         .icon(() -> new ItemStack(ModBlocks.MIKU_PLUSH))
         .title(Component.translatable("item.group.miku_plushies"))
         .displayItems((itemDisplayParameters, output) -> {
-          ModItemsFabric.REGULAR_ITEMS.forEach(output::accept);
-          ModItemsFabric.PLUSH_ITEMS.forEach(output::accept);
-          ModItemsFabric.PICKAXE_ITEMS.forEach(output::accept);
+          ModItems.REGULAR_ITEMS.forEach(output::accept);
+          ModItems.PLUSH_ITEMS.forEach(output::accept);
+          ModItems.PICKAXE_ITEMS.forEach(output::accept);
         })
         .build();
 

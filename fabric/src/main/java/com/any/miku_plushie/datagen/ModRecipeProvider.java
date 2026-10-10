@@ -1,7 +1,7 @@
 package com.any.miku_plushie.datagen;
 
 import com.any.miku_plushie.impl.common.registry.ModBlocks;
-import com.any.miku_plushie.registry.ModItemsFabric;
+import com.any.miku_plushie.impl.common.registry.ModItems;
 import java.util.concurrent.CompletableFuture;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
@@ -62,33 +62,33 @@ public class ModRecipeProvider extends FabricRecipeProvider {
   @Override
   public void buildRecipes(RecipeOutput exporter) {
 
-    ShapedRecipeBuilder.shaped(RecipeCategory.FOOD, ModItemsFabric.CANUDINHO)
+    ShapedRecipeBuilder.shaped(RecipeCategory.FOOD, ModItems.CANUDINHO)
         .pattern("p")
         .pattern("p")
         .define('p', Items.PAPER)
         .unlockedBy(FabricRecipeProvider.getHasName(Items.PAPER), FabricRecipeProvider.has(Items.PAPER))
         .save(exporter);
 
-    ShapedRecipeBuilder.shaped(RecipeCategory.FOOD, ModItemsFabric.BAGUETTE)
+    ShapedRecipeBuilder.shaped(RecipeCategory.FOOD, ModItems.BAGUETTE)
         .pattern("www")
         .pattern("www")
         .define('w', Items.WHEAT)
         .unlockedBy(FabricRecipeProvider.getHasName(Items.WHEAT), FabricRecipeProvider.has(Items.WHEAT))
         .save(exporter);
 
-    simpleShapeless(exporter, ModItemsFabric.AKITA_NERU_PHONE, Items.GOLD_INGOT, Items.REDSTONE, Items.BLACK_STAINED_GLASS);
+    simpleShapeless(exporter, ModItems.AKITA_NERU_PHONE, Items.GOLD_INGOT, Items.REDSTONE, Items.BLACK_STAINED_GLASS);
 
-    ShapedRecipeBuilder.shaped(RecipeCategory.FOOD, ModItemsFabric.VOCALOID_HEART)
+    ShapedRecipeBuilder.shaped(RecipeCategory.FOOD, ModItems.VOCALOID_HEART)
         .pattern("LN")
         .pattern("BP")
-        .define('L', ModItemsFabric.LEEK)
+        .define('L', ModItems.LEEK)
         .define('N', Items.NOTE_BLOCK)
-        .define('B', ModItemsFabric.BAGUETTE)
-        .define('P', ModItemsFabric.AKITA_NERU_PHONE)
-        .unlockedBy(FabricRecipeProvider.getHasName(ModItemsFabric.LEEK), FabricRecipeProvider.has(ModItemsFabric.LEEK))
+        .define('B', ModItems.BAGUETTE)
+        .define('P', ModItems.AKITA_NERU_PHONE)
+        .unlockedBy(FabricRecipeProvider.getHasName(ModItems.LEEK), FabricRecipeProvider.has(ModItems.LEEK))
         .unlockedBy(FabricRecipeProvider.getHasName(Items.NOTE_BLOCK), FabricRecipeProvider.has(Items.NOTE_BLOCK))
-        .unlockedBy(FabricRecipeProvider.getHasName(ModItemsFabric.BAGUETTE), FabricRecipeProvider.has(ModItemsFabric.BAGUETTE))
-        .unlockedBy(FabricRecipeProvider.getHasName(ModItemsFabric.AKITA_NERU_PHONE), FabricRecipeProvider.has(ModItemsFabric.AKITA_NERU_PHONE))
+        .unlockedBy(FabricRecipeProvider.getHasName(ModItems.BAGUETTE), FabricRecipeProvider.has(ModItems.BAGUETTE))
+        .unlockedBy(FabricRecipeProvider.getHasName(ModItems.AKITA_NERU_PHONE), FabricRecipeProvider.has(ModItems.AKITA_NERU_PHONE))
         .save(exporter);
 
     //AIKO
@@ -279,41 +279,41 @@ public class ModRecipeProvider extends FabricRecipeProvider {
           .unlockedBy(FabricRecipeProvider.getHasName(Items.WHITE_WOOL), FabricRecipeProvider.has(Items.WHITE_WOOL))
           .unlockedBy(FabricRecipeProvider.getHasName(Items.LIGHT_GRAY_WOOL), FabricRecipeProvider.has(Items.LIGHT_GRAY_WOOL))
           .save(exporter);
-      pickaxeRecipe(exporter, ModItemsFabric.TETO_PICKAXE, ModBlocks.TETO_PLUSH);
+      pickaxeRecipe(exporter, ModItems.TETO_PICKAXE, ModBlocks.TETO_PLUSH);
 
       plushShapeless(exporter, ModBlocks.TETO_PLUSH_MESMERIZER, ModBlocks.TETO_PLUSH, Items.RED_WOOL, Items.RED_WOOL);
-      pickaxeRecipe(exporter, ModItemsFabric.TETO_PICKAXE_MESMERIZER, ModBlocks.TETO_PLUSH_MESMERIZER);
+      pickaxeRecipe(exporter, ModItems.TETO_PICKAXE_MESMERIZER, ModBlocks.TETO_PLUSH_MESMERIZER);
 
       plushShapeless(exporter, ModBlocks.TETO_PLUSH_SHADOW, ModBlocks.TETO_PLUSH, Items.BLACK_WOOL, Items.REDSTONE);
 
       plushShapeless(exporter, ModBlocks.TETO_PLUSH_BIRDBRAIN, ModBlocks.TETO_PLUSH, Items.WHEAT_SEEDS, Items.EGG);
-      pickaxeRecipe(exporter, ModItemsFabric.TETO_PICKAXE_BIRDBRAIN, ModBlocks.TETO_PLUSH_BIRDBRAIN);
+      pickaxeRecipe(exporter, ModItems.TETO_PICKAXE_BIRDBRAIN, ModBlocks.TETO_PLUSH_BIRDBRAIN);
 
       plushShapeless(exporter, ModBlocks.TETO_PLUSH_REGRET_ROCK, ModBlocks.TETO_PLUSH, Items.PURPLE_DYE);
-      pickaxeRecipe(exporter, ModItemsFabric.TETO_PICKAXE_REGRET_ROCK, ModBlocks.TETO_PLUSH_REGRET_ROCK);
+      pickaxeRecipe(exporter, ModItems.TETO_PICKAXE_REGRET_ROCK, ModBlocks.TETO_PLUSH_REGRET_ROCK);
 
       plushShapeless(exporter, ModBlocks.TETO_PLUSH_DONT_BELIEVE_IN_T, ModBlocks.TETO_PLUSH, Items.WHITE_WOOL, Items.RED_WOOL);
-      pickaxeRecipe(exporter, ModItemsFabric.TETO_PICKAXE_DONT_BELIEVE_IN_T, ModBlocks.TETO_PLUSH_DONT_BELIEVE_IN_T);
+      pickaxeRecipe(exporter, ModItems.TETO_PICKAXE_DONT_BELIEVE_IN_T, ModBlocks.TETO_PLUSH_DONT_BELIEVE_IN_T);
 
       plushShapeless(exporter, ModBlocks.TETO_PLUSH_LIAR_DANCER, ModBlocks.TETO_PLUSH, Items.BLACK_STAINED_GLASS, Items.BLACK_STAINED_GLASS, Items.WHITE_WOOL);
-      pickaxeRecipe(exporter, ModItemsFabric.TETO_PICKAXE_LIAR_DANCER, ModBlocks.TETO_PLUSH_LIAR_DANCER);
+      pickaxeRecipe(exporter, ModItems.TETO_PICKAXE_LIAR_DANCER, ModBlocks.TETO_PLUSH_LIAR_DANCER);
 
       plushShapeless(exporter, ModBlocks.TETO_PLUSH_WHATCHACALLITSNAME, ModBlocks.TETO_PLUSH, Items.GLASS, Items.GLASS, Items.RED_WOOL, Items.ORANGE_WOOL);
-      pickaxeRecipe(exporter, ModItemsFabric.TETO_PICKAXE_WHATCHACALLITSNAME, ModBlocks.TETO_PLUSH_WHATCHACALLITSNAME);
+      pickaxeRecipe(exporter, ModItems.TETO_PICKAXE_WHATCHACALLITSNAME, ModBlocks.TETO_PLUSH_WHATCHACALLITSNAME);
 
       plushShapeless(exporter, ModBlocks.TETO_PLUSH_SOME_MORE_OF_THAT_SONG, ModBlocks.TETO_PLUSH, Items.LIGHT_BLUE_WOOL);
-      pickaxeRecipe(exporter, ModItemsFabric.TETO_PICKAXE_SOME_MORE_OF_THAT_SONG, ModBlocks.TETO_PLUSH_SOME_MORE_OF_THAT_SONG);
+      pickaxeRecipe(exporter, ModItems.TETO_PICKAXE_SOME_MORE_OF_THAT_SONG, ModBlocks.TETO_PLUSH_SOME_MORE_OF_THAT_SONG);
 
       plushShapeless(exporter, ModBlocks.TETO_PLUSH_LOBSTER, ModBlocks.TETO_PLUSH, Items.SEAGRASS, Items.SEAGRASS);
 
       plushShapeless(exporter, ModBlocks.TETO_PLUSH_SYNTHV, ModBlocks.TETO_PLUSH, Items.IRON_INGOT);
-      pickaxeRecipe(exporter, ModItemsFabric.TETO_PICKAXE_SYNTHV, ModBlocks.TETO_PLUSH_SYNTHV);
+      pickaxeRecipe(exporter, ModItems.TETO_PICKAXE_SYNTHV, ModBlocks.TETO_PLUSH_SYNTHV);
 
       plushShapeless(exporter, ModBlocks.TETO_PLUSH_SPOKEN_FOR, ModBlocks.TETO_PLUSH, Items.PINK_DYE, Items.GLOWSTONE_DUST);
-      pickaxeRecipe(exporter, ModItemsFabric.TETO_PICKAXE_SPOKEN_FOR, ModBlocks.TETO_PLUSH_SPOKEN_FOR);
+      pickaxeRecipe(exporter, ModItems.TETO_PICKAXE_SPOKEN_FOR, ModBlocks.TETO_PLUSH_SPOKEN_FOR);
 
       plushShapeless(exporter, ModBlocks.TETO_PLUSH_PPPP, ModBlocks.TETO_PLUSH, Items.RED_WOOL, Items.WHITE_WOOL);
-      pickaxeRecipe(exporter, ModItemsFabric.TETO_PICKAXE_PPPP, ModBlocks.TETO_PLUSH_PPPP);
+      pickaxeRecipe(exporter, ModItems.TETO_PICKAXE_PPPP, ModBlocks.TETO_PLUSH_PPPP);
 
       plushShapeless(exporter, ModBlocks.TETO_PLUSH_SHRIMP, ModBlocks.TETO_PLUSH, Items.KELP, Items.KELP);
 
