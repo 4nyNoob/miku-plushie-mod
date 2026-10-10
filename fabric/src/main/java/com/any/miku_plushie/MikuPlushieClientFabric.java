@@ -23,6 +23,22 @@ public class MikuPlushieClientFabric implements ClientModInitializer {
   public void onInitializeClient() {
 
     MikuPlushieClient.init();
+    MikuPlushieClientFabric.registerBlockRenderLayers(); // fabric specific
+
+    //GLIB QUERY
+    MathParser.setVariable("query.miku.is_game", () -> 90 / Math.PI);
+
+    //ENTITIES RENDERERS
+    for (EntityType<? extends AbstractPlushEntity> plushEntity : ModEntities.PLUSH_ENTITIES) {
+      EntityRendererRegistry.register(plushEntity, AbstractPlushRender::new);
+    }
+
+    //PARTICLE
+    ParticleFactoryRegistry.getInstance().register(ModParticles.MIKU_SPAWN, PlushSpawnParticle.Factory::new);
+  }
+
+  /// NeoForge does this in JSON, so this is specific to Fabric. (no "exact" parity)
+  private static void registerBlockRenderLayers() {
 
     Constants.LOG.info("Registering " + Constants.MOD_ID + " Block Render Layer Maps");
 
@@ -36,19 +52,8 @@ public class MikuPlushieClientFabric implements ClientModInitializer {
     //PLUSH TRANSLUCENT
     BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MIKU_PLUSH_GHOST, RenderType.translucent());
 
-    //NON PLUSH BLOCKS
+    //NON-PLUSH BLOCKS
     BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.LEEK_CROP, RenderType.cutout());
     BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.WILD_LEEK_CROP, RenderType.cutout());
-
-    //GLIB QUERY
-    MathParser.setVariable("query.miku.is_game", () -> 90 / Math.PI);
-
-    //ENTITIES RENDERERS
-    for (EntityType<? extends AbstractPlushEntity> plushEntity : ModEntities.PLUSH_ENTITIES) {
-      EntityRendererRegistry.register(plushEntity, AbstractPlushRender::new);
-    }
-
-    //PARTICLE
-    ParticleFactoryRegistry.getInstance().register(ModParticles.MIKU_SPAWN, PlushSpawnParticle.Factory::new);
   }
 }
