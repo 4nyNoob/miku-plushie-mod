@@ -1,8 +1,8 @@
-package com.any.miku_plushie.entity.client.model;
+package com.any.miku_plushie.impl.client.model;
 
 import com.any.miku_plushie.Constants;
 import com.any.miku_plushie.impl.common.entity.AbstractPlushEntity;
-import com.any.miku_plushie.entity.client.model.animations.PlushAnimations;
+import com.any.miku_plushie.impl.client.model.animations.PlushAnimations;
 import com.any.miku_plushie.impl.common.registry.ModBlocks;
 import com.any.miku_plushie.impl.common.util.ModUtil;
 import net.minecraft.resources.ResourceLocation;
