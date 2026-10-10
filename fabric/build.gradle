@@ -19,7 +19,10 @@ dependencies {
 }
 
 fabricApi {
-  configureDataGeneration() // pre 1.21.4
+  configureDataGeneration { // pre 1.21.4
+    outputDirectory = project(':common').file('src/generated/resources')
+    addToResources = false
+  }
 }
 
 loom {
