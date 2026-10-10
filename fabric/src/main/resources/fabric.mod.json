@@ -1,37 +1,41 @@
 {
-    "schemaVersion": 1,
-    "id": "${mod_id}",
-    "version": "${version}",
-    "name": "${mod_name}",
-    "description": "${description}",
-    "authors": [
-        "${mod_author}"
+  "schemaVersion": 1,
+  "id": "${mod_id}",
+  "version": "${version}",
+  "name": "${mod_name}",
+  "description": "${description}",
+  "authors": [
+    "${mod_author}"
+  ],
+  "contact": {
+    "homepage": "https://modrinth.com/mod/miku-plushies",
+    "sources": "https://github.com/4nyNoob/miku-plushie-mod",
+    "issues": "https://github.com/4nyNoob/miku-plushie-mod/issues"
+  },
+  "license": "${license}",
+  "icon": "${mod_id}.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "com.any.miku_plushie.MikuPlushieFabric"
     ],
-    "contact": {
-      "homepage": "https://modrinth.com/mod/miku-plushies",
-      "sources": "https://github.com/4nyNoob/miku-plushie-mod",
-      "issues": "https://github.com/4nyNoob/miku-plushie-mod/issues"
-    },
-    "license": "${license}",
-    "icon": "${mod_id}.png",
-    "environment": "*",
-    "entrypoints": {
-        "main": [
-          "com.any.miku_plushie.MikuPlushieFabric"
-        ]
-    },
-    "mixins": [
-        "${mod_id}.mixins.json",
-        "${mod_id}.fabric.mixins.json"
+    "client": [
+      "com.any.miku_plushie.MikuPlushieClient"
     ],
-    "depends": {
-        "fabricloader": ">=${fabric_loader_version}",
-        "fabric-api": "*",
-        "minecraft": "${minecraft_version}",
-        "java": ">=${java_version}"
-    },
-    "suggests": {
-        "another-mod": "*"
-    }
+    "fabric-datagen": [
+      "com.any.miku_plushie.datagen.MikuPlushieDataGenerator"
+    ]
+  },
+  "mixins": [
+    "${mod_id}.mixins.json",
+    "${mod_id}.fabric.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=${fabric_loader_version}",
+    "fabric-api": "*",
+    "minecraft": "${minecraft_version}",
+    "java": ">=${java_version}",
+    "geckolib": ">=1.21.1-4.8.2"
+  }
 }
   

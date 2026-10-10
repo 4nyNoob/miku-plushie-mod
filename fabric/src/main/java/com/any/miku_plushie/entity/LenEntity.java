@@ -6,8 +6,8 @@ import net.minecraft.world.level.Level;
 
 public class LenEntity extends AbstractPlushEntity {
 
-    public LenEntity(EntityType<? extends TamableAnimal> entityType, Level world) {
-        super(entityType, world);
-    }
+  public LenEntity(EntityType<? extends TamableAnimal> entityType, Level world) {
+    super(entityType, world);
+  }
 
 }

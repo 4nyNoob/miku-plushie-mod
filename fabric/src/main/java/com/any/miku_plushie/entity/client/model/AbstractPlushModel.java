@@ -11,32 +11,32 @@ import software.bernie.geckolib.model.GeoModel;
 
 public class AbstractPlushModel extends GeoModel<AbstractPlushEntity> {
 
-    //    private final Identifier model = Identifier.of(MikuPlushieFabric.MOD_ID, "geo/entity/" + entity + ".geo.json");
-    private final ResourceLocation animations = ResourceLocation.fromNamespaceAndPath(MikuPlushieFabric.MOD_ID, "animations/plush.animation.json");
+  //    private final Identifier model = Identifier.of(MikuPlushieFabric.MOD_ID, "geo/entity/" + entity + ".geo.json");
+  private final ResourceLocation animations = ResourceLocation.fromNamespaceAndPath(MikuPlushieFabric.MOD_ID, "animations/plush.animation.json");
 
 
-    @Override
-    public ResourceLocation getModelResource(AbstractPlushEntity animatable) {
+  @Override
+  public ResourceLocation getModelResource(AbstractPlushEntity animatable) {
 
-        String entity = animatable.getPlushName();
-        String variant = animatable.getVariant();
+    String entity = animatable.getPlushName();
+    String variant = animatable.getVariant();
 
-        if (variant.equals(animatable.getPlushName())){
-            return ResourceLocation.fromNamespaceAndPath(MikuPlushieFabric.MOD_ID, "geo/entity/" + entity + ".geo.json");
-        }
-        //VARIANTS THAT USE THE 2ND MODEL
-        else if (
-            variant.equals(ModUtil.getBlockIdFromBlock(ModBlocks.MIKU_PLUSH_MUSHROOM)) ||
+    if (variant.equals(animatable.getPlushName())) {
+      return ResourceLocation.fromNamespaceAndPath(MikuPlushieFabric.MOD_ID, "geo/entity/" + entity + ".geo.json");
+    }
+    //VARIANTS THAT USE THE 2ND MODEL
+    else if (
+        variant.equals(ModUtil.getBlockIdFromBlock(ModBlocks.MIKU_PLUSH_MUSHROOM)) ||
             variant.equals(ModUtil.getBlockIdFromBlock(ModBlocks.MIKU_PLUSH_WEREWOMAN)) ||
             variant.equals(ModUtil.getBlockIdFromBlock(ModBlocks.MIKU_PLUSH_PATATI)) ||
             variant.equals(ModUtil.getBlockIdFromBlock(ModBlocks.MIKU_PLUSH_PATATA)) ||
             variant.equals(ModUtil.getBlockIdFromBlock(ModBlocks.MIKU_PLUSH_DEVIL)) ||
             variant.equals(ModUtil.getBlockIdFromBlock(ModBlocks.MIKU_PLUSH_WITCH))) {
-            return ResourceLocation.fromNamespaceAndPath(MikuPlushieFabric.MOD_ID, "geo/entity/" + entity + "_2" + ".geo.json");
-        }
-        //VARIANTS THAT USE THE 3RD MODEL
-        else if (
-            variant.equals(ModUtil.getBlockIdFromBlock(ModBlocks.MIKU_PLUSH_XMAS_TREE)) ||
+      return ResourceLocation.fromNamespaceAndPath(MikuPlushieFabric.MOD_ID, "geo/entity/" + entity + "_2" + ".geo.json");
+    }
+    //VARIANTS THAT USE THE 3RD MODEL
+    else if (
+        variant.equals(ModUtil.getBlockIdFromBlock(ModBlocks.MIKU_PLUSH_XMAS_TREE)) ||
             variant.equals(ModUtil.getBlockIdFromBlock(ModBlocks.MIKU_PLUSH_SONIC)) ||
             variant.equals(ModUtil.getBlockIdFromBlock(ModBlocks.MIKU_PLUSH_DIGITAL_STARS_2025)) ||
             variant.equals(ModUtil.getBlockIdFromBlock(ModBlocks.MIKU_PLUSH_ROTTEN_GIRL)) ||
@@ -47,38 +47,38 @@ public class AbstractPlushModel extends GeoModel<AbstractPlushEntity> {
             variant.equals(ModUtil.getBlockIdFromBlock(ModBlocks.MIKU_PLUSH_MONITORING)) ||
             variant.equals(ModUtil.getBlockIdFromBlock(ModBlocks.MIKU_PLUSH_HOLLOW_KNIGHT)) ||
             variant.equals(ModUtil.getBlockIdFromBlock(ModBlocks.MIKU_PLUSH_HORNET)) ||
-            variant.equals(ModUtil.getBlockIdFromBlock(ModBlocks.MIKU_PLUSH_LUCARIO_Z))||
+            variant.equals(ModUtil.getBlockIdFromBlock(ModBlocks.MIKU_PLUSH_LUCARIO_Z)) ||
             variant.equals(ModUtil.getBlockIdFromBlock(ModBlocks.MIKU_PLUSH_PPPP))
-        ) {
-            return ResourceLocation.fromNamespaceAndPath(MikuPlushieFabric.MOD_ID, "geo/entity/" + entity + "_3" + ".geo.json");
-        }
-        return ResourceLocation.fromNamespaceAndPath(MikuPlushieFabric.MOD_ID, "geo/entity/" + entity + ".geo.json");
+    ) {
+      return ResourceLocation.fromNamespaceAndPath(MikuPlushieFabric.MOD_ID, "geo/entity/" + entity + "_3" + ".geo.json");
     }
+    return ResourceLocation.fromNamespaceAndPath(MikuPlushieFabric.MOD_ID, "geo/entity/" + entity + ".geo.json");
+  }
 
-    @Override
-    public ResourceLocation getTextureResource(AbstractPlushEntity animatable) {
-        return ResourceLocation.fromNamespaceAndPath(MikuPlushieFabric.MOD_ID, variantToBlockTextureName(animatable));
-    }
+  @Override
+  public ResourceLocation getTextureResource(AbstractPlushEntity animatable) {
+    return ResourceLocation.fromNamespaceAndPath(MikuPlushieFabric.MOD_ID, variantToBlockTextureName(animatable));
+  }
 
-    @Override
-    public ResourceLocation getAnimationResource(AbstractPlushEntity animatable) {
-        return animations;
-    }
+  @Override
+  public ResourceLocation getAnimationResource(AbstractPlushEntity animatable) {
+    return animations;
+  }
 
-    @Override
-    public void setCustomAnimations(AbstractPlushEntity animatable, long instanceId, AnimationState<AbstractPlushEntity> animationState) {
-        super.setCustomAnimations(animatable, instanceId, animationState);
-        if (
-            animatable.getPlushName().contains("miku") ||
+  @Override
+  public void setCustomAnimations(AbstractPlushEntity animatable, long instanceId, AnimationState<AbstractPlushEntity> animationState) {
+    super.setCustomAnimations(animatable, instanceId, animationState);
+    if (
+        animatable.getPlushName().contains("miku") ||
             animatable.getPlushName().contains("teto") ||
             animatable.getPlushName().contains("neru")
-        ) {
-            PlushAnimations.hairMovement(this, animatable, animationState);
-        }
-        PlushAnimations.limbAnimations(this, animatable, animationState);
+    ) {
+      PlushAnimations.hairMovement(this, animatable, animationState);
     }
+    PlushAnimations.limbAnimations(this, animatable, animationState);
+  }
 
-    private String variantToBlockTextureName (AbstractPlushEntity animatable) {
-        return "textures/block/" + animatable.getVariant().replace('_', '-') + ".png";
-    }
+  private String variantToBlockTextureName(AbstractPlushEntity animatable) {
+    return "textures/block/" + animatable.getVariant().replace('_', '-') + ".png";
+  }
 }

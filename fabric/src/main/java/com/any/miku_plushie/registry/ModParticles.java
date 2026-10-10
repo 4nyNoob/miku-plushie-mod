@@ -9,13 +9,13 @@ import net.minecraft.resources.ResourceLocation;
 
 public class ModParticles {
 
-    public static final SimpleParticleType MIKU_SPAWN = FabricParticleTypes.simple();
+  public static final SimpleParticleType MIKU_SPAWN = FabricParticleTypes.simple();
 
-    public static void initialize(){
+  public static void initialize() {
 
-        MikuPlushieFabric.LOGGER.info("Registering " + MikuPlushieFabric.MOD_ID + " Particles");
+    MikuPlushieFabric.LOGGER.info("Registering " + MikuPlushieFabric.MOD_ID + " Particles");
 
-        Registry.register(BuiltInRegistries.PARTICLE_TYPE, ResourceLocation.fromNamespaceAndPath(MikuPlushieFabric.MOD_ID, "miku_spawn"), MIKU_SPAWN);
+    Registry.register(BuiltInRegistries.PARTICLE_TYPE, ResourceLocation.fromNamespaceAndPath(MikuPlushieFabric.MOD_ID, "miku_spawn"), MIKU_SPAWN);
 
-    }
+  }
 }

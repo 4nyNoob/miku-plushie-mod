@@ -1,6 +1,7 @@
 package com.any.miku_plushie.worldgen;
 
 import com.any.miku_plushie.MikuPlushieFabric;
+import java.util.List;
 import net.minecraft.core.Holder;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstrapContext;
@@ -15,41 +16,41 @@ import net.minecraft.world.level.levelgen.placement.InSquarePlacement;
 import net.minecraft.world.level.levelgen.placement.PlacedFeature;
 import net.minecraft.world.level.levelgen.placement.PlacementModifier;
 import net.minecraft.world.level.levelgen.placement.RarityFilter;
-import java.util.List;
 
 public class ModPlacedFeatures {
-    public static final ResourceKey<PlacedFeature> LEEK_PLACED_KEY = registerKey("leek_placed");
 
-    public static void bootstrap (BootstrapContext<PlacedFeature> context) {
-        var configuredFeatureRegistryLookup = context.lookup(Registries.CONFIGURED_FEATURE);
+  public static final ResourceKey<PlacedFeature> LEEK_PLACED_KEY = registerKey("leek_placed");
 
-        register(context, LEEK_PLACED_KEY,
-            configuredFeatureRegistryLookup.getOrThrow(ModConfiguredFeatures.LEEK_KEY),
-            RarityFilter.onAverageOnceEvery(8),
-            InSquarePlacement.spread(),
-            PlacementUtils.HEIGHTMAP,
-            BiomeFilter.biome()
-        );
-    }
+  public static void bootstrap(BootstrapContext<PlacedFeature> context) {
+    var configuredFeatureRegistryLookup = context.lookup(Registries.CONFIGURED_FEATURE);
 
-    public static ResourceKey<PlacedFeature> registerKey (String name) {
-        return ResourceKey.create(Registries.PLACED_FEATURE, ResourceLocation.fromNamespaceAndPath(MikuPlushieFabric.MOD_ID, name));
-    }
+    register(context, LEEK_PLACED_KEY,
+        configuredFeatureRegistryLookup.getOrThrow(ModConfiguredFeatures.LEEK_KEY),
+        RarityFilter.onAverageOnceEvery(8),
+        InSquarePlacement.spread(),
+        PlacementUtils.HEIGHTMAP,
+        BiomeFilter.biome()
+    );
+  }
 
-    private static void register(
-        BootstrapContext<PlacedFeature> context,
-        ResourceKey<PlacedFeature> key,
-        Holder<ConfiguredFeature<?, ?>> configuration,
-        List<PlacementModifier> modifiers
-    ) {
-        context.register(key, new PlacedFeature(configuration, List.copyOf(modifiers)));
-    }
+  public static ResourceKey<PlacedFeature> registerKey(String name) {
+    return ResourceKey.create(Registries.PLACED_FEATURE, ResourceLocation.fromNamespaceAndPath(MikuPlushieFabric.MOD_ID, name));
+  }
 
-    private static <FC extends FeatureConfiguration, F extends Feature<FC>> void register(
-        BootstrapContext<PlacedFeature> context, ResourceKey<PlacedFeature> key,
-        Holder<ConfiguredFeature<?, ?>> configuration,
-        PlacementModifier... modifiers
-    ) {
-        register(context, key, configuration, List.of(modifiers));
-    }
+  private static void register(
+      BootstrapContext<PlacedFeature> context,
+      ResourceKey<PlacedFeature> key,
+      Holder<ConfiguredFeature<?, ?>> configuration,
+      List<PlacementModifier> modifiers
+  ) {
+    context.register(key, new PlacedFeature(configuration, List.copyOf(modifiers)));
+  }
+
+  private static <FC extends FeatureConfiguration, F extends Feature<FC>> void register(
+      BootstrapContext<PlacedFeature> context, ResourceKey<PlacedFeature> key,
+      Holder<ConfiguredFeature<?, ?>> configuration,
+      PlacementModifier... modifiers
+  ) {
+    register(context, key, configuration, List.of(modifiers));
+  }
 }

@@ -16,25 +16,25 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 @Mixin(LivingEntity.class)
 public abstract class LivingEntityMixin extends Entity implements Attackable {
 
-    public LivingEntityMixin(EntityType<?> type, Level world) {
-        super(type, world);
-    }
+  public LivingEntityMixin(EntityType<?> type, Level world) {
+    super(type, world);
+  }
 
-    @Inject(method = "breakItem", at = @At("HEAD"))
-    private void handlePickaxeBreakSound(ItemStack stack, CallbackInfo ci){
-        if (ModItems.PICKAXE_ITEMS.contains(stack.getItem())) {
-            if (!this.isSilent()) {
-                this.level().playLocalSound(
-                    this.getX(),
-                    this.getY(),
-                    this.getZ(),
-                    ModUtil.getPlushSoundEvent("teto_plush", "bye"),
-                    this.getSoundSource(),
-                    0.8F,
-                    1F,
-                    false
-                );
-            }
-        }
+  @Inject(method = "breakItem", at = @At("HEAD"))
+  private void handlePickaxeBreakSound(ItemStack stack, CallbackInfo ci) {
+    if (ModItems.PICKAXE_ITEMS.contains(stack.getItem())) {
+      if (!this.isSilent()) {
+        this.level().playLocalSound(
+            this.getX(),
+            this.getY(),
+            this.getZ(),
+            ModUtil.getPlushSoundEvent("teto_plush", "bye"),
+            this.getSoundSource(),
+            0.8F,
+            1F,
+            false
+        );
+      }
     }
+  }
 }
