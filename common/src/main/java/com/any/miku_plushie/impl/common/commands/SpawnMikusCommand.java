@@ -1,4 +1,4 @@
-package com.any.miku_plushie.commands;
+package com.any.miku_plushie.impl.common.commands;
 
 import com.any.miku_plushie.impl.common.entity.AbstractPlushEntity;
 import com.any.miku_plushie.impl.common.registry.ModBlocks;
