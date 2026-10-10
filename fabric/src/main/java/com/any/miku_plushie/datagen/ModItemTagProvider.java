@@ -1,6 +1,6 @@
 package com.any.miku_plushie.datagen;
 
-import com.any.miku_plushie.MikuPlushieFabric;
+import com.any.miku_plushie.Constants;
 import com.any.miku_plushie.entity.AbstractPlushEntity;
 import com.any.miku_plushie.registry.ModEntities;
 import com.any.miku_plushie.registry.ModItems;
@@ -20,8 +20,8 @@ import net.minecraft.world.item.Item;
 
 public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
 
-  public static final TagKey<Item> PLUSHIES = TagKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(MikuPlushieFabric.MOD_ID, "plushies"));
-  public static final TagKey<Item> TETO_PICKAXE = TagKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(MikuPlushieFabric.MOD_ID, "teto_pickaxe"));
+  public static final TagKey<Item> PLUSHIES = TagKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(Constants.MOD_ID, "plushies"));
+  public static final TagKey<Item> TETO_PICKAXE = TagKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(Constants.MOD_ID, "teto_pickaxe"));
   public static List<TagKey<Item>> PLUSH_TAGS = new ArrayList<>();
 
   public ModItemTagProvider(FabricDataOutput output,
@@ -37,7 +37,7 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
     for (EntityType<?> plushEntity : plushEntities) {
       String plushName = plushEntity.toShortString();
       PLUSH_TAGS.add(
-          TagKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(MikuPlushieFabric.MOD_ID, plushName))
+          TagKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(Constants.MOD_ID, plushName))
       );
     }
 

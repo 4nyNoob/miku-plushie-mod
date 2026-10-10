@@ -1,5 +1,6 @@
 package com.any.miku_plushie.registry;
 
+import com.any.miku_plushie.Constants;
 import com.any.miku_plushie.MikuPlushieFabric;
 import com.any.miku_plushie.entity.AbstractPlushEntity;
 import com.any.miku_plushie.entity.AikoEntity;
@@ -44,7 +45,7 @@ public class ModEntities {
 
   private static <T extends Entity> EntityType<T> registerMob(String name, EntityType.EntityFactory<T> entity) {
     EntityType<T> entityType = Registry.register(BuiltInRegistries.ENTITY_TYPE,
-        ResourceLocation.fromNamespaceAndPath(MikuPlushieFabric.MOD_ID, name),
+        ResourceLocation.fromNamespaceAndPath(Constants.MOD_ID, name),
         EntityType.Builder.of(entity, MobCategory.CREATURE)
             .sized(PLUSH_WIDTH, PLUSH_HEIGHT)
             .eyeHeight(0.85F)
@@ -56,7 +57,7 @@ public class ModEntities {
   }
 
   public static void initialize() {
-    MikuPlushieFabric.LOGGER.info("Registering " + MikuPlushieFabric.MOD_ID + " Entities");
+    MikuPlushieFabric.LOGGER.info("Registering " + Constants.MOD_ID + " Entities");
     for (EntityType<? extends AbstractPlushEntity> entity : PLUSH_ENTITIES) {
       FabricDefaultAttributeRegistry.register(entity, AbstractPlushEntity.createAttributes());
     }

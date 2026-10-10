@@ -1,6 +1,6 @@
 package com.any.miku_plushie.datagen;
 
-import com.any.miku_plushie.MikuPlushieFabric;
+import com.any.miku_plushie.Constants;
 import com.any.miku_plushie.util.ModUtil;
 import com.google.gson.JsonElement;
 import it.unimi.dsi.fastutil.ints.Int2ObjectMap;
@@ -30,7 +30,7 @@ public record BlockModels(Consumer<BlockStateGenerator> blockStateCollector, BiC
   public static final ModelTemplate LEEK_MODEL = block("leek", TextureSlot.CROSS);
 
   private static ModelTemplate block(String parent, TextureSlot... requiredTextureKeys) {
-    return new ModelTemplate(Optional.of(ResourceLocation.fromNamespaceAndPath(MikuPlushieFabric.MOD_ID, "block/" + parent)), Optional.empty(), requiredTextureKeys);
+    return new ModelTemplate(Optional.of(ResourceLocation.fromNamespaceAndPath(Constants.MOD_ID, "block/" + parent)), Optional.empty(), requiredTextureKeys);
   }
 
   //CROP BLOCKSTATE GEN
@@ -53,7 +53,7 @@ public record BlockModels(Consumer<BlockStateGenerator> blockStateCollector, BiC
   public static void registerWildCrop(BlockModelGenerators blockstateModelGenerator, Block block, Block tamedBlock) {
     int maxAge = CropBlock.MAX_AGE;
     TextureMapping textureMap = TextureMapping.cross(
-        ResourceLocation.fromNamespaceAndPath(MikuPlushieFabric.MOD_ID, "block/" + ModUtil.getBlockIdFromBlock(tamedBlock) + "_stage" + maxAge)
+        ResourceLocation.fromNamespaceAndPath(Constants.MOD_ID, "block/" + ModUtil.getBlockIdFromBlock(tamedBlock) + "_stage" + maxAge)
     );
     blockstateModelGenerator.createCrossBlock(block, TintState.NOT_TINTED, textureMap);
   }

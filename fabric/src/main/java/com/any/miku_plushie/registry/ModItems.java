@@ -1,5 +1,6 @@
 package com.any.miku_plushie.registry;
 
+import com.any.miku_plushie.Constants;
 import com.any.miku_plushie.MikuPlushieFabric;
 import com.any.miku_plushie.item.MikuPlushieBlockItem;
 import com.any.miku_plushie.item.ModFoodComponents;
@@ -26,7 +27,7 @@ public class ModItems {
 
   //CREATE ITEM GROUP
   public static final ResourceKey<CreativeModeTab> MIKU_GROUP_KEY =
-      ResourceKey.create(BuiltInRegistries.CREATIVE_MODE_TAB.key(), ResourceLocation.fromNamespaceAndPath(MikuPlushieFabric.MOD_ID, "item_group")
+      ResourceKey.create(BuiltInRegistries.CREATIVE_MODE_TAB.key(), ResourceLocation.fromNamespaceAndPath(Constants.MOD_ID, "item_group")
       );
   public static final CreativeModeTab MIKU_GROUP = FabricItemGroup.builder()
       .icon(() -> new ItemStack(ModBlocks.MIKU_PLUSH))
@@ -87,7 +88,7 @@ public class ModItems {
 
   //REGISTER NORMAL ITEM
   public static Item register(Item item, String id) {
-    ResourceLocation itemID = ResourceLocation.fromNamespaceAndPath(MikuPlushieFabric.MOD_ID, id);
+    ResourceLocation itemID = ResourceLocation.fromNamespaceAndPath(Constants.MOD_ID, id);
     Item register = Registry.register(BuiltInRegistries.ITEM, itemID, item);
     String itemName = ModUtil.getBlockIdFromItem(item);
 
@@ -105,7 +106,7 @@ public class ModItems {
 
 
   public static void initialize() {
-    MikuPlushieFabric.LOGGER.info("Registering " + MikuPlushieFabric.MOD_ID + " Items");
+    MikuPlushieFabric.LOGGER.info("Registering " + Constants.MOD_ID + " Items");
 
     //REGISTER ITEM GROUP
     Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB, MIKU_GROUP_KEY, MIKU_GROUP);

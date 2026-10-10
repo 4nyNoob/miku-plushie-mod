@@ -1,5 +1,6 @@
 package com.any.miku_plushie.registry;
 
+import com.any.miku_plushie.Constants;
 import com.any.miku_plushie.MikuPlushieFabric;
 import com.any.miku_plushie.block.LeekCropBlock;
 import com.any.miku_plushie.block.MikuPlushieBlock;
@@ -120,13 +121,13 @@ public class ModBlocks {
   public static Block KAITO_PLUSH;
   public static Block KAITO_PLUSH_V3;
   public static Block KAITO_PLUSH_V4;
-  
+
   public static LeekCropBlock LEEK_CROP;
   public static WildLeekCropBlock WILD_LEEK_CROP;
 
   public static void initialize() {
 
-    MikuPlushieFabric.LOGGER.info("Registering " + MikuPlushieFabric.MOD_ID + " Blocks");
+    MikuPlushieFabric.LOGGER.info("Registering " + Constants.MOD_ID + " Blocks");
 
     MIKU_PLUSH_BR = registerPlush("miku_plush_br", null);
     MIKU_PLUSH_BR_BA = registerPlush("miku_plush_br_ba", null);
@@ -255,7 +256,7 @@ public class ModBlocks {
   //REGISTER REGULAR BLOCKS
   public static Block register(Block block, String name, boolean shouldRegisterItem) {
     //CREATE IDENTIFIER
-    ResourceLocation id = ResourceLocation.fromNamespaceAndPath(MikuPlushieFabric.MOD_ID, name);
+    ResourceLocation id = ResourceLocation.fromNamespaceAndPath(Constants.MOD_ID, name);
 
     //REGISTER ITEM IF REQUESTED
     if (shouldRegisterItem) {

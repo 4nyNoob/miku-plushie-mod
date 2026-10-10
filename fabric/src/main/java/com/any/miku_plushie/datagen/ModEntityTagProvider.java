@@ -1,6 +1,6 @@
 package com.any.miku_plushie.datagen;
 
-import com.any.miku_plushie.MikuPlushieFabric;
+import com.any.miku_plushie.Constants;
 import com.any.miku_plushie.registry.ModEntities;
 import java.util.concurrent.CompletableFuture;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
@@ -13,7 +13,7 @@ import net.minecraft.world.entity.EntityType;
 
 public class ModEntityTagProvider extends FabricTagProvider.EntityTypeTagProvider {
 
-  public static final TagKey<EntityType<?>> PLUSH_ENTITY = TagKey.create(Registries.ENTITY_TYPE, ResourceLocation.fromNamespaceAndPath(MikuPlushieFabric.MOD_ID, "plush_entity"));
+  public static final TagKey<EntityType<?>> PLUSH_ENTITY = TagKey.create(Registries.ENTITY_TYPE, ResourceLocation.fromNamespaceAndPath(Constants.MOD_ID, "plush_entity"));
 
   public ModEntityTagProvider(FabricDataOutput output,
       CompletableFuture<HolderLookup.Provider> completableFuture) {
