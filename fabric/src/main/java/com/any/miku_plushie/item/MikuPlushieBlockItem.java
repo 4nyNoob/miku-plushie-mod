@@ -1,6 +1,6 @@
 package com.any.miku_plushie.item;
 
-import com.any.miku_plushie.MikuPlushieFabric;
+import com.any.miku_plushie.Constants;
 import com.any.miku_plushie.datagen.ModItemTagProvider;
 import com.any.miku_plushie.registry.ModBlocks;
 import com.any.miku_plushie.util.ModUtil;
@@ -35,7 +35,7 @@ public class MikuPlushieBlockItem extends BlockItem implements Equipable {
 
   @Override
   public void appendHoverText(ItemStack stack, TooltipContext context, List<Component> tooltip, TooltipFlag type) {
-    tooltip.add(Component.translatable("item." + MikuPlushieFabric.MOD_ID + "." + stack.getItem() + ".tooltip"));
+    tooltip.add(Component.translatable("item." + Constants.MOD_ID + "." + stack.getItem() + ".tooltip"));
     super.appendHoverText(stack, context, tooltip, type);
   }
 

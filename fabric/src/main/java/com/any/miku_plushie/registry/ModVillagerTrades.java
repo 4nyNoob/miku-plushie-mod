@@ -1,5 +1,6 @@
 package com.any.miku_plushie.registry;
 
+import com.any.miku_plushie.Constants;
 import com.any.miku_plushie.MikuPlushieFabric;
 import net.fabricmc.fabric.api.object.builder.v1.trade.TradeOfferHelper;
 import net.minecraft.world.entity.npc.VillagerProfession;
@@ -12,7 +13,7 @@ public class ModVillagerTrades {
 
   public static void initialize() {
 
-    MikuPlushieFabric.LOGGER.info("Registering " + MikuPlushieFabric.MOD_ID + " Villager Trades");
+    MikuPlushieFabric.LOGGER.info("Registering " + Constants.MOD_ID + " Villager Trades");
 
     TradeOfferHelper.registerVillagerOffers(VillagerProfession.FARMER, 1, factories -> {
       //BUY LEEK SEEDS

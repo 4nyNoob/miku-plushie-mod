@@ -1,5 +1,6 @@
 package com.any.miku_plushie.registry;
 
+import com.any.miku_plushie.Constants;
 import com.any.miku_plushie.MikuPlushieFabric;
 import net.fabricmc.fabric.api.particle.v1.FabricParticleTypes;
 import net.minecraft.core.Registry;
@@ -13,9 +14,9 @@ public class ModParticles {
 
   public static void initialize() {
 
-    MikuPlushieFabric.LOGGER.info("Registering " + MikuPlushieFabric.MOD_ID + " Particles");
+    MikuPlushieFabric.LOGGER.info("Registering " + Constants.MOD_ID + " Particles");
 
-    Registry.register(BuiltInRegistries.PARTICLE_TYPE, ResourceLocation.fromNamespaceAndPath(MikuPlushieFabric.MOD_ID, "miku_spawn"), MIKU_SPAWN);
+    Registry.register(BuiltInRegistries.PARTICLE_TYPE, ResourceLocation.fromNamespaceAndPath(Constants.MOD_ID, "miku_spawn"), MIKU_SPAWN);
 
   }
 }

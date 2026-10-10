@@ -1,6 +1,6 @@
 package com.any.miku_plushie.worldgen;
 
-import com.any.miku_plushie.MikuPlushieFabric;
+import com.any.miku_plushie.Constants;
 import com.any.miku_plushie.registry.ModBlocks;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstrapContext;
@@ -34,7 +34,7 @@ public class ModConfiguredFeatures {
   }
 
   public static ResourceKey<ConfiguredFeature<?, ?>> registerKey(String name) {
-    return ResourceKey.create(Registries.CONFIGURED_FEATURE, ResourceLocation.fromNamespaceAndPath(MikuPlushieFabric.MOD_ID, name));
+    return ResourceKey.create(Registries.CONFIGURED_FEATURE, ResourceLocation.fromNamespaceAndPath(Constants.MOD_ID, name));
   }
 
   private static <FC extends FeatureConfiguration, F extends Feature<FC>> void register(

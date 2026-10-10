@@ -1,6 +1,6 @@
 package com.any.miku_plushie.worldgen;
 
-import com.any.miku_plushie.MikuPlushieFabric;
+import com.any.miku_plushie.Constants;
 import java.util.List;
 import net.minecraft.core.Holder;
 import net.minecraft.core.registries.Registries;
@@ -34,7 +34,7 @@ public class ModPlacedFeatures {
   }
 
   public static ResourceKey<PlacedFeature> registerKey(String name) {
-    return ResourceKey.create(Registries.PLACED_FEATURE, ResourceLocation.fromNamespaceAndPath(MikuPlushieFabric.MOD_ID, name));
+    return ResourceKey.create(Registries.PLACED_FEATURE, ResourceLocation.fromNamespaceAndPath(Constants.MOD_ID, name));
   }
 
   private static void register(

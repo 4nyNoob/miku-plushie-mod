@@ -1,5 +1,6 @@
 package com.any.miku_plushie.registry;
 
+import com.any.miku_plushie.Constants;
 import com.any.miku_plushie.MikuPlushieFabric;
 import java.util.ArrayList;
 import java.util.List;
@@ -18,12 +19,12 @@ public class ModSoundEvents {
   }
 
   private static SoundEvent registerSound(String id) {
-    ResourceLocation identifier = ResourceLocation.fromNamespaceAndPath(MikuPlushieFabric.MOD_ID, id);
+    ResourceLocation identifier = ResourceLocation.fromNamespaceAndPath(Constants.MOD_ID, id);
     return Registry.register(BuiltInRegistries.SOUND_EVENT, identifier, SoundEvent.createVariableRangeEvent(identifier));
   }
 
   public static void initialize() {
-    MikuPlushieFabric.LOGGER.info("Registering " + MikuPlushieFabric.MOD_ID + " Sounds");
+    MikuPlushieFabric.LOGGER.info("Registering " + Constants.MOD_ID + " Sounds");
 
     //DYNAMICALLY REGISTER SOUND EVENTS
     for (EntityType<?> plush : ModEntities.PLUSH_ENTITIES) {
