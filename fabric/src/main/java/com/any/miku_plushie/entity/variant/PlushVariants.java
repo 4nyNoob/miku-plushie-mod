@@ -1,0 +1,40 @@
+package com.any.miku_plushie.entity.variant;
+
+import com.any.miku_plushie.registry.ModBlocks;
+import com.any.miku_plushie.registry.ModEntities;
+import com.any.miku_plushie.util.ModUtil;
+import java.util.ArrayList;
+import java.util.List;
+import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.level.block.Block;
+
+public class PlushVariants {
+
+    public static List<List<String>> ALL_PLUSH_VARIANTS = new ArrayList<>();
+
+    public static void initialize(){
+
+        //FOR EACH PLUSH ENTITY
+        for (EntityType<?> entityType: ModEntities.PLUSH_ENTITIES){
+
+            //GET ENTITY REGISTRY NAME
+            String plushName = entityType.toShortString();
+
+            //GET BLOCKS LIST
+            List<Block> plushList = ModBlocks.PLUSH_BLOCKS;
+
+            //CREATE SPECIFIC PLUSH VARIANTS LIST
+            List<String> plushVariants = new ArrayList<>();
+
+            //FOR EACH BLOCK IN THE LIST
+            for (Block value : plushList) {
+                //ADD IT TO SPECIFIC PLUSH VARIANTS LIST FI IT CONTAINS THE ENTITY NAME
+                if (ModUtil.getBlockIdFromBlock(value).contains(plushName))
+                    plushVariants.add(ModUtil.getBlockIdFromBlock(value));
+            }
+            //ADD SPECIFIC PLUSH VARIANTS LIST TO MAIN LIST
+            ALL_PLUSH_VARIANTS.add(plushVariants);
+        }
+
+    }
+}
