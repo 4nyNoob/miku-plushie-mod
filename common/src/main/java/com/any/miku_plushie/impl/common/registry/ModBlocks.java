@@ -2,6 +2,8 @@ package com.any.miku_plushie.impl.common.registry;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.BiConsumer;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
 
 public class ModBlocks {
@@ -111,4 +113,8 @@ public class ModBlocks {
   public static Block LEEK_CROP;
   public static Block WILD_LEEK_CROP;
   // endregion non-plush
+
+  public static void register(BiConsumer<Block, ResourceLocation> consumer) {
+
+  }
 }
