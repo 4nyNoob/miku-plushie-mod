@@ -6,7 +6,6 @@ import com.any.miku_plushie.impl.common.registry.ModBlocks;
 import com.any.miku_plushie.impl.common.registry.ModItems;
 import com.any.miku_plushie.registry.ModCommands;
 import com.any.miku_plushie.registry.ModEntitiesFabric;
-import com.any.miku_plushie.registry.ModItemsFabric;
 import com.any.miku_plushie.registry.ModParticlesFabric;
 import com.any.miku_plushie.registry.ModResourcePacks;
 import com.any.miku_plushie.registry.ModSoundEventsFabric;
@@ -41,7 +40,6 @@ public class MikuPlushieFabric implements ModInitializer {
     bind(BuiltInRegistries.BLOCK, ModBlocks::register);
     ModEntitiesFabric.initialize();
 //    bind(BuiltInRegistries.ENTITY_TYPE, ModEntities::register);
-    ModItemsFabric.initialize();
     bind(BuiltInRegistries.ITEM, ModItems::register);
     ModParticlesFabric.initialize();
 //    bind(BuiltInRegistries.PARTICLE_TYPE, ModParticles::register);
