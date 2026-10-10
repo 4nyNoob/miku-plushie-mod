@@ -10,7 +10,7 @@ import net.minecraft.world.item.Items;
 import net.minecraft.world.item.trading.ItemCost;
 import net.minecraft.world.item.trading.MerchantOffer;
 
-public class ModVillagerTrades {
+public class ModVillagerTradesFabric {
 
   public static void initialize() {
 
