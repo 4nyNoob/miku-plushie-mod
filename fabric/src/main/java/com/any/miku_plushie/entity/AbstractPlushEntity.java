@@ -1,5 +1,6 @@
 package com.any.miku_plushie.entity;
 
+import com.any.miku_plushie.block.LeekCropBlock;
 import com.any.miku_plushie.entity.goals.MikuDelayedAttackGoal;
 import com.any.miku_plushie.entity.variant.PlushVariants;
 import com.any.miku_plushie.registry.ModBlocks;
@@ -51,6 +52,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.CropBlock;
 import org.jetbrains.annotations.Nullable;
 import software.bernie.geckolib.animatable.GeoEntity;
 import software.bernie.geckolib.animatable.instance.AnimatableInstanceCache;
@@ -303,7 +305,7 @@ public class AbstractPlushEntity extends TamableAnimal implements GeoEntity {
       } else if (this.getHealth() < this.getMaxHealth() && playerItemStack.is(ModItems.LEEK)) {
         for (int particle = 0; particle < 20; particle++) {
           this.level().addParticle(
-              new BlockParticleOption(ParticleTypes.BLOCK, ModBlocks.LEEK_CROP.getStateForAge(7)),
+              new BlockParticleOption(ParticleTypes.BLOCK, ((CropBlock) ModBlocks.LEEK_CROP).getStateForAge(7)),
               this.position().x(),
               this.position().y() + 0.5D,
               this.position().z(),

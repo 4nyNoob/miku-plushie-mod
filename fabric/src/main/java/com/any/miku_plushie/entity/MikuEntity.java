@@ -8,6 +8,7 @@ import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.TamableAnimal;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.CropBlock;
 import net.minecraft.world.phys.Vec3;
 import software.bernie.geckolib.animatable.instance.AnimatableInstanceCache;
 import software.bernie.geckolib.animation.AnimatableManager;
@@ -81,7 +82,7 @@ public class MikuEntity extends AbstractPlushEntity {
       if (eatLeekTimer > 0 && !this.isInSittingPose()) {
         Vec3 mikuPos = this.position();
         this.level().addParticle(
-            new BlockParticleOption(ParticleTypes.BLOCK, ModBlocks.LEEK_CROP.getStateForAge(7)),
+            new BlockParticleOption(ParticleTypes.BLOCK, ((CropBlock) ModBlocks.LEEK_CROP).getStateForAge(7)),
             mikuPos.x(),
             mikuPos.y() + 0.5D,
             mikuPos.z(),
