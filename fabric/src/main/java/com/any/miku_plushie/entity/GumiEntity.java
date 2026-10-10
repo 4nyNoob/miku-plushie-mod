@@ -6,8 +6,8 @@ import net.minecraft.world.level.Level;
 
 public class GumiEntity extends AbstractPlushEntity {
 
-    public GumiEntity(EntityType<? extends TamableAnimal> entityType, Level world) {
-        super(entityType, world);
-    }
+  public GumiEntity(EntityType<? extends TamableAnimal> entityType, Level world) {
+    super(entityType, world);
+  }
 
 }

@@ -19,41 +19,41 @@ import net.minecraft.world.level.block.Block;
 
 public class MikuPlushieBlockItem extends BlockItem implements Equipable {
 
-	public MikuPlushieBlockItem(Block block, Properties settings) {
-		super(block, settings);
-	}
+  public MikuPlushieBlockItem(Block block, Properties settings) {
+    super(block, settings);
+  }
 
-	@Override
-	public void appendHoverText(ItemStack stack, TooltipContext context, List<Component> tooltip, TooltipFlag type) {
-		tooltip.add(Component.translatable("item." + MikuPlushieFabric.MOD_ID + "." + stack.getItem().toString() + ".tooltip"));
-		super.appendHoverText(stack, context, tooltip, type);
-	}
+  public static void PlayMikuSound(LivingEntity entity) {
+    ItemStack stack = entity.getItemInHand(entity.getUsedItemHand());
 
-	public static void PlayMikuSound(LivingEntity entity){
-		ItemStack stack = entity.getItemInHand(entity.getUsedItemHand());
-
-		if (stack.is(ModItemTagProvider.PLUSHIES)){
-			String currentPlush = ModUtil.getBlockIdFromItem(stack.getItem());
-			ModUtil.playPlushSound(entity.level(), entity.blockPosition(), currentPlush, "dor");
-		}
-
-	}
-
-	@Override
-	public EquipmentSlot getEquipmentSlot() {
-		return EquipmentSlot.HEAD;
-	}
-
-	@Override
-	public Holder<SoundEvent> getEquipSound() {
-		ItemStack stack = this.getDefaultInstance();
-
-		if (stack.is(ModItemTagProvider.PLUSHIES)){
-			if (!stack.is(ModBlocks.KONOHA_PLUSH.asItem())){
-				String currentPlush = ModUtil.getBlockIdFromItem(stack.getItem());
-				return Holder.direct(ModUtil.getPlushSoundEvent(currentPlush, "equip"));
-			}
-		}
-        return Holder.direct(SoundEvents.WOOL_PLACE);
+    if (stack.is(ModItemTagProvider.PLUSHIES)) {
+      String currentPlush = ModUtil.getBlockIdFromItem(stack.getItem());
+      ModUtil.playPlushSound(entity.level(), entity.blockPosition(), currentPlush, "dor");
     }
+
+  }
+
+  @Override
+  public void appendHoverText(ItemStack stack, TooltipContext context, List<Component> tooltip, TooltipFlag type) {
+    tooltip.add(Component.translatable("item." + MikuPlushieFabric.MOD_ID + "." + stack.getItem() + ".tooltip"));
+    super.appendHoverText(stack, context, tooltip, type);
+  }
+
+  @Override
+  public EquipmentSlot getEquipmentSlot() {
+    return EquipmentSlot.HEAD;
+  }
+
+  @Override
+  public Holder<SoundEvent> getEquipSound() {
+    ItemStack stack = this.getDefaultInstance();
+
+    if (stack.is(ModItemTagProvider.PLUSHIES)) {
+      if (!stack.is(ModBlocks.KONOHA_PLUSH.asItem())) {
+        String currentPlush = ModUtil.getBlockIdFromItem(stack.getItem());
+        return Holder.direct(ModUtil.getPlushSoundEvent(currentPlush, "equip"));
+      }
+    }
+    return Holder.direct(SoundEvents.WOOL_PLACE);
+  }
 }

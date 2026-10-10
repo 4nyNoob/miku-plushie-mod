@@ -1,7 +1,7 @@
 package com.any.miku_plushie;
 
 import com.any.miku_plushie.entity.AbstractPlushEntity;
-import com.any.miku_plushie.entity.client.render.*;
+import com.any.miku_plushie.entity.client.render.AbstractPlushRender;
 import com.any.miku_plushie.particle.PlushSpawnParticle;
 import com.any.miku_plushie.registry.ModBlocks;
 import com.any.miku_plushie.registry.ModEntities;
@@ -18,32 +18,34 @@ import software.bernie.geckolib.loading.math.MathParser;
 
 @Environment(EnvType.CLIENT)
 public class MikuPlushieClient implements ClientModInitializer {
-	@Override
-	public void onInitializeClient() {
-        MikuPlushieFabric.LOGGER.info("Registering " + MikuPlushieFabric.MOD_ID + " Block Render Layer Maps");
 
-        //PLUSH CUTOUT
-        for (int block = 0; block < ModBlocks.PLUSH_BLOCKS.size(); block++) {
-            if (!ModBlocks.PLUSH_BLOCKS.get(block).equals(ModBlocks.MIKU_PLUSH_GHOST))
-                BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.PLUSH_BLOCKS.get(block), RenderType.cutout());
-        }
+  @Override
+  public void onInitializeClient() {
+    MikuPlushieFabric.LOGGER.info("Registering " + MikuPlushieFabric.MOD_ID + " Block Render Layer Maps");
 
-        //PLUSH TRANSLUCENT
-        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MIKU_PLUSH_GHOST, RenderType.translucent());
+    //PLUSH CUTOUT
+    for (int block = 0; block < ModBlocks.PLUSH_BLOCKS.size(); block++) {
+      if (!ModBlocks.PLUSH_BLOCKS.get(block).equals(ModBlocks.MIKU_PLUSH_GHOST)) {
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.PLUSH_BLOCKS.get(block), RenderType.cutout());
+      }
+    }
 
-        //NON PLUSH BLOCKS
-		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.LEEK_CROP, RenderType.cutout());
-		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.WILD_LEEK_CROP, RenderType.cutout());
+    //PLUSH TRANSLUCENT
+    BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MIKU_PLUSH_GHOST, RenderType.translucent());
 
-        //GLIB QUERY
-        MathParser.setVariable("query.miku.is_game", () -> 90 / Math.PI);
+    //NON PLUSH BLOCKS
+    BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.LEEK_CROP, RenderType.cutout());
+    BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.WILD_LEEK_CROP, RenderType.cutout());
 
-        //ENTITIES RENDERERS
-        for (EntityType<? extends AbstractPlushEntity> plushEntity : ModEntities.PLUSH_ENTITIES) {
-            EntityRendererRegistry.register(plushEntity, AbstractPlushRender::new);
-        }
+    //GLIB QUERY
+    MathParser.setVariable("query.miku.is_game", () -> 90 / Math.PI);
 
-        //PARTICLE
-        ParticleFactoryRegistry.getInstance().register(ModParticles.MIKU_SPAWN, PlushSpawnParticle.Factory::new);
-	}
+    //ENTITIES RENDERERS
+    for (EntityType<? extends AbstractPlushEntity> plushEntity : ModEntities.PLUSH_ENTITIES) {
+      EntityRendererRegistry.register(plushEntity, AbstractPlushRender::new);
+    }
+
+    //PARTICLE
+    ParticleFactoryRegistry.getInstance().register(ModParticles.MIKU_SPAWN, PlushSpawnParticle.Factory::new);
+  }
 }

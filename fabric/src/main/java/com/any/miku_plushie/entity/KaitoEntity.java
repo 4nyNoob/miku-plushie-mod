@@ -6,8 +6,8 @@ import net.minecraft.world.level.Level;
 
 public class KaitoEntity extends AbstractPlushEntity {
 
-    public KaitoEntity(EntityType<? extends TamableAnimal> entityType, Level world) {
-        super(entityType, world);
-    }
+  public KaitoEntity(EntityType<? extends TamableAnimal> entityType, Level world) {
+    super(entityType, world);
+  }
 
 }

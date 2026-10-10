@@ -8,12 +8,12 @@ import org.jetbrains.annotations.Nullable;
 
 public class KonohaEntity extends AbstractPlushEntity {
 
-    public KonohaEntity(EntityType<? extends TamableAnimal> entityType, Level world) {
-        super(entityType, world);
-    }
+  public KonohaEntity(EntityType<? extends TamableAnimal> entityType, Level world) {
+    super(entityType, world);
+  }
 
-    @Override
-    protected @Nullable SoundEvent getDeathSound() {
-        return null;
-    }
+  @Override
+  protected @Nullable SoundEvent getDeathSound() {
+    return null;
+  }
 }

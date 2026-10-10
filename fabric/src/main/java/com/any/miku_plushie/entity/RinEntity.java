@@ -6,8 +6,8 @@ import net.minecraft.world.level.Level;
 
 public class RinEntity extends AbstractPlushEntity {
 
-    public RinEntity(EntityType<? extends TamableAnimal> entityType, Level world) {
-        super(entityType, world);
-    }
+  public RinEntity(EntityType<? extends TamableAnimal> entityType, Level world) {
+    super(entityType, world);
+  }
 
 }

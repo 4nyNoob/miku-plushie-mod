@@ -6,8 +6,8 @@ import net.minecraft.world.level.Level;
 
 public class LukaEntity extends AbstractPlushEntity {
 
-    public LukaEntity(EntityType<? extends TamableAnimal> entityType, Level world) {
-        super(entityType, world);
-    }
+  public LukaEntity(EntityType<? extends TamableAnimal> entityType, Level world) {
+    super(entityType, world);
+  }
 
 }

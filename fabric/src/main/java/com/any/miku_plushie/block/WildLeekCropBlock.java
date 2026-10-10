@@ -16,50 +16,51 @@ import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
 public class WildLeekCropBlock extends Block {
-    public WildLeekCropBlock(Properties settings) {
-        super(settings);
-    }
 
-    protected boolean canPlantOnTop(BlockState floor, BlockGetter world, BlockPos pos) {
-        return floor.is(Blocks.GRASS_BLOCK) || floor.is(Blocks.PODZOL);
-    }
+  public WildLeekCropBlock(Properties settings) {
+    super(settings);
+  }
 
-    protected ItemLike getSeedsItem() {
-        return ModItems.LEEK_SEEDS;
-    }
+  protected boolean canPlantOnTop(BlockState floor, BlockGetter world, BlockPos pos) {
+    return floor.is(Blocks.GRASS_BLOCK) || floor.is(Blocks.PODZOL);
+  }
 
-    @Override
-    public ItemStack getCloneItemStack(LevelReader world, BlockPos pos, BlockState state) {
-        return new ItemStack(this.getSeedsItem());
-    }
+  protected ItemLike getSeedsItem() {
+    return ModItems.LEEK_SEEDS;
+  }
 
-    @Override
-    public VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context) {
-        return Block.box(0,0,0,16,16,16);
-    }
+  @Override
+  public ItemStack getCloneItemStack(LevelReader world, BlockPos pos, BlockState state) {
+    return new ItemStack(this.getSeedsItem());
+  }
 
-    @Override
-    public BlockState updateShape(
-        BlockState state, Direction direction, BlockState neighborState, LevelAccessor world, BlockPos pos, BlockPos neighborPos
-    ) {
-        return !state.canSurvive(world, pos)
-            ? Blocks.AIR.defaultBlockState()
-            : super.updateShape(state, direction, neighborState, world, pos, neighborPos);
-    }
+  @Override
+  public VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context) {
+    return Block.box(0, 0, 0, 16, 16, 16);
+  }
 
-    @Override
-    public boolean canSurvive(BlockState state, LevelReader world, BlockPos pos) {
-        BlockPos blockPos = pos.below();
-        return this.canPlantOnTop(world.getBlockState(blockPos), world, blockPos);
-    }
+  @Override
+  public BlockState updateShape(
+      BlockState state, Direction direction, BlockState neighborState, LevelAccessor world, BlockPos pos, BlockPos neighborPos
+  ) {
+    return !state.canSurvive(world, pos)
+        ? Blocks.AIR.defaultBlockState()
+        : super.updateShape(state, direction, neighborState, world, pos, neighborPos);
+  }
 
-    @Override
-    public boolean propagatesSkylightDown(BlockState state, BlockGetter world, BlockPos pos) {
-        return state.getFluidState().isEmpty();
-    }
+  @Override
+  public boolean canSurvive(BlockState state, LevelReader world, BlockPos pos) {
+    BlockPos blockPos = pos.below();
+    return this.canPlantOnTop(world.getBlockState(blockPos), world, blockPos);
+  }
 
-    @Override
-    public boolean isPathfindable(BlockState state, PathComputationType type) {
-        return type == PathComputationType.AIR && !this.hasCollision || super.isPathfindable(state, type);
-    }
+  @Override
+  public boolean propagatesSkylightDown(BlockState state, BlockGetter world, BlockPos pos) {
+    return state.getFluidState().isEmpty();
+  }
+
+  @Override
+  public boolean isPathfindable(BlockState state, PathComputationType type) {
+    return type == PathComputationType.AIR && !this.hasCollision || super.isPathfindable(state, type);
+  }
 }
