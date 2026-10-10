@@ -1,12 +1,12 @@
 package com.any.mikuplushie.entity;
 
-import net.minecraft.entity.EntityType;
-import net.minecraft.entity.passive.TameableEntity;
-import net.minecraft.world.World;
+import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.TamableAnimal;
+import net.minecraft.world.level.Level;
 
 public class MeikoEntity extends AbstractPlushEntity {
 
-    public MeikoEntity(EntityType<? extends TameableEntity> entityType, World world) {
+    public MeikoEntity(EntityType<? extends TamableAnimal> entityType, Level world) {
         super(entityType, world);
     }
 

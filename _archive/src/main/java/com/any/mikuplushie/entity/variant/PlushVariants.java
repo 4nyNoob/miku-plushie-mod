@@ -3,11 +3,10 @@ package com.any.mikuplushie.entity.variant;
 import com.any.mikuplushie.registry.ModBlocks;
 import com.any.mikuplushie.registry.ModEntities;
 import com.any.mikuplushie.util.ModUtil;
-import net.minecraft.block.Block;
-import net.minecraft.entity.EntityType;
-
 import java.util.ArrayList;
 import java.util.List;
+import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.level.block.Block;
 
 public class PlushVariants {
 
@@ -19,7 +18,7 @@ public class PlushVariants {
         for (EntityType<?> entityType: ModEntities.PLUSH_ENTITIES){
 
             //GET ENTITY REGISTRY NAME
-            String plushName = entityType.getUntranslatedName();
+            String plushName = entityType.toShortString();
 
             //GET BLOCKS LIST
             List<Block> plushList = ModBlocks.PLUSH_BLOCKS;

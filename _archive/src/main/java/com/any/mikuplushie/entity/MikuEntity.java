@@ -2,12 +2,6 @@ package com.any.mikuplushie.entity;
 
 import com.any.mikuplushie.entity.goals.EatLeekGoal;
 import com.any.mikuplushie.registry.ModBlocks;
-import net.minecraft.entity.EntityType;
-import net.minecraft.entity.passive.TameableEntity;
-import net.minecraft.particle.BlockStateParticleEffect;
-import net.minecraft.particle.ParticleTypes;
-import net.minecraft.util.math.Vec3d;
-import net.minecraft.world.World;
 import software.bernie.geckolib.animatable.instance.AnimatableInstanceCache;
 import software.bernie.geckolib.animation.AnimatableManager;
 import software.bernie.geckolib.animation.AnimationController;
@@ -16,6 +10,12 @@ import software.bernie.geckolib.animation.RawAnimation;
 import software.bernie.geckolib.util.GeckoLibUtil;
 
 import java.util.List;
+import net.minecraft.core.particles.BlockParticleOption;
+import net.minecraft.core.particles.ParticleTypes;
+import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.TamableAnimal;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.phys.Vec3;
 
 public class MikuEntity extends AbstractPlushEntity {
 
@@ -26,16 +26,16 @@ public class MikuEntity extends AbstractPlushEntity {
     private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
     private static final RawAnimation EAT = RawAnimation.begin().thenPlay("misc.eat");
 
-    public MikuEntity(EntityType<? extends TameableEntity> entityType, World world) {
+    public MikuEntity(EntityType<? extends TamableAnimal> entityType, Level world) {
         super(entityType, world);
     }
 
     //GOALS AND ATTRIBUTES
     @Override
-    public void initGoals() {
-        super.initGoals();
+    public void registerGoals() {
+        super.registerGoals();
         EatLeekGoal eatLeekGoal = new EatLeekGoal(this);
-        this.goalSelector.add(5, eatLeekGoal);
+        this.goalSelector.addGoal(5, eatLeekGoal);
     }
 
     //DANCE ANIMATIONS
@@ -69,11 +69,11 @@ public class MikuEntity extends AbstractPlushEntity {
 
     //UPDATE EAT LEEK GOAL
     @Override
-    public void tickMovement() {
-        super.tickMovement();
+    public void aiStep() {
+        super.aiStep();
 
         //CLIENT LEEK EATING TIMER
-        if (this.getWorld().isClient){
+        if (this.level().isClientSide){
             //DECREASE LEEK TIMER UNTIL 0
             this.eatLeekTimer = Math.max(0, this.eatLeekTimer -1);
             //SET EATING LEEK TRUE IF THE COUNTER IS RUNNING
@@ -81,12 +81,12 @@ public class MikuEntity extends AbstractPlushEntity {
 
             //SPAWN EATING PARTICLES
             if (eatLeekTimer > 0 && !this.isInSittingPose()) {
-                Vec3d mikuPos = this.getPos();
-                this.getWorld().addParticle(
-                    new BlockStateParticleEffect(ParticleTypes.BLOCK, ModBlocks.LEEK_CROP.withAge(7)),
-                    mikuPos.getX(),
-                    mikuPos.getY() + 0.5D,
-                    mikuPos.getZ(),
+                Vec3 mikuPos = this.position();
+                this.level().addParticle(
+                    new BlockParticleOption(ParticleTypes.BLOCK, ModBlocks.LEEK_CROP.getStateForAge(7)),
+                    mikuPos.x(),
+                    mikuPos.y() + 0.5D,
+                    mikuPos.z(),
                     this.random.nextGaussian() * 0.5,
                     this.random.nextGaussian() * 0.5,
                     this.random.nextGaussian() * 0.5
@@ -98,11 +98,11 @@ public class MikuEntity extends AbstractPlushEntity {
 
     //SET LEEK TIMER 40 TICKS WHEN LEEK EATING STATUS IS TRUE
     @Override
-    public void handleStatus(byte status) {
+    public void handleEntityEvent(byte status) {
         if (status == 10){
             this.eatLeekTimer = MAX_LEEK_TIMER;
         } else {
-            super.handleStatus(status);
+            super.handleEntityEvent(status);
         }
     }
 

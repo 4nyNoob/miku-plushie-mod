@@ -1,17 +1,16 @@
 package com.any.mikuplushie.item;
 
 import com.google.common.base.Suppliers;
-import net.minecraft.block.Block;
-import net.minecraft.item.Items;
-import net.minecraft.item.ToolMaterial;
-import net.minecraft.recipe.Ingredient;
-import net.minecraft.registry.tag.BlockTags;
-import net.minecraft.registry.tag.TagKey;
-
 import java.util.Objects;
 import java.util.function.Supplier;
+import net.minecraft.tags.BlockTags;
+import net.minecraft.tags.TagKey;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.item.Tier;
+import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.world.level.block.Block;
 
-public enum PlushToolMaterial implements ToolMaterial {
+public enum PlushToolMaterial implements Tier {
 
     PLUSH_TOOL_MATERIAL(
         BlockTags.INCORRECT_FOR_WOODEN_TOOL,
@@ -19,7 +18,7 @@ public enum PlushToolMaterial implements ToolMaterial {
         15,
         0,
         25,
-        () -> Ingredient.ofItems(Items.DIAMOND));
+        () -> Ingredient.of(Items.DIAMOND));
 
     private final TagKey<Block> inverseTag;
     private final int itemDurability;
@@ -45,23 +44,23 @@ public enum PlushToolMaterial implements ToolMaterial {
         this.repairIngredient = Suppliers.memoize(repairIngredient::get);
     }
 
-    public int getDurability() {
+    public int getUses() {
         return this.itemDurability;
     }
 
-    public float getMiningSpeedMultiplier() {
+    public float getSpeed() {
         return this.miningSpeed;
     }
 
-    public float getAttackDamage() {
+    public float getAttackDamageBonus() {
         return this.attackDamage;
     }
 
-    public TagKey<Block> getInverseTag() {
+    public TagKey<Block> getIncorrectBlocksForDrops() {
         return this.inverseTag;
     }
 
-    public int getEnchantability() {
+    public int getEnchantmentValue() {
         return this.enchantability;
     }
 

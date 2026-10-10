@@ -5,16 +5,16 @@ import com.any.mikuplushie.entity.TetoEntity;
 import com.any.mikuplushie.entity.client.model.AbstractPlushModel;
 import com.any.mikuplushie.registry.ModBlocks;
 import com.any.mikuplushie.util.ModUtil;
-import net.minecraft.client.render.RenderLayer;
-import net.minecraft.client.render.VertexConsumer;
-import net.minecraft.client.render.VertexConsumerProvider;
-import net.minecraft.client.render.entity.EntityRendererFactory;
-import net.minecraft.client.render.model.json.ModelTransformationMode;
-import net.minecraft.client.util.math.MatrixStack;
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.ShieldItem;
-import net.minecraft.util.Identifier;
-import net.minecraft.util.math.RotationAxis;
+import com.mojang.blaze3d.vertex.PoseStack;
+import com.mojang.blaze3d.vertex.VertexConsumer;
+import com.mojang.math.Axis;
+import net.minecraft.client.renderer.MultiBufferSource;
+import net.minecraft.client.renderer.RenderType;
+import net.minecraft.client.renderer.entity.EntityRendererProvider;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.ItemDisplayContext;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.ShieldItem;
 import org.jetbrains.annotations.Nullable;
 import software.bernie.geckolib.cache.object.BakedGeoModel;
 import software.bernie.geckolib.cache.object.GeoBone;
@@ -29,7 +29,7 @@ public class AbstractPlushRender extends GeoEntityRenderer<AbstractPlushEntity> 
     protected ItemStack mainHandItem;
     protected ItemStack offHandItem;
 
-    public AbstractPlushRender(EntityRendererFactory.Context renderManager) {
+    public AbstractPlushRender(EntityRendererProvider.Context renderManager) {
         super(renderManager, new AbstractPlushModel());
 
         // Add some held item rendering
@@ -46,29 +46,29 @@ public class AbstractPlushRender extends GeoEntityRenderer<AbstractPlushEntity> 
                 };
             }
 
-            public ModelTransformationMode getTransformTypeForStack(GeoBone bone, ItemStack stack, AbstractPlushEntity animatable) {
+            public ItemDisplayContext getTransformTypeForStack(GeoBone bone, ItemStack stack, AbstractPlushEntity animatable) {
                 // Apply the camera transform for the given hand
                 return switch (bone.getName()) {
-                    case LEFT_HAND, RIGHT_HAND -> ModelTransformationMode.THIRD_PERSON_RIGHT_HAND;
-                    default -> ModelTransformationMode.NONE;
+                    case LEFT_HAND, RIGHT_HAND -> ItemDisplayContext.THIRD_PERSON_RIGHT_HAND;
+                    default -> ItemDisplayContext.NONE;
                 };
             }
 
             // Do some quick render modifications depending on what the item is
-            public void renderStackForBone(MatrixStack poseStack, GeoBone bone, ItemStack stack, AbstractPlushEntity animatable,
-                                            VertexConsumerProvider bufferSource, float partialTick, int packedLight, int packedOverlay) {
+            public void renderStackForBone(PoseStack poseStack, GeoBone bone, ItemStack stack, AbstractPlushEntity animatable,
+                                            MultiBufferSource bufferSource, float partialTick, int packedLight, int packedOverlay) {
                 if (stack == AbstractPlushRender.this.mainHandItem) {
-                    poseStack.multiply(RotationAxis.POSITIVE_X.rotationDegrees(-90f));
+                    poseStack.mulPose(Axis.XP.rotationDegrees(-90f));
 
                     if (stack.getItem() instanceof ShieldItem)
                         poseStack.translate(0, 0.125, -0.25);
                 }
                 else if (stack == AbstractPlushRender.this.offHandItem) {
-                    poseStack.multiply(RotationAxis.POSITIVE_X.rotationDegrees(-90f));
+                    poseStack.mulPose(Axis.XP.rotationDegrees(-90f));
 
                     if (stack.getItem() instanceof ShieldItem) {
                         poseStack.translate(0, 0.125, 0.25);
-                        poseStack.multiply(RotationAxis.POSITIVE_Y.rotationDegrees(180));
+                        poseStack.mulPose(Axis.YP.rotationDegrees(180));
                     }
                 }
 
@@ -78,22 +78,22 @@ public class AbstractPlushRender extends GeoEntityRenderer<AbstractPlushEntity> 
     }
 
     @Override
-    public RenderLayer getRenderType(AbstractPlushEntity animatable, Identifier texture, VertexConsumerProvider bufferSource, float partialTick) {
+    public RenderType getRenderType(AbstractPlushEntity animatable, ResourceLocation texture, MultiBufferSource bufferSource, float partialTick) {
         //USE TRANSLUCENT RENDER ON SPECIFIC VARIATION
         if (
             animatable.getVariant().equals(ModUtil.getBlockIdFromBlock(ModBlocks.MIKU_PLUSH_GHOST)) ||
             animatable.getVariant().equals(ModUtil.getBlockIdFromBlock(ModBlocks.TETO_PLUSH_WHATCHACALLITSNAME))
         ){
-            return RenderLayer.getEntityTranslucent(texture);
+            return RenderType.entityTranslucent(texture);
         } else {
             return super.getRenderType(animatable, texture, bufferSource, partialTick);
         }
     }
 
     @Override
-    public void preRender(MatrixStack poseStack, AbstractPlushEntity animatable, BakedGeoModel model, @Nullable VertexConsumerProvider bufferSource, @Nullable VertexConsumer buffer, boolean isReRender, float partialTick, int packedLight, int packedOverlay, int colour) {
+    public void preRender(PoseStack poseStack, AbstractPlushEntity animatable, BakedGeoModel model, @Nullable MultiBufferSource bufferSource, @Nullable VertexConsumer buffer, boolean isReRender, float partialTick, int packedLight, int packedOverlay, int colour) {
         super.preRender(poseStack, animatable, model, bufferSource, buffer, isReRender, partialTick, packedLight, packedOverlay, colour);
-        this.mainHandItem = animatable.getMainHandStack();
-        this.offHandItem = animatable.getOffHandStack();
+        this.mainHandItem = animatable.getMainHandItem();
+        this.offHandItem = animatable.getOffhandItem();
     }
 }

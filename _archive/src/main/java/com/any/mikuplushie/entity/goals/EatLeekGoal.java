@@ -4,44 +4,44 @@ import com.any.mikuplushie.block.LeekCropBlock;
 import com.any.mikuplushie.entity.MikuEntity;
 import com.any.mikuplushie.registry.ModBlocks;
 import com.any.mikuplushie.util.ModUtil;
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockState;
-import net.minecraft.block.Blocks;
-import net.minecraft.entity.EntityStatuses;
-import net.minecraft.entity.ai.goal.Goal;
-import net.minecraft.predicate.block.BlockStatePredicate;
-import net.minecraft.sound.SoundEvents;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.world.GameRules;
-import net.minecraft.world.World;
-import net.minecraft.world.WorldEvents;
 import org.spongepowered.include.com.google.common.base.Predicates;
 
 import java.util.EnumSet;
 import java.util.List;
 import java.util.function.Predicate;
+import net.minecraft.core.BlockPos;
+import net.minecraft.sounds.SoundEvents;
+import net.minecraft.world.entity.EntityEvent;
+import net.minecraft.world.entity.ai.goal.Goal;
+import net.minecraft.world.level.GameRules;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.LevelEvent;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.state.predicate.BlockStatePredicate;
 
 //EAT LEEK GOAL
 public class EatLeekGoal extends Goal {
 
     private static final int MAX_TIMER = 40;
-    private static final Predicate<BlockState> LEEK_PREDICATE = BlockStatePredicate.forBlock(ModBlocks.LEEK_CROP).with(LeekCropBlock.AGE, Predicates.equalTo(7));
+    private static final Predicate<BlockState> LEEK_PREDICATE = BlockStatePredicate.forBlock(ModBlocks.LEEK_CROP).where(LeekCropBlock.AGE, Predicates.equalTo(7));
     private final MikuEntity miku;
-    private final World world;
+    private final Level world;
     private int timer;
-    BlockState fullyGrownLeekCrop = ModBlocks.LEEK_CROP.withAge(7);
+    BlockState fullyGrownLeekCrop = ModBlocks.LEEK_CROP.getStateForAge(7);
 
 
     public EatLeekGoal(MikuEntity miku) {
         this.miku = miku;
-        this.world = miku.getWorld();
-        this.setControls(EnumSet.of(Goal.Control.MOVE, Goal.Control.LOOK, Goal.Control.JUMP));
+        this.world = miku.level();
+        this.setFlags(EnumSet.of(Goal.Flag.MOVE, Goal.Flag.LOOK, Goal.Flag.JUMP));
     }
 
 
     @Override
-    public boolean canStart() {
-        BlockPos blockPos = this.miku.getBlockPos();
+    public boolean canUse() {
+        BlockPos blockPos = this.miku.blockPosition();
         boolean adjacentToLeek = !locateFullyGrownLeek(blockPos).equals(blockPos);
         boolean healthNotMaxed = this.miku.getHealth() < this.miku.getMaxHealth();
         return adjacentToLeek && healthNotMaxed;
@@ -49,9 +49,9 @@ public class EatLeekGoal extends Goal {
 
     @Override
     public void start() {
-        this.timer = this.getTickCount(MAX_TIMER);
-        this.miku.lookAt(this.miku.getCommandSource().getEntityAnchor(), locateFullyGrownLeek(this.miku.getBlockPos()).toCenterPos());
-        this.world.sendEntityStatus(this.miku, EntityStatuses.SET_SHEEP_EAT_GRASS_TIMER_OR_PRIME_TNT_MINECART);
+        this.timer = this.adjustedTickDelay(MAX_TIMER);
+        this.miku.lookAt(this.miku.createCommandSourceStack().getAnchor(), locateFullyGrownLeek(this.miku.blockPosition()).getCenter());
+        this.world.broadcastEntityEvent(this.miku, EntityEvent.EAT_GRASS);
         this.miku.getNavigation().stop();
     }
 
@@ -62,7 +62,7 @@ public class EatLeekGoal extends Goal {
     }
 
     @Override
-    public boolean shouldContinue() {
+    public boolean canContinueToUse() {
         return this.timer > 0;
     }
 
@@ -75,18 +75,18 @@ public class EatLeekGoal extends Goal {
         this.timer = Math.max(0, this.timer - 1);
 
         if (this.timer % 4 == 1 && this.timer > 4) {
-            this.miku.playSound(SoundEvents.ENTITY_GENERIC_EAT, 0.5F, 1);
+            this.miku.playSound(SoundEvents.GENERIC_EAT, 0.5F, 1);
             this.miku.playSound(ModUtil.getPlushSoundEvent("miku_plush", "eat"), 1, 1);
         }
 
-        if (this.timer == this.getTickCount(4)) {
-            BlockPos mobPos = this.miku.getBlockPos();
+        if (this.timer == this.adjustedTickDelay(4)) {
+            BlockPos mobPos = this.miku.blockPosition();
 
             if (LEEK_PREDICATE.test(this.world.getBlockState(mobPos))) {
-                if (this.world.getGameRules().getBoolean(GameRules.DO_MOB_GRIEFING)) {
-                    this.world.breakBlock(mobPos, false);
+                if (this.world.getGameRules().getBoolean(GameRules.RULE_MOBGRIEFING)) {
+                    this.world.destroyBlock(mobPos, false);
                 }
-                this.miku.onEatingGrass();
+                this.miku.ate();
 
             } else {
                 BlockPos blockPos2 = mobPos;
@@ -94,14 +94,14 @@ public class EatLeekGoal extends Goal {
                 if (!locateFullyGrownLeek(mobPos).equals(mobPos))
                     blockPos2 = locateFullyGrownLeek(mobPos);
 
-                if (this.world.getBlockState(blockPos2).equals(ModBlocks.LEEK_CROP.withAge(7))) {
-                    if (this.world.getGameRules().getBoolean(GameRules.DO_MOB_GRIEFING)) {
-                        this.world.syncWorldEvent(WorldEvents.BLOCK_BROKEN, blockPos2, Block.getRawIdFromState(ModBlocks.LEEK_CROP.getDefaultState()));
-                        this.world.setBlockState(blockPos2, Blocks.AIR.getDefaultState(), Block.NOTIFY_LISTENERS);
+                if (this.world.getBlockState(blockPos2).equals(ModBlocks.LEEK_CROP.getStateForAge(7))) {
+                    if (this.world.getGameRules().getBoolean(GameRules.RULE_MOBGRIEFING)) {
+                        this.world.levelEvent(LevelEvent.PARTICLES_DESTROY_BLOCK, blockPos2, Block.getId(ModBlocks.LEEK_CROP.defaultBlockState()));
+                        this.world.setBlock(blockPos2, Blocks.AIR.defaultBlockState(), Block.UPDATE_CLIENTS);
                         this.miku.setEatingLeek(false);
                         this.miku.heal(4);
                     }
-                    this.miku.onEatingGrass();
+                    this.miku.ate();
                 }
             }
         }
@@ -116,11 +116,11 @@ public class EatLeekGoal extends Goal {
             mobPos.north(),
             mobPos.south(),
             //SAME AS BEFORE BUT ONE BLOCK UP
-            mobPos.up(),
-            mobPos.up().east(),
-            mobPos.up().west(),
-            mobPos.up().north(),
-            mobPos.up().south()
+            mobPos.above(),
+            mobPos.above().east(),
+            mobPos.above().west(),
+            mobPos.above().north(),
+            mobPos.above().south()
         );
         for (BlockPos testPos : POSITION_CHECKS) {
             if (this.world.getBlockState(testPos).equals(fullyGrownLeekCrop))

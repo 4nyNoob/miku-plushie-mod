@@ -4,150 +4,149 @@ import com.any.mikuplushie.registry.ModBlocks;
 import com.any.mikuplushie.registry.ModItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
-import net.minecraft.data.server.recipe.RecipeExporter;
-import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
-import net.minecraft.data.server.recipe.ShapelessRecipeJsonBuilder;
-import net.minecraft.item.ItemConvertible;
-import net.minecraft.item.Items;
-import net.minecraft.recipe.book.RecipeCategory;
-import net.minecraft.registry.RegistryWrapper;
-
+import net.minecraft.core.HolderLookup;
+import net.minecraft.data.recipes.RecipeCategory;
+import net.minecraft.data.recipes.RecipeOutput;
+import net.minecraft.data.recipes.ShapedRecipeBuilder;
+import net.minecraft.data.recipes.ShapelessRecipeBuilder;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.level.ItemLike;
 import java.util.concurrent.CompletableFuture;
 
 public class ModRecipeProvider extends FabricRecipeProvider {
 
-    public ModRecipeProvider(FabricDataOutput output, CompletableFuture<RegistryWrapper.WrapperLookup> registriesFuture) {
+    public ModRecipeProvider(FabricDataOutput output, CompletableFuture<HolderLookup.Provider> registriesFuture) {
         super(output, registriesFuture);
     }
 
     @Override
-	public void generate(RecipeExporter exporter) {
+	public void buildRecipes(RecipeOutput exporter) {
 
-        ShapedRecipeJsonBuilder.create(RecipeCategory.FOOD, ModItems.CANUDINHO)
+        ShapedRecipeBuilder.shaped(RecipeCategory.FOOD, ModItems.CANUDINHO)
             .pattern("p")
             .pattern("p")
-            .input('p', Items.PAPER)
-            .criterion(FabricRecipeProvider.hasItem(Items.PAPER), FabricRecipeProvider.conditionsFromItem(Items.PAPER))
-            .offerTo(exporter);
+            .define('p', Items.PAPER)
+            .unlockedBy(FabricRecipeProvider.getHasName(Items.PAPER), FabricRecipeProvider.has(Items.PAPER))
+            .save(exporter);
 
-        ShapedRecipeJsonBuilder.create(RecipeCategory.FOOD, ModItems.BAGUETTE)
+        ShapedRecipeBuilder.shaped(RecipeCategory.FOOD, ModItems.BAGUETTE)
             .pattern("www")
             .pattern("www")
-            .input('w', Items.WHEAT)
-            .criterion(FabricRecipeProvider.hasItem(Items.WHEAT), FabricRecipeProvider.conditionsFromItem(Items.WHEAT))
-            .offerTo(exporter);
+            .define('w', Items.WHEAT)
+            .unlockedBy(FabricRecipeProvider.getHasName(Items.WHEAT), FabricRecipeProvider.has(Items.WHEAT))
+            .save(exporter);
 
         simpleShapeless(exporter, ModItems.AKITA_NERU_PHONE, Items.GOLD_INGOT, Items.REDSTONE, Items.BLACK_STAINED_GLASS);
 
-        ShapedRecipeJsonBuilder.create(RecipeCategory.FOOD, ModItems.VOCALOID_HEART)
+        ShapedRecipeBuilder.shaped(RecipeCategory.FOOD, ModItems.VOCALOID_HEART)
             .pattern("LN")
             .pattern("BP")
-            .input('L', ModItems.LEEK)
-            .input('N', Items.NOTE_BLOCK)
-            .input('B', ModItems.BAGUETTE)
-            .input('P', ModItems.AKITA_NERU_PHONE)
-            .criterion(FabricRecipeProvider.hasItem(ModItems.LEEK), FabricRecipeProvider.conditionsFromItem(ModItems.LEEK))
-            .criterion(FabricRecipeProvider.hasItem(Items.NOTE_BLOCK), FabricRecipeProvider.conditionsFromItem(Items.NOTE_BLOCK))
-            .criterion(FabricRecipeProvider.hasItem(ModItems.BAGUETTE), FabricRecipeProvider.conditionsFromItem(ModItems.BAGUETTE))
-            .criterion(FabricRecipeProvider.hasItem(ModItems.AKITA_NERU_PHONE), FabricRecipeProvider.conditionsFromItem(ModItems.AKITA_NERU_PHONE))
-            .offerTo(exporter);
+            .define('L', ModItems.LEEK)
+            .define('N', Items.NOTE_BLOCK)
+            .define('B', ModItems.BAGUETTE)
+            .define('P', ModItems.AKITA_NERU_PHONE)
+            .unlockedBy(FabricRecipeProvider.getHasName(ModItems.LEEK), FabricRecipeProvider.has(ModItems.LEEK))
+            .unlockedBy(FabricRecipeProvider.getHasName(Items.NOTE_BLOCK), FabricRecipeProvider.has(Items.NOTE_BLOCK))
+            .unlockedBy(FabricRecipeProvider.getHasName(ModItems.BAGUETTE), FabricRecipeProvider.has(ModItems.BAGUETTE))
+            .unlockedBy(FabricRecipeProvider.getHasName(ModItems.AKITA_NERU_PHONE), FabricRecipeProvider.has(ModItems.AKITA_NERU_PHONE))
+            .save(exporter);
 
         //AIKO
         {
-            ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ModBlocks.AIKO_PLUSH)
+            ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.AIKO_PLUSH)
                 .pattern("121")
                 .pattern("131")
-                .input('1', Items.BLUE_WOOL)
-                .input('2', Items.WHITE_WOOL)
-                .input('3', Items.GREEN_WOOL)
-                .criterion(FabricRecipeProvider.hasItem(Items.BLUE_WOOL), FabricRecipeProvider.conditionsFromItem(Items.BLUE_WOOL))
-                .criterion(FabricRecipeProvider.hasItem(Items.WHITE_WOOL), FabricRecipeProvider.conditionsFromItem(Items.WHITE_WOOL))
-                .criterion(FabricRecipeProvider.hasItem(Items.GREEN_WOOL), FabricRecipeProvider.conditionsFromItem(Items.GREEN_WOOL))
-                .offerTo(exporter);
+                .define('1', Items.BLUE_WOOL)
+                .define('2', Items.WHITE_WOOL)
+                .define('3', Items.GREEN_WOOL)
+                .unlockedBy(FabricRecipeProvider.getHasName(Items.BLUE_WOOL), FabricRecipeProvider.has(Items.BLUE_WOOL))
+                .unlockedBy(FabricRecipeProvider.getHasName(Items.WHITE_WOOL), FabricRecipeProvider.has(Items.WHITE_WOOL))
+                .unlockedBy(FabricRecipeProvider.getHasName(Items.GREEN_WOOL), FabricRecipeProvider.has(Items.GREEN_WOOL))
+                .save(exporter);
         }
 
         //NERU
         {
-            ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ModBlocks.AKITA_NERU_PLUSH)
+            ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.AKITA_NERU_PLUSH)
                 .pattern("121")
                 .pattern("131")
-                .input('1', Items.YELLOW_WOOL)
-                .input('2', Items.WHITE_WOOL)
-                .input('3', Items.BROWN_WOOL)
-                .criterion(FabricRecipeProvider.hasItem(Items.YELLOW_WOOL), FabricRecipeProvider.conditionsFromItem(Items.YELLOW_WOOL))
-                .criterion(FabricRecipeProvider.hasItem(Items.WHITE_WOOL), FabricRecipeProvider.conditionsFromItem(Items.WHITE_WOOL))
-                .criterion(FabricRecipeProvider.hasItem(Items.BROWN_WOOL), FabricRecipeProvider.conditionsFromItem(Items.BROWN_WOOL))
-                .offerTo(exporter);
+                .define('1', Items.YELLOW_WOOL)
+                .define('2', Items.WHITE_WOOL)
+                .define('3', Items.BROWN_WOOL)
+                .unlockedBy(FabricRecipeProvider.getHasName(Items.YELLOW_WOOL), FabricRecipeProvider.has(Items.YELLOW_WOOL))
+                .unlockedBy(FabricRecipeProvider.getHasName(Items.WHITE_WOOL), FabricRecipeProvider.has(Items.WHITE_WOOL))
+                .unlockedBy(FabricRecipeProvider.getHasName(Items.BROWN_WOOL), FabricRecipeProvider.has(Items.BROWN_WOOL))
+                .save(exporter);
 
             plushShapeless(exporter, ModBlocks.AKITA_NERU_PLUSH_TAILS, ModBlocks.AKITA_NERU_PLUSH, Items.YELLOW_WOOL, Items.REDSTONE);
         }
 
         //RIN
         {
-            ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ModBlocks.RIN_PLUSH)
+            ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.RIN_PLUSH)
                 .pattern("121")
                 .pattern("121")
-                .input('1', Items.YELLOW_WOOL)
-                .input('2', Items.WHITE_WOOL)
-                .criterion(FabricRecipeProvider.hasItem(Items.YELLOW_WOOL), FabricRecipeProvider.conditionsFromItem(Items.YELLOW_WOOL))
-                .criterion(FabricRecipeProvider.hasItem(Items.WHITE_WOOL), FabricRecipeProvider.conditionsFromItem(Items.WHITE_WOOL))
-                .offerTo(exporter);
+                .define('1', Items.YELLOW_WOOL)
+                .define('2', Items.WHITE_WOOL)
+                .unlockedBy(FabricRecipeProvider.getHasName(Items.YELLOW_WOOL), FabricRecipeProvider.has(Items.YELLOW_WOOL))
+                .unlockedBy(FabricRecipeProvider.getHasName(Items.WHITE_WOOL), FabricRecipeProvider.has(Items.WHITE_WOOL))
+                .save(exporter);
         }
 
         //LEN
         {
-            ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ModBlocks.LEN_PLUSH)
+            ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.LEN_PLUSH)
                 .pattern("121")
                 .pattern("131")
-                .input('1', Items.YELLOW_WOOL)
-                .input('2', Items.WHITE_WOOL)
-                .input('3', Items.GRAY_WOOL)
-                .criterion(FabricRecipeProvider.hasItem(Items.YELLOW_WOOL), FabricRecipeProvider.conditionsFromItem(Items.YELLOW_WOOL))
-                .criterion(FabricRecipeProvider.hasItem(Items.WHITE_WOOL), FabricRecipeProvider.conditionsFromItem(Items.WHITE_WOOL))
-                .criterion(FabricRecipeProvider.hasItem(Items.GRAY_WOOL), FabricRecipeProvider.conditionsFromItem(Items.GRAY_WOOL))
-                .offerTo(exporter);
+                .define('1', Items.YELLOW_WOOL)
+                .define('2', Items.WHITE_WOOL)
+                .define('3', Items.GRAY_WOOL)
+                .unlockedBy(FabricRecipeProvider.getHasName(Items.YELLOW_WOOL), FabricRecipeProvider.has(Items.YELLOW_WOOL))
+                .unlockedBy(FabricRecipeProvider.getHasName(Items.WHITE_WOOL), FabricRecipeProvider.has(Items.WHITE_WOOL))
+                .unlockedBy(FabricRecipeProvider.getHasName(Items.GRAY_WOOL), FabricRecipeProvider.has(Items.GRAY_WOOL))
+                .save(exporter);
         }
 
         //KONOHA
         {
-            ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ModBlocks.KONOHA_PLUSH)
+            ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.KONOHA_PLUSH)
                 .pattern("121")
                 .pattern("323")
-                .input('1', Items.WHITE_WOOL)
-                .input('2', Items.LIGHT_GRAY_WOOL)
-                .input('3', Items.LIME_WOOL)
-                .criterion(FabricRecipeProvider.hasItem(Items.WHITE_WOOL), FabricRecipeProvider.conditionsFromItem(Items.WHITE_WOOL))
-                .criterion(FabricRecipeProvider.hasItem(Items.LIGHT_GRAY_WOOL), FabricRecipeProvider.conditionsFromItem(Items.LIGHT_GRAY_WOOL))
-                .criterion(FabricRecipeProvider.hasItem(Items.LIME_WOOL), FabricRecipeProvider.conditionsFromItem(Items.LIME_WOOL))
-                .offerTo(exporter);
+                .define('1', Items.WHITE_WOOL)
+                .define('2', Items.LIGHT_GRAY_WOOL)
+                .define('3', Items.LIME_WOOL)
+                .unlockedBy(FabricRecipeProvider.getHasName(Items.WHITE_WOOL), FabricRecipeProvider.has(Items.WHITE_WOOL))
+                .unlockedBy(FabricRecipeProvider.getHasName(Items.LIGHT_GRAY_WOOL), FabricRecipeProvider.has(Items.LIGHT_GRAY_WOOL))
+                .unlockedBy(FabricRecipeProvider.getHasName(Items.LIME_WOOL), FabricRecipeProvider.has(Items.LIME_WOOL))
+                .save(exporter);
         }
 
         //LUKA
         {
-            ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ModBlocks.LUKA_PLUSH)
+            ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.LUKA_PLUSH)
                 .pattern("121")
                 .pattern("131")
-                .input('1', Items.PINK_WOOL)
-                .input('2', Items.YELLOW_WOOL)
-                .input('3', Items.BROWN_WOOL)
-                .criterion(FabricRecipeProvider.hasItem(Items.PINK_WOOL), FabricRecipeProvider.conditionsFromItem(Items.PINK_WOOL))
-                .criterion(FabricRecipeProvider.hasItem(Items.YELLOW_WOOL), FabricRecipeProvider.conditionsFromItem(Items.YELLOW_WOOL))
-                .criterion(FabricRecipeProvider.hasItem(Items.BROWN_WOOL), FabricRecipeProvider.conditionsFromItem(Items.BROWN_WOOL))
-                .offerTo(exporter);
+                .define('1', Items.PINK_WOOL)
+                .define('2', Items.YELLOW_WOOL)
+                .define('3', Items.BROWN_WOOL)
+                .unlockedBy(FabricRecipeProvider.getHasName(Items.PINK_WOOL), FabricRecipeProvider.has(Items.PINK_WOOL))
+                .unlockedBy(FabricRecipeProvider.getHasName(Items.YELLOW_WOOL), FabricRecipeProvider.has(Items.YELLOW_WOOL))
+                .unlockedBy(FabricRecipeProvider.getHasName(Items.BROWN_WOOL), FabricRecipeProvider.has(Items.BROWN_WOOL))
+                .save(exporter);
         }
 
         //MIKU
         {
-            ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ModBlocks.MIKU_PLUSH)
+            ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.MIKU_PLUSH)
                 .pattern("121")
                 .pattern("131")
-                .input('1', Items.CYAN_WOOL)
-                .input('2', Items.WHITE_WOOL)
-                .input('3', Items.GRAY_WOOL)
-                .criterion(FabricRecipeProvider.hasItem(Items.CYAN_WOOL), FabricRecipeProvider.conditionsFromItem(Items.CYAN_WOOL))
-                .criterion(FabricRecipeProvider.hasItem(Items.WHITE_WOOL), FabricRecipeProvider.conditionsFromItem(Items.WHITE_WOOL))
-                .criterion(FabricRecipeProvider.hasItem(Items.GRAY_WOOL), FabricRecipeProvider.conditionsFromItem(Items.GRAY_WOOL))
-                .offerTo(exporter);
+                .define('1', Items.CYAN_WOOL)
+                .define('2', Items.WHITE_WOOL)
+                .define('3', Items.GRAY_WOOL)
+                .unlockedBy(FabricRecipeProvider.getHasName(Items.CYAN_WOOL), FabricRecipeProvider.has(Items.CYAN_WOOL))
+                .unlockedBy(FabricRecipeProvider.getHasName(Items.WHITE_WOOL), FabricRecipeProvider.has(Items.WHITE_WOOL))
+                .unlockedBy(FabricRecipeProvider.getHasName(Items.GRAY_WOOL), FabricRecipeProvider.has(Items.GRAY_WOOL))
+                .save(exporter);
 
             plushShapeless(exporter, ModBlocks.MIKU_PLUSH_BR, ModBlocks.MIKU_PLUSH, Items.YELLOW_WOOL, Items.GREEN_WOOL);
             plushShapeless(exporter, ModBlocks.MIKU_PLUSH_BR_BA, ModBlocks.MIKU_PLUSH, Items.RED_WOOL, Items.WHITE_WOOL, Items.BLUE_WOOL);
@@ -186,16 +185,16 @@ public class ModRecipeProvider extends FabricRecipeProvider {
             plushShapeless(exporter, ModBlocks.MIKU_PLUSH_FRANKENSTEIN, ModBlocks.MIKU_PLUSH, Items.BROWN_WOOL, Items.GREEN_WOOL, Items.LIGHTNING_ROD);
             plushShapeless(exporter, ModBlocks.MIKU_PLUSH_MUMMY, ModBlocks.MIKU_PLUSH, Items.BLACK_WOOL, Items.PAPER, Items.PAPER);
 
-            ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ModBlocks.MIKU_PLUSH_GHOST)
+            ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.MIKU_PLUSH_GHOST)
                 .pattern("121")
                 .pattern("131")
-                .input('1', Items.CYAN_STAINED_GLASS)
-                .input('2', Items.WHITE_STAINED_GLASS)
-                .input('3', Items.GRAY_STAINED_GLASS)
-                .criterion(FabricRecipeProvider.hasItem(Items.CYAN_STAINED_GLASS), FabricRecipeProvider.conditionsFromItem(Items.CYAN_STAINED_GLASS))
-                .criterion(FabricRecipeProvider.hasItem(Items.WHITE_STAINED_GLASS), FabricRecipeProvider.conditionsFromItem(Items.WHITE_STAINED_GLASS))
-                .criterion(FabricRecipeProvider.hasItem(Items.GRAY_STAINED_GLASS), FabricRecipeProvider.conditionsFromItem(Items.GRAY_STAINED_GLASS))
-                .offerTo(exporter);
+                .define('1', Items.CYAN_STAINED_GLASS)
+                .define('2', Items.WHITE_STAINED_GLASS)
+                .define('3', Items.GRAY_STAINED_GLASS)
+                .unlockedBy(FabricRecipeProvider.getHasName(Items.CYAN_STAINED_GLASS), FabricRecipeProvider.has(Items.CYAN_STAINED_GLASS))
+                .unlockedBy(FabricRecipeProvider.getHasName(Items.WHITE_STAINED_GLASS), FabricRecipeProvider.has(Items.WHITE_STAINED_GLASS))
+                .unlockedBy(FabricRecipeProvider.getHasName(Items.GRAY_STAINED_GLASS), FabricRecipeProvider.has(Items.GRAY_STAINED_GLASS))
+                .save(exporter);
 
             plushShapeless(exporter, ModBlocks.MIKU_PLUSH_PATATI, ModBlocks.MIKU_PLUSH, Items.YELLOW_WOOL, Items.LIGHT_BLUE_WOOL, Items.WHITE_WOOL);
             plushShapeless(exporter, ModBlocks.MIKU_PLUSH_PATATA, ModBlocks.MIKU_PLUSH, Items.YELLOW_WOOL, Items.LIME_WOOL, Items.RED_WOOL);
@@ -230,16 +229,16 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 
         //TETO
         {
-            ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ModBlocks.TETO_PLUSH)
+            ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.TETO_PLUSH)
                 .pattern("121")
                 .pattern("131")
-                .input('1', Items.RED_WOOL)
-                .input('2', Items.WHITE_WOOL)
-                .input('3', Items.LIGHT_GRAY_WOOL)
-                .criterion(FabricRecipeProvider.hasItem(Items.RED_WOOL), FabricRecipeProvider.conditionsFromItem(Items.RED_WOOL))
-                .criterion(FabricRecipeProvider.hasItem(Items.WHITE_WOOL), FabricRecipeProvider.conditionsFromItem(Items.WHITE_WOOL))
-                .criterion(FabricRecipeProvider.hasItem(Items.LIGHT_GRAY_WOOL), FabricRecipeProvider.conditionsFromItem(Items.LIGHT_GRAY_WOOL))
-                .offerTo(exporter);
+                .define('1', Items.RED_WOOL)
+                .define('2', Items.WHITE_WOOL)
+                .define('3', Items.LIGHT_GRAY_WOOL)
+                .unlockedBy(FabricRecipeProvider.getHasName(Items.RED_WOOL), FabricRecipeProvider.has(Items.RED_WOOL))
+                .unlockedBy(FabricRecipeProvider.getHasName(Items.WHITE_WOOL), FabricRecipeProvider.has(Items.WHITE_WOOL))
+                .unlockedBy(FabricRecipeProvider.getHasName(Items.LIGHT_GRAY_WOOL), FabricRecipeProvider.has(Items.LIGHT_GRAY_WOOL))
+                .save(exporter);
             pickaxeRecipe(exporter, ModItems.TETO_PICKAXE, ModBlocks.TETO_PLUSH);
 
             plushShapeless(exporter, ModBlocks.TETO_PLUSH_MESMERIZER, ModBlocks.TETO_PLUSH, Items.RED_WOOL, Items.RED_WOOL);
@@ -282,16 +281,16 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 
         //MEIKO
         {
-            ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ModBlocks.MEIKO_PLUSH)
+            ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.MEIKO_PLUSH)
                 .pattern("121")
                 .pattern(" 3 ")
-                .input('1', Items.BROWN_WOOL)
-                .input('2', Items.WHITE_WOOL)
-                .input('3', Items.RED_WOOL)
-                .criterion(FabricRecipeProvider.hasItem(Items.BROWN_WOOL), FabricRecipeProvider.conditionsFromItem(Items.BROWN_WOOL))
-                .criterion(FabricRecipeProvider.hasItem(Items.WHITE_WOOL), FabricRecipeProvider.conditionsFromItem(Items.WHITE_WOOL))
-                .criterion(FabricRecipeProvider.hasItem(Items.RED_WOOL), FabricRecipeProvider.conditionsFromItem(Items.RED_WOOL))
-                .offerTo(exporter);
+                .define('1', Items.BROWN_WOOL)
+                .define('2', Items.WHITE_WOOL)
+                .define('3', Items.RED_WOOL)
+                .unlockedBy(FabricRecipeProvider.getHasName(Items.BROWN_WOOL), FabricRecipeProvider.has(Items.BROWN_WOOL))
+                .unlockedBy(FabricRecipeProvider.getHasName(Items.WHITE_WOOL), FabricRecipeProvider.has(Items.WHITE_WOOL))
+                .unlockedBy(FabricRecipeProvider.getHasName(Items.RED_WOOL), FabricRecipeProvider.has(Items.RED_WOOL))
+                .save(exporter);
 
             plushShapeless(exporter, ModBlocks.MEIKO_PLUSH_V3, ModBlocks.MEIKO_PLUSH, Items.IRON_INGOT);
             plushShapeless(exporter, ModBlocks.MEIKO_PLUSH_V4, ModBlocks.MEIKO_PLUSH, Items.IRON_INGOT, Items.IRON_INGOT);
@@ -299,16 +298,16 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 
         //GUMI
         {
-            ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ModBlocks.GUMI_PLUSH)
+            ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.GUMI_PLUSH)
                 .pattern("121")
                 .pattern(" 3 ")
-                .input('1', Items.LIME_WOOL)
-                .input('2', Items.WHITE_WOOL)
-                .input('3', Items.ORANGE_WOOL)
-                .criterion(FabricRecipeProvider.hasItem(Items.LIME_WOOL), FabricRecipeProvider.conditionsFromItem(Items.LIME_WOOL))
-                .criterion(FabricRecipeProvider.hasItem(Items.WHITE_WOOL), FabricRecipeProvider.conditionsFromItem(Items.WHITE_WOOL))
-                .criterion(FabricRecipeProvider.hasItem(Items.ORANGE_WOOL), FabricRecipeProvider.conditionsFromItem(Items.ORANGE_WOOL))
-                .offerTo(exporter);
+                .define('1', Items.LIME_WOOL)
+                .define('2', Items.WHITE_WOOL)
+                .define('3', Items.ORANGE_WOOL)
+                .unlockedBy(FabricRecipeProvider.getHasName(Items.LIME_WOOL), FabricRecipeProvider.has(Items.LIME_WOOL))
+                .unlockedBy(FabricRecipeProvider.getHasName(Items.WHITE_WOOL), FabricRecipeProvider.has(Items.WHITE_WOOL))
+                .unlockedBy(FabricRecipeProvider.getHasName(Items.ORANGE_WOOL), FabricRecipeProvider.has(Items.ORANGE_WOOL))
+                .save(exporter);
 
             plushShapeless(exporter, ModBlocks.GUMI_PLUSH_V3, ModBlocks.GUMI_PLUSH, Items.IRON_INGOT);
             plushShapeless(exporter, ModBlocks.GUMI_PLUSH_V4, ModBlocks.GUMI_PLUSH, Items.IRON_INGOT, Items.IRON_INGOT);
@@ -317,59 +316,59 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 
         //KAITO
         {
-            ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ModBlocks.KAITO_PLUSH)
+            ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.KAITO_PLUSH)
                 .pattern("121")
                 .pattern(" 3 ")
-                .input('1', Items.BLUE_WOOL)
-                .input('2', Items.WHITE_WOOL)
-                .input('3', Items.ORANGE_WOOL)
-                .criterion(FabricRecipeProvider.hasItem(Items.BLUE_WOOL), FabricRecipeProvider.conditionsFromItem(Items.BLUE_WOOL))
-                .criterion(FabricRecipeProvider.hasItem(Items.WHITE_WOOL), FabricRecipeProvider.conditionsFromItem(Items.WHITE_WOOL))
-                .criterion(FabricRecipeProvider.hasItem(Items.ORANGE_WOOL), FabricRecipeProvider.conditionsFromItem(Items.ORANGE_WOOL))
-                .offerTo(exporter);
+                .define('1', Items.BLUE_WOOL)
+                .define('2', Items.WHITE_WOOL)
+                .define('3', Items.ORANGE_WOOL)
+                .unlockedBy(FabricRecipeProvider.getHasName(Items.BLUE_WOOL), FabricRecipeProvider.has(Items.BLUE_WOOL))
+                .unlockedBy(FabricRecipeProvider.getHasName(Items.WHITE_WOOL), FabricRecipeProvider.has(Items.WHITE_WOOL))
+                .unlockedBy(FabricRecipeProvider.getHasName(Items.ORANGE_WOOL), FabricRecipeProvider.has(Items.ORANGE_WOOL))
+                .save(exporter);
             plushShapeless(exporter, ModBlocks.KAITO_PLUSH_V3, ModBlocks.KAITO_PLUSH, Items.IRON_INGOT);
             plushShapeless(exporter, ModBlocks.KAITO_PLUSH_V4, ModBlocks.KAITO_PLUSH, Items.IRON_INGOT, Items.IRON_INGOT);
         }
 
     }
 
-    public static void pickaxeRecipe (RecipeExporter exporter, ItemConvertible result, ItemConvertible ingredient) {
-        ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, result)
+    public static void pickaxeRecipe (RecipeOutput exporter, ItemLike result, ItemLike ingredient) {
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, result)
             .pattern("121")
-            .input('1', Items.DIAMOND)
-            .input('2', ingredient)
-            .criterion(FabricRecipeProvider.hasItem(ingredient), FabricRecipeProvider.conditionsFromItem(ingredient))
-            .offerTo(exporter);
+            .define('1', Items.DIAMOND)
+            .define('2', ingredient)
+            .unlockedBy(FabricRecipeProvider.getHasName(ingredient), FabricRecipeProvider.has(ingredient))
+            .save(exporter);
     }
 
-    public static void plushShapeless(RecipeExporter exporter, ItemConvertible result, ItemConvertible plush, ItemConvertible... ingredients) {
+    public static void plushShapeless(RecipeOutput exporter, ItemLike result, ItemLike plush, ItemLike... ingredients) {
         //CREATE SHAPELESS RECIPE WITH A PLUSH
-        ShapelessRecipeJsonBuilder shapeless =
-            ShapelessRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, result)
-            .input(plush);
+        ShapelessRecipeBuilder shapeless =
+            ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, result)
+            .requires(plush);
 
         //ADD EXTRA INGREDIENTS AS NEEDED
-        for (ItemConvertible ingredient : ingredients) {
-            shapeless.input(ingredient);
+        for (ItemLike ingredient : ingredients) {
+            shapeless.requires(ingredient);
         }
 
         //ADD RECIPE UNLOCK REQUIREMENT AND EXPORT RECIPE
-        shapeless.criterion(FabricRecipeProvider.hasItem(plush), FabricRecipeProvider.conditionsFromItem(plush))
-        .offerTo(exporter);
+        shapeless.unlockedBy(FabricRecipeProvider.getHasName(plush), FabricRecipeProvider.has(plush))
+        .save(exporter);
     }
 
-    public static void simpleShapeless(RecipeExporter exporter, ItemConvertible result, ItemConvertible... ingredients) {
+    public static void simpleShapeless(RecipeOutput exporter, ItemLike result, ItemLike... ingredients) {
         //CREATE SHAPELESS RECIPE WITH A PLUSH
-        ShapelessRecipeJsonBuilder shapeless =
-            ShapelessRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, result);
+        ShapelessRecipeBuilder shapeless =
+            ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, result);
 
         //ADD EXTRA INGREDIENTS AS NEEDED
-        for (ItemConvertible ingredient : ingredients) {
-            shapeless.input(ingredient);
-            shapeless.criterion(FabricRecipeProvider.hasItem(ingredient), FabricRecipeProvider.conditionsFromItem(ingredient));
+        for (ItemLike ingredient : ingredients) {
+            shapeless.requires(ingredient);
+            shapeless.unlockedBy(FabricRecipeProvider.getHasName(ingredient), FabricRecipeProvider.has(ingredient));
         }
 
         //ADD RECIPE UNLOCK REQUIREMENT AND EXPORT RECIPE
-        shapeless.offerTo(exporter);
+        shapeless.save(exporter);
     }
 }
