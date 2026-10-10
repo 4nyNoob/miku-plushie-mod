@@ -2,21 +2,21 @@ package com.any.miku_plushie.registry;
 
 import com.any.miku_plushie.Constants;
 import com.any.miku_plushie.MikuPlushieFabric;
-import net.fabricmc.fabric.api.particle.v1.FabricParticleTypes;
+import com.any.miku_plushie.impl.common.registry.ModParticles;
 import net.minecraft.core.Registry;
 import net.minecraft.core.particles.SimpleParticleType;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
 
-public class ModParticles {
-
-  public static final SimpleParticleType MIKU_SPAWN = FabricParticleTypes.simple();
+public class ModParticlesFabric {
 
   public static void initialize() {
 
     MikuPlushieFabric.LOGGER.info("Registering " + Constants.MOD_ID + " Particles");
 
-    Registry.register(BuiltInRegistries.PARTICLE_TYPE, ResourceLocation.fromNamespaceAndPath(Constants.MOD_ID, "miku_spawn"), MIKU_SPAWN);
+    ModParticles.MIKU_SPAWN = new SimpleParticleType(false);
+
+    Registry.register(BuiltInRegistries.PARTICLE_TYPE, ResourceLocation.fromNamespaceAndPath(Constants.MOD_ID, "miku_spawn"), ModParticles.MIKU_SPAWN);
 
   }
 }

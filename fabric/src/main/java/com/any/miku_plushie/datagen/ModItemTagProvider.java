@@ -3,7 +3,7 @@ package com.any.miku_plushie.datagen;
 import com.any.miku_plushie.Constants;
 import com.any.miku_plushie.entity.AbstractPlushEntity;
 import com.any.miku_plushie.impl.common.registry.ModItems;
-import com.any.miku_plushie.registry.ModEntities;
+import com.any.miku_plushie.registry.ModEntitiesFabric;
 import com.any.miku_plushie.impl.common.util.ModUtil;
 import java.util.ArrayList;
 import java.util.List;
@@ -32,7 +32,7 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
   @Override
   protected void addTags(HolderLookup.Provider wrapperLookup) {
 
-    List<EntityType<? extends AbstractPlushEntity>> plushEntities = ModEntities.PLUSH_ENTITIES;
+    List<EntityType<? extends AbstractPlushEntity>> plushEntities = ModEntitiesFabric.PLUSH_ENTITIES;
 
     for (EntityType<?> plushEntity : plushEntities) {
       String plushName = plushEntity.toShortString();

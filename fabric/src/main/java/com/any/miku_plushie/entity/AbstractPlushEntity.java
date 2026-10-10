@@ -1,10 +1,10 @@
 package com.any.miku_plushie.entity;
 
-import com.any.miku_plushie.entity.goals.MikuDelayedAttackGoal;
+import com.any.miku_plushie.impl.common.entity.goals.MikuDelayedAttackGoal;
 import com.any.miku_plushie.entity.variant.PlushVariants;
 import com.any.miku_plushie.impl.common.registry.ModBlocks;
+import com.any.miku_plushie.impl.common.registry.ModEntities;
 import com.any.miku_plushie.impl.common.registry.ModItems;
-import com.any.miku_plushie.registry.ModEntities;
 import com.any.miku_plushie.impl.common.util.ModUtil;
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableMap;

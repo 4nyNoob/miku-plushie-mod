@@ -20,13 +20,13 @@ public class ModSoundEventsFabric {
     MikuPlushieFabric.LOGGER.info("Registering " + Constants.MOD_ID + " Sounds");
 
     //DYNAMICALLY REGISTER SOUND EVENTS
-    for (EntityType<?> plush : ModEntities.PLUSH_ENTITIES) {
+    for (EntityType<?> plush : ModEntitiesFabric.PLUSH_ENTITIES) {
 
       //SKIP KONOHA PLUSH
-      if (!plush.equals(ModEntities.KONOHA)) {
+      if (!plush.equals(ModEntitiesFabric.KONOHA)) {
 
         //ADD MIKU SOUND EVENTS
-        if (plush.equals(ModEntities.MIKU)) {
+        if (plush.equals(ModEntitiesFabric.MIKU)) {
           for (String mikuSoundEvent : ModSounds.MIKU_SOUND_EVENT) {
             SoundEvent soundEvent = registerSound(plush.toShortString().replace("_plush", "") + "_" + mikuSoundEvent);
             ModSounds.MIKU_PLUSHIES_SOUND_EVENTS.add(soundEvent);
