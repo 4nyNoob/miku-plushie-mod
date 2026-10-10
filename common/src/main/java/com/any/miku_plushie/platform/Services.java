@@ -1,7 +1,7 @@
-package com.example.examplemod.platform;
+package com.any.miku_plushie.platform;
 
-import com.example.examplemod.Constants;
-import com.example.examplemod.platform.services.IPlatformHelper;
+import com.any.miku_plushie.Constants;
+import com.any.miku_plushie.platform.services.IPlatformHelper;
 
 import java.util.ServiceLoader;
 

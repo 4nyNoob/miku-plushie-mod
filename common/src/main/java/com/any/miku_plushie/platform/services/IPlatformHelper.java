@@ -1,4 +1,4 @@
-package com.example.examplemod.platform.services;
+package com.any.miku_plushie.platform.services;
 
 public interface IPlatformHelper {
 
