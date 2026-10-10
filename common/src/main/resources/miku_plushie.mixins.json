@@ -4,7 +4,10 @@
   "package": "com.any.miku_plushie.mixin",
   "refmap": "${mod_id}.refmap.json",
   "compatibilityLevel": "JAVA_18",
-  "mixins": [],
+  "mixins": [
+    "LivingEntityMixin",
+    "PlayerMixin"
+  ],
   "client": [
     "MixinMinecraft"
   ],
