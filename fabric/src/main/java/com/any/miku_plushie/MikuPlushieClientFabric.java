@@ -24,7 +24,7 @@ public class MikuPlushieClientFabric implements ClientModInitializer {
 
     MikuPlushieClient.init();
 
-    MikuPlushieFabric.LOGGER.info("Registering " + Constants.MOD_ID + " Block Render Layer Maps");
+    Constants.LOG.info("Registering " + Constants.MOD_ID + " Block Render Layer Maps");
 
     //PLUSH CUTOUT
     for (int block = 0; block < ModBlocks.PLUSH_BLOCKS.size(); block++) {
