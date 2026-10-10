@@ -1,4 +1,4 @@
-package com.any.miku_plushie.datagen;
+package com.any.miku_plushie.impl.common.datagen;
 
 import java.util.concurrent.CompletableFuture;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;

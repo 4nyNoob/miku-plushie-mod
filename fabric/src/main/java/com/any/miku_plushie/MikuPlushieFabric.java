@@ -9,9 +9,9 @@ import com.any.miku_plushie.impl.common.registry.ModItems;
 import com.any.miku_plushie.impl.common.registry.ModParticles;
 import com.any.miku_plushie.impl.common.registry.ModSounds;
 import com.any.miku_plushie.impl.common.registry.ModTabs;
-import com.any.miku_plushie.registry.ModResourcePacksFabric;
-import com.any.miku_plushie.registry.ModVillagerTradesFabric;
-import com.any.miku_plushie.worldgen.generators.ModWorldGeneration;
+import com.any.miku_plushie.impl.common.registry.ModResourcePacksFabric;
+import com.any.miku_plushie.impl.common.registry.ModVillagerTradesFabric;
+import com.any.miku_plushie.impl.common.worldgen.generators.ModWorldGenerationFabric;
 import java.util.function.BiConsumer;
 import java.util.function.Consumer;
 import net.fabricmc.api.ModInitializer;
@@ -42,16 +42,15 @@ public class MikuPlushieFabric implements ModInitializer {
     bind(BuiltInRegistries.CREATIVE_MODE_TAB, ModTabs::register);
 
     // misc registration
+    for (EntityType<? extends AbstractPlushEntity> entity : ModEntities.PLUSH_ENTITIES) {
+      FabricDefaultAttributeRegistry.register(entity, AbstractPlushEntity.createAttributes());
+    }
+
     CommandRegistrationCallback.EVENT.register(ModCommands::register);
 
     ModResourcePacksFabric.initialize();
     ModVillagerTradesFabric.initialize();
-    ModWorldGeneration.generateModWorldGeneration();
-
-    // technically occurred at the end of ModEntitiesFabric#initialize, putting it before PlushVariants#initialize
-    for (EntityType<? extends AbstractPlushEntity> entity : ModEntities.PLUSH_ENTITIES) {
-      FabricDefaultAttributeRegistry.register(entity, AbstractPlushEntity.createAttributes());
-    }
+    ModWorldGenerationFabric.generateModWorldGeneration(); // fabric specific
 
     PlushVariants.initialize();
 

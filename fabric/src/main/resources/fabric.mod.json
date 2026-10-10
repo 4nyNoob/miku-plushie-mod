@@ -23,7 +23,7 @@
       "com.any.miku_plushie.MikuPlushieClientFabric"
     ],
     "fabric-datagen": [
-      "com.any.miku_plushie.datagen.MikuPlushieDataGenerator"
+      "com.any.miku_plushie.impl.common.datagen.MikuPlushieDataGenerator"
     ]
   },
   "mixins": [

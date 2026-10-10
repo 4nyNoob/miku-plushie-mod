@@ -9,8 +9,8 @@ import com.any.miku_plushie.impl.common.registry.ModItems;
 import com.any.miku_plushie.impl.common.registry.ModParticles;
 import com.any.miku_plushie.impl.common.registry.ModSounds;
 import com.any.miku_plushie.impl.common.registry.ModTabs;
-import com.any.miku_plushie.registry.ModResourcePacksNeoForge;
-import com.any.miku_plushie.registry.ModVillagerTradesNeoForge;
+import com.any.miku_plushie.impl.common.registry.ModResourcePacksNeoForge;
+import com.any.miku_plushie.impl.common.registry.ModVillagerTradesNeoForge;
 import java.util.function.BiConsumer;
 import java.util.function.Consumer;
 import net.minecraft.core.Registry;
@@ -47,6 +47,7 @@ public class MikuPlushieNeoForge {
     bind(Registries.PARTICLE_TYPE, ModParticles::register);
     bind(Registries.CREATIVE_MODE_TAB, ModTabs::register);
 
+    // misc registration
     modEventBus.addListener((EntityAttributeCreationEvent event) -> {
       for (EntityType<? extends AbstractPlushEntity> entity : ModEntities.PLUSH_ENTITIES) {
         event.put(entity, AbstractPlushEntity.createAttributes().build());
