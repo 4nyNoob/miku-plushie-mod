@@ -1,6 +1,6 @@
 package com.any.miku_plushie.worldgen.generators;
 
-import com.any.miku_plushie.worldgen.ModPlacedFeatures;
+import com.any.miku_plushie.impl.common.worldgen.ModPlacedFeatures;
 import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
 import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
 import net.minecraft.world.level.biome.Biomes;

@@ -1,4 +1,4 @@
-package com.any.miku_plushie.worldgen;
+package com.any.miku_plushie.impl.common.worldgen;
 
 import com.any.miku_plushie.Constants;
 import java.util.List;
