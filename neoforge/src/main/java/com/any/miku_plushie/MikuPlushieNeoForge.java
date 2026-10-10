@@ -1,7 +1,9 @@
 package com.any.miku_plushie;
 
 import com.any.miku_plushie.impl.common.entity.AbstractPlushEntity;
+import com.any.miku_plushie.impl.common.entity.variant.PlushVariants;
 import com.any.miku_plushie.impl.common.registry.ModBlocks;
+import com.any.miku_plushie.impl.common.registry.ModCommands;
 import com.any.miku_plushie.impl.common.registry.ModEntities;
 import com.any.miku_plushie.impl.common.registry.ModItems;
 import com.any.miku_plushie.impl.common.registry.ModParticles;
@@ -17,7 +19,10 @@ import net.minecraft.world.entity.EntityType;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.common.Mod;
+import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.neoforged.fml.loading.FMLLoader;
+import net.neoforged.neoforge.common.NeoForge;
+import net.neoforged.neoforge.event.RegisterCommandsEvent;
 import net.neoforged.neoforge.event.entity.EntityAttributeCreationEvent;
 import net.neoforged.neoforge.registries.RegisterEvent;
 
@@ -45,6 +50,12 @@ public class MikuPlushieNeoForge {
         event.put(entity, AbstractPlushEntity.createAttributes().build());
       }
     });
+
+    NeoForge.EVENT_BUS.addListener((RegisterCommandsEvent event) ->
+        ModCommands.register(event.getDispatcher(), event.getBuildContext(), event.getCommandSelection()));
+
+    // must occur after entities are registered, so we do it during common setup, after RegisterEvent is fired
+    modEventBus.addListener((FMLCommonSetupEvent event) -> event.enqueueWork(PlushVariants::initialize));
 
     MikuPlushie.postModInitialization();
 
