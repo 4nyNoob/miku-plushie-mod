@@ -9,7 +9,7 @@
     "PlayerMixin"
   ],
   "client": [
-    "MixinMinecraft"
+    "MinecraftMixin"
   ],
   "server": [],
   "injectors": {

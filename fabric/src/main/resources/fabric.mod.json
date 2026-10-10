@@ -36,6 +36,7 @@
     "minecraft": "${minecraft_version}",
     "java": ">=${java_version}",
     "geckolib": ">=1.21.1-4.8.2"
-  }
+  },
+  "accessWidener": "${mod_id}.accesswidener"
 }
   
