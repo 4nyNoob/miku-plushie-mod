@@ -18,6 +18,10 @@ dependencies {
   implementation("com.eliotlash.mclib:mclib:20")
 }
 
+fabricApi {
+  configureDataGeneration() // pre 1.21.4
+}
+
 loom {
     def aw = project(':common').file("src/main/resources/${mod_id}.accesswidener")
     if (aw.exists()) {
