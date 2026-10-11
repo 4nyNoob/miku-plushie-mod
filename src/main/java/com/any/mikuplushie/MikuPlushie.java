@@ -15,10 +15,10 @@ public class MikuPlushie implements ModInitializer {
 	public void onInitialize() {
 		LOGGER.info("Miku is now Joining Fabric!!!");
 		ModBlocks.initialize();
-		ModItems.initialize();
+		ModEntities.initialize();
 		ModSoundEvents.initialize();
+		ModItems.initialize();
         ModCommands.initialize();
-        ModEntities.initialize();
         ModResourcePacks.initialize();
 		ModVillagerTrades.initialize();
 		ModParticles.initialize();

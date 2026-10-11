@@ -32,7 +32,7 @@ public class SpawnMikusCommand {
 
     public static void register (CommandDispatcher<ServerCommandSource> dispatcher) {
         dispatcher.register(CommandManager.literal("spawn_mikus")
-            .requires(source -> source.hasPermissionLevel(2))
+            .requires(CommandManager.requirePermissionLevel(CommandManager.GAMEMASTERS_CHECK))
             .then(CommandManager.argument("pos", Vec3ArgumentType.vec3())
                 .executes(commandContext ->
                     spawnMikus(commandContext.getSource(),
@@ -115,13 +115,13 @@ public class SpawnMikusCommand {
                             //GET FIRST TWO WORDS
                             String entityName = ModUtil.getEntityNameFromBlockId(blockName);
                             //ENTITY TYPE REGISTRY
-                            Registry<EntityType<?>> entityTypeRegistry = world.getRegistryManager().get(RegistryKeys.ENTITY_TYPE);
+                            Registry<EntityType<?>> entityTypeRegistry = world.getRegistryManager().getOrThrow(RegistryKeys.ENTITY_TYPE);
 
                             //ITERATE THROUGH ALL REGISTERED ENTITIES AND FILTER BY NAME
                             for (int entity = 0; entity < entityTypeRegistry.size(); entity++) {
                                 if (Objects.requireNonNull(entityTypeRegistry.get(entity)).getTranslationKey().contains(entityName)){
                                     //SPAWN ENTITY ACCORDING TO BLOCK NAME
-                                    AbstractPlushEntity spawned = (AbstractPlushEntity) Objects.requireNonNull(entityTypeRegistry.get(entity)).create(world);
+                                    AbstractPlushEntity spawned = (AbstractPlushEntity) Objects.requireNonNull(entityTypeRegistry.get(entity)).create(world, net.minecraft.entity.SpawnReason.COMMAND);
                                     //SETUP AND SPAWN ENTITY
                                     setupEntity(Objects.requireNonNull(spawned), entitySpawnLocation);
                                     spawned.setVariantByBlock(blockName);

@@ -1,6 +1,7 @@
 {
   "pack": {
-    "pack_format": 34,
-    "description": "Miku Plushies Legacy Textures"
+    "description": "Miku Plushies Legacy Textures",
+    "min_format": 75,
+    "max_format": 75
   }
 }

@@ -2,12 +2,8 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "item": "miku-plushie:miku_plush"
-    },
-    {
-      "item": "minecraft:carved_pumpkin"
-    }
+    "miku-plushie:miku_plush",
+    "minecraft:carved_pumpkin"
   ],
   "result": {
     "count": 1,

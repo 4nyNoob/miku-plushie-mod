@@ -6,7 +6,7 @@ import net.minecraft.client.particle.*;
 import net.minecraft.client.world.ClientWorld;
 import net.minecraft.particle.SimpleParticleType;
 
-public class PlushSpawnParticle extends SpriteBillboardParticle {
+public class PlushSpawnParticle extends BillboardParticle {
     private final SpriteProvider spriteProvider;
 
     protected PlushSpawnParticle(
@@ -15,7 +15,7 @@ public class PlushSpawnParticle extends SpriteBillboardParticle {
         double velocityX, double velocityY, double velocityZ,
         SpriteProvider spriteProvider
     ) {
-        super(world, x, y, z);
+        super(world, x, y, z, spriteProvider.getFirst());
 
         this.gravityStrength = -0.1F;
         this.velocityMultiplier = 0.9F;
@@ -27,7 +27,7 @@ public class PlushSpawnParticle extends SpriteBillboardParticle {
 
         this.scale = 0.1F * (this.random.nextFloat() * this.random.nextFloat() * 2.0F + 1.0F);
         this.maxAge = (int) (16.0 / (this.random.nextFloat() * 0.8 + 0.2)) + 2;
-        this.setSpriteForAge(spriteProvider);
+        this.updateSprite(spriteProvider);
 
         this.setPos(
             this.x + (Math.sin(this.maxAge) * 0.5),
@@ -37,14 +37,14 @@ public class PlushSpawnParticle extends SpriteBillboardParticle {
     }
 
     @Override
-    public ParticleTextureSheet getType() {
-        return ParticleTextureSheet.PARTICLE_SHEET_TRANSLUCENT;
+    public BillboardParticle.RenderType getRenderType() {
+        return BillboardParticle.RenderType.PARTICLE_ATLAS_TRANSLUCENT;
     }
 
     @Override
     public void tick() {
         super.tick();
-        this.setSpriteForAge(this.spriteProvider);
+        this.updateSprite(this.spriteProvider);
     }
 
     @Environment(EnvType.CLIENT)
@@ -59,7 +59,7 @@ public class PlushSpawnParticle extends SpriteBillboardParticle {
             SimpleParticleType defaultParticleType,
             ClientWorld clientWorld,
             double x, double y, double z,
-            double velocityX, double velocityY, double velocityZ
+            double velocityX, double velocityY, double velocityZ, net.minecraft.util.math.random.Random random
         ) {
             return new PlushSpawnParticle(clientWorld, x, y, z, velocityX, velocityY, velocityZ, this.spriteProvider);
         }

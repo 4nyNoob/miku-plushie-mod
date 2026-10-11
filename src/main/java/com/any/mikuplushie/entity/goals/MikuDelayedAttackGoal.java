@@ -33,7 +33,7 @@ public class MikuDelayedAttackGoal extends MeleeAttackGoal {
         if (this.mikuAttacking){
             --this.attackDelay;
             if (this.attackDelay <= 0){
-                this.mob.tryAttack(this.target);
+                this.mob.tryAttack((net.minecraft.server.world.ServerWorld) this.mob.getEntityWorld(), this.target);
                 this.mikuAttacking = false;
             }
         } else {

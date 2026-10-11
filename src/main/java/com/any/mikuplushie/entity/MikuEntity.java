@@ -9,9 +9,9 @@ import net.minecraft.particle.ParticleTypes;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
 import software.bernie.geckolib.animatable.instance.AnimatableInstanceCache;
-import software.bernie.geckolib.animation.AnimatableManager;
+import software.bernie.geckolib.animatable.manager.AnimatableManager;
 import software.bernie.geckolib.animation.AnimationController;
-import software.bernie.geckolib.animation.PlayState;
+import software.bernie.geckolib.animation.object.PlayState;
 import software.bernie.geckolib.animation.RawAnimation;
 import software.bernie.geckolib.util.GeckoLibUtil;
 
@@ -54,7 +54,7 @@ public class MikuEntity extends AbstractPlushEntity {
     @Override
     public void registerControllers(AnimatableManager.ControllerRegistrar controllers) {
         super.registerControllers(controllers);
-        controllers.add(new AnimationController<>(this, "miku_eat", 2, state -> {
+        controllers.add(new AnimationController<>( "miku_eat", 2, state -> {
             if (!this.isInSittingPose() && this.isEatingLeek()){
                 return state.setAndContinue(EAT);
             }
@@ -73,7 +73,7 @@ public class MikuEntity extends AbstractPlushEntity {
         super.tickMovement();
 
         //CLIENT LEEK EATING TIMER
-        if (this.getWorld().isClient){
+        if (this.getEntityWorld().isClient()){
             //DECREASE LEEK TIMER UNTIL 0
             this.eatLeekTimer = Math.max(0, this.eatLeekTimer -1);
             //SET EATING LEEK TRUE IF THE COUNTER IS RUNNING
@@ -81,8 +81,8 @@ public class MikuEntity extends AbstractPlushEntity {
 
             //SPAWN EATING PARTICLES
             if (eatLeekTimer > 0 && !this.isInSittingPose()) {
-                Vec3d mikuPos = this.getPos();
-                this.getWorld().addParticle(
+                Vec3d mikuPos = this.getEntityPos();
+                this.getEntityWorld().addParticleClient(
                     new BlockStateParticleEffect(ParticleTypes.BLOCK, ModBlocks.LEEK_CROP.withAge(7)),
                     mikuPos.getX(),
                     mikuPos.getY() + 0.5D,

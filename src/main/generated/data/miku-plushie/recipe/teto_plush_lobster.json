@@ -2,15 +2,9 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "item": "miku-plushie:teto_plush"
-    },
-    {
-      "item": "minecraft:seagrass"
-    },
-    {
-      "item": "minecraft:seagrass"
-    }
+    "miku-plushie:teto_plush",
+    "minecraft:seagrass",
+    "minecraft:seagrass"
   ],
   "result": {
     "count": 1,

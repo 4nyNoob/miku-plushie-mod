@@ -2,15 +2,9 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "item": "minecraft:gold_ingot"
-    },
-    {
-      "item": "minecraft:redstone"
-    },
-    {
-      "item": "minecraft:black_stained_glass"
-    }
+    "minecraft:gold_ingot",
+    "minecraft:redstone",
+    "minecraft:black_stained_glass"
   ],
   "result": {
     "count": 1,

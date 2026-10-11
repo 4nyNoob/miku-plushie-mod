@@ -8,8 +8,6 @@ import com.any.mikuplushie.registry.ModItems;
 import com.any.mikuplushie.util.ModUtil;
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableMap;
-import com.sun.jna.platform.win32.OaIdl;
-import com.sun.net.httpserver.Authenticator;
 import net.minecraft.block.Blocks;
 import net.minecraft.component.DataComponentTypes;
 import net.minecraft.component.type.FoodComponent;
@@ -29,7 +27,8 @@ import net.minecraft.entity.passive.TameableEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.nbt.NbtCompound;
+import net.minecraft.storage.ReadView;
+import net.minecraft.storage.WriteView;
 import net.minecraft.particle.BlockStateParticleEffect;
 import net.minecraft.particle.ParticleTypes;
 import net.minecraft.recipe.Ingredient;
@@ -46,12 +45,11 @@ import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 import software.bernie.geckolib.animatable.GeoEntity;
 import software.bernie.geckolib.animatable.instance.AnimatableInstanceCache;
-import software.bernie.geckolib.animation.AnimatableManager;
+import software.bernie.geckolib.animatable.manager.AnimatableManager;
 import software.bernie.geckolib.animation.AnimationController;
 import software.bernie.geckolib.animation.RawAnimation;
 import software.bernie.geckolib.util.GeckoLibUtil;
 
-import java.awt.font.TextHitInfo;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
@@ -60,11 +58,8 @@ import java.util.function.Predicate;
 public class AbstractPlushEntity extends TameableEntity implements GeoEntity {
 
     private static final TrackedData<Integer> SPAWN_AGE = DataTracker.registerData(AbstractPlushEntity.class, TrackedDataHandlerRegistry.INTEGER);
+    private static final TrackedData<Boolean> MUSIC_PLAYING = DataTracker.registerData(AbstractPlushEntity.class, TrackedDataHandlerRegistry.BOOLEAN);
     private static final TrackedData<Integer> VARIANT = DataTracker.registerData(AbstractPlushEntity.class, TrackedDataHandlerRegistry.INTEGER);
-
-    //DANCE GLOBALS
-    boolean songPlaying;
-    @Nullable BlockPos songSource;
 
     //GLIB VARIABLES
     private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
@@ -89,7 +84,7 @@ public class AbstractPlushEntity extends TameableEntity implements GeoEntity {
         this.goalSelector.add(1, new SitGoal(this));
         this.goalSelector.add(2, new MikuDelayedAttackGoal(this, 1.5F, true));
         this.goalSelector.add(4, new FollowOwnerGoal(this,1.0F, 5F, 1F));
-        this.goalSelector.add(6, new TemptGoal(this, 1.5, Ingredient.ofItems(ModItems.LEEK), false));
+        this.goalSelector.add(6, new TemptGoal(this, 1.5, stack -> stack.isOf(ModItems.LEEK), false));
         this.goalSelector.add(7, new LookAtEntityGoal(this, AbstractPlushEntity.class, 8F));
         this.goalSelector.add(8, new LookAtEntityGoal(this, PlayerEntity.class, 8F));
         this.goalSelector.add(9, new LookAroundGoal(this));
@@ -110,9 +105,10 @@ public class AbstractPlushEntity extends TameableEntity implements GeoEntity {
     //ATTRIBUTES
     public static DefaultAttributeContainer.Builder createAttributes() {
         return MobEntity.createMobAttributes()
-            .add(EntityAttributes.GENERIC_MAX_HEALTH, 20.0F)
-            .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.3F)
-            .add(EntityAttributes.GENERIC_ATTACK_DAMAGE, 2.0F);
+            .add(EntityAttributes.MAX_HEALTH, 20.0F)
+            .add(EntityAttributes.MOVEMENT_SPEED, 0.3F)
+            .add(EntityAttributes.TEMPT_RANGE, 10.0)
+            .add(EntityAttributes.ATTACK_DAMAGE, 2.0F);
     }
 
     //ENTITY POSES
@@ -166,7 +162,7 @@ public class AbstractPlushEntity extends TameableEntity implements GeoEntity {
     //ANIMATION CONTROLLER
     @Override
     public void registerControllers(AnimatableManager.ControllerRegistrar controllers) {
-        controllers.add(new AnimationController<>(this, "Plush", 2, state -> {
+        controllers.add(new AnimationController<>( "Plush", 2, state -> {
             List<RawAnimation> DANCES = getDances();
 
             //SITTING ANIMATIONS
@@ -189,11 +185,11 @@ public class AbstractPlushEntity extends TameableEntity implements GeoEntity {
 
                 //DANCE
                 else if (this.isSongPlaying()){
-                    RawAnimation currentAnimation = state.getController().getCurrentRawAnimation();
+                    RawAnimation currentAnimation = state.controller().getCurrentRawAnimation();
 
                     for (RawAnimation animation : DANCES){
                         //IF ALREADY DANCING THEN CONTINUE
-                        if (currentAnimation.equals(animation)){
+                        if (animation.equals(currentAnimation)){
                             return state.setAndContinue(animation);
                         }
                     }
@@ -212,11 +208,11 @@ public class AbstractPlushEntity extends TameableEntity implements GeoEntity {
 
                 //ATTACKING
                 else if (this.handSwinging) {
-                    RawAnimation currentAnimation = state.getController().getCurrentRawAnimation();
+                    RawAnimation currentAnimation = state.controller().getCurrentRawAnimation();
 
                     for (RawAnimation animation : ATTACK_ANIMATIONS){
                         //IF ALREADY ATTACKING THE CONTINUE
-                        if (currentAnimation.equals(animation)){
+                        if (animation.equals(currentAnimation)){
                             return state.setAndContinue(animation);
                         }
                     }
@@ -262,31 +258,32 @@ public class AbstractPlushEntity extends TameableEntity implements GeoEntity {
     //ENTITY RIGHT CLICK
     @Override
     public ActionResult interactMob(PlayerEntity player, Hand hand) {
-        ItemStack playerItemStack = player.getStackInHand(player.getActiveHand());
+        ItemStack playerItemStack = player.getStackInHand(hand);
         FoodComponent foodComponent = playerItemStack.get(DataComponentTypes.FOOD);
-        ItemStack entityHandStack = this.getMainHandStack();
 
 
         //TAMED INTERACTION
         if (this.isOnGround() && this.isTamed() && this.isOwner(player)) {
             //DO STUFF ON SERVER
-            if (!this.getWorld().isClient) {
-                //DROP HELD ITEM
+            if (!this.getEntityWorld().isClient()) {
+                //OPEN EQUIPMENT MENU
                 if (player.isSneaking() && playerItemStack.isEmpty()) {
-                    this.dropStack(entityHandStack);
-                    this.equipStack(EquipmentSlot.MAINHAND, ItemStack.EMPTY);
+                    player.openHandledScreen(new net.minecraft.screen.SimpleNamedScreenHandlerFactory(
+                        (syncId, inventory, owner) -> new com.any.mikuplushie.inventory.PlushEquipmentScreenHandler(
+                            syncId, inventory, new com.any.mikuplushie.inventory.PlushEquipmentInventory(this)),
+                        net.minecraft.text.Text.translatable("container.miku-plushie.equipment")));
                     return ActionResult.SUCCESS;
                 }
 
                 //LEEK HEAL
                 else if (this.getHealth() < this.getMaxHealth() && playerItemStack.isOf(ModItems.LEEK)) {
-                    if (!this.getWorld().isClient()){
+                    if (!this.getEntityWorld().isClient()){
                         if (!player.getAbilities().creativeMode){
                             playerItemStack.decrement(1);
                         }
                         float nutrition = foodComponent != null ? (float)foodComponent.nutrition() : 1.0F;
                         this.heal(nutrition);
-                        this.playSound(SoundEvents.ENTITY_GENERIC_EAT, 1, 1);
+                        this.playSound(SoundEvents.ENTITY_GENERIC_EAT.value(), 1, 1);
                     }
                     return ActionResult.SUCCESS;
                 }
@@ -294,7 +291,9 @@ public class AbstractPlushEntity extends TameableEntity implements GeoEntity {
                 //TOGGLE SITTING POSE
                 else {
                     this.setSitting(!this.isSitting());
-                    this.setInSittingPose(!this.isInSittingPose());
+                    this.setInSittingPose(this.isSitting());
+                    this.setTarget(null);
+                    this.getNavigation().stop();
                     if (this.isInSittingPose()) {
                         this.setPose(EntityPose.SITTING);
                     } else {
@@ -305,11 +304,11 @@ public class AbstractPlushEntity extends TameableEntity implements GeoEntity {
 
             } else if (this.getHealth() < this.getMaxHealth() && playerItemStack.isOf(ModItems.LEEK)) {
                 for (int particle = 0; particle < 20; particle++) {
-                    this.getWorld().addParticle(
+                    this.getEntityWorld().addParticleClient(
                         new BlockStateParticleEffect(ParticleTypes.BLOCK, ModBlocks.LEEK_CROP.withAge(7)),
-                        this.getPos().getX(),
-                        this.getPos().getY() + 0.5D,
-                        this.getPos().getZ(),
+                        this.getEntityPos().getX(),
+                        this.getEntityPos().getY() + 0.5D,
+                        this.getEntityPos().getZ(),
                         this.random.nextGaussian() * 0.1,
                         this.random.nextGaussian() * 0.1,
                         this.random.nextGaussian() * 0.1
@@ -342,16 +341,26 @@ public class AbstractPlushEntity extends TameableEntity implements GeoEntity {
     public void tickMovement() {
         super.tickMovement();
         this.tickHandSwing();
-
-        //GET NEARBY SONG PLAYING
-        if (
-            this.songSource == null
-                || !this.songSource.isWithinDistance(this.getPos(), 8D)
-                || !this.getWorld().getBlockState(this.songSource).isOf(Blocks.JUKEBOX)
-        )
-        {
-            this.songPlaying = false;
-            this.songSource = null;
+        if (!this.getEntityWorld().isClient() && (this.age <= 1 || (this.age + this.getId()) % 20 == 0)) {
+            boolean musicPlaying = false;
+            int minX = (this.getBlockX() - 8) >> 4;
+            int maxX = (this.getBlockX() + 8) >> 4;
+            int minZ = (this.getBlockZ() - 8) >> 4;
+            int maxZ = (this.getBlockZ() + 8) >> 4;
+            for (int x = minX; x <= maxX && !musicPlaying; x++) {
+                for (int z = minZ; z <= maxZ && !musicPlaying; z++) {
+                    if (!this.getEntityWorld().isChunkLoaded(new BlockPos(x << 4, 0, z << 4))) continue;
+                    for (var blockEntity : this.getEntityWorld().getChunk(x, z).getBlockEntities().values()) {
+                        if (blockEntity instanceof net.minecraft.block.entity.JukeboxBlockEntity jukebox
+                            && jukebox.getPos().isWithinDistance(this.getEntityPos(), 8D)
+                            && jukebox.getManager().isPlaying()) {
+                            musicPlaying = true;
+                            break;
+                        }
+                    }
+                }
+            }
+            this.dataTracker.set(MUSIC_PLAYING, musicPlaying);
         }
 
         //INCREMENT SPAWN TIMER IF IT'S LESS THAN 10
@@ -363,18 +372,18 @@ public class AbstractPlushEntity extends TameableEntity implements GeoEntity {
 
     //IS SONG PLAYING FUNCTION
     public boolean isSongPlaying() {
-        return this.songPlaying;
+        return this.dataTracker.get(MUSIC_PLAYING);
     }
 
     //NEARBY SONG PLAYING
     @Override
     public void setNearbySongPlaying(BlockPos songPosition, boolean playing) {
-        this.songSource = songPosition;
-        this.songPlaying = playing;
+        // Server-side jukebox checks and tracked data also cover late spawns,
+        // entering the range, and multiple nearby jukeboxes.
     }
 
     public String getPlushName(){
-        return this.getDefaultName().toString().split("[.]")[2].split("'")[0];
+        return net.minecraft.registry.Registries.ENTITY_TYPE.getId(this.getType()).getPath();
     }
 
     //LIST OF VARIANTS
@@ -413,15 +422,16 @@ public class AbstractPlushEntity extends TameableEntity implements GeoEntity {
     protected void initDataTracker(DataTracker.Builder builder) {
         super.initDataTracker(builder);
         builder.add(SPAWN_AGE, 0);
+        builder.add(MUSIC_PLAYING, false);
         builder.add(this.getVariantDataTracker(), 0);
     }
 
     //LOAD AND SAVE NBT DATA
     @Override
-    public void readCustomDataFromNbt(NbtCompound nbt) {
-        super.readCustomDataFromNbt(nbt);
-        this.dataTracker.set(SPAWN_AGE, nbt.getInt("SpawnAge"));
-        this.dataTracker.set(this.getVariantDataTracker(), nbt.getInt("Variant"));
+    public void readCustomData(ReadView nbt) {
+        super.readCustomData(nbt);
+        this.dataTracker.set(SPAWN_AGE, nbt.getInt("SpawnAge", 0));
+        this.dataTracker.set(this.getVariantDataTracker(), Math.clamp(nbt.getInt("Variant", 0), 0, this.getVariantList().size() - 1));
     }
 
     @Override
@@ -430,8 +440,8 @@ public class AbstractPlushEntity extends TameableEntity implements GeoEntity {
     }
 
     @Override
-    public void writeCustomDataToNbt(NbtCompound nbt) {
-        super.writeCustomDataToNbt(nbt);
+    public void writeCustomData(WriteView nbt) {
+        super.writeCustomData(nbt);
         nbt.putInt("SpawnAge", Math.min(this.age, 11));
         nbt.putInt("Variant", this.getTrackedVariant());
     }

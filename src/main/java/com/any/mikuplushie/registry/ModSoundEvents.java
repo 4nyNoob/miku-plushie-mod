@@ -36,14 +36,14 @@ public class ModSoundEvents {
 				//ADD MIKU SOUND EVENTS
 				if (plush.equals(ModEntities.MIKU)){
 					for (String mikuSoundEvent : MIKU_SOUND_EVENT){
-						SoundEvent soundEvent = registerSound(plush.getUntranslatedName().replace("_plush", "") + "_" + mikuSoundEvent);
+						SoundEvent soundEvent = registerSound(Registries.ENTITY_TYPE.getId(plush).getPath().replace("_plush", "") + "_" + mikuSoundEvent);
 						MIKU_PLUSHIES_SOUND_EVENTS.add(soundEvent);
 					}
 				}
 
 				//ADD REGULAR SOUND EVENTS
 				for (String event : SOUND_EVENT){
-					SoundEvent soundEvent = registerSound(plush.getUntranslatedName().replace("_plush", "") + "_" + event);
+					SoundEvent soundEvent = registerSound(Registries.ENTITY_TYPE.getId(plush).getPath().replace("_plush", "") + "_" + event);
 					MIKU_PLUSHIES_SOUND_EVENTS.add(soundEvent);
 				}
 			}

@@ -11,6 +11,8 @@ import net.minecraft.entity.SpawnGroup;
 import net.minecraft.entity.mob.MobEntity;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
+import net.minecraft.registry.RegistryKey;
+import net.minecraft.registry.RegistryKeys;
 import net.minecraft.util.Identifier;
 
 import java.util.ArrayList;
@@ -43,7 +45,7 @@ public class ModEntities {
             EntityType.Builder.create(entity, SpawnGroup.CREATURE)
                 .dimensions(PLUSH_WIDTH, PLUSH_HEIGHT)
                 .eyeHeight(0.85F)
-                .build(name)
+                .build(RegistryKey.of(RegistryKeys.ENTITY_TYPE, Identifier.of(MikuPlushie.MOD_ID, name)))
         );
         //noinspection unchecked
         PLUSH_ENTITIES.add((EntityType<? extends AbstractPlushEntity>) entityType);

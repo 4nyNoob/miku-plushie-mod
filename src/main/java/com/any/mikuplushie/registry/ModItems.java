@@ -12,6 +12,7 @@ import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKey;
+import net.minecraft.registry.RegistryKeys;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.Rarity;
@@ -37,20 +38,20 @@ public class ModItems {
 
     //REGISTER REGULAR ITEMS
 	public static final Item CANUDINHO =
-        register(new Item(new Item.Settings().rarity(Rarity.RARE)), "canudinho");
+        register(new Item(settings("canudinho").rarity(Rarity.RARE)), "canudinho");
 	public static final Item BAGUETTE =
-        register(new Item(new Item.Settings().food(ModFoodComponents.BAGUETTE)), "baguette");
+        register(new Item(settings("baguette").food(ModFoodComponents.BAGUETTE)), "baguette");
 
     public static final Item LEEK_SEEDS =
-        register(new AliasedBlockItem(ModBlocks.LEEK_CROP, new Item.Settings()), "leek_seeds");
+        register(new BlockItem(ModBlocks.LEEK_CROP, settings("leek_seeds").useItemPrefixedTranslationKey()), "leek_seeds");
     public static final Item LEEK =
-        register(new Item(new Item.Settings().food(ModFoodComponents.LEEK)), "leek");
+        register(new Item(settings("leek").food(ModFoodComponents.LEEK)), "leek");
 
     public static final Item AKITA_NERU_PHONE =
-        register(new Item(new Item.Settings()), "akita_neru_phone");
+        register(new Item(settings("akita_neru_phone")), "akita_neru_phone");
 
     public static final Item VOCALOID_HEART =
-        register(new Item(new Item.Settings()), "vocaloid_heart");
+        register(new Item(settings("vocaloid_heart")), "vocaloid_heart");
 
     //REGISTER TETO PICKAXE ITEMS
     public static final Item TETO_PICKAXE = registerPickaxe("teto_pickaxe");
@@ -75,14 +76,16 @@ public class ModItems {
                 plushBlock = registeredPlushBlock;
             }
         }
-        return register(new MikuPlushieBlockItem(plushBlock, new Item.Settings()), name);
+        return register(new MikuPlushieBlockItem(plushBlock, settings(name).useBlockPrefixedTranslationKey()), name);
     }
 
     //REGISTER PICKAXES HELPER
     public static Item registerPickaxe(String name) {
-        return register(new PickaxeItem(PlushToolMaterial.PLUSH_TOOL_MATERIAL, new Item.Settings().attributeModifiers(
-                PickaxeItem.createAttributeModifiers(
-                    PlushToolMaterial.PLUSH_TOOL_MATERIAL, 1f, -2.8F))), name);
+        return register(new Item(settings(name).pickaxe(PlushToolMaterial.PLUSH_TOOL_MATERIAL, 1f, -2.8F)), name);
+    }
+
+    public static Item.Settings settings(String name) {
+        return new Item.Settings().registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(MikuPlushie.MOD_ID, name)));
     }
 
     //REGISTER NORMAL ITEM

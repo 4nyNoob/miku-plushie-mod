@@ -2,12 +2,8 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "item": "miku-plushie:miku_plush"
-    },
-    {
-      "item": "minecraft:amethyst_shard"
-    }
+    "miku-plushie:miku_plush",
+    "minecraft:amethyst_shard"
   ],
   "result": {
     "count": 1,

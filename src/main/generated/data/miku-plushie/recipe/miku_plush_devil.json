@@ -2,15 +2,9 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "item": "miku-plushie:miku_plush"
-    },
-    {
-      "item": "minecraft:magma_block"
-    },
-    {
-      "item": "minecraft:netherrack"
-    }
+    "miku-plushie:miku_plush",
+    "minecraft:magma_block",
+    "minecraft:netherrack"
   ],
   "result": {
     "count": 1,

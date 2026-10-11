@@ -12,7 +12,7 @@ import net.minecraft.entity.ai.goal.Goal;
 import net.minecraft.predicate.block.BlockStatePredicate;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.world.GameRules;
+import net.minecraft.world.rule.GameRules;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldEvents;
 import org.spongepowered.include.com.google.common.base.Predicates;
@@ -34,7 +34,7 @@ public class EatLeekGoal extends Goal {
 
     public EatLeekGoal(MikuEntity miku) {
         this.miku = miku;
-        this.world = miku.getWorld();
+        this.world = miku.getEntityWorld();
         this.setControls(EnumSet.of(Goal.Control.MOVE, Goal.Control.LOOK, Goal.Control.JUMP));
     }
 
@@ -50,7 +50,7 @@ public class EatLeekGoal extends Goal {
     @Override
     public void start() {
         this.timer = this.getTickCount(MAX_TIMER);
-        this.miku.lookAt(this.miku.getCommandSource().getEntityAnchor(), locateFullyGrownLeek(this.miku.getBlockPos()).toCenterPos());
+        this.miku.lookAt(net.minecraft.command.argument.EntityAnchorArgumentType.EntityAnchor.EYES, locateFullyGrownLeek(this.miku.getBlockPos()).toCenterPos());
         this.world.sendEntityStatus(this.miku, EntityStatuses.SET_SHEEP_EAT_GRASS_TIMER_OR_PRIME_TNT_MINECART);
         this.miku.getNavigation().stop();
     }
@@ -75,7 +75,7 @@ public class EatLeekGoal extends Goal {
         this.timer = Math.max(0, this.timer - 1);
 
         if (this.timer % 4 == 1 && this.timer > 4) {
-            this.miku.playSound(SoundEvents.ENTITY_GENERIC_EAT, 0.5F, 1);
+            this.miku.playSound(SoundEvents.ENTITY_GENERIC_EAT.value(), 0.5F, 1);
             this.miku.playSound(ModUtil.getPlushSoundEvent("miku_plush", "eat"), 1, 1);
         }
 
@@ -83,7 +83,7 @@ public class EatLeekGoal extends Goal {
             BlockPos mobPos = this.miku.getBlockPos();
 
             if (LEEK_PREDICATE.test(this.world.getBlockState(mobPos))) {
-                if (this.world.getGameRules().getBoolean(GameRules.DO_MOB_GRIEFING)) {
+                if (((net.minecraft.server.world.ServerWorld) this.world).getGameRules().getValue(GameRules.DO_MOB_GRIEFING)) {
                     this.world.breakBlock(mobPos, false);
                 }
                 this.miku.onEatingGrass();
@@ -95,7 +95,7 @@ public class EatLeekGoal extends Goal {
                     blockPos2 = locateFullyGrownLeek(mobPos);
 
                 if (this.world.getBlockState(blockPos2).equals(ModBlocks.LEEK_CROP.withAge(7))) {
-                    if (this.world.getGameRules().getBoolean(GameRules.DO_MOB_GRIEFING)) {
+                    if (((net.minecraft.server.world.ServerWorld) this.world).getGameRules().getValue(GameRules.DO_MOB_GRIEFING)) {
                         this.world.syncWorldEvent(WorldEvents.BLOCK_BROKEN, blockPos2, Block.getRawIdFromState(ModBlocks.LEEK_CROP.getDefaultState()));
                         this.world.setBlockState(blockPos2, Blocks.AIR.getDefaultState(), Block.NOTIFY_LISTENERS);
                         this.miku.setEatingLeek(false);

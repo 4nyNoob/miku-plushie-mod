@@ -1,6 +1,7 @@
 {
   "pack": {
-    "pack_format": 34,
-    "description": "Miku Plushies EN_US-Dub"
+    "description": "Miku Plushies EN_US-Dub",
+    "min_format": 75,
+    "max_format": 75
   }
 }

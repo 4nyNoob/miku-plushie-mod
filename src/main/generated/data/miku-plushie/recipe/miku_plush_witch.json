@@ -2,21 +2,11 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "item": "miku-plushie:miku_plush"
-    },
-    {
-      "item": "minecraft:purple_wool"
-    },
-    {
-      "item": "minecraft:green_wool"
-    },
-    {
-      "item": "minecraft:stick"
-    },
-    {
-      "item": "minecraft:wheat"
-    }
+    "miku-plushie:miku_plush",
+    "minecraft:purple_wool",
+    "minecraft:green_wool",
+    "minecraft:stick",
+    "minecraft:wheat"
   ],
   "result": {
     "count": 1,

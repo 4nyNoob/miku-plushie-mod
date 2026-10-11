@@ -2,15 +2,9 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "item": "miku-plushie:miku_plush"
-    },
-    {
-      "item": "minecraft:brown_wool"
-    },
-    {
-      "item": "minecraft:spyglass"
-    }
+    "miku-plushie:miku_plush",
+    "minecraft:brown_wool",
+    "minecraft:spyglass"
   ],
   "result": {
     "count": 1,

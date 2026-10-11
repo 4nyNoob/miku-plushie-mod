@@ -24,7 +24,7 @@ public abstract class LivingEntityMixin extends Entity implements Attackable {
     private void handlePickaxeBreakSound(ItemStack stack, CallbackInfo ci){
         if (ModItems.PICKAXE_ITEMS.contains(stack.getItem())) {
             if (!this.isSilent()) {
-                this.getWorld().playSound(
+                this.getEntityWorld().playSoundClient(
                     this.getX(),
                     this.getY(),
                     this.getZ(),
