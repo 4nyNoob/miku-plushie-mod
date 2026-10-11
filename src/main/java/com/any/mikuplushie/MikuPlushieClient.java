@@ -9,10 +9,10 @@ import com.any.mikuplushie.registry.ModParticles;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
-import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
+import net.fabricmc.fabric.api.client.rendering.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.client.particle.v1.ParticleFactoryRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
-import net.minecraft.client.render.RenderLayer;
+import net.minecraft.client.render.BlockRenderLayer;
 import net.minecraft.entity.EntityType;
 import software.bernie.geckolib.loading.math.MathParser;
 
@@ -25,18 +25,18 @@ public class MikuPlushieClient implements ClientModInitializer {
         //PLUSH CUTOUT
         for (int block = 0; block < ModBlocks.PLUSH_BLOCKS.size(); block++) {
             if (!ModBlocks.PLUSH_BLOCKS.get(block).equals(ModBlocks.MIKU_PLUSH_GHOST))
-                BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.PLUSH_BLOCKS.get(block), RenderLayer.getCutout());
+                BlockRenderLayerMap.putBlock(ModBlocks.PLUSH_BLOCKS.get(block), BlockRenderLayer.CUTOUT);
         }
 
         //PLUSH TRANSLUCENT
-        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MIKU_PLUSH_GHOST, RenderLayer.getTranslucent());
+        BlockRenderLayerMap.putBlock(ModBlocks.MIKU_PLUSH_GHOST, BlockRenderLayer.TRANSLUCENT);
 
         //NON PLUSH BLOCKS
-		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.LEEK_CROP, RenderLayer.getCutout());
-		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.WILD_LEEK_CROP, RenderLayer.getCutout());
+		BlockRenderLayerMap.putBlock(ModBlocks.LEEK_CROP, BlockRenderLayer.CUTOUT);
+		BlockRenderLayerMap.putBlock(ModBlocks.WILD_LEEK_CROP, BlockRenderLayer.CUTOUT);
 
         //GLIB QUERY
-        MathParser.setVariable("query.miku.is_game", () -> 90 / Math.PI);
+        MathParser.setVariable("query.miku.is_game", state -> 90 / Math.PI);
 
         //ENTITIES RENDERERS
         for (EntityType<? extends AbstractPlushEntity> plushEntity : ModEntities.PLUSH_ENTITIES) {

@@ -2,15 +2,9 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "item": "miku-plushie:teto_plush"
-    },
-    {
-      "item": "minecraft:kelp"
-    },
-    {
-      "item": "minecraft:kelp"
-    }
+    "miku-plushie:teto_plush",
+    "minecraft:kelp",
+    "minecraft:kelp"
   ],
   "result": {
     "count": 1,

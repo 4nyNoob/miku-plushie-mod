@@ -2,15 +2,9 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "item": "miku-plushie:teto_plush"
-    },
-    {
-      "item": "minecraft:wheat_seeds"
-    },
-    {
-      "item": "minecraft:egg"
-    }
+    "miku-plushie:teto_plush",
+    "minecraft:wheat_seeds",
+    "minecraft:egg"
   ],
   "result": {
     "count": 1,

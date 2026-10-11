@@ -11,6 +11,8 @@ import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
+import net.minecraft.registry.RegistryKey;
+import net.minecraft.registry.RegistryKeys;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
 import org.jetbrains.annotations.Nullable;
@@ -124,17 +126,21 @@ public class ModBlocks {
 
     //NON PLUSH STUFF
     public static final LeekCropBlock LEEK_CROP = (LeekCropBlock) register(
-        new LeekCropBlock(AbstractBlock.Settings.create()
+        new LeekCropBlock(AbstractBlock.Settings.create().registryKey(blockKey("leek_crop"))
             .nonOpaque().noCollision().ticksRandomly().breakInstantly().sounds(BlockSoundGroup.CROP)),
         "leek_crop",
         false
     );
     public static final WildLeekCropBlock WILD_LEEK_CROP = (WildLeekCropBlock) register(
-        new WildLeekCropBlock(AbstractBlock.Settings.create()
+        new WildLeekCropBlock(AbstractBlock.Settings.create().registryKey(blockKey("wild_leek_crop"))
             .nonOpaque().noCollision().ticksRandomly().breakInstantly().sounds(BlockSoundGroup.CROP)),
         "wild_leek_crop",
         false
     );
+
+    private static RegistryKey<Block> blockKey(String name) {
+        return RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(MikuPlushie.MOD_ID, name));
+    }
 
     //REGISTER PLUSHIES
     public static Block registerPlush(String name, @Nullable BlockSoundGroup blockSound) {
@@ -143,7 +149,7 @@ public class ModBlocks {
         blockSoundGroup = Objects.requireNonNullElse(blockSound, BlockSoundGroup.WOOL);
         //REGISTER BLOCK NORMALLY
         return register(
-            new MikuPlushieBlock(AbstractBlock.Settings.copy(Blocks.FLOWER_POT)
+            new MikuPlushieBlock(AbstractBlock.Settings.copy(Blocks.FLOWER_POT).registryKey(blockKey(name))
                 .sounds(blockSoundGroup).nonOpaque()), name, false);
     }
 
@@ -154,7 +160,7 @@ public class ModBlocks {
 
         //REGISTER ITEM IF REQUESTED
         if (shouldRegisterItem) {
-            BlockItem blockItem = new BlockItem(block, new Item.Settings());
+            BlockItem blockItem = new BlockItem(block, ModItems.settings(name).useBlockPrefixedTranslationKey());
             Registry.register(Registries.ITEM, id, blockItem);
         }
 

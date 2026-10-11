@@ -2,15 +2,9 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "item": "miku-plushie:miku_plush"
-    },
-    {
-      "item": "minecraft:moss_block"
-    },
-    {
-      "item": "minecraft:red_mushroom_block"
-    }
+    "miku-plushie:miku_plush",
+    "minecraft:moss_block",
+    "minecraft:red_mushroom_block"
   ],
   "result": {
     "count": 1,

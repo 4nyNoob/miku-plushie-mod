@@ -2,15 +2,9 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "item": "miku-plushie:miku_plush"
-    },
-    {
-      "item": "minecraft:green_wool"
-    },
-    {
-      "item": "minecraft:emerald"
-    }
+    "miku-plushie:miku_plush",
+    "minecraft:green_wool",
+    "minecraft:emerald"
   ],
   "result": {
     "count": 1,

@@ -2,15 +2,9 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "item": "miku-plushie:miku_plush"
-    },
-    {
-      "item": "minecraft:tube_coral"
-    },
-    {
-      "item": "minecraft:bubble_coral"
-    }
+    "miku-plushie:miku_plush",
+    "minecraft:tube_coral",
+    "minecraft:bubble_coral"
   ],
   "result": {
     "count": 1,

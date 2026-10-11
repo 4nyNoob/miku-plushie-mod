@@ -2,12 +2,8 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "item": "miku-plushie:miku_plush"
-    },
-    {
-      "item": "minecraft:lily_of_the_valley"
-    }
+    "miku-plushie:miku_plush",
+    "minecraft:lily_of_the_valley"
   ],
   "result": {
     "count": 1,

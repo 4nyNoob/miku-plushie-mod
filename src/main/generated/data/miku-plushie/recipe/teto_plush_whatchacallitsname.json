@@ -2,21 +2,11 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "item": "miku-plushie:teto_plush"
-    },
-    {
-      "item": "minecraft:glass"
-    },
-    {
-      "item": "minecraft:glass"
-    },
-    {
-      "item": "minecraft:red_wool"
-    },
-    {
-      "item": "minecraft:orange_wool"
-    }
+    "miku-plushie:teto_plush",
+    "minecraft:glass",
+    "minecraft:glass",
+    "minecraft:red_wool",
+    "minecraft:orange_wool"
   ],
   "result": {
     "count": 1,

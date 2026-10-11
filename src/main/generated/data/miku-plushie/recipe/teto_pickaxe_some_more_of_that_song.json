@@ -2,12 +2,8 @@
   "type": "minecraft:crafting_shaped",
   "category": "equipment",
   "key": {
-    "1": {
-      "item": "minecraft:diamond"
-    },
-    "2": {
-      "item": "miku-plushie:teto_plush_some_more_of_that_song"
-    }
+    "1": "minecraft:diamond",
+    "2": "miku-plushie:teto_plush_some_more_of_that_song"
   },
   "pattern": [
     "121"

@@ -2,15 +2,9 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "item": "miku-plushie:miku_plush"
-    },
-    {
-      "item": "minecraft:black_wool"
-    },
-    {
-      "item": "minecraft:black_wool"
-    }
+    "miku-plushie:miku_plush",
+    "minecraft:black_wool",
+    "minecraft:black_wool"
   ],
   "result": {
     "count": 1,

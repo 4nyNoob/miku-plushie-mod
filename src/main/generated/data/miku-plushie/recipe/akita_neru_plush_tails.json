@@ -2,15 +2,9 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "item": "miku-plushie:akita_neru_plush"
-    },
-    {
-      "item": "minecraft:yellow_wool"
-    },
-    {
-      "item": "minecraft:redstone"
-    }
+    "miku-plushie:akita_neru_plush",
+    "minecraft:yellow_wool",
+    "minecraft:redstone"
   ],
   "result": {
     "count": 1,

@@ -1,14 +1,16 @@
 package com.any.mikuplushie.item;
 
 import com.any.mikuplushie.MikuPlushie;
-import com.any.mikuplushie.datagen.ModItemTagProvider;
+import com.any.mikuplushie.registry.ModItemTags;
 import com.any.mikuplushie.registry.ModBlocks;
 import com.any.mikuplushie.util.ModUtil;
 import net.minecraft.block.Block;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.item.BlockItem;
-import net.minecraft.item.Equipment;
+import net.minecraft.component.DataComponentTypes;
+import net.minecraft.component.type.EquippableComponent;
+import java.util.function.Consumer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.tooltip.TooltipType;
 import net.minecraft.registry.entry.RegistryEntry;
@@ -18,43 +20,30 @@ import net.minecraft.text.Text;
 
 import java.util.List;
 
-public class MikuPlushieBlockItem extends BlockItem implements Equipment {
+public class MikuPlushieBlockItem extends BlockItem {
 
 	public MikuPlushieBlockItem(Block block, Settings settings) {
-		super(block, settings);
+		super(block, settings.component(DataComponentTypes.EQUIPPABLE, EquippableComponent.builder(EquipmentSlot.HEAD).equipSound(RegistryEntry.of(equipSoundFor(block))).damageOnHurt(false).build()));
 	}
 
 	@Override
-	public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type) {
-		tooltip.add(Text.translatable("item." + MikuPlushie.MOD_ID + "." + stack.getItem().toString() + ".tooltip"));
-		super.appendTooltip(stack, context, tooltip, type);
+	public void appendTooltip(ItemStack stack, TooltipContext context, net.minecraft.component.type.TooltipDisplayComponent display, Consumer<Text> tooltip, TooltipType type) {
+		tooltip.accept(Text.translatable("item." + MikuPlushie.MOD_ID + "." + stack.getItem().toString() + ".tooltip"));
+		super.appendTooltip(stack, context, display, tooltip, type);
 	}
 
 	public static void PlayMikuSound(LivingEntity entity){
 		ItemStack stack = entity.getStackInHand(entity.getActiveHand());
 
-		if (stack.isIn(ModItemTagProvider.PLUSHIES)){
+		if (stack.isIn(ModItemTags.PLUSHIES)){
 			String currentPlush = ModUtil.getBlockIdFromItem(stack.getItem());
-			ModUtil.playPlushSound(entity.getWorld(), entity.getBlockPos(), currentPlush, "dor");
+			ModUtil.playPlushSound(entity.getEntityWorld(), entity.getBlockPos(), currentPlush, "dor");
 		}
 
 	}
 
-	@Override
-	public EquipmentSlot getSlotType() {
-		return EquipmentSlot.HEAD;
-	}
-
-	@Override
-	public RegistryEntry<SoundEvent> getEquipSound() {
-		ItemStack stack = this.getDefaultStack();
-
-		if (stack.isIn(ModItemTagProvider.PLUSHIES)){
-			if (!stack.isOf(ModBlocks.KONOHA_PLUSH.asItem())){
-				String currentPlush = ModUtil.getBlockIdFromItem(stack.getItem());
-				return RegistryEntry.of(ModUtil.getPlushSoundEvent(currentPlush, "equip"));
-			}
-		}
-        return RegistryEntry.of(SoundEvents.BLOCK_WOOL_PLACE);
+    private static SoundEvent equipSoundFor(Block block) {
+        String name = ModUtil.getBlockIdFromBlock(block);
+        return name.equals("konoha_plush") ? SoundEvents.BLOCK_WOOL_PLACE : ModUtil.getPlushSoundEvent(name, "equip");
     }
 }

@@ -43,3 +43,7 @@ replay_*.log
 
 *.kra
 /resourcepacks/
+
+# Local dependency copies and production smoke-test downloads
+/libs/
+/production-smoke/

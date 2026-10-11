@@ -35,11 +35,7 @@ loom {
     accessWidenerPath = file("src/main/resources/${archives_base_name}.accesswidener")
 }
 
-fabricApi {
-	configureDataGeneration {
-		client = true
-	}
-}
+sourceSets.main.resources.srcDir "src/main/generated"
 
 dependencies {
 	// To change the versions see the gradle.properties file
