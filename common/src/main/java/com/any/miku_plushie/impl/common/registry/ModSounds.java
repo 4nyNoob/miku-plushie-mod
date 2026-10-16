@@ -21,24 +21,24 @@ public class ModSounds {
     Constants.LOG.info("Registering " + Constants.MOD_ID + " Sounds");
 
     //DYNAMICALLY REGISTER SOUND EVENTS
-    for (EntityType<?> plush : ModEntities.PLUSH_ENTITIES) {
+    for (String plush : Constants.CHARACTER_NAMES) {
 
       //SKIP KONOHA PLUSH
-      if (plush.equals(ModEntities.KONOHA)) {
+      if (plush.equals("konoha")) {
         continue; // move on to the next plushie, skipping the following logic for KONOHA only
       }
 
       //ADD MIKU SOUND EVENTS
-      if (plush.equals(ModEntities.MIKU)) {
+      if (plush.equals("miku")) {
         for (String mikuSoundEvent : ModSounds.MIKU_SOUND_EVENT) {
-          SoundEvent soundEvent = registerSound(plush.toShortString().replace("_plush", "") + "_" + mikuSoundEvent, consumer);
+          SoundEvent soundEvent = registerSound(plush + "_" + mikuSoundEvent, consumer);
           ModSounds.MIKU_PLUSHIES_SOUND_EVENTS.add(soundEvent);
         }
       }
 
       //ADD REGULAR SOUND EVENTS
       for (String event : ModSounds.SOUND_EVENT) {
-        SoundEvent soundEvent = registerSound(plush.toShortString().replace("_plush", "") + "_" + event, consumer);
+        SoundEvent soundEvent = registerSound(plush + "_" + event, consumer);
         ModSounds.MIKU_PLUSHIES_SOUND_EVENTS.add(soundEvent);
       }
     }
