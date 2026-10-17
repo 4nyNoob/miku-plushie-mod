@@ -37,6 +37,9 @@
     "java": ">=${java_version}",
     "geckolib": ">=1.21.1-4.8.2"
   },
+  "provides": [
+    "miku-plushies"
+  ],
   "accessWidener": "${mod_id}.accesswidener"
 }
   
