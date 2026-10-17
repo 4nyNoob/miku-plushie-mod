@@ -92,12 +92,17 @@ public class ModItems {
 
   //REGISTER PICKAXES HELPER
   public static Item registerPickaxe(String name, BiConsumer<Item, ResourceLocation> consumer) {
-    return register(new PickaxeItem(PlushToolMaterial.PLUSH_TOOL_MATERIAL, new Item.Properties().attributes(PickaxeItem.createAttributes(PlushToolMaterial.PLUSH_TOOL_MATERIAL, 1f, -2.8F))), name,
+    Constants.TETO_PICKAXE_NAMES.add(name);
+    return register(
+        new PickaxeItem(PlushToolMaterial.PLUSH_TOOL_MATERIAL, new Item.Properties().attributes(PickaxeItem.createAttributes(
+                PlushToolMaterial.PLUSH_TOOL_MATERIAL, 1f, -2.8F))), name,
         consumer);
   }
 
   //REGISTER NORMAL ITEM
   public static Item register(Item item, String id, BiConsumer<Item, ResourceLocation> consumer) {
+    // ADD REGULAR ITEMS TO ALIAS LIST
+    Constants.OTHER_ITEM_NAMES.add(id);
 
     ResourceLocation itemID = MikuPlushie.id(id);
 //    Item register = Registry.register(BuiltInRegistries.ITEM, itemID, item);

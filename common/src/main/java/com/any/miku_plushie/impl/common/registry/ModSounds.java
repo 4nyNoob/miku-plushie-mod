@@ -7,7 +7,6 @@ import java.util.List;
 import java.util.function.BiConsumer;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.SoundEvent;
-import net.minecraft.world.entity.EntityType;
 
 public class ModSounds {
 
@@ -21,7 +20,7 @@ public class ModSounds {
     Constants.LOG.info("Registering " + Constants.MOD_ID + " Sounds");
 
     //DYNAMICALLY REGISTER SOUND EVENTS
-    for (String plush : Constants.CHARACTER_NAMES) {
+    for (String plush : Constants.PLUSH_NAMES) {
 
       //SKIP KONOHA PLUSH
       if (plush.equals("konoha")) {

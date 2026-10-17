@@ -235,6 +235,8 @@ public class ModBlocks {
 
   //REGISTER PLUSHIES
   public static Block registerPlush(String name, @Nullable SoundType blockSound, BiConsumer<Block, ResourceLocation> consumer) {
+    //ADD BLOCK NAMES TO CONSTANTS LIST
+    Constants.PLUSH_BLOCK_NAMES.add(name);
     //IF THE BLOCK SOUND IS NULL SET TO WOOL
     SoundType blockSoundGroup = null;
     blockSoundGroup = Objects.requireNonNullElse(blockSound, SoundType.WOOL);
@@ -244,6 +246,11 @@ public class ModBlocks {
 
   //REGISTER REGULAR BLOCKS
   public static Block register(Block block, String name, boolean shouldRegisterItem, BiConsumer<Block, ResourceLocation> consumer) {
+    // ADD TO OTHER BLOCK LIST IF NOT AN PLUSH BLOCK
+    if (!(block instanceof MikuPlushieBlock)) {
+      Constants.OTHER_BLOCK_NAMES.add(name);
+    }
+
     //CREATE IDENTIFIER
     ResourceLocation id = MikuPlushie.id(name);
 

@@ -2,15 +2,7 @@ package com.any.miku_plushie;
 
 import com.any.miku_plushie.impl.common.entity.AbstractPlushEntity;
 import com.any.miku_plushie.impl.common.entity.variant.PlushVariants;
-import com.any.miku_plushie.impl.common.registry.ModBlocks;
-import com.any.miku_plushie.impl.common.registry.ModCommands;
-import com.any.miku_plushie.impl.common.registry.ModEntities;
-import com.any.miku_plushie.impl.common.registry.ModItems;
-import com.any.miku_plushie.impl.common.registry.ModParticles;
-import com.any.miku_plushie.impl.common.registry.ModSounds;
-import com.any.miku_plushie.impl.common.registry.ModTabs;
-import com.any.miku_plushie.impl.common.registry.ModResourcePacksFabric;
-import com.any.miku_plushie.impl.common.registry.ModVillagerTradesFabric;
+import com.any.miku_plushie.impl.common.registry.*;
 import com.any.miku_plushie.impl.common.worldgen.generators.ModWorldGenerationFabric;
 import java.util.function.BiConsumer;
 import java.util.function.Consumer;
@@ -51,6 +43,7 @@ public class MikuPlushieFabric implements ModInitializer {
     ModResourcePacksFabric.initialize();
     ModVillagerTradesFabric.initialize();
     ModWorldGenerationFabric.generateModWorldGeneration(); // fabric specific
+    RegistryAlias.registerAlias();
 
     PlushVariants.initialize();
 
