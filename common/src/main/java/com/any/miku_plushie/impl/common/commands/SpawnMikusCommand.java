@@ -108,26 +108,16 @@ public class SpawnMikusCommand {
             }
 
             //SPAWN ENTITIES
-            if (currentList.contains(VARIANTS.get(0))) {
+            if (currentList.contains(VARIANTS.getFirst())) {
+
+              // CALCULATE LOCATION AND GET ENTITY NAME
               Vec3 entitySpawnLocation = getEntitySpawnLocation(spawnPos, column, row, list, spacing);
               String blockName = (String) currentList.get(plushies);
-              //GET FIRST TWO WORDS
-              String entityName = ModUtil.getEntityNameFromBlockId(blockName);
-              //ENTITY TYPE REGISTRY
-              Registry<EntityType<?>> entityTypeRegistry = world.registryAccess().registryOrThrow(Registries.ENTITY_TYPE);
 
-              //ITERATE THROUGH ALL REGISTERED ENTITIES AND FILTER BY NAME
-              for (int entity = 0; entity < entityTypeRegistry.size(); entity++) {
-                if (Objects.requireNonNull(entityTypeRegistry.byId(entity)).getDescriptionId().contains(entityName)) {
-                  //SPAWN ENTITY ACCORDING TO BLOCK NAME
-                  AbstractPlushEntity spawned = (AbstractPlushEntity) Objects.requireNonNull(entityTypeRegistry.byId(entity)).create(world);
-                  //SETUP AND SPAWN ENTITY
-                  setupEntity(Objects.requireNonNull(spawned), entitySpawnLocation);
-                  spawned.setVariantByBlock(blockName);
-                  world.addFreshEntity(spawned);
-                }
-              }
-
+              // CREATE SETUP AND SPAWN CHOSEN PLUSH ENTITY
+              AbstractPlushEntity plush = ModUtil.createPlushFromBlock(blockName, world, entitySpawnLocation);
+              setupEntity(plush, entitySpawnLocation);
+              world.addFreshEntity(plush);
             }
 
           }
