@@ -1,21 +1,17 @@
 package com.any.miku_plushie.impl.common.block;
 
+import com.any.miku_plushie.impl.common.entity.AbstractPlushEntity;
 import com.any.miku_plushie.impl.common.registry.ModItems;
 import com.any.miku_plushie.impl.common.registry.ModParticles;
 import com.any.miku_plushie.impl.common.util.ModUtil;
-import java.util.Objects;
 import net.minecraft.commands.arguments.EntityAnchorArgument;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
-import net.minecraft.core.Registry;
-import net.minecraft.core.registries.Registries;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.ItemInteractionResult;
-import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.TamableAnimal;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.context.BlockPlaceContext;
@@ -29,7 +25,6 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.DirectionProperty;
 import net.minecraft.world.phys.BlockHitResult;
-import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import org.jetbrains.annotations.Nullable;
@@ -51,35 +46,21 @@ public class MikuPlushieBlock extends Block {
     ) {
       if (!world.isClientSide) {
 
-        //GET BLOCK NAME
+        // GET BLOCK NAME
         String blockName = ModUtil.getBlockIdFromBlockPos(world, pos);
-        String entityName = ModUtil.getEntityNameFromBlockId(blockName);
 
-        Vec3 entitySpawnLocation = pos.getCenter().subtract(0, 0.5, 0);
-        //ENTITY TYPE REGISTRY
-        Registry<EntityType<?>> entityTypeRegistry = world.registryAccess().registryOrThrow(Registries.ENTITY_TYPE);
+        // CREATE PLUSH ENTITY
+        AbstractPlushEntity plush = ModUtil.createPlushFromBlock(blockName, world, pos.getCenter().subtract(0,0.5,0));
 
-        //ITERATE THROUGH ALL REGISTERED ENTITIES AND FILTER BY NAME
-        for (int entity = 0; entity < entityTypeRegistry.size(); entity++) {
-          if (Objects.requireNonNull(entityTypeRegistry.byId(entity)).getDescriptionId().contains(entityName)) {
+        // SETUP ENTITY
+        plush.lookAt(EntityAnchorArgument.Anchor.EYES, player.position().subtract(pos.getCenter()));
+        plush.tame(player);
+        world.addFreshEntity(plush);
 
-            //SPAWN ENTITY ACCORDING TO BLOCK NAME
-            // TODO PORT FIX AFTER MOVING
-            // AbstractPlushEntity spawned = (AbstractPlushEntity) Objects.requireNonNull(entityTypeRegistry.byId(entity)).create(world);
-            TamableAnimal spawned = (TamableAnimal) Objects.requireNonNull(entityTypeRegistry.byId(entity)).create(world);
-
-            //SETUP AND SPAWN ENTITY
-            // TODO PORT FIX AFTER MOVING
-            // Objects.requireNonNull(spawned).setVariantByBlock(blockName);
-            spawned.lookAt(EntityAnchorArgument.Anchor.EYES, player.position().subtract(pos.getCenter()));
-            spawned.tame(player);
-            spawned.setPos(entitySpawnLocation);
-            world.addFreshEntity(spawned);
-          }
-        }
-
+        // PLAY EFFECTS
         world.playSound(null, pos, SoundEvents.TOTEM_USE, SoundSource.BLOCKS, 0.5f, 1);
         world.destroyBlock(pos, false, player);
+        
         return ItemInteractionResult.SUCCESS;
       } else {
         for (int particles = 0; particles < 100; particles++) {

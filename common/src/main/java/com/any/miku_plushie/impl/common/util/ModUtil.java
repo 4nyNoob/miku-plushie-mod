@@ -1,14 +1,23 @@
 package com.any.miku_plushie.impl.common.util;
 
+import com.any.miku_plushie.Constants;
+import com.any.miku_plushie.impl.common.entity.AbstractPlushEntity;
 import com.any.miku_plushie.impl.common.registry.ModBlocks;
 import com.any.miku_plushie.impl.common.registry.ModSounds;
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.Registry;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundSource;
+import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.phys.Vec3;
+
+import java.util.Objects;
 
 public class ModUtil {
 
@@ -58,5 +67,30 @@ public class ModUtil {
       world.playLocalSound(position.getX(), position.getY(), position.getZ(),
           soundEvent, SoundSource.BLOCKS, 0.5F, 1, true);
     }
+  }
+
+  public static AbstractPlushEntity createPlushFromBlock(String blockName, Level world, Vec3 pos) {
+
+    Registry<EntityType<?>> entityTypeRegistry = world.registryAccess().registryOrThrow(Registries.ENTITY_TYPE);
+    AbstractPlushEntity spawnedEntity = null;
+
+    for (String entity : Constants.PLUSH_NAMES){
+      // IF SELECTED BLOCK CONTAINS ENTITY NAME
+      if (blockName.contains(entity)){
+        // CALCULATE ENTITY RESOURCE LOCATION
+        ResourceLocation entityResourceLocation = ResourceLocation.fromNamespaceAndPath(Constants.MOD_ID, entity + "_plush");
+        // GET ENTITY TYPE
+        EntityType<?> entityType = entityTypeRegistry.get(entityResourceLocation);
+
+        // CREATE ENTITY
+        AbstractPlushEntity spawned = (AbstractPlushEntity) Objects.requireNonNull(entityType).create(world);
+        Objects.requireNonNull(spawned).setPos(pos);
+        spawned.setVariantByBlock(blockName);
+
+        // RETURN ENTITY
+        spawnedEntity = spawned;
+      }
+    }
+    return spawnedEntity;
   }
 }
