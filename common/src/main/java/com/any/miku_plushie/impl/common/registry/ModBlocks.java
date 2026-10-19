@@ -130,111 +130,111 @@ public class ModBlocks {
 
     Constants.LOG.info("Registering " + Constants.MOD_ID + " Blocks");
 
-    MIKU_PLUSH_BR = registerPlush("miku_plush_br", null, consumer);
-    MIKU_PLUSH_BR_BA = registerPlush("miku_plush_br_ba", null, consumer);
-    MIKU_PLUSH_BIK = registerPlush("miku_plush_bik", null, consumer);
-    MIKU_PLUSH_BR_BEACH = registerPlush("miku_plush_br_beach", null, consumer);
-    MIKU_PLUSH_BR_BRAID = registerPlush("miku_plush_br_braid", null, consumer);
-    MIKU_PLUSH_BR_BA_DRUM = registerPlush("miku_plush_br_ba_drum", null, consumer);
-    MIKU_PLUSH_BR_PA = registerPlush("miku_plush_br_pa", null, consumer);
-    MIKU_PLUSH_BR_SP = registerPlush("miku_plush_br_sp", null, consumer);
-    MIKU_PLUSH_BR_MG = registerPlush("miku_plush_br_mg", null, consumer);
-    MIKU_PLUSH_BR_BROWN_BRO = registerPlush("miku_plush_br_brown_bro", null, consumer);
-    MIKU_PLUSH_BR_ELECTRICIAN = registerPlush("miku_plush_br_electrician", null, consumer);
-    MIKU_PLUSH_BR_BIK_ORANGE = registerPlush("miku_plush_br_bik_orange", null, consumer);
-    MIKU_PLUSH_BR_AM = registerPlush("miku_plush_br_am", null, consumer);
-    MIKU_PLUSH_BR_FUT_FLA = registerPlush("miku_plush_br_fut_fla", null, consumer);
-    MIKU_PLUSH_BR_FUT_CAM = registerPlush("miku_plush_br_fut_cam", null, consumer);
-    MIKU_PLUSH_BR_GO = registerPlush("miku_plush_br_go", null, consumer);
-    MIKU_PLUSH_BR_SCHOOL_PE = registerPlush("miku_plush_br_school_pe", null, consumer);
-    MIKU_PLUSH_BR_FUT_CRVG = registerPlush("miku_plush_br_fut_crvg", null, consumer);
-    MIKU_PLUSH_BR_RS = registerPlush("miku_plush_br_rs", null, consumer);
-    MIKU_PLUSH_FROG = registerPlush("miku_plush_frog", null, consumer);
-    MIKU_PLUSH_MUSHROOM = registerPlush("miku_plush_mushroom", null, consumer);
-    MIKU_PLUSH_SENBONZAKURA = registerPlush("miku_plush_senbonzakura", null, consumer);
-    MIKU_PLUSH_URAOTOMELOVERS = registerPlush("miku_plush_uraotomelovers", null, consumer);
-    MIKU_PLUSH_PERSONADANCING = registerPlush("miku_plush_personadancing", null, consumer);
-    MIKU_PLUSH_HELLOPLANET = registerPlush("miku_plush_helloplanet", null, consumer);
-    MIKU_PLUSH_HACHUNE = registerPlush("miku_plush_hachune", null, consumer);
-    MIKU_PLUSH_ZATSUNE = registerPlush("miku_plush_zatsune", null, consumer);
-    MIKU_PLUSH_INFINITY = registerPlush("miku_plush_infinity", null, consumer);
-    MIKU_PLUSH_VAMPIRE = registerPlush("miku_plush_vampire", null, consumer);
-    MIKU_PLUSH_WEREWOMAN = registerPlush("miku_plush_werewoman", null, consumer);
-    MIKU_PLUSH_JASON = registerPlush("miku_plush_jason", null, consumer);
-    MIKU_PLUSH_MICHAEL_MYERS = registerPlush("miku_plush_michael_myers", null, consumer);
-    MIKU_PLUSH_PUMPKIN = registerPlush("miku_plush_pumpkin", null, consumer);
-    MIKU_PLUSH_GHOSTFACE = registerPlush("miku_plush_ghostface", null, consumer);
-    MIKU_PLUSH_FRANKENSTEIN = registerPlush("miku_plush_frankenstein", null, consumer);
-    MIKU_PLUSH_MUMMY = registerPlush("miku_plush_mummy", null, consumer);
-    MIKU_PLUSH_GHOST = registerPlush("miku_plush_ghost", SoundType.GLASS, consumer);
-    MIKU_PLUSH_PATATI = registerPlush("miku_plush_patati", null, consumer);
-    MIKU_PLUSH_PATATA = registerPlush("miku_plush_patata", null, consumer);
-    MIKU_PLUSH_DEVIL = registerPlush("miku_plush_devil", null, consumer);
-    MIKU_PLUSH_WITCH = registerPlush("miku_plush_witch", null, consumer);
-    MIKU_PLUSH_SANTA = registerPlush("miku_plush_santa", null, consumer);
-    MIKU_PLUSH_REINDEER = registerPlush("miku_plush_reindeer", null, consumer);
-    MIKU_PLUSH_SANTA_ELF = registerPlush("miku_plush_santa_elf", null, consumer);
-    MIKU_PLUSH_XMAS_TREE = registerPlush("miku_plush_xmas_tree", null, consumer);
-    AIKO_PLUSH = registerPlush("aiko_plush", null, consumer);
-    TETO_PLUSH = registerPlush("teto_plush", null, consumer);
-    AKITA_NERU_PLUSH = registerPlush("akita_neru_plush", null, consumer);
-    MIKU_PLUSH = registerPlush("miku_plush", null, consumer);
-    RIN_PLUSH = registerPlush("rin_plush", null, consumer);
-    LEN_PLUSH = registerPlush("len_plush", null, consumer);
-    MIKU_PLUSH_SONIC_CROSSWORLDS = registerPlush("miku_plush_sonic_crossworlds", null, consumer);
-    MIKU_PLUSH_FORTNITE_NEKO = registerPlush("miku_plush_fortnite_neko", null, consumer);
-    MIKU_PLUSH_V4 = registerPlush("miku_plush_v4", null, consumer);
-    MIKU_PLUSH_MESMERIZER = registerPlush("miku_plush_mesmerizer", null, consumer);
-    TETO_PLUSH_MESMERIZER = registerPlush("teto_plush_mesmerizer", null, consumer);
-    MIKU_PLUSH_SONIC = registerPlush("miku_plush_sonic", null, consumer);
-    TETO_PLUSH_SHADOW = registerPlush("teto_plush_shadow", null, consumer);
-    AKITA_NERU_PLUSH_TAILS = registerPlush("akita_neru_plush_tails", null, consumer);
-    TETO_PLUSH_BIRDBRAIN = registerPlush("teto_plush_birdbrain", null, consumer);
-    MIKU_PLUSH_DIGITAL_STARS_2025 = registerPlush("miku_plush_digital_stars_2025", null, consumer);
-    MIKU_PLUSH_ROTTEN_GIRL = registerPlush("miku_plush_rotten_girl", null, consumer);
-    TETO_PLUSH_REGRET_ROCK = registerPlush("teto_plush_regret_rock", null, consumer);
-    MIKU_PLUSH_PSYCHO_MODE = registerPlush("miku_plush_psycho_mode", null, consumer);
-    MIKU_PLUSH_DONT_BELIEVE_IN_T = registerPlush("miku_plush_dont_believe_in_t", null, consumer);
-    TETO_PLUSH_DONT_BELIEVE_IN_T = registerPlush("teto_plush_dont_believe_in_t", null, consumer);
-    TETO_PLUSH_LIAR_DANCER = registerPlush("teto_plush_liar_dancer", null, consumer);
-    MIKU_PLUSH_STATIC = registerPlush("miku_plush_static", null, consumer);
-    MIKU_PLUSH_MOCHIMOCHI = registerPlush("miku_plush_mochimochi", null, consumer);
-    TETO_PLUSH_WHATCHACALLITSNAME = registerPlush("teto_plush_whatchacallitsname", null, consumer);
-    MIKU_PLUSH_MONITORING = registerPlush("miku_plush_monitoring", null, consumer);
-    KONOHA_PLUSH = registerPlush("konoha_plush", null, consumer);
-    LUKA_PLUSH = registerPlush("luka_plush", null, consumer);
-    TETO_PLUSH_SOME_MORE_OF_THAT_SONG = registerPlush("teto_plush_some_more_of_that_song", null, consumer);
-    TETO_PLUSH_LOBSTER = registerPlush("teto_plush_lobster", null, consumer);
-    MIKU_PLUSH_HOLLOW_KNIGHT = registerPlush("miku_plush_hollow_knight", null, consumer);
-    MIKU_PLUSH_HORNET = registerPlush("miku_plush_hornet", null, consumer);
-    TETO_PLUSH_SYNTHV = registerPlush("teto_plush_synthv", null, consumer);
-    MIKU_PLUSH_WORLD_IS_MINE = registerPlush("miku_plush_world_is_mine", null, consumer);
-    MIKU_PLUSH_ROLLING_GIRL = registerPlush("miku_plush_rolling_girl", null, consumer);
-    TETO_PLUSH_SPOKEN_FOR = registerPlush("teto_plush_spoken_for", null, consumer);
-    MEIKO_PLUSH = registerPlush("meiko_plush", null, consumer);
-    MEIKO_PLUSH_V3 = registerPlush("meiko_plush_v3", null, consumer);
-    MEIKO_PLUSH_V4 = registerPlush("meiko_plush_v4", null, consumer);
-    GUMI_PLUSH = registerPlush("gumi_plush", null, consumer);
-    GUMI_PLUSH_V3 = registerPlush("gumi_plush_v3", null, consumer);
-    GUMI_PLUSH_V4 = registerPlush("gumi_plush_v4", null, consumer);
-    GUMI_PLUSH_V6 = registerPlush("gumi_plush_v6", null, consumer);
-    MIKU_PLUSH_DEEP_SEA_GIRL = registerPlush("miku_plush_deep_sea_girl", null, consumer);
-    MIKU_PLUSH_LUCARIO_Z = registerPlush("miku_plush_lucario_z", null, consumer);
-    TETO_PLUSH_PPPP = registerPlush("teto_plush_pppp", null, consumer);
-    MIKU_PLUSH_PPPP = registerPlush("miku_plush_pppp", null, consumer);
-    TETO_PLUSH_SHRIMP = registerPlush("teto_plush_shrimp", null, consumer);
-    MIKU_PLUSH_LINK = registerPlush("miku_plush_link", null, consumer);
-    MIKU_PLUSH_RENAISSANCE = registerPlush("miku_plush_renaissance", null, consumer);
-    KAITO_PLUSH = registerPlush("kaito_plush", null, consumer);
-    KAITO_PLUSH_V3 = registerPlush("kaito_plush_v3", null, consumer);
-    KAITO_PLUSH_V4 = registerPlush("kaito_plush_v4", null, consumer);
+    MIKU_PLUSH_BR = registerPlush(consumer, "miku_plush_br", null);
+    MIKU_PLUSH_BR_BA = registerPlush(consumer, "miku_plush_br_ba", null);
+    MIKU_PLUSH_BIK = registerPlush(consumer, "miku_plush_bik", null);
+    MIKU_PLUSH_BR_BEACH = registerPlush(consumer, "miku_plush_br_beach", null);
+    MIKU_PLUSH_BR_BRAID = registerPlush(consumer, "miku_plush_br_braid", null);
+    MIKU_PLUSH_BR_BA_DRUM = registerPlush(consumer, "miku_plush_br_ba_drum", null);
+    MIKU_PLUSH_BR_PA = registerPlush(consumer, "miku_plush_br_pa", null);
+    MIKU_PLUSH_BR_SP = registerPlush(consumer, "miku_plush_br_sp", null);
+    MIKU_PLUSH_BR_MG = registerPlush(consumer, "miku_plush_br_mg", null);
+    MIKU_PLUSH_BR_BROWN_BRO = registerPlush(consumer, "miku_plush_br_brown_bro", null);
+    MIKU_PLUSH_BR_ELECTRICIAN = registerPlush(consumer, "miku_plush_br_electrician", null);
+    MIKU_PLUSH_BR_BIK_ORANGE = registerPlush(consumer, "miku_plush_br_bik_orange", null);
+    MIKU_PLUSH_BR_AM = registerPlush(consumer, "miku_plush_br_am", null);
+    MIKU_PLUSH_BR_FUT_FLA = registerPlush(consumer, "miku_plush_br_fut_fla", null);
+    MIKU_PLUSH_BR_FUT_CAM = registerPlush(consumer, "miku_plush_br_fut_cam", null);
+    MIKU_PLUSH_BR_GO = registerPlush(consumer, "miku_plush_br_go", null);
+    MIKU_PLUSH_BR_SCHOOL_PE = registerPlush(consumer, "miku_plush_br_school_pe", null);
+    MIKU_PLUSH_BR_FUT_CRVG = registerPlush(consumer, "miku_plush_br_fut_crvg", null);
+    MIKU_PLUSH_BR_RS = registerPlush(consumer, "miku_plush_br_rs", null);
+    MIKU_PLUSH_FROG = registerPlush(consumer, "miku_plush_frog", null);
+    MIKU_PLUSH_MUSHROOM = registerPlush(consumer, "miku_plush_mushroom", null);
+    MIKU_PLUSH_SENBONZAKURA = registerPlush(consumer, "miku_plush_senbonzakura", null);
+    MIKU_PLUSH_URAOTOMELOVERS = registerPlush(consumer, "miku_plush_uraotomelovers", null);
+    MIKU_PLUSH_PERSONADANCING = registerPlush(consumer, "miku_plush_personadancing", null);
+    MIKU_PLUSH_HELLOPLANET = registerPlush(consumer, "miku_plush_helloplanet", null);
+    MIKU_PLUSH_HACHUNE = registerPlush(consumer, "miku_plush_hachune", null);
+    MIKU_PLUSH_ZATSUNE = registerPlush(consumer, "miku_plush_zatsune", null);
+    MIKU_PLUSH_INFINITY = registerPlush(consumer, "miku_plush_infinity", null);
+    MIKU_PLUSH_VAMPIRE = registerPlush(consumer, "miku_plush_vampire", null);
+    MIKU_PLUSH_WEREWOMAN = registerPlush(consumer, "miku_plush_werewoman", null);
+    MIKU_PLUSH_JASON = registerPlush(consumer, "miku_plush_jason", null);
+    MIKU_PLUSH_MICHAEL_MYERS = registerPlush(consumer, "miku_plush_michael_myers", null);
+    MIKU_PLUSH_PUMPKIN = registerPlush(consumer, "miku_plush_pumpkin", null);
+    MIKU_PLUSH_GHOSTFACE = registerPlush(consumer, "miku_plush_ghostface", null);
+    MIKU_PLUSH_FRANKENSTEIN = registerPlush(consumer, "miku_plush_frankenstein", null);
+    MIKU_PLUSH_MUMMY = registerPlush(consumer, "miku_plush_mummy", null);
+    MIKU_PLUSH_GHOST = registerPlush(consumer, "miku_plush_ghost", SoundType.GLASS);
+    MIKU_PLUSH_PATATI = registerPlush(consumer, "miku_plush_patati", null);
+    MIKU_PLUSH_PATATA = registerPlush(consumer, "miku_plush_patata", null);
+    MIKU_PLUSH_DEVIL = registerPlush(consumer, "miku_plush_devil", null);
+    MIKU_PLUSH_WITCH = registerPlush(consumer, "miku_plush_witch", null);
+    MIKU_PLUSH_SANTA = registerPlush(consumer, "miku_plush_santa", null);
+    MIKU_PLUSH_REINDEER = registerPlush(consumer, "miku_plush_reindeer", null);
+    MIKU_PLUSH_SANTA_ELF = registerPlush(consumer, "miku_plush_santa_elf", null);
+    MIKU_PLUSH_XMAS_TREE = registerPlush(consumer, "miku_plush_xmas_tree", null);
+    AIKO_PLUSH = registerPlush(consumer, "aiko_plush", null);
+    TETO_PLUSH = registerPlush(consumer, "teto_plush", null);
+    AKITA_NERU_PLUSH = registerPlush(consumer, "akita_neru_plush", null);
+    MIKU_PLUSH = registerPlush(consumer, "miku_plush", null);
+    RIN_PLUSH = registerPlush(consumer, "rin_plush", null);
+    LEN_PLUSH = registerPlush(consumer, "len_plush", null);
+    MIKU_PLUSH_SONIC_CROSSWORLDS = registerPlush(consumer, "miku_plush_sonic_crossworlds", null);
+    MIKU_PLUSH_FORTNITE_NEKO = registerPlush(consumer, "miku_plush_fortnite_neko", null);
+    MIKU_PLUSH_V4 = registerPlush(consumer, "miku_plush_v4", null);
+    MIKU_PLUSH_MESMERIZER = registerPlush(consumer, "miku_plush_mesmerizer", null);
+    TETO_PLUSH_MESMERIZER = registerPlush(consumer, "teto_plush_mesmerizer", null);
+    MIKU_PLUSH_SONIC = registerPlush(consumer, "miku_plush_sonic", null);
+    TETO_PLUSH_SHADOW = registerPlush(consumer, "teto_plush_shadow", null);
+    AKITA_NERU_PLUSH_TAILS = registerPlush(consumer, "akita_neru_plush_tails", null);
+    TETO_PLUSH_BIRDBRAIN = registerPlush(consumer, "teto_plush_birdbrain", null);
+    MIKU_PLUSH_DIGITAL_STARS_2025 = registerPlush(consumer, "miku_plush_digital_stars_2025", null);
+    MIKU_PLUSH_ROTTEN_GIRL = registerPlush(consumer, "miku_plush_rotten_girl", null);
+    TETO_PLUSH_REGRET_ROCK = registerPlush(consumer, "teto_plush_regret_rock", null);
+    MIKU_PLUSH_PSYCHO_MODE = registerPlush(consumer, "miku_plush_psycho_mode", null);
+    MIKU_PLUSH_DONT_BELIEVE_IN_T = registerPlush(consumer, "miku_plush_dont_believe_in_t", null);
+    TETO_PLUSH_DONT_BELIEVE_IN_T = registerPlush(consumer, "teto_plush_dont_believe_in_t", null);
+    TETO_PLUSH_LIAR_DANCER = registerPlush(consumer, "teto_plush_liar_dancer", null);
+    MIKU_PLUSH_STATIC = registerPlush(consumer, "miku_plush_static", null);
+    MIKU_PLUSH_MOCHIMOCHI = registerPlush(consumer, "miku_plush_mochimochi", null);
+    TETO_PLUSH_WHATCHACALLITSNAME = registerPlush(consumer, "teto_plush_whatchacallitsname", null);
+    MIKU_PLUSH_MONITORING = registerPlush(consumer, "miku_plush_monitoring", null);
+    KONOHA_PLUSH = registerPlush(consumer, "konoha_plush", null);
+    LUKA_PLUSH = registerPlush(consumer, "luka_plush", null);
+    TETO_PLUSH_SOME_MORE_OF_THAT_SONG = registerPlush(consumer, "teto_plush_some_more_of_that_song", null);
+    TETO_PLUSH_LOBSTER = registerPlush(consumer, "teto_plush_lobster", null);
+    MIKU_PLUSH_HOLLOW_KNIGHT = registerPlush(consumer, "miku_plush_hollow_knight", null);
+    MIKU_PLUSH_HORNET = registerPlush(consumer, "miku_plush_hornet", null);
+    TETO_PLUSH_SYNTHV = registerPlush(consumer, "teto_plush_synthv", null);
+    MIKU_PLUSH_WORLD_IS_MINE = registerPlush(consumer, "miku_plush_world_is_mine", null);
+    MIKU_PLUSH_ROLLING_GIRL = registerPlush(consumer, "miku_plush_rolling_girl", null);
+    TETO_PLUSH_SPOKEN_FOR = registerPlush(consumer, "teto_plush_spoken_for", null);
+    MEIKO_PLUSH = registerPlush(consumer, "meiko_plush", null);
+    MEIKO_PLUSH_V3 = registerPlush(consumer, "meiko_plush_v3", null);
+    MEIKO_PLUSH_V4 = registerPlush(consumer, "meiko_plush_v4", null);
+    GUMI_PLUSH = registerPlush(consumer, "gumi_plush", null);
+    GUMI_PLUSH_V3 = registerPlush(consumer, "gumi_plush_v3", null);
+    GUMI_PLUSH_V4 = registerPlush(consumer, "gumi_plush_v4", null);
+    GUMI_PLUSH_V6 = registerPlush(consumer, "gumi_plush_v6", null);
+    MIKU_PLUSH_DEEP_SEA_GIRL = registerPlush(consumer, "miku_plush_deep_sea_girl", null);
+    MIKU_PLUSH_LUCARIO_Z = registerPlush(consumer, "miku_plush_lucario_z", null);
+    TETO_PLUSH_PPPP = registerPlush(consumer, "teto_plush_pppp", null);
+    MIKU_PLUSH_PPPP = registerPlush(consumer, "miku_plush_pppp", null);
+    TETO_PLUSH_SHRIMP = registerPlush(consumer, "teto_plush_shrimp", null);
+    MIKU_PLUSH_LINK = registerPlush(consumer, "miku_plush_link", null);
+    MIKU_PLUSH_RENAISSANCE = registerPlush(consumer, "miku_plush_renaissance", null);
+    KAITO_PLUSH = registerPlush(consumer, "kaito_plush", null);
+    KAITO_PLUSH_V3 = registerPlush(consumer, "kaito_plush_v3", null);
+    KAITO_PLUSH_V4 = registerPlush(consumer, "kaito_plush_v4", null);
 
     LEEK_CROP = register(new LeekCropBlock(BlockBehaviour.Properties.of().noOcclusion().noCollission().randomTicks().instabreak().sound(SoundType.CROP)), "leek_crop", false, consumer);
     WILD_LEEK_CROP = register(new WildLeekCropBlock(BlockBehaviour.Properties.of().noOcclusion().noCollission().randomTicks().instabreak().sound(SoundType.CROP)), "wild_leek_crop", false, consumer);
   }
 
   //REGISTER PLUSHIES
-  public static Block registerPlush(String name, @Nullable SoundType blockSound, BiConsumer<Block, ResourceLocation> consumer) {
+  public static Block registerPlush(BiConsumer<Block, ResourceLocation> consumer, String name, @Nullable SoundType blockSound) {
     //ADD BLOCK NAMES TO CONSTANTS LIST
     Constants.PLUSH_BLOCK_NAMES.add(name);
     //IF THE BLOCK SOUND IS NULL SET TO WOOL
@@ -246,29 +246,23 @@ public class ModBlocks {
 
   //REGISTER REGULAR BLOCKS
   public static Block register(Block block, String name, boolean shouldRegisterItem, BiConsumer<Block, ResourceLocation> consumer) {
-    // ADD TO OTHER BLOCK LIST IF NOT AN PLUSH BLOCK
-    if (!(block instanceof MikuPlushieBlock)) {
+
+    //IF BLOCK IS A PLUSH ADD IT TO THE LIST
+    if (block instanceof MikuPlushieBlock) {
+      ModBlocks.PLUSH_BLOCKS.add(block);
+    } else {
       Constants.OTHER_BLOCK_NAMES.add(name);
     }
 
     //CREATE IDENTIFIER
     ResourceLocation id = MikuPlushie.id(name);
 
-    // TODO can't register items here, need to move registration logic to ModItems
     //REGISTER ITEM IF REQUESTED
     if (shouldRegisterItem) {
-      // BlockItem blockItem = new BlockItem(block, new Item.Properties());
-      // Registry.register(BuiltInRegistries.ITEM, id, blockItem);
       NEEDS_BLOCK_ITEM.add(new Pair<>(block, id));
     }
 
-//    Block blockRegister = Registry.register(BuiltInRegistries.BLOCK, id, block);
     consumer.accept(block, id);
-
-    //IF BLOCK IS A PLUSH ADD IT TO THE LIST
-    if (block instanceof MikuPlushieBlock) {
-      ModBlocks.PLUSH_BLOCKS.add(block);
-    }
 
     return block;
   }
