@@ -101,11 +101,8 @@ public class ModItems {
 
   //REGISTER NORMAL ITEM
   public static Item register(Item item, String id, BiConsumer<Item, ResourceLocation> consumer) {
-    // ADD REGULAR ITEMS TO ALIAS LIST
-    Constants.OTHER_ITEM_NAMES.add(id);
 
     ResourceLocation itemID = MikuPlushie.id(id);
-//    Item register = Registry.register(BuiltInRegistries.ITEM, itemID, item);
     consumer.accept(item, itemID);
     String itemName = ModUtil.getBlockIdFromItem(item);
 
@@ -116,6 +113,7 @@ public class ModItems {
     //ADD REGULAR ITEMS TOO
     else if (!itemName.contains("plush")) {
       REGULAR_ITEMS.add(item);
+      Constants.OTHER_ITEM_NAMES.add(id);
     }
 
     return item;
