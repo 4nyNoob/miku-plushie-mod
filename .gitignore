@@ -24,3 +24,5 @@ run
 runs
 
 .cache
+/build-fabric/
+/build-neoforge/
