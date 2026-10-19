@@ -1,32 +1,65 @@
-# MultiLoader Template
+[//]: # (<!--suppress HtmlDeprecatedAttribute -->)
+<h1 style="text-align:center">
+Hatsune Miku Just Arrived in Minecraft
+</h1>
 
-This project provides a Gradle project template that can compile Minecraft mods for multiple modloaders using a common project for the sources. This project does not require any third party libraries or dependencies. If you have any questions or want to discuss the project, please join our [Discord](https://discord.myceliummod.network).
+[//]: # (info Badges)
+<p style="text-align:center">
 
-## Getting Started
+[//]: # (  <img src="https://img.shields.io/badge/License-GPL_3.0-FF6699" alt="GPL V3.0"/>)
 
-### IntelliJ IDEA
-This guide will show how to import the MultiLoader Template into IntelliJ IDEA. The setup process is roughly equivalent to setting up the modloaders independently and should be very familiar to anyone who has worked with their MDKs.
+[//]: # (  <img src="https://img.shields.io/badge/Fabric-1.20.1-00B4AB" alt="Fabric 1.20.1"/>)
 
-1. Clone or download this repository to your computer.
-2. Configure the project by setting the properties in the `gradle.properties` file. You will also need to change the `rootProject.name`  property in `settings.gradle`, this should match the folder name of your project, or else IDEA may complain.
-3. Open the template's root folder as a new project in IDEA. This is the folder that contains this README.md file and the gradlew executable.
-4. If your default JVM/JDK is not Java 21 you will encounter an error when opening the project. This error is fixed by going to `File > Settings > Build, Execution, Deployment > Build Tools > Gradle > Gradle JVM` and changing the value to a valid Java 21 JVM. You will also need to set the Project SDK to Java 21. This can be done by going to `File > Project Structure > Project SDK`. Once both have been set open the Gradle tab in IDEA and click the refresh button to reload the project.
-5. Open your Run/Debug Configurations. Under the `Application` category there should now be options to run Fabric and NeoForge projects. Select one of the client options and try to run it.
-6. Assuming you were able to run the game in step 5 your workspace should now be set up.
+[//]: # (  <img src="https://img.shields.io/badge/Fabric-1.21.1-9999CC" alt="Fabric 1.21.1"/>)
+<img alt="fabric-api" height="40" src="https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3/assets/compact/requires/fabric-api_vector.svg">
+<img alt="fabric-api" height="40" src="https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3/assets/compact/requires/geckolib_vector.svg">
+</p>
 
-### Eclipse
-While it is possible to use this template in Eclipse it is not recommended. During the development of this template multiple critical bugs and quirks related to Eclipse were found at nearly every level of the required build tools. While we continue to work with these tools to report and resolve issues support for projects like these are not there yet. For now Eclipse is considered unsupported by this project. The development cycle for build tools is notoriously slow so there are no ETAs available.
+[//]: # (Download Links)
+<p style="text-align:center">
+  <a href="https://github.com/4nyNoob/miku-plushie-mod/releases">
+    <img alt="github" height="40" src="https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3/assets/compact/available/github_vector.svg">
+  </a>
+  <a href="https://modrinth.com/mod/miku-plushies">
+    <img alt="modrinth" height="40" src="https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3/assets/compact/available/modrinth_vector.svg">
+  </a>
+  <a href="https://www.curseforge.com/minecraft/mc-mods/miku-plushies">
+    <img alt="curseforge" height="40" src="https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3/assets/compact/available/curseforge_vector.svg">
+  </a>
+</p>
 
-## Development Guide
-When using this template the majority of your mod should be developed in the `common` project. The `common` project is compiled against the vanilla game and is used to hold code that is shared between the different loader-specific versions of your mod. The `common` project has no knowledge or access to ModLoader specific code, apis, or concepts. Code that requires something from a specific loader must be done through the project that is specific to that loader, such as the `fabric` or `neoforge` projects.
 
-Loader specific projects such as the `fabric` and `neoforge` project are used to load the `common` project into the game. These projects also define code that is specific to that loader. Loader specific projects can access all the code in the `common` project. It is important to remember that the `common` project can not access code from loader specific projects.
+<h3 style="text-align:justify">
+Craft as many shears as your heart desire and start building your collection of Vocaloids.
+90+ designs from 10 different Vocaloids and still counting. 
+You can suggest new plushies via <a href="https://github.com/4nyNoob/miku-plushie-mod/issues/new?template=new_plush.yml">GitHub Issues</a> or contact me on <a href="https://bsky.app/profile/4ny.bsky.social">Bluesky</a> <br> 
+</h3>
 
-## Removing Platforms and Loaders
-While this template has support for many modloaders, new loaders may appear in the future, and existing loaders may become less relevant.
+<a style="text-align:center" href="https://github.com/4nyNoob/miku-plushie-mod/wiki/Crafting-Recipes#plushies">
+    <img alt="Plushies Atlas" src="https://raw.githubusercontent.com/4nyNoob/miku-plushie-mod/refs/heads/fabric-1.20.1/assets/plushies-atlas/plushies-atlas.webp?raw=true"/>
+</a>
 
-Removing loader specific projects is as easy as deleting the folder, and removing the `include("projectname")` line from the `settings.gradle` file.
-For example if you wanted to remove support for `forge` you would follow the following steps:
+## Features:
+ - ### 100% Portuguese(Brazil) and English (US) Dubbed
+ - ### You can put the plushies in your head (even tough they don't like the heights)
+ - ### All Tetos *(almost)* can be crafted as a pickaxe
+ - ### They complain when you use them as a weapon
+ - ### Plushies can be your pets now
 
-1. Delete the subproject folder. For example, delete `MultiLoader-Template/forge`.
-2. Remove the project from `settings.gradle`. For example, remove `include("forge")`. 
+   - ### They Can Dance!!!
+     ![Plushies dancing](https://raw.githubusercontent.com/4nyNoob/miku-plushie-mod/refs/heads/fabric-1.20.1/assets/gameplay/dance.gif)
+   - ### They Can Hunt With You
+     ![A couple of Hatsune Mikus v4 Hunting a cow](https://raw.githubusercontent.com/4nyNoob/miku-plushie-mod/refs/heads/fabric-1.20.1/assets/gameplay/hunting.gif)
+   - ### And much More
+
+<details>
+    <summary>FAQ</summary>
+
+- ### Q: Forge?
+  - A: Use [Sinytra Connector](https://modrinth.com/mod/connector) alongside [Connector Extras](https://modrinth.com/mod/connector-extras). I'm not planning into porting the mod myself, but I'm always open to accepting and supporting porting efforts by the community.
+- ### Q: Can I use this on my Modpack?
+  - A: Yes! absolutely :D
+
+</details>
+
+If you enjoy what I do, consider supporting me on Ko-fi! https://ko-fi.com/4nynoob

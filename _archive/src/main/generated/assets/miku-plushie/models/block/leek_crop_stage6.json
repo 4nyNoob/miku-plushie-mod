@@ -1,6 +1,0 @@
-{
-  "parent": "miku-plushie:block/leek",
-  "textures": {
-    "cross": "miku-plushie:block/leek_crop_stage6"
-  }
-}
