@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:miku_plushie/craft_miku",
+  "criteria": {
+    "craft_luka": {
+      "conditions": {
+        "items": [
+          {
+            "items": "miku_plushie:luka_plush"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": false,
+    "description": {
+      "translate": "advancements.miku_plushie.craft_luka.description"
+    },
+    "icon": {
+      "count": 1,
+      "id": "miku_plushie:luka_plush"
+    },
+    "title": {
+      "translate": "advancements.miku_plushie.craft_luka.title"
+    }
+  },
+  "requirements": [
+    [
+      "craft_luka"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

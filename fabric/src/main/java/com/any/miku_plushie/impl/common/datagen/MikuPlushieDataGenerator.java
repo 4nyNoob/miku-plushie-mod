@@ -18,6 +18,7 @@ public class MikuPlushieDataGenerator implements DataGeneratorEntrypoint {
     pack.addProvider(ModItemTagProvider::new);
     pack.addProvider(ModEntityTagProvider::new);
     pack.addProvider(ModWorldGenerator::new);
+    pack.addProvider(ModAdvancements::new);
   }
 
   @Override

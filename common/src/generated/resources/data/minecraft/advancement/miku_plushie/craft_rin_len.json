@@ -1,0 +1,47 @@
+{
+  "parent": "minecraft:miku_plushie/craft_miku",
+  "criteria": {
+    "craft_len": {
+      "conditions": {
+        "items": [
+          {
+            "items": "miku_plushie:len_plush"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "craft_rin": {
+      "conditions": {
+        "items": [
+          {
+            "items": "miku_plushie:rin_plush"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": false,
+    "description": {
+      "translate": "advancements.miku_plushie.craft_rin_len.description"
+    },
+    "icon": {
+      "count": 1,
+      "id": "miku_plushie:rin_plush"
+    },
+    "title": {
+      "translate": "advancements.miku_plushie.craft_rin_len.title"
+    }
+  },
+  "requirements": [
+    [
+      "craft_rin"
+    ],
+    [
+      "craft_len"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

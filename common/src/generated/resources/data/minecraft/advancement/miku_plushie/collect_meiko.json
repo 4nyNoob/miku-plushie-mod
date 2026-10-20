@@ -1,0 +1,61 @@
+{
+  "parent": "minecraft:miku_plushie/craft_meiko",
+  "criteria": {
+    "collect_Block{miku_plushie:meiko_plush_v3}": {
+      "conditions": {
+        "items": [
+          {
+            "items": "miku_plushie:meiko_plush_v3"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "collect_Block{miku_plushie:meiko_plush_v4}": {
+      "conditions": {
+        "items": [
+          {
+            "items": "miku_plushie:meiko_plush_v4"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "collect_Block{miku_plushie:meiko_plush}": {
+      "conditions": {
+        "items": [
+          {
+            "items": "miku_plushie:meiko_plush"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": false,
+    "description": {
+      "translate": "advancements.miku_plushie.collect_meiko.description"
+    },
+    "frame": "challenge",
+    "icon": {
+      "count": 1,
+      "id": "miku_plushie:meiko_plush_v4"
+    },
+    "title": {
+      "translate": "advancements.miku_plushie.collect_meiko.title"
+    }
+  },
+  "requirements": [
+    [
+      "collect_Block{miku_plushie:meiko_plush}"
+    ],
+    [
+      "collect_Block{miku_plushie:meiko_plush_v3}"
+    ],
+    [
+      "collect_Block{miku_plushie:meiko_plush_v4}"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

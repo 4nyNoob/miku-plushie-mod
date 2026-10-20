@@ -1,0 +1,35 @@
+{
+  "criteria": {
+    "craft_miku": {
+      "conditions": {
+        "items": [
+          {
+            "items": "miku_plushie:miku_plush"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": false,
+    "background": "minecraft:textures/gui/advancements/backgrounds/adventure.png",
+    "description": {
+      "translate": "advancements.miku_plushie.craft_miku.description"
+    },
+    "hidden": true,
+    "icon": {
+      "count": 1,
+      "id": "miku_plushie:miku_plush"
+    },
+    "title": {
+      "translate": "advancements.miku_plushie.craft_miku.title"
+    }
+  },
+  "requirements": [
+    [
+      "craft_miku"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

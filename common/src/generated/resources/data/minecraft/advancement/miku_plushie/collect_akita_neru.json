@@ -1,0 +1,48 @@
+{
+  "parent": "minecraft:miku_plushie/craft_akita_neru",
+  "criteria": {
+    "collect_Block{miku_plushie:akita_neru_plush_tails}": {
+      "conditions": {
+        "items": [
+          {
+            "items": "miku_plushie:akita_neru_plush_tails"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "collect_Block{miku_plushie:akita_neru_plush}": {
+      "conditions": {
+        "items": [
+          {
+            "items": "miku_plushie:akita_neru_plush"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": false,
+    "description": {
+      "translate": "advancements.miku_plushie.collect_akita_neru.description"
+    },
+    "frame": "challenge",
+    "icon": {
+      "count": 1,
+      "id": "miku_plushie:akita_neru_plush_tails"
+    },
+    "title": {
+      "translate": "advancements.miku_plushie.collect_akita_neru.title"
+    }
+  },
+  "requirements": [
+    [
+      "collect_Block{miku_plushie:akita_neru_plush}"
+    ],
+    [
+      "collect_Block{miku_plushie:akita_neru_plush_tails}"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

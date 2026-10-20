@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:miku_plushie/craft_miku",
+  "criteria": {
+    "craft_teto": {
+      "conditions": {
+        "items": [
+          {
+            "items": "miku_plushie:teto_plush"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": false,
+    "description": {
+      "translate": "advancements.miku_plushie.craft_teto.description"
+    },
+    "icon": {
+      "count": 1,
+      "id": "miku_plushie:teto_plush"
+    },
+    "title": {
+      "translate": "advancements.miku_plushie.craft_teto.title"
+    }
+  },
+  "requirements": [
+    [
+      "craft_teto"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

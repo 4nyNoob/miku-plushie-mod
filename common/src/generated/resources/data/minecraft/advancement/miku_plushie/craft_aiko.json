@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:miku_plushie/craft_miku",
+  "criteria": {
+    "craft_aiko": {
+      "conditions": {
+        "items": [
+          {
+            "items": "miku_plushie:aiko_plush"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": false,
+    "description": {
+      "translate": "advancements.miku_plushie.craft_aiko.description"
+    },
+    "icon": {
+      "count": 1,
+      "id": "miku_plushie:aiko_plush"
+    },
+    "title": {
+      "translate": "advancements.miku_plushie.craft_aiko.title"
+    }
+  },
+  "requirements": [
+    [
+      "craft_aiko"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

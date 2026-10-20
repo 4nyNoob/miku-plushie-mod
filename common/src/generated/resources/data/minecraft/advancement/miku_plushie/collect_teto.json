@@ -1,0 +1,204 @@
+{
+  "parent": "minecraft:miku_plushie/craft_teto",
+  "criteria": {
+    "collect_Block{miku_plushie:teto_plush_birdbrain}": {
+      "conditions": {
+        "items": [
+          {
+            "items": "miku_plushie:teto_plush_birdbrain"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "collect_Block{miku_plushie:teto_plush_dont_believe_in_t}": {
+      "conditions": {
+        "items": [
+          {
+            "items": "miku_plushie:teto_plush_dont_believe_in_t"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "collect_Block{miku_plushie:teto_plush_liar_dancer}": {
+      "conditions": {
+        "items": [
+          {
+            "items": "miku_plushie:teto_plush_liar_dancer"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "collect_Block{miku_plushie:teto_plush_lobster}": {
+      "conditions": {
+        "items": [
+          {
+            "items": "miku_plushie:teto_plush_lobster"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "collect_Block{miku_plushie:teto_plush_mesmerizer}": {
+      "conditions": {
+        "items": [
+          {
+            "items": "miku_plushie:teto_plush_mesmerizer"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "collect_Block{miku_plushie:teto_plush_pppp}": {
+      "conditions": {
+        "items": [
+          {
+            "items": "miku_plushie:teto_plush_pppp"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "collect_Block{miku_plushie:teto_plush_regret_rock}": {
+      "conditions": {
+        "items": [
+          {
+            "items": "miku_plushie:teto_plush_regret_rock"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "collect_Block{miku_plushie:teto_plush_shadow}": {
+      "conditions": {
+        "items": [
+          {
+            "items": "miku_plushie:teto_plush_shadow"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "collect_Block{miku_plushie:teto_plush_shrimp}": {
+      "conditions": {
+        "items": [
+          {
+            "items": "miku_plushie:teto_plush_shrimp"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "collect_Block{miku_plushie:teto_plush_some_more_of_that_song}": {
+      "conditions": {
+        "items": [
+          {
+            "items": "miku_plushie:teto_plush_some_more_of_that_song"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "collect_Block{miku_plushie:teto_plush_spoken_for}": {
+      "conditions": {
+        "items": [
+          {
+            "items": "miku_plushie:teto_plush_spoken_for"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "collect_Block{miku_plushie:teto_plush_synthv}": {
+      "conditions": {
+        "items": [
+          {
+            "items": "miku_plushie:teto_plush_synthv"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "collect_Block{miku_plushie:teto_plush_whatchacallitsname}": {
+      "conditions": {
+        "items": [
+          {
+            "items": "miku_plushie:teto_plush_whatchacallitsname"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "collect_Block{miku_plushie:teto_plush}": {
+      "conditions": {
+        "items": [
+          {
+            "items": "miku_plushie:teto_plush"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": false,
+    "description": {
+      "translate": "advancements.miku_plushie.collect_teto.description"
+    },
+    "frame": "challenge",
+    "icon": {
+      "count": 1,
+      "id": "miku_plushie:teto_plush_shrimp"
+    },
+    "title": {
+      "translate": "advancements.miku_plushie.collect_teto.title"
+    }
+  },
+  "requirements": [
+    [
+      "collect_Block{miku_plushie:teto_plush}"
+    ],
+    [
+      "collect_Block{miku_plushie:teto_plush_mesmerizer}"
+    ],
+    [
+      "collect_Block{miku_plushie:teto_plush_shadow}"
+    ],
+    [
+      "collect_Block{miku_plushie:teto_plush_birdbrain}"
+    ],
+    [
+      "collect_Block{miku_plushie:teto_plush_regret_rock}"
+    ],
+    [
+      "collect_Block{miku_plushie:teto_plush_dont_believe_in_t}"
+    ],
+    [
+      "collect_Block{miku_plushie:teto_plush_liar_dancer}"
+    ],
+    [
+      "collect_Block{miku_plushie:teto_plush_whatchacallitsname}"
+    ],
+    [
+      "collect_Block{miku_plushie:teto_plush_some_more_of_that_song}"
+    ],
+    [
+      "collect_Block{miku_plushie:teto_plush_lobster}"
+    ],
+    [
+      "collect_Block{miku_plushie:teto_plush_synthv}"
+    ],
+    [
+      "collect_Block{miku_plushie:teto_plush_spoken_for}"
+    ],
+    [
+      "collect_Block{miku_plushie:teto_plush_pppp}"
+    ],
+    [
+      "collect_Block{miku_plushie:teto_plush_shrimp}"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

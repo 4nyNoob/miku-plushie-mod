@@ -1,0 +1,893 @@
+{
+  "parent": "minecraft:miku_plushie/craft_miku",
+  "criteria": {
+    "collect_Block{miku_plushie:miku_plush_bik}": {
+      "conditions": {
+        "items": [
+          {
+            "items": "miku_plushie:miku_plush_bik"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "collect_Block{miku_plushie:miku_plush_br_am}": {
+      "conditions": {
+        "items": [
+          {
+            "items": "miku_plushie:miku_plush_br_am"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "collect_Block{miku_plushie:miku_plush_br_ba_drum}": {
+      "conditions": {
+        "items": [
+          {
+            "items": "miku_plushie:miku_plush_br_ba_drum"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "collect_Block{miku_plushie:miku_plush_br_ba}": {
+      "conditions": {
+        "items": [
+          {
+            "items": "miku_plushie:miku_plush_br_ba"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "collect_Block{miku_plushie:miku_plush_br_beach}": {
+      "conditions": {
+        "items": [
+          {
+            "items": "miku_plushie:miku_plush_br_beach"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "collect_Block{miku_plushie:miku_plush_br_bik_orange}": {
+      "conditions": {
+        "items": [
+          {
+            "items": "miku_plushie:miku_plush_br_bik_orange"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "collect_Block{miku_plushie:miku_plush_br_braid}": {
+      "conditions": {
+        "items": [
+          {
+            "items": "miku_plushie:miku_plush_br_braid"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "collect_Block{miku_plushie:miku_plush_br_brown_bro}": {
+      "conditions": {
+        "items": [
+          {
+            "items": "miku_plushie:miku_plush_br_brown_bro"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "collect_Block{miku_plushie:miku_plush_br_electrician}": {
+      "conditions": {
+        "items": [
+          {
+            "items": "miku_plushie:miku_plush_br_electrician"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "collect_Block{miku_plushie:miku_plush_br_fut_cam}": {
+      "conditions": {
+        "items": [
+          {
+            "items": "miku_plushie:miku_plush_br_fut_cam"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "collect_Block{miku_plushie:miku_plush_br_fut_crvg}": {
+      "conditions": {
+        "items": [
+          {
+            "items": "miku_plushie:miku_plush_br_fut_crvg"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "collect_Block{miku_plushie:miku_plush_br_fut_fla}": {
+      "conditions": {
+        "items": [
+          {
+            "items": "miku_plushie:miku_plush_br_fut_fla"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "collect_Block{miku_plushie:miku_plush_br_go}": {
+      "conditions": {
+        "items": [
+          {
+            "items": "miku_plushie:miku_plush_br_go"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "collect_Block{miku_plushie:miku_plush_br_mg}": {
+      "conditions": {
+        "items": [
+          {
+            "items": "miku_plushie:miku_plush_br_mg"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "collect_Block{miku_plushie:miku_plush_br_pa}": {
+      "conditions": {
+        "items": [
+          {
+            "items": "miku_plushie:miku_plush_br_pa"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "collect_Block{miku_plushie:miku_plush_br_rs}": {
+      "conditions": {
+        "items": [
+          {
+            "items": "miku_plushie:miku_plush_br_rs"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "collect_Block{miku_plushie:miku_plush_br_school_pe}": {
+      "conditions": {
+        "items": [
+          {
+            "items": "miku_plushie:miku_plush_br_school_pe"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "collect_Block{miku_plushie:miku_plush_br_sp}": {
+      "conditions": {
+        "items": [
+          {
+            "items": "miku_plushie:miku_plush_br_sp"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "collect_Block{miku_plushie:miku_plush_br}": {
+      "conditions": {
+        "items": [
+          {
+            "items": "miku_plushie:miku_plush_br"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "collect_Block{miku_plushie:miku_plush_deep_sea_girl}": {
+      "conditions": {
+        "items": [
+          {
+            "items": "miku_plushie:miku_plush_deep_sea_girl"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "collect_Block{miku_plushie:miku_plush_devil}": {
+      "conditions": {
+        "items": [
+          {
+            "items": "miku_plushie:miku_plush_devil"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "collect_Block{miku_plushie:miku_plush_digital_stars_2025}": {
+      "conditions": {
+        "items": [
+          {
+            "items": "miku_plushie:miku_plush_digital_stars_2025"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "collect_Block{miku_plushie:miku_plush_dont_believe_in_t}": {
+      "conditions": {
+        "items": [
+          {
+            "items": "miku_plushie:miku_plush_dont_believe_in_t"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "collect_Block{miku_plushie:miku_plush_fortnite_neko}": {
+      "conditions": {
+        "items": [
+          {
+            "items": "miku_plushie:miku_plush_fortnite_neko"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "collect_Block{miku_plushie:miku_plush_frankenstein}": {
+      "conditions": {
+        "items": [
+          {
+            "items": "miku_plushie:miku_plush_frankenstein"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "collect_Block{miku_plushie:miku_plush_frog}": {
+      "conditions": {
+        "items": [
+          {
+            "items": "miku_plushie:miku_plush_frog"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "collect_Block{miku_plushie:miku_plush_ghostface}": {
+      "conditions": {
+        "items": [
+          {
+            "items": "miku_plushie:miku_plush_ghostface"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "collect_Block{miku_plushie:miku_plush_ghost}": {
+      "conditions": {
+        "items": [
+          {
+            "items": "miku_plushie:miku_plush_ghost"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "collect_Block{miku_plushie:miku_plush_hachune}": {
+      "conditions": {
+        "items": [
+          {
+            "items": "miku_plushie:miku_plush_hachune"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "collect_Block{miku_plushie:miku_plush_helloplanet}": {
+      "conditions": {
+        "items": [
+          {
+            "items": "miku_plushie:miku_plush_helloplanet"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "collect_Block{miku_plushie:miku_plush_hollow_knight}": {
+      "conditions": {
+        "items": [
+          {
+            "items": "miku_plushie:miku_plush_hollow_knight"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "collect_Block{miku_plushie:miku_plush_hornet}": {
+      "conditions": {
+        "items": [
+          {
+            "items": "miku_plushie:miku_plush_hornet"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "collect_Block{miku_plushie:miku_plush_infinity}": {
+      "conditions": {
+        "items": [
+          {
+            "items": "miku_plushie:miku_plush_infinity"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "collect_Block{miku_plushie:miku_plush_jason}": {
+      "conditions": {
+        "items": [
+          {
+            "items": "miku_plushie:miku_plush_jason"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "collect_Block{miku_plushie:miku_plush_link}": {
+      "conditions": {
+        "items": [
+          {
+            "items": "miku_plushie:miku_plush_link"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "collect_Block{miku_plushie:miku_plush_lucario_z}": {
+      "conditions": {
+        "items": [
+          {
+            "items": "miku_plushie:miku_plush_lucario_z"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "collect_Block{miku_plushie:miku_plush_mesmerizer}": {
+      "conditions": {
+        "items": [
+          {
+            "items": "miku_plushie:miku_plush_mesmerizer"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "collect_Block{miku_plushie:miku_plush_michael_myers}": {
+      "conditions": {
+        "items": [
+          {
+            "items": "miku_plushie:miku_plush_michael_myers"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "collect_Block{miku_plushie:miku_plush_mochimochi}": {
+      "conditions": {
+        "items": [
+          {
+            "items": "miku_plushie:miku_plush_mochimochi"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "collect_Block{miku_plushie:miku_plush_monitoring}": {
+      "conditions": {
+        "items": [
+          {
+            "items": "miku_plushie:miku_plush_monitoring"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "collect_Block{miku_plushie:miku_plush_mummy}": {
+      "conditions": {
+        "items": [
+          {
+            "items": "miku_plushie:miku_plush_mummy"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "collect_Block{miku_plushie:miku_plush_mushroom}": {
+      "conditions": {
+        "items": [
+          {
+            "items": "miku_plushie:miku_plush_mushroom"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "collect_Block{miku_plushie:miku_plush_patata}": {
+      "conditions": {
+        "items": [
+          {
+            "items": "miku_plushie:miku_plush_patata"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "collect_Block{miku_plushie:miku_plush_patati}": {
+      "conditions": {
+        "items": [
+          {
+            "items": "miku_plushie:miku_plush_patati"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "collect_Block{miku_plushie:miku_plush_personadancing}": {
+      "conditions": {
+        "items": [
+          {
+            "items": "miku_plushie:miku_plush_personadancing"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "collect_Block{miku_plushie:miku_plush_pppp}": {
+      "conditions": {
+        "items": [
+          {
+            "items": "miku_plushie:miku_plush_pppp"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "collect_Block{miku_plushie:miku_plush_psycho_mode}": {
+      "conditions": {
+        "items": [
+          {
+            "items": "miku_plushie:miku_plush_psycho_mode"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "collect_Block{miku_plushie:miku_plush_pumpkin}": {
+      "conditions": {
+        "items": [
+          {
+            "items": "miku_plushie:miku_plush_pumpkin"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "collect_Block{miku_plushie:miku_plush_reindeer}": {
+      "conditions": {
+        "items": [
+          {
+            "items": "miku_plushie:miku_plush_reindeer"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "collect_Block{miku_plushie:miku_plush_renaissance}": {
+      "conditions": {
+        "items": [
+          {
+            "items": "miku_plushie:miku_plush_renaissance"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "collect_Block{miku_plushie:miku_plush_rolling_girl}": {
+      "conditions": {
+        "items": [
+          {
+            "items": "miku_plushie:miku_plush_rolling_girl"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "collect_Block{miku_plushie:miku_plush_rotten_girl}": {
+      "conditions": {
+        "items": [
+          {
+            "items": "miku_plushie:miku_plush_rotten_girl"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "collect_Block{miku_plushie:miku_plush_santa_elf}": {
+      "conditions": {
+        "items": [
+          {
+            "items": "miku_plushie:miku_plush_santa_elf"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "collect_Block{miku_plushie:miku_plush_santa}": {
+      "conditions": {
+        "items": [
+          {
+            "items": "miku_plushie:miku_plush_santa"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "collect_Block{miku_plushie:miku_plush_senbonzakura}": {
+      "conditions": {
+        "items": [
+          {
+            "items": "miku_plushie:miku_plush_senbonzakura"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "collect_Block{miku_plushie:miku_plush_sonic_crossworlds}": {
+      "conditions": {
+        "items": [
+          {
+            "items": "miku_plushie:miku_plush_sonic_crossworlds"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "collect_Block{miku_plushie:miku_plush_sonic}": {
+      "conditions": {
+        "items": [
+          {
+            "items": "miku_plushie:miku_plush_sonic"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "collect_Block{miku_plushie:miku_plush_static}": {
+      "conditions": {
+        "items": [
+          {
+            "items": "miku_plushie:miku_plush_static"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "collect_Block{miku_plushie:miku_plush_uraotomelovers}": {
+      "conditions": {
+        "items": [
+          {
+            "items": "miku_plushie:miku_plush_uraotomelovers"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "collect_Block{miku_plushie:miku_plush_v4}": {
+      "conditions": {
+        "items": [
+          {
+            "items": "miku_plushie:miku_plush_v4"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "collect_Block{miku_plushie:miku_plush_vampire}": {
+      "conditions": {
+        "items": [
+          {
+            "items": "miku_plushie:miku_plush_vampire"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "collect_Block{miku_plushie:miku_plush_werewoman}": {
+      "conditions": {
+        "items": [
+          {
+            "items": "miku_plushie:miku_plush_werewoman"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "collect_Block{miku_plushie:miku_plush_witch}": {
+      "conditions": {
+        "items": [
+          {
+            "items": "miku_plushie:miku_plush_witch"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "collect_Block{miku_plushie:miku_plush_world_is_mine}": {
+      "conditions": {
+        "items": [
+          {
+            "items": "miku_plushie:miku_plush_world_is_mine"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "collect_Block{miku_plushie:miku_plush_xmas_tree}": {
+      "conditions": {
+        "items": [
+          {
+            "items": "miku_plushie:miku_plush_xmas_tree"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "collect_Block{miku_plushie:miku_plush_zatsune}": {
+      "conditions": {
+        "items": [
+          {
+            "items": "miku_plushie:miku_plush_zatsune"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "collect_Block{miku_plushie:miku_plush}": {
+      "conditions": {
+        "items": [
+          {
+            "items": "miku_plushie:miku_plush"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": false,
+    "description": {
+      "translate": "advancements.miku_plushie.collect_miku.description"
+    },
+    "frame": "challenge",
+    "icon": {
+      "count": 1,
+      "id": "miku_plushie:miku_plush_renaissance"
+    },
+    "title": {
+      "translate": "advancements.miku_plushie.collect_miku.title"
+    }
+  },
+  "requirements": [
+    [
+      "collect_Block{miku_plushie:miku_plush_br}"
+    ],
+    [
+      "collect_Block{miku_plushie:miku_plush_br_ba}"
+    ],
+    [
+      "collect_Block{miku_plushie:miku_plush_bik}"
+    ],
+    [
+      "collect_Block{miku_plushie:miku_plush_br_beach}"
+    ],
+    [
+      "collect_Block{miku_plushie:miku_plush_br_braid}"
+    ],
+    [
+      "collect_Block{miku_plushie:miku_plush_br_ba_drum}"
+    ],
+    [
+      "collect_Block{miku_plushie:miku_plush_br_pa}"
+    ],
+    [
+      "collect_Block{miku_plushie:miku_plush_br_sp}"
+    ],
+    [
+      "collect_Block{miku_plushie:miku_plush_br_mg}"
+    ],
+    [
+      "collect_Block{miku_plushie:miku_plush_br_brown_bro}"
+    ],
+    [
+      "collect_Block{miku_plushie:miku_plush_br_electrician}"
+    ],
+    [
+      "collect_Block{miku_plushie:miku_plush_br_bik_orange}"
+    ],
+    [
+      "collect_Block{miku_plushie:miku_plush_br_am}"
+    ],
+    [
+      "collect_Block{miku_plushie:miku_plush_br_fut_fla}"
+    ],
+    [
+      "collect_Block{miku_plushie:miku_plush_br_fut_cam}"
+    ],
+    [
+      "collect_Block{miku_plushie:miku_plush_br_go}"
+    ],
+    [
+      "collect_Block{miku_plushie:miku_plush_br_school_pe}"
+    ],
+    [
+      "collect_Block{miku_plushie:miku_plush_br_fut_crvg}"
+    ],
+    [
+      "collect_Block{miku_plushie:miku_plush_br_rs}"
+    ],
+    [
+      "collect_Block{miku_plushie:miku_plush_frog}"
+    ],
+    [
+      "collect_Block{miku_plushie:miku_plush_mushroom}"
+    ],
+    [
+      "collect_Block{miku_plushie:miku_plush_senbonzakura}"
+    ],
+    [
+      "collect_Block{miku_plushie:miku_plush_uraotomelovers}"
+    ],
+    [
+      "collect_Block{miku_plushie:miku_plush_personadancing}"
+    ],
+    [
+      "collect_Block{miku_plushie:miku_plush_helloplanet}"
+    ],
+    [
+      "collect_Block{miku_plushie:miku_plush_hachune}"
+    ],
+    [
+      "collect_Block{miku_plushie:miku_plush_zatsune}"
+    ],
+    [
+      "collect_Block{miku_plushie:miku_plush_infinity}"
+    ],
+    [
+      "collect_Block{miku_plushie:miku_plush_vampire}"
+    ],
+    [
+      "collect_Block{miku_plushie:miku_plush_werewoman}"
+    ],
+    [
+      "collect_Block{miku_plushie:miku_plush_jason}"
+    ],
+    [
+      "collect_Block{miku_plushie:miku_plush_michael_myers}"
+    ],
+    [
+      "collect_Block{miku_plushie:miku_plush_pumpkin}"
+    ],
+    [
+      "collect_Block{miku_plushie:miku_plush_ghostface}"
+    ],
+    [
+      "collect_Block{miku_plushie:miku_plush_frankenstein}"
+    ],
+    [
+      "collect_Block{miku_plushie:miku_plush_mummy}"
+    ],
+    [
+      "collect_Block{miku_plushie:miku_plush_ghost}"
+    ],
+    [
+      "collect_Block{miku_plushie:miku_plush_patati}"
+    ],
+    [
+      "collect_Block{miku_plushie:miku_plush_patata}"
+    ],
+    [
+      "collect_Block{miku_plushie:miku_plush_devil}"
+    ],
+    [
+      "collect_Block{miku_plushie:miku_plush_witch}"
+    ],
+    [
+      "collect_Block{miku_plushie:miku_plush_santa}"
+    ],
+    [
+      "collect_Block{miku_plushie:miku_plush_reindeer}"
+    ],
+    [
+      "collect_Block{miku_plushie:miku_plush_santa_elf}"
+    ],
+    [
+      "collect_Block{miku_plushie:miku_plush_xmas_tree}"
+    ],
+    [
+      "collect_Block{miku_plushie:miku_plush}"
+    ],
+    [
+      "collect_Block{miku_plushie:miku_plush_sonic_crossworlds}"
+    ],
+    [
+      "collect_Block{miku_plushie:miku_plush_fortnite_neko}"
+    ],
+    [
+      "collect_Block{miku_plushie:miku_plush_v4}"
+    ],
+    [
+      "collect_Block{miku_plushie:miku_plush_mesmerizer}"
+    ],
+    [
+      "collect_Block{miku_plushie:miku_plush_sonic}"
+    ],
+    [
+      "collect_Block{miku_plushie:miku_plush_digital_stars_2025}"
+    ],
+    [
+      "collect_Block{miku_plushie:miku_plush_rotten_girl}"
+    ],
+    [
+      "collect_Block{miku_plushie:miku_plush_psycho_mode}"
+    ],
+    [
+      "collect_Block{miku_plushie:miku_plush_dont_believe_in_t}"
+    ],
+    [
+      "collect_Block{miku_plushie:miku_plush_static}"
+    ],
+    [
+      "collect_Block{miku_plushie:miku_plush_mochimochi}"
+    ],
+    [
+      "collect_Block{miku_plushie:miku_plush_monitoring}"
+    ],
+    [
+      "collect_Block{miku_plushie:miku_plush_hollow_knight}"
+    ],
+    [
+      "collect_Block{miku_plushie:miku_plush_hornet}"
+    ],
+    [
+      "collect_Block{miku_plushie:miku_plush_world_is_mine}"
+    ],
+    [
+      "collect_Block{miku_plushie:miku_plush_rolling_girl}"
+    ],
+    [
+      "collect_Block{miku_plushie:miku_plush_deep_sea_girl}"
+    ],
+    [
+      "collect_Block{miku_plushie:miku_plush_lucario_z}"
+    ],
+    [
+      "collect_Block{miku_plushie:miku_plush_pppp}"
+    ],
+    [
+      "collect_Block{miku_plushie:miku_plush_link}"
+    ],
+    [
+      "collect_Block{miku_plushie:miku_plush_renaissance}"
+    ]
+  ],
+  "sends_telemetry_event": true
+}
