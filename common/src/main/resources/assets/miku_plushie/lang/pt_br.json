@@ -223,6 +223,40 @@
 
   "item.group.miku_plushies": "Mikus!!",
 
+  "advancements.miku_plushie.collect_every_plush.title": "Dedicação Vocalizada!!",
+  "advancements.miku_plushie.collect_every_plush.description": "Colecione todas as Pelúcias!",
+
+  "advancements.miku_plushie.craft_miku.title": "Pelúcias da Miku!",
+  "advancements.miku_plushie.craft_miku.description": "Fabrique a Pelúcia da Miku",
+  "advancements.miku_plushie.collect_miku.title": "O Mundo é Meu!!",
+  "advancements.miku_plushie.collect_miku.description": "Colecione todas as Pelúcias da Miku",
+
+  "advancements.miku_plushie.craft_teto.title": "A Destruidora de Baguetes!!",
+  "advancements.miku_plushie.craft_teto.description": "Fabrique a Pelúcia da Teto",
+  "advancements.miku_plushie.collect_teto.title": "Mais Baguetes!",
+  "advancements.miku_plushie.collect_teto.description": "Colecione todas as Pelúcias da Teto",
+
+  "advancements.miku_plushie.craft_akita_neru.title": "Aquela, A Amarela!!",
+  "advancements.miku_plushie.craft_akita_neru.description": "Fabrique a Pelúcia da Neru",
+
+  "advancements.miku_plushie.craft_luka.title": "\uD83C\uDF9CComo um Imã\uD83C\uDF9C",
+  "advancements.miku_plushie.craft_luka.description": "Fabrique a Pelúcia da Luka",
+
+  "advancements.miku_plushie.craft_gumi.title": "Não Me Chamo Megpoid",
+  "advancements.miku_plushie.craft_gumi.description": "Fabrique a Pelúcia da Gumi",
+
+  "advancements.miku_plushie.craft_rin_len.title": "Dois Por Um!",
+  "advancements.miku_plushie.craft_rin_len.description": "Fabrique As Pelúcias da Rin e do Len",
+
+  "advancements.miku_plushie.craft_kaito.title": "Fracasso Mais Amado <3",
+  "advancements.miku_plushie.craft_kaito.description": "Fabrique a Pelúcia do Kaito",
+
+  "advancements.miku_plushie.craft_meiko.title": "Vocamamãe",
+  "advancements.miku_plushie.craft_meiko.description": "Fabrique a Pelúcia da Meiko",
+
+  "advancements.miku_plushie.craft_aiko.title": "Joguinho! Cadê?",
+  "advancements.miku_plushie.craft_aiko.description": "Fabrique a Pelúcia da Aiko",
+
 
 
   "item.miku_plushie.canudinho": "Canudinho",

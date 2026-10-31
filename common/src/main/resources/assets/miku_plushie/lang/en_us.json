@@ -223,6 +223,40 @@
 
   "item.group.miku_plushies": "Mikus!!",
 
+  "advancements.miku_plushie.collect_every_plush.title": "Vocalized Dedication!!",
+  "advancements.miku_plushie.collect_every_plush.description": "Collect All Plushies!",
+
+  "advancements.miku_plushie.craft_miku.title": "Miku plushies!",
+  "advancements.miku_plushie.craft_miku.description": "Craft a Miku Plush",
+  "advancements.miku_plushie.collect_miku.title": "World is mine!",
+  "advancements.miku_plushie.collect_miku.description": "Collect Every Miku Plush",
+
+  "advancements.miku_plushie.craft_teto.title": "The baguette destroyer!",
+  "advancements.miku_plushie.craft_teto.description": "Craft a Teto Plush",
+  "advancements.miku_plushie.collect_teto.title": "More baguette!!",
+  "advancements.miku_plushie.collect_teto.description": "Collect Every Teto Plush",
+
+  "advancements.miku_plushie.craft_akita_neru.title": "The Yellow one!!",
+  "advancements.miku_plushie.craft_akita_neru.description": "Craft a Neru Plush",
+
+  "advancements.miku_plushie.craft_luka.title": "\uD83C\uDF9CLike a Magnet\uD83C\uDF9C",
+  "advancements.miku_plushie.craft_luka.description": "Craft a Luka Plush",
+
+  "advancements.miku_plushie.craft_gumi.title": "Not Called Megpoid",
+  "advancements.miku_plushie.craft_gumi.description": "Craft a Gumi Plush",
+
+  "advancements.miku_plushie.craft_rin_len.title": "Two for One!",
+  "advancements.miku_plushie.craft_rin_len.description": "Craft Rin and Len Plush",
+
+  "advancements.miku_plushie.craft_kaito.title": "Most loved Failure <3",
+  "advancements.miku_plushie.craft_kaito.description": "Craft a Kaito Plush",
+
+  "advancements.miku_plushie.craft_meiko.title": "Vocaloid Mom",
+  "advancements.miku_plushie.craft_meiko.description": "Craft a Meiko Plush",
+
+  "advancements.miku_plushie.craft_aiko.title": "Games! Where?",
+  "advancements.miku_plushie.craft_aiko.description": "Craft a Aiko Plush",
+
 
 
   "item.miku_plushie.canudinho": "Little Straw",
