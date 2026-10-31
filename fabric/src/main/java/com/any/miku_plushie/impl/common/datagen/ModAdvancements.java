@@ -38,10 +38,7 @@ public class ModAdvancements extends FabricAdvancementProvider {
         Component.translatable("advancements.miku_plushie.craft_miku.title"),
         Component.translatable("advancements.miku_plushie.craft_miku.description"),
         ResourceLocation.withDefaultNamespace("textures/gui/advancements/backgrounds/adventure.png"),
-        AdvancementType.TASK,
-        true,
-        false,
-        true)
+        AdvancementType.TASK, true, false, true)
       .addCriterion("craft_miku", InventoryChangeTrigger.TriggerInstance.hasItems(ModBlocks.MIKU_PLUSH))
       .save(consumer, Constants.MOD_ID + "/craft_miku");
 
@@ -65,11 +62,7 @@ public class ModAdvancements extends FabricAdvancementProvider {
                 block,
                 Component.translatable("advancements.miku_plushie.craft_" + plushName + ".title"),
                 Component.translatable("advancements.miku_plushie.craft_" + plushName + ".description"),
-                null,
-                AdvancementType.TASK,
-                true,
-                false,
-                false)
+                null, AdvancementType.TASK, true, false, false)
               .addCriterion("craft_" + plushName, InventoryChangeTrigger.TriggerInstance.hasItems(block))
               .save(consumer, Constants.MOD_ID + "/craft_" + plushName);
           }
@@ -97,17 +90,13 @@ public class ModAdvancements extends FabricAdvancementProvider {
     }
 
     //CREATE RIN AND LEN ADVANCEMENT
-    AdvancementHolder craftRinLen = Advancement.Builder.advancement()
+    Advancement.Builder.advancement()
     .parent(craftMiku)
     .display(
         ModBlocks.RIN_PLUSH,
         Component.translatable("advancements.miku_plushie.craft_rin_len.title"),
         Component.translatable("advancements.miku_plushie.craft_rin_len.description"),
-        null,
-        AdvancementType.TASK,
-        true,
-        false,
-        false)
+        null, AdvancementType.TASK, true, false, false)
     .addCriterion("craft_rin", InventoryChangeTrigger.TriggerInstance.hasItems(ModBlocks.RIN_PLUSH))
     .addCriterion("craft_len", InventoryChangeTrigger.TriggerInstance.hasItems(ModBlocks.LEN_PLUSH))
     .save(consumer, Constants.MOD_ID + "/craft_rin_len");
