@@ -18,8 +18,10 @@ import net.minecraft.core.RegistryAccess;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
 import java.util.function.Consumer;
@@ -50,10 +52,12 @@ public class ModAdvancements extends FabricAdvancementProvider {
         // CREATE PLUSH KIND DISPLAY
         AdvancementHolder plushMain = null;
         Block displayBlock = ModBlocks.MIKU_PLUSH;
+        int plush_quantity = 0;
 
+        // CREATE MAIN PLUSH ADVANCEMENT
         for (Block block : ModBlocks.PLUSH_BLOCKS){
-          // CREATE MAIN PLUSH ADVANCEMENT
           if (ModUtil.getBlockIdFromBlock(block).contains(plushName)){
+            plush_quantity ++;
             // BLOCK TO DISPLAY ON COLLECTION ADVANCEMENT
             displayBlock = block;
             plushMain = Advancement.Builder.advancement()
@@ -68,23 +72,27 @@ public class ModAdvancements extends FabricAdvancementProvider {
           }
         }
 
-        // CREATE COLLECTION ADVANCEMENT
-        Advancement.Builder plushCollection = Advancement.Builder.advancement().parent(plushMain).display(
-          displayBlock,
-          Component.translatable("advancements.miku_plushie.collect_" + plushName + ".title"),
-          Component.translatable("advancements.miku_plushie.collect_" + plushName + ".description"),
-          null, AdvancementType.CHALLENGE, true, false, false
-        );
+        // CREATE COLLECTION ADVANCEMENT IF THERE'S MORE THAN 5 VARIATIONS
+        if (plush_quantity > 5){
 
-        // CREATE CRITERION FOR EVERY PLUSH
-        for (Block block : ModBlocks.PLUSH_BLOCKS) {
-          if (ModUtil.getBlockIdFromBlock(block).contains(plushName)){
-            plushCollection.addCriterion("collect_" + block, InventoryChangeTrigger.TriggerInstance.hasItems(block));
+          // CREATE COLLECTION ADVANCEMENT
+          Advancement.Builder plushCollection = Advancement.Builder.advancement().parent(plushMain).display(
+            displayBlock,
+            Component.translatable("advancements.miku_plushie.collect_" + plushName + ".title"),
+            Component.translatable("advancements.miku_plushie.collect_" + plushName + ".description"),
+            null, AdvancementType.GOAL, true, false, false
+          );
+
+          // CREATE CRITERION FOR EVERY PLUSH
+          for (Block block : ModBlocks.PLUSH_BLOCKS) {
+            if (ModUtil.getBlockIdFromBlock(block).contains(plushName)){
+
+              plushCollection.addCriterion("collect_" + ModUtil.getBlockIdFromBlock(block), InventoryChangeTrigger.TriggerInstance.hasItems(block));
+            }
           }
-        }
 
-        // CREATE COLLECTION ADVANCEMENT
-        plushCollection.save(consumer, Constants.MOD_ID + "/collect_" + plushName);
+          plushCollection.save(consumer, Constants.MOD_ID + "/collect_" + plushName);
+        }
 
       }
     }
@@ -100,5 +108,18 @@ public class ModAdvancements extends FabricAdvancementProvider {
     .addCriterion("craft_rin", InventoryChangeTrigger.TriggerInstance.hasItems(ModBlocks.RIN_PLUSH))
     .addCriterion("craft_len", InventoryChangeTrigger.TriggerInstance.hasItems(ModBlocks.LEN_PLUSH))
     .save(consumer, Constants.MOD_ID + "/craft_rin_len");
+
+    // CREATE ALL PLUSHIES CHALLENGE
+    Advancement.Builder allPlushies = Advancement.Builder.advancement().parent(craftMiku).display(
+      ModBlocks.MIKU_PLUSH,
+      Component.translatable("advancements.miku_plushie.collect_every_plush.title"),
+      Component.translatable("advancements.miku_plushie.collect_every_plush.description"),
+      null, AdvancementType.CHALLENGE, true, true, true
+    );
+
+    for (Block block : ModBlocks.PLUSH_BLOCKS){
+      allPlushies.addCriterion("has_" + ModUtil.getBlockIdFromBlock(block), InventoryChangeTrigger.TriggerInstance.hasItems(block));
+    }
+    allPlushies.save(consumer, Constants.MOD_ID + "/collect_every_plush");
   }
 }
