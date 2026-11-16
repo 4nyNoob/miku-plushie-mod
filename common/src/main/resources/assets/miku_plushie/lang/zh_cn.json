@@ -202,7 +202,7 @@
   "block.miku_plushie.teto_plush_pppp": "PPPP 重音Teto玩偶",
   "item.miku_plushie.miku_plushie:teto_plush_pppp.tooltip": "§b§n@maco_mag",
   "item.miku_plushie.teto_pickaxe_pppp": "PPPP 重音Teto镐子",
-  
+
   "block.miku_plushie.miku_plush_pppp": "PPPP 初音未来玩偶",
   "item.miku_plushie.miku_plushie:miku_plush_pppp.tooltip": "§b§n@maco_mag",
   "block.miku_plushie.teto_plush_shrimp": "虾 重音Teto玩偶",
@@ -222,6 +222,40 @@
 
 
   "item.group.miku_plushies": "Mikus!!",
+
+  "advancements.miku_plushie.collect_every_plush.title": "歌声全开！！",
+  "advancements.miku_plushie.collect_every_plush.description": "收集所有玩偶！",
+
+  "advancements.miku_plushie.craft_miku.title": "初音玩偶！",
+  "advancements.miku_plushie.craft_miku.description": "制作一个初音玩偶",
+  "advancements.miku_plushie.collect_miku.title": "世界属于我！",
+  "advancements.miku_plushie.collect_miku.description": "收集所有初音玩偶",
+
+  "advancements.miku_plushie.craft_teto.title": "法棍破坏者！",
+  "advancements.miku_plushie.craft_teto.description": "制作一个重音玩偶",
+  "advancements.miku_plushie.collect_teto.title": "再来更多法棍！！",
+  "advancements.miku_plushie.collect_teto.description": "收集所有重音玩偶",
+
+  "advancements.miku_plushie.craft_akita_neru.title": "黄色的那个！！",
+  "advancements.miku_plushie.craft_akita_neru.description": "制作一个亚北玩偶",
+
+  "advancements.miku_plushie.craft_luka.title": "\uD83C\uDF9C宛如磁石一般\uD83C\uDF9C",
+  "advancements.miku_plushie.craft_luka.description": "制作一个巡音玩偶",
+
+  "advancements.miku_plushie.craft_gumi.title": "不叫 Megpoid",
+  "advancements.miku_plushie.craft_gumi.description": "制作一个GUMI玩偶",
+
+  "advancements.miku_plushie.craft_rin_len.title": "买一送一！",
+  "advancements.miku_plushie.craft_rin_len.description": "制作镜音铃和镜音连玩偶",
+
+  "advancements.miku_plushie.craft_kaito.title": "最受宠的失败作 <3",
+  "advancements.miku_plushie.craft_kaito.description": "制作一个KAITO玩偶",
+
+  "advancements.miku_plushie.craft_meiko.title": "Vocaloid 之母",
+  "advancements.miku_plushie.craft_meiko.description": "制作一个MEIKO玩偶",
+
+  "advancements.miku_plushie.craft_aiko.title": "游戏！在哪？",
+  "advancements.miku_plushie.craft_aiko.description": "制作一个Aiko玩偶",
 
 
 
@@ -293,7 +327,7 @@
   "sound.gumi-plushie.dor": "GUMI: 好痛",
   "sound.gumi-plushie.bye": "GUMI: 拜拜",
   "sound.gumi-plushie.equip": "GUMI: 装备中",
-  
+
   "sound.kaito-plushie.oie": "KAITO: 嗨",
   "sound.kaito-plushie.dor": "KAITO: 好痛",
   "sound.kaito-plushie.bye": "KAITO: 拜拜",
