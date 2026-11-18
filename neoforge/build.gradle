@@ -6,7 +6,7 @@ plugins {
 dependencies {
 
   // so neoforge builds
-  implementation "software.bernie.geckolib:geckolib-neoforge-${minecraft_version}:${geckolib_version}"
+    implementation("com.geckolib:geckolib-neoforge-${minecraft_version}:${geckolib_version}")
 }
 
 neoForge {
@@ -15,10 +15,6 @@ neoForge {
     def at = project(':common').file('src/main/resources/META-INF/accesstransformer.cfg')
     if (at.exists()) {
         accessTransformers.from(at.absolutePath)
-    }
-    parchment {
-        minecraftVersion = parchment_minecraft
-        mappingsVersion = parchment_version
     }
     runs {
         configureEach {
@@ -29,7 +25,8 @@ neoForge {
             client()
         }
         data {
-            data()
+            clientData()
+            serverData()
 
             // DataGen can be run by - "./gradlew :neoforge:runData" in Terminal.
             // Specify the modid for data generation, where to output the resulting resource, and where to look for existing resources.
