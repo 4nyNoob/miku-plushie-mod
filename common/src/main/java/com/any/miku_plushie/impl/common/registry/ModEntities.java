@@ -17,7 +17,10 @@ import com.any.miku_plushie.impl.common.entity.TetoEntity;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.function.BiConsumer;
-import net.minecraft.resources.ResourceLocation;
+
+import net.minecraft.core.registries.Registries;
+import net.minecraft.resources.Identifier;
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.MobCategory;
 
@@ -40,7 +43,7 @@ public class ModEntities {
   public static EntityType<GumiEntity> GUMI;
   public static EntityType<KaitoEntity> KAITO;
 
-  public static void register(BiConsumer<EntityType<?>, ResourceLocation> consumer) {
+  public static void register(BiConsumer<EntityType<?>, Identifier> consumer) {
 
     Constants.LOG.info("Registering " + Constants.MOD_ID + " Entities");
 
@@ -57,13 +60,13 @@ public class ModEntities {
     ModEntities.KAITO = registerPlushieMob("kaito_plush", KaitoEntity::new, consumer);
   }
 
-  private static <T extends AbstractPlushEntity> EntityType<T> registerPlushieMob(String name, EntityType.EntityFactory<T> entity, BiConsumer<EntityType<?>, ResourceLocation> consumer) {
+  private static <T extends AbstractPlushEntity> EntityType<T> registerPlushieMob(String name, EntityType.EntityFactory<T> entity, BiConsumer<EntityType<?>, Identifier> consumer) {
 
-    ResourceLocation id = MikuPlushie.id(name);
+    Identifier id = MikuPlushie.id(name);
     EntityType<T> entityType = EntityType.Builder.<T>of(entity, MobCategory.CREATURE)
         .sized(ModEntities.PLUSH_WIDTH, ModEntities.PLUSH_HEIGHT)
         .eyeHeight(0.85F)
-        .build(id.toString());
+        .build(ResourceKey.create(Registries.ENTITY_TYPE, id));
 
 
     // doesn't need a noinspection comment now, bc this method is only used to register

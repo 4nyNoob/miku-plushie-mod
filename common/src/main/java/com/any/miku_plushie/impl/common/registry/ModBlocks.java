@@ -9,7 +9,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 import java.util.function.BiConsumer;
-import net.minecraft.resources.ResourceLocation;
+
+import net.minecraft.resources.Identifier;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.SoundType;
@@ -20,7 +21,7 @@ import oshi.util.tuples.Pair;
 public class ModBlocks {
 
   public static final List<Block> PLUSH_BLOCKS = new ArrayList<>();
-  public static final List<Pair<Block, ResourceLocation>> NEEDS_BLOCK_ITEM = new ArrayList<>();
+  public static final List<Pair<Block, Identifier>> NEEDS_BLOCK_ITEM = new ArrayList<>();
 
   public static Block MIKU_PLUSH_BR;
   public static Block MIKU_PLUSH_BR_BA;
@@ -126,7 +127,7 @@ public class ModBlocks {
   public static Block WILD_LEEK_CROP;
   // endregion non-plush
 
-  public static void register(BiConsumer<Block, ResourceLocation> consumer) {
+  public static void register(BiConsumer<Block, Identifier> consumer) {
 
     Constants.LOG.info("Registering " + Constants.MOD_ID + " Blocks");
 
@@ -229,12 +230,12 @@ public class ModBlocks {
     KAITO_PLUSH_V3 = registerPlush(consumer, "kaito_plush_v3", null);
     KAITO_PLUSH_V4 = registerPlush(consumer, "kaito_plush_v4", null);
 
-    LEEK_CROP = register(new LeekCropBlock(BlockBehaviour.Properties.of().noOcclusion().noCollission().randomTicks().instabreak().sound(SoundType.CROP)), "leek_crop", false, consumer);
-    WILD_LEEK_CROP = register(new WildLeekCropBlock(BlockBehaviour.Properties.of().noOcclusion().noCollission().randomTicks().instabreak().sound(SoundType.CROP)), "wild_leek_crop", false, consumer);
+    LEEK_CROP = register(new LeekCropBlock(BlockBehaviour.Properties.of().noOcclusion().noCollision().randomTicks().instabreak().sound(SoundType.CROP)), "leek_crop", false, consumer);
+    WILD_LEEK_CROP = register(new WildLeekCropBlock(BlockBehaviour.Properties.of().noOcclusion().noCollision().randomTicks().instabreak().sound(SoundType.CROP)), "wild_leek_crop", false, consumer);
   }
 
   //REGISTER PLUSHIES
-  public static Block registerPlush(BiConsumer<Block, ResourceLocation> consumer, String name, @Nullable SoundType blockSound) {
+  public static Block registerPlush(BiConsumer<Block, Identifier> consumer, String name, @Nullable SoundType blockSound) {
     //ADD BLOCK NAMES TO CONSTANTS LIST
     Constants.PLUSH_BLOCK_NAMES.add(name);
     //IF THE BLOCK SOUND IS NULL SET TO WOOL
@@ -245,7 +246,7 @@ public class ModBlocks {
   }
 
   //REGISTER REGULAR BLOCKS
-  public static Block register(Block block, String name, boolean shouldRegisterItem, BiConsumer<Block, ResourceLocation> consumer) {
+  public static Block register(Block block, String name, boolean shouldRegisterItem, BiConsumer<Block, Identifier> consumer) {
 
     //IF BLOCK IS A PLUSH ADD IT TO THE LIST
     if (block instanceof MikuPlushieBlock) {
@@ -255,7 +256,7 @@ public class ModBlocks {
     }
 
     //CREATE IDENTIFIER
-    ResourceLocation id = MikuPlushie.id(name);
+    Identifier id = MikuPlushie.id(name);
 
     //REGISTER ITEM IF REQUESTED
     if (shouldRegisterItem) {

@@ -5,28 +5,35 @@ import com.any.miku_plushie.MikuPlushie;
 import com.any.miku_plushie.platform.Services;
 import java.util.function.BiConsumer;
 import net.minecraft.network.chat.Component;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.ItemLike;
 
 public class ModTabs {
 
   public static CreativeModeTab MIKU_GROUP;
 
-  public static void register(BiConsumer<CreativeModeTab, ResourceLocation> consumer) {
+  public static void register(BiConsumer<CreativeModeTab, Identifier> consumer) {
 
     Constants.LOG.info("Registering " + Constants.MOD_ID + " Creative Mode Tabs");
 
-    ModTabs.MIKU_GROUP = Services.registry().creativeTabBuilder() // FabricItemGroup.builder()
-        .icon(() -> new ItemStack(ModBlocks.MIKU_PLUSH))
-        .title(Component.translatable("item.group.miku_plushies"))
-        .displayItems((itemDisplayParameters, output) -> {
-          ModItems.REGULAR_ITEMS.forEach(output::accept);
-          ModItems.PLUSH_ITEMS.forEach(output::accept);
-          ModItems.PICKAXE_ITEMS.forEach(output::accept);
-        })
-        .build();
+    //TODO READD CREATIVE TAB
 
-    consumer.accept(MIKU_GROUP, MikuPlushie.id("item_group"));
+//    ModTabs.MIKU_GROUP = Services.registry().creativeTabBuilder() // FabricItemGroup.builder()
+//        .icon(() -> new ItemStack(ModBlocks.MIKU_PLUSH))
+//        .title(Component.translatable("item.group.miku_plushies"))
+//        .displayItems((itemDisplayParameters, output) -> {
+////          ModItems.REGULAR_ITEMS.forEach(output::accept);
+//          for (Item item : ModItems.REGULAR_ITEMS){
+//            output.accept(item.getDefaultInstance());
+//          }
+//          ModItems.PLUSH_ITEMS.forEach(output::accept);
+//          ModItems.PICKAXE_ITEMS.forEach(output::accept);
+//        })
+//        .build();
+
+//    consumer.accept(MIKU_GROUP, MikuPlushie.id("item_group"));
   }
 }

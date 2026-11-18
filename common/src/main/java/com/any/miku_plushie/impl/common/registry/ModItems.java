@@ -3,17 +3,14 @@ package com.any.miku_plushie.impl.common.registry;
 import com.any.miku_plushie.Constants;
 import com.any.miku_plushie.MikuPlushie;
 import com.any.miku_plushie.impl.common.item.MikuPlushieBlockItem;
-import com.any.miku_plushie.impl.common.item.PlushToolMaterial;
 import com.any.miku_plushie.impl.common.util.ModUtil;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.function.BiConsumer;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.item.BlockItem;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ItemNameBlockItem;
-import net.minecraft.world.item.PickaxeItem;
-import net.minecraft.world.item.Rarity;
+import net.minecraft.resources.Identifier;
+import net.minecraft.tags.BlockTags;
+import net.minecraft.tags.ItemTags;
+import net.minecraft.world.item.*;
 import net.minecraft.world.level.block.Block;
 import oshi.util.tuples.Pair;
 
@@ -42,16 +39,27 @@ public class ModItems {
   public static Item TETO_PICKAXE_SPOKEN_FOR;
   public static Item TETO_PICKAXE_PPPP;
 
-  public static void register(BiConsumer<Item, ResourceLocation> consumer) {
+  public static ToolMaterial PLUSH_TOOL_MATERIAL;
+
+  public static void register(BiConsumer<Item, Identifier> consumer) {
 
     Constants.LOG.info("Registering " + Constants.MOD_ID + " Items");
 
     CANUDINHO = register(new Item(new Item.Properties().rarity(Rarity.RARE)), "canudinho", consumer);
     BAGUETTE = register(new Item(new Item.Properties().food(ModFoods.BAGUETTE)), "baguette", consumer);
-    LEEK_SEEDS = register(new ItemNameBlockItem(ModBlocks.LEEK_CROP, new Item.Properties()), "leek_seeds", consumer);
+    LEEK_SEEDS = register(new BlockItem(ModBlocks.LEEK_CROP, new Item.Properties()), "leek_seeds", consumer);
     LEEK = register(new Item(new Item.Properties().food(ModFoods.LEEK)), "leek", consumer);
     AKITA_NERU_PHONE = register(new Item(new Item.Properties()), "akita_neru_phone", consumer);
     VOCALOID_HEART = register(new Item(new Item.Properties()), "vocaloid_heart", consumer);
+
+    PLUSH_TOOL_MATERIAL = new ToolMaterial(
+      BlockTags.INCORRECT_FOR_WOODEN_TOOL,
+      500,
+      15,
+      0,
+      25,
+      ItemTags.DIAMOND_TOOL_MATERIALS
+    );
 
     TETO_PICKAXE = registerPickaxe("teto_pickaxe", consumer);
     TETO_PICKAXE_MESMERIZER = registerPickaxe("teto_pickaxe_mesmerizer", consumer);
@@ -72,13 +80,13 @@ public class ModItems {
     }
 
     // TODO still need to register all items here lol
-    for (Pair<Block, ResourceLocation> blockIdPair : ModBlocks.NEEDS_BLOCK_ITEM) {
+    for (Pair<Block, Identifier> blockIdPair : ModBlocks.NEEDS_BLOCK_ITEM) {
       consumer.accept(new BlockItem(blockIdPair.getA(), new Item.Properties()), blockIdPair.getB());
     }
   }
 
   //REGISTER PLUSH ITEMS
-  public static Item registerPlush(String name, BiConsumer<Item, ResourceLocation> consumer) {
+  public static Item registerPlush(String name, BiConsumer<Item, Identifier> consumer) {
     Block plushBlock = null;
     for (int block = 0; block < ModBlocks.PLUSH_BLOCKS.size(); block++) {
       //MATCH ITEM TO THE RIGHT BLOCK
@@ -91,18 +99,20 @@ public class ModItems {
   }
 
   //REGISTER PICKAXES HELPER
-  public static Item registerPickaxe(String name, BiConsumer<Item, ResourceLocation> consumer) {
+  public static Item registerPickaxe(String name, BiConsumer<Item, Identifier> consumer) {
     Constants.TETO_PICKAXE_NAMES.add(name);
     return register(
-        new PickaxeItem(PlushToolMaterial.PLUSH_TOOL_MATERIAL, new Item.Properties().attributes(PickaxeItem.createAttributes(
-                PlushToolMaterial.PLUSH_TOOL_MATERIAL, 1f, -2.8F))), name,
+//        new PickaxeItem(PlushToolMaterial.PLUSH_TOOL_MATERIAL, new Item.Properties().attributes(PickaxeItem.createAttributes(
+//                PlushToolMaterial.PLUSH_TOOL_MATERIAL, 1f, -2.8F)))
+      new Item(new Item.Properties().pickaxe(PLUSH_TOOL_MATERIAL, 1f, -2.8f))
+      , name,
         consumer);
   }
 
   //REGISTER NORMAL ITEM
-  public static Item register(Item item, String id, BiConsumer<Item, ResourceLocation> consumer) {
+  public static Item register(Item item, String id, BiConsumer<Item, Identifier> consumer) {
 
-    ResourceLocation itemID = MikuPlushie.id(id);
+    Identifier itemID = MikuPlushie.id(id);
     consumer.accept(item, itemID);
     String itemName = ModUtil.getBlockIdFromItem(item);
 

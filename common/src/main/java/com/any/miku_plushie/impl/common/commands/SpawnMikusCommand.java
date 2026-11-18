@@ -17,6 +17,9 @@ import net.minecraft.core.Registry;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.server.permissions.Permission;
+import net.minecraft.server.permissions.PermissionSet;
+import net.minecraft.server.permissions.Permissions;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.TamableAnimal;
@@ -31,7 +34,7 @@ public class SpawnMikusCommand {
 
   public static void register(CommandDispatcher<CommandSourceStack> dispatcher) {
     dispatcher.register(Commands.literal("spawn_mikus")
-        .requires(source -> source.hasPermission(2))
+        .requires(source -> source.permissions().hasPermission(Permissions.COMMANDS_ADMIN))
         .then(Commands.argument("pos", Vec3Argument.vec3())
             .executes(commandContext ->
                 spawnMikus(commandContext.getSource(),
@@ -115,9 +118,10 @@ public class SpawnMikusCommand {
               String blockName = (String) currentList.get(plushies);
 
               // CREATE SETUP AND SPAWN CHOSEN PLUSH ENTITY
-              AbstractPlushEntity plush = ModUtil.createPlushFromBlock(blockName, world, entitySpawnLocation);
-              setupEntity(plush, entitySpawnLocation);
-              world.addFreshEntity(plush);
+              // TODO RESTORE CREATE PLUSH FUNCTION
+//              AbstractPlushEntity plush = ModUtil.createPlushFromBlock(blockName, world, entitySpawnLocation);
+//              setupEntity(plush, entitySpawnLocation);
+//              world.addFreshEntity(plush);
             }
 
           }

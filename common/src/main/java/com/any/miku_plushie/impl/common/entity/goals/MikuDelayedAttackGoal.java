@@ -36,7 +36,7 @@ public class MikuDelayedAttackGoal extends MeleeAttackGoal {
     if (this.mikuAttacking) {
       --this.attackDelay;
       if (this.attackDelay <= 0) {
-        this.mob.doHurtTarget(this.target);
+        this.mob.doHurtTarget(getServerLevel(this.mob), this.target);
         this.mikuAttacking = false;
       }
     } else {

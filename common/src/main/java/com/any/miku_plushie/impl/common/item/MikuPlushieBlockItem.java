@@ -5,6 +5,8 @@ import com.any.miku_plushie.impl.common.registry.ModBlocks;
 import com.any.miku_plushie.impl.common.util.ModItemTags;
 import com.any.miku_plushie.impl.common.util.ModUtil;
 import java.util.List;
+import java.util.function.Consumer;
+
 import net.minecraft.core.Holder;
 import net.minecraft.network.chat.Component;
 import net.minecraft.sounds.SoundEvent;
@@ -12,12 +14,14 @@ import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.BlockItem;
-import net.minecraft.world.item.Equipable;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
+import net.minecraft.world.item.component.TooltipDisplay;
 import net.minecraft.world.level.block.Block;
 
-public class MikuPlushieBlockItem extends BlockItem implements Equipable {
+import static com.ibm.icu.impl.CurrencyData.provider;
+
+public class MikuPlushieBlockItem extends BlockItem {
 
   public MikuPlushieBlockItem(Block block, Properties settings) {
     super(block, settings);
@@ -34,26 +38,34 @@ public class MikuPlushieBlockItem extends BlockItem implements Equipable {
   }
 
   @Override
-  public void appendHoverText(ItemStack stack, TooltipContext context, List<Component> tooltip, TooltipFlag type) {
-    tooltip.add(Component.translatable("item." + Constants.MOD_ID + "." + stack.getItem() + ".tooltip"));
-    super.appendHoverText(stack, context, tooltip, type);
+  public void appendHoverText(ItemStack stack, TooltipContext context, TooltipDisplay display, Consumer<Component> builder, TooltipFlag tooltipFlag) {
+    builder.accept(Component.translatable("item." + Constants.MOD_ID + "." + stack.getItem() + ".tooltip"));
+    super.appendHoverText(stack, context, display, builder, tooltipFlag);
   }
 
-  @Override
-  public EquipmentSlot getEquipmentSlot() {
-    return EquipmentSlot.HEAD;
-  }
+  //TODO RESTORE ARMOR BEHAVIOUR AND CUSTOM TOOLTIP
 
-  @Override
-  public Holder<SoundEvent> getEquipSound() {
-    ItemStack stack = this.getDefaultInstance();
+//  @Override
+//  public void appendHoverText(ItemStack stack, TooltipContext context, List<Component> tooltip, TooltipFlag type) {
+//    tooltip.add(Component.translatable("item." + Constants.MOD_ID + "." + stack.getItem() + ".tooltip"));
+//    super.appendHoverText(stack, context, tooltip, type);
+//  }
 
-    if (stack.is(ModItemTags.PLUSHIES)) {
-      if (!stack.is(ModBlocks.KONOHA_PLUSH.asItem())) {
-        String currentPlush = ModUtil.getBlockIdFromItem(stack.getItem());
-        return Holder.direct(ModUtil.getPlushSoundEvent(currentPlush, "equip"));
-      }
-    }
-    return Holder.direct(SoundEvents.WOOL_PLACE);
-  }
+//  @Override
+//  public EquipmentSlot getEquipmentSlot() {
+//    return EquipmentSlot.HEAD;
+//  }
+//
+//  @Override
+//  public Holder<SoundEvent> getEquipSound() {
+//    ItemStack stack = this.getDefaultInstance();
+//
+//    if (stack.is(ModItemTags.PLUSHIES)) {
+//      if (!stack.is(ModBlocks.KONOHA_PLUSH.asItem())) {
+//        String currentPlush = ModUtil.getBlockIdFromItem(stack.getItem());
+//        return Holder.direct(ModUtil.getPlushSoundEvent(currentPlush, "equip"));
+//      }
+//    }
+//    return Holder.direct(SoundEvents.WOOL_PLACE);
+//  }
 }

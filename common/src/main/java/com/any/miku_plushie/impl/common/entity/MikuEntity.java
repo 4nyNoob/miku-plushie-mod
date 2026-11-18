@@ -3,6 +3,13 @@ package com.any.miku_plushie.impl.common.entity;
 import com.any.miku_plushie.impl.common.entity.goals.EatLeekGoal;
 import com.any.miku_plushie.impl.common.registry.ModBlocks;
 import java.util.List;
+
+import com.geckolib.animatable.instance.AnimatableInstanceCache;
+import com.geckolib.animatable.manager.AnimatableManager;
+import com.geckolib.animation.AnimationController;
+import com.geckolib.animation.RawAnimation;
+import com.geckolib.animation.object.PlayState;
+import com.geckolib.util.GeckoLibUtil;
 import net.minecraft.core.particles.BlockParticleOption;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.world.entity.EntityType;
@@ -10,12 +17,7 @@ import net.minecraft.world.entity.TamableAnimal;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.CropBlock;
 import net.minecraft.world.phys.Vec3;
-import software.bernie.geckolib.animatable.instance.AnimatableInstanceCache;
-import software.bernie.geckolib.animation.AnimatableManager;
-import software.bernie.geckolib.animation.AnimationController;
-import software.bernie.geckolib.animation.PlayState;
-import software.bernie.geckolib.animation.RawAnimation;
-import software.bernie.geckolib.util.GeckoLibUtil;
+import org.jspecify.annotations.NonNull;
 
 public class MikuEntity extends AbstractPlushEntity {
 
@@ -53,7 +55,7 @@ public class MikuEntity extends AbstractPlushEntity {
   @Override
   public void registerControllers(AnimatableManager.ControllerRegistrar controllers) {
     super.registerControllers(controllers);
-    controllers.add(new AnimationController<>(this, "miku_eat", 2, state -> {
+    controllers.add(new AnimationController<>("miku_eat", 2, state -> {
       if (!this.isInSittingPose() && this.isEatingLeek()) {
         return state.setAndContinue(EAT);
       }
@@ -62,7 +64,7 @@ public class MikuEntity extends AbstractPlushEntity {
   }
 
   @Override
-  public AnimatableInstanceCache getAnimatableInstanceCache() {
+  public @NonNull AnimatableInstanceCache getAnimatableInstanceCache() {
     return this.cache;
   }
 
@@ -72,7 +74,7 @@ public class MikuEntity extends AbstractPlushEntity {
     super.aiStep();
 
     //CLIENT LEEK EATING TIMER
-    if (this.level().isClientSide) {
+    if (this.level().isClientSide()) {
       //DECREASE LEEK TIMER UNTIL 0
       this.eatLeekTimer = Math.max(0, this.eatLeekTimer - 1);
       //SET EATING LEEK TRUE IF THE COUNTER IS RUNNING

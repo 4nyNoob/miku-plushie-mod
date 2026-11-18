@@ -1,7 +1,7 @@
 package com.any.miku_plushie;
 
 import com.any.miku_plushie.platform.Services;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 
 public class MikuPlushie {
 
@@ -17,8 +17,8 @@ public class MikuPlushie {
     Constants.LOG.info("Miku: (^v^)/ Hi!!!");
   }
 
-  public static ResourceLocation id(String path) {
+  public static Identifier id(String path) {
 
-    return ResourceLocation.fromNamespaceAndPath(Constants.MOD_ID, path);
+    return Identifier.fromNamespaceAndPath(Constants.MOD_ID, path);
   }
 }

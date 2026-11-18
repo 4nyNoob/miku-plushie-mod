@@ -6,10 +6,19 @@ import com.any.miku_plushie.impl.common.registry.ModBlocks;
 import com.any.miku_plushie.impl.common.registry.ModEntities;
 import com.any.miku_plushie.impl.common.registry.ModItems;
 import com.any.miku_plushie.impl.common.util.ModUtil;
+import com.geckolib.animatable.GeoEntity;
+import com.geckolib.animatable.instance.AnimatableInstanceCache;
+import com.geckolib.animatable.manager.AnimatableManager;
+import com.geckolib.animation.AnimationController;
+import com.geckolib.animation.RawAnimation;
+import com.geckolib.util.GeckoLibUtil;
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Objects;
+import java.util.Optional;
+
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.core.particles.BlockParticleOption;
@@ -52,13 +61,10 @@ import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.CropBlock;
+import net.minecraft.world.level.storage.ValueInput;
+import net.minecraft.world.level.storage.ValueOutput;
 import org.jetbrains.annotations.Nullable;
-import software.bernie.geckolib.animatable.GeoEntity;
-import software.bernie.geckolib.animatable.instance.AnimatableInstanceCache;
-import software.bernie.geckolib.animation.AnimatableManager;
-import software.bernie.geckolib.animation.AnimationController;
-import software.bernie.geckolib.animation.RawAnimation;
-import software.bernie.geckolib.util.GeckoLibUtil;
+import org.jspecify.annotations.NonNull;
 
 public class AbstractPlushEntity extends TamableAnimal implements GeoEntity {
 
@@ -165,7 +171,7 @@ public class AbstractPlushEntity extends TamableAnimal implements GeoEntity {
   //ANIMATION CONTROLLER
   @Override
   public void registerControllers(AnimatableManager.ControllerRegistrar controllers) {
-    controllers.add(new AnimationController<>(this, "Plush", 2, state -> {
+    controllers.add(new AnimationController<>("Plush", 2, state -> {
       List<RawAnimation> DANCES = getDances();
 
       //SITTING ANIMATIONS
@@ -188,17 +194,17 @@ public class AbstractPlushEntity extends TamableAnimal implements GeoEntity {
 
         //DANCE
         else if (this.isSongPlaying()) {
-          RawAnimation currentAnimation = state.getController().getCurrentRawAnimation();
+          RawAnimation currentAnimation = state.controller().getCurrentRawAnimation();
 
           for (RawAnimation animation : DANCES) {
             //IF ALREADY DANCING THEN CONTINUE
-            if (currentAnimation.equals(animation)) {
+            if (Objects.equals(currentAnimation, animation)) {
               return state.setAndContinue(animation);
             }
           }
           //IF LIST IS TOO SMALL THEN GET 1ST ENTRY
           if (DANCES.size() == 1) {
-            return state.setAndContinue(DANCES.get(0));
+            return state.setAndContinue(DANCES.getFirst());
           }
           //RANDOMLY SELECT DANCE ANIMATION FROM LIST
           else {
@@ -211,11 +217,11 @@ public class AbstractPlushEntity extends TamableAnimal implements GeoEntity {
 
         //ATTACKING
         else if (this.swinging) {
-          RawAnimation currentAnimation = state.getController().getCurrentRawAnimation();
+          RawAnimation currentAnimation = state.controller().getCurrentRawAnimation();
 
           for (RawAnimation animation : ATTACK_ANIMATIONS) {
             //IF ALREADY ATTACKING THE CONTINUE
-            if (currentAnimation.equals(animation)) {
+            if (Objects.equals(currentAnimation, animation)) {
               return state.setAndContinue(animation);
             }
           }
@@ -231,11 +237,10 @@ public class AbstractPlushEntity extends TamableAnimal implements GeoEntity {
         }
       }
     }));
-
   }
 
   @Override
-  public AnimatableInstanceCache getAnimatableInstanceCache() {
+  public @NonNull AnimatableInstanceCache getAnimatableInstanceCache() {
     return this.cache;
   }
 
@@ -268,10 +273,11 @@ public class AbstractPlushEntity extends TamableAnimal implements GeoEntity {
     //TAMED INTERACTION
     if (this.onGround() && this.isTame() && this.isOwnedBy(player)) {
       //DO STUFF ON SERVER
-      if (!this.level().isClientSide) {
+      if (!this.level().isClientSide()) {
         //DROP HELD ITEM
         if (player.isShiftKeyDown() && playerItemStack.isEmpty()) {
-          this.spawnAtLocation(entityHandStack);
+          ServerLevel serverLevel = player.level().getServer().getLevel(player.level().dimension());
+          this.spawnAtLocation(Objects.requireNonNull(serverLevel), entityHandStack);
           this.setItemSlot(EquipmentSlot.MAINHAND, ItemStack.EMPTY);
           return InteractionResult.SUCCESS;
         }
@@ -284,7 +290,7 @@ public class AbstractPlushEntity extends TamableAnimal implements GeoEntity {
             }
             float nutrition = foodComponent != null ? (float) foodComponent.nutrition() : 1.0F;
             this.heal(nutrition);
-            this.playSound(SoundEvents.GENERIC_EAT, 1, 1);
+            this.playSound(SoundEvents.GENERIC_EAT.value(), 1, 1);
           }
           return InteractionResult.SUCCESS;
         }
@@ -415,10 +421,10 @@ public class AbstractPlushEntity extends TamableAnimal implements GeoEntity {
 
   //LOAD AND SAVE NBT DATA
   @Override
-  public void readAdditionalSaveData(CompoundTag nbt) {
+  public void readAdditionalSaveData(ValueInput nbt) {
     super.readAdditionalSaveData(nbt);
-    this.entityData.set(SPAWN_AGE, nbt.getInt("SpawnAge"));
-    this.entityData.set(this.getVariantDataTracker(), nbt.getInt("Variant"));
+    this.entityData.set(SPAWN_AGE, nbt.getIntOr("SpawnAge", 0));
+    this.entityData.set(this.getVariantDataTracker(), nbt.getIntOr("Variant", 0));
   }
 
   @Override
@@ -427,7 +433,7 @@ public class AbstractPlushEntity extends TamableAnimal implements GeoEntity {
   }
 
   @Override
-  public void addAdditionalSaveData(CompoundTag nbt) {
+  public void addAdditionalSaveData(ValueOutput nbt) {
     super.addAdditionalSaveData(nbt);
     nbt.putInt("SpawnAge", Math.min(this.tickCount, 11));
     nbt.putInt("Variant", this.getTrackedVariant());

@@ -3,11 +3,9 @@ package com.any.miku_plushie.impl.common.block;
 import com.any.miku_plushie.impl.common.registry.ModItems;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.util.RandomSource;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.level.BlockGetter;
-import net.minecraft.world.level.ItemLike;
-import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.level.LevelReader;
+import net.minecraft.world.level.*;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
@@ -30,7 +28,7 @@ public class WildLeekCropBlock extends Block {
   }
 
   @Override
-  public ItemStack getCloneItemStack(LevelReader world, BlockPos pos, BlockState state) {
+  protected ItemStack getCloneItemStack(LevelReader level, BlockPos pos, BlockState state, boolean includeData) {
     return new ItemStack(this.getSeedsItem());
   }
 
@@ -40,12 +38,11 @@ public class WildLeekCropBlock extends Block {
   }
 
   @Override
-  public BlockState updateShape(
-      BlockState state, Direction direction, BlockState neighborState, LevelAccessor world, BlockPos pos, BlockPos neighborPos
-  ) {
-    return !state.canSurvive(world, pos)
-        ? Blocks.AIR.defaultBlockState()
-        : super.updateShape(state, direction, neighborState, world, pos, neighborPos);
+  protected BlockState updateShape(
+    BlockState state, LevelReader level, ScheduledTickAccess ticks, BlockPos pos, Direction directionToNeighbour, BlockPos neighbourPos, BlockState neighbourState, RandomSource random) {
+    return !state.canSurvive(level, pos)
+      ? Blocks.AIR.defaultBlockState()
+      :super.updateShape(state, level, ticks, pos, directionToNeighbour, neighbourPos, neighbourState, random);
   }
 
   @Override
@@ -55,7 +52,7 @@ public class WildLeekCropBlock extends Block {
   }
 
   @Override
-  public boolean propagatesSkylightDown(BlockState state, BlockGetter world, BlockPos pos) {
+  public boolean propagatesSkylightDown(BlockState state) {
     return state.getFluidState().isEmpty();
   }
 

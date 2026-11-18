@@ -5,7 +5,7 @@ import com.any.miku_plushie.MikuPlushie;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.function.BiConsumer;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.sounds.SoundEvent;
 
 public class ModSounds {
@@ -15,7 +15,7 @@ public class ModSounds {
 
   public static final List<SoundEvent> MIKU_PLUSHIES_SOUND_EVENTS = new ArrayList<>();
 
-  public static void register(BiConsumer<SoundEvent, ResourceLocation> consumer) {
+  public static void register(BiConsumer<SoundEvent, Identifier> consumer) {
 
     Constants.LOG.info("Registering " + Constants.MOD_ID + " Sounds");
 
@@ -43,8 +43,8 @@ public class ModSounds {
     }
   }
 
-  private static SoundEvent registerSound(String id, BiConsumer<SoundEvent, ResourceLocation> consumer) {
-    ResourceLocation identifier = MikuPlushie.id(id);
+  private static SoundEvent registerSound(String id, BiConsumer<SoundEvent, Identifier> consumer) {
+    Identifier identifier = MikuPlushie.id(id);
 
     SoundEvent sound = SoundEvent.createVariableRangeEvent(identifier);
     consumer.accept(sound, identifier);

@@ -16,7 +16,7 @@ import java.util.function.Consumer;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.world.entity.EntityType;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.IEventBus;
@@ -58,7 +58,8 @@ public class MikuPlushieNeoForge {
         ModCommands.register(event.getDispatcher(), event.getBuildContext(), event.getCommandSelection()));
 
     ModResourcePacksNeoForge.initialize(modEventBus);
-    ModVillagerTradesNeoForge.initialize();
+    //TODO READD VILLAGER TRADES
+//    ModVillagerTradesNeoForge.initialize();
 
     // must occur after entities are registered, so we do it during common setup, after RegisterEvent is fired
     modEventBus.addListener((FMLCommonSetupEvent event) -> event.enqueueWork(PlushVariants::initialize));
@@ -66,12 +67,12 @@ public class MikuPlushieNeoForge {
     MikuPlushie.postModInitialization();
 
     // on to client init
-    if (FMLLoader.getDist() == Dist.CLIENT) {
+    if (FMLLoader.getCurrent().getDist() == Dist.CLIENT) {
       new MikuPlushieClientNeoForge(modEventBus);
     }
   }
 
-  public <T> void bind(ResourceKey<Registry<T>> registryKey, Consumer<BiConsumer<T, ResourceLocation>> source) {
+  public <T> void bind(ResourceKey<Registry<T>> registryKey, Consumer<BiConsumer<T, Identifier>> source) {
 
     EVENT_BUS.addListener((Consumer<RegisterEvent>) event -> {
       if (registryKey.equals(event.getRegistryKey())) {

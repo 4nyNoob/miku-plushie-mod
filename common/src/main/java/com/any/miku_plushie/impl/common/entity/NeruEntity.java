@@ -4,7 +4,7 @@ import java.util.List;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.TamableAnimal;
 import net.minecraft.world.level.Level;
-import software.bernie.geckolib.animation.RawAnimation;
+import com.geckolib.animation.RawAnimation;
 
 public class NeruEntity extends AbstractPlushEntity {
 

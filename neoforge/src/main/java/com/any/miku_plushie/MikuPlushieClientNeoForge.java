@@ -9,7 +9,7 @@ import net.minecraft.world.entity.EntityType;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.client.event.EntityRenderersEvent;
 import net.neoforged.neoforge.client.event.RegisterParticleProvidersEvent;
-import software.bernie.geckolib.loading.math.MathParser;
+import com.geckolib.loading.math.MathParser;
 
 public class MikuPlushieClientNeoForge {
 
@@ -18,7 +18,8 @@ public class MikuPlushieClientNeoForge {
     MikuPlushieClient.init();
 
     //GLIB QUERY
-    MathParser.setVariable("query.miku.is_game", () -> 90 / Math.PI);
+    //TODO FIGURE OUT THE CUSTOM QUERRY THING
+//    MathParser.setVariable("query.miku.is_game", () -> 90 / Math.PI);
 
     //ENTITIES RENDERERS
     modEventBus.addListener((EntityRenderersEvent.RegisterRenderers event) -> {
@@ -30,8 +31,8 @@ public class MikuPlushieClientNeoForge {
 
     //PARTICLE
     modEventBus.addListener((RegisterParticleProvidersEvent event) -> {
-
-      event.registerSpriteSet(ModParticles.MIKU_SPAWN, PlushSpawnParticle.Factory::new);
+      //TODO REGISTER PARTICLE RENDERING
+//      event.registerSpriteSet(ModParticles.MIKU_SPAWN, PlushSpawnParticle.Factory::new);
     });
   }
 }
