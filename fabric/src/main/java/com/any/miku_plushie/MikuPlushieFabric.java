@@ -11,7 +11,8 @@ import net.fabricmc.fabric.api.command.v2.CommandRegistrationCallback;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.resources.Identifier;
 import net.minecraft.world.entity.EntityType;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -52,7 +53,7 @@ public class MikuPlushieFabric implements ModInitializer {
     // on to client init
   }
 
-  public <T> void bind(Registry<T> registry, Consumer<BiConsumer<T, ResourceLocation>> source) {
+  public <T> void bind(Registry<T> registry, Consumer<BiConsumer<T, Identifier>> source) {
 
     source.accept((t, id) -> Registry.register(registry, id, t));
   }
