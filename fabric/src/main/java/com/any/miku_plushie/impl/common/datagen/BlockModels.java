@@ -9,43 +9,67 @@ import java.util.Optional;
 import java.util.function.BiConsumer;
 import java.util.function.Consumer;
 import java.util.function.Supplier;
-import net.minecraft.data.models.BlockModelGenerators;
-import net.minecraft.data.models.blockstates.BlockStateGenerator;
-import net.minecraft.data.models.blockstates.MultiVariantGenerator;
-import net.minecraft.data.models.blockstates.PropertyDispatch;
-import net.minecraft.data.models.blockstates.Variant;
-import net.minecraft.data.models.blockstates.VariantProperties;
-import net.minecraft.data.models.model.ModelTemplate;
-import net.minecraft.data.models.model.TextureMapping;
-import net.minecraft.data.models.model.TextureSlot;
-import net.minecraft.resources.ResourceLocation;
+
+import net.minecraft.client.data.models.model.*;
+import net.minecraft.client.data.models.BlockModelGenerators;
+import net.minecraft.client.data.models.blockstates.MultiVariantGenerator;
+import net.minecraft.client.data.models.blockstates.PropertyDispatch;
+import net.minecraft.resources.Identifier;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.CropBlock;
 import net.minecraft.world.level.block.state.properties.Property;
 
-public record BlockModels(Consumer<BlockStateGenerator> blockStateCollector, BiConsumer<ResourceLocation, Supplier<JsonElement>> modelCollector) {
+import static net.minecraft.client.data.models.BlockModelGenerators.plainVariant;
+
+public record BlockModels(Consumer<BlockStateGenerator> blockStateCollector, BiConsumer<Identifier, Supplier<JsonElement>> modelCollector) {
 
   //PARENT MODELS
   public static final ModelTemplate LEEK_MODEL = block("leek", TextureSlot.CROSS);
   public static final ModelTemplate CROSS_CUTOUT = block("cross_cutout", TextureSlot.CROSS);
 
   private static ModelTemplate block(String parent, TextureSlot... requiredTextureKeys) {
-    return new ModelTemplate(Optional.of(ResourceLocation.fromNamespaceAndPath(Constants.MOD_ID, "block/" + parent)), Optional.empty(), requiredTextureKeys);
+    return new ModelTemplate(Optional.of(Identifier.fromNamespaceAndPath(Constants.MOD_ID, "block/" + parent)), Optional.empty(), requiredTextureKeys);
   }
 
   //CROP BLOCKSTATE GEN
-  public static void registerCrop(BlockModelGenerators blockstateModelGenerator, Block crop, Property<Integer> ageProperty, int... ageTextureIndices) {
-    if (ageProperty.getPossibleValues().size() != ageTextureIndices.length) {
+//  public static void registerCrop(BlockModelGenerators blockstateModelGenerator, Block crop, Property<Integer> ageProperty, int... ageTextureIndices) {
+//    if (ageProperty.getPossibleValues().size() != ageTextureIndices.length) {
+//      throw new IllegalArgumentException();
+//    } else {
+//      Int2ObjectMap<Identifier> int2ObjectMap = new Int2ObjectOpenHashMap<>();
+//      PropertyDispatch blockStateVariantMap = PropertyDispatch.property(ageProperty).generate((integer) -> {
+//        int agreIntProp = ageTextureIndices[integer];
+//        Identifier identifier = int2ObjectMap.computeIfAbsent(agreIntProp,
+//            (j) -> blockstateModelGenerator.createSuffixedVariant(crop, "_stage" + agreIntProp, LEEK_MODEL, TextureMapping::cross));
+//        return Variant.variant().with(VariantProperties.MODEL, identifier);
+//      });
+//      blockstateModelGenerator.blockStateOutput.accept(MultiVariantGenerator.multiVariant(crop).with(blockStateVariantMap));
+//    }
+//  }
+
+  public void createCropBlock(BlockModelGenerators blockModelGenerators, Block block, Property<Integer> property, int... stages) {
+//    this.registerSimpleFlatItemModel(block.asItem());
+    if (property.getPossibleValues().size() != stages.length) {
       throw new IllegalArgumentException();
     } else {
-      Int2ObjectMap<ResourceLocation> int2ObjectMap = new Int2ObjectOpenHashMap<>();
-      PropertyDispatch blockStateVariantMap = PropertyDispatch.property(ageProperty).generate((integer) -> {
-        int agreIntProp = ageTextureIndices[integer];
-        ResourceLocation identifier = int2ObjectMap.computeIfAbsent(agreIntProp,
-            (j) -> blockstateModelGenerator.createSuffixedVariant(crop, "_stage" + agreIntProp, LEEK_MODEL, TextureMapping::cross));
-        return Variant.variant().with(VariantProperties.MODEL, identifier);
-      });
-      blockstateModelGenerator.blockStateOutput.accept(MultiVariantGenerator.multiVariant(crop).with(blockStateVariantMap));
+      Int2ObjectMap<Identifier> models = new Int2ObjectOpenHashMap<>();
+      blockModelGenerators.blockStateOutput
+        .accept(
+          MultiVariantGenerator.dispatch(block)
+            .with(
+              PropertyDispatch.initial(property)
+                .generate(
+                  i -> {
+                    int stage = stages[i];
+                    return plainVariant(
+                      models.computeIfAbsent(
+                        stage, s -> blockModelGenerators.createSuffixedVariant(block, "_stage" + s, LEEK_MODEL, TextureMapping::crop)
+                      )
+                    );
+                  }
+                )
+            )
+        );
     }
   }
 
@@ -53,9 +77,9 @@ public record BlockModels(Consumer<BlockStateGenerator> blockStateCollector, BiC
   public static void registerWildCrop(BlockModelGenerators blockstateModelGenerator, Block block, Block tamedBlock) {
     int maxAge = CropBlock.MAX_AGE;
     TextureMapping textureMap = TextureMapping.cross(
-        ResourceLocation.fromNamespaceAndPath(Constants.MOD_ID, "block/" + ModUtil.getBlockIdFromBlock(tamedBlock) + "_stage" + maxAge)
+        Identifier.fromNamespaceAndPath(Constants.MOD_ID, "block/" + ModUtil.getBlockIdFromBlock(tamedBlock) + "_stage" + maxAge)
     );
-    ResourceLocation model = CROSS_CUTOUT.create(block, textureMap, blockstateModelGenerator.modelOutput);
+    Identifier model = CROSS_CUTOUT.create(block, textureMap, blockstateModelGenerator.modelOutput);
     blockstateModelGenerator.blockStateOutput.accept(BlockModelGenerators.createSimpleBlock(block, model));
   }
 
