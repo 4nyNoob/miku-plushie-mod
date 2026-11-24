@@ -65,5 +65,5 @@ You can suggest new plushies via <a href="https://github.com/4nyNoob/miku-plushi
 ### Support me :D
 
 - You can donate directly to me via Ko-Fi: [https://ko-fi.com/4nynoob](https://ko-fi.com/4nynoob)
-- If you want something nice check out: [https://realisticnode.com/mikuplushies](https://realisticnode.com/mikuplushies) use code MIKUPLUSHIES for 10% OFF your order ![realistic node ad banner]("https://raw.githubusercontent.com/4nyNoob/miku-plushie-mod/refs/heads/multiloader-1.21.1/assets/ad/MIKUPLUSHIES.png")
+- If you want something nice check out: [https://realisticnode.com/mikuplushies](https://realisticnode.com/mikuplushies) use code MIKUPLUSHIES for 10% OFF your order ![ad banner](https://raw.githubusercontent.com/4nyNoob/miku-plushie-mod/refs/heads/multiloader-1.21.1/assets/ad/MIKUPLUSHIES.png)
 
