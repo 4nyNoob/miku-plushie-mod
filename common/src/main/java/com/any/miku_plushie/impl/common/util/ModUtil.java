@@ -43,8 +43,7 @@ public class ModUtil {
   }
 
   public static String getFirstNameFromBlockId(String blockId) {
-    String[] blockIdWords = blockId.split("_");
-    return blockIdWords[0];
+    return blockId.split("_plush")[0];
   }
 
   public static SoundEvent getPlushSoundEvent(String plushName, String action) {
@@ -73,10 +72,11 @@ public class ModUtil {
 
     Registry<EntityType<?>> entityTypeRegistry = world.registryAccess().registryOrThrow(Registries.ENTITY_TYPE);
     AbstractPlushEntity spawnedEntity = null;
+    String plush = getFirstNameFromBlockId(blockName);
 
     for (String entity : Constants.PLUSH_NAMES){
       // IF SELECTED BLOCK CONTAINS ENTITY NAME
-      if (blockName.contains(entity)){
+      if (plush.equals(entity)){
         // CALCULATE ENTITY RESOURCE LOCATION
         ResourceLocation entityResourceLocation = ResourceLocation.fromNamespaceAndPath(Constants.MOD_ID, entity + "_plush");
         // GET ENTITY TYPE
